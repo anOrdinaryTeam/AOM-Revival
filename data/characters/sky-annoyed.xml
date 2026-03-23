@@ -1,0 +1,17 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Sky/sky_annoyed" icon="sky" camx="400" camy="400" color="#9B6ECC">
+	<anim name="idle" anim="sky annoyed idle" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="sky annoyed up" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="sky annoyed left" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="sky annoyed right" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="sky annoyed down" x="0" y="0" fps="24" loop="false"/>
+	<anim name="idle-alt" anim="sky annoyed alt idle" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP-alt" anim="sky annoyed alt up" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN-alt" anim="sky annoyed alt down" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT-alt" anim="sky annoyed alt left" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT-alt" anim="sky annoyed alt right" x="0" y="0" fps="24" loop="false"/>
+	<anim name="huh 1" anim="sky annoyed oh" x="0" y="0" fps="24" loop="false"/>
+	<anim name="huh 2" anim="sky annoyed grr" x="0" y="0" fps="24" loop="false"/>
+	<anim name="huh 3" anim="sky annoyed huh" x="0" y="0" fps="24" loop="false"/>
+	<anim name="menoje" anim="sky annoyed ugh" x="0" y="0" fps="24" loop="false"/>
+</character>

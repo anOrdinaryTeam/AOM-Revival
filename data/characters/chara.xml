@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/chara" icon="chara" color="#F30808" camx="130">
+	<anim name="idle" anim="chara0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="chara up" x="2" y="2" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="chara left" x="-7" y="-1" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="chara right" x="1" y="-5" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="chara down" x="13" y="-12" fps="24" loop="false"/>
+	<anim name="save" anim="chara zave" x="-1" y="0" fps="24" loop="false"/>
+	<anim name="look" anim="chara zrick" x="0" y="0" fps="24" loop="true"/>
+</character>

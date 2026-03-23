@@ -1,0 +1,41 @@
+<!DOCTYPE codename-mod-options>
+<menu name="- ModPack Options" desc="dunno">
+	<checkbox id="AOM_flashingLights" name="Flashing Lights" desc="self explanatory"/>
+	<checkbox id="AOM_disableSplashs" name="Disable Note Splash" desc="self explanatory"/>
+	<checkbox id="AOM_cpuStrumsGlow" name="Disable CPU Strum Glow" desc="just like old times"/>
+
+	<menu name="HUD Configuration" desc="duh">
+		<checkbox id="AOM_engineHUD" name="Use Huds from Mods" desc="This allows you to use the Huds from the respective Engine of the Mod"/>
+
+		<menu name="Psych Engine" desc="HUD Settings">
+			<checkbox id="AOM_psych_HIDEHUD" name="Hide Hud"/>
+			<checkbox id="AOM_psych_TWEEN_SCORETXT_ONHIT" name="Bop the Score Text"/>
+			<number id="AOM_psych_HEALTHBAR_OPACITY" name="Health Bar Opacity" min="0" max="1" change="0.1"/>
+			<checkbox id="AOM_psych_SMOOTH_TIMEBAR" name="Smooth Time Bar"/>
+			<choice id="AOM_psych_TIMEBAR_TYPE" name="Time Bar">
+				<value name="Time left" value="timeLeft"/>
+				<value name="Time Elapsed" value="timeElapsed"/>
+				<value name="Song Name" value="songName"/>
+				<value name="Disabled" value="disabled"/>
+			</choice>
+		</menu>
+
+		<menu name="Kade Engine" desc="HUD Settings">
+			<checkbox id="AOM_kade_TIMEBAR" name="Enable Time Bar"/>
+			<checkbox id="AOM_kade_RATINGS" name="Include Ratings"/>
+			<checkbox id="AOM_kade_WATERMARK" name="Enable The Watermark"/>
+			<choice id="AOM_kade_WATERMARK_engine" name="Engine Type" desc="Type of Engine for the Watermark">
+				<value name="Kade Engine" value="KE"/>
+				<value name="Codename" value="CNE"/>
+			</choice>
+			<choice id="AOM_kade_MISSES_TYPE" name="Misses Type" desc="Type of the Misses Text">
+				<value name="Misses" value="Misses"/>
+				<value name="Combo Breaks" value="Combo Breaks"/>
+			</choice>
+			<choice id="AOM_kade_RATINGS_TYPE" name="Ratings Type" desc="Type of the Ratings">
+				<value name="Codename" value="CNE"/>
+				<value name="Kade" value="KE"/>
+			</choice>
+		</menu>
+	</menu>
+</menu>

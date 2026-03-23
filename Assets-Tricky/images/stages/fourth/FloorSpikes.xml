@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="FloorSpikes.png" width="1229" height="2830" spritePadding="0" borderPadding="0">
+	<SubTexture name="Floor Spikes0000" x="0" y="2664" width="843" height="83" frameX="-185" frameY="-660" frameWidth="1229" frameHeight="756"/>
+	<SubTexture name="Floor Spikes0001" x="0" y="755" width="1216" height="751" frameX="-6" frameY="-6" frameWidth="1229" frameHeight="756"/>
+	<SubTexture name="Floor Spikes0002" x="0" y="0" width="1229" height="755" frameX="0" frameY="-1" frameWidth="1229" frameHeight="756"/>
+	<SubTexture name="Floor Spikes0003" x="0" y="1506" width="1184" height="720" frameX="-18" frameY="-37" frameWidth="1229" frameHeight="756"/>
+	<SubTexture name="Floor Spikes0004" x="0" y="2226" width="1028" height="438" frameX="-95" frameY="-302" frameWidth="1229" frameHeight="756"/>
+	<SubTexture name="Floor Spikes0005" x="0" y="2747" width="843" height="83" frameX="-185" frameY="-660" frameWidth="1229" frameHeight="756"/>
+</TextureAtlas>

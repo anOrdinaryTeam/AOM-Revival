@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="tricky/EX Tricky GF" icon="gf" color="#A5004D" isGF="true">
+	<anim name="danceLeft" anim="GF Ex Tricky" x="0" y="0" fps="24" loop="false" indices="0..8"/>
+	<anim name="danceRight" anim="GF Ex Tricky" x="0" y="0" fps="24" loop="false" indices="9..19"/>
+</character>

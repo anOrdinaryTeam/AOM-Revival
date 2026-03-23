@@ -1,0 +1,9 @@
+:dad:You know what.
+:dad:I don't care anymore.
+:dad:Take the girl and get out of here.
+:dad:I've seen the world out there,     I no longer wish to exit this place.
+:dad:Just.
+:dad:Leave. Me. Alone.
+:bfglitch:delete("\assets\data\senpai"); delete("\weeb\senpai.png"); delete("\Senpai_Voices.ogg"); delete("FUNKIN.EXE");
+:dadangry:...
+:bfglitch:ERROR: UnauthorizedAccessException ("You do not have access to that command. Current administrator is SENPAI.DATA")

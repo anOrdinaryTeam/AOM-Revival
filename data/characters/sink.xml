@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/sink" scale="1.2" flipX="true" camx="100" camy="-50" isPlayer="true" icon="sink" color="#288168" holdTime="6.1">
+	<anim name="idle" anim="SINK IDLE" x="0" y="0" fps="24" loop="true"/>
+	<anim name="singUP" anim="SINK UP0" x="2" y="186" fps="24" loop="false" indices="1..23"/>
+	<anim name="singLEFT" anim="SINK LEFT0" x="162" y="3" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="SINK RIGHT0" x="13" y="-7" fps="24" loop="false" indices="1..23"/>
+	<anim name="singDOWN" anim="SINK DOWN0" x="0" y="-26" fps="24" loop="false"/>
+	<anim name="singUPmiss" anim="MISS SINK UP0" x="17" y="430" fps="24" loop="false"/>
+	<anim name="singLEFTmiss" anim="MISS SINK LEFT0" x="210" y="222" fps="24" loop="false"/>
+	<anim name="singRIGHTmiss" anim="MISS SINK RIGHT0" x="66" y="265" fps="24" loop="false"/>
+	<anim name="singDOWNmiss" anim="MISS SINK DOWN0" x="0" y="-25" fps="24" loop="false"/>
+</character>

@@ -1,0 +1,12 @@
+{
+    "backgrounds": [
+        ["loadingButNotDone", true], 
+        ["60b7d8741ac99", true]
+    ],
+
+    "logo": "coñotumadre",
+    "logoData": [
+        [730, 100, 0.35],
+        [650, 100, 0.4]
+    ]
+}

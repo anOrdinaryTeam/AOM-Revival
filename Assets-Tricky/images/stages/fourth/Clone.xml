@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Clone.png" width="1482" height="7804" spritePadding="0" borderPadding="0">
+	<SubTexture name="Clone10000" x="0" y="0" width="495" height="697" frameX="-142" frameY="-684" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10001" x="495" y="0" width="473" height="970" frameX="-197" frameY="-147" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10002" x="968" y="0" width="434" height="836" frameX="-142" frameY="-201" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10003" x="0" y="970" width="449" height="623" frameX="-59" frameY="-265" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10004" x="449" y="970" width="492" height="698" frameX="-67" frameY="-231" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10005" x="941" y="970" width="493" height="696" frameX="-137" frameY="-223" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10006" x="0" y="1668" width="494" height="685" frameX="-106" frameY="-218" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10007" x="494" y="1668" width="491" height="708" frameX="-83" frameY="-220" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10008" x="985" y="1668" width="484" height="698" frameX="-182" frameY="-198" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10009" x="0" y="2376" width="492" height="726" frameX="-99" frameY="-203" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10010" x="492" y="2376" width="498" height="685" frameX="-147" frameY="-225" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10011" x="990" y="2376" width="492" height="754" frameX="-56" frameY="-169" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10012" x="0" y="3130" width="492" height="735" frameX="-99" frameY="-168" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10013" x="492" y="3130" width="492" height="676" frameX="-17" frameY="-238" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10014" x="984" y="3130" width="495" height="667" frameX="-92" frameY="-231" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10015" x="0" y="3865" width="497" height="733" frameX="-13" frameY="-158" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10016" x="497" y="3865" width="489" height="695" frameX="-102" frameY="-183" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10017" x="986" y="3865" width="467" height="741" frameX="-98" frameY="-175" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10018" x="0" y="4606" width="492" height="672" frameX="-40" frameY="-220" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10019" x="492" y="4606" width="491" height="735" frameX="-78" frameY="-177" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10020" x="983" y="4606" width="493" height="694" frameX="-153" frameY="-217" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10021" x="0" y="5341" width="487" height="714" frameX="-101" frameY="-219" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10022" x="990" y="2376" width="492" height="754" frameX="-56" frameY="-169" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10023" x="0" y="3130" width="492" height="735" frameX="-99" frameY="-168" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10024" x="492" y="3130" width="492" height="676" frameX="-17" frameY="-238" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10025" x="984" y="3130" width="495" height="667" frameX="-92" frameY="-231" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10026" x="0" y="3865" width="497" height="733" frameX="-13" frameY="-158" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10027" x="497" y="3865" width="489" height="695" frameX="-102" frameY="-183" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10028" x="986" y="3865" width="467" height="741" frameX="-98" frameY="-175" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10029" x="0" y="4606" width="492" height="672" frameX="-40" frameY="-220" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10030" x="492" y="4606" width="491" height="735" frameX="-78" frameY="-177" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10031" x="983" y="4606" width="493" height="694" frameX="-153" frameY="-217" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10032" x="0" y="5341" width="487" height="714" frameX="-101" frameY="-219" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10033" x="990" y="2376" width="492" height="754" frameX="-56" frameY="-169" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10034" x="0" y="3130" width="492" height="735" frameX="-99" frameY="-168" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10035" x="492" y="3130" width="492" height="676" frameX="-17" frameY="-238" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10036" x="984" y="3130" width="495" height="667" frameX="-92" frameY="-231" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10037" x="0" y="3865" width="497" height="733" frameX="-13" frameY="-158" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10038" x="497" y="3865" width="489" height="695" frameX="-102" frameY="-183" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10039" x="986" y="3865" width="467" height="741" frameX="-98" frameY="-175" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10040" x="0" y="4606" width="492" height="672" frameX="-40" frameY="-220" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10041" x="492" y="4606" width="491" height="735" frameX="-78" frameY="-177" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10042" x="983" y="4606" width="493" height="694" frameX="-153" frameY="-217" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10043" x="0" y="5341" width="487" height="714" frameX="-101" frameY="-219" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10044" x="990" y="2376" width="492" height="754" frameX="-56" frameY="-169" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10045" x="0" y="3130" width="492" height="735" frameX="-99" frameY="-168" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10046" x="492" y="3130" width="492" height="676" frameX="-17" frameY="-238" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10047" x="984" y="3130" width="495" height="667" frameX="-92" frameY="-231" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10048" x="0" y="3865" width="497" height="733" frameX="-13" frameY="-158" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10049" x="497" y="3865" width="489" height="695" frameX="-102" frameY="-183" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10050" x="986" y="3865" width="467" height="741" frameX="-98" frameY="-175" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10051" x="0" y="4606" width="492" height="672" frameX="-40" frameY="-220" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10052" x="492" y="4606" width="491" height="735" frameX="-78" frameY="-177" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10053" x="983" y="4606" width="493" height="694" frameX="-153" frameY="-217" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10054" x="0" y="5341" width="487" height="714" frameX="-101" frameY="-219" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10055" x="990" y="2376" width="492" height="754" frameX="-56" frameY="-169" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10056" x="0" y="3130" width="492" height="735" frameX="-99" frameY="-168" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10057" x="492" y="3130" width="492" height="676" frameX="-17" frameY="-238" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10058" x="984" y="3130" width="495" height="667" frameX="-92" frameY="-231" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10059" x="0" y="3865" width="497" height="733" frameX="-13" frameY="-158" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10060" x="497" y="3865" width="489" height="695" frameX="-102" frameY="-183" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10061" x="986" y="3865" width="467" height="741" frameX="-98" frameY="-175" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10062" x="0" y="4606" width="492" height="672" frameX="-40" frameY="-220" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10063" x="492" y="4606" width="491" height="735" frameX="-78" frameY="-177" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10064" x="983" y="4606" width="493" height="694" frameX="-153" frameY="-217" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10065" x="0" y="5341" width="487" height="714" frameX="-101" frameY="-219" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10066" x="487" y="5341" width="487" height="715" frameX="-58" frameY="-220" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10067" x="974" y="5341" width="487" height="660" frameX="-94" frameY="-269" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10068" x="0" y="6056" width="513" height="574" rotated="true" frameX="-50" frameY="-270" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10069" x="513" y="6056" width="470" height="606" rotated="true" frameX="-29" frameY="-284" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10070" x="983" y="6056" width="437" height="692" rotated="true" frameX="0" frameY="-292" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10071" x="0" y="6748" width="1131" height="399" rotated="true" frameX="-96" frameY="0" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10072" x="0" y="7147" width="1145" height="318" rotated="true" frameX="-189" frameY="-372" frameWidth="692" frameHeight="1146"/>
+	<SubTexture name="Clone10073" x="0" y="7465" width="1139" height="339" rotated="true" frameX="-185" frameY="-700" frameWidth="692" frameHeight="1146"/>
+</TextureAtlas>

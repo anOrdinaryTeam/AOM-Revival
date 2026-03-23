@@ -1,0 +1,16 @@
+{
+    "list": [
+        {
+            "char": "GHOUL",
+            "position": [200, 30],
+            "scale": 0.85,
+            "flipped": false
+        },
+        {
+            "char": "Sink",
+            "position": [550, 50],
+            "scale": 0.85,
+            "flipped": false
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="740" sprite="rs/GHOUL" scale="1.55" icon="sink" color="#308A68" holdTime="6.1">
+	<anim name="idle" anim="GHOUL IDLE" x="77.42" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="GHOUL LEFT" x="236.77" y="172.26" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="GHOUL DOWN" x="100.65" y="-54.19" fps="24" loop="false"/>
+	<anim name="singUP" anim="GHOUL UP" x="211.61" y="75.48" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="GHOUL RIGHT" x="161.29" y="0.65" fps="24" loop="false"/>
+</character>

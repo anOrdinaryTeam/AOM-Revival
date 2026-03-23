@@ -1,0 +1,12 @@
+{
+    "backgrounds": [
+        ["Sin título-2", false], 
+        ["LOADING", false]
+    ],
+    
+    "logo": "FNF_MU",
+    "logoData": [
+        [700, 470, 0.6],
+        [860, 550, 0.45]
+    ]
+}

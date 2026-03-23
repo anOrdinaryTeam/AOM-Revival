@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="x/gaster_full" icon="xgaster" color="#FFFFFF">
+	<anim name="idle" anim="Xgaster idle dance" x="0" y="0" fps="24" loop="true"/>
+	<anim name="singUP" anim="Xgaster Sing Note UP" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Xgaster Sing Note LEFT" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Xgaster Sing Note RIGHT" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Xgaster Sing Note DOWN" x="0" y="0" fps="24" loop="false"/>
+</character>

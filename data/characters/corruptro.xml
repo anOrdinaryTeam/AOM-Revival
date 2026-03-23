@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/Corruptro_Assets" scale="0.9" icon="corruptro" color="#38ACB4" x="-706" y="-106" camx="250" camy="30">
+	<anim name="idle" anim="Corruptro_Idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Corruptro_Up0" x="35" y="300" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="CorruptroLeft0" x="235" y="95" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Corruptro_Right0" x="-180" y="50" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Corruptro_Down0" x="-100" y="-80" fps="24" loop="false"/>
+</character>

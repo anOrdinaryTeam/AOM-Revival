@@ -1,0 +1,16 @@
+{
+    "list": [
+        {
+            "char": "gf",
+            "position": [530, 30],
+            "scale": 0.68,
+            "flipped": false
+        },
+        {
+            "char": "bf",
+            "position": [880, -20],
+            "scale": 0.68,
+            "flipped": false
+        }
+    ]
+}

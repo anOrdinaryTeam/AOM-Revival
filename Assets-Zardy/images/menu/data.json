@@ -1,0 +1,12 @@
+{
+    "backgrounds": [
+        ["Maze", true], 
+        ["Zardy2BG", true]
+    ],
+    
+    "logo": "icon",
+    "logoData": [
+        [700, 300, 0.85],
+        [700, 300, 0.85]
+    ]
+}

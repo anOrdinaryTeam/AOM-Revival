@@ -1,0 +1,93 @@
+{
+    "dialogueStyle": "Agoti",
+    "musicIntro": ["screenplaydialogue", 1, 1],
+    "characters": ["bf-agoti", "agoti"],
+    "dialogue": [
+        {
+            "text": "Huh...",
+            "whoTalks": "agoti",
+            "animToPlay": "scared",
+            "textSound": "agotiScaredText"
+        },
+        {
+            "text": "This is... new.",
+            "whoTalks": "agoti",
+            "animToPlay": "scared",
+            "textSound": "agotiScaredText"
+        },
+        {
+            "text": "Beep bo?",
+            "whoTalks": "bf-agoti",
+            "animToPlay": "scared"
+        },
+        {
+            "text": "Welcome, inmates!",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "It's been a while since I've seen some new ugly faces",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "..or faces in general.",
+            "whoTalks": "agoti",
+            "animToPlay": "angry",
+            "textSound": "agotiAngryText"
+        },
+        {
+            "text": "How was the fall here?",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Bap skee beep! bo poh iis sku bop",
+            "whoTalks": "bf-agoti",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "I'm suprised someone as small as you didn't break anything!",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Let alone cry.",
+            "whoTalks": "agoti",
+            "animToPlay": "angry",
+            "textSound": "agotiAngryText"
+        },
+        {
+            "text": "Skee deh beh doo bop!",
+            "whoTalks": "bf-agoti",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "I hope you have better insults than that!",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Because we're all gonna be here a while",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "A very long one.",
+            "whoTalks": "agoti",
+            "animToPlay": "angry",
+            "textSound": "agotiAngryText"
+        },
+        {
+            "text": "B-beep?",
+            "whoTalks": "bf-agoti",
+            "animToPlay": "scared"
+        }
+    ]
+}

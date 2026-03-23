@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="rpgfire.png" width="754" height="788">
+	<SubTexture name="fire_iddle0000" x="285" y="0" width="151" height="388" frameX="-66" frameY="-24" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0001" x="285" y="0" width="151" height="388" frameX="-66" frameY="-24" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0002" x="506" y="377" width="109" height="365" frameX="-85" frameY="-38" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0003" x="506" y="377" width="109" height="365" frameX="-85" frameY="-38" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0004" x="396" y="388" width="110" height="371" frameX="-87" frameY="-32" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0005" x="396" y="388" width="110" height="371" frameX="-87" frameY="-32" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0006" x="436" y="0" width="107" height="377" frameX="-84" frameY="-26" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0007" x="436" y="0" width="107" height="377" frameX="-84" frameY="-26" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0008" x="650" y="0" width="104" height="334" frameX="-87" frameY="-69" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0009" x="650" y="0" width="104" height="334" frameX="-87" frameY="-69" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0010" x="543" y="0" width="107" height="359" frameX="-89" frameY="-44" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0011" x="543" y="0" width="107" height="359" frameX="-89" frameY="-44" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0012" x="285" y="388" width="111" height="375" frameX="-76" frameY="-28" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0013" x="285" y="388" width="111" height="375" frameX="-76" frameY="-28" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0014" x="0" y="412" width="123" height="376" frameX="-73" frameY="-27" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0015" x="0" y="412" width="123" height="376" frameX="-73" frameY="-27" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0016" x="123" y="432" width="121" height="344" frameX="-74" frameY="-59" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_iddle0017" x="123" y="432" width="121" height="344" frameX="-74" frameY="-59" frameWidth="279" frameHeight="422"/>
+	<SubTexture name="fire_start0000" x="615" y="660" width="114" height="126" frameX="-77" frameY="-277" frameWidth="279" frameHeight="444"/>
+	<SubTexture name="fire_start0001" x="615" y="359" width="122" height="301" frameX="-72" frameY="-102" frameWidth="279" frameHeight="444"/>
+	<SubTexture name="fire_start0002" x="0" y="0" width="149" height="412" frameX="-58" frameY="-4" frameWidth="279" frameHeight="444"/>
+	<SubTexture name="fire_start0003" x="149" y="0" width="136" height="432" frameX="-70" frameY="-1" frameWidth="279" frameHeight="444"/>
+	<SubTexture name="fire_start0004" x="149" y="0" width="136" height="432" frameX="-70" frameY="-1" frameWidth="279" frameHeight="444"/>
+</TextureAtlas>

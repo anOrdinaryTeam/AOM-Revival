@@ -1,0 +1,41 @@
+{
+    "dialogueStyle": "Zardy",
+    "characters": ["zardy"],
+    "dialogue": [
+        {
+            "text": "Oh… Silly boy! It's you again!",
+            "whoTalks": "zardy",
+            "animToPlay": "idle_dark"
+        },
+        {
+            "text": "You shouldn't have come here… I warned you before that it's dangerous to wander in the dark.",
+            "whoTalks": "zardy",
+            "animToPlay": "idle_dark"
+        },
+        {
+            "text": "And yet you walked straight towards the center of the darkness. A foolhardy move, boy.",
+            "whoTalks": "zardy",
+            "animToPlay": "idle_dark"
+        },
+        {
+            "text": "But bravery has a funny way of betraying people… There's a big difference between you and I.",
+            "whoTalks": "zardy",
+            "animToPlay": "idle_dark"
+        },
+        {
+            "text": "The dark makes your world small. It devours your senses and puts you on edge…",
+            "whoTalks": "zardy",
+            "animToPlay": "idle_dark"
+        },
+        {
+            "text": "But to us? Well… Let's just say you couldn't have walked into a worse situation.",
+            "whoTalks": "zardy",
+            "animToPlay": "idle_dark"
+        },
+        {
+            "text": "Your story ends here.",
+            "whoTalks": "zardy",
+            "animToPlay": "idle_dark"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Maze.png" width="7680" height="6560" spritePadding="0" borderPadding="0">
+	<SubTexture name="Stage0000" x="0" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0001" x="1440" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0002" x="2880" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0003" x="4320" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0004" x="5760" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0005" x="0" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0006" x="1440" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0007" x="2880" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0008" x="4320" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0009" x="5760" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0010" x="0" y="5120" width="2560" height="1440" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0011" x="2560" y="5120" width="2560" height="1440" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0012" x="5120" y="5120" width="2560" height="1440" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0013" x="2560" y="5120" width="2560" height="1440" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0014" x="0" y="5120" width="2560" height="1440" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0015" x="5760" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0016" x="4320" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0017" x="2880" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0018" x="1440" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0019" x="0" y="2560" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0020" x="5760" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0021" x="4320" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0022" x="2880" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+	<SubTexture name="Stage0023" x="1440" y="0" width="1440" height="2560" rotated="true" frameX="0" frameY="0" frameWidth="2560" frameHeight="1440"/>
+</TextureAtlas>

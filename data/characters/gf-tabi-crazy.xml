@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="tabi/PostExpGF_Assets" icon="gf" color="#A5004D" isGF="true">
+	<anim name="danceLeft" anim="GF LayedDownHurt " x="-300" y="-250" fps="24" loop="false" indices="0..7"/>
+	<anim name="danceRight" anim="GF LayedDownHurt " x="-300" y="-250" fps="24" loop="false" indices="8..15"/>
+</character>

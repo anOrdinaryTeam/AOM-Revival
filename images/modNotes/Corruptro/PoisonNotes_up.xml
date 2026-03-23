@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="PoisonNotes_up.png" width="4011" height="176" spritePadding="0" borderPadding="0">
+	<SubTexture name="red0000" x="2009" y="0" width="246" height="175" rotated="true" frameX="-2" frameY="-2" frameWidth="175" frameHeight="258"/>
+	<SubTexture name="red0001" x="2255" y="0" width="258" height="175" rotated="true" frameX="-2" frameY="-2" frameWidth="175" frameHeight="258"/>
+	<SubTexture name="red0002" x="2513" y="0" width="253" height="175" rotated="true" frameX="-2" frameY="-2" frameWidth="175" frameHeight="258"/>
+	<SubTexture name="red0003" x="2766" y="0" width="242" height="175" rotated="true" frameX="-2" frameY="-2" frameWidth="175" frameHeight="258"/>
+	<SubTexture name="purple0000" x="3008" y="0" width="247" height="176" rotated="true" frameX="14" frameY="-2" frameWidth="176" frameHeight="259"/>
+	<SubTexture name="purple0001" x="3255" y="0" width="259" height="176" rotated="true" frameX="14" frameY="-2" frameWidth="176" frameHeight="259"/>
+	<SubTexture name="purple0002" x="3514" y="0" width="254" height="176" rotated="true" frameX="14" frameY="-2" frameWidth="176" frameHeight="259"/>
+	<SubTexture name="purple0003" x="3768" y="0" width="243" height="176" rotated="true" frameX="14" frameY="-2" frameWidth="176" frameHeight="259"/>
+	<SubTexture name="green0000" x="987" y="0" width="252" height="164" rotated="true" frameX="0" frameY="-3" frameWidth="164" frameHeight="263"/>
+	<SubTexture name="green0001" x="1239" y="0" width="263" height="164" rotated="true" frameX="0" frameY="-3" frameWidth="164" frameHeight="263"/>
+	<SubTexture name="green0002" x="1502" y="0" width="259" height="164" rotated="true" frameX="0" frameY="-3" frameWidth="164" frameHeight="263"/>
+	<SubTexture name="green0003" x="1761" y="0" width="248" height="164" rotated="true" frameX="0" frameY="-3" frameWidth="164" frameHeight="263"/>
+	<SubTexture name="blue0000" x="0" y="0" width="243" height="164" rotated="true" frameX="6" frameY="-2" frameWidth="164" frameHeight="255"/>
+	<SubTexture name="blue0001" x="243" y="0" width="255" height="164" rotated="true" frameX="6" frameY="-2" frameWidth="164" frameHeight="255"/>
+	<SubTexture name="blue0002" x="498" y="0" width="250" height="164" rotated="true" frameX="6" frameY="-2" frameWidth="164" frameHeight="255"/>
+	<SubTexture name="blue0003" x="748" y="0" width="239" height="164" rotated="true" frameX="6" frameY="-2" frameWidth="164" frameHeight="255"/>
+</TextureAtlas>

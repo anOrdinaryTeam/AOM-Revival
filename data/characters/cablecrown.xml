@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="zardy/Cablecrow" icon="cablecrown" color="#BA7B42">
+	<anim name="idle" anim="Idle" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Sing Up" x="-1" y="5" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Sing Left" x="-32" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Sing Right" x="-160" y="-18" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Sing Down" x="-12" y="2" fps="24" loop="false"/>
+</character>

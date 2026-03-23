@@ -1,0 +1,21 @@
+{
+    "dialogueStyle": "Zardy",
+    "characters": ["zardy"],
+    "dialogue": [
+        {
+            "text": "Darn brats trespassing with their damn noise cannons...",
+            "whoTalks": "zardy",
+            "animToPlay": "idle"
+        },
+        {
+            "text": "You should know it's dangerous to wander in the\ndark...",
+            "whoTalks": "zardy",
+            "animToPlay": "idle"
+        },
+        {
+            "text": "But if you want a show... I'll give you a show!",
+            "whoTalks": "zardy",
+            "animToPlay": "idle"
+        }
+    ]
+}

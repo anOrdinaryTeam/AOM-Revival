@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Corruptro_Assets.png" width="7981" height="6505" spritePadding="0" borderPadding="0">
+	<SubTexture name="Corruptro_Idle0000" x="5570" y="1406" width="993" height="1198" rotated="true" frameX="-56" frameY="-15" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Up0000" x="0" y="5180" width="1319" height="1320" rotated="true" frameX="0" frameY="0" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0001" x="1319" y="5180" width="1314" height="1317" frameX="-2" frameY="-2" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0002" x="2633" y="5180" width="1272" height="1311" rotated="true" frameX="-11" frameY="-47" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="CorruptroLeft0000" x="0" y="0" width="1112" height="1406" rotated="true" frameX="0" frameY="0" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0001" x="1112" y="0" width="1112" height="1405" rotated="true" frameX="-2" frameY="0" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0002" x="2224" y="0" width="1111" height="1391" rotated="true" frameX="-20" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0007" x="5554" y="0" width="1111" height="1376" rotated="true" frameX="-41" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0010" x="6665" y="0" width="1111" height="1375" rotated="true" frameX="-43" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0005" x="4444" y="0" width="1110" height="1375" rotated="true" frameX="-43" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0004" x="3335" y="0" width="1109" height="1371" rotated="true" frameX="-48" frameY="-2" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="Corruptro_Up0005" x="5024" y="5180" width="1155" height="1305" rotated="true" frameX="-43" frameY="-164" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0007" x="6179" y="5180" width="1153" height="1306" rotated="true" frameX="-53" frameY="-166" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0004" x="3905" y="5180" width="1119" height="1325" rotated="true" frameX="-65" frameY="-200" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Right0002" x="2081" y="3875" width="1059" height="1290" rotated="true" frameX="-9" frameY="0" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0000" x="0" y="3875" width="1041" height="1305" rotated="true" frameX="-13" frameY="-18" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0001" x="1041" y="3875" width="1040" height="1302" rotated="true" frameX="-12" frameY="-20" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0005" x="4168" y="3875" width="1047" height="1277" rotated="true" frameX="-4" frameY="-12" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0009" x="6257" y="3875" width="1044" height="1277" rotated="true" frameX="-4" frameY="-16" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0007" x="5215" y="3875" width="1042" height="1270" rotated="true" frameX="-3" frameY="-17" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0004" x="3140" y="3875" width="1028" height="1262" rotated="true" frameX="0" frameY="-31" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Idle0005" x="998" y="2641" width="999" height="1234" rotated="true" frameX="-50" frameY="-10" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0004" x="0" y="2641" width="998" height="1232" rotated="true" frameX="-50" frameY="-11" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0007" x="2989" y="2641" width="992" height="1231" rotated="true" frameX="-52" frameY="-17" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0006" x="1997" y="2641" width="992" height="1227" rotated="true" frameX="-52" frameY="-17" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0008" x="3981" y="2641" width="1009" height="1204" rotated="true" frameX="-56" frameY="0" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0010" x="5985" y="2641" width="998" height="1212" rotated="true" frameX="-55" frameY="-11" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0012" x="6983" y="2641" width="998" height="1212" rotated="true" frameX="-55" frameY="-11" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0009" x="4990" y="2641" width="995" height="1204" rotated="true" frameX="-56" frameY="-14" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0002" x="6563" y="1406" width="966" height="1235" rotated="true" frameX="-48" frameY="-42" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Down0004" x="2749" y="1406" width="947" height="1207" rotated="true" frameX="-26" frameY="0" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0007" x="4632" y="1406" width="938" height="1194" rotated="true" frameX="-25" frameY="-9" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0005" x="3696" y="1406" width="936" height="1191" rotated="true" frameX="-23" frameY="-12" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0000" x="0" y="1406" width="914" height="1213" rotated="true" frameX="0" frameY="-48" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0002" x="1828" y="1406" width="921" height="1201" rotated="true" frameX="-14" frameY="-35" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0001" x="914" y="1406" width="914" height="1205" rotated="true" frameX="-7" frameY="-48" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="CorruptroLeft0003" x="2224" y="0" width="1111" height="1391" rotated="true" frameX="-20" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0006" x="4444" y="0" width="1110" height="1375" rotated="true" frameX="-43" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0009" x="4444" y="0" width="1110" height="1375" rotated="true" frameX="-43" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0013" x="4444" y="0" width="1110" height="1375" rotated="true" frameX="-43" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0008" x="5554" y="0" width="1111" height="1376" rotated="true" frameX="-41" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0011" x="5554" y="0" width="1111" height="1376" rotated="true" frameX="-41" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="CorruptroLeft0012" x="5554" y="0" width="1111" height="1376" rotated="true" frameX="-41" frameY="-1" frameWidth="1406" frameHeight="1112"/>
+	<SubTexture name="Corruptro_Down0003" x="1828" y="1406" width="921" height="1201" rotated="true" frameX="-14" frameY="-35" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0006" x="3696" y="1406" width="936" height="1191" rotated="true" frameX="-23" frameY="-12" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0009" x="3696" y="1406" width="936" height="1191" rotated="true" frameX="-23" frameY="-12" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0010" x="3696" y="1406" width="936" height="1191" rotated="true" frameX="-23" frameY="-12" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0013" x="3696" y="1406" width="936" height="1191" rotated="true" frameX="-23" frameY="-12" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0008" x="4632" y="1406" width="938" height="1194" rotated="true" frameX="-25" frameY="-9" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0011" x="4632" y="1406" width="938" height="1194" rotated="true" frameX="-25" frameY="-9" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Down0012" x="4632" y="1406" width="938" height="1194" rotated="true" frameX="-25" frameY="-9" frameWidth="1213" frameHeight="947"/>
+	<SubTexture name="Corruptro_Idle0001" x="5570" y="1406" width="993" height="1198" rotated="true" frameX="-56" frameY="-15" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0003" x="6563" y="1406" width="966" height="1235" rotated="true" frameX="-48" frameY="-42" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0011" x="5985" y="2641" width="998" height="1212" rotated="true" frameX="-55" frameY="-11" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Idle0013" x="6983" y="2641" width="998" height="1212" rotated="true" frameX="-55" frameY="-11" frameWidth="1235" frameHeight="1009"/>
+	<SubTexture name="Corruptro_Right0003" x="2081" y="3875" width="1059" height="1290" rotated="true" frameX="-9" frameY="0" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0006" x="4168" y="3875" width="1047" height="1277" rotated="true" frameX="-4" frameY="-12" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0008" x="5215" y="3875" width="1042" height="1270" rotated="true" frameX="-3" frameY="-17" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0011" x="5215" y="3875" width="1042" height="1270" rotated="true" frameX="-3" frameY="-17" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0012" x="5215" y="3875" width="1042" height="1270" rotated="true" frameX="-3" frameY="-17" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0010" x="6257" y="3875" width="1044" height="1277" rotated="true" frameX="-4" frameY="-16" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Right0013" x="6257" y="3875" width="1044" height="1277" rotated="true" frameX="-4" frameY="-16" frameWidth="1305" frameHeight="1059"/>
+	<SubTexture name="Corruptro_Up0003" x="2633" y="5180" width="1272" height="1311" rotated="true" frameX="-11" frameY="-47" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0006" x="5024" y="5180" width="1155" height="1305" rotated="true" frameX="-43" frameY="-164" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0009" x="5024" y="5180" width="1155" height="1305" rotated="true" frameX="-43" frameY="-164" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0010" x="5024" y="5180" width="1155" height="1305" rotated="true" frameX="-43" frameY="-164" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0013" x="5024" y="5180" width="1155" height="1305" rotated="true" frameX="-43" frameY="-164" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0008" x="6179" y="5180" width="1153" height="1306" rotated="true" frameX="-53" frameY="-166" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0011" x="6179" y="5180" width="1153" height="1306" rotated="true" frameX="-53" frameY="-166" frameWidth="1325" frameHeight="1319"/>
+	<SubTexture name="Corruptro_Up0012" x="6179" y="5180" width="1153" height="1306" rotated="true" frameX="-53" frameY="-166" frameWidth="1325" frameHeight="1319"/>
+</TextureAtlas>

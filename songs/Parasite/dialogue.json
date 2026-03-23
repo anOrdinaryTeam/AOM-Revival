@@ -1,0 +1,94 @@
+{
+    "dialogueStyle": "Agoti",
+    "musicIntro": ["parasiteDialogue", 1, 1],
+    "characters": ["bf-agoti", "agoti"],
+    "dialogue": [
+        {
+            "text": "Not bad!",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "You managed to last through the first song.",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Beep boop bop!",
+            "whoTalks": "bf-agoti",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "Looks like imprisonment won't be boring after all for you!",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Boop ske...?",
+            "whoTalks": "bf-agoti",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "Oh- right, probably should've told you...",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "You're in the void, my own 'Special Prison.'",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Where artists go to die and the kingpins still stand.",
+            "whoTalks": "agoti",
+            "animToPlay": "angry",
+            "textSound": "agotiAngryText"
+        },
+        {
+            "text": "Ironically, the only way out is by rap battling.",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Funny, right?",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "But that's highly ill advised.",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "And I don't want to know what she has plans for next.",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        },
+        {
+            "text": "Beep boop dah skee beep bo bap poh bee bep!",
+            "whoTalks": "bf-agoti",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "...You had to push it, huh?",
+            "whoTalks": "agoti",
+            "animToPlay": "angry",
+            "textSound": "agotiAngryText"
+        },
+        {
+            "text": "Well then little midget man, I hope you make it after this.",
+            "whoTalks": "agoti",
+            "animToPlay": "talk",
+            "textSound": "agotiText"
+        }
+    ]
+}

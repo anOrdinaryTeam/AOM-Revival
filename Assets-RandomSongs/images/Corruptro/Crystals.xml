@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="Crystals.png" width="7414" height="2518" spritePadding="0" borderPadding="0">
+	<SubTexture name="Crystal40000" x="5391" y="2054" width="471" height="446" rotated="true" frameX="-57" frameY="-42" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40004" x="5862" y="2054" width="471" height="446" rotated="true" frameX="-57" frameY="-42" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40012" x="6804" y="2054" width="471" height="446" rotated="true" frameX="-57" frameY="-42" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40008" x="6333" y="2054" width="471" height="446" rotated="true" frameX="-57" frameY="-42" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal10000" x="4920" y="2054" width="471" height="445" rotated="true" frameX="-58" frameY="-41" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10004" x="3980" y="2054" width="470" height="445" rotated="true" frameX="-58" frameY="-42" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10012" x="4450" y="2054" width="470" height="445" rotated="true" frameX="-58" frameY="-42" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10008" x="3510" y="2054" width="470" height="444" rotated="true" frameX="-58" frameY="-42" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10002" x="3041" y="2054" width="469" height="437" rotated="true" frameX="-61" frameY="-39" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal40002" x="1730" y="2054" width="437" height="463" frameX="-61" frameY="-46" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40006" x="2167" y="2054" width="437" height="463" frameX="-61" frameY="-46" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40010" x="2604" y="2054" width="437" height="463" frameX="-61" frameY="-46" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal10010" x="1293" y="2054" width="437" height="462" frameX="-61" frameY="-46" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10006" x="856" y="2054" width="437" height="462" frameX="-61" frameY="-46" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10001" x="425" y="2054" width="431" height="464" frameX="-64" frameY="-41" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10003" x="0" y="2054" width="425" height="463" frameX="-67" frameY="-39" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal40005" x="6718" y="1598" width="432" height="455" frameX="-64" frameY="-50" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal10005" x="5425" y="1598" width="431" height="456" frameX="-64" frameY="-49" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10013" x="6287" y="1598" width="431" height="456" frameX="-64" frameY="-49" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal10009" x="5856" y="1598" width="431" height="456" frameX="-64" frameY="-49" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal40001" x="4132" y="1598" width="431" height="455" frameX="-64" frameY="-50" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40013" x="4994" y="1598" width="431" height="455" frameX="-64" frameY="-50" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40009" x="4563" y="1598" width="431" height="455" frameX="-64" frameY="-50" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40011" x="3707" y="1598" width="425" height="450" frameX="-67" frameY="-53" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal40007" x="3282" y="1598" width="425" height="450" frameX="-67" frameY="-53" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal10007" x="2007" y="1598" width="425" height="450" frameX="-67" frameY="-52" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal40003" x="2857" y="1598" width="425" height="450" frameX="-67" frameY="-53" frameWidth="446" frameHeight="471"/>
+	<SubTexture name="Crystal10011" x="2432" y="1598" width="425" height="450" frameX="-67" frameY="-52" frameWidth="445" frameHeight="471"/>
+	<SubTexture name="Crystal20004" x="1201" y="1598" width="403" height="428" frameX="-42" frameY="-29" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20000" x="798" y="1598" width="403" height="428" frameX="-42" frameY="-29" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20008" x="1604" y="1598" width="403" height="428" frameX="-42" frameY="-29" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20012" x="396" y="1598" width="402" height="429" frameX="-42" frameY="-29" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20014" x="0" y="1598" width="396" height="421" frameX="-45" frameY="-33" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20006" x="6622" y="1178" width="396" height="420" frameX="-45" frameY="-33" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20010" x="7018" y="1178" width="396" height="420" frameX="-45" frameY="-33" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20002" x="6226" y="1178" width="396" height="420" frameX="-45" frameY="-33" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal70012" x="5832" y="1178" width="394" height="419" frameX="-42" frameY="-30" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70000" x="4650" y="1178" width="394" height="418" frameX="-42" frameY="-30" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70008" x="5438" y="1178" width="394" height="418" frameX="-42" frameY="-30" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70004" x="5044" y="1178" width="394" height="418" frameX="-42" frameY="-30" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal20013" x="4260" y="1178" width="390" height="416" frameX="-49" frameY="-36" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20009" x="3870" y="1178" width="390" height="416" frameX="-49" frameY="-36" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20001" x="3090" y="1178" width="390" height="416" frameX="-49" frameY="-36" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20005" x="3480" y="1178" width="390" height="416" frameX="-49" frameY="-36" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal70006" x="2316" y="1178" width="387" height="413" frameX="-46" frameY="-33" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70002" x="1929" y="1178" width="387" height="413" frameX="-46" frameY="-33" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70010" x="2703" y="1178" width="387" height="413" frameX="-46" frameY="-33" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal20015" x="1543" y="1178" width="386" height="411" frameX="-50" frameY="-38" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20007" x="771" y="1178" width="386" height="411" frameX="-50" frameY="-38" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20003" x="385" y="1178" width="386" height="411" frameX="-50" frameY="-38" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal20011" x="1157" y="1178" width="386" height="411" frameX="-50" frameY="-38" frameWidth="403" frameHeight="429"/>
+	<SubTexture name="Crystal00012" x="0" y="1178" width="385" height="410" frameX="-43" frameY="-30" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00004" x="6076" y="768" width="384" height="410" frameX="-43" frameY="-30" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00016" x="6844" y="768" width="384" height="410" frameX="-43" frameY="-30" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00008" x="6460" y="768" width="384" height="410" frameX="-43" frameY="-30" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00000" x="5692" y="768" width="384" height="410" frameX="-43" frameY="-30" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal70013" x="5310" y="768" width="382" height="408" frameX="-48" frameY="-36" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70001" x="4164" y="768" width="382" height="407" frameX="-48" frameY="-36" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70005" x="4546" y="768" width="382" height="407" frameX="-48" frameY="-36" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70009" x="4928" y="768" width="382" height="407" frameX="-48" frameY="-36" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal60008" x="3785" y="768" width="379" height="405" frameX="-44" frameY="-30" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal60000" x="3027" y="768" width="379" height="405" frameX="-44" frameY="-30" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal60004" x="3406" y="768" width="379" height="405" frameX="-44" frameY="-30" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal00014" x="2269" y="768" width="379" height="404" frameX="-46" frameY="-33" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00010" x="1890" y="768" width="379" height="404" frameX="-46" frameY="-33" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00018" x="2648" y="768" width="379" height="404" frameX="-46" frameY="-33" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00002" x="1132" y="768" width="379" height="404" frameX="-46" frameY="-33" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00006" x="1511" y="768" width="379" height="404" frameX="-46" frameY="-33" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal70007" x="754" y="768" width="378" height="403" frameX="-51" frameY="-39" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70011" x="377" y="768" width="377" height="403" frameX="-51" frameY="-39" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal70003" x="0" y="768" width="377" height="403" frameX="-51" frameY="-39" frameWidth="394" frameHeight="419"/>
+	<SubTexture name="Crystal60002" x="6557" y="369" width="374" height="399" frameX="-46" frameY="-34" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal60006" x="6931" y="369" width="374" height="399" frameX="-46" frameY="-34" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal00013" x="5811" y="369" width="373" height="399" frameX="-49" frameY="-36" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00017" x="6184" y="369" width="373" height="399" frameX="-49" frameY="-36" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00001" x="4692" y="369" width="373" height="399" frameX="-49" frameY="-36" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00005" x="5065" y="369" width="373" height="399" frameX="-49" frameY="-36" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00009" x="5438" y="369" width="373" height="399" frameX="-49" frameY="-36" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00015" x="4323" y="369" width="369" height="395" frameX="-51" frameY="-38" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00011" x="3954" y="369" width="369" height="395" frameX="-51" frameY="-38" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00003" x="3216" y="369" width="369" height="395" frameX="-51" frameY="-38" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal00007" x="3585" y="369" width="369" height="395" frameX="-51" frameY="-38" frameWidth="385" frameHeight="410"/>
+	<SubTexture name="Crystal60001" x="2109" y="369" width="369" height="394" frameX="-49" frameY="-36" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal60009" x="2847" y="369" width="369" height="394" frameX="-49" frameY="-36" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal60005" x="2478" y="369" width="369" height="394" frameX="-49" frameY="-36" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal60007" x="1745" y="369" width="364" height="389" frameX="-51" frameY="-39" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal60003" x="1381" y="369" width="364" height="389" frameX="-51" frameY="-39" frameWidth="379" frameHeight="405"/>
+	<SubTexture name="Crystal50008" x="1035" y="369" width="346" height="374" frameX="-47" frameY="-32" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50004" x="689" y="369" width="346" height="374" frameX="-47" frameY="-32" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50000" x="343" y="369" width="346" height="374" frameX="-47" frameY="-32" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50006" x="0" y="369" width="343" height="369" frameX="-48" frameY="-35" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50002" x="6876" y="0" width="343" height="369" frameX="-48" frameY="-35" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50009" x="6537" y="0" width="339" height="365" frameX="-50" frameY="-37" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50005" x="6198" y="0" width="339" height="365" frameX="-50" frameY="-37" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50001" x="5859" y="0" width="339" height="365" frameX="-50" frameY="-37" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50007" x="5523" y="0" width="336" height="361" frameX="-52" frameY="-39" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal50003" x="5187" y="0" width="336" height="361" frameX="-52" frameY="-39" frameWidth="346" frameHeight="374"/>
+	<SubTexture name="Crystal30008" x="4523" y="0" width="332" height="357" frameX="-47" frameY="-35" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30012" x="4855" y="0" width="332" height="357" frameX="-47" frameY="-35" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30004" x="4191" y="0" width="332" height="357" frameX="-47" frameY="-35" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30000" x="3859" y="0" width="332" height="357" frameX="-46" frameY="-35" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30006" x="2878" y="0" width="327" height="353" frameX="-49" frameY="-37" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30014" x="3532" y="0" width="327" height="353" frameX="-49" frameY="-37" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30010" x="3205" y="0" width="327" height="353" frameX="-49" frameY="-37" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30002" x="2552" y="0" width="326" height="353" frameX="-50" frameY="-37" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30009" x="2229" y="0" width="323" height="350" frameX="-51" frameY="-38" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30005" x="1906" y="0" width="323" height="350" frameX="-51" frameY="-38" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30001" x="1583" y="0" width="323" height="350" frameX="-51" frameY="-38" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30003" x="303" y="0" width="320" height="346" frameX="-52" frameY="-40" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30007" x="623" y="0" width="320" height="346" frameX="-52" frameY="-40" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30011" x="943" y="0" width="320" height="346" frameX="-52" frameY="-40" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30015" x="1263" y="0" width="320" height="346" frameX="-52" frameY="-40" frameWidth="332" frameHeight="357"/>
+	<SubTexture name="Crystal30013" x="0" y="0" width="303" height="350" frameX="-51" frameY="-38" frameWidth="332" frameHeight="357"/>
+</TextureAtlas>

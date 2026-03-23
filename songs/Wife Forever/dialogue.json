@@ -1,0 +1,32 @@
+{
+    "dialogueStyle": "Sky",
+    "musicIntro": ["shift", 1, 1],
+    "characters": ["bf-sky", "sky"],
+    "dialogue": [
+        {
+            "text": "beep?",
+            "whoTalks": "bf",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "IT WORKED!!!",
+            "whoTalks": "sky",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "THE SHIFT WORKED!!!",
+            "whoTalks": "sky",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "Now we can be together forever, The Boyfriend!",
+            "whoTalks": "sky",
+            "animToPlay": "talk"
+        },
+        {
+            "text": "bop beeop?",
+            "whoTalks": "bf",
+            "animToPlay": "talk"
+        }
+    ]
+}

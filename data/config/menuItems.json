@@ -1,0 +1,25 @@
+{
+    "options": [
+        {
+            "text": "ModsList",
+            "position": [20, 350],
+            "size": 0.9,
+            "stateRedirect": "ModSelectorNew",
+            "stateType": "ModState"
+        },
+        {
+            "text": "Credits",
+            "position": [50, 450],
+            "size": 0.925,
+            "stateRedirect": "funkin.menus.credits.CreditsMain",
+            "stateType": "SourceState"
+        },
+        {
+            "text": "Options",
+            "position": [105, 550],
+            "size": 0.97,
+            "stateRedirect": "funkin.options.OptionsMenu",
+            "stateType": "SourceState"
+        }
+    ]
+}
