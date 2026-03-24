@@ -13,11 +13,6 @@ public static function getModImage(str:String) {
 public static function addSprite(spr:Dynamic) if (spr != null)
     insert(members.indexOf(gf), spr);
 
-public function setSkin(idx:Int, prefix:String) {
-    precacheCharacter(idx, prefix + '_' + curSkin);
-    changeCharacter(idx, prefix + '_' + curSkin);
-}
-
 function loadCustomHUD() {
     var hud:String = '';
 

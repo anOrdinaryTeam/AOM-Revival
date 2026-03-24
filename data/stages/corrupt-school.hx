@@ -10,14 +10,13 @@ var spiritTrail:FlxTrail;
 var bgLayer1:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var bgLayer2:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 
-var senpaiCamPoint:FlxPoint = FlxPoint.get(470, 550);
-var corruptCamPoint:FlxPoint = FlxPoint.get(950, 650);
+// var senpaiCamPoint:FlxPoint = FlxPoint.get(470, 550);
+// var corruptCamPoint:FlxPoint = FlxPoint.get(950, 650);
 
 function create() {
     var xPos:Float = -300;
     var pixelZoom:Float = 6.5;
     defaultCamZoom = 1;
-    camFollow.setPosition(600, 400);
 
     insert(1, bgLayer1);
     insert(2, bgLayer2);
@@ -106,10 +105,10 @@ function postCreate() {
     stageSwitch(0);
 }
 
-function onCameraMove(_) {
-    var newPoint:FlxPoint = curCameraTarget == 0 ? senpaiCamPoint : corruptCamPoint;
-    _.position.set(newPoint.x, newPoint.y);
-}
+// function onCameraMove(_) {
+//     var newPoint:FlxPoint = curCameraTarget == 0 ? senpaiCamPoint : corruptCamPoint;
+//     _.position.set(newPoint.x, newPoint.y);
+// }
 
 function onDadHit(_)
     spiritChar.playSingAnim(_.direction);

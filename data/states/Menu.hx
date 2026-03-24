@@ -15,6 +15,8 @@ public var danceOnBeat:Bool = true;
 public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 
 function create() {
+    FlxG.mouse.visible = true;
+
     final bg:FlxBackdrop = new FlxBackdrop(getImage('Menu/${FlxG.random.int(0, 4)}'), FlxAxes.XY, -1);
     bg.antialiasing = pixelate;
     bg.velocity.set(40, 40);

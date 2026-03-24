@@ -4,11 +4,6 @@ var animToPlay:String = FlxG.save.data.AOM_flashingLights ? 'bop' : 'idle';
 
 function create() {
     defaultCamZoom = 0.9;
-    dad.x -= 200;
-    gf.y -= curSong == 'manifest' ? -100 : 100;
-    boyfriend.x += 150; boyfriend.y -= curSong == 'manifest' ? 150 : 110;
-    boyfriend.cameraOffset.x -= 150;
-    camFollow.setPosition(700, 400);
 
     bg = new FunkinSprite(-388.05, -232);
     if (curSong == 'wife forever') {
