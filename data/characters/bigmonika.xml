@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/big_monikia_base" color="#8CD465">
+	<anim name="idle" anim="Big Monika Idle"/>
+	<anim name="singDOWN" anim="Big Monika Down" x="1" y="-49"/>
+	<anim name="singRIGHT" anim="Big Monika Right" y="-1"/>
+	<anim name="singLEFT" anim="Big Monika Left" x="1" y="-15"/>
+	<anim name="singUP" anim="Big Monika Up" y="14"/>
+	<anim name="Big Monika Last Note" anim="Big Monika Last Note" x="191" y="43"/>
+</character>

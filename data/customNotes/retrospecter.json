@@ -1,0 +1,40 @@
+{
+    "pathSprite": "modNotes/Corruptro/NOTE_assets_retrobf",
+    "scale": 0.7,
+    "antialiasing": true,
+
+    "strum": [
+        {
+            "strumArrow": "arrowLEFT0",
+            "noteArrow": "purple0",
+            "confirmArrow": "left confirm0",
+            "pressArrow": "left press0",
+            "holdPiece": "purple hold piece0",
+            "holdEndPiece": "pruple end hold0"
+        },
+        {
+            "strumArrow": "arrowDOWN0",
+            "noteArrow": "blue0",
+            "confirmArrow": "down confirm0",
+            "pressArrow": "down press0",
+            "holdPiece": "blue hold piece0",
+            "holdEndPiece": "blue hold end0"
+        },
+        {
+            "strumArrow": "arrowUP0",
+            "noteArrow": "green0",
+            "confirmArrow": "up confirm0",
+            "pressArrow": "up press0",
+            "holdPiece": "green hold piece0",
+            "holdEndPiece": "green hold end0"
+        },{
+            "strumArrow": "arrowRIGHT0",
+            "noteArrow": "red0",
+            "confirmArrow": "right confirm0",
+            "pressArrow": "right press0",
+            "holdPiece": "red hold piece0",
+            "holdEndPiece": "red hold end0"
+        }
+
+    ]
+}

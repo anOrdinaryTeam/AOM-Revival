@@ -1,8 +1,8 @@
 <!DOCTYPE codename-engine-character>
-<character antialiasing="true" sprite="sky/sky_manifest" icon="sky-mad" color="#FD1313" y="50" camy="100">
-	<anim x="0" loop="false" y="0" fps="24" anim="sky mad idle" name="idle"/>
-	<anim x="-6" loop="false" y="50" fps="24" anim="sky mad up" name="singUP"/>
-	<anim x="-10" loop="false" y="10" fps="24" anim="sky mad left" name="singLEFT"/>
-	<anim x="0" loop="false" y="27" fps="24" anim="sky mad right" name="singRIGHT"/>
-	<anim x="0" loop="false" y="-30" fps="24" anim="sky mad down" name="singDOWN"/>
+<character y="50" sprite="sky/sky_manifest" camy="100" color="#FD1313" applyStageMatrix="true">
+	<anim name="idle" anim="sky mad idle"/>
+	<anim name="singUP" anim="sky mad up" x="24" y="-10"/>
+	<anim name="singLEFT" anim="sky mad left" x="-5"/>
+	<anim name="singRIGHT" anim="sky mad right" x="5" y="2"/>
+	<anim name="singDOWN" anim="sky mad down" x="5" y="-5"/>
 </character>

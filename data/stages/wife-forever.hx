@@ -4,6 +4,7 @@ var animToPlay:String = FlxG.save.data.AOM_flashingLights ? 'bop' : 'idle';
 
 function create() {
     defaultCamZoom = 0.9;
+    noteSkin = 'retrospecter';
 
     bg = new FunkinSprite(-388.05, -232);
     if (curSong == 'wife forever') {

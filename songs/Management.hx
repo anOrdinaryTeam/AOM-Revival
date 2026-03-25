@@ -2,6 +2,7 @@ import funkin.backend.utils.DiscordUtil;
 
 public var songName:String = PlayState.SONG.meta.name;
 public var curDiff:String = PlayState.difficulty;
+public var noteSkin:String = '';
 
 public static function getModImage(str:String) {
     if (currentMod == 'NONE')
@@ -22,7 +23,7 @@ function loadCustomHUD() {
         default:
             switch(songName) {
                 case 'Sink' | 'Corruptro': hud = 'PsychEngine';
-                case 'Megalo Strike Back': hud = 'KadeEngine';
+                case 'Megalo Strike Back' | 'Epiphany': hud = 'KadeEngine';
                 case 'Treacherous Thorns': hud = 'Vanilla';
             }
     }
@@ -56,4 +57,5 @@ function postCreate() {
     if (getSaveData('allowCustomHud')) loadCustomHUD();
     camGame.pixelPerfectShake = true;
     camHUD.pixelPerfectShake = true;
+    // importScript('data/scripts/customNotesSprites');
 }
