@@ -15,6 +15,8 @@ public static var lastSongSelected:Int = 0;
 
 public static var curSkin:String = 'Remake';
 
+public static var CREATE_FILE_FEATURE:Bool = true;
+
 function new() {
     currentModsList = Paths.getFolderDirectories('data/modsData');
     trace('Loaded Mod List: $currentModsList');

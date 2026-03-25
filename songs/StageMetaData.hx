@@ -1,11 +1,17 @@
+import haxe.format.JsonPrinter;
+
 // ease's position of the camera, more tough but more easy for characters with custom skins
 public var playerCam:FlxPoint = FlxPoint.get(900, 600);
 public var opponentCam:FlxPoint = FlxPoint.get(300, 600);
 
+var fileExists:Bool = false;
+var stageName:String = '';
+
 function create() {
-    var stageName:String = CoolUtil.parseJson(Paths.getPath('songs/$songName/charts/$curDiff.json')).song.stage;
-    if (!Assets.exists(Paths.json('stagesData/$stageName'))) {
-        trace('$stageName.json doesnt exists');
+    stageName = CoolUtil.parseJson(Paths.getPath('songs/$songName/charts/$curDiff.json')).song.stage;
+    fileExists = Assets.exists(Paths.json('stagesData/$stageName'));
+    if (!fileExists) {
+        trace('$stageName.json doesnt exists-');
         return;
     }
 
@@ -43,6 +49,32 @@ function create() {
         var offs:Array<Float> = raw.gfPos.copy();
         gf.setPosition(offs[0], offs[1]);
     }
+}
+
+function postCreate() if (!fileExists && CREATE_FILE_FEATURE) {
+    trace('Creating automatically StageMetaData File..');
+    try {
+        var content:Dynamic = {
+            "startCamPos": [600, 600],
+            "gfPos": [gf.x, gf.y],
+
+            "playerPos": [boyfriend.x, boyfriend.y],
+            "playerCamPos": [boyfriend.getMidpoint().x, boyfriend.getMidpoint().y],
+
+            "opponentPos": [dad.x, dad.y],
+            "opponentCamPos": [dad.getMidpoint().x, dad.getMidpoint().y],
+        };
+        var _file:String = JsonPrinter.print(content, null, '\t');
+
+        CoolUtil.safeSaveFile(
+            '${Paths.getAssetsRoot()}/data/stagesData/$stageName.json',
+            _file
+        );
+
+        trace('Created! [$stageName.json]');
+    }
+    catch(e:Dynamic)
+        trace(e.toString());
 }
 
 function onCameraMove(_) {
