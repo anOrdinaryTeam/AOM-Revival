@@ -1,19 +1,19 @@
 {
 	"gfPos": [
-		320,
-		50
+		345,
+		-50
 	],
 	"opponentCamPos": [
 		400,
-		568
+		400
 	],
 	"playerCamPos": [
 		1000,
-		568
+		650
 	],
 	"opponentPos": [
-		0,
-		300
+		-300,
+		50
 	],
 	"startCamPos": [
 		600,
@@ -21,6 +21,6 @@
 	],
 	"playerPos": [
 		970,
-		100
+		190
 	]
 }

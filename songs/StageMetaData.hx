@@ -5,11 +5,13 @@ public var playerCam:FlxPoint = FlxPoint.get(900, 600);
 public var opponentCam:FlxPoint = FlxPoint.get(300, 600);
 
 var fileExists:Bool = false;
-var stageName:String = '';
+public var stageName:String = '';
 
 function create() {
     stageName = CoolUtil.parseJson(Paths.getPath('songs/$songName/charts/$curDiff.json')).song.stage;
     fileExists = Assets.exists(Paths.json('stagesData/$stageName'));
+    scripts.call('preStageLoad');
+
     if (!fileExists) {
         trace('$stageName.json doesnt exists-');
         return;

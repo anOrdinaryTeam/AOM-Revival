@@ -1,5 +1,8 @@
 importScript('data/scripts/xEventShit');
 
+function preStageLoad() if (songName == 'Relighted')
+    stageName += '-gaster';
+
 function create() {
     defaultCamZoom = 0.75;
 
@@ -30,6 +33,7 @@ function create() {
         boyfriend.x += 200; boyfriend.y += 90;
 
         dad.x -= 400; dad.y -= 50;
+        trace(gf.getPosition());
 
         for (i in 0...7){
             var sqr:FunkinSprite = new FunkinSprite(-790 + 400 * i, 240 + [300, 175, 75, 0, 0, 75, 175, 300][i]);

@@ -9,6 +9,30 @@ public static function getImage(str:String)
 public static function getModPath(str:String)
     return Paths.getPath('$pathSuffix' + '$currentMod/images/$str.png');
 
+public static function getModSongList(mod:String):Dynamic
+{
+    var data = {
+        songs: [],
+        icon: [],
+        color: []
+    }
+
+    try {
+        var _file:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + '$mod/songList.txt'));
+        
+        for (raw in _file) {
+            var info:Array<String> = raw.split(':');
+            data.songs.push(info[0]);
+            data.icon.push(info[1]);
+        }
+
+        return data;
+    }
+    catch(e:Dynamic)
+        trace(e.toString());
+}
+
+/* deprecated
 public static function getModSongList(forMod:String):Dynamic {
     var finalList = {
         songs: [],
@@ -30,6 +54,7 @@ public static function getModSongList(forMod:String):Dynamic {
     catch(e:Dynamic)
         trace(e.toString());
 }
+*/
 
 // preventive
 public static function setManualPath(curSong:String) currentMod = switch(curSong) {

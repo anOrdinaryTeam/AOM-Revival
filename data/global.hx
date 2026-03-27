@@ -17,9 +17,24 @@ public static var curSkin:String = 'Remake';
 
 public static var CREATE_FILE_FEATURE:Bool = true;
 
+using StringTools;
+
 function new() {
-    currentModsList = Paths.getFolderDirectories('data/modsData');
+    currentModsList = loadModFolders();
     trace('Loaded Mod List: $currentModsList');
+}
+
+function loadModFolders():Array<String>
+{
+    final folders:Array<String> = Paths.getFolderDirectories('');
+    final result:Array<String> = [];
+
+    for (folder in folders) if (folder.contains('Assets-')) {
+        var _file:String = folder.replace('Assets-', '');
+        result.push(_file);
+    }
+
+    return result;
 }
 
 function preStateSwitch() {
