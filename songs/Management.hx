@@ -23,7 +23,7 @@ function loadCustomHUD() {
         default:
             switch(songName) {
                 case 'Sink' | 'Corruptro': hud = 'PsychEngine';
-                case 'Megalo Strike Back' | 'Epiphany': hud = 'KadeEngine';
+                case 'Megalo Strike Back' | 'Epiphany' | 'Defeat': hud = 'KadeEngine';
                 case 'Treacherous Thorns': hud = 'Vanilla';
             }
     }

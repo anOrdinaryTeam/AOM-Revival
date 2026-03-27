@@ -10,7 +10,7 @@ function create() {
     boyfriend.x += 260;
 
     if (!isMadness) {
-        var bg:FlxSprite = new FlxSprite(-350, -300, modPath('stages/red'));
+        var bg:FlxSprite = new FlxSprite(-405, -300, modPath('stages/red'));
         bg.antialiasing = Options.antialiasing;
         bg.scrollFactor.set(0.9, 0.9);
         addSprite(bg);

@@ -70,3 +70,6 @@ function onDadHit(_) {
         FlxTween.tween(dad, {alpha: 0.1}, 0.6, {type: 4});
     }
 }
+
+function onPlayerHit(e)
+    e.healthGain = 0;

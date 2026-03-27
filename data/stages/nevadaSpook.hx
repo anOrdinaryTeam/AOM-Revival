@@ -56,7 +56,7 @@ function postCreate() {
     }
 }
 
-var timerForIdle:FlxTimer;
+var timerForIdle:FlxTimer = new FlxTimer();
 
 function onDadHit(_) {
     dad.alpha = 0;

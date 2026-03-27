@@ -64,6 +64,7 @@ function postCreate() {
                 default:
                     switch(songName) {
                         case 'Megalo Strike Back': '1.4.1';
+                        default: 'idk';
                     }
             };
 
@@ -73,6 +74,8 @@ function postCreate() {
         watermark.scrollFactor.set();
         hudItems.add(watermark);
     }
+
+    scripts.call('postHudLoad');
 }
 
 function update(_) {

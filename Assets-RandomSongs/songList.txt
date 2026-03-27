@@ -1,4 +1,5 @@
 Corruptro:corruptro
+Defeat:black
 Sink:sink
 Megalo Strike Back:chara
 Treacherous Thorns:senpai-emtpy

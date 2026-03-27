@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/black" icon="black" color="BLACK">
+	<anim name="idle" anim="BLACK IDLE" loop="true"/>
+	<anim name="singDOWN" anim="BLACK DOWN" x="-25" y="-20"/>
+	<anim name="singRIGHT" anim="BLACK RIGHT" x="-232" y="-10"/>
+	<anim name="singLEFT" anim="BLACK LEFT" x="115" y="10"/>
+	<anim name="singUP" anim="BLACK UP" x="40" y="102"/>
+</character>
