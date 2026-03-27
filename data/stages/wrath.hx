@@ -61,6 +61,7 @@ function onNoteCreation(_) {
     if (_.strumLineID == 0) _.noteSprite = "modNotes/Corruptro/NOTE_assets_corruptro";
     else _.noteSprite = "modNotes/Corruptro/NOTE_assets_retrobf";
     if (_.noteType == 'poison') setColorSwapShader(_.note, 180, 0, 0);
+    _.note.splash = 'retrospecter';
 }
 function onStrumCreation(_)
     if (_.player == 0) _.sprite = "modNotes/Corruptro/NOTE_assets_corruptro";

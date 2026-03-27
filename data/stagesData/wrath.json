@@ -4,23 +4,23 @@
 		130
 	],
 	"opponentCamPos": [
-		605,
-		360
+		550,
+		470
 	],
 	"playerCamPos": [
-		548,
-		360
+		900,
+		470
 	],
 	"opponentPos": [
-		-16,
-		-139
-	],
-	"startCamPos": [
-		550,
+		100,
 		100
 	],
+	"startCamPos": [
+		600,
+		600
+	],
 	"playerPos": [
-		770,
+		970,
 		100
 	]
 }

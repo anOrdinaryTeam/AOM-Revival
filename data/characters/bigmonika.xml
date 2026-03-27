@@ -5,5 +5,5 @@
 	<anim name="singRIGHT" anim="Big Monika Right" y="-1"/>
 	<anim name="singLEFT" anim="Big Monika Left" x="1" y="-15"/>
 	<anim name="singUP" anim="Big Monika Up" y="14"/>
-	<anim name="Big Monika Last Note" anim="Big Monika Last Note" x="191" y="43"/>
+	<anim name="lastNOTE" anim="Big Monika Last Note" x="191" y="43"/>
 </character>

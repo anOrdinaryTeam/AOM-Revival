@@ -3,6 +3,8 @@ import flixel.addons.display.FlxBackdrop;
 static function DokiPath(str:String)
     return getModImage('Epiphany/$str');
 
+public var popup:FunkinSprite = new FunkinSprite(312, 432);
+
 function create() {
     var posX:Float = -250;
     var posY:Float = -167;
@@ -28,4 +30,17 @@ function postCreate() {
     iconP1.setIcon('bf');
     healthBar.createColoredFilledBar(FlxColor.fromString('#31B0D1'));
     healthBar.updateBar();
+
+    popup.loadSprite(DokiPath('bigika_delete'));
+    popup.addAnim('show', 'PopUpAnim', 24, false);
+	popup.antialiasing = Options.antialiasing;
+    popup.alpha = 0.001;
+    add(popup);
+}
+
+function onStrumCreation(_)
+    _.sprite = "modNotes/Epiphany/default";
+function onNoteCreation(_) {
+    _.noteSprite = "modNotes/Epiphany/default";
+    _.note.splash = 'doki';
 }
