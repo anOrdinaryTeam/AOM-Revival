@@ -12,6 +12,9 @@ var curDiff:Int = 0;
 var allowInput:Bool = true;
 
 function create() {
+    CoolUtil.playMenuSong();
+    changeToDefaultRPC('In The Freeplay - [$currentMod]');
+
     var bg:FlxSprite = new FlxSprite().loadGraphic(getModPath('menuBG'));
     bg.setGraphicSize(FlxG.width, FlxG.height);
     bg.updateHitbox();

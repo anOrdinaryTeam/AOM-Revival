@@ -27,6 +27,8 @@ var backgroundsGrp:FlxTypedGroup<Background> = new FlxTypedGroup();
 var logosGrp:FlxTypedGroup<Logo> = new FlxTypedGroup();
 
 function create() {
+    CoolUtil.playMenuSong();
+    changeToDefaultRPC('In The Mod Selector');
     add(backgroundsGrp);
 
     contrastGraphic = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);

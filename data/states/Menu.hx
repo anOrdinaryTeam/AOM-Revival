@@ -16,6 +16,8 @@ public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 
 function create() {
     FlxG.mouse.visible = true;
+    CoolUtil.playMenuSong();
+    changeToDefaultRPC('In The Main Menu');
 
     final bg:FlxBackdrop = new FlxBackdrop(getImage('Menu/${FlxG.random.int(0, 4)}'), FlxAxes.XY, -1);
     bg.antialiasing = pixelate;

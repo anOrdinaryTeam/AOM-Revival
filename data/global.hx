@@ -1,6 +1,7 @@
 import funkin.backend.system.framerate.Framerate;
 import funkin.backend.assets.ModsFolderLibrary;
 import funkin.backend.assets.ModsFolder;
+import funkin.backend.utils.DiscordUtil;
 
 var saveMap:Map<String, Dynamic> = [];
 static var loadedSaveData:Bool = false;
@@ -114,4 +115,11 @@ public static function ReloadSaveData() {
     saveMap.set('Kade_MissesType', FlxG.save.data.AOM_kade_MISSES_TYPE);
     saveMap.set('Kade_Ratings', FlxG.save.data.AOM_kade_RATINGS);
     saveMap.set('Kade_RatingType', FlxG.save.data.AOM_kade_RATINGS_TYPE);
+}
+
+public static function changeToDefaultRPC(_state:String) {
+    DiscordUtil.changePresenceAdvanced({
+        state: _state,
+        largeImageKey: 'icon'
+    });
 }
