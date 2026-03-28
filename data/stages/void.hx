@@ -1,6 +1,5 @@
 var bgRocks:FlxSprite;
 
-function onStartCountdown() if (camHUD.alpha == 0) FlxTween.tween(camHUD, {alpha: 1}, 1);
 function create() {
     if (playCutscenes) camHUD.alpha = 0;
     defaultCamZoom = 0.55;
@@ -38,9 +37,10 @@ function create() {
     addSprite(frontRocks);
 }
 
+function postCreate()
+    iconP1.setIcon('bf-alt');
+
 function update(_) {
     gf.y = -120 + Math.sin((Conductor.songPosition / 1000)*(Conductor.bpm/60) * 2.0) * 5.0;
-    new FlxTimer().start(0.2, function(tmr:FlxTimer) {
-        bgRocks.y = -700 + Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 2.0) * 3.0;
-    });
+    bgRocks.y = -700 + Math.sin((Conductor.songPosition / 1000) * (Conductor.bpm / 60) * 2.0) * 0.8;
 }

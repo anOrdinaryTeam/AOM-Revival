@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="agoti/gf-agoti" scale="1" icon="gf" color="#A5004D" isGF="true">
+	<anim name="idle" anim="GF Dancing Beat Hair blowing" loop="true" indices="0..14"/>
+</character>

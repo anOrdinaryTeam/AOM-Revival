@@ -1,3 +1,5 @@
+public var curSkin:String = 'Remake';
+
 // function postCreate() {
 //     if (dad.curCharacter == 'empty')
 // }

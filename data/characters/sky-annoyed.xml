@@ -1,17 +1,17 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="Sky/sky_annoyed" icon="sky" camx="400" camy="400" color="#9B6ECC">
-	<anim name="idle" anim="sky annoyed idle" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singUP" anim="sky annoyed up" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singLEFT" anim="sky annoyed left" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singRIGHT" anim="sky annoyed right" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singDOWN" anim="sky annoyed down" x="0" y="0" fps="24" loop="false"/>
-	<anim name="idle-alt" anim="sky annoyed alt idle" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singUP-alt" anim="sky annoyed alt up" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singDOWN-alt" anim="sky annoyed alt down" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singLEFT-alt" anim="sky annoyed alt left" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singRIGHT-alt" anim="sky annoyed alt right" x="0" y="0" fps="24" loop="false"/>
-	<anim name="huh 1" anim="sky annoyed oh" x="0" y="0" fps="24" loop="false"/>
-	<anim name="huh 2" anim="sky annoyed grr" x="0" y="0" fps="24" loop="false"/>
-	<anim name="huh 3" anim="sky annoyed huh" x="0" y="0" fps="24" loop="false"/>
-	<anim name="menoje" anim="sky annoyed ugh" x="0" y="0" fps="24" loop="false"/>
+<character sprite="sky/sky_annoyed" camx="400" camy="400" icon="sky" color="#9B6ECC" applyStageMatrix="true">
+	<anim name="idle" anim="sky annoyed idle"/>
+	<anim name="singUP" anim="sky annoyed up" x="20"/>
+	<anim name="singLEFT" anim="sky annoyed left"/>
+	<anim name="singRIGHT" anim="sky annoyed right"/>
+	<anim name="singDOWN" anim="sky annoyed down" x="24" y="1"/>
+	<anim name="idle-alt" anim="sky annoyed alt idle"/>
+	<anim name="singUP-alt" anim="sky annoyed alt up" x="20"/>
+	<anim name="singDOWN-alt" anim="sky annoyed alt down" x="24"/>
+	<anim name="singLEFT-alt" anim="sky annoyed alt left"/>
+	<anim name="singRIGHT-alt" anim="sky annoyed alt right"/>
+	<anim name="huh 1" anim="sky annoyed oh"/>
+	<anim name="huh 2" anim="sky annoyed grr"/>
+	<anim name="huh 3" anim="sky annoyed huh"/>
+	<anim name="menoje" anim="sky annoyed ugh" x="20"/>
 </character>

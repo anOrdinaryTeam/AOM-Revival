@@ -14,8 +14,6 @@ public static var lastModSelected:Int = 0;
 public static var lastModSelected_Str:String = '';
 public static var lastSongSelected:Int = 0;
 
-public static var curSkin:String = 'Remake';
-
 public static var CREATE_FILE_FEATURE:Bool = true;
 
 using StringTools;
