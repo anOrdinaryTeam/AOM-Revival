@@ -1,22 +1,29 @@
 {
     "options": [
         {
-            "text": "ModsList",
-            "position": [20, 350],
+            "text": "Mods Freeplay",
+            "position": [25, 290],
             "size": 0.9,
             "stateRedirect": "ModSelectorNew",
             "stateType": "ModState"
         },
         {
+            "text": "Skin Editor",
+            "position": [45, 390],
+            "size": 0.9,
+            "stateRedirect": "skinEditor",
+            "stateType": "ModState"
+        },
+        {
             "text": "Credits",
-            "position": [50, 450],
+            "position": [60, 490],
             "size": 0.925,
             "stateRedirect": "funkin.menus.credits.CreditsMain",
             "stateType": "SourceState"
         },
         {
             "text": "Options",
-            "position": [105, 550],
+            "position": [80, 590],
             "size": 0.97,
             "stateRedirect": "funkin.options.OptionsMenu",
             "stateType": "SourceState"
