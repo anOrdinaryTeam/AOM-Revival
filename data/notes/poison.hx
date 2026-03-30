@@ -62,6 +62,7 @@ function onNoteCreation(_) if (_.noteType == 'poison') {
 }
 
 function onPlayerHit(_) if (_.noteType == 'poison') {
+    _.animCancelled = true;
     poisonStacks++;
     hud["text"].text = Std.string(poisonStacks);
     playModSound('acid');

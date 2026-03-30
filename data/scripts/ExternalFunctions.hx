@@ -57,9 +57,10 @@ public static function getModSongList(forMod:String):Dynamic {
 */
 
 // preventive
-public static function setManualPath(curSong:String) currentMod = switch(curSong) {
+public function setManualPath(curSong:String) currentMod = switch(curSong) {
     case 'Wife Forever' | 'Sky' | 'Manifest': 'Sky';
     case 'Foolhardy' | 'Bushwhack': 'Zardy';
     case 'Screenplay' | 'Parasite' | 'A.G.O.T.I': 'Agoti';
+    case 'Overwrite' | 'Inking Mistake' | 'Relighted': 'xEvent';
     default: 'RS';
 }

@@ -5,11 +5,12 @@ public var playerCam:FlxPoint = FlxPoint.get(900, 600);
 public var opponentCam:FlxPoint = FlxPoint.get(300, 600);
 
 var fileExists:Bool = false;
-public var stageName:String = '';
+var metaSongExists:Bool = false;
+public var stageName:String = PlayState.SONG.stage;
 
 function create() {
-    stageName = CoolUtil.parseJson(Paths.getPath('songs/$songName/charts/$curDiff.json')).song.stage;
     fileExists = Assets.exists(Paths.json('stagesData/$stageName'));
+    metaSongExists = Assets.exists(Paths.getPath('songs/$songName/meta.json'));
     scripts.call('preStageLoad');
 
     if (!fileExists) {
@@ -53,30 +54,52 @@ function create() {
     }
 }
 
-function postCreate() if (!fileExists && CREATE_FILE_FEATURE) {
-    trace('Creating automatically StageMetaData File..');
-    try {
-        var content:Dynamic = {
-            "startCamPos": [600, 600],
-            "gfPos": [gf.x, gf.y],
+function postCreate() {
+    if (!fileExists && CREATE_FILE_FEATURE) {
+        trace('Creating automatically StageMetaData File..');
+        try {
+            var content:Dynamic = {
+                "startCamPos": [600, 600],
+                "gfPos": [gf.x, gf.y],
 
-            "playerPos": [boyfriend.x, boyfriend.y],
-            "playerCamPos": [boyfriend.getMidpoint().x, boyfriend.getMidpoint().y],
+                "playerPos": [boyfriend.x, boyfriend.y],
+                "playerCamPos": [boyfriend.getMidpoint().x, boyfriend.getMidpoint().y],
 
-            "opponentPos": [dad.x, dad.y],
-            "opponentCamPos": [dad.getMidpoint().x, dad.getMidpoint().y],
-        };
-        var _file:String = JsonPrinter.print(content, null, '\t');
+                "opponentPos": [dad.x, dad.y],
+                "opponentCamPos": [dad.getMidpoint().x, dad.getMidpoint().y],
+            };
+            var _file:String = JsonPrinter.print(content, null, '\t');
 
-        CoolUtil.safeSaveFile(
-            '${Paths.getAssetsRoot()}/data/stagesData/$stageName.json',
-            _file
-        );
+            CoolUtil.safeSaveFile(
+                '${Paths.getAssetsRoot()}/data/stagesData/$stageName.json',
+                _file
+            );
 
-        trace('Created! [$stageName.json]');
+            trace('Created! [$stageName.json]');
+        }
+        catch(e:Dynamic)
+            trace(e.toString());
     }
-    catch(e:Dynamic)
-        trace(e.toString());
+
+    // extra step in case this chart has been/is gonna be converted into a cne chart
+    if (!metaSongExists && CREATE_FILE_FEATURE) {
+        trace('Creating automatically meta.json File..');
+        try {
+            var content = {
+                "bpm": PlayState.SONG.meta.bpm ?? 150,
+                "icon": dad.icon ?? "face",
+            };
+            var _file:String = JsonPrinter.print(content, null, '\t');
+
+            CoolUtil.safeSaveFile(
+                '${Paths.getAssetsRoot()}/songs/$songName/meta.json',
+                _file
+            );
+            trace('Created! [meta.json]');
+        }
+        catch(e:Dynamic)
+            trace(e.toString());
+    } 
 }
 
 function onCameraMove(_) {

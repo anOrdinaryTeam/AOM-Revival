@@ -24,25 +24,23 @@ function update(_) {
     });
 }
 
-function onNoteCreation(_)
-    if (_.noteType == 'spectre') {
-        _.note.alpha = 1;
-        _.noteSprite = 'modNotes/Corruptro/' + spr;
-        _.note.forceIsOnScreen = true;
-        _.note.earlyPressWindow = 0.5;
-		_.note.latePressWindow = 0.5;
-        if (_.strumLineID <= 0) _.note.wasGoodHit = true;
-    }
+function onNoteCreation(_) if (_.noteType == 'spectre') {
+    _.note.alpha = 1;
+    _.noteSprite = 'modNotes/Corruptro/' + spr;
+    _.note.forceIsOnScreen = true;
+    _.note.earlyPressWindow = 0.5;
+	_.note.latePressWindow = 0.5;
+    if (_.strumLineID <= 0) _.note.wasGoodHit = true;
+}
 
-function onPlayerHit(_)
-    if (_.noteType == 'spectre') {
-        playModSound('SpectreArrow');
-        spectreHit = true;
-        if (_.strumLineID == 0) FlxTween.tween(_.note, {alpha: 1}, 0.5);
-    }
+function onPlayerHit(_) if (_.noteType == 'spectre') {
+    _.animCancelled = true;
+    playModSound('SpectreArrow');
+    spectreHit = true;
+    if (_.strumLineID == 0) FlxTween.tween(_.note, {alpha: 1}, 0.5);
+}
 
-function onPlayerMiss(_)
-    if (_.noteType == 'spectre') {
-        _.cancel();
-        deleteNote(_.note);
-    }
+function onPlayerMiss(_) if (_.noteType == 'spectre') {
+    _.cancel();
+    deleteNote(_.note);
+}
