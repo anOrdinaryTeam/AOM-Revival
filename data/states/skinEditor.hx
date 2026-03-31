@@ -7,7 +7,7 @@ var curPage:Int = 0;
 
 var bg:FlxSprite = new FlxSprite();
 var optsGrp:Array<Array<Option>> = [];
-var optsMap:Map<Int, Dynamic> = [];
+var namesGrp:Array<Array<FakeAlphabet>> = [];
 
 var limitPage:Int = 5;
 var actualPages:Int = 0;
@@ -32,17 +32,29 @@ function create() {
 
     var curLimit:Int = 0;
     var designedPage:Int = 0;
+    var alphabetScale:Float = 0.6;
 
     for (i => data in list) {
-        if (optsGrp[designedPage] == null)
-            optsGrp.push([]);
-
         var split:Array<String> = data.split(':');
+
+        if (optsGrp[designedPage] == null) optsGrp.push([]);
+        if (namesGrp[designedPage] == null) namesGrp.push([]);
+
         var opt:Option = new Option(0, 15 + offsetY * curLimit, split[1]);
         opt.ID = curLimit;
         opt.selfPage = designedPage;
         add(opt);
+
+        var charName:FakeAlphabet = new FakeAlphabet(0, 45 + offsetY * curLimit, split[0], 'bold');
+        charName.antialiasing = Options.antialiasing;
+        charName.ID = curLimit;
+        charName.selfPage = designedPage;
+        charName.scale.set(alphabetScale, alphabetScale);
+        charName.updateHitbox();
+        add(charName);
+
         optsGrp[designedPage].push(opt);
+        namesGrp[designedPage].push(charName);
 
         if (curLimit == limitPage) {
             curLimit = 0;
@@ -74,7 +86,9 @@ function scroll(i:Int = 0, f:Bool = false) {
 
     var alphaUnselected:Float = 0.6;
     for (item in optsGrp[curPage])
-        item.icon.alpha = item.ID == curSelected ? 1 : 0.6;
+        item.icon.alpha = item.ID == curSelected ? 1 : alphaUnselected;
+    for (item in namesGrp[curPage])
+        item.alpha = item.ID == curSelected ? 1 : alphaUnselected;
 }
 
 function changePage(i:Int) {
@@ -84,9 +98,20 @@ function changePage(i:Int) {
     curSelected = 0;
     scroll(0, true);
 
+    // Options
     for (pre in optsGrp) for (item in pre) if (item.selfPage == curPage) {
         FlxTween.cancelTweensOf(item);
         FlxTween.tween(item, {x: 0}, 0.2, {ease: FlxEase.quadInOut});
+    }
+    else {
+        FlxTween.cancelTweensOf(item);
+        FlxTween.tween(item, {x: offScreenX}, 0.2, {ease: FlxEase.quadInOut});
+    }
+
+    // Alphabet
+    for (pre in namesGrp) for (item in pre) if (item.selfPage == curPage) {
+        FlxTween.cancelTweensOf(item);
+        FlxTween.tween(item, {x: 135}, 0.2, {ease: FlxEase.quadInOut});
     }
     else {
         FlxTween.cancelTweensOf(item);
@@ -112,7 +137,7 @@ class Option extends MusicBeatGroup
     private var bar_Alpha:Float = 0.8;
     private var bar_BelowY:Float = 100;
 
-    private var icon_scale:Float = 0.74;
+    private var icon_scale:Float = 0.73;
     private var icon_defAlpha:Float = 0.7;
 
     public function new(x:Float, y:Float, _icon:String) {
@@ -134,6 +159,7 @@ class Option extends MusicBeatGroup
         icon.antialiasing = Options.antialiasing;
         icon.scale.set(icon_scale, icon_scale);
         icon.updateHitbox();
+        icon.x += 10;
         icon.alpha = icon_defAlpha;
 
         add(bg);
@@ -141,4 +167,12 @@ class Option extends MusicBeatGroup
         add(barBelow);
         add(icon);
     }
+}
+
+class FakeAlphabet extends Alphabet
+{
+    public var selfPage:Int = 0;
+
+    public function new(X:Float, Y:Float, Text:String, Thing:String)
+        super(X, Y, Text, Thing);
 }
