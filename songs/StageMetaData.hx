@@ -87,7 +87,7 @@ function postCreate() {
         try {
             var content = {
                 "bpm": PlayState.SONG.meta.bpm ?? 150,
-                "icon": dad.icon ?? "face",
+                "icon": dad.getIcon(),
             };
             var _file:String = JsonPrinter.print(content, null, '\t');
 

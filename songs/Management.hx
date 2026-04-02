@@ -18,7 +18,7 @@ function loadCustomHUD() {
     var hud:String = '';
 
     switch(currentMod) {
-        case 'Sky' | 'Zardy' | 'xEvent' | 'Tabi' | 'Tricky': hud = 'KadeEngine';
+        case 'Sky' | 'Zardy' | 'xEvent' | 'Tabi' | 'Tricky' | 'Eteled': hud = 'KadeEngine';
         case 'Agoti': hud = "Mic'dUpEngine";
         default:
             switch(songName) {

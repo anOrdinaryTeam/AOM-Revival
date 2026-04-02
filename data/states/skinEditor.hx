@@ -65,7 +65,6 @@ function create() {
             curLimit++;
     }
     
-    scroll(0, true);
     changePage(0);
 }
 

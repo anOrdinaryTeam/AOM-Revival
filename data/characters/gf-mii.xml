@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="agoti/gf-rock" scale="1.2" icon="gf" color="#A5004D" isGF="true">
+<character sprite="deleted/GF_MII_assets" icon="gf" color="#A5004D" isGF="true">
 	<anim name="danceLeft" anim="GF Dancing Beat" indices="0..14"/>
 	<anim name="danceRight" anim="GF Dancing Beat" indices="15..30"/>
 </character>

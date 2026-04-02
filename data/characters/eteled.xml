@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="deleted/eteled/sheet" color="#000000">
+	<anim name="idle" anim="eteled idle dance"/>
+	<anim name="singDOWN" anim="eteled Sing Note DOWN" x="37" y="-37"/>
+	<anim name="singRIGHT" anim="eteled Sing Note RIGHT" x="40"/>
+	<anim name="singLEFT" anim="eteled Sing Note LEFT" x="65" y="5"/>
+	<anim name="singUP" anim="eteled Sing Note UP" x="19" y="9"/>
+</character>

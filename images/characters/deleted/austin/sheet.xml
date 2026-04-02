@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="austin_sheet.png" width="6894" height="1781" spritePadding="1" borderPadding="0">
+	<SubTexture name="austin Sing Note DOWN0000" x="6260" y="867" width="601" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0001" x="6260" y="867" width="601" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0002" x="5651" y="867" width="608" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0003" x="5651" y="867" width="608" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0004" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0005" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0006" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0007" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0008" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0009" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0010" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0011" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0012" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0013" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0014" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note DOWN0015" x="5036" y="867" width="614" height="548" frameX="-7" frameY="-13" frameWidth="616" frameHeight="561"/>
+	<SubTexture name="austin Sing Note LEFT0000" x="4588" y="867" width="447" height="887" frameX="-57" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0001" x="4588" y="867" width="447" height="887" frameX="-57" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0002" x="4116" y="867" width="471" height="886" frameX="-29" frameY="-27" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0003" x="4116" y="867" width="471" height="886" frameX="-29" frameY="-27" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0004" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0005" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0006" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0007" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0008" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0009" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0010" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0011" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0012" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0013" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0014" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0015" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0016" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0017" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note LEFT0018" x="3626" y="867" width="489" height="887" frameX="-2" frameY="-26" frameWidth="494" frameHeight="914"/>
+	<SubTexture name="austin Sing Note RIGHT0000" x="808" y="0" width="801" height="704" frameX="0" frameY="-28" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0001" x="808" y="0" width="801" height="704" frameX="0" frameY="-28" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0002" x="0" y="0" width="807" height="700" frameX="-1" frameY="-32" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0003" x="0" y="0" width="807" height="700" frameX="-1" frameY="-32" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0004" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0005" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0006" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0007" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0008" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0009" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0010" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0011" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0012" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0013" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0014" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note RIGHT0015" x="1610" y="0" width="812" height="694" frameX="-1" frameY="-38" frameWidth="818" frameHeight="732"/>
+	<SubTexture name="austin Sing Note UP0000" x="2171" y="867" width="488" height="910" frameX="0" frameY="-33" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0001" x="2171" y="867" width="488" height="910" frameX="0" frameY="-33" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0002" x="2660" y="867" width="484" height="913" frameX="-2" frameY="-30" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0003" x="2660" y="867" width="484" height="913" frameX="-2" frameY="-30" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0004" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0005" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0006" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0007" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0008" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0009" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0010" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0011" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0012" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0013" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0014" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0015" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0016" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0017" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0018" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0019" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0020" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0021" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0022" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0023" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0024" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0025" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0026" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0027" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0028" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0029" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0030" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0031" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0032" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0033" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0034" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0035" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0036" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0037" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0038" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0039" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0040" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0041" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0042" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0043" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0044" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0045" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0046" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0047" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0048" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0049" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0050" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0051" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0052" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0053" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0054" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0055" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0056" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0057" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0058" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin Sing Note UP0059" x="3145" y="867" width="480" height="914" frameX="-4" frameY="-29" frameWidth="488" frameHeight="943"/>
+	<SubTexture name="austin idle dance0000" x="0" y="867" width="541" height="872" frameX="-16" frameY="-24" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0001" x="5792" y="0" width="552" height="865" frameX="-14" frameY="-30" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0002" x="2423" y="0" width="562" height="862" frameX="-15" frameY="-33" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0003" x="2986" y="0" width="562" height="861" frameX="-15" frameY="-34" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0004" x="3549" y="0" width="562" height="861" frameX="-15" frameY="-34" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0005" x="4112" y="0" width="561" height="861" frameX="-15" frameY="-34" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0006" x="4674" y="0" width="560" height="862" frameX="-14" frameY="-33" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0007" x="5235" y="0" width="556" height="864" frameX="-14" frameY="-31" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0008" x="6345" y="0" width="549" height="866" frameX="-14" frameY="-29" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0009" x="542" y="867" width="543" height="868" frameX="-15" frameY="-27" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0010" x="1628" y="867" width="542" height="869" frameX="-15" frameY="-26" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0011" x="1086" y="867" width="541" height="871" frameX="-16" frameY="-24" frameWidth="599" frameHeight="908"/>
+	<SubTexture name="austin idle dance0012" x="0" y="867" width="541" height="872" frameX="-16" frameY="-24" frameWidth="599" frameHeight="908"/>
+</TextureAtlas>

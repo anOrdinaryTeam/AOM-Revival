@@ -1,0 +1,34 @@
+﻿{"ATLAS": {"SPRITES":[ 
+{"SPRITE" : {"name": "0001","x":0,"y":2465,"w":414,"h":501,"rotated": false}},
+{"SPRITE" : {"name": "0006","x":2413,"y":2386,"w":1123,"h":467,"rotated": false}},
+{"SPRITE" : {"name": "0007","x":1153,"y":0,"w":1153,"h":1059,"rotated": false}},
+{"SPRITE" : {"name": "0008","x":1656,"y":1059,"w":370,"h":353,"rotated": false}},
+{"SPRITE" : {"name": "0009","x":2413,"y":1916,"w":1123,"h":470,"rotated": false}},
+{"SPRITE" : {"name": "0010","x":0,"y":1107,"w":1295,"h":888,"rotated": false}},
+{"SPRITE" : {"name": "0011","x":2177,"y":2853,"w":320,"h":391,"rotated": false}},
+{"SPRITE" : {"name": "0012","x":0,"y":1995,"w":1123,"h":470,"rotated": false}},
+{"SPRITE" : {"name": "0013","x":1295,"y":1059,"w":361,"h":372,"rotated": false}},
+{"SPRITE" : {"name": "0014","x":1295,"y":1445,"w":1118,"h":1002,"rotated": false}},
+{"SPRITE" : {"name": "0015","x":3536,"y":2475,"w":334,"h":381,"rotated": false}},
+{"SPRITE" : {"name": "0016","x":2306,"y":0,"w":819,"h":1445,"rotated": false}},
+{"SPRITE" : {"name": "0021","x":2497,"y":2853,"w":344,"h":330,"rotated": false}},
+{"SPRITE" : {"name": "0022","x":1763,"y":2447,"w":414,"h":501,"rotated": false}},
+{"SPRITE" : {"name": "0023","x":3536,"y":1916,"w":525,"h":559,"rotated": false}},
+{"SPRITE" : {"name": "0024","x":2413,"y":1445,"w":400,"h":452,"rotated": false}},
+{"SPRITE" : {"name": "0025","x":414,"y":2465,"w":319,"h":505,"rotated": false}},
+{"SPRITE" : {"name": "0026","x":3125,"y":1200,"w":795,"h":716,"rotated": false}},
+{"SPRITE" : {"name": "0027","x":2413,"y":2386,"w":1123,"h":467,"rotated": false}},
+{"SPRITE" : {"name": "0028","x":733,"y":2465,"w":387,"h":415,"rotated": false}},
+{"SPRITE" : {"name": "0029","x":1123,"y":2447,"w":640,"h":650,"rotated": false}},
+{"SPRITE" : {"name": "0030","x":0,"y":0,"w":1153,"h":1107,"rotated": false}},
+{"SPRITE" : {"name": "0031","x":3125,"y":0,"w":712,"h":1200,"rotated": false}}
+]},
+"meta": {
+"app": "Adobe Animate",
+"version": "23.0.0.407",
+"image": "spritemap1.png",
+"format": "RGBA8888",
+"size": {"w":4061,"h":3244},
+"resolution": "1"
+}
+}

@@ -125,6 +125,11 @@ function update(dt) {
 			persistentDraw = true;
 		}
 
+        if (FlxG.keys.justPressed.T) {
+            input = false;
+            FlxG.switchState(new ModState('testing'));
+        }
+
         for (i => txt in menuItemsGroup.members) {
             var lerping:Float = lerp(txt.scale.x, FlxG.mouse.overlaps(txt, FlxG.camera) ? getOptions.options[i].size + 0.075 : getOptions.options[i].size, 0.3);
             txt.scale.set(lerping, lerping);

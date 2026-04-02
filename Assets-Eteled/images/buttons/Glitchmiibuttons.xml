@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="Glitchmiibuttons.png" width="5108" height="6846" spritePadding="3" borderPadding="1">
+	<SubTexture name="stagecurtains0000" x="1" y="1" width="2379" height="1395" frameX="-152" frameY="-17" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0001" x="2383" y="1" width="2451" height="1340" frameX="-115" frameY="-16" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0002" x="1" y="1399" width="2540" height="1341" frameX="-4" frameY="-15" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0003" x="2544" y="1399" width="2431" height="1333" frameX="-137" frameY="-6" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0004" x="1" y="2743" width="2536" height="1396" frameX="-2" frameY="-9" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0005" x="2540" y="2743" width="2567" height="1396" frameX="-3" frameY="-7" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0006" x="1" y="4142" width="2482" height="1347" frameX="-44" frameY="-4" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0007" x="2486" y="4142" width="2522" height="1347" frameX="-49" frameY="0" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0008" x="1" y="4142" width="2482" height="1347" frameX="-44" frameY="-4" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0009" x="2540" y="2743" width="2567" height="1396" frameX="-3" frameY="-7" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0010" x="1" y="5492" width="2532" height="1353" frameX="-1" frameY="-3" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0011" x="1" y="2743" width="2536" height="1396" frameX="-2" frameY="-9" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0012" x="2536" y="5492" width="2397" height="1344" frameX="-170" frameY="-13" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0013" x="1" y="1399" width="2540" height="1341" frameX="-4" frameY="-15" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0014" x="1" y="1" width="2379" height="1395" frameX="-152" frameY="-17" frameWidth="2571" frameHeight="1401"/>
+	<SubTexture name="stagecurtains0015" x="1" y="1" width="2379" height="1395" frameX="-152" frameY="-17" frameWidth="2571" frameHeight="1401"/>
+</TextureAtlas>

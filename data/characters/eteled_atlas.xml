@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="400" y="-150" sprite="deleted/eteled/atlas" scale="0.4" color="#9B6ECC" applyStageMatrix="true" icon="eteled">
+	<anim name="idle" anim="idle"/>
+	<anim name="singUP" anim="up" x="1464" y="204"/>
+	<anim name="singLEFT" anim="left" x="366" y="46"/>
+	<anim name="singRIGHT" anim="right" x="116" y="-214"/>
+	<anim name="singDOWN" anim="down" x="-20" y="-238"/>
+</character>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="glitch.png" width="6403" height="3443" spritePadding="1" borderPadding="0">
+	<SubTexture name="austin fucking dies0000" x="1394" y="1722" width="1407" height="848" frameX="0" frameY="-12" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0001" x="2802" y="1722" width="1161" height="834" frameX="-234" frameY="-9" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0002" x="3964" y="1722" width="967" height="860" frameX="-428" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0003" x="4932" y="1722" width="787" height="851" frameX="-619" frameY="-9" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0004" x="5720" y="1722" width="683" height="843" frameX="-740" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0005" x="0" y="2583" width="695" height="860" frameX="-744" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0006" x="696" y="2583" width="705" height="860" frameX="-732" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0007" x="1402" y="2583" width="753" height="855" frameX="-716" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0008" x="2156" y="2583" width="697" height="838" frameX="-743" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0009" x="2854" y="2583" width="729" height="860" frameX="-740" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0010" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0011" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0012" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0013" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0014" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0015" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0016" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0017" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0018" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0019" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0020" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0021" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0022" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0023" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0024" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0025" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0026" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0027" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0028" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0029" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0030" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0031" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0032" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0033" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0034" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0035" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0036" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0037" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0038" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0039" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0040" x="3584" y="2583" width="675" height="838" frameX="-739" frameY="-22" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0041" x="4260" y="2583" width="696" height="850" frameX="-718" frameY="-10" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0042" x="4260" y="2583" width="696" height="850" frameX="-718" frameY="-10" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0043" x="4260" y="2583" width="696" height="850" frameX="-718" frameY="-10" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0044" x="4957" y="2583" width="696" height="843" frameX="-718" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0045" x="4957" y="2583" width="696" height="843" frameX="-718" frameY="0" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0046" x="5654" y="2583" width="696" height="850" frameX="-718" frameY="-10" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0047" x="5654" y="2583" width="696" height="850" frameX="-718" frameY="-10" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0048" x="5654" y="2583" width="696" height="850" frameX="-718" frameY="-10" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0049" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0050" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0051" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0052" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0053" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0054" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0055" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0056" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies0057" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="1407" frameHeight="860"/>
+	<SubTexture name="austin fucking dies confirm0000" x="0" y="0" width="696" height="838" frameX="0" frameY="-39" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0001" x="697" y="0" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0002" x="1394" y="0" width="669" height="860" frameX="-27" frameY="0" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0003" x="2064" y="0" width="672" height="835" frameX="0" frameY="-32" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0004" x="2737" y="0" width="669" height="850" frameX="-27" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0005" x="3407" y="0" width="656" height="843" frameX="-26" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0006" x="4064" y="0" width="659" height="843" frameX="-18" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0007" x="4724" y="0" width="664" height="843" frameX="-28" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0008" x="5389" y="0" width="668" height="845" frameX="-27" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0009" x="0" y="861" width="670" height="849" frameX="-26" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0010" x="671" y="861" width="696" height="843" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0011" x="1368" y="861" width="692" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0012" x="2061" y="861" width="651" height="860" frameX="-21" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0013" x="2713" y="861" width="670" height="853" frameX="-22" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0014" x="3384" y="861" width="679" height="843" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0015" x="4064" y="861" width="651" height="860" frameX="-26" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0016" x="4716" y="861" width="696" height="842" frameX="0" frameY="-18" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0017" x="5413" y="861" width="696" height="841" frameX="0" frameY="-20" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0018" x="0" y="1722" width="696" height="841" frameX="0" frameY="-19" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0019" x="0" y="1722" width="696" height="841" frameX="0" frameY="-19" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0020" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0021" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0022" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0023" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0024" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0025" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0026" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0027" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0028" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0029" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0030" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0031" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0032" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies confirm0033" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="877"/>
+	<SubTexture name="austin fucking dies loop0000" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0001" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0002" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0003" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0004" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0005" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0006" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0007" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0008" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0009" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0010" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0011" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0012" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0013" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0014" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0015" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0016" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0017" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0018" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0019" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0020" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0021" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0022" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0023" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0024" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0025" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0026" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0027" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0028" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0029" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0030" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0031" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0032" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+	<SubTexture name="austin fucking dies loop0033" x="697" y="1722" width="696" height="860" frameX="0" frameY="-17" frameWidth="696" frameHeight="860"/>
+</TextureAtlas>
