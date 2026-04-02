@@ -41,8 +41,8 @@ function create() {
         importScript('Assets-$currentMod/globalScript');
 }
 
-function update() if (ACCESS_TO_CHARTER_EDITOR && controls.DEV_ACCESS)
-    FlxG.switchState(new Charter(songName, curDiff, null, false));
+// function update() if (ACCESS_TO_CHARTER_EDITOR && controls.DEV_ACCESS)
+//     FlxG.switchState(new Charter(songName, curDiff, null, false));
 
 function postCreate() {
     camGame.pixelPerfectShake = true;
