@@ -1,4 +1,5 @@
 import funkin.backend.utils.DiscordUtil;
+import funkin.editors.charter.Charter;
 
 public var songName:String = PlayState.SONG.meta.name;
 public var curDiff:String = PlayState.difficulty;
@@ -26,7 +27,6 @@ public function loadHud(hud:String, ver:String = 'IS NULL PENDEJO') {
 }
 
 function create() {
-    PlayState.instance.chartingMode = true;
     ReloadSaveData();
     updateDiscordPresence = () -> {
         var image:String = currentMod == 'RandomSongs' ? curSongID : currentMod.toLowerCase();
@@ -40,6 +40,9 @@ function create() {
     if (Assets.exists(Paths.script('Assets-$currentMod/globalScript')))
         importScript('Assets-$currentMod/globalScript');
 }
+
+function update() if (ACCESS_TO_CHARTER_EDITOR && controls.DEV_ACCESS)
+    FlxG.switchState(new Charter(songName, curDiff, null, false));
 
 function postCreate() {
     camGame.pixelPerfectShake = true;
