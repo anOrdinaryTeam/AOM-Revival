@@ -16,7 +16,7 @@ var offsetY:Float = 115;
 var list:Array<String> = CoolUtil.coolTextFile(Paths.txt('skins'));
 
 function create() {
-    CoolUtil.playMusic(Paths.music('pixel/breakfast'), true, 0.6);
+    CoolUtil.playMusic(Paths.music('pixel/breakfast'), true);
     changeToDefaultRPC('In the Skin Selector');
 
     bg.loadGraphic(Paths.image('menus/menuDesat'));
@@ -68,14 +68,19 @@ function create() {
     changePage(0);
 }
 
-function update(dt) if (allowInput) {
-    scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
+function update(dt) {
+    if (FlxG.sound.music.volume < 0.8)
+		FlxG.sound.music.volume += 0.5 * dt;
 
-    if (controls.LEFT_P || controls.RIGHT_P)
-        changePage((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
+    if (allowInput) {
+        scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
 
-    if (controls.BACK)
-        FlxG.switchState(new ModState('Menu'));
+        if (controls.LEFT_P || controls.RIGHT_P)
+            changePage((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
+
+        if (controls.BACK)
+            FlxG.switchState(new ModState('Menu'));
+    }
 }
 
 function scroll(i:Int = 0, f:Bool = false) {

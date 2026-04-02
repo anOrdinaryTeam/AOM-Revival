@@ -119,21 +119,26 @@ function create() {
     currentMod = 'NONE';
 }
 
-function update(dt) if (allowInput) {
-    scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
+function update(dt) {
+    if (FlxG.sound.music.volume < 0.8)
+		FlxG.sound.music.volume += 0.5 * dt;
 
-    if (controls.ACCEPT)
-        select();
-    
-    if (controls.BACK) {
-        allowInput = false;
-        FlxG.switchState(new ModState('Menu'));
-    }
+    if (allowInput) {
+        scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
 
-    for (k => option in modsAlphabet.members) {
-        var spaceBetween:Float = 130;
-        var y:Float = ((FlxG.height - spaceBetween) / 2) + ((k - curSelected) * spaceBetween);
-        option.y = CoolUtil.fpsLerp(option.y, y, 0.25);
+        if (controls.ACCEPT)
+            select();
+        
+        if (controls.BACK) {
+            allowInput = false;
+            FlxG.switchState(new ModState('Menu'));
+        }
+
+        for (k => option in modsAlphabet.members) {
+            var spaceBetween:Float = 130;
+            var y:Float = ((FlxG.height - spaceBetween) / 2) + ((k - curSelected) * spaceBetween);
+            option.y = CoolUtil.fpsLerp(option.y, y, 0.25);
+        }
     }
 }
 

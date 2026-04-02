@@ -106,19 +106,24 @@ function enterSong() {
 	FlxG.switchState(new PlayState());
 }
 
-function update(dt) if (allowInput) {
-    scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
+function update(dt) {
+    if (FlxG.sound.music.volume < 0.8)
+		FlxG.sound.music.volume += 0.5 * dt;
 
-    if (controls.LEFT_P || controls.RIGHT_P)
-        updateDifficulties((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
+    if (allowInput) {
+        scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
 
-    if (controls.BACK) {
-        allowInput = false;
-        FlxG.switchState(new ModState('ModSelectorNew'));
+        if (controls.LEFT_P || controls.RIGHT_P)
+            updateDifficulties((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
+
+        if (controls.BACK) {
+            allowInput = false;
+            FlxG.switchState(new ModState('ModSelectorNew'));
+        }
+
+        if (controls.ACCEPT)
+            enterSong();
     }
-
-    if (controls.ACCEPT)
-        enterSong();
 }
 
 class SongData

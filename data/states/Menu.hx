@@ -106,6 +106,9 @@ function update(dt) {
     var logoScale:Float = lerp(logo.scale.x, 0.95, 0.1);
     logo.scale.set(logoScale, logoScale);
 
+    if (FlxG.sound.music.volume < 0.8)
+		FlxG.sound.music.volume += 0.5 * dt;
+
     if (input) {
         if (FlxG.keys.justPressed.T) {
             input = false;
