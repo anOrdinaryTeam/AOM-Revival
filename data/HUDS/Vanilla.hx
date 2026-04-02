@@ -1,6 +1,6 @@
 public var score:FunkinText;
 
-function postCreate() {
+function onHudLoad(hud) if (hud == 'Vanilla') {
     for (i in cpuStrums) i.x -= 45;
     for (i in playerStrums) i.x -= 45;
 

@@ -1,4 +1,5 @@
-importScript('data/scripts/TrickyLines');
+// importScript('data/scripts/TrickyLines');
+
 static function modPath(str:String)
     return getModImage(str);
 

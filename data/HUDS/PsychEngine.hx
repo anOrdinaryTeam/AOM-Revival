@@ -4,6 +4,7 @@ import flixel.ui.FlxBarFillDirection;
 import flixel.util.FlxStringUtil;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
+var fuckingcomboCamera:FlxCamera = new FlxCamera();
 var Settings:Map<String, Dynamic> = [
     "hide" => !getSaveData('Psych_HideHud'),
     "opacity" => getSaveData('Psych_HudOpacity'),
@@ -12,18 +13,11 @@ var Settings:Map<String, Dynamic> = [
 ];
 doIconBop = false;
 
-// i fucking hate the .downscroll thing from HudCamera
-var fuckingcomboCamera:FlxCamera = new FlxCamera();
-function onHudLoad() {
+function onHudLoad(hud) if (hud == 'PsychEngine') {
     fuckingcomboCamera.bgColor = 0;
     FlxG.cameras.insert(fuckingcomboCamera, 1, false);
-}
-
-function postUpdate()
-    PlayState.instance.comboGroup.cameras = [fuckingcomboCamera];
-
-function postCreate() {
     PlayState.instance.comboGroup.x -= 200;
+
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
@@ -92,13 +86,14 @@ var totalPlayed:Int = 0;
 var ratingPercent:Float = 0;
 var ratingName:String = '';
 
+var scoreTxtTween:FlxTween;
+
 function onPlayerHit(_) if (!_.note.isSustainNote) {
     totalNotesHit += ratingsInt[_.rating];
     ratingsInt_2[_.rating] += 1;
     bopScoreTxt(Settings["tweenScoreTxt"]);
 }
 
-var scoreTxtTween:FlxTween;
 function bopScoreTxt(bop:Bool) {
     if (!bop) return;
     if(scoreTxtTween != null) scoreTxtTween.cancel();
@@ -135,14 +130,11 @@ function onRatingUpdate(_) {
 
 function update(_) {
     var lerpVal = Math.max(0, Math.min(1, 1 - (_ * 9)));
-
-	var mult:Float = FlxMath.lerp(1, iconP1.scale.x, lerpVal);
-	iconP1.scale.set(mult, mult);
-	iconP1.updateHitbox();
-
-	var mult:Float = FlxMath.lerp(1, iconP2.scale.x, lerpVal);
-	iconP2.scale.set(mult, mult);
-	iconP2.updateHitbox();
+    for (icons in [iconP1, iconP2]) {
+        var mult:Float = FlxMath.lerp(1, icons.scale.x, lerpVal);
+	    icons.scale.set(mult, mult);
+	    icons.updateHitbox();
+    }
 
     if (Settings["timeBarType"] != 'songName' && !startingSong) {
         var songCalc:Float = Settings["timeBarType"] == 'timeLeft' ? (inst.length - Conductor.songPosition) : Conductor.songPosition;
@@ -152,6 +144,9 @@ function update(_) {
         hudItems.members[3].text = FlxStringUtil.formatTime(secondsTotal, false);
     }
 }
+
+function postUpdate()
+    PlayState.instance.comboGroup.cameras = [fuckingcomboCamera];
 
 function beatHit() for (i in [iconP1, iconP2]) {
     i.scale.set(1.2, 1.2);

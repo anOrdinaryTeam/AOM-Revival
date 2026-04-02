@@ -5,21 +5,15 @@ import flixel.ui.FlxBarFillDirection;
 import flixel.util.FlxStringUtil;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
+var fuckingcomboCamera:FlxCamera = new FlxCamera();
 var missesType:String = getSaveData('Kade_MissesType');
 doIconBop = false;
 
-// i fucking hate the .downscroll thing from HudCamera
-var fuckingcomboCamera:FlxCamera = new FlxCamera();
-function onHudLoad() {
+function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
     fuckingcomboCamera.bgColor = 0;
     FlxG.cameras.insert(fuckingcomboCamera, 1, false);
-}
-
-function postUpdate()
-    PlayState.instance.comboGroup.cameras = [fuckingcomboCamera];
-
-function postCreate() {
     PlayState.instance.comboGroup.x -= 200;
+
     for (i in cpuStrums) i.x -= 45;
     for (i in playerStrums) i.x -= 45;
     
@@ -52,22 +46,7 @@ function postCreate() {
     }
 
     if (getSaveData('Kade_Watermark')) {
-        var ke_Version:String = GitCommitMacro.commitHash;
-
-        if (getSaveData('Kade_WatermarkType') == 'KE')
-            ke_Version = switch(currentMod) {
-                case 'Sky': '1.4.1';
-                case 'Tricky': '1.5.6';
-                case 'Zardy': '1.7';
-                case 'xEvent': '1.2.1';
-                case 'Tabi': '1.5.2';
-                default:
-                    switch(songName) {
-                        case 'Megalo Strike Back': '1.4.1';
-                        default: 'idk';
-                    }
-            };
-
+        var ke_Version:String = getSaveData('Kade_WatermarkType') == 'KE' ? ver : GitCommitMacro.commitHash;
         var str:String = songName + ' - ' + curDiff.toUpperCase() + ' | ' + getSaveData('Kade_WatermarkType') + ': ' + ke_Version;
         var watermark:FunkinText = new FunkinText(4, downscroll ? 5 : healthBarBG.y + 50, 0, str);
         watermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, 'right', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -78,30 +57,23 @@ function postCreate() {
     scripts.call('postHudLoad');
 }
 
-function update(_) {
-    iconP1.setGraphicSize(Std.int(lerp(150, iconP1.width, 0.50)));
-    iconP2.setGraphicSize(Std.int(lerp(150, iconP2.width, 0.50)));
-
-    iconP1.updateHitbox();
-    iconP2.updateHitbox();
+function update() for (icons in [iconP1, iconP2]) {
+    icons.setGraphicSize(Std.int(lerp(150, icons.width, 0.50)));
+    icons.updateHitbox();
 }
 
-function beatHit() {
-    if (Conductor.bpm < 340) {
-		iconP1.setGraphicSize(Std.int(iconP1.width + 30));
-		iconP2.setGraphicSize(Std.int(iconP2.width + 30));
-	}
-	else {
-		iconP1.setGraphicSize(Std.int(iconP1.width + 4));
-		iconP2.setGraphicSize(Std.int(iconP2.width + 4));
-    }
-	
-    iconP1.updateHitbox();
-	iconP2.updateHitbox();
+function postUpdate()
+    PlayState.instance.comboGroup.cameras = [fuckingcomboCamera];
+
+function beatHit() for (icons in [iconP1, iconP2]) {
+    var value:Float = (Conductor.bpm < 340) ? 30 : 4;
+    icons.setGraphicSize(Std.int(icons.width + value));
+	icons.updateHitbox();
 }
 
 var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
-function onPlayerHit(_) ratingsInt[_.rating] += 1;
+function onPlayerHit(_)
+    ratingsInt[_.rating] += 1;
 
 function getRankLetter(acc:Float, cneRating:String) {
     var rating:String = 'N/A';

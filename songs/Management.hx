@@ -4,44 +4,29 @@ public var songName:String = PlayState.SONG.meta.name;
 public var curDiff:String = PlayState.difficulty;
 public var noteSkin:String = '';
 
-public static function getModImage(str:String) {
+public function getModImage(str:String) {
     if (currentMod == 'NONE')
         setManualPath(songName);
 
     return Paths.getPath('$pathSuffix' + '$currentMod/images/$str.png');
 }
 
-public static function addSprite(spr:Dynamic) if (spr != null)
+public function addSprite(spr:Dynamic) if (spr != null)
     insert(members.indexOf(gf), spr);
 
-function loadCustomHUD() {
-    var hud:String = '';
-
-    switch(currentMod) {
-        case 'Sky' | 'Zardy' | 'xEvent' | 'Tabi' | 'Tricky' | 'Eteled': hud = 'KadeEngine';
-        case 'Agoti': hud = "Mic'dUpEngine";
-        default:
-            switch(songName) {
-                case 'Sink' | 'Corruptro': hud = 'PsychEngine';
-                case 'Megalo Strike Back' | 'Epiphany' | 'Defeat': hud = 'KadeEngine';
-                case 'Treacherous Thorns': hud = 'Vanilla';
-            }
-    }
-
-    if (hud != '') {
+public function loadHud(hud:String, ver:String = 'IS NULL PENDEJO') {
+    if (!getSaveData('allowCustomHud')) return;
+    if (Assets.exists(Paths.script('data/HUDS/$hud'))) {
         importScript('data/HUDS/$hud');
-        scripts.call('onHudLoad');
-        for (chau in [scoreTxt, accuracyTxt, missesTxt])
-            chau.visible = false;
+        scripts.call('onHudLoad', [hud, ver]);
+        for (chau in [scoreTxt, accuracyTxt, missesTxt]) chau.visible = false;
     }
+    else
+        trace('Hud "$hud" is missing');
 }
 
-function onDadHit(_)
-    _.strumGlowCancelled = FlxG.save.data.AOM_cpuStrumsGlow;
-function onPlayerHit(_) if (!_.note.isSustainNote)
-    _.showSplash = !FlxG.save.data.AOM_disableSplashs;
-
 function create() {
+    PlayState.instance.chartingMode = true;
     ReloadSaveData();
     updateDiscordPresence = () -> {
         var image:String = currentMod == 'RandomSongs' ? curSongID : currentMod.toLowerCase();
@@ -51,11 +36,15 @@ function create() {
             largeImageKey: image
         });
     }
+
+    if (Assets.exists(Paths.script('Assets-$currentMod/globalScript')))
+        importScript('Assets-$currentMod/globalScript');
 }
 
 function postCreate() {
-    if (getSaveData('allowCustomHud')) loadCustomHUD();
     camGame.pixelPerfectShake = true;
     camHUD.pixelPerfectShake = true;
-    // importScript('data/scripts/customNotesSprites');
 }
+
+function onDadHit(_) _.strumGlowCancelled = FlxG.save.data.AOM_cpuStrumsGlow;
+function onPlayerHit(_) if (!_.note.isSustainNote) _.showSplash = !FlxG.save.data.AOM_disableSplashs;

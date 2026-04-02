@@ -20397,7 +20397,7 @@
 		"validScore": true,
 		"speed": 2.8,
 		"events": [],
-		"gfVersion": "gf",
+		"gfVersion": "empty",
 		"sliderVelocities": null,
 		"instVol": 1,
 		"needsVoices": true,

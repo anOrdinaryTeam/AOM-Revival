@@ -27,6 +27,7 @@ function create() {
 var waves:FunkinSprite;
 
 function postCreate() {
+    loadHud('PsychEngine');
     dad.alpha = .001;
     iconP2.visible = false;
 

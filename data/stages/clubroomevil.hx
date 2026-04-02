@@ -27,6 +27,7 @@ function create() {
 }
 
 function postCreate() {
+    loadHud('KadeEngine', 'no me acuerdo');
     iconP1.setIcon('bf');
     healthBar.createColoredFilledBar(FlxColor.fromString('#31B0D1'));
     healthBar.updateBar();

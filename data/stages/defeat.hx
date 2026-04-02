@@ -8,6 +8,9 @@ function create() {
     gf.visible = false;
 }
 
+function postCreate()
+    loadHud('KadeEngine', '1.6.1');
+
 function postHudLoad() {
     healthBar.visible = healthBarBG.visible = false;
     iconP1.visible = iconP2.visible = false;

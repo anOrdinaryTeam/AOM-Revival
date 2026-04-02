@@ -1,6 +1,3 @@
-function onNoteCreation(e) e.noteSprite = "modNotes/X/NOTE_assets";
-function onStrumCreation(e) e.sprite = "modNotes/X/NOTE_assets";
-
 function postCreate() {
     var randomScale = 0.4 + Math.random() * 1;
     var spr:String = PlayState.SONG.meta.name == 'inking Mistake' ? 'InkingMistake/particle' : 'particle'; 

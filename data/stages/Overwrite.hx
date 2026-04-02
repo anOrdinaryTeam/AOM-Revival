@@ -1,4 +1,4 @@
-importScript('data/scripts/xEventShit');
+// importScript('data/scripts/xEventShit');
 
 function preStageLoad() if (songName == 'Relighted')
     stageName += '-gaster';

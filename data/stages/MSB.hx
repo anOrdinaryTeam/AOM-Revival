@@ -6,3 +6,6 @@ function create() {
     bg.antialiasing = Options.antialiasing;
     insert(1, bg);
 }
+
+function postCreate()
+    loadHud('KadeEngine', '1.4.1');

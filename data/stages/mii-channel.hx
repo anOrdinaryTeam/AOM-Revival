@@ -25,7 +25,7 @@ function create() {
         var miibuttons:FunkinSprite = new FunkinSprite(-449, -299, getModImage('buttons/$spr'));
         miibuttons.addAnim('idle', 'stagecurtains', 24, true);
         miibuttons.playAnim('idle');
-        miibuttons.antialiasing = true;
+        miibuttons.antialiasing = Options.antialiasing;
         miibuttons.scrollFactor.set(1.17, 1.17);
         add(miibuttons);
     }

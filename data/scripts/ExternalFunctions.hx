@@ -32,32 +32,8 @@ public static function getModSongList(mod:String):Dynamic
         trace(e.toString());
 }
 
-/* deprecated
-public static function getModSongList(forMod:String):Dynamic {
-    var finalList = {
-        songs: [],
-        icon: [],
-        color: []
-    }
-
-    try {
-        var raw:Dynamic = CoolUtil.parseJson(Paths.json('modsData/$forMod/songList'));
-
-        for (data in raw.songs) {
-            finalList.songs.push(data[0]);
-            finalList.icon.push(data[1]);
-            finalList.color.push(data[1]);
-        }
-
-        return finalList;
-    }
-    catch(e:Dynamic)
-        trace(e.toString());
-}
-*/
-
 // preventive
-public function setManualPath(curSong:String) currentMod = switch(curSong) {
+public function setManualPath(song:String) currentMod = switch(song) {
     case 'Wife Forever' | 'Sky' | 'Manifest': 'Sky';
     case 'Foolhardy' | 'Bushwhack': 'Zardy';
     case 'Screenplay' | 'Parasite' | 'A.G.O.T.I': 'Agoti';

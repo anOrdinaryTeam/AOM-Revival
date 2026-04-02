@@ -1,4 +1,4 @@
-importScript('data/scripts/xEventShit');
+// importScript('data/scripts/xEventShit');
 
 function create() {
     defaultCamZoom = 0.75;

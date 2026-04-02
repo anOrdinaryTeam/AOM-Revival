@@ -24,6 +24,7 @@ static function modPath(str:String)
     return getModImage('Corruptro/$str');
 
 function postCreate() {
+    loadHud('PsychEngine');
     gf.visible = false;
 
     var overlay:FlxSprite = new FlxSprite(0,0, modPath('wrath_overlay'));

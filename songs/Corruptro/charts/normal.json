@@ -14079,7 +14079,7 @@
 		"song": "Corruptro",
 		"validScore": true,
 		"speed": 2.4,
-		"gfVersion": "gf",
+		"gfVersion": "empty",
 		"events": [],
 		"sliderVelocities": null,
 		"instVol": 1,

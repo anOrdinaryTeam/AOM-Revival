@@ -89,6 +89,7 @@ function create() {
 }
 
 function postCreate() {
+    loadHud('Vanilla');
     spiritChar.setPosition(dad.x, dad.y);
     insert(members.indexOf(dad), spiritChar);
 
@@ -104,11 +105,6 @@ function postCreate() {
 
     stageSwitch(0);
 }
-
-// function onCameraMove(_) {
-//     var newPoint:FlxPoint = curCameraTarget == 0 ? senpaiCamPoint : corruptCamPoint;
-//     _.position.set(newPoint.x, newPoint.y);
-// }
 
 function onDadHit(_)
     spiritChar.playSingAnim(_.direction);

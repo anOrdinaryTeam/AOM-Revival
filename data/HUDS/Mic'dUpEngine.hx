@@ -2,7 +2,7 @@ import flixel.text.FlxTextBorderStyle;
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 doIconBop = false;
 
-function postCreate() {
+function onHudLoad(hud) if (hud == "Mic'dUpEngine") {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 

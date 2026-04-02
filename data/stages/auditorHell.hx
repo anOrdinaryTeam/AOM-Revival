@@ -1,4 +1,4 @@
-importScript('data/scripts/TrickyLines');
+// importScript('data/scripts/TrickyLines');
 graphicCache.cache(Paths.getPath('Assets-Tricky/images/stages/fourth/mech/Sign_Post_Mechanic.png'));
 
 var signPostCam:FlxCamera = new FlxCamera();
