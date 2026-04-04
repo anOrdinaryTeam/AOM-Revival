@@ -45,6 +45,7 @@ function create() {
 //     FlxG.switchState(new Charter(songName, curDiff, null, false));
 
 function postCreate() {
+    if (FlxG.camera.zoom != defaultCamZoom) FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 0.01);
     camGame.pixelPerfectShake = true;
     camHUD.pixelPerfectShake = true;
 }
