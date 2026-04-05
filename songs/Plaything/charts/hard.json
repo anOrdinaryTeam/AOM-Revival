@@ -1,9 +1,9 @@
 {
  "song": {
   "sectionLengths": [],
-  "player1": "bf-austin",
-  "gfVersion": "gf-mii",
-  "player2": "eteled2",
+  "player1": "austin-playable",
+  "gfVersion": "empty",
+  "player2": "eteled_mad",
   "notes": [
    {
     "endTime": 1548.38709677419,

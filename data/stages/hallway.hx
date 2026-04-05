@@ -6,13 +6,24 @@ function create() {
     addSprite(bg);
 }
 
+function preStageLoad() if (songName == 'Plaything')
+    stageName += '-alt';
+
 function postCreate()
     gf.color = 0x0F6C6B6B;
 
-function onNoteCreation(_) 
-    if (_.strumLineID == 0) _.noteSprite = "modNotes/Eteled/austin";
-    else _.noteSprite = "modNotes/Eteled/bf";
+function onNoteCreation(_) {
+    var dadNotes:String = songName == 'Post Mortal' ? 'austin' : 'eteled';
+    var bfNotes:String = songName == 'Post Mortal' ? 'bf' : 'austin';
 
-function onStrumCreation(_)
-    if (_.player == 0) _.sprite = "modNotes/Eteled/austin";
-    else _.sprite = "modNotes/Eteled/bf";
+    if (_.strumLineID == 0) _.noteSprite = 'modNotes/Eteled/$dadNotes';
+    else _.noteSprite = 'modNotes/Eteled/$bfNotes';
+}
+
+function onStrumCreation(_) {
+    var dadNotes:String = songName == 'Post Mortal' ? 'austin' : 'eteled';
+    var bfNotes:String = songName == 'Post Mortal' ? 'bf' : 'austin';
+
+    if (_.player == 0) _.sprite = 'modNotes/Eteled/$dadNotes';
+    else _.sprite = 'modNotes/Eteled/$bfNotes';
+}

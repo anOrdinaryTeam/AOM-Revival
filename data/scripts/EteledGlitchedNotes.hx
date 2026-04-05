@@ -12,41 +12,22 @@ function set_visibleGlitch(val:Bool) {
     var randomGroup:Int = FlxG.random.int(0, 2);
 
     if (austinGlitch != null) {
-        dad.alpha = val ? 0.01 : 1;
-        austinGlitch?.alpha = val ? 1 : 0.01;
+        var toHide:Character = austinGlitch.isPlayer ? boyfriend : dad;
+        toHide.alpha = val ? 0.001 : 1;
+        austinGlitch.alpha = val ? 1 : 0.001;
     }
 
     for (i in 0...4) {
-        playerStrums.members[i].alpha = val ? 0.01 : 1;
-        glitchedStrumPlayer.members[i].alpha = val ? 1 : 0.01;
+        playerStrums.members[i].alpha = val ? 0.001 : 1;
+        glitchedStrumPlayer.members[i].alpha = val ? 1 : 0.001;
 
         if (glitchedStrumCpu.members.length > 0) {
-            cpuStrums.members[i].alpha = val ? 0.01 : 1;
-            glitchedStrumCpu.members[i].alpha = val ? 1 : 0.01;
+            cpuStrums.members[i].alpha = val ? 0.001 : 1;
+            glitchedStrumCpu.members[i].alpha = val ? 1 : 0.001;
         }
     }
 
     return val;
-}
-
-function addStuff() {
-    insert(members.indexOf(strumLines), glitchedStrumCpu);
-    insert(members.indexOf(strumLines), glitchedStrumPlayer);
-
-    generateStrum(true);
-    generateStrum(false);
-
-    if (dad.curCharacter == 'austin' || boyfriend.curCharacter == 'austin-playable') {
-        var playerVersion:Bool = boyfriend.curCharacter.contains('-playable');
-        var getter:Character = playerVersion ? boyfriend : dad;
-        var str:String = playerVersion ? 'austin-glitch-playable' : 'austin-glitch';
-
-        austinGlitch = new Character(getter.x, getter.y, str);
-        austinGlitch.antialiasing = Options.antialiasing;
-        insert(members.indexOf(dad), austinGlitch);
-    }
-
-    visibleGlitch = false;
 }
 
 function postCreate() if (!getSaveData('allowCustomHud'))
@@ -89,6 +70,26 @@ function generateStrum(player:Bool) {
         strum.camera = camHUD;
         strum.scale.set(0.7, 0.7);
         strum.updateHitbox();
+        strum.alpha = 0.001;
         group.add(strum);
+    }
+}
+
+function addStuff() {
+    insert(members.indexOf(strumLines), glitchedStrumCpu);
+    insert(members.indexOf(strumLines), glitchedStrumPlayer);
+
+    generateStrum(true);
+    generateStrum(false);
+
+    if (dad.curCharacter == 'austin' || boyfriend.curCharacter == 'austin-playable') {
+        var playerVersion:Bool = boyfriend.curCharacter.contains('-playable');
+        var getter:Character = playerVersion ? boyfriend : dad;
+        var str:String = playerVersion ? 'austin-glitch-playable' : 'austin-glitch';
+
+        austinGlitch = new Character(getter.x, getter.y, str, playerVersion);
+        austinGlitch.antialiasing = Options.antialiasing;
+        austinGlitch.alpha = 0.001;
+        insert(members.indexOf(dad), austinGlitch);
     }
 }
