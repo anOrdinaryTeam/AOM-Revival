@@ -3,7 +3,7 @@ import funkin.editors.charter.Charter;
 
 public var songName:String = PlayState.SONG.meta.name;
 public var curDiff:String = PlayState.difficulty;
-public var noteSkin:String = '';
+var ratingPrefix:String = '';
 
 public function getModImage(str:String) {
     if (currentMod == 'NONE')
@@ -24,6 +24,12 @@ public function loadHud(hud:String, ver:String = 'IS NULL PENDEJO') {
     }
     else
         trace('Hud "$hud" is missing');
+}
+
+public function setRatingPrefix(tag:String) {
+    ratingPrefix = tag;
+    var folder:Array<String> = Paths.getFolderContent('images/modCombos/$ratingPrefix', false, 1, true);
+    for (graphic in folder) graphicCache.cache(Paths.image('modCombos/Eteled/$graphic'));
 }
 
 function create() {
@@ -51,4 +57,7 @@ function postCreate() {
 }
 
 function onDadHit(_) _.strumGlowCancelled = FlxG.save.data.AOM_cpuStrumsGlow;
-function onPlayerHit(_) if (!_.note.isSustainNote) _.showSplash = !FlxG.save.data.AOM_disableSplashs;
+function onPlayerHit(_) {
+    if (!_.note.isSustainNote) _.showSplash = !FlxG.save.data.AOM_disableSplashs;
+    if (ratingPrefix != '') _.ratingPrefix = 'modCombos/$ratingPrefix/';
+}

@@ -36,3 +36,11 @@ function create() {
         add(overlay);
     }
 }
+
+function onNoteCreation(_) 
+    if (_.strumLineID == 0) _.noteSprite = "modNotes/Eteled/eteled";
+    else _.noteSprite = "modNotes/Eteled/bf";
+
+function onStrumCreation(_)
+    if (_.player == 0) _.sprite = "modNotes/Eteled/eteled";
+    else _.sprite = "modNotes/Eteled/bf";

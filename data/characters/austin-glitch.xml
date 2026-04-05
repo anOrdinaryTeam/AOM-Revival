@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="deleted/austin/glitch" icon="austin">
+	<anim name="idle" anim="austin idle dance"/>
+	<anim name="singDOWN" anim="austin Sing Note DOWN" x="-23" y="-332"/>
+	<anim name="singRIGHT" anim="austin Sing Note RIGHT" x="-24" y="-165"/>
+	<anim name="singLEFT" anim="austin Sing Note LEFT" x="294" y="16"/>
+	<anim name="singUP" anim="austin Sing Note UP" x="160" y="48"/>
+</character>

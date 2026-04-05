@@ -2,7 +2,7 @@
 <character y="300" sprite="deleted/BOYFRIENDMII" flipX="true" isPlayer="true" icon="bf" color="#30B0D1">
 	<anim name="idle" anim="BF idle dance"/>
 	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-10" y="-51"/>
-	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-45" y="-10"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-44" y="-4"/>
 	<anim name="singLEFT" anim="BF NOTE LEFT0" x="10" y="-10"/>
 	<anim name="singUP" anim="BF NOTE UP0" x="-35" y="25"/>
 	<anim name="singUPmiss" anim="BF NOTE UP MISS" x="-38" y="24"/>
