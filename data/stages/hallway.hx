@@ -1,7 +1,8 @@
-importScript('data/scripts/EteledGlitchedNotes');
+importScript('data/scripts/EteledGlitch');
 
 function create() {
     defaultCamZoom = 0.63;
+    useGlitchedNotes = true;
     var bg:FlxSprite = new FlxSprite(-360, -210, getModImage('glitchhallway'));
     addSprite(bg);
 }

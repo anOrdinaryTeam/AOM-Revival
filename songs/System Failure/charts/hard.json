@@ -2,7 +2,7 @@
  "song": {
   "player1": "bf-mii",
   "gfVersion": "gf-mii",
-  "player2": "eteled3",
+  "player2": "eteled_crazy",
   "notes": [
    {
     "sectionNotes": [],
@@ -26398,7 +26398,7 @@
   "song": "System-Failure",
   "sections": 45,
   "validScore": true,
-  "stage": "mii-channel-dark",
+  "stage": "mii-channel",
   "needsVoices": true,
   "bpm": 125,
   "speed": 2.5
