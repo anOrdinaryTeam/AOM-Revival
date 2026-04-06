@@ -1,5 +1,6 @@
 public var mainBG:FlxSprite = new FlxSprite(-550, -230);
-public var hallway:FlxSprite = new FlxSprite(-550, -230);
+public var miibuttons:FunkinSprite = new FunkinSprite(-449, -299);
+public var hallway:FlxSprite = new FlxSprite(-330, -230);
 public var overlay:FlxSprite = new FlxSprite(-550, -230);
 
 function create() {
@@ -22,7 +23,7 @@ function create() {
 
     if (songName == 'Dream Of Peace' || songName == 'Diagraphephobia') {
         var spr:String = songName == 'Diagraphephobia' ? 'Glitchmiibuttons' : 'miibuttons';
-        var miibuttons:FunkinSprite = new FunkinSprite(-449, -299, getModImage('buttons/$spr'));
+        miibuttons.loadSprite(getModImage('buttons/$spr'));
         miibuttons.addAnim('idle', 'stagecurtains', 24, true);
         miibuttons.playAnim('idle');
         miibuttons.antialiasing = Options.antialiasing;
@@ -31,13 +32,16 @@ function create() {
     }
 
     if (songName == 'Diagraphephobia') {
+        importScript('data/scripts/EteledGlitch');
+
         overlay.loadGraphic(getModImage('overlayphase2'));
         overlay.antialiasing = Options.antialiasing;
         add(overlay);
+        addGlitchedBGs();
     }
 }
 
-function onNoteCreation(_) 
+function onNoteCreation(_)
     if (_.strumLineID == 0) _.noteSprite = "modNotes/Eteled/eteled";
     else _.noteSprite = "modNotes/Eteled/bf";
 

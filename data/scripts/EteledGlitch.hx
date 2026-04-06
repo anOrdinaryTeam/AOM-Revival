@@ -1,16 +1,23 @@
 // made by myself because i didnt understand Eteled Code
 using StringTools;
 
+var austinGlitch:Character;
+
 var glitchedStrumCpu:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var glitchedStrumPlayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var glitchedNotes:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
-var austinGlitch:Character;
+var bgsGlitched:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
+var glitchedCam:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
 var visibleGlitch(default, set):Bool = false;
-function set_visibleGlitch(val:Bool) {
-    var randomGroup:Int = FlxG.random.int(0, 2);
+var currentGlitchedBG(default, set):Int = 0;
 
+var usingGlitchedBGs:Bool = false;
+public var useGlitchedNotes:Bool = false;
+public var startGlitchedBGS:Bool = false;
+
+function set_visibleGlitch(val:Bool) {
     if (austinGlitch != null) {
         var toHide:Character = austinGlitch.isPlayer ? boyfriend : dad;
         toHide.alpha = val ? 0.001 : 1;
@@ -30,18 +37,41 @@ function set_visibleGlitch(val:Bool) {
     return val;
 }
 
+function set_currentGlitchedBG(val:Int) if (bgsGlitched.members.length > 0 && glitchedCam.members.length > 0) {
+    var randomAlpha:Float = FlxG.random.float(0.1, 0.2);
+    var randomTime:Float = FlxG.random.float(0.2, 0.5);
+
+    if (val == 7) {
+        var randomBG:FunkinSprite = glitchedCam.members[FlxG.random.int(0, glitchedCam.members.length - 1)];
+        randomBG.playAnim('play', true);
+        randomBG.alpha = randomAlpha;
+        new FlxTimer().start(randomTime, () -> randomBG.alpha = 0);
+    }
+    else if (val == 8) {
+        var randomBG:FunkinSprite = bgsGlitched.members[FlxG.random.int(0, bgsGlitched.members.length - 1)];
+        randomBG.playAnim('play', true);
+        randomBG.alpha = randomAlpha;
+        new FlxTimer().start(randomTime, () -> randomBG.alpha = 0);
+    }
+}
+
 function postCreate() if (!getSaveData('allowCustomHud'))
     addStuff();
 function postHudLoad() if (getSaveData('allowCustomHud'))
     addStuff();
 
 function stepHit() {
-    var glitchChance:Int = FlxG.random.int(0, 13);
+    if (useGlitchedNotes) {
+        var glitchChance:Int = FlxG.random.int(0, 13);
 
-    if (glitchChance == 7) {
-        visibleGlitch = true;
-        new FlxTimer().start(FlxG.random.float(0.1, 0.5), () -> visibleGlitch = false);   
+        if (glitchChance == 7) {
+            visibleGlitch = true;
+            new FlxTimer().start(FlxG.random.float(0.1, 0.5), () -> visibleGlitch = false);
+        }
     }
+
+    if (usingGlitchedBGs && startGlitchedBGS)
+        currentGlitchedBG = FlxG.random.int(0, 15);
 }
 
 function beatHit() if (austinGlitch != null)
@@ -75,7 +105,7 @@ function generateStrum(player:Bool) {
     }
 }
 
-function addStuff() {
+function addStuff() if (useGlitchedNotes) {
     insert(members.indexOf(strumLines), glitchedStrumCpu);
     insert(members.indexOf(strumLines), glitchedStrumPlayer);
 
@@ -92,4 +122,33 @@ function addStuff() {
         austinGlitch.alpha = 0.001;
         insert(members.indexOf(dad), austinGlitch);
     }
+}
+
+public function addGlitchedBGs() {
+    usingGlitchedBGs = true;
+    glitchedCam.camera = camHUD;
+    addSprite(bgsGlitched);
+    insert(1, glitchedCam);
+    
+    var sheets:Array<String> = ['glitchAnim', 'noise2', 'noise2R', 'sheet'];
+    for (sprite in sheets) {
+        var spr:FunkinSprite = new FunkinSprite().loadSprite(getModImage('effects/$sprite'));
+        spr.addAnim('play', switch(sprite) {
+            case 'glitchAnim': 'g';
+            case 'noise2' | 'noise2R': 'f';
+            case 'sheet': 'Idle';
+        }, 24, true);
+        spr.antialiasing = Options.antialiasing;
+        spr.scale.set(8, 8);
+        spr.updateHitbox();
+        spr.alpha = 0.001;
+
+        glitchedCam.add(spr);
+        bgsGlitched.add(spr);
+    }
+}
+
+public function cleanGlitchedBGS() {
+    glitchedCam.clear();
+    bgsGlitched.clear();
 }
