@@ -7,11 +7,9 @@ static function addSprite(spr:Dynamic)
     }
 
 function create() {
+    useCamMov = true;
+    camMoveAmt = 14;
     defaultCamZoom = 0.63 + 0.36;
-    boyfriend.y = 360;
-    dad.setPosition(600, 300);
-
-    camFollow.setPosition(1040, 590);
     comboGroup.visible = false;
 
     for (i in 0...3) {

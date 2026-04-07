@@ -71,9 +71,8 @@ function onStrumCreation(_)
 function create() {
     defaultCamZoom = 0.525;
     defaultZoom = defaultCamZoom;
-
-    boyfriend.setPosition(970, 100);
-    dad.setPosition(100, 100);
+    useCamMov = true;
+    camMoveAmt = 20;
 
     if (backgroundLevel > 0) {
         var sky:FlxSprite = new FlxSprite(0, 0, modPath('wrath_sky'));

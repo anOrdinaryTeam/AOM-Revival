@@ -51,6 +51,9 @@ function create() {
     lyricText.screenCenter();
     lyricText.y += 250;
     cinematicBarsGrp.add(lyricText);
+
+    useCamMov = true;
+    camMoveAmt = 14;
 }
 
 function postCreate() {
