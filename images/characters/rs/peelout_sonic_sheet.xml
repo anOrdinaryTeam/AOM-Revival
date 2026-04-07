@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="peelout_sonic_sheet.png" width="784" height="171" spritePadding="0" borderPadding="0">
+	<SubTexture name="dialogue peelout0000" x="0" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0001" x="38" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0002" x="74" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0003" x="112" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0004" x="147" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0005" x="185" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0006" x="221" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0007" x="259" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0008" x="294" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0009" x="332" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0010" x="221" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0011" x="259" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0012" x="294" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0013" x="332" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0014" x="221" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0015" x="259" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0016" x="294" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0017" x="332" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0018" x="368" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0019" x="406" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0020" x="441" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0021" x="479" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0022" x="515" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0023" x="553" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0024" x="588" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0025" x="626" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0026" x="662" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0027" x="700" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0028" x="735" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0029" x="0" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0030" x="36" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0031" x="74" y="35" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0032" x="109" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0033" x="147" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0034" x="662" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0035" x="700" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0036" x="109" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0037" x="626" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0038" x="183" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0039" x="221" y="35" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0040" x="256" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0041" x="0" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0042" x="36" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0043" x="294" y="35" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0044" x="329" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0045" x="367" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0046" x="403" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0047" x="441" y="35" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0048" x="476" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0049" x="514" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0050" x="550" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0051" x="588" y="35" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0052" x="623" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0053" x="661" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0054" x="697" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0055" x="735" y="35" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0056" x="0" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0057" x="38" y="70" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0058" x="74" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0059" x="112" y="70" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0060" x="147" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0061" x="185" y="70" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0062" x="221" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0063" x="259" y="70" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0064" x="109" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0065" x="147" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0066" x="294" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0067" x="112" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0068" x="332" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0069" x="370" y="70" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0070" x="368" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0071" x="406" y="0" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0072" x="623" y="35" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0073" x="661" y="35" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0074" x="368" y="0" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0075" x="735" y="35" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0076" x="406" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0077" x="479" y="0" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0078" x="444" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0079" x="482" y="70" width="35" height="35" frameX="-34" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0080" x="517" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0081" x="555" y="70" width="36" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="dialogue peelout0082" x="591" y="70" width="38" height="35" frameX="-33" frameY="-47" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic down miss0000" x="629" y="70" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic down miss0001" x="668" y="70" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic down miss0002" x="707" y="70" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic down miss0003" x="746" y="70" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic idle0000" x="0" y="105" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic idle0001" x="39" y="105" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic idle0002" x="78" y="105" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic idle0003" x="117" y="105" width="38" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left miss0000" x="155" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left miss0001" x="193" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left miss0002" x="230" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left miss0003" x="268" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0000" x="305" y="105" width="39" height="31" frameX="-32" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0001" x="344" y="105" width="37" height="32" frameX="-32" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0002" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0003" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0004" x="456" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0005" x="494" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0006" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0007" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0008" x="456" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0009" x="494" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0010" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0011" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0012" x="456" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0013" x="494" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0014" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0015" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0016" x="456" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0017" x="494" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0018" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0019" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0020" x="456" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0021" x="494" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0022" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0023" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0024" x="456" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0025" x="494" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0026" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0027" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0028" x="456" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0029" x="494" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0030" x="381" y="105" width="38" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic left sing0031" x="419" y="105" width="37" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic right miss0000" x="531" y="105" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic right miss0001" x="571" y="105" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic right miss0002" x="611" y="105" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic right miss0003" x="651" y="105" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0000" x="690" y="105" width="39" height="29" frameX="-33" frameY="-53" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0001" x="729" y="105" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0002" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0003" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0004" x="77" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0005" x="116" y="137" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0006" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0007" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0008" x="77" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0009" x="116" y="137" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0010" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0011" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0012" x="77" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0013" x="116" y="137" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0014" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0015" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0016" x="77" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0017" x="116" y="137" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0018" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0019" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0020" x="77" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0021" x="116" y="137" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0022" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0023" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0024" x="77" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0025" x="116" y="137" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0026" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0027" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0028" x="77" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0029" x="116" y="137" width="39" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0030" x="0" y="137" width="39" height="30" frameX="-33" frameY="-52" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing down0031" x="39" y="137" width="38" height="31" frameX="-34" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0000" x="155" y="137" width="41" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0001" x="196" y="137" width="41" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0002" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0003" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0004" x="316" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0005" x="356" y="137" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0006" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0007" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0008" x="316" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0009" x="356" y="137" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0010" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0011" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0012" x="316" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0013" x="356" y="137" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0014" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0015" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0016" x="316" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0017" x="356" y="137" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0018" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0019" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0020" x="316" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0021" x="356" y="137" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0022" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0023" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0024" x="316" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0025" x="356" y="137" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0026" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0027" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0028" x="316" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0029" x="356" y="137" width="40" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0030" x="237" y="137" width="40" height="31" frameX="-33" frameY="-51" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing right0031" x="277" y="137" width="39" height="32" frameX="-34" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0000" x="396" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0001" x="435" y="137" width="39" height="34" frameX="-33" frameY="-48" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0002" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0003" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0004" x="551" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0005" x="590" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0006" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0007" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0008" x="551" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0009" x="590" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0010" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0011" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0012" x="551" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0013" x="590" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0014" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0015" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0016" x="551" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0017" x="590" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0018" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0019" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0020" x="551" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0021" x="590" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0022" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0023" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0024" x="551" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0025" x="590" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0026" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0027" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0028" x="551" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0029" x="590" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0030" x="474" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic sing up0031" x="513" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic up miss0000" x="629" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic up miss0001" x="668" y="137" width="39" height="33" frameX="-33" frameY="-49" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic up miss0002" x="707" y="137" width="39" height="32" frameX="-33" frameY="-50" frameWidth="104" frameHeight="97"/>
+	<SubTexture name="sonic up miss0003" x="746" y="137" width="38" height="33" frameX="-34" frameY="-49" frameWidth="104" frameHeight="97"/>
+</TextureAtlas>

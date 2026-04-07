@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/starved_sheet" scale="6" antialiasing="false" camx="-160" camy="620" icon="starved-pixel" color="#FF2300" holdTime="6.1">
+	<anim name="idle" anim="starved idle" x="-40" y="-56.67" fps="24" loop="true"/>
+	<anim name="singDOWN" anim="starved down" x="-40" y="-54.83" fps="24" loop="false"/>
+	<anim name="singUP" anim="starved up" x="-40" y="-57" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="starved right" x="-39" y="-55.83" fps="24" loop="false"/>
+	<anim name="singRIGHT-loop" anim="starved right" x="-39" y="-55.83" fps="24" loop="true" indices="15..18"/>
+	<anim name="singLEFT" anim="starved left" x="-41" y="-55.83" fps="24" loop="false"/>
+	<anim name="singLEFT-loop" anim="starved left" x="-41" y="-55.83" fps="24" loop="true" indices="12..15"/>
+	<anim name="singUP-loop" anim="starved up" x="-40" y="-56.83" fps="24" loop="true" indices="12..15"/>
+	<anim name="singDOWN-loop" anim="starved down" x="-40" y="-54.83" fps="24" loop="true" indices="12..15"/>
+	<anim name="dialogue" anim="starved dialogue" x="-40" y="-56.83" fps="24" loop="false"/>
+</character>

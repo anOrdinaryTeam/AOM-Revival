@@ -1,0 +1,17 @@
+<!DOCTYPE codename-engine-character>
+<character icon="sonic" camx="330" camy="500" scale="6" color="#6C6CD8" flipX="true" antialiasing="false" holdTime="6.1" sprite="rs/running_sonic_sheet" isPlayer="true">
+	<anim x="-40" y="-73.3333333333333" anim="sonic sing down" name="singDOWN"/>
+	<anim x="-40" y="-73.3333333333333" anim="sonic sing up" name="singUP"/>
+	<anim x="-40" y="-73.3333333333333" anim="sonic sing right" name="singRIGHT"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic idle" name="idle"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic sing right" indices="15,16,17,18" name="singRIGHT-loop"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic sing up" indices="12,13,14,15" name="singUP-loop"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic sing down" indices="12,13,14,15" name="singDOWN-loop"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic left sing" indices="12,13,14,15" name="singLEFT-loop"/>
+	<anim x="-40" y="-73.3333333333333" anim="sonic left sing" name="singLEFT"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic up miss" name="singUPmiss"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic right miss" name="singRIGHTmiss"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic down miss" name="singDOWNmiss"/>
+	<anim loop="true" x="-40" y="-73.3333333333333" anim="sonic left miss" name="singLEFTmiss"/>
+	<anim x="-40" y="-72.3333333333333" anim="dialogue 1" name="first dialogue"/>
+</character>
