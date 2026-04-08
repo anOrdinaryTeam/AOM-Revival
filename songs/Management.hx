@@ -5,6 +5,9 @@ public var songName:String = PlayState.SONG.meta.name;
 public var curDiff:String = PlayState.difficulty;
 var ratingPrefix:String = '';
 
+public var useCamMov:Bool = false;
+public var camMoveAmt:Float = 10;
+
 public function getModImage(str:String) {
     if (currentMod == 'NONE')
         setManualPath(songName);
@@ -47,8 +50,20 @@ function create() {
         importScript('Assets-$currentMod/globalScript');
 }
 
+function follow(offsets:Array<Float>) {
+    camFollow.x += offsets[0];
+    camFollow.y += offsets[1];
+}
+
 // function update() if (ACCESS_TO_CHARTER_EDITOR && controls.DEV_ACCESS)
 //     FlxG.switchState(new Charter(songName, curDiff, null, false));
+
+function postUpdate() if (useCamMov) switch(strumLines.members[curCameraTarget].characters[0].animation.curAnim.name) {
+    case "singLEFT", "singLEFT-alt": follow([-camMoveAmt, 0]);
+    case "singDOWN", "singDOWN-alt": follow([0, camMoveAmt]);
+    case "singUP", "singUP-alt": follow([0, -camMoveAmt]);
+    case "singRIGHT", "singRIGHT-alt": follow([camMoveAmt, 0]);
+}
 
 function postCreate() {
     if (FlxG.camera.zoom != defaultCamZoom) FlxTween.tween(FlxG.camera, {zoom: defaultCamZoom}, 0.01);
