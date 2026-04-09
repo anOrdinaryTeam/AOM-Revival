@@ -1,6 +1,4 @@
 import funkin.backend.system.framerate.Framerate;
-import funkin.backend.assets.ModsFolderLibrary;
-import funkin.backend.assets.ModsFolder;
 import funkin.backend.utils.DiscordUtil;
 
 var saveMap:Map<String, Dynamic> = [];
