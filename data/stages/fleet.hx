@@ -49,6 +49,4 @@ function fleetwaySwitch(bool:Bool) {
     bgs[1].alpha = bool ? 0 : 1;
     playModSound('stat', 0.3);
     changeCharacter(1, bool ? 'fleetway' : 'sonic');
-    //doTweenAlpha('fleetON', 'fx', 0, 1, 'linear')
-	//playSound('stat', 0.3)
 }
