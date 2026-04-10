@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="whitty/gf" icon="gf-whitty">
+	<anim name="danceLeft" anim="Idle Left"/>
+	<anim name="danceRight" anim="Idle Right"/>
+	<anim name="Scared" anim="Scared" loop="true"/>
+</character>
