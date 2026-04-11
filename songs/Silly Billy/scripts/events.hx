@@ -27,6 +27,7 @@ function setZoom(i:Float){
 function zoomIn(i:Float) {
     if (i == 0) defaultCamZoom = turn == 'dad' ? 0.625 : 0.5;
     else defaultCamZoom += i;
+    trace(curStep);
 }
 
 function forcedZoom(i:Float, ?lock:Bool = true) {
@@ -52,14 +53,15 @@ function stepHit() {
         case 2544, 2576: setZoom(1);
 
         // zoom in's
-        case 2336, 2400, 2640, 3407: zoomIn(0.15);
+        case 2336, 2400, 2640: zoomIn(0.05);
         case 2352, 2416, 2656, 3507: zoomIn(0); // ?
         case 3376: zoomIn(0.1);
+        case 3407: zoomIn(0.05);
         case 3464:
-            zoomIn(0.22);
+            zoomIn(0.1);
             MyWayEvents('txt');
         case 3472:
-            zoomIn(0.24);
+            zoomIn(0.1);
             MyWayEvents('txt');
 
         // forced zoom's & hurt's events
@@ -97,12 +99,17 @@ function stepHit() {
         case 1408:
             changeCharacter(0, 'transLookalike');
             dad.playAnim('Smallize');
+            dad.animation.callback = (Anim, Frame) -> {
+                if (Anim == 'Smallize' && Frame == 20)
+                    opponentCam.y += 250;
+            }
         case 1424:
             changeCharacter(0, 'bf-lookalike');
             iconOpp.animation.play('2');
         case 2044:
             changeCharacter(0, 'transLookalike2');
             dad.playAnim('Bigize');
+            opponentCam.y -= 250;
         case 2048:
             addCameraZoom();
             iconOpp.animation.play('0');
@@ -119,7 +126,7 @@ function stepHit() {
         case 3336: MyWayEvents('pre');
         case 3362: MyWayEvents('anim');
         case 3440:
-            zoomIn(0.2);
+            zoomIn(0.05);
             MyWayEvents('break mirror');
         case 3481: MyWayEvents('black');
         case 3495: 
@@ -168,7 +175,7 @@ function MyWayEvents(i:String) switch(i) {
         lyrics.screenCenter(FlxAxes.X);
         numText++;
     case 'break mirror':
-        mirror.loadGraphic(getModImage('broken_mirror'));
+        mirror.loadGraphic(BillyPath('broken_mirror'));
         playModSound('mirror_break');
 
         FlxTween.num(255, 0, 1.75, {ease: FlxEase.quadOut, onUpdate: function(twn){ mirror.setColorTransform(1,1,1,1,twn.value,twn.value,twn.value,0);}});

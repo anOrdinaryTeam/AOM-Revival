@@ -1,5 +1,6 @@
 import hxvlc.flixel.FlxVideoSprite;
 import flixel.text.FlxTextBorderStyle;
+import modchart.Manager;
 
 public var mirror:FlxSprite;
 public var MyWay:FlxVideoSprite;
@@ -8,6 +9,7 @@ public var black:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 
 public var IllMake:FunkinSprite;
 public var lyrics:FlxText;
 
+var notesTime:Array<Float> = [];
 var video:FlxVideoSprite;
 var bars:FlxSprite;
 
@@ -21,6 +23,13 @@ function BillyVideo(str:String)
     return Paths.video(str);
 
 function create() {
+    var funkinModchart:Manager = new Manager();
+    add(funkinModchart);
+
+    var mod:String = 'Boost';
+    funkinModchart.addModifier(mod, 0);
+    funkinModchart.setPercent(mod, 2.0, 0);
+    
     useCamMov = true;
     camMoveAmt = 20;
     for (precache in ['transLookalike', 'bf-lookalike', 'transLookalike2'])
@@ -48,9 +57,6 @@ function create() {
     sprites.playAnim('idle');
     sprites.antialiasing = Options.antialiasing;
     insert(4, sprites);
-
-    remove(strumLines, false);
-    insert(3, strumLines);
 }
 
 function postCreate() {
@@ -108,17 +114,20 @@ function postCreate() {
         strum.setPosition(760 + (i * 225), downscroll ? 1150 : 400);
         strum.alpha = 0.3;
     }
+    remove(strumLines, false);
+    insert(3, strumLines);
 
     camGame.visible = false;
+    trace(members.indexOf(strumLines));
 }
 
 function onSongStart() video.play();
 function onStrumCreation(_) _.cancelAnimation();
 
-function onPostStrumCreation(_) if (_.player == 0 && downscroll) {
+function onPostStrumCreation(_) if (_.player == 0) {
     _.strum.camera = camGame;
-    _.strum.angle = 180;
-    _.strum.flipX = _.strum.flipY = true;
+    _.strum.angle = downscroll ? 180 : 0;
+    _.strum.flipX = _.strum.flipY = downscroll;
     _.strum.extraCopyFields.push("flipX");
     _.strum.extraCopyFields.push("flipY");
 }
@@ -128,6 +137,9 @@ function onPostNoteCreation(_) if (_.strumLineID == 0) {
     _.note.scale.set(1, 1);
     _.note.updateHitbox();
     _.note.alpha = 0.3;
+    
+    remove(_.note, false);
+    insert(3, _.note);
 }
 
 function onFocus() if (paused) {

@@ -1,14 +1,8 @@
-// var strumTimes:Array<Float> = [];
+var hitTime_player:Float = 0;
+var hitTime_cpu:Float = 0;
 
-// function postCreate() for (strum in strumLines) for (i in 0...4) {
-//     var note = strum.members[i];
-//     if (note.strumTime == note.nextNote.strumTime) strumTimes.push(note.strumTime);
-// }
+function onPlayerHit(e) if (!e.note.isSustainNote && e.note.prevNote?.strumTime == e.note.strumTime)
+    trace('Double - [PLAYER]');
 
-function onNoteHit(e) {
-    // var hitBy:Character = e.player ? 
-    if (e.note.strumTime == e.note.nextNote.strumTime) {
-        // strumTimes.shift();
-        trace('Double Note!');
-    }
-}
+function onDadHit(e) if (!e.note.isSustainNote && e.note.prevNote?.strumTime == e.note.strumTime)
+    trace('Double - [OPPONENT]');
