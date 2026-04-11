@@ -1,3 +1,6 @@
+import funkin.backend.utils.NativeAPI;
+import Sys;
+
 import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.DiscordUtil;
 import hxvlc.util.Handle;
@@ -22,6 +25,11 @@ function new() {
     currentModsList = loadModFolders();
     Handle.init([]);
     trace('Loaded Mod List: $currentModsList');
+
+    if (!Assets.exists(Paths.image('DO_NOT_DELETE', null, false, 'png'))) {
+        NativeAPI.showMessageBox('NOOOOO', 'ENARD EPAGUETI :(((');
+        Sys.exit(0);
+    }
 }
 
 function loadModFolders():Array<String>
