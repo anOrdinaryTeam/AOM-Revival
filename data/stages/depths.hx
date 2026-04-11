@@ -7,6 +7,7 @@ static function addSprite(spr:Dynamic)
     }
 
 function create() {
+    usePsychSplashes = true;
     useCamMov = true;
     camMoveAmt = 14;
     defaultCamZoom = 0.63 + 0.36;

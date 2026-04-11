@@ -5,6 +5,7 @@ var staticc:FunkinSprite = new FunkinSprite();
 function create() {
     defaultCamZoom = 0.92;
     useCamMov = true;
+    usePsychSplashes = true;
     camMoveAmt = 30;
     statSfx = FlxG.sound.load(Paths.getPath('Assets-RandomSongs/sounds/stat.ogg'));
 
@@ -28,6 +29,7 @@ function postCreate() {
     precacheCharacter(1, 'fleetway');
     loadHud('PsychEngine');
     for (w in cpu) w.visible = false;
+    PlayState.instance.comboGroup.x += 500;
 }
 
 function stepHit() switch(curStep) {

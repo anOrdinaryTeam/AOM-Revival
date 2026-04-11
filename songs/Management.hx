@@ -7,6 +7,7 @@ var ratingPrefix:String = '';
 
 public var useCamMov:Bool = false;
 public var camMoveAmt:Float = 10;
+public var usePsychSplashes:Bool = false;
 
 public function getModImage(str:String) {
     if (currentMod == 'NONE')
@@ -71,6 +72,7 @@ function postCreate() {
     camHUD.pixelPerfectShake = true;
 }
 
+function onNoteCreation(e) if (usePsychSplashes) e.note.splash = 'psych';
 function onDadHit(_) _.strumGlowCancelled = FlxG.save.data.AOM_cpuStrumsGlow;
 function onPlayerHit(_) {
     if (!_.note.isSustainNote) _.showSplash = !FlxG.save.data.AOM_disableSplashs;

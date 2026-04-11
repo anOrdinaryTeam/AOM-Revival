@@ -60,6 +60,8 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
         timeTxt.active = false;
         hudItems.add(timeTxt);
     }
+
+    scripts.call('postHudLoad');
 }
 
 function onSongStart() if (Settings["timeBarType"] != 'disabled')
