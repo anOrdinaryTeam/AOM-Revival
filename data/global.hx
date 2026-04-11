@@ -1,5 +1,6 @@
 import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.DiscordUtil;
+import hxvlc.util.Handle;
 
 var saveMap:Map<String, Dynamic> = [];
 static var loadedSaveData:Bool = false;
@@ -19,6 +20,7 @@ using StringTools;
 
 function new() {
     currentModsList = loadModFolders();
+    Handle.init([]);
     trace('Loaded Mod List: $currentModsList');
 }
 

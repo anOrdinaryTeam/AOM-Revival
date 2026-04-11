@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="p2sonic" icon="sonic" color="#051eb2" x="-20" y="210" holdTime="6.1">
+	<anim name="singLEFT" anim="Left" x="284" y="-32"/>
+	<anim name="singDOWN" anim="Down" x="-25" y="-16"/>
+	<anim name="singUP" anim="Up" x="3" y="275"/>
+	<anim name="singRIGHT" anim="Right" x="-28" y="-14"/>
+	<anim name="idle" anim="Idle"/>
+</character>
