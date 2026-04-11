@@ -1,14 +1,17 @@
 import hxvlc.flixel.FlxVideoSprite;
 import flixel.text.FlxTextBorderStyle;
 
-var index:Int = 0;
-var defaultZoom:Float = 0.725;
-
-var bars:FlxSprite;
 public var mirror:FlxSprite;
 public var MyWay:FlxVideoSprite;
 
-defaultCamZoom = defaultZoom;
+public var black:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);
+public var IllMake:FunkinSprite;
+public var lyrics:FlxText;
+
+var video:FlxVideoSprite;
+var bars:FlxSprite;
+
+defaultCamZoom = 0.725;
 introLength = 0;
 
 public function BillyPath(str:String)
@@ -22,24 +25,6 @@ function create() {
     camMoveAmt = 20;
     for (precache in ['transLookalike', 'bf-lookalike', 'transLookalike2'])
         precacheCharacter(0, precache);
-
-    var preloadVideo:FlxVideoSprite = new FlxVideoSprite(0,0);
-    preloadVideo.load(BillyVideo('open'));
-    preloadVideo.bitmap.onEndReached.add(preloadVideo.destroy);
-    preloadVideo.camera = camHUD;
-    preloadVideo.antialiasing = false;
-    preloadVideo.play();
-    add(preloadVideo);
-    preloadVideo.stop();
-
-    var preloadVideo:FlxVideoSprite = new FlxVideoSprite(0,0);
-    preloadVideo.load(BillyVideo('SO_STAY_FINAL'));
-    preloadVideo.bitmap.onEndReached.add(preloadVideo.destroy);
-    preloadVideo.camera = camHUD;
-    preloadVideo.antialiasing = false;
-    preloadVideo.play();
-    add(preloadVideo);
-    preloadVideo.stop();
 
     graphicCache.cache(BillyPath('broken_mirror'));
     mirror = new FlxSprite().loadGraphic(BillyPath('silly_mirror'));
@@ -68,11 +53,6 @@ function create() {
     insert(3, strumLines);
 }
 
-var video:FlxVideoSprite;
-public var black:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);
-public var IllMake:FunkinSprite;
-public var lyrics:FlxText;
-
 function postCreate() {
     remove(gf);
     importScript('songs/Silly Billy/healthbar');
@@ -88,7 +68,6 @@ function postCreate() {
     insert(1, vig);
 
     black.camera = camHUD;
-    black.alpha = 0.01;
     add(black);
 
     video = new FlxVideoSprite(212, 121);
@@ -97,7 +76,6 @@ function postCreate() {
     video.camera = camHUD;
     video.antialiasing = true;
     video.scale.set(1.5, 1.5);
-    video.alpha = 0.001;
     video.updateHitbox();
     add(video);
 
@@ -106,7 +84,6 @@ function postCreate() {
     MyWay.bitmap.onEndReached.add(MyWay.destroy);
     MyWay.camera = camHUD;
     MyWay.antialiasing = true;
-    MyWay.alpha = 0.0001;
     insert(2, MyWay);
 
     for (i in [healthBar, healthBarBG, iconP1, iconP2]) i.visible = false;
@@ -132,7 +109,7 @@ function postCreate() {
         strum.alpha = 0.3;
     }
 
-    // camGame.visible = false;
+    camGame.visible = false;
 }
 
 function onSongStart() video.play();

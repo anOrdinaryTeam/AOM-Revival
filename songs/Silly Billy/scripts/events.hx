@@ -151,41 +151,37 @@ var curText:Array<String> = [
     "SO STAY", "AWAKE", "JUST", "LONG", "ENOUGH TO SEE", "MY", "MY WAY", "", "MY WAY", ""
 ];
 
-function MyWayEvents(i:String)
-    switch(i) {
-        case 'pre':
-            lockZoom = true;
-            defaultCamZoom = 0.5;
+function MyWayEvents(i:String) switch(i) {
+    case 'pre':
+        lockZoom = true;
+        defaultCamZoom = 0.5;
 
-            for (i in [accuracyTxt, scoreTxt, missesTxt]) FlxTween.tween(i, {alpha: 0}, 2, {ease: FlxEase.quadIn});
-            for (i in items) FlxTween.tween(i, {alpha: 0}, 2, {ease: FlxEase.quadIn});
-            for (i in player) FlxTween.tween(i, {alpha: 0}, 2, {ease: FlxEase.quadIn});
-        case 'anim':
-            dad.visible = false;
-            IllMake.alpha = 1;
-            IllMake.playAnim('play');
-        case 'txt':
-            lyrics.text = curText[numText];
-            lyrics.screenCenter(FlxAxes.X);
-            numText++;
-        case 'break mirror':
-            mirror.loadGraphic(Paths.image('bg/broken_mirror'));
-            FlxG.sound.play(Paths.sound("mirror_break"));
+        for (i in [accuracyTxt, scoreTxt, missesTxt]) FlxTween.tween(i, {alpha: 0}, 2, {ease: FlxEase.quadIn});
+        for (i in items) FlxTween.tween(i, {alpha: 0}, 2, {ease: FlxEase.quadIn});
+        for (i in player) FlxTween.tween(i, {alpha: 0}, 2, {ease: FlxEase.quadIn});
+    case 'anim':
+        dad.visible = false;
+        IllMake.alpha = 1;
+        IllMake.playAnim('play');
+    case 'txt':
+        lyrics.text = curText[numText];
+        lyrics.screenCenter(FlxAxes.X);
+        numText++;
+    case 'break mirror':
+        mirror.loadGraphic(getModImage('broken_mirror'));
+        playModSound('mirror_break');
 
-            FlxTween.num(255, 0, 1.75, {ease: FlxEase.quadOut, onUpdate: function(twn){ mirror.setColorTransform(1,1,1,1,twn.value,twn.value,twn.value,0);}});
-            camGame.shake(0.01, 0.25);
-        case 'black':
-            remove(black);
-            insert(2, black);
+        FlxTween.num(255, 0, 1.75, {ease: FlxEase.quadOut, onUpdate: function(twn){ mirror.setColorTransform(1,1,1,1,twn.value,twn.value,twn.value,0);}});
+        camGame.shake(0.01, 0.25);
+    case 'black':
+        remove(black);
+        insert(2, black);
 
-            FlxTween.tween(black, {alpha: 1}, 1.125, {ease: FlxEase.quadOut});
-            FlxTween.num(0.6, 1.125, 0.75, {ease: FlxEase.backIn, onUpdate: (s:FlxTween)->{
-                defaultCamZoom = s.value;
-            }});
-        case 'vid':
-            MyWay.play();
-            FlxTween.tween(MyWay, {alpha: 1}, 0.125 * 1.5, {ease: FlxEase.quadOut});
-        case 'hud in': for (i in player) FlxTween.tween(i, {alpha: 1}, 1.5, {ease: FlxEase.quadIn});
-        case 'die':
-            black.alpha = 1;
-    }
+        FlxTween.tween(black, {alpha: 1}, 1.125, {ease: FlxEase.quadOut});
+        FlxTween.tween(this, {defaultCamZoom: 1.125}, 0.75, {ease: FlxEase.backIn});
+    case 'vid':
+        MyWay.play();
+        FlxTween.tween(MyWay, {alpha: 1}, 0.125 * 1.5, {ease: FlxEase.quadOut});
+    case 'hud in': for (i in player) FlxTween.tween(i, {alpha: 1}, 1.5, {ease: FlxEase.quadIn});
+    case 'die': black.alpha = 1;
+}

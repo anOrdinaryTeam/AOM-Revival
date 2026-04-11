@@ -2,15 +2,14 @@ import flixel.ui.FlxBar;
 import flixel.ui.FlxBarFillDirection;
 
 var bar:FlxSprite;
-public var iconOpp:FlxSprite;
 var iconP:FlxSprite;
 var barFill:FlxSprite;
 var actualBar:FlxBar;
 var evilBar:FlxBar;
+var evilHealth:Float = 1;
 
 public var items = [];
-
-var evilHealth:Float = 1;
+public var iconOpp:FlxSprite;
 
 function postCreate() {
     var i:Int = members.indexOf(scoreTxt);
@@ -75,5 +74,5 @@ function update() {
     iconP.animation.curAnim.curFrame = health.percent < 20 ? 1 : 0;
 }
 
-function onDadHit(_)
-    if (_.character.curCharacter == dad.curCharacter && health > 0.1) health -= 0.023 * .6;
+function onDadHit(_) if (_.character.curCharacter == dad.curCharacter && health > 0.1) 
+    health -= 0.023 * .6;
