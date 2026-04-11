@@ -1,14 +1,4 @@
 {
-	"opponentModeAllowed": false,
 	"icon": "red",
-	"difficulties": [
-		"hard"
-	],
-	"color": "#9271FD",
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "Summit",
-	"beatsPerMeasure": 4,
-	"needsVoices": true,
 	"bpm": 115
 }
