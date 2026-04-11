@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tord-buttonPress.png" width="3845" height="1460">
+  <SubTexture name="TordButtonPress0001" x="1" y="1"  width="1283" height="728" frameX="-47" frameY="-57" frameWidth="1352" frameHeight="1039"/>
+  <SubTexture name="TordButtonPress0002" x="1286" y="1"  width="1280" height="728" frameX="-47" frameY="-57" frameWidth="1352" frameHeight="1039"/>
+  <SubTexture name="TordButtonPress0003" x="2568" y="1"  width="1276" height="728" frameX="-47" frameY="-57" frameWidth="1352" frameHeight="1039"/>
+  <SubTexture name="TordRaiseThumbs0001" x="1" y="731"  width="1268" height="728" frameX="-47" frameY="-57" frameWidth="1352" frameHeight="1039"/>
+  <SubTexture name="TordRaiseThumbs0002" x="1271" y="731"  width="1268" height="728" frameX="-47" frameY="-57" frameWidth="1352" frameHeight="1039"/>
+</TextureAtlas>

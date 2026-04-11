@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="matt-eduardo.png" width="815" height="663">
+  <SubTexture name="mattPISSED0001" x="1" y="1"  width="216" height="326" frameX="-9" frameY="-2" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="reaction0001" x="219" y="1"  width="187" height="326" frameX="-0" frameY="-4" frameWidth="187" frameHeight="331"/>
+  <SubTexture name="mattPISSED0002" x="408" y="1"  width="224" height="328" frameX="-0" frameY="-0" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="mattPISSED0004" x="634" y="1"  width="180" height="328" frameX="-44" frameY="-1" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="mattPISSED0005" x="1" y="329"  width="181" height="328" frameX="-42" frameY="-1" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="mattPISSED0003" x="184" y="329"  width="180" height="329" frameX="-44" frameY="-0" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="reaction0002" x="366" y="331"  width="174" height="330" frameX="-6" frameY="-1" frameWidth="187" frameHeight="331"/>
+  <SubTexture name="reaction0003" x="542" y="331"  width="178" height="331" frameX="-4" frameY="-0" frameWidth="187" frameHeight="331"/>
+</TextureAtlas>

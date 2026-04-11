@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="bf-slide.png" width="1844" height="913">
+  <SubTexture name="BFSlideInDown0000" x="1" y="1"  width="459" height="454" frameX="-0" frameY="-49" frameWidth="520" frameHeight="513"/>
+  <SubTexture name="BFSlideInDown0001" x="462" y="1"  width="459" height="454" frameX="-0" frameY="-49" frameWidth="520" frameHeight="513"/>
+  <SubTexture name="BFSlideInRight0000" x="923" y="1"  width="459" height="454" frameX="-0" frameY="-48" frameWidth="520" frameHeight="546"/>
+  <SubTexture name="BFSlideInRight0001" x="1384" y="1"  width="459" height="454" frameX="-0" frameY="-48" frameWidth="520" frameHeight="546"/>
+  <SubTexture name="BFSlideInLeft0000" x="1" y="457"  width="458" height="455" frameX="-1" frameY="-48" frameWidth="520" frameHeight="513"/>
+  <SubTexture name="BFSlideInLeft0001" x="461" y="457"  width="459" height="455" frameX="-0" frameY="-48" frameWidth="520" frameHeight="513"/>
+  <SubTexture name="BFSlideInUp0000" x="922" y="457"  width="458" height="455" frameX="-1" frameY="-48" frameWidth="520" frameHeight="513"/>
+  <SubTexture name="BFSlideInUp0001" x="1382" y="457"  width="459" height="455" frameX="-0" frameY="-48" frameWidth="520" frameHeight="513"/>
+</TextureAtlas>

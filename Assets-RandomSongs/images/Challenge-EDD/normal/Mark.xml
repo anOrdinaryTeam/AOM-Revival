@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="Mark.png" width="680" height="928">
+  <SubTexture name="MarkIdle0001" x="1" y="1"  width="227" height="454" frameX="-0" frameY="-9" frameWidth="227" frameHeight="463"/>
+  <SubTexture name="MarkIdle0002" x="230" y="1"  width="224" height="454" frameX="-2" frameY="-9" frameWidth="227" frameHeight="463"/>
+  <SubTexture name="MarkIdle0003" x="456" y="1"  width="223" height="461" frameX="-2" frameY="-2" frameWidth="227" frameHeight="463"/>
+  <SubTexture name="MarkIdle0004" x="1" y="457"  width="223" height="462" frameX="-2" frameY="-1" frameWidth="227" frameHeight="463"/>
+  <SubTexture name="MarkIdle0005" x="226" y="457"  width="223" height="463" frameX="-2" frameY="-0" frameWidth="227" frameHeight="463"/>
+  <SubTexture name="MarkIdle0006" x="451" y="464"  width="223" height="463" frameX="-2" frameY="-0" frameWidth="227" frameHeight="463"/>
+</TextureAtlas>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tordBot.png" width="3419" height="2922">
+  <SubTexture name="TordBotIdle0000" x="1" y="1"  width="765" height="663" frameX="-0" frameY="-1" frameWidth="765" frameHeight="664"/>
+  <SubTexture name="TordBotHarpoonIdle0000" x="768" y="1"  width="766" height="664" frameX="-454" frameY="-178" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotHarpoonIdle0001" x="1536" y="1"  width="765" height="664" frameX="-455" frameY="-178" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotIdle0001" x="2303" y="1"  width="765" height="664" frameX="-0" frameY="-0" frameWidth="765" frameHeight="664"/>
+  <SubTexture name="TordBotBlowingUp0005" x="1" y="667"  width="1434" height="671" frameX="-56" frameY="-104" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotBlowingUp0006" x="1437" y="667"  width="1384" height="684" frameX="-34" frameY="-97" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotBlowingUp0000" x="1" y="1340"  width="748" height="689" frameX="-459" frameY="-163" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotBlowingUp0002" x="751" y="1353"  width="1412" height="718" frameX="-180" frameY="-58" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotBlowingUp0001" x="2165" y="1353"  width="772" height="744" frameX="-442" frameY="-94" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotBlowingUp0003" x="1" y="2073"  width="1684" height="786" frameX="-40" frameY="-0" frameWidth="1731" frameHeight="852"/>
+  <SubTexture name="TordBotBlowingUp0004" x="1687" y="2099"  width="1731" height="822" frameX="-0" frameY="-3" frameWidth="1731" frameHeight="852"/>
+</TextureAtlas>

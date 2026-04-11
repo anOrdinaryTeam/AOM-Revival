@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="matt.png" width="1154" height="648">
+  <SubTexture name="walk0004" x="1" y="1"  width="146" height="297" frameX="-13" frameY="-3" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="walk0005" x="149" y="1"  width="161" height="308" frameX="-0" frameY="-0" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="walk0003" x="312" y="1"  width="132" height="309" frameX="-30" frameY="-10" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="walk0002" x="446" y="1"  width="132" height="310" frameX="-31" frameY="-8" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="walk0006" x="580" y="1"  width="157" height="310" frameX="-4" frameY="-7" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="walk0007" x="739" y="1"  width="132" height="313" frameX="-29" frameY="-8" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="walk0008" x="873" y="1"  width="132" height="315" frameX="-32" frameY="-1" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="walk0001" x="1007" y="1"  width="146" height="316" frameX="-18" frameY="-0" frameWidth="164" frameHeight="321"/>
+  <SubTexture name="idle0001" x="1" y="311"  width="216" height="326" frameX="-9" frameY="-2" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="idle0002" x="219" y="312"  width="224" height="328" frameX="-0" frameY="-0" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="idle0003" x="810" y="318"  width="180" height="329" frameX="-44" frameY="-0" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="idle0004" x="445" y="313"  width="180" height="328" frameX="-44" frameY="-1" frameWidth="225" frameHeight="329"/>
+  <SubTexture name="idle0005" x="627" y="316"  width="181" height="328" frameX="-42" frameY="-1" frameWidth="225" frameHeight="329"/>
+</TextureAtlas>

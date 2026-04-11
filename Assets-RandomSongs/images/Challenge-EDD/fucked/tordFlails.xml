@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tordFlails.png" width="490" height="317">
+  <SubTexture name="TordFlailing0004" x="1" y="1"  width="196" height="131" frameX="-0" frameY="-14" frameWidth="213" frameHeight="169"/>
+  <SubTexture name="TordFlailing0003" x="199" y="1"  width="169" height="143" frameX="-17" frameY="-16" frameWidth="213" frameHeight="169"/>
+  <SubTexture name="TordFlailing0001" x="370" y="1"  width="119" height="155" frameX="-37" frameY="-5" frameWidth="213" frameHeight="169"/>
+  <SubTexture name="TordFlailing0002" x="1" y="134"  width="176" height="157" frameX="-37" frameY="-12" frameWidth="213" frameHeight="169"/>
+  <SubTexture name="TordFlailing0000" x="179" y="158"  width="196" height="158" frameX="-4" frameY="-0" frameWidth="213" frameHeight="169"/>
+</TextureAtlas>

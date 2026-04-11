@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tomRunsIn.png" width="1091" height="838">
+  <SubTexture name="Tom Running In0001" x="1" y="1"  width="354" height="297" frameX="-0" frameY="-152" frameWidth="426" frameHeight="473"/>
+  <SubTexture name="Tom Running In0000" x="357" y="1"  width="351" height="342" frameX="-75" frameY="-90" frameWidth="426" frameHeight="473"/>
+  <SubTexture name="Tom Running In0002" x="710" y="1"  width="329" height="366" frameX="-16" frameY="-107" frameWidth="426" frameHeight="473"/>
+  <SubTexture name="Tom Running In0003" x="1" y="300"  width="306" height="381" frameX="-37" frameY="-86" frameWidth="426" frameHeight="473"/>
+  <SubTexture name="Tom Running In0005" x="309" y="345"  width="265" height="427" frameX="-76" frameY="-39" frameWidth="426" frameHeight="473"/>
+  <SubTexture name="Tom Running In0006" x="576" y="369"  width="263" height="429" frameX="-78" frameY="-40" frameWidth="426" frameHeight="473"/>
+  <SubTexture name="Tom Running In0004" x="841" y="369"  width="249" height="468" frameX="-95" frameY="-0" frameWidth="426" frameHeight="473"/>
+</TextureAtlas>

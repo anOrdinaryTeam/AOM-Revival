@@ -8,3 +8,4 @@ Epiphany:bigmonika
 Prey:furnace
 Phantasm:fleetway
 Summit:red
+Challenge-EDD:icon-edd

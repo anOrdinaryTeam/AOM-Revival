@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tomHarpoon.png" width="2725" height="1935">
+  <SubTexture name="TomHarpoonIdle0000" x="1" y="1"  width="543" height="642" frameX="-0" frameY="-1" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonIdle0001" x="546" y="1"  width="543" height="642" frameX="-0" frameY="-1" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0000" x="1091" y="1"  width="543" height="642" frameX="-0" frameY="-1" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0000" x="1636" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0001" x="2181" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0004" x="1" y="645"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0005" x="546" y="645"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0006" x="1091" y="645"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0008" x="1636" y="646"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0009" x="2181" y="646"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0010" x="1" y="1290"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0001" x="546" y="1290"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0002" x="1091" y="1290"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0003" x="1636" y="1291"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0003" x="1636" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0005" x="1636" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0008" x="1636" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0002" x="2181" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonHarpoon0007" x="2181" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0004" x="2181" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0007" x="2181" y="1"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0006" x="546" y="645"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+  <SubTexture name="TomHarpoonLine0009" x="546" y="645"  width="543" height="643" frameX="-0" frameY="-0" frameWidth="543" frameHeight="643"/>
+</TextureAtlas>

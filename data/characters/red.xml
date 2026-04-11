@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character y="300" camx="126" camy="529" color="#FF0040">
+<character sprite="mtsilver/red" y="300" camx="126" camy="529" color="#FF0040">
 	<anim name="idle" anim="red idle" x="-5"/>
 	<anim name="singLEFT" anim="red left" x="11" y="-11"/>
 	<anim name="singDOWN" anim="red down" x="-26" y="-34"/>

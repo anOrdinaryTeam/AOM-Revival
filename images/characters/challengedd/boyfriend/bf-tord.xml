@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="bf-tord.png" width="1607" height="811">
+  <SubTexture name="BF Ground Shaking0001" x="1" y="1"  width="418" height="381" frameX="-0" frameY="-21" frameWidth="419" frameHeight="404"/>
+  <SubTexture name="BF Look At Tord0000" x="421" y="1"  width="403" height="392" frameX="-0" frameY="-18" frameWidth="403" frameHeight="411"/>
+  <SubTexture name="BF Ground Shaking0003" x="826" y="1"  width="395" height="393" frameX="-12" frameY="-10" frameWidth="419" frameHeight="404"/>
+  <SubTexture name="BF Ground Shaking0002" x="1223" y="1"  width="383" height="397" frameX="-18" frameY="-7" frameWidth="419" frameHeight="404"/>
+  <SubTexture name="BF Ground Shaking0000" x="1" y="384"  width="400" height="402" frameX="-6" frameY="-1" frameWidth="419" frameHeight="404"/>
+  <SubTexture name="BF Look At Tord0001" x="403" y="395"  width="392" height="408" frameX="-7" frameY="-3" frameWidth="403" frameHeight="411"/>
+  <SubTexture name="BF Look At Tord0002" x="797" y="396"  width="396" height="410" frameX="-4" frameY="-0" frameWidth="403" frameHeight="411"/>
+  <SubTexture name="BF Look At Tord0003" x="1195" y="400"  width="397" height="410" frameX="-4" frameY="-0" frameWidth="403" frameHeight="411"/>
+</TextureAtlas>

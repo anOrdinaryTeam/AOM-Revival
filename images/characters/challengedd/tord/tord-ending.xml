@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tord-ending.png" width="5168" height="3650">
+  <SubTexture name="TordHarpoonShot0001" x="1" y="1"  width="1252" height="728" frameX="-47" frameY="-71" frameWidth="1489" frameHeight="1053"/>
+  <SubTexture name="TordHarpoonShot0002" x="1255" y="1"  width="1290" height="728" frameX="-47" frameY="-71" frameWidth="1489" frameHeight="1053"/>
+  <SubTexture name="TordHarpoonShot0003" x="2547" y="1"  width="1290" height="728" frameX="-47" frameY="-71" frameWidth="1489" frameHeight="1053"/>
+  <SubTexture name="TordHarpoonShot0004" x="3839" y="1"  width="1290" height="728" frameX="-47" frameY="-71" frameWidth="1489" frameHeight="1053"/>
+  <SubTexture name="TordHarpoonShot0005" x="1" y="731"  width="1290" height="728" frameX="-47" frameY="-71" frameWidth="1489" frameHeight="1053"/>
+  <SubTexture name="TordHarpoonShot0006" x="1293" y="731"  width="1290" height="728" frameX="-47" frameY="-71" frameWidth="1489" frameHeight="1053"/>
+  <SubTexture name="TordHarpoonShot0007" x="2585" y="731"  width="1290" height="728" frameX="-47" frameY="-71" frameWidth="1489" frameHeight="1053"/>
+  <SubTexture name="TordOhNo0001" x="3877" y="731"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0002" x="1" y="1461"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0004" x="1293" y="1461"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0006" x="2585" y="1461"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0007" x="3877" y="1461"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0008" x="1" y="2191"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0009" x="1293" y="2191"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0010" x="2585" y="2191"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0011" x="3877" y="2191"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0013" x="1" y="2921"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0003" x="1" y="1461"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0005" x="1293" y="1461"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0012" x="3877" y="2191"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+  <SubTexture name="TordOhNo0014" x="1" y="2921"  width="1290" height="728" frameX="-47" frameY="-65" frameWidth="1466" frameHeight="1047"/>
+</TextureAtlas>

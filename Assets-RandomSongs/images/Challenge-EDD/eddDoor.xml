@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="eddDoor.png" width="626" height="253">
+  <SubTexture name="Door Opening0001" x="1" y="1"  width="22" height="59" frameX="-91" frameY="-111" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0002" x="25" y="1"  width="192" height="238" frameX="-11" frameY="-10" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0004" x="219" y="1"  width="201" height="241" frameX="-2" frameY="-13" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0005" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0003" x="25" y="1"  width="192" height="238" frameX="-11" frameY="-10" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0014" x="25" y="1"  width="192" height="238" frameX="-11" frameY="-10" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0013" x="219" y="1"  width="201" height="241" frameX="-2" frameY="-13" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0006" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0007" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0008" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0009" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0010" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0011" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+  <SubTexture name="Door Opening0012" x="422" y="1"  width="203" height="251" frameX="-0" frameY="-1" frameWidth="203" frameHeight="254"/>
+</TextureAtlas>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="tom.png" width="1246" height="942">
+  <SubTexture name="idle0001" x="869" y="1"  width="139" height="309" frameX="-3" frameY="-3" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="idle0002" x="1010" y="1"  width="138" height="309" frameX="-4" frameY="-3" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="idle0003" x="1110" y="312"  width="135" height="312" frameX="-5" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="idle0004" x="1" y="612"  width="134" height="312" frameX="-6" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="idle0005" x="137" y="621"  width="134" height="312" frameX="-6" frameY="-0" frameWidth="142" frameHeight="312"/>
+  
+  <SubTexture name="walk0001" x="433" y="1"  width="136" height="307" frameX="-1" frameY="-11" frameWidth="159" frameHeight="321"/>
+  <SubTexture name="walk0002" x="145" y="1"  width="132" height="305" frameX="-2" frameY="-14" frameWidth="159" frameHeight="321"/>
+  <SubTexture name="walk0003" x="1" y="1"  width="142" height="297" frameX="-4" frameY="-3" frameWidth="159" frameHeight="321"/>
+  <SubTexture name="walk0004" x="571" y="1"  width="157" height="308" frameX="-2" frameY="-0" frameWidth="159" frameHeight="321"/>
+  <SubTexture name="walk0005" x="279" y="1"  width="152" height="306" frameX="-3" frameY="-11" frameWidth="159" frameHeight="321"/>
+  <SubTexture name="walk0006" x="730" y="1"  width="137" height="308" frameX="-3" frameY="-13" frameWidth="159" frameHeight="321"/>
+  
+  <SubTexture name="tomTransition0001" x="1" y="300"  width="138" height="310" frameX="-0" frameY="-2" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomTurns0001" x="141" y="308"  width="135" height="311" frameX="-5" frameY="-1" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomLooking0001" x="278" y="309"  width="138" height="311" frameX="-0" frameY="-1" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomLooking0002" x="418" y="310"  width="137" height="311" frameX="-0" frameY="-1" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomLooking0003" x="557" y="311"  width="136" height="312" frameX="-0" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomLooking0004" x="695" y="311"  width="136" height="312" frameX="-0" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomLooking0005" x="833" y="312"  width="136" height="312" frameX="-0" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomLooking0006" x="971" y="312"  width="137" height="312" frameX="-0" frameY="-0" frameWidth="141" frameHeight="312"/>
+  
+  <SubTexture name="tomSurprise0002" x="273" y="622"  width="135" height="312" frameX="-6" frameY="-3" frameWidth="141" frameHeight="315"/>
+  <SubTexture name="tomSurprise0003" x="410" y="623"  width="135" height="312" frameX="-6" frameY="-3" frameWidth="141" frameHeight="315"/>
+  <SubTexture name="tomTransition0002" x="547" y="625"  width="137" height="312" frameX="-5" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomTurns0003" x="686" y="625"  width="136" height="312" frameX="-5" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomTurns0005" x="824" y="626"  width="136" height="312" frameX="-1" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="walk0007" x="962" y="626"  width="130" height="312" frameX="-1" frameY="-4" frameWidth="159" frameHeight="321"/>
+  <SubTexture name="tomSurprise0001" x="1094" y="626"  width="131" height="315" frameX="-8" frameY="-0" frameWidth="141" frameHeight="315"/>
+  <SubTexture name="tomTurns0007" x="833" y="312"  width="136" height="312" frameX="-0" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomTurns0008" x="833" y="312"  width="136" height="312" frameX="-0" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomTurns0002" x="141" y="308"  width="135" height="311" frameX="-5" frameY="-1" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomTurns0004" x="686" y="625"  width="136" height="312" frameX="-5" frameY="-0" frameWidth="142" frameHeight="312"/>
+  <SubTexture name="tomTurns0006" x="824" y="626"  width="136" height="312" frameX="-1" frameY="-0" frameWidth="142" frameHeight="312"/>
+</TextureAtlas>

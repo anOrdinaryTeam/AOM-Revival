@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="matt-tord.png" width="833" height="948">
+	<SubTexture name="mattReactionTord0001" x="435" y="616"  width="179" height="331" frameX="-0" frameY="-0" frameWidth="219" frameHeight="331"/>
+	<SubTexture name="mattReactionTord0002" x="214" y="1"  width="219" height="301" frameX="-0" frameY="-27" frameWidth="219" frameHeight="331"/>
+	<SubTexture name="mattReactionTord0003" x="616" y="308"  width="216" height="306" frameX="-1" frameY="-23" frameWidth="219" frameHeight="331"/>
+	<SubTexture name="mattReactionTord0004" x="1" y="612"  width="215" height="308" frameX="-1" frameY="-21" frameWidth="219" frameHeight="331"/>
+	<SubTexture name="mattReactionTord0005" x="218" y="616"  width="215" height="308" frameX="-1" frameY="-21" frameWidth="219" frameHeight="331"/>
+	
+	<SubTexture name="mattLookUp0001" x="435" y="1"  width="130" height="305" frameX="-45" frameY="-0" frameWidth="211" frameHeight="317"/>
+	<SubTexture name="mattLookUp0002" x="567" y="1"  width="130" height="305" frameX="-45" frameY="-0" frameWidth="211" frameHeight="317"/>
+	
+	<SubTexture name="mattHarpoonBit0001" x="699" y="1"  width="130" height="305" frameX="-42" frameY="-0" frameWidth="211" frameHeight="317"/>
+	<SubTexture name="mattHarpoonBit0002" x="1" y="1"  width="211" height="299" frameX="-0" frameY="-18" frameWidth="211" frameHeight="317"/>
+	<SubTexture name="mattHarpoonBit0003" x="1" y="302"  width="203" height="306" frameX="-4" frameY="-11" frameWidth="211" frameHeight="317"/>
+	<SubTexture name="mattHarpoonBit0004" x="206" y="304"  width="203" height="306" frameX="-4" frameY="-11" frameWidth="211" frameHeight="317"/>
+	<SubTexture name="mattHarpoonBit0005" x="411" y="308"  width="203" height="306" frameX="-4" frameY="-11" frameWidth="211" frameHeight="317"/>
+</TextureAtlas>

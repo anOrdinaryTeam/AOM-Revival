@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="edd-enter.png" width="1866" height="796">
+  <SubTexture name="EddEnterDown0000" x="1" y="1"  width="465" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+  <SubTexture name="EddEnterDown0001" x="468" y="1"  width="464" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+  <SubTexture name="EddEnterLeft0000" x="934" y="1"  width="465" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+  <SubTexture name="EddEnterLeft0001" x="1401" y="1"  width="464" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+  <SubTexture name="EddEnterRight0000" x="1" y="399"  width="465" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+  <SubTexture name="EddEnterRight0001" x="468" y="399"  width="464" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+  <SubTexture name="EddEnterUp0000" x="934" y="399"  width="465" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+  <SubTexture name="EddEnterUp0001" x="1401" y="399"  width="464" height="396" frameX="-6" frameY="-0" frameWidth="499" frameHeight="438"/>
+</TextureAtlas>

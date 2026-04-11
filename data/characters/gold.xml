@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="30" y="300" sprite="gay_bf" flipX="true" camx="987" camy="526" isPlayer="true" color="#FFC65E">
+<character x="30" y="300" sprite="mtsilver/gay_bf" flipX="true" camx="987" camy="526" isPlayer="true" color="#FFC65E">
 	<anim name="idle" anim="bf idle" x="-5"/>
 	<anim name="singLEFT" anim="bf left" x="60" y="-11"/>
 	<anim name="singDOWN" anim="bf down" x="20" y="-39"/>
