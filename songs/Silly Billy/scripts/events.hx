@@ -192,7 +192,7 @@ function MyWayEvents(i:String) switch(i) {
     case 'die': black.alpha = 1;
 }
 
-function onChangeCharacter(_, char) switch(char) {
+function onChangeCharacter(_, char) switch(char.curCharacter) {
     case 'transLookalike' | 'bf-lookalike' | 'transLookalike2' | 'evilLookaLike':
-        dad.camera = camGame;
+        char.camera = camGame;
 }

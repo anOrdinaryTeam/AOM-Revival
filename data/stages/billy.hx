@@ -95,6 +95,7 @@ function postCreate() {
     IllMake.addAnim('play', 'story_of_yourtalebilly', 24, false);
     IllMake.antialiasing = Options.antialiasing;
     IllMake.alpha = 0.001;
+    IllMake.camera = camGame;
     add(IllMake);
 
     var vig = new FlxSprite().loadGraphic(BillyPath('hud/vignette'));
