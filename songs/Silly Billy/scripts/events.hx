@@ -191,3 +191,8 @@ function MyWayEvents(i:String) switch(i) {
     case 'hud in': for (i in player) FlxTween.tween(i, {alpha: 1}, 1.5, {ease: FlxEase.quadIn});
     case 'die': black.alpha = 1;
 }
+
+function onChangeCharacter(_, char) switch(char) {
+    case 'transLookalike' | 'bf-lookalike' | 'transLookalike2' | 'evilLookaLike':
+        dad.camera = camGame;
+}

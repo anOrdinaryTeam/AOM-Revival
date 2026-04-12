@@ -82,10 +82,10 @@ function postCreate() {
         add(modManager);
 
         modManager.setPercent('x', 700, 0);
-        modManager.setPercent('y', 680, 0);
+        modManager.setPercent('y', downscroll ? 680 : 400, 0);
         modManager.setPercent('z', 0.25, 0);
         modManager.setPercent('flip', -0.25, 0);
-        modManager.setPercent('Boost', 2.0, 0);
+        modManager.setPercent('Boost', 1, 0);
         modManager.setPercent('sudden', 0.9, 0);
         modManager.setPercent('suddenOffset', 1, 0);
         modManager.setPercent('alpha', 0.5, 0);
@@ -143,6 +143,8 @@ function postCreate() {
         if (i >= 1) strum.x += i * 95;
     }
     
+    dad.camera = camGame;
+    boyfriend.camera = camGame;
     camGame.visible = false;
 }
 

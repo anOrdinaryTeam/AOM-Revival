@@ -13,6 +13,7 @@ public var iconOpp:FlxSprite;
 
 function postCreate() {
     var i:Int = members.indexOf(scoreTxt);
+    var yOffset:Float = downscroll ? 615.8 : 630;
 
     bar = new FlxSprite().loadGraphic(BillyPath("hud/Silly_Healthbar"));
     bar.camera = camHUD;
@@ -26,12 +27,12 @@ function postCreate() {
     actualBar = new FlxBar(0, 0, FlxBarFillDirection.LEFT_TO_RIGHT, 327.805, 28, this, 'health', 0, 2);
     actualBar.camera = camHUD;
     actualBar.createGradientBar([0xFF000000, 0xFF000000], [0xFF1565C0, 0xFFFFFFFF], 1, 90);
-    actualBar.setPosition(420, 615.8);
+    actualBar.setPosition(420, yOffset);
 
     evilBar = new FlxBar(0, 0, FlxBarFillDirection.RIGHT_TO_LEFT, 330.805, 36);
     evilBar.camera = camHUD;
     evilBar.createGradientBar([0xFF000000, 0xFF000000], [0xFF8A0101, 0xFF000000], 1, 90);
-    evilBar.setPosition(405 - evilBar.width - 25, 615.8);
+    evilBar.setPosition(405 - evilBar.width - 25, yOffset);
 
     insert(i, evilBar);
     insert(members.indexOf(evilBar) + 1, actualBar);
