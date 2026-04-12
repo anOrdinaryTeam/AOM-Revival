@@ -21,9 +21,6 @@ introLength = 0;
 public function BillyPath(str:String)
     return getModImage('Silly Billy/$str');
 
-function BillyVideo(str:String)
-    return Paths.video(str);
-
 function create() {
     FlxG.cameras.remove(camGame, false);
     FlxG.cameras.remove(camHUD, false);
@@ -85,7 +82,8 @@ function postCreate() {
         modManager.setPercent('y', downscroll ? 680 : 400, 0);
         modManager.setPercent('z', 0.25, 0);
         modManager.setPercent('flip', -0.25, 0);
-        modManager.setPercent('Boost', 1, 0);
+        modManager.setPercent('Boost', 2.0, 0);
+        modManager.setPercent('brake', 0.2, 0);
         modManager.setPercent('sudden', 0.9, 0);
         modManager.setPercent('suddenOffset', 1, 0);
         modManager.setPercent('alpha', 0.5, 0);
@@ -106,7 +104,7 @@ function postCreate() {
     add(black);
 
     video = new FlxVideoSprite(212, 121);
-    video.load(BillyVideo('open'));
+    video.load(Paths.video('open'));
     video.bitmap.onEndReached.add(video.destroy);
     video.camera = camHUD;
     video.antialiasing = true;
@@ -115,7 +113,7 @@ function postCreate() {
     add(video);
 
     MyWay = new FlxVideoSprite();
-    MyWay.load(BillyVideo('SO_STAY_FINAL'));
+    MyWay.load(Paths.video('SO_STAY_FINAL'));
     MyWay.bitmap.onEndReached.add(MyWay.destroy);
     MyWay.camera = camHUD;
     MyWay.antialiasing = true;
