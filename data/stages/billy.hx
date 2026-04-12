@@ -1,5 +1,6 @@
 import hxvlc.flixel.FlxVideoSprite;
 import flixel.text.FlxTextBorderStyle;
+import flixel.FlxCameraFollowStyle;
 import modchart.Manager;
 
 public var mirror:FlxSprite;
@@ -9,6 +10,7 @@ public var black:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 
 public var IllMake:FunkinSprite;
 public var lyrics:FlxText;
 
+var billyCam:FlxCamera = new FlxCamera();
 var notesTime:Array<Float> = [];
 var video:FlxVideoSprite;
 var bars:FlxSprite;
@@ -23,45 +25,71 @@ function BillyVideo(str:String)
     return Paths.video(str);
 
 function create() {
-    var funkinModchart:Manager = new Manager();
-    add(funkinModchart);
+    FlxG.cameras.remove(camGame, false);
+    FlxG.cameras.remove(camHUD, false);
+    FlxG.cameras.insert(billyCam, 0);
+    FlxG.cameras.insert(camGame, 1);
+    FlxG.cameras.insert(camHUD, 2, false);
 
-    var mod:String = 'Boost';
-    funkinModchart.addModifier(mod, 0);
-    funkinModchart.setPercent(mod, 2.0, 0);
-    
+    camGame.bgColor = 0x0;
+    billyCam.bgColor = 0x0;
+    billyCam.follow(camFollow, FlxCameraFollowStyle.LOCKON, 0.04);
+
+    comboGroup.visible = false;
     useCamMov = true;
-    camMoveAmt = 20;
-    for (precache in ['transLookalike', 'bf-lookalike', 'transLookalike2'])
-        precacheCharacter(0, precache);
+    camMoveAmt = 25;
+
+    for (d in ['transLookalike', 'bf-lookalike', 'transLookalike2'])
+        precacheCharacter(0, d);
 
     graphicCache.cache(BillyPath('broken_mirror'));
     mirror = new FlxSprite().loadGraphic(BillyPath('silly_mirror'));
     mirror.antialiasing = Options.antialiasing;
-    insert(1, mirror);
+    mirror.camera = billyCam;
+    add(mirror);
 
     var sprites:FunkinSprite = new FunkinSprite(0,0,BillyPath('bgAssets'));
     sprites.addAnim('idle', 'Silly_floor', 0, false);
     sprites.playAnim('idle');
     sprites.antialiasing = Options.antialiasing;
-    insert(2, sprites);
+    sprites.camera = camGame;
+    insert(1, sprites);
 
     var sprites:FunkinSprite = new FunkinSprite(0,0,BillyPath('bgAssets'));
     sprites.addAnim('idle', 'Silly_idk_1', 0, false);
     sprites.playAnim('idle');
     sprites.antialiasing = Options.antialiasing;
-    insert(3, sprites);
+    sprites.camera = camGame;
+    insert(2, sprites);
 
     var sprites:FunkinSprite = new FunkinSprite(0,0,BillyPath('bgAssets'));
     sprites.addAnim('idle', 'Silly_idk_2', 0, false);
     sprites.playAnim('idle');
     sprites.antialiasing = Options.antialiasing;
-    insert(4, sprites);
+    sprites.camera = camGame;
+    insert(3, sprites);
 }
 
+var MODCHART:Bool = true;
+
 function postCreate() {
-    remove(gf);
     importScript('songs/Silly Billy/healthbar');
+    
+    if (MODCHART) {
+        var modManager:Manager = new Manager();
+        modManager.addModifier('Transform', 0);
+        modManager.addModifier('Boost', 0);
+        add(modManager);
+
+        modManager.setPercent('x', 700, 0);
+        modManager.setPercent('y', 680, 0);
+        modManager.setPercent('z', 0.25, 0);
+        modManager.setPercent('flip', -0.25, 0);
+        modManager.setPercent('Boost', 2.0, 0);
+        modManager.setPercent('sudden', 0.9, 0);
+        modManager.setPercent('suddenOffset', 1, 0);
+        modManager.setPercent('alpha', 0.5, 0);
+    }
 
     IllMake = new FunkinSprite(1600, 1130, BillyPath('lyrics'));
     IllMake.addAnim('play', 'story_of_yourtalebilly', 24, false);
@@ -109,37 +137,27 @@ function postCreate() {
     for (i in 0...cpu.members.length) {
         var strum = cpu.members[i];
         strum.scrollFactor.set(1, 1);
+        strum.camera = billyCam;
         strum.scale.set(1, 1);
         strum.updateHitbox();
-        strum.setPosition(760 + (i * 225), downscroll ? 1150 : 400);
-        strum.alpha = 0.3;
+        if (i >= 1) strum.x += i * 95;
     }
-    remove(strumLines, false);
-    insert(3, strumLines);
-
+    
     camGame.visible = false;
-    trace(members.indexOf(strumLines));
 }
 
 function onSongStart() video.play();
 function onStrumCreation(_) _.cancelAnimation();
+function onNoteCreation(_) _.note.splash = 'billy';
 
-function onPostStrumCreation(_) if (_.player == 0) {
-    _.strum.camera = camGame;
-    _.strum.angle = downscroll ? 180 : 0;
-    _.strum.flipX = _.strum.flipY = downscroll;
-    _.strum.extraCopyFields.push("flipX");
-    _.strum.extraCopyFields.push("flipY");
-}
+function onPostStrumCreation(_) if (_.player == 0)
+    _.strum.camera = billyCam;
 
 function onPostNoteCreation(_) if (_.strumLineID == 0) {
-    _.note.updateFlipY = false;
     _.note.scale.set(1, 1);
     _.note.updateHitbox();
-    _.note.alpha = 0.3;
-    
-    remove(_.note, false);
-    insert(3, _.note);
+    _.note.scrollFactor.set(1, 1);
+
 }
 
 function onFocus() if (paused) {
@@ -159,7 +177,11 @@ function onGamePause() {
     if (MyWay != null) MyWay.pause();
 }
 
-function update() if (!paused) {
-    if (MyWay != null) MyWay.resume();
-    if (video != null) video.resume();
+function update() {
+    billyCam.zoom = FlxG.camera.zoom;
+
+    if (!paused) {
+        if (MyWay != null) MyWay.resume();
+        if (video != null) video.resume();
+    }
 }

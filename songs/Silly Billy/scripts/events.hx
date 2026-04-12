@@ -27,7 +27,6 @@ function setZoom(i:Float){
 function zoomIn(i:Float) {
     if (i == 0) defaultCamZoom = turn == 'dad' ? 0.625 : 0.5;
     else defaultCamZoom += i;
-    trace(curStep);
 }
 
 function forcedZoom(i:Float, ?lock:Bool = true) {
@@ -100,7 +99,7 @@ function stepHit() {
             changeCharacter(0, 'transLookalike');
             dad.playAnim('Smallize');
             dad.animation.callback = (Anim, Frame) -> {
-                if (Anim == 'Smallize' && Frame == 20)
+                if (Anim == 'Smallize' && Frame == 18)
                     opponentCam.y += 250;
             }
         case 1424:
