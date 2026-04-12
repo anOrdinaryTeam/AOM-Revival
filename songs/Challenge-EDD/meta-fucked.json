@@ -1,9 +1,16 @@
 {
+	"opponentModeAllowed": false,
 	"icon": "icon-edd",
 	"difficulties": [
 		"fucked"
 	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Challenge-EDD",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"vocalsSuffix": "-fucked",
 	"bpm": 186,
-	"instSuffix": "-fucked",
-	"vocalsSuffix": "-fucked"
+	"instSuffix": "-fucked"
 }

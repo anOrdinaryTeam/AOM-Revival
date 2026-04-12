@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="challengedd/boyfriend/bf-slide" flipX="true" isPlayer="true" icon="bf" color="#30B0D1">
+	<anim name="singDOWN" anim="BFSlideInDown"/>
+	<anim name="singRIGHT" anim="BFSlideInRight"/>
+	<anim name="singLEFT" anim="BFSlideInLeft"/>
+	<anim name="singUP" anim="BFSlideInUp"/>
+</character>

@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="challengedd/tord/tord" icon="icon-tord" color="#D9104A">
+	<anim name="idle" anim="TordIdle"/>
+	<anim name="singLEFT" anim="TordLeft" x="58" y="11"/>
+	<anim name="singDOWN" anim="TordDown" x="31" y="-8"/>
+	<anim name="singUP" anim="TordUp" x="-116" y="74"/>
+	<anim name="singRIGHT" anim="TordRight" x="-1" y="-8"/>
+	<anim name="haha" anim="TordHaHa" y="21" fps="12"/>
+	<anim name="TordPissed" anim="TordPissed" y="6" fps="12"/>
+	<anim name="TordRaiseThumbs" anim="TordRaiseThumbs" y="25" fps="12"/>
+	<anim name="TordButtonPress" anim="TordButtonPress" y="25" fps="12"/>
+</character>

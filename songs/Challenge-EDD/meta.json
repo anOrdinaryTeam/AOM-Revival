@@ -1,11 +1,18 @@
 {
+	"opponentModeAllowed": false,
 	"icon": "icon-edd",
 	"difficulties": [
 		"hard",
 		"fucked"
 	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Challenge-EDD",
 	"variants": [
 		"fucked"
 	],
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
 	"bpm": 186
 }

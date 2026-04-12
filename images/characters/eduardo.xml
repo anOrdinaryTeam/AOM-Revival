@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Free texture packer v0.6.7 http://free-tex-packer.com
+-->
+<TextureAtlas imagePath="eduardo.png" width="2786" height="2037">
+  <SubTexture name="EduardoDown0000" x="1" y="1"  width="366" height="639" frameX="-0" frameY="-12" frameWidth="366" frameHeight="651"/>
+  <SubTexture name="EduardoDown0002" x="369" y="1"  width="353" height="651" frameX="-7" frameY="-0" frameWidth="366" frameHeight="651"/>
+  <SubTexture name="EduardoDown0004" x="724" y="1"  width="353" height="651" frameX="-7" frameY="-0" frameWidth="366" frameHeight="651"/>
+  <SubTexture name="EduardoIdle0000" x="1079" y="1"  width="341" height="664" frameX="-0" frameY="-8" frameWidth="341" frameHeight="672"/>
+  <SubTexture name="EduardoLeft0000" x="1422" y="1"  width="341" height="664" frameX="-0" frameY="-2" frameWidth="341" frameHeight="666"/>
+  <SubTexture name="EduardoRight0000" x="1765" y="1"  width="346" height="664" frameX="-0" frameY="-2" frameWidth="346" frameHeight="666"/>
+  <SubTexture name="EduardoIdle0001" x="2113" y="1"  width="335" height="666" frameX="-3" frameY="-6" frameWidth="341" frameHeight="672"/>
+  <SubTexture name="EduardoLeft0002" x="2450" y="1"  width="335" height="666" frameX="-5" frameY="-0" frameWidth="341" frameHeight="666"/>
+  <SubTexture name="EduardoLeft0004" x="1" y="642"  width="336" height="666" frameX="-4" frameY="-0" frameWidth="341" frameHeight="666"/>
+  <SubTexture name="EduardoRight0002" x="339" y="654"  width="335" height="666" frameX="-0" frameY="-0" frameWidth="346" frameHeight="666"/>
+  <SubTexture name="EduardoRight0004" x="676" y="654"  width="335" height="666" frameX="-0" frameY="-0" frameWidth="346" frameHeight="666"/>
+  <SubTexture name="EduardoIdle0002" x="1013" y="667"  width="336" height="670" frameX="-2" frameY="-2" frameWidth="341" frameHeight="672"/>
+  <SubTexture name="EduardoWell0000" x="1351" y="667"  width="335" height="670" frameX="-0" frameY="-4" frameWidth="335" frameHeight="674"/>
+  <SubTexture name="EduardoIdle0003" x="1688" y="667"  width="335" height="672" frameX="-3" frameY="-0" frameWidth="341" frameHeight="672"/>
+  <SubTexture name="EduardoIdle0004" x="2025" y="669"  width="336" height="672" frameX="-2" frameY="-0" frameWidth="341" frameHeight="672"/>
+  <SubTexture name="EduardoIdle0005" x="2363" y="669"  width="335" height="672" frameX="-3" frameY="-0" frameWidth="341" frameHeight="672"/>
+  <SubTexture name="EduardoWell0002" x="1" y="1310"  width="335" height="673" frameX="-0" frameY="-1" frameWidth="335" frameHeight="674"/>
+  <SubTexture name="EduardoWell0003" x="338" y="1322"  width="335" height="673" frameX="-0" frameY="-1" frameWidth="335" frameHeight="674"/>
+  <SubTexture name="EduardoWell0004" x="675" y="1322"  width="335" height="673" frameX="-0" frameY="-1" frameWidth="335" frameHeight="674"/>
+  <SubTexture name="EduardoWell0005" x="1012" y="1339"  width="335" height="673" frameX="-0" frameY="-1" frameWidth="335" frameHeight="674"/>
+  <SubTexture name="EduardoWell0001" x="1349" y="1339"  width="335" height="674" frameX="-0" frameY="-0" frameWidth="335" frameHeight="674"/>
+  <SubTexture name="EduardoUp0002" x="1686" y="1341"  width="307" height="686" frameX="-0" frameY="-6" frameWidth="307" frameHeight="693"/>
+  <SubTexture name="EduardoUp0004" x="1995" y="1343"  width="307" height="686" frameX="-0" frameY="-6" frameWidth="307" frameHeight="693"/>
+  <SubTexture name="EduardoUp0000" x="2304" y="1343"  width="290" height="693" frameX="-8" frameY="-0" frameWidth="307" frameHeight="693"/>
+  <SubTexture name="EduardoDown0001" x="1" y="1"  width="366" height="639" frameX="-0" frameY="-12" frameWidth="366" frameHeight="651"/>
+  <SubTexture name="EduardoDown0003" x="369" y="1"  width="353" height="651" frameX="-7" frameY="-0" frameWidth="366" frameHeight="651"/>
+  <SubTexture name="EduardoDown0005" x="724" y="1"  width="353" height="651" frameX="-7" frameY="-0" frameWidth="366" frameHeight="651"/>
+  <SubTexture name="EduardoLeft0001" x="1422" y="1"  width="341" height="664" frameX="-0" frameY="-2" frameWidth="341" frameHeight="666"/>
+  <SubTexture name="EduardoLeft0003" x="2450" y="1"  width="335" height="666" frameX="-5" frameY="-0" frameWidth="341" frameHeight="666"/>
+  <SubTexture name="EduardoLeft0005" x="1" y="642"  width="336" height="666" frameX="-4" frameY="-0" frameWidth="341" frameHeight="666"/>
+  <SubTexture name="EduardoRight0001" x="1765" y="1"  width="346" height="664" frameX="-0" frameY="-2" frameWidth="346" frameHeight="666"/>
+  <SubTexture name="EduardoRight0003" x="339" y="654"  width="335" height="666" frameX="-0" frameY="-0" frameWidth="346" frameHeight="666"/>
+  <SubTexture name="EduardoRight0005" x="676" y="654"  width="335" height="666" frameX="-0" frameY="-0" frameWidth="346" frameHeight="666"/>
+  <SubTexture name="EduardoUp0001" x="2304" y="1343"  width="290" height="693" frameX="-8" frameY="-0" frameWidth="307" frameHeight="693"/>
+  <SubTexture name="EduardoUp0003" x="1686" y="1341"  width="307" height="686" frameX="-0" frameY="-6" frameWidth="307" frameHeight="693"/>
+  <SubTexture name="EduardoUp0005" x="1995" y="1343"  width="307" height="686" frameX="-0" frameY="-6" frameWidth="307" frameHeight="693"/>
+</TextureAtlas>

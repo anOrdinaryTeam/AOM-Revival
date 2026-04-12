@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="challengedd/edd/edd-side" camx="-306" camy="53" icon="icon-edd" color="#33AD33">
+	<anim name="idle" anim="EddSideIdle" fps="12"/>
+	<anim name="singLEFT" anim="EddSideLeft" x="5" y="3"/>
+	<anim name="singDOWN" anim="EddSideDown" x="26" y="-60"/>
+	<anim name="singUP" anim="EddSideUp" x="-19" y="38"/>
+	<anim name="singRIGHT" anim="EddSideRight" x="-9" y="-1"/>
+	<anim name="EddTurnAround" anim="EddTurnAround" x="2" y="13" fps="19"/>
+</character>
