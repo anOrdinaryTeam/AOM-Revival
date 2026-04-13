@@ -1,3 +1,4 @@
+public var edd:Character;
 function onNoteHit(_) {
     if (_.noteType == "edd note") {
         _.cancelAnim();
