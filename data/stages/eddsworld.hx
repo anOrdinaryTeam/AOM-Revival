@@ -34,3 +34,6 @@ function create() {
     var car:FlxSprite = new FlxSprite(-1175, 750, getModImage('Challenge-EDD/car'));
     insert(7, car);
 }
+
+function postCreate()
+    loadHud('VS-Online');
