@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-character>
 <character sprite="challengedd/eduardo/eduardo" camx="-194" camy="-7" icon="icon-eduardo" color="#10712B">
-	<anim name="idle" anim="EduardoIdle"/>
+	<anim name="idle" anim="EduardoIdle" fps="12"/>
 	<anim name="singLEFT" anim="EduardoLeft" x="2" y="-6"/>
 	<anim name="singDOWN" anim="EduardoDown" x="13" y="-20"/>
 	<anim name="singUP" anim="EduardoUp" x="-17" y="20"/>

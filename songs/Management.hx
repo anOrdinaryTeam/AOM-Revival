@@ -78,3 +78,13 @@ function onPlayerHit(_) {
     if (!_.note.isSustainNote) _.showSplash = !FlxG.save.data.AOM_disableSplashs;
     if (ratingPrefix != '') _.ratingPrefix = 'modCombos/$ratingPrefix/';
 }
+
+public function setObjectOrder(item:FlxBasic, pos:Int) {
+    if (item != null && pos != null) {
+        remove(item);
+        insert(pos, item);
+    }
+}
+public function getObjectOrder(item:FlxBasic) {
+    if (item != null) return members.indexOf(item);
+}
