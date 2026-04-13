@@ -16,6 +16,7 @@ function onHudLoad(hud) if (hud == 'VS-Online') {
     fuckingcomboCamera.bgColor = 0;
     FlxG.cameras.insert(fuckingcomboCamera, 1, false);
     PlayState.instance.comboGroup.x -= 130;
+    camGame.followLerp = 0.025;
 
     vsScore = new FunkinText(iconP2.x - 70, offY, 0, 'Score: 0', size);
     vsScore.antialiasing = true;
