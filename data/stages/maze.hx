@@ -3,21 +3,7 @@ var Foolhardy:Bool;
 
 function create() {
     Foolhardy = songName == 'Foolhardy';
-    camFollow.setPosition(740, 600);
-
     defaultCamZoom = Foolhardy ? 0.9 : 0.7;
-
-    // if (Foolhardy) {
-    //     gf.y += 140;
-    //     boyfriend.x += 80;
-    //     boyfriend.y += 140;
-
-    //     trace(gf.getPosition());
-    // }
-    // else {
-    //     boyfriend.x += 80;
-    //     boyfriend.y += 140;
-    // }
 
     var spr:String = Foolhardy ? 'Maze' : 'Zardy2BG';
     bg = new FunkinSprite(-600, -200, getModImage('maze/$spr'));

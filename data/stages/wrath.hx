@@ -72,7 +72,7 @@ function create() {
     defaultCamZoom = 0.525;
     defaultZoom = defaultCamZoom;
     useCamMov = true;
-    camMoveAmt = 20;
+    camMoveAmt = 30;
 
     if (backgroundLevel > 0) {
         var sky:FlxSprite = new FlxSprite(0, 0, modPath('wrath_sky'));

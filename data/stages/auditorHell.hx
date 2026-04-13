@@ -1,5 +1,3 @@
-// importScript('data/scripts/TrickyLines');
-graphicCache.cache(Paths.getPath('Assets-Tricky/images/stages/fourth/mech/Sign_Post_Mechanic.png'));
 
 var signPostCam:FlxCamera = new FlxCamera();
 var exSpikes:FunkinSprite;
@@ -7,9 +5,7 @@ var clones:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
 function create() {
     defaultCamZoom = 0.55;
-    boyfriend.y -= 160; boyfriend.x += 350;
-    dad.x -= 250; dad.y -= 365;
-	gf.x += 345; gf.y -= 25;
+    graphicCache.cache(getModImage('stages/fourth/mech/Sign_Post_Mechanic_copy'));
 
     var bg:FlxSprite = new FlxSprite(-10, -10, getModImage('stages/fourth/bg'));
     bg.antialiasing = Options.antialiasing;
@@ -113,7 +109,7 @@ function beatHit() {
 
 function doStopSign(sign:Int, fuck:Bool = false) {
 	var daSign:FunkinSprite = new FunkinSprite();
-	daSign.loadSprite(getModImage('stages/fourth/mech/Sign_Post_Mechanic'));
+	daSign.loadSprite(getModImage('stages/fourth/mech/Sign_Post_Mechanic_copy'));
 	daSign.setGraphicSize(Std.int(daSign.width * 0.67));
 	daSign.camera = signPostCam;
 

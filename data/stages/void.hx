@@ -1,13 +1,6 @@
 var bgRocks:FlxSprite;
 
 function create() {
-    if (playCutscenes) camHUD.alpha = 0;
-    defaultCamZoom = 0.55;
-    dad.x -= 200;
-    boyfriend.x += 100; boyfriend.y += 50;
-    gf.y -= 250;
-    camFollow.setPosition(700, 550);
-
     var white:FlxSprite = new FlxSprite().makeSolid(FlxG.width * 5, FlxG.height * 5, FlxColor.WHITE);
     white.screenCenter();
     white.scrollFactor.set();

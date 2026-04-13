@@ -1,10 +1,9 @@
 var in:Int = 0;
 
-static function addSprite(spr:Dynamic)
-    if (spr != null) {
-        spr.antialiasing = Options.antialiasing;
-        insert(in++, spr);
-    }
+static function addSprite(spr:Dynamic) if (spr != null) {
+    spr.antialiasing = Options.antialiasing;
+    insert(in++, spr);
+}
 
 function create() {
     usePsychSplashes = true;

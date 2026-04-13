@@ -6,9 +6,6 @@ camZooming = true;
 health = 2;
 
 function create() {
-    boyfriend.x += 300; gf.x += 100;
-    dad.x -= 300; dad.y += 50;
-
     var siniFireBehind:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
     var siniFireFront:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
@@ -17,7 +14,6 @@ function create() {
     genocideBG.scrollFactor.set(0.9, 0.9);
     addSprite(genocideBG);
 
-    // esta mamada esta muy hardcodeada en el source
     for (i in 0...2) {
         var frameShit:Array<Int> = [];
         
@@ -125,10 +121,6 @@ function screenDance() {
 
 var iconOffset:Int = 26;
 function postUpdate() {
-    /* #if desktop
-    if (!FlxG.fullscreen) screenDance();
-    #end*/
-
     var p2ToUse:Float = healthBar.x + (healthBar.width * (FlxMath.remapToRange((health / 2 * 100), 0, 100, 100, 0) * 0.01)) - (iconP2.width - iconOffset);
 	if (iconP2.x - iconP2.width / 2 < healthBar.x && iconP2.x > p2ToUse){
 		healthBarBG.offset.x = iconP2.x - p2ToUse;
@@ -152,7 +144,6 @@ function onDadHit(e) {
     camGame.shake(0.03, 0.02, null, true);
     if (health > 0.1) health -= e.note.isSustainNote ? 0.0005 : 0.042;
 }
-function onEvent(e)
-    if (e.event.name == 'Camera Movement')
-        if (e.event.params[0] == 0) FlxTween.tween(this, {defaultCamZoom: 0.65}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
-        else if (e.event.params[0] == 1) FlxTween.tween(this, {defaultCamZoom: 0.8}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
+function onEvent(e) if (e.event.name == 'Camera Movement')
+    if (e.event.params[0] == 0) FlxTween.tween(this, {defaultCamZoom: 0.65}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
+    else if (e.event.params[0] == 1) FlxTween.tween(this, {defaultCamZoom: 0.8}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});

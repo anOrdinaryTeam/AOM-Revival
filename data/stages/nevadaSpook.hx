@@ -6,9 +6,7 @@ static function modPath(str:String)
 var hank:FunkinSprite;
 
 function create() {
-    defaultCamZoom = 0.35; // 0.35
-    dad.x -= 300; dad.y -= 600;
-    gf.x += 180; boyfriend.x += 350;
+    defaultCamZoom = 0.35;
 
     var bg:FlxSprite = new FlxSprite(-1000, -1000, modPath('stages/fourth/bg'));
     bg.antialiasing = Options.antialiasing;

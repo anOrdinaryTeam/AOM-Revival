@@ -1,5 +1,3 @@
-// importScript('data/scripts/TrickyLines');
-
 static function modPath(str:String)
     return getModImage(str);
 
@@ -7,7 +5,6 @@ function create() {
     var isMadness:Bool = curSong == 'madness' ? true : false;
     var spr:String = isMadness ? 'island_but_rocks_float' : 'island_but_dumb';
     defaultCamZoom = 0.75;
-    boyfriend.x += 260;
 
     if (!isMadness) {
         var bg:FlxSprite = new FlxSprite(-405, -300, modPath('stages/red'));

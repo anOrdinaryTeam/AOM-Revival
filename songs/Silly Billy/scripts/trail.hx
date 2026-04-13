@@ -1,3 +1,5 @@
+// import flixel.addons.effects.FlxTrail;
+
 // var bfTrail:Float = 0;
 // var billyTrail:Float = 0;
 

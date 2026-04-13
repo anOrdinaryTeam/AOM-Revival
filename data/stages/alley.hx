@@ -2,6 +2,7 @@ using StringTools;
 
 function preStageLoad() if (songName.startsWith('Ballistic'))
     stageName += '-ballistic';
+
 function postCreate() {
     loadHud('KadeEngine', '1.4.2');
 

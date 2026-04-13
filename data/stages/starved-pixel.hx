@@ -112,8 +112,8 @@ function update(_) if (sonicHUD != null) {
 
 function onStrumCreation(event) {
     event.cancel();
-    var strum = event.strum;
 
+    var strum = event.strum;
     strum.loadGraphic(Paths.image('modNotes/Prey/prey-pixels'), true, 17, 17);
     strum.animation.add("static", [event.strumID]);
     strum.animation.add("pressed", [4 + event.strumID, 8 + event.strumID], 12, false);
@@ -124,9 +124,9 @@ function onStrumCreation(event) {
 
 function onNoteCreation(event) {
     event.cancel();
+
     var note = event.note;
-        
-    if (event.note.isSustainNote) {
+    if (note.isSustainNote) {
         note.loadGraphic(Paths.image('modNotes/Prey/preyEnds'), true, 7, 6);
         note.animation.add("hold", [event.strumID]);
         note.animation.add("holdend", [4 + event.strumID]);
@@ -136,11 +136,7 @@ function onNoteCreation(event) {
     }
     note.scale.set(6, 6);
     note.updateHitbox();
-}
-
-function onPostNoteCreation(event) {
-	var splashes = event.note;
-	splashes.splash = 'blood';
+	note.splashes.splash = 'blood';
 }
 
 var lyricInt:Int = 0;
