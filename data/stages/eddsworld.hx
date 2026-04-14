@@ -1,3 +1,4 @@
+public var sky:FlxSprite;
 var plane:FlxSprite;
 
 function create() {
@@ -6,10 +7,10 @@ function create() {
     graphicCache.cache(getModImage('Challenge-EDD/plane'));
 
     boyfriend.setPosition(1160, 90);
-    gf.setPosition(605, 94);
+    gf.setPosition(605, 94); gf.scrollFactor.set(1, 1);
     dad.setPosition(286, 190);
 
-    var sky:FlxSprite = new FlxSprite(-1060, -800, getModImage('Challenge-EDD/sky'));
+    sky = new FlxSprite(-1060, -800, getModImage('Challenge-EDD/sky'));
     sky.scrollFactor.set(0.2, 0.2);
     insert(1, sky);
 
@@ -30,8 +31,10 @@ function create() {
     fence.scale.set(1.5, 1.5);
     insert(5, fence);
 
-    var car:FlxSprite = new FlxSprite(-1175, 750, getModImage('Challenge-EDD/car'));
-    insert(6, car);
+    var car:FlxSprite = new FlxSprite(-1210, 855, getModImage('Challenge-EDD/car'));
+    car.scrollFactor.set(1.2, 1.2);
+    car.scale.set(1.5, 1.5);
+    add(car);
 }
 
 function stepHit() {

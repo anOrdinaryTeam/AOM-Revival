@@ -26,8 +26,15 @@ function stepHit() {
             matt.playAnim('react', true);
             tom.playAnim('surp', true);
             edd.playAnim('EddTurnAround', true, 'LOCK');
+            
+        case 928, 932, 936:
+            defaultCamZoom += 0.1;
+            sky.alpha -= 0.15;
 
         case 944:
+            defaultCamZoom = 0.65;
+            FlxTween.tween(sky, {alpha: 1}, 1);
+
             FlxTween.tween(camHUD, {alpha: 1}, 1);
 
             canMattIdle = true;
@@ -38,10 +45,8 @@ function stepHit() {
             tom.playAnim('idle', true);
             edd.playAnim('idle', true, 'DANCE');
 
-        case 1007, 1231, 1359, 1487:
-            canEdd = true;
-        case 1135, 1295, 1423, 1551:
-            canEdd = false;
+        case 1007, 1231, 1359, 1487: canEdd = true;
+        case 1135, 1295, 1423, 1551: canEdd = false;
 
         case 1599:
             FlxTween.tween(camHUD, {alpha: 0}, 1);
@@ -77,7 +82,7 @@ function beatHit() {
 
 function onNoteHit(_) {
     if (canEdd) {
-        playerCam.x = 350;
+        playerCam.x = 425;
         playerCam.y = 450;
     }
     else if (!canEdd) {
@@ -99,7 +104,7 @@ function Matt() {
     canMattIdle = false;
     canTomIdle = false;
 
-    insert(7, matt);
+    insert(9, matt);
 }
 
 function Tom() {
@@ -109,7 +114,7 @@ function Tom() {
     
     tom.addAnim('idle', 'idle', 12, false);
     tom.addAnim('look', 'tomLooking', 12, false);
-    tom.addAnim('turns', 'tomTurns', 24, false, true);
+    tom.addAnim('turns', 'tomTurns', 24, false);
     tom.addAnim('turns2', 'tomTurns', 24, false, true, [8,7,6,5,4,3,2,1]);
     tom.addAnim('surp', 'tomSurprise', 12, false);
     
@@ -133,8 +138,8 @@ function Eduardo() {
     changeCharacter(0, 'eduardo');
     dad.setPosition(-886, 50);
 
-    opponentCam.x = -150;
-    opponentCam.y = 400;
+    opponentCam.x = -620;
+    opponentCam.y = 350;
 
     edd = new Character(286, 190, "edd_side");
     insert(14, edd);
