@@ -31,7 +31,7 @@ function create() {
     insert(5, fence);
 
     var car:FlxSprite = new FlxSprite(-1175, 750, getModImage('Challenge-EDD/car'));
-    insert(5, car);
+    insert(6, car);
 }
 
 function stepHit() {
