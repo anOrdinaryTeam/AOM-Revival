@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="-700" y="-300" sprite="accelerant/tricky" icon="hank" color="#16162C" applyStageMatrix="true">
+<character x="-700" y="-300" scale="0.75" sprite="accelerant/tricky" icon="hank" color="#16162C" applyStageMatrix="true">
 	<anim name="idle" anim="trickyidle"/>
 	<anim name="singUP" anim="trickyup"/>
 	<anim name="singLEFT" anim="trickyileft"/>

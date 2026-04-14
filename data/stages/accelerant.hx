@@ -3,8 +3,10 @@ public var deimos:FunkinSprite;
 public var helicopter:FunkinSprite;
 
 public var boombox:FunkinSprite;
-public var gfArmsUp:Character = new Character(335, 275, 'gfArmsUp');
 public var gfHotdog:FunkinSprite;
+
+public var gfArmsUp:Character = new Character(335, 275, 'gfArmsUp');
+public var tricky:Character = new Character(110, -330, 'tricky-acc');
 
 function BG(str:String) return getModImage('Accelerant/$str');
 using StringTools;
@@ -101,13 +103,17 @@ function create() {
     boombox = new FunkinSprite(185, 265).loadSprite(BG('stereo'));
     boombox.antialiasing = Options.antialiasing;
     boombox.addAnim('boom', 'stereo boom', 24, false);
-    boombox.alpha = 0.001;
+    // boombox.alpha = 0.001;
     addSprite(boombox);
 
     gfArmsUp.danceOnBeat = false;
     gfArmsUp.alpha = 0.001;
     gfArmsUp.antialiasing = Options.antialiasing;
     addSprite(gfArmsUp);
+
+    gf.alpha = 0;
+    tricky.antialiasing = Options.antialiasing;
+    addSprite(tricky);
 
     var foreground:FlxSprite = new FlxSprite().loadGraphic(BG('foreground'));
     foreground.antialiasing = Options.antialiasing;
@@ -134,4 +140,9 @@ function beatHit() {
 
     if (deimos.animation.curAnim.name == 'idle')
         deimos.playAnim('idle');
+}
+
+function onDadHit(e) if (e.noteType == 'GF Sing') {
+    e.animCancelled = true;
+    tricky.playSingAnim(e.direction);
 }

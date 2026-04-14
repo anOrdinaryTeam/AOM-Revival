@@ -1,4 +1,8 @@
 {
 	"icon": "hank",
+	"difficulties": [
+		"hard",
+		"fucked"
+	],
 	"bpm": 164
 }
