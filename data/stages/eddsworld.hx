@@ -1,3 +1,5 @@
+var plane:FlxSprite;
+
 function create() {
     defaultCamZoom = 0.65;
 
@@ -13,7 +15,7 @@ function create() {
     clouds.scrollFactor.set(0.15, 0.15);
     insert(2, clouds);
 
-    var plane:FlxSprite = new FlxSprite(900, 0, getModImage('Challenge-EDD/plane'));
+    plane = new FlxSprite(1100, 0, getModImage('Challenge-EDD/plane'));
     plane.scrollFactor.set(0.2, 0.2);
     plane.scale.set(1.5, 1.5);
     insert(3, plane);
@@ -35,5 +37,15 @@ function create() {
     insert(7, car);
 }
 
-function postCreate()
+function postCreate() {
     loadHud('VS-Online');
+}
+
+function stepHit() {
+    switch(curStep) {
+        case 380:
+            FlxTween.tween(plane, {x: 1900}, 10, {onComplete: function() {
+                remove(plane);
+            }});
+    }
+}

@@ -7,8 +7,7 @@ public var canTomIdle:Bool = false;
 function create() {
     graphicCache.cache(getModImage('Challenge-EDD/matt'));
 
-    if (curDiff == 'hard') { importScript('songs/Challenge-EDD/scripts/who_i_choose/hard.hx'); }
-    else { importScript('songs/Challenge-EDD/scripts/who_i_choose/fucked.hx'); }
+    if (curDiff == 'hard') { importScript('songs/Challenge-EDD/scripts/who_i_choose/$curDiff.hx'); }
 }
 
 function stepHit() {
@@ -18,7 +17,7 @@ function stepHit() {
 }
 
 function beatHit() {
-    if (Std.isOfType(matt, FunkinSprite) && canMattIdle) {
+    if (canMattIdle) {
         matt.playAnim('idle');
     }
 }
