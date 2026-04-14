@@ -11,17 +11,18 @@ function create() {
     boyfriend.setPosition(770, 100);
     dad.setPosition(400, 130);
     
-    var bg:FlxSprite = new FlxSprite().makeSolid(FlxG.width * 10, FlxG.height * 10, 0xFFFFFFFF);
+    var bg:FlxSprite = new FlxSprite().makeSolid(FlxG.width * 3, FlxG.height * 3, 0xFFFFFFFF);
     bg.setPosition(-1400,-700);
     insert(0, bg);
 
-    var upline:FlxSprite = new FlxSprite().makeSolid(FlxG.width * 10, FlxG.height, 0xFF000000);
-    // upline.setPosition(-1400,-750);
+    var upline:FlxSprite = new FlxSprite().makeSolid(FlxG.width*2 , 60, 0xFF000000);
+    //upline.setPosition(-1400,-750);
     upline.camera = camHUD;
     insert(1, upline);
 
-    var downline:FlxSprite = new FlxSprite().makeSolid(FlxG.width * 10, FlxG.height, 0xFF000000);
-    // downline.setPosition(-1400,832.5);
+    var downline:FlxSprite = new FlxSprite().makeSolid(FlxG.width*2, 70, 0xFF000000);
+    //downline.setPosition(-1400,832.5);
+    downline.setPosition(0,658);
     downline.camera = camHUD;
     insert(1, downline);
     
