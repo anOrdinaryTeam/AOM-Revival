@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="foreground.png">
+	<SubTexture name="rock" x="0" y="215" width="287" height="180" frameWidth="2300" frameHeight="305"/>
+	<SubTexture name="shop" x="1598" y="0" width="702" height="395" frameWidth="2300" frameHeight="305"/>
+</TextureAtlas>

@@ -8,7 +8,7 @@ var scoreTxt:FunkinText;
 var difficultyTxt:FunkinText;
 
 var curSelected:Int = 0;
-var curDiff:Int = 0;
+var curDiff:Int = 1;
 var allowInput:Bool = true;
 
 function create() {
@@ -45,10 +45,13 @@ function create() {
         grpIcons.add(icon);
     }
 
-    if (lastModSelected_Str == currentMod)
+    if (lastModSelected_Str == currentMod) {
         curSelected = lastSongSelected;
+        curDiff = lastDiffSelected;
+    }
     else {
         lastSongSelected = 0;
+        lastDiffSelected = 0;
         lastModSelected_Str = currentMod;
     }
 
@@ -90,6 +93,7 @@ function updateDifficulties(i:Int = 0) {
     var curSongDiffs:Array<String> = songsList[curSelected].difficulties.copy();
 
     curDiff = FlxMath.wrap(curDiff + i, 0, curSongDiffs.length - 1);
+    lastDiffSelected = curDiff;
     difficultyTxt.text = '[${curSongDiffs[curDiff].toUpperCase()}]';
 }
 
