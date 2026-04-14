@@ -1,4 +1,14 @@
 {
+	"opponentModeAllowed": false,
 	"icon": "xgaster",
-	"bpm": 164
+	"difficulties": [
+		"rush"
+	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "rush",
+	"beatsPerMeasure": 4,
+	"needsVoices": false,
+	"bpm": 140
 }

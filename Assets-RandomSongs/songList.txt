@@ -1,12 +1,13 @@
 Silly Billy:billy
+Prey:furnace
+Phantasm:fleetway
+Sink:sink
+rush:rushblaze
+Accelerant:hank
+Challenge-EDD:icon-edd
 Corruptro:corruptro
 Defeat:black
-Sink:sink
 Megalo Strike Back:chara
 Treacherous Thorns:senpai-emtpy
 Epiphany:bigmonika
-Prey:furnace
-Phantasm:fleetway
 Summit:red
-Accelerant:hank
-Challenge-EDD:icon-edd

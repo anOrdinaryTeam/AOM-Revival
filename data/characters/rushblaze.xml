@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="blaze" color="#DBC6EE" holdTime="6.6">
+	<anim name="idle" anim="Blaze Idle" x="-305" y="150"/>
+	<anim name="singDOWN" anim="Blaze Down" x="-390" y="80"/>
+	<anim name="singRIGHT" anim="Blaze Right" x="-438" y="123"/>
+	<anim name="singLEFT" anim="Blaze Left" x="-145" y="104"/>
+	<anim name="singUP" anim="Blaze Up" x="-293" y="201"/>
+	<anim name="Blaze yeah" anim="Blaze yeah" x="-490" y="60"/>
+</character>
