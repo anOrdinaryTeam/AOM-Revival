@@ -59,7 +59,6 @@ function beatHit() {
             }
             else { tom.playAnim('idle'); }
         }
-
         else if (curCameraTarget == 0) {
             if (canTom) {
                 tom.playAnim('turns');
