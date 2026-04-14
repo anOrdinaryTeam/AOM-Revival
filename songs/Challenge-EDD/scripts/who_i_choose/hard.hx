@@ -7,8 +7,7 @@ var canEdd:Bool = false;
 var canTom:Bool = true;
 
 function create() {
-    for (h in ['matt-eduardo', 'tom', 'Mark', 'Jon', 'EduardoPunch'])
-        { graphicCache.cache(getModImage('Challenge-EDD/hard/' + h)); }
+    for (h in ['matt-eduardo', 'tom', 'Mark', 'Jon', 'EduardoPunch']) { graphicCache.cache(getModImage('Challenge-EDD/hard/' + h)); }
     precacheCharacter(0, 'eduardo');
 }
 
@@ -35,8 +34,6 @@ function stepHit() {
             defaultCamZoom = 0.65;
             FlxTween.tween(sky, {alpha: 1}, 1);
 
-            FlxTween.tween(camHUD, {alpha: 1}, 1);
-
             canMattIdle = true;
             canTomIdle = true;
 
@@ -48,9 +45,7 @@ function stepHit() {
         case 1007, 1231, 1359, 1487: canEdd = true;
         case 1135, 1295, 1423, 1551: canEdd = false;
 
-        case 1599:
-            FlxTween.tween(camHUD, {alpha: 0}, 1);
-            Dudes(true);
+        case 1599: Dudes(true);
     }
 
 }

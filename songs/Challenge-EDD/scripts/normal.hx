@@ -1,6 +1,6 @@
-public var door:FunkinSprite;
 public var matt:FunkinSprite;
 public var tom:FunkinSprite;
+var door:FunkinSprite;
 
 public var canMattIdle:Bool = false;
 public var canTomIdle:Bool = false;
@@ -15,9 +15,7 @@ function create() {
 function stepHit() {
     switch(curStep) {
         case 271: Matt();
-
-        case 416:
-            if (curDiff == 'hard') Door();
+        case 416: if (curDiff == 'hard') Door();
     }
 }
 
