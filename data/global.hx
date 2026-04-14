@@ -4,7 +4,7 @@ import funkin.backend.utils.NativeAPI;
 import hxvlc.util.Handle;
 import Sys;
 
-var saveMap:Map<String, Dynamic> = [];
+static var saveMap:Map<String, Dynamic> = [];
 static var loadedSaveData:Bool = false;
 static var changed:Bool = false;
 
@@ -54,6 +54,55 @@ function preStateSwitch() {
         LoadSaveData();
 }
 
+static function RefreshSaveDatas() {
+    // [ GENERAL ]
+    if (saveMap.get('FlashingLights') != FlxG.save.data.AOM_flashingLights)
+        saveMap.set('FlashingLights', FlxG.save.data.AOM_flashingLights);
+
+    if (saveMap.get('allowCustomHud') != FlxG.save.data.AOM_engineHUD)
+        saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
+    // [ END ]
+
+
+    // [ PSYCH DATA ]
+    if (saveMap.get('Psych_HideHud') != FlxG.save.data.AOM_psych_HIDEHUD)
+        saveMap.set('Psych_HideHud', FlxG.save.data.AOM_psych_HIDEHUD);
+
+    if (saveMap.get('Psych_BopScore') != FlxG.save.data.AOM_psych_TWEEN_SCORETXT_ONHIT)
+        saveMap.set('Psych_BopScore', FlxG.save.data.AOM_psych_TWEEN_SCORETXT_ONHIT);
+
+    if (saveMap.get('Psych_HudOpacity') != FlxG.save.data.AOM_psych_HEALTHBAR_OPACITY)
+        saveMap.set('Psych_HudOpacity', FlxG.save.data.AOM_psych_HEALTHBAR_OPACITY);
+
+    if (saveMap.get('Psych_TimeBarType') != FlxG.save.data.AOM_psych_TIMEBAR_TYPE)
+        saveMap.set('Psych_TimeBarType', FlxG.save.data.AOM_psych_TIMEBAR_TYPE);
+    
+    if (saveMap.get('Psych_SmoothTimeBar') != FlxG.save.data.AOM_psych_SMOOTH_TIMEBAR)
+        saveMap.set('Psych_SmoothTimeBar', FlxG.save.data.AOM_psych_SMOOTH_TIMEBAR);
+    // [ END ]
+
+
+    // [ KADE DATA ]
+    if (saveMap.get('Kade_Timebar') != FlxG.save.data.AOM_kade_TIMEBAR)
+        saveMap.set('Kade_Timebar', FlxG.save.data.AOM_kade_TIMEBAR);
+
+    if (saveMap.get('Kade_Watermark') != FlxG.save.data.AOM_kade_WATERMARK)
+        saveMap.set('Kade_Watermark', FlxG.save.data.AOM_kade_WATERMARK);
+
+    if (saveMap.get('Kade_WatermarkType') != FlxG.save.data.AOM_kade_WATERMARK_engine)
+        saveMap.set('Kade_WatermarkType', FlxG.save.data.AOM_kade_WATERMARK_engine);
+
+    if (saveMap.get('Kade_MissesType') != FlxG.save.data.AOM_kade_MISSES_TYPE)
+        saveMap.set('Kade_MissesType', FlxG.save.data.AOM_kade_MISSES_TYPE);
+
+    if (saveMap.get('Kade_Ratings') != FlxG.save.data.AOM_kade_RATINGS)
+        saveMap.set('Kade_Ratings', FlxG.save.data.AOM_kade_RATINGS);
+
+    if (saveMap.get('Kade_RatingType') != FlxG.save.data.AOM_kade_RATINGS_TYPE)
+        saveMap.set('Kade_RatingType', FlxG.save.data.AOM_kade_RATINGS_TYPE);
+    // [ END ]
+}
+
 static function LoadSaveData() {
     // [ GENERAL ]
     FlxG.save.data.AOM_flashingLights ??= true;
@@ -82,7 +131,7 @@ static function LoadSaveData() {
     // [ END ]
 
 
-    // [ KADE SAVE DATA ]
+    // [ KADE DATA ]
     FlxG.save.data.AOM_kade_TIMEBAR ??= true;
     saveMap.set('Kade_Timebar', FlxG.save.data.AOM_kade_TIMEBAR);
 
@@ -104,25 +153,10 @@ static function LoadSaveData() {
 }
 
 public static function getSaveData(var:String):Dynamic
-    if (saveMap.get('$var') != null) return saveMap.get('$var');
-
-public static function ReloadSaveData() {
-    saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
-    saveMap.set('FlashingLights', FlxG.save.data.AOM_flashingLights);
-
-    saveMap.set('Psych_HideHud', FlxG.save.data.AOM_psych_HIDEHUD);
-    saveMap.set('Psych_BopScore', FlxG.save.data.AOM_psych_TWEEN_SCORETXT_ONHIT);
-    saveMap.set('Psych_HudOpacity', FlxG.save.data.AOM_psych_HEALTHBAR_OPACITY);
-    saveMap.set('Psych_TimeBarType', FlxG.save.data.AOM_psych_TIMEBAR_TYPE);
-    saveMap.set('Psych_SmoothTimeBar', FlxG.save.data.AOM_psych_SMOOTH_TIMEBAR);
-    saveMap.set('Psych_SmoothTimeBar', FlxG.save.data.AOM_psych_SMOOTH_TIMEBAR);
-
-    saveMap.set('Kade_Watermark', FlxG.save.data.AOM_kade_WATERMARK);
-    saveMap.set('Kade_WatermarkType', FlxG.save.data.AOM_kade_WATERMARK_engine);
-    saveMap.set('Kade_MissesType', FlxG.save.data.AOM_kade_MISSES_TYPE);
-    saveMap.set('Kade_Ratings', FlxG.save.data.AOM_kade_RATINGS);
-    saveMap.set('Kade_RatingType', FlxG.save.data.AOM_kade_RATINGS_TYPE);
-}
+    if (saveMap.get('$var') != null)
+        return saveMap.get('$var');
+    else
+        trace('"$var" Doesnt exists');
 
 public static function changeToDefaultRPC(_state:String) {
     DiscordUtil.changePresenceAdvanced({
