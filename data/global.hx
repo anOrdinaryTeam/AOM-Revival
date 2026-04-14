@@ -54,7 +54,7 @@ function preStateSwitch() {
         LoadSaveData();
 }
 
-static function RefreshSaveDatas() {
+public static function RefreshSaveDatas() {
     // [ GENERAL ]
     if (saveMap.get('FlashingLights') != FlxG.save.data.AOM_flashingLights)
         saveMap.set('FlashingLights', FlxG.save.data.AOM_flashingLights);
