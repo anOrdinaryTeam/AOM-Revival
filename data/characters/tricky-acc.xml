@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="-700" y="-300" sprite="accelerant/tricky" icon="hank" color="#16162C" applyStageMatrix="true">
+	<anim name="idle" anim="trickyidle"/>
+	<anim name="singUP" anim="trickyup"/>
+	<anim name="singLEFT" anim="trickyileft"/>
+	<anim name="singRIGHT" anim="trickyright"/>
+	<anim name="singDOWN" anim="trickydwon"/>
+	<anim name="turn" anim="trickyturning"/>
+	<anim name="entrace" anim="trickyentrance" x="-617" y="-65"/>
+	<anim name="scream" anim="trickyentrance" x="-617" y="-65" indices="10..34"/>
+	<anim name="getShot" anim="tikygetsshot" x="-1068" y="-415" loop="true"/>
+</character>

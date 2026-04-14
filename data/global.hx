@@ -1,9 +1,8 @@
-import funkin.backend.utils.NativeAPI;
-import Sys;
-
 import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.DiscordUtil;
+import funkin.backend.utils.NativeAPI;
 import hxvlc.util.Handle;
+import Sys;
 
 var saveMap:Map<String, Dynamic> = [];
 static var loadedSaveData:Bool = false;
@@ -23,8 +22,8 @@ public static var ACCESS_TO_CHARTER_EDITOR:Bool = true;
 using StringTools;
 
 function new() {
-    currentModsList = loadModFolders();
     Handle.init([]);
+    currentModsList = loadModFolders();
     trace('Loaded Mod List: $currentModsList');
 
     if (!Assets.exists(Paths.image('DO_NOT_DELETE', null, false, 'png'))) {

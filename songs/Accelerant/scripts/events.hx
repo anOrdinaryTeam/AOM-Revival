@@ -8,7 +8,6 @@ function stepHit() switch(curStep) {
         opponentCam.x -= 80;
         opponentCam.y += 20;
     case 31:
-        // defaultCamZoom = 0.7;
         FlxTween.tween(FlxG.camera, {zoom: 0.7}, 0.15, {onComplete: () -> defaultCamZoom = 0.7});
         opponentCam.x += 80;
         opponentCam.y -= 20;
@@ -27,7 +26,7 @@ function stepHit() switch(curStep) {
         });
 
         new FlxTimer().start(0.9, () -> {
-            FlxTween.tween(opponentCam, {y: opponentCam.y + 30}, 0.6);
-            FlxTween.tween(playerCam, {y: playerCam.y + 30}, 0.6);
+            FlxTween.tween(opponentCam, {y: opponentCam.y + 30}, 0.8);
+            FlxTween.tween(playerCam, {y: playerCam.y + 30}, 0.8);
         });
 }

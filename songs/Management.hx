@@ -56,9 +56,6 @@ function follow(offsets:Array<Float>) {
     camFollow.y += offsets[1];
 }
 
-// function update() if (ACCESS_TO_CHARTER_EDITOR && controls.DEV_ACCESS)
-//     FlxG.switchState(new Charter(songName, curDiff, null, false));
-
 function postUpdate() if (useCamMov) switch(strumLines.members[curCameraTarget].characters[0].animation.curAnim.name) {
     case "singLEFT", "singLEFT-alt": follow([-camMoveAmt, 0]);
     case "singDOWN", "singDOWN-alt": follow([0, camMoveAmt]);
