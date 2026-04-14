@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="blaze" color="#DBC6EE" holdTime="6.6">
+<character x="-900" y="-110" sprite="blaze" camx="305" camy="-150" icon="rushblaze" color="#DBC6EE" holdTime="6.6">
 	<anim name="idle" anim="Blaze Idle" x="-305" y="150"/>
 	<anim name="singDOWN" anim="Blaze Down" x="-390" y="80"/>
 	<anim name="singRIGHT" anim="Blaze Right" x="-438" y="123"/>
