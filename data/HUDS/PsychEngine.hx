@@ -24,7 +24,8 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
     for (i in [healthBar, healthBarBG, iconP1, iconP2])
         i.alpha = Settings["opacity"];
 
-    var score:FlxText = new FlxText(0, healthBarBG.y - 56, FlxG.width, 'Score: 0 | Misses: 0 | Rating: ?', 20);
+    var offsetY:Float = downscroll ? healthBarBG.y - 56 : healthBarBG.y + 35;
+    var score:FlxText = new FlxText(0, offsetY, FlxG.width, 'Score: 0 | Misses: 0 | Rating: ?', 20);
     score.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     score.scrollFactor.set();
 	score.borderSize = 1.25;
