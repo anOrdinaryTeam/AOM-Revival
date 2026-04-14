@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="accelerant/gfArms" icon="gf" color="#A5004D" applyStageMatrix="true" isGF="true">
+	<anim name="danceLeft" anim="GF Dancing Beat HandsRaised" indices="0..14"/>
+	<anim name="danceRight" anim="GF Dancing Beat HandsRaised" indices="15..30"/>
+	<anim name="upArms" anim="She raisesherhands"/>
+</character>
