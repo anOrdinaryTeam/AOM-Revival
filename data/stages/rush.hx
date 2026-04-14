@@ -26,4 +26,6 @@ function create() {
     downline.camera = camHUD;
     insert(1, downline);
     
+    // ruhs - Fred
+
 }
