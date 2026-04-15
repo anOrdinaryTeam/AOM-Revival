@@ -43,6 +43,5 @@ public function setManualPath(song:String) currentMod = switch(song) {
     case 'My Battle' | 'Last Chance' | 'Genocide': 'Tabi';
     case 'Lo-Fight' | 'Overhead' | 'Ballistic' | 'Ballistic-OLD': 'Whitty';
     case 'Overwrite' | 'Inking Mistake' | 'Relighted': 'xEvent';
-    case 'Foolhardy' | 'Bushwhack': 'Zardy';
     default: 'RandomSongs';
 }
