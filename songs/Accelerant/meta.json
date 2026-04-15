@@ -2,7 +2,8 @@
 	"icon": "hank",
 	"difficulties": [
 		"hard",
-		"fucked"
+		"fucked",
+		"hard-new"
 	],
 	"bpm": 164
 }

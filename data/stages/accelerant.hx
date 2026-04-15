@@ -131,7 +131,6 @@ function create() {
 function postCreate()
     loadHud('VS-Online');
 
-var danceLeft:Bool = true;
 function beatHit() {
     boombox.playAnim('boom');
 
