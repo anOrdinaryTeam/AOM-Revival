@@ -1,3 +1,4 @@
+var tordMecha:FunkinSprite;
 var mattTord:FunkinSprite;
 var eddTord:FunkinSprite;
 var bfTord:FunkinSprite;
@@ -31,14 +32,21 @@ function stepHit() {
 function tordEntrance() {
     remove(matt);
     remove(gf);
-    insert(7, gf);
+    insert(6, gf);
 
     for (t in [boyfriend, dad])
         t.alpha = 0;
 
-    // FlxTween.tween(camGame.scroll, {y: -950}, 6, {ease: FlxEase.sineInOut});
-    // FlxTween.tween(sky, {y: sky.y + 295}, 6, {ease: FlxEase.sineInOut});
-    // FlxTween.tween(camera, {zoom: 2}, 1.2, {ease: FlxEase.quadOut});
+    tordMecha = new FunkinSprite(595, -710).loadSprite(getModImage('Challenge-EDD/fucked/tordBot'));
+    tordMecha.antialiasing = true;
+    tordMecha.scale.set(1.5, 1.5);
+
+    tordMecha.addAnim('idle', 'mattReactionTord', 12, true);
+    tordMecha.addAnim('harp', 'TordBotHarpoonIdle', 12, true);
+    tordMecha.addAnim('blow', 'TordBotBlowingUp', 12, false);
+    
+    tordMecha.playAnim('dafuk');
+    insert(4, tordMecha);
 
     mattTord = new FunkinSprite(115, 240).loadSprite(getModImage('Challenge-EDD/fucked/matt-tord'));
     mattTord.antialiasing = true;
