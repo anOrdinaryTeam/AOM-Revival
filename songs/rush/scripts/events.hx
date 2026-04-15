@@ -1,15 +1,3 @@
-function stepHit()
-
-    switch(curStep){
-
-        case 513, 577, 768:
-            boyfriend.playAnim("Sonic Yeah", true);
-
-        case 517, 581, 768:
-            dad.playAnim("Blaze yeah", true);
-
-    }
-
 function create() {
 
     var upline:FlxSprite = new FlxSprite().makeSolid(FlxG.width*2 , 60, 0xFF000000);
@@ -24,3 +12,15 @@ function create() {
     insert(1, downline);
 
 }
+
+function stepHit()
+
+    switch(curStep){
+
+        case 513, 577, 768:
+            boyfriend.playAnim("Sonic Yeah", true);
+
+        case 517, 581, 768:
+            dad.playAnim("Blaze yeah", true);
+
+    }

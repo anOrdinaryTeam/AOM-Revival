@@ -1,17 +1,17 @@
-function onCharsLoaded() {
+// function onCharsLoaded() {
 
-    var rushsonic:Character = charactersMenu.members[0];
+//     var rushsonic:Character = charactersMenu.members[0];
 
-    for (char in [rushsonic]) {
-        char.animation.callback = (Anim) -> {
-            if (Anim == 'Sonic Yeah') char.danceOnBeat = false;
-        }
-        char.animation.finishCallback = (Anim) -> {
-            if (Anim == 'Sonic Yeah') char.danceOnBeat = true;
-        }
-    }
+//     for (char in [rushsonic]) {
+//         char.animation.callback = (Anim) -> {
+//             if (Anim == 'Sonic Yeah') char.danceOnBeat = false;
+//         }
+//         char.animation.finishCallback = (Anim) -> {
+//             if (Anim == 'Sonic Yeah') char.danceOnBeat = true;
+//         }
+//     }
 
-}
+// }
 
 function postUpdate() {
 
@@ -19,8 +19,13 @@ function postUpdate() {
 
     if (CoolUtil.mouseOverlaps(rushsonic) && FlxG.mouse.justPressed) {
 
+        danceOnBeat = false;
+        FlxG.sound.play(Paths.sound('menusounds/sonicyeah'));
+
         rushsonic.playAnim("Sonic Yeah", true);
-        FlxG.sound.play(Paths.sound('menusounds/sonicyeah'), volume = 1);
+        rushsonic.animation.finishCallback = function(name:String) {
+            if (name == 'Sonic Yeah') danceOnBeat = false;
+        }
 
     }
 }
