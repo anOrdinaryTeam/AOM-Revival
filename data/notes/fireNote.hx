@@ -9,7 +9,7 @@ function onNoteCreation(_) if (_.noteType == 'fireNote') {
 }
 
 function onPostNoteCreation(_) if (_.noteType == 'fireNote')
-    _.note.offset.y -= 190;
+    _.note.offset.y = 40;
 
 function onPlayerHit(_) if (_.noteType == 'fireNote') {
     _.healthGain -= 0.45;

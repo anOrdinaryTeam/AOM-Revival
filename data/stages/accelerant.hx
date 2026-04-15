@@ -140,8 +140,3 @@ function beatHit() {
     if (deimos.animation.curAnim.name == 'idle')
         deimos.playAnim('idle');
 }
-
-function onDadHit(e) if (e.noteType == 'GF Sing') {
-    e.animCancelled = true;
-    tricky.playSingAnim(e.direction);
-}

@@ -15,6 +15,7 @@ function onPlayerHit(e) if (e.noteType == t) {
     playModSound('bullet');
     boyfriend.playAnim('dodge', true);
     dad.playSingAnim(e.direction, '-shoot');
+    camGame.shake(0.01, 0.1);
 }
 
 function onDadHit(e)
