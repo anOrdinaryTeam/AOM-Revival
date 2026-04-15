@@ -36,11 +36,9 @@ function stepHit()
 
         case 513, 577:
             boyfriend.playAnim("Sonic Yeah",true);
-            break;
 
         case 517, 581:
             opponent.playAnim("Blaze yeah",true);
             dad.playAnim("Blaze yeah",true);
-            break;
 
     }
