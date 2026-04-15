@@ -16,7 +16,6 @@ using StringTools;
 
 function create() {
     defaultCamZoom = 0.7;
-    precacheGrunts();
 
     var bg:FlxSprite = new FlxSprite().loadGraphic(BG('bg'));
     bg.antialiasing = Options.antialiasing;
@@ -154,45 +153,10 @@ function beatHit() {
     //     spawnGrunts();
 }
 
-//TODO: To be refactored/redo
-function spawnGrunts() {
-    var amountToSpawn:Int = FlxG.random.int(1, 2);
-    var excludedGrunts:Array<Int> = [];
-    var excludedPositions:Array<Int> = [];
+function loadGrunts() {
+    var grunt:FunkinSprite = new FunkinSprite().loadSprite(BG('grunts/1'));
+    grunt.antialiasing = Options.antialiasing;
+    grunt.addAnim('idle', 'gruntclimbanddie', 24, false);
 
-    var anims:Array<String> = ['gruntclimbanddie', 'agentclimbanddie', 'engclimbanddie'];
-    var positions:Array<Dynamic> = [
-        [200, 300],
-        [500, 300],
-        [800, 300]
-    ];
 
-    for (i in 0...amountToSpawn) {
-        var arrRandom:Int = FlxG.random.int(0, 2, excludedPositions);
-        var gruntType:Int = FlxG.random.int(1, 3, excludedGrunts);
-
-        var position:Array<Dynamic> = positions[arrRandom].copy();
-        var grunt:FunkinSprite = new FunkinSprite(position[0], position[1]);
-        grunt.loadSprite(BG('grunts/$gruntType'));
-        grunt.addAnim('spawn', anims[gruntType], 24, false);
-        grunt.antialiasing = Options.antialiasing;
-        gruntsLayer.add(grunt);
-
-        grunt.playAnim('spawn');
-        grunt.animation.finishCallback = () -> gruntsLayer.remove(grunt);
-
-        excludedPositions.push(arrRandom);
-        excludedGrunts.push(gruntType);
-    }
-
-    new FlxTimer().start(0.5, () -> {
-        deimos.playAnim('shoot', true);
-        sanford.playAnim('shoot', true);
-    });
-}
-
-function precacheGrunts() {
-    // graphicCache.cache(BG('grunts/1/spritemap1'));
-    // graphicCache.cache(BG('grunts/2/spritemap1'));
-    // graphicCache.cache(BG('grunts/3/spritemap1'));
 }

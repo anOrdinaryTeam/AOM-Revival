@@ -37,9 +37,11 @@ public static function getModSongList(mod:String):Dynamic
 
 // preventive
 public function setManualPath(song:String) currentMod = switch(song) {
-    case 'Wife Forever' | 'Sky' | 'Manifest': 'Sky';
-    case 'Foolhardy' | 'Bushwhack': 'Zardy';
     case 'Screenplay' | 'Parasite' | 'A.G.O.T.I': 'Agoti';
+    case 'Dream Of Peace' | 'Diagraphephobia' | 'Post Mortal' | 'Plaything' | 'System Failure': 'Eteled';
+    case 'Wife Forever' | 'Sky' | 'Manifest': 'Sky';
+    case 'My Battle' | 'Last Chance' | 'Genocide': 'Tabi';
+    case 'Lo-Fight' | 'Overhead' | 'Ballistic' | 'Ballistic-OLD': 'Whitty';
     case 'Overwrite' | 'Inking Mistake' | 'Relighted': 'xEvent';
-    default: 'RS';
+    default: 'RandomSongs';
 }

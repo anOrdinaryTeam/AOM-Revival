@@ -1,5 +1,6 @@
 #pragma header
 
+uniform bool ENABLE;
 uniform float AMT;
 uniform float SPEED;
 uniform float iTime;
@@ -22,6 +23,7 @@ void main()
 {
     vec2 pixelSize = openfl_TextureSize.xy / pix;
     vec2 uv = floor(openfl_TextureCoordv.xy * pixelSize) / pixelSize;
+    vec4 def = texture2D(bitmap, openfl_TextureCoordv);
 
     float time=floor(iTime*SPEED);
     vec4 outCol=flixel_texture2D(bitmap,uv);
@@ -84,6 +86,5 @@ void main()
         rgbP = vec3(C, 0., X);
     }
 
-    gl_FragColor = vec4(rgbP.x + m, rgbP.y + m, rgbP.z + m, outCol.a);
-
+    gl_FragColor = ENABLE ? vec4(rgbP.x + m, rgbP.y + m, rgbP.z + m, outCol.a) : def;
 }

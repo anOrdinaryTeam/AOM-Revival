@@ -138,14 +138,8 @@ function stepHit() {
             lockZoom = false;
             dad.visible = true;
             IllMake.visible = false;
-
-            var filter:CustomShader = new CustomShader('blue');
-            filter.hue = 1.3;
-            filter.pix = 0.00001;
             
-            billyCam.addShader(filter);
-            camGame.addShader(filter);
-            camHUD.addShader(filter);
+            filter.ENABLE = true;
 
         case 3368, 3400, 3432, 3478, 3484, 3528, 3561, 3568, 3592, 3623, 3632,
             3696, 3752, 3872: MyWayEvents('txt');

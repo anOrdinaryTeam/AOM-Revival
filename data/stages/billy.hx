@@ -11,6 +11,8 @@ public var IllMake:FunkinSprite;
 public var lyrics:FlxText;
 
 public var billyCam:FlxCamera = new FlxCamera();
+public var filter:CustomShader = new CustomShader('blue');
+
 var notesTime:Array<Float> = [];
 var video:FlxVideoSprite;
 var bars:FlxSprite;
@@ -31,6 +33,12 @@ function create() {
     camGame.bgColor = 0x0;
     billyCam.bgColor = 0x0;
     billyCam.follow(camFollow, FlxCameraFollowStyle.LOCKON, 0.04);
+
+    filter.ENABLE = false;
+    filter.hue = 1.3;
+    filter.pix = 0.00001;
+    for (cams in [billyCam, camGame, camHUD])
+        cams.addShader(filter);
 
     comboGroup.visible = false;
     useCamMov = true;

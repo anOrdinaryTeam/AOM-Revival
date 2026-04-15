@@ -3,7 +3,6 @@ var door:FunkinSprite;
 
 public var canMattIdle:Bool = false;
 public var canTomIdle:Bool = false;
-
 var alreadyOpen:Bool = false;
 
 function create() {

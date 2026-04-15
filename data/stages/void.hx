@@ -1,6 +1,8 @@
 var bgRocks:FlxSprite;
 
 function create() {
+    defaultCamZoom = 0.6;
+
     var white:FlxSprite = new FlxSprite().makeSolid(FlxG.width * 5, FlxG.height * 5, FlxColor.WHITE);
     white.screenCenter();
     white.scrollFactor.set();
