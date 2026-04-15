@@ -12,7 +12,6 @@ function create() {
     for (f in ['bf-tord', 'edd-tord', 'matt-tord', 'tomRunsIn', 'tordBot', 'tordGlass', 'tordBG', 'tordHelicopter', 'tordFlails', 'bf-lookup'])
         { graphicCache.cache(getModImage('Challenge-EDD/fucked/$f')); }
     precacheCharacter(0, 'tord');
-    tordEntrance();
 }
 
 function onCameraMove(_) {
@@ -37,7 +36,7 @@ function tordEntrance() {
     for (t in [boyfriend, dad])
         t.alpha = 0;
 
-    tordMecha = new FunkinSprite(595, -710).loadSprite(getModImage('Challenge-EDD/fucked/tordBot'));
+    tordMecha = new FunkinSprite(595, 50).loadSprite(getModImage('Challenge-EDD/fucked/tordBot'));
     tordMecha.antialiasing = true;
     tordMecha.scale.set(1.5, 1.5);
 
@@ -45,8 +44,10 @@ function tordEntrance() {
     tordMecha.addAnim('harp', 'TordBotHarpoonIdle', 12, true);
     tordMecha.addAnim('blow', 'TordBotBlowingUp', 12, false);
     
-    tordMecha.playAnim('dafuk');
+    tordMecha.playAnim('idle');
     insert(4, tordMecha);
+
+    FlxTween.tween(tordMecha, {y: -750}, 5);
 
     mattTord = new FunkinSprite(115, 240).loadSprite(getModImage('Challenge-EDD/fucked/matt-tord'));
     mattTord.antialiasing = true;
