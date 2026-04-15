@@ -8,23 +8,36 @@ function postCreate(){
     for (i in playerStrums) 
         i.x -= 640;
 
-    for (hb in [healthBar, healthBarBG])
-        hb.flipX = true;
-
-    for (ic in [iconP1, iconP2])
+    for (ic in [iconP1, iconP2, healthBarBG])
         ic.visible = false;
 
+    healthBar.flipX = true;
+    healthBar.scale.set(0.345,0.225);
+    healthBar.setPosition(370.25,593.25);
+
+    health += 1;
+    
 }
 
 function create(){
         
-    health += 1;
     var fondo:FlxSprite = new FlxSprite(-852,-475, getModImage('pokemonmaster/fondo_pokemon_1'));
-    defaultCamZoom = 0.85;
     insert(1,fondo);
-    //dad.size = 0.5;
+
+    var healthPM:FlxSprite = new FlxSprite(135,400, getModImage('pokemonmaster/health'));
+    healthPM.scale.set(0.4,0.4);
+    healthPM.camera = camHUD;
+    insert(1,healthPM);
+
+   var healthBarPM:FlxSprite = new FlxSprite(150,507, getModImage('pokemonmaster/healthBar'));
+    healthBarPM.scale.set(0.35,0.35);
+    healthBarPM.camera = camHUD;
+    insert(2,healthBarPM);
+
+    defaultCamZoom = 0.85;
+    dad.scale.set(1,1);
 
 }
 
 function onPlayerHit(e) e.healthGain = 0;
-function onPlayerMiss(e) e.healthGain = -0.028;
+function onPlayerMiss(e) e.healthGain = -0.1;
