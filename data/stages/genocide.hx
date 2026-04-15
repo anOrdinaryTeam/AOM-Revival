@@ -9,7 +9,7 @@ function create() {
     var siniFireBehind:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
     var siniFireFront:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
-    var genocideBG:FlxSprite = new FlxSprite(-600, -300, getModPath('stages/fire/wadsaaa'));
+    var genocideBG:FlxSprite = new FlxSprite(-600, -300, getModImage('stages/fire/wadsaaa'));
     genocideBG.antialiasing = Options.antialiasing;
     genocideBG.scrollFactor.set(0.9, 0.9);
     addSprite(genocideBG);
@@ -24,7 +24,7 @@ function create() {
         }
 
         var fire:FunkinSprite = new FunkinSprite(genocideBG.x + (720 + (((95 * 10) / 2) * i)), genocideBG.y + 180);
-        fire.loadSprite(getModPath('stages/fire/fireglow'));
+        fire.loadSprite(getModImage('stages/fire/fireglow'));
         fire.addAnim('fire', 'FireStage', "", 30, true, false, frameShit);
 		fire.playAnim('fire', true);
         fire.antialiasing = Options.antialiasing;
@@ -35,14 +35,14 @@ function create() {
     }
     addSprite(siniFireBehind);
 
-    var genocideBoard:FlxSprite = new FlxSprite(genocideBG.x, genocideBG.y, getModPath('stages/fire/boards'));
+    var genocideBoard:FlxSprite = new FlxSprite(genocideBG.x, genocideBG.y, getModImage('stages/fire/boards'));
     genocideBoard.antialiasing = Options.antialiasing;
     genocideBoard.scrollFactor.set(0.9, 0.9);
     addSprite(genocideBoard);
 
     for (i in 0...4) {
         var fire:FunkinSprite = new FunkinSprite();
-        fire.loadSprite(getModPath('stages/fire/fireglow'));
+        fire.loadSprite(getModImage('stages/fire/fireglow'));
         fire.addAnim('fire', 'FireStage', 30, true);
 		fire.playAnim('fire', true);
         fire.antialiasing = Options.antialiasing;
@@ -69,19 +69,19 @@ function create() {
     }
     addSprite(siniFireFront);
 
-    var fuckYouFurniture:FlxSprite = new FlxSprite(genocideBG.x, genocideBG.y, getModPath('stages/fire/glowyfurniture'));
+    var fuckYouFurniture:FlxSprite = new FlxSprite(genocideBG.x, genocideBG.y, getModImage('stages/fire/glowyfurniture'));
     fuckYouFurniture.antialiasing = Options.antialiasing;
     fuckYouFurniture.scrollFactor.set(0.9, 0.9);
     addSprite(fuckYouFurniture);
 
-    var destBoombox:FlxSprite = new FlxSprite(400, 130, getModPath('stages/fire/Destroyed_boombox'));
+    var destBoombox:FlxSprite = new FlxSprite(400, 130, getModImage('stages/fire/Destroyed_boombox'));
     destBoombox.y += (destBoombox.height - 648) * -1;
     destBoombox.y += 150;
     destBoombox.x -= 110;
     destBoombox.scale.set(1.2, 1.2);
     addSprite(destBoombox);
 
-    var sumsticks:FlxSprite = new FlxSprite(-600, -300, getModPath('stages/fire/overlayingsticks'));
+    var sumsticks:FlxSprite = new FlxSprite(-600, -300, getModImage('stages/fire/overlayingsticks'));
     sumsticks.antialiasing = Options.antialiasing;
     sumsticks.scrollFactor.set(0.9, 0.9);
     add(sumsticks);
@@ -102,7 +102,7 @@ function postCreate() {
     fuckThisShit.bgColor = 0x00000000;
     FlxG.cameras.add(fuckThisShit, false);
 
-    vignette = new FlxSprite(0,0, getModPath('vignette'));
+    vignette = new FlxSprite(0,0, getModImage('vignette'));
     vignette.camera = fuckThisShit;
     vignette.antialiasing = Options.antialiasing;
     add(vignette);

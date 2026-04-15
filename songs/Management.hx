@@ -77,12 +77,10 @@ function onPlayerHit(_) {
     if (ratingPrefix != '') _.ratingPrefix = 'modCombos/$ratingPrefix/';
 }
 
-public function setObjectOrder(item:FlxBasic, pos:Int) {
-    if (item != null && pos != null) {
-        remove(item);
-        insert(pos, item);
-    }
+public function setObjectOrder(item:FlxBasic, pos:Int) if (item != null) {
+    remove(item);
+    insert(pos, item);
 }
-public function getObjectOrder(item:FlxBasic) {
-    if (item != null) return members.indexOf(item);
-}
+
+public function getObjectOrder(item:FlxBasic) if (item != null)
+    return members.indexOf(item);
