@@ -26,7 +26,18 @@ function stepHit()
             dad.playAnim("Blaze yeah", true);
 
         case 1:
+
             FlxTween.tween(upline, {y: upline.y + 50}, 2, {ease: FlxEase.backInOut});
             FlxTween.tween(downline, {y: downline.y - 50}, 2, {ease: FlxEase.backInOut});
             defaultCamZoom = 0.79;
+
+            for (strum in player)
+                FlxTween.tween(strum, {y: 120}, 2, {ease: FlxEase.backInOut});
+
+            for (strum in cpu)
+                FlxTween.tween(strum, {y: 120}, 2, {ease: FlxEase.backInOut});
+
+            for (acheude in [healthBar, healthBarBG, iconP1, iconP2])
+                FlxTween.tween(acheude, {alpha: 0}, 0.5); 
+
     }
