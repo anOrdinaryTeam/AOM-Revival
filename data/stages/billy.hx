@@ -10,7 +10,7 @@ public var black:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 
 public var IllMake:FunkinSprite;
 public var lyrics:FlxText;
 
-var billyCam:FlxCamera = new FlxCamera();
+public var billyCam:FlxCamera = new FlxCamera();
 var notesTime:Array<Float> = [];
 var video:FlxVideoSprite;
 var bars:FlxSprite;

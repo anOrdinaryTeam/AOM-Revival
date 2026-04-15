@@ -142,7 +142,8 @@ function stepHit() {
             var filter:CustomShader = new CustomShader('blue');
             filter.hue = 1.3;
             filter.pix = 0.00001;
-
+            
+            billyCam.addShader(filter);
             camGame.addShader(filter);
             camHUD.addShader(filter);
 
