@@ -1,10 +1,9 @@
 {
 	"customValues": {},
-	"color": "#9271FD",
+	"color": "#FF0000",
 	"opponentModeAllowed": false,
 	"difficulties": [
-		"hard",
-		"recharted"
+		"hard"
 	],
 	"icon": "pokemonmaster",
 	"coopAllowed": false,
