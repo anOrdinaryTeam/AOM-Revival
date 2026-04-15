@@ -4,7 +4,7 @@
 	"difficulties": [
 		"rush"
 	],
-	"color": "#9271FD",
+	"color": "#000000",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "rush",
