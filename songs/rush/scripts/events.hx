@@ -19,25 +19,42 @@ function stepHit()
 
     switch(curStep){
 
-        case 513, 577, 768:
+        case 513:
+
             boyfriend.playAnim("Sonic Yeah", true);
-
-        case 517, 581, 768:
-            dad.playAnim("Blaze yeah", true);
-
-        case 1:
 
             FlxTween.tween(upline, {y: upline.y + 50}, 2, {ease: FlxEase.backInOut});
             FlxTween.tween(downline, {y: downline.y - 50}, 2, {ease: FlxEase.backInOut});
             defaultCamZoom = 0.79;
 
             for (strum in player)
-                FlxTween.tween(strum, {y: 120}, 2, {ease: FlxEase.backInOut});
+                FlxTween.tween(strum, {y: 120}, 1, {ease: FlxEase.backInOut});
 
             for (strum in cpu)
-                FlxTween.tween(strum, {y: 120}, 2, {ease: FlxEase.backInOut});
+                FlxTween.tween(strum, {y: 120}, 1, {ease: FlxEase.backInOut});
 
             for (acheude in [healthBar, healthBarBG, iconP1, iconP2])
-                FlxTween.tween(acheude, {alpha: 0}, 0.5); 
+                FlxTween.tween(acheude, {alpha: 0}, 0.5);
+
+        case 577, 768:
+            boyfriend.playAnim("Sonic Yeah", true);
+
+        case 517, 581, 768:
+            dad.playAnim("Blaze yeah", true);
+
+        case 637:
+
+            FlxTween.tween(upline, {y: upline.y - 50}, 2, {ease: FlxEase.backInOut});
+            FlxTween.tween(downline, {y: downline.y + 50}, 2, {ease: FlxEase.backInOut});
+            defaultCamZoom = 0.69;
+
+            for (strum in player)
+                FlxTween.tween(strum, {y: -60}, 1, {ease: FlxEase.backInOut});
+
+            for (strum in cpu)
+                FlxTween.tween(strum, {y: -60}, 1, {ease: FlxEase.backInOut});
+
+            for (acheude in [healthBar, healthBarBG, iconP1, iconP2])
+                FlxTween.tween(acheude, {alpha: 1}, 0.5);        
 
     }
