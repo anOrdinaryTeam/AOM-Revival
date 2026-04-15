@@ -177,21 +177,21 @@ function Dudes(canHit:Bool) {
 
         insert(5, punch);
 
-        punch.playAnim('woosh', true, 'ACTION');
+        punch.playAnim('woosh', true, 'LOCK');
         punch.animation.finishCallback = function(name:String) {
             if (name == 'woosh') {
-                new FlxTimer().start(0.15, () -> punch.playAnim('punch', true, 'ACTION'));
+                new FlxTimer().start(0.15, () -> punch.playAnim('punch', true, 'LOCK'));
             }
             else if (name == 'punch') {
-                punch.playAnim('a', true, 'ACTION');
-                new FlxTimer().start(0.5, () -> punch.playAnim('ow', true, 'ACTION'));
+                punch.playAnim('a', true, 'LOCK');
+                new FlxTimer().start(0.5, () -> punch.playAnim('ow', true, 'LOCK'));
             }
             else if (name == 'ow') {
-                new FlxTimer().start(0.15, () -> punch.playAnim('even', true, 'ACTION'));
-                new FlxTimer().start(1.15, () -> punch.playAnim('say', true, 'ACTION'));
+                new FlxTimer().start(0.15, () -> punch.playAnim('even', true, 'LOCK'));
+                new FlxTimer().start(1.15, () -> punch.playAnim('say', true, 'LOCK'));
             }
             else if (name == 'say')
-                punch.playAnim('shut', true, 'ACTION');
+                punch.playAnim('shut', true, 'LOCK');
         }
     }
 }
