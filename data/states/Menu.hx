@@ -14,6 +14,9 @@ public var input:Bool = true;
 public var danceOnBeat:Bool = true;
 public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 
+// TESTING
+var charMenu:String = 'rushSonic';
+
 function create() {
     FlxG.mouse.visible = true;
     CoolUtil.playMenuSong();
@@ -71,9 +74,9 @@ function create() {
 function loadCharacterMenu() {
     try {
         var content:Array<String> = Paths.getFolderDirectories('data/menuChars');
-        var File:String = content[FlxG.random.int(0, content.length - 1)];
+        var File:String = charMenu != '' ? charMenu : content[FlxG.random.int(0, content.length - 1)];
+            
         var DataJson:Dynamic = CoolUtil.parseJson(Paths.json('menuChars/$File/data'));
-        
         for (Json in DataJson.list) {
             var name:String = Json.char ?? 'bf';
             var pos:Array<Float> = Json.position.copy();
