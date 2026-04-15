@@ -23,5 +23,6 @@ function postUpdate() {
     if (CoolUtil.mouseOverlaps(sink) && FlxG.mouse.justPressed) {
         ghost.playAnim('singUP', true);
         sink.playAnim('singUP', true);
+        FlxG.sound.play(Paths.sound('menusounds/sink'), volume = 1);
     }
 }
