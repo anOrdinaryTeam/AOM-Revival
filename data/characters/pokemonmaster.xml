@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rederedred" flipX="true" color="#FF0000">
+	<anim name="idle" anim="red idle"/>
+	<anim name="singDOWN" anim="abajored" x="7" y="-19"/>
+	<anim name="singRIGHT" anim="redright" x="24" y="2"/>
+	<anim name="singLEFT" anim="redleft" x="-12"/>
+	<anim name="singUP" anim="abajored" x="5" y="-18"/>
+</character>

@@ -10,4 +10,5 @@ Defeat:black
 Megalo Strike Back:chara
 Treacherous Thorns:senpai-emtpy
 Epiphany:bigmonika
+pokemon-master:red
 Summit:red

@@ -1,14 +1,16 @@
 {
+	"customValues": {},
+	"color": "#9271FD",
 	"opponentModeAllowed": false,
-	"icon": "rushblaze",
 	"difficulties": [
-		"rush"
+		"hard",
+		"recharted"
 	],
-	"color": "#000000",
+	"icon": "pokemonmaster",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
-	"displayName": "Rush",
+	"displayName": "Pokemon Master",
+	"needsVoices": true,
 	"beatsPerMeasure": 4,
-	"needsVoices": false,
-	"bpm": 140
+	"bpm": 184
 }
