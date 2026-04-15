@@ -11,7 +11,7 @@ function create() {
     dad.setPosition(286, 190);
 
     sky = new FlxSprite(-1060, -800, getModImage('Challenge-EDD/sky'));
-    sky.scrollFactor.set(0.2, 0.2);
+    sky.scrollFactor.set(0.2, 0.55);
     insert(1, sky);
 
     var clouds:FlxSprite = new FlxSprite(-1060, -220, getModImage('Challenge-EDD/clouds'));
