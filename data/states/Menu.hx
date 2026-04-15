@@ -15,7 +15,7 @@ public var danceOnBeat:Bool = true;
 public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 
 // TESTING
-var charMenu:String = 'rushsonic';
+var charMenu:String = '';
 
 function create() {
     FlxG.mouse.visible = true;
