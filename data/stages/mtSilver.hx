@@ -1,3 +1,6 @@
+function postCreate() // No me voy a arder con Fred ommmmmmmmmmmmmmmmmmmmmmmmmmmm
+    loadHud('PsychEngine', '');
+
 function create() {
     defaultCamZoom = 0.5;
 
