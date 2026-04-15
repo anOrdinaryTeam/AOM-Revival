@@ -4,13 +4,13 @@ function preStageLoad() if (songName == 'Relighted')
 function create() {
     defaultCamZoom = 0.75;
 
-    var bg:FlxSprite = new FlxSprite(-600, -200, getModPath('Overwrite/bg'));
+    var bg:FlxSprite = new FlxSprite(-600, -200, getModImage('Overwrite/bg'));
     bg.antialiasing = Options.antialiasing;
     bg.scrollFactor.set(0.9, 0.9);
     addSprite(bg);
 
     if (curSong == 'overwrite') for (i in 0...7){
-        var sqr:FlxSprite = new FlxSprite(-600 + 400 * i, -200, getModPath('Overwrite/square'));
+        var sqr:FlxSprite = new FlxSprite(-600 + 400 * i, -200, getModImage('Overwrite/square'));
         sqr.antialiasing = Options.antialiasing;
         sqr.scrollFactor.set(1.2, 1.2);
         addSprite(sqr);
@@ -18,7 +18,7 @@ function create() {
     }
     else for (i in 0...7){
         var sqr:FunkinSprite = new FunkinSprite(-790 + 400 * i, 240 + [300, 175, 75, 0, 0, 75, 175, 300][i]);
-        sqr.loadSprite(getModPath('Overwrite/rpgfire'));
+        sqr.loadSprite(getModImage('Overwrite/rpgfire'));
         sqr.addAnim('idle', 'fire_iddle', 24, true);
         sqr.playAnim("idle");
         sqr.antialiasing = Options.antialiasing;
@@ -27,7 +27,7 @@ function create() {
         addSprite(sqr);
     }
 
-    var lg:FlxSprite = new FlxSprite(-600, -200, getModPath('Overwrite/light'));
+    var lg:FlxSprite = new FlxSprite(-600, -200, getModImage('Overwrite/light'));
     lg.antialiasing = Options.antialiasing;
     lg.scrollFactor.set(0.9, 0.9);
     add(lg);

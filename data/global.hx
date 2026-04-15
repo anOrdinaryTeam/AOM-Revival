@@ -17,7 +17,6 @@ public static var lastSongSelected:Int = 0;
 public static var lastDiffSelected:Int = 0;
 
 public static var CREATE_FILE_FEATURE:Bool = true;
-public static var ACCESS_TO_CHARTER_EDITOR:Bool = true;
 
 using StringTools;
 

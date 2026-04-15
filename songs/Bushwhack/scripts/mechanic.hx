@@ -1,21 +1,16 @@
-import flixel.input.keyboard.FlxKey;
-
 var grabbedInput:Bool = false;
 var cancelAnimations:Bool = false;
-var leControls:Array<Dynamic> = [
-    controls.NOTE_LEFT_P, controls.NOTE_DOWN_P,
-    controls.NOTE_UP_P, controls.NOTE_RIGHT_P
-];
-var notesToHit:FlxTypedGroup<FlxSprite> = new FlxTypedGroup();
-var notes:Array<String> = ['Left', 'Down', 'Up', 'Right'];
-var notesToHit_Input:Array<String> = [];
-var vineSpr:FlxSprite;
-var curVine:Int = 0;
-
 var misc = [0.7, 150, 150, -60];
 
+var notesToHit:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
+var notes:Array<String> = ['Left', 'Down', 'Up', 'Right'];
+var notesToHit_Input:Array<String> = [];
+
+var vineSpr:FunkinSprite;
+var curVine:Int = 0;
+
 function create() {
-    vineSpr = new FunkinSprite(dad.x + 500, dad.y + 430, getModPath('maze/vines'));
+    vineSpr = new FunkinSprite(dad.x + 500, dad.y + 430, getModImage('maze/vines'));
     vineSpr.addAnim('catch', 'Vine Whip instance 1', 24, false);
     vineSpr.scale.set(0.8, 0.8);
     vineSpr.updateHitbox();
@@ -46,7 +41,7 @@ function GRAB() {
             notesToHit_Input.push(selectNote);
 
             var NOTE:FunkinSprite = new FunkinSprite((boyfriend.x + misc[3]) + (misc[1] * i), boyfriend.y + misc[2]);
-            NOTE.loadSprite(getModPath('maze/notes'));
+            NOTE.loadSprite(getModImage('maze/notes'));
             NOTE.scale.set(misc[0], misc[0]);
             NOTE.updateHitbox();
             NOTE.addAnim(selectNote, selectNote, 0, false);
@@ -60,11 +55,8 @@ function GRAB() {
     });
 }
 
-// HELP FOR OPTIMIZE AND REDO THIS MECHANIC, CAN BE WORK BUT ITS NOT VERY OPTIMZED DUE
-// CNE DOENS HAVE A EXACTLY PROPERTY FOR DISABLE / DISABLE NOTE HIT WITHOUT DOIN WITH
-// ´INPUTUPDATE´
-
-function onInputUpdate(_) if (grabbedInput) _.cancel();
+function onInputUpdate(_) if (grabbedInput)
+    _.cancel();
 
 function checkWhichPressed(key:String) {
     if (curVine != 4 && notesToHit_Input[curVine] == key) {
@@ -97,11 +89,10 @@ function checkWhichPressed(key:String) {
 function onPlayerMiss(_) _.animCancelled = cancelAnimations;
 function onPlayerHit(_) _.animCancelled = cancelAnimations;
 
-function stepHit()
-    switch(curStep) {
-        case 383, 768, 1151, 1536, 1905, 2466, 2767, 3071, 4143:
-            GRAB();
-    }
+function stepHit() switch(curStep) {
+    case 383, 768, 1151, 1536, 1905, 2466, 2767, 3071, 4143:
+        GRAB();
+}
 
 function update(_) if (grabbedInput) {
     if (controls.NOTE_LEFT_P) checkWhichPressed('Left');

@@ -3,7 +3,7 @@ function postCreate() {
     var spr:String = PlayState.SONG.meta.name == 'inking Mistake' ? 'InkingMistake/particle' : 'particle'; 
 
     for (i in 0...30){
-        var part:FlxSprite = new FlxSprite(-1200 + 150 * i, 1500, getModPath(spr));
+        var part:FlxSprite = new FlxSprite(-1200 + 150 * i, 1500, getModImage(spr));
         part.antialiasing = Options.antialiasing;
         part.scrollFactor.set(0.92, 0.92);
         add(part);
