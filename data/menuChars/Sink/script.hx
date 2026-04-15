@@ -1,4 +1,5 @@
 function onCharsLoaded() {
+
     var ghost:Character = charactersMenu.members[0];
     var sink:Character = charactersMenu.members[1];
 
@@ -15,6 +16,7 @@ function onCharsLoaded() {
 }
 
 function postUpdate() {
+    
     var ghost:Character = charactersMenu.members[0];
     var sink:Character = charactersMenu.members[1];
 
