@@ -1,5 +1,6 @@
 import funkin.backend.utils.DiscordUtil;
 import funkin.editors.charter.Charter;
+importScript('data/scripts/ExternalFunctions');
 
 public var songName:String = PlayState.SONG.meta.name;
 public var curDiff:String = PlayState.difficulty;
