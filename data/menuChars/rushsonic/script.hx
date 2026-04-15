@@ -20,7 +20,7 @@ function postUpdate() {
     if (CoolUtil.mouseOverlaps(rushsonic) && FlxG.mouse.justPressed) {
 
         rushsonic.playAnim("Sonic Yeah", true);
-        FlxG.sound.play(Paths.sound('menusounds/sonicyeah'), volume = 1);
+        FlxG.sound.play(Paths.sound('menusounds/sonicyeah'));
 
     }
 }

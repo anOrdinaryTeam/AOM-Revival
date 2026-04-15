@@ -20,7 +20,7 @@ function postUpdate() {
     if (CoolUtil.mouseOverlaps(rushblaze) && FlxG.mouse.justPressed) {
 
         rushblaze.playAnim("Blaze yeah", true);
-        FlxG.sound.play(Paths.sound('menusounds/blazeyeah'), volume = 1);
+        FlxG.sound.play(Paths.sound('menusounds/blazeyeah'));
 
     }
 }
