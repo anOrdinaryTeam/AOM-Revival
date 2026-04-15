@@ -13,7 +13,7 @@ function onPostNoteCreation(_) if (_.noteType == 'fireNote')
 
 function onPlayerHit(_) if (_.noteType == 'fireNote') {
     _.healthGain -= 0.45;
-    // playSound('burnSound');
+    playSound('burnSound');
 }
 
 function onPlayerMiss(_) if (_.noteType == 'fireNote') {

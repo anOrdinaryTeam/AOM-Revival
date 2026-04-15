@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
--->
-<TextureAtlas imagePath="foreground_stage.png" width="990" height="395" spritePadding="1" borderPadding="0">
-	<SubTexture name="rock" x="703" y="0" width="287" height="180" frameX="0" frameY="0" frameWidth="287" frameHeight="180"/>
-	<SubTexture name="shop" x="0" y="0" width="702" height="395" frameX="0" frameY="0" frameWidth="702" frameHeight="395"/>
-</TextureAtlas>

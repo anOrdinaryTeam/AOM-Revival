@@ -29,8 +29,8 @@ function onHudLoad(hud) if (hud == 'VS-Online') {
     insert(members.indexOf(iconP2) + 1, vsMisses);
 }
 
-var normalSize:Float = 0.9;
-var onBeatSize:Float = 1;
+var normalSize:Float = 0.85;
+var onBeatSize:Float = 0.95;
 var lerpAmont:Float = 0.3;
 
 function update() for (icon in [iconP1, iconP2]) {

@@ -7,14 +7,26 @@ function onNoteCreation(e) if (e.noteType == t)
 
 function onPlayerHit(e) if (e.noteType == t) {
     cancelHankAnim = true;
+    dad.playSingAnim(e.direction, '-shoot');
+
     e.animCancelled = true;
+    boyfriend.playAnim('dodge', true);
+
+    timer.cancel();
+    timer.start(0.2, () -> cancelHankAnim = false);
+
+    playModSound('bullet');
+    camGame.shake(0.01, 0.1);
+}
+
+function onPlayerMiss(e) if (e.noteType == t) {
+    cancelHankAnim = true;
+    dad.playSingAnim(e.direction, '-shoot');
 
     timer.cancel();
     timer.start(0.3, () -> cancelHankAnim = false);
 
     playModSound('bullet');
-    boyfriend.playAnim('dodge', true);
-    dad.playSingAnim(e.direction, '-shoot');
     camGame.shake(0.01, 0.1);
 }
 

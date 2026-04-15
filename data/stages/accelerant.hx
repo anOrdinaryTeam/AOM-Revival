@@ -1,22 +1,26 @@
 public var sanford:FunkinSprite;
 public var deimos:FunkinSprite;
 public var helicopter:FunkinSprite;
-
 public var boombox:FunkinSprite;
-public var gfHotdog:FunkinSprite;
+public var floor:FlxSprite;
 
+public var gfHotdog:FunkinSprite = new Character(1800, 540, 'gfHotDog');
 public var gfArmsUp:Character = new Character(335, 275, 'gfArmsUp');
-public var tricky:Character = new Character(110, -330, 'tricky-acc');
+public var tricky:Character = new Character(95, -330, 'tricky-acc');
+
+public var canGruntsSpawn:Bool = false;
+var gruntsLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
 function BG(str:String) return getModImage('Accelerant/$str');
 using StringTools;
 
 function create() {
     defaultCamZoom = 0.7;
+    precacheGrunts();
 
     var bg:FlxSprite = new FlxSprite().loadGraphic(BG('bg'));
     bg.antialiasing = Options.antialiasing;
-    bg.scale.set(1.3, 1);
+    bg.scale.set(1.3, 1.1);
     bg.updateHitbox();
     bg.scrollFactor.set(0.1, 0.1);
     bg.screenCenter();
@@ -92,7 +96,7 @@ function create() {
     deimos.color = 0x847F7F;
     addSprite(deimos);
 
-    var floor:FlxSprite = new FlxSprite().loadGraphic(BG('floor'));
+    floor = new FlxSprite().loadGraphic(BG('floor'));
     floor.antialiasing = Options.antialiasing;
     floor.scale.set(1.5, 1.4);
     floor.updateHitbox();
@@ -103,15 +107,20 @@ function create() {
     boombox = new FunkinSprite(185, 265).loadSprite(BG('stereo'));
     boombox.antialiasing = Options.antialiasing;
     boombox.addAnim('boom', 'stereo boom', 24, false);
-    // boombox.alpha = 0.001;
+    boombox.alpha = 0.001;
     addSprite(boombox);
+
+    addSprite(gruntsLayer);
+
+    gfHotdog.antialiasing = Options.antialiasing;
+    addSprite(gfHotdog);
 
     gfArmsUp.danceOnBeat = false;
     gfArmsUp.alpha = 0.001;
     gfArmsUp.antialiasing = Options.antialiasing;
     addSprite(gfArmsUp);
 
-    gf.alpha = 0;
+    tricky.alpha = 0.001;
     tricky.antialiasing = Options.antialiasing;
     addSprite(tricky);
 
@@ -119,6 +128,7 @@ function create() {
     foreground.antialiasing = Options.antialiasing;
     foreground.scrollFactor.set(1.2, 1.2);
     foreground.scale.set(1.15, 1.2);
+    foreground.color = 0x847F7F;
     foreground.updateHitbox();
     foreground.screenCenter();
     foreground.x -= 100;
@@ -139,4 +149,50 @@ function beatHit() {
 
     if (deimos.animation.curAnim.name == 'idle')
         deimos.playAnim('idle');
+
+    // if (canGruntsSpawn && curBeat % 4 == 0)
+    //     spawnGrunts();
+}
+
+//TODO: To be refactored/redo
+function spawnGrunts() {
+    var amountToSpawn:Int = FlxG.random.int(1, 2);
+    var excludedGrunts:Array<Int> = [];
+    var excludedPositions:Array<Int> = [];
+
+    var anims:Array<String> = ['gruntclimbanddie', 'agentclimbanddie', 'engclimbanddie'];
+    var positions:Array<Dynamic> = [
+        [200, 300],
+        [500, 300],
+        [800, 300]
+    ];
+
+    for (i in 0...amountToSpawn) {
+        var arrRandom:Int = FlxG.random.int(0, 2, excludedPositions);
+        var gruntType:Int = FlxG.random.int(1, 3, excludedGrunts);
+
+        var position:Array<Dynamic> = positions[arrRandom].copy();
+        var grunt:FunkinSprite = new FunkinSprite(position[0], position[1]);
+        grunt.loadSprite(BG('grunts/$gruntType'));
+        grunt.addAnim('spawn', anims[gruntType], 24, false);
+        grunt.antialiasing = Options.antialiasing;
+        gruntsLayer.add(grunt);
+
+        grunt.playAnim('spawn');
+        grunt.animation.finishCallback = () -> gruntsLayer.remove(grunt);
+
+        excludedPositions.push(arrRandom);
+        excludedGrunts.push(gruntType);
+    }
+
+    new FlxTimer().start(0.5, () -> {
+        deimos.playAnim('shoot', true);
+        sanford.playAnim('shoot', true);
+    });
+}
+
+function precacheGrunts() {
+    // graphicCache.cache(BG('grunts/1/spritemap1'));
+    // graphicCache.cache(BG('grunts/2/spritemap1'));
+    // graphicCache.cache(BG('grunts/3/spritemap1'));
 }

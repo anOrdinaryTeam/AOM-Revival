@@ -3,6 +3,7 @@ import haxe.format.JsonPrinter;
 // ease's position of the camera, more tough but more easy for characters with custom skins
 public var playerCam:FlxPoint = FlxPoint.get(900, 600);
 public var opponentCam:FlxPoint = FlxPoint.get(300, 600);
+public var forceCamPos:Bool = false;
 
 var fileExists:Bool = false;
 var metaSongExists:Bool = false;
@@ -102,7 +103,17 @@ function postCreate() {
     } 
 }
 
+public function setCamPos(?x:Float, ?y:Float) {
+    forceCamPos = !forceCamPos;
+    if (x != null && y != null) camFollow.setPosition(x, y);
+}
+
 function onCameraMove(_) {
-    var newPoint:FlxPoint = curCameraTarget == 0 ? opponentCam : playerCam;
-    _.position.set(newPoint.x, newPoint.y);
+    if (!forceCamPos) {
+        var newPoint:FlxPoint = curCameraTarget == 0 ? opponentCam : playerCam;
+        _.position.set(newPoint.x, newPoint.y);
+    }
+    else if (forceCamPos && !_.cancelled) {
+        _.position.set(camFollow.x, camFollow.y);
+    }
 }

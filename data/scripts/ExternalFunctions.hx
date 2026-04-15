@@ -3,6 +3,9 @@ public static var pathSuffix:String = 'Assets-';
 public static function playModSound(str:String, vol:Float = 1)
     FlxG.sound.play(Paths.getPath('$pathSuffix' + '$currentMod/sounds/$str.ogg'), vol);
 
+public static function playSound(str:String, vol:Float = 1)
+    FlxG.sound.play(Paths.sound(str), vol);
+
 public static function getImage(str:String)
     return Paths.image(str);
 

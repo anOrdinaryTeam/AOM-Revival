@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="accelerant/gfHotDog" scale="1.05" icon="gf" color="#A5004D" applyStageMatrix="true" isGF="true">
+	<anim name="walk" anim="GFStandingWithHotDogWalk" loop="true"/>
+	<anim name="danceLeft" anim="GFStandingWithHotDog" indices="0..14"/>
+	<anim name="danceRight" anim="GFStandingWithHotDog" indices="15..29"/>
+</character>

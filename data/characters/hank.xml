@@ -1,6 +1,7 @@
 <!DOCTYPE codename-engine-character>
-<character y="200" sprite="accelerant/hank" icon="hank" color="#16162C" applyStageMatrix="true">
+<character y="200" sprite="accelerant/HankNew" color="#16162C" applyStageMatrix="true">
 	<anim name="idle" anim="Hank Idle"/>
+	<anim name="idle-alt" anim="HankScaredIdle"/>
 	<anim name="singUP" anim="Hank Up note" y="-10"/>
 	<anim name="singLEFT" anim="Hank Left Note" x="25" y="-70"/>
 	<anim name="singRIGHT" anim="Hank right note" x="67" y="-101"/>
@@ -11,4 +12,5 @@
 	<anim name="singDOWN-shoot" anim="Hank Down Shoot" x="34" y="-133"/>
 	<anim name="singRIGHT-alt" anim="Hank screamright" x="66" y="-98"/>
 	<anim name="ready" anim="HankGetReady"/>
+	<anim name="shot" anim="HankScaredShootsTiky"/>
 </character>
