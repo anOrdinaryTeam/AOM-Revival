@@ -1,3 +1,4 @@
+var tom:FunkinSprite;
 var jon:FunkinSprite;
 var mark:FunkinSprite;
 var punch:FunkinSprite;
@@ -17,7 +18,6 @@ function stepHit() {
         case 416: Tom();
 
         case 911: 
-            FlxTween.tween(camHUD, {alpha: 0}, 1);
             Matt();
             Eduardo();
 

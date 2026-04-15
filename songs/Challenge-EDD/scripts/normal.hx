@@ -1,5 +1,4 @@
 public var matt:FunkinSprite;
-public var tom:FunkinSprite;
 var door:FunkinSprite;
 
 public var canMattIdle:Bool = false;
