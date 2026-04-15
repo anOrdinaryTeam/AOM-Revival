@@ -37,7 +37,7 @@ public function setRatingPrefix(tag:String) {
 }
 
 function create() {
-    ReloadSaveData();
+    RefreshSaveDatas();
     updateDiscordPresence = () -> {
         var image:String = currentMod == 'RandomSongs' ? curSongID : currentMod.toLowerCase();
         DiscordUtil.changePresenceAdvanced({

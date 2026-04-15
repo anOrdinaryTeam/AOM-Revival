@@ -65,7 +65,7 @@ function create() {
     add(bgFlasher);
 
     // since Optionsmenu doesnt have callbacks events, I dont have other choice
-    ReloadSaveData();
+    RefreshSaveDatas();
 }
 
 function loadCharacterMenu() {
