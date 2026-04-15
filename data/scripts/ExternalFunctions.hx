@@ -41,5 +41,5 @@ public function setManualPath(song:String) currentMod = switch(song) {
     case 'Foolhardy' | 'Bushwhack': 'Zardy';
     case 'Screenplay' | 'Parasite' | 'A.G.O.T.I': 'Agoti';
     case 'Overwrite' | 'Inking Mistake' | 'Relighted': 'xEvent';
-    default: 'RS';
+    default: 'RandomSongs';
 }
