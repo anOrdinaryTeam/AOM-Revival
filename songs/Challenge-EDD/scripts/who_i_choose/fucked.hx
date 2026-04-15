@@ -11,16 +11,34 @@ function create() {
     for (f in ['bf-tord', 'edd-tord', 'matt-tord', 'tomRunsIn', 'tordBot', 'tordGlass', 'tordBG', 'tordHelicopter', 'tordFlails', 'bf-lookup'])
         { graphicCache.cache(getModImage('Challenge-EDD/fucked/$f')); }
     precacheCharacter(0, 'tord');
+    tordEntrance();
 }
 
 function onCameraMove(_) {
-    if (should && !_.cancelled) _.position.set(950, 450);
+    if (should && !_.cancelled)
+        _.position.set(950, 450);
+}
+
+function stepHit() {
+    switch(curStep) {
+        case 917: should = true;
+        case 920: FlxG.camera.shake(0.005, 5.5);
+        case 930: tordEntrance();
+        case 2015: tordFall();
+    }
 }
 
 function tordEntrance() {
     remove(matt);
+    remove(gf);
+    insert(7, gf);
+
     for (t in [boyfriend, dad])
         t.alpha = 0;
+
+    // FlxTween.tween(camGame.scroll, {y: -950}, 6, {ease: FlxEase.sineInOut});
+    // FlxTween.tween(sky, {y: sky.y + 295}, 6, {ease: FlxEase.sineInOut});
+    // FlxTween.tween(camera, {zoom: 2}, 1.2, {ease: FlxEase.quadOut});
 
     mattTord = new FunkinSprite(115, 240).loadSprite(getModImage('Challenge-EDD/fucked/matt-tord'));
     mattTord.antialiasing = true;
@@ -31,8 +49,8 @@ function tordEntrance() {
     mattTord.addAnim('fiu', 'mattHarpoonBit', 12, false);
     
     mattTord.playAnim('dafuk');
-    add(mattTord);
-
+    insert(8, mattTord);
+    
     eddTord = new FunkinSprite(190, 195).loadSprite(getModImage('Challenge-EDD/fucked/edd-tord'));
     eddTord.antialiasing = true;
 
@@ -42,7 +60,7 @@ function tordEntrance() {
     eddTord.addAnim('look', 'EddLookingUp', 12, false);
 
     eddTord.playAnim('shaking');
-    add(eddTord);
+    insert(9, eddTord);
 
     bfTord = new FunkinSprite(1160, 450).loadSprite(getModImage('Challenge-EDD/fucked/bf-tord'));
     bfTord.antialiasing = true;
@@ -51,7 +69,7 @@ function tordEntrance() {
     bfTord.addAnim('tord', 'BF Look At Tord', 12, false);
     
     bfTord.playAnim('shaking');
-    add(bfTord);
+    insert(9, bfTord);
 
     new FlxTimer().start(1.5, () -> {
         eddTord.y += 30;
@@ -68,24 +86,24 @@ function tordEntrance() {
 
         tomRush.addAnim('run', 'Tom Running In', 12, false);
         tomRush.playAnim('run');
-        add(tomRush);
+        insert(10, tomRush);
     });
 }
 
 function tordFall() {
-    for (t in [boyfriend, dad])
+    for (t in [boyfriend, dad, bfTord, tomRush])
         t.alpha = 0;
-
+    
     eddTord.x += 135;
     eddTord.playAnim('lookLoop');
 
     mattTord.y += 40;
     mattTord.playAnim('look');
-    new FlxTimer().start(3, () -> mattTord.playAnim('fiu'));
+    new FlxTimer().start(6, () -> mattTord.playAnim('fiu'));
 
     bfDude = new FlxSprite(1220, 450, getModImage('Challenge-EDD/fucked/bf-lookup'));
     bfDude.antialiasing = true;
-    add(bfDude);
+    insert(9, bfDude);
 
     tomHarpoon = new FunkinSprite(765, 365).loadSprite(getModImage('Challenge-EDD/fucked/tomHarpoon'));
     tomHarpoon.antialiasing = true;
@@ -95,9 +113,9 @@ function tordFall() {
     tomHarpoon.addAnim('harp', 'TomHarpoonHarpoon', 24, false);
     
     tomHarpoon.playAnim('idle');
-    add(tomHarpoon);
+    insert(10, tomHarpoon);
 
-    new FlxTimer().start(2, () -> {
+    new FlxTimer().start(5, () -> {
         tomHarpoon.playAnim('line');
         eddTord.playAnim('look');
     });
@@ -106,5 +124,5 @@ function tordFall() {
         if (name == 'line') tomHarpoon.playAnim('harpLoop');
     }
 
-    new FlxTimer().start(3, () -> tomHarpoon.playAnim('harp'));
+    new FlxTimer().start(6.5, () -> tomHarpoon.playAnim('harp'));
 }
