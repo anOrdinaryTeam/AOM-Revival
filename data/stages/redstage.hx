@@ -21,6 +21,10 @@ function postCreate(){
 
 function create(){
         
+    var pixelbg:FlxSprite = new FlxSprite().makeSolid(FlxG.width*1.5, FlxG.height*1.5, 0xFFFFFFFF);
+    pixelbg.setPosition(-945,-530);
+    insert(0, pixelbg);
+
     var fondo:FlxSprite = new FlxSprite(-852,-475, getModImage('pokemonmaster/fondo_pokemon_1'));
     insert(1,fondo);
 
@@ -34,8 +38,18 @@ function create(){
     healthBarPM.camera = camHUD;
     insert(2,healthBarPM);
 
-    defaultCamZoom = 0.85;
-    dad.scale.set(1,1);
+    defaultCamZoom = 0.85; // 0.85
+    dad.scale.set(0.6,0.6);
+
+}
+
+function beatHit(){
+
+    if (health <= 0.5 && curBeat % 2 == 0){
+
+        playModSound('lowhp',7.5);
+
+    }
 
 }
 
