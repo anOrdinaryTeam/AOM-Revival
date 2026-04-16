@@ -2,16 +2,25 @@ var tordMecha:FunkinSprite;
 var mattTord:FunkinSprite;
 var eddTord:FunkinSprite;
 var bfTord:FunkinSprite;
-var bfDude:FlxSprite;
 var tomRush:FunkinSprite;
 var tomHarpoon:FunkinSprite;
 
+var bfDude:FlxSprite;
+var glass:FlxSprite;
+var tordBG:FlxSprite;
+
 var should:Bool = false;
 
+var camOther:FlxCamera = new FlxCamera();
+
 function create() {
+    camOther.bgColor = 0;
+    FlxG.cameras.add(camOther, false);
+
     for (f in ['bf-tord', 'edd-tord', 'matt-tord', 'tomRunsIn', 'tordBot', 'tordGlass', 'tordBG', 'tordHelicopter', 'tordFlails', 'bf-lookup'])
         { graphicCache.cache(getModImage('Challenge-EDD/fucked/$f')); }
     precacheCharacter(0, 'tord');
+    tordCabine();
 }
 
 function onCameraMove(_) {
@@ -22,8 +31,9 @@ function onCameraMove(_) {
 function stepHit() {
     switch(curStep) {
         case 917: should = true;
-        case 920: FlxG.camera.shake(0.005, 5.5);
+        case 920: FlxG.camera.shake(0.005, 5.75);
         case 930: tordEntrance();
+        case 1026: tordCabine();
         case 2015: tordFall();
     }
 }
@@ -47,7 +57,7 @@ function tordEntrance() {
     tordMecha.playAnim('idle');
     insert(4, tordMecha);
 
-    FlxTween.tween(tordMecha, {y: -750}, 5);
+    FlxTween.tween(tordMecha, {y: -725}, 5);
 
     mattTord = new FunkinSprite(115, 240).loadSprite(getModImage('Challenge-EDD/fucked/matt-tord'));
     mattTord.antialiasing = true;
@@ -58,7 +68,7 @@ function tordEntrance() {
     mattTord.addAnim('fiu', 'mattHarpoonBit', 12, false);
     
     mattTord.playAnim('dafuk');
-    insert(8, mattTord);
+    insert(9, mattTord);
     
     eddTord = new FunkinSprite(190, 195).loadSprite(getModImage('Challenge-EDD/fucked/edd-tord'));
     eddTord.antialiasing = true;
@@ -69,7 +79,7 @@ function tordEntrance() {
     eddTord.addAnim('look', 'EddLookingUp', 12, false);
 
     eddTord.playAnim('shaking');
-    insert(9, eddTord);
+    insert(10, eddTord);
 
     bfTord = new FunkinSprite(1160, 450).loadSprite(getModImage('Challenge-EDD/fucked/bf-tord'));
     bfTord.antialiasing = true;
@@ -97,6 +107,25 @@ function tordEntrance() {
         tomRush.playAnim('run');
         insert(10, tomRush);
     });
+}
+var hah:Int = 3;
+
+function tordCabine() {
+    tordBG = new FlxSprite(-330, -360, getModImage('Challenge-EDD/fucked/tordBG'));
+    tordBG.camera = camHUD;
+    setObjectOrder(tordBG, camHUD);
+    
+    glass = new FlxSprite(0, -100, getModImage('Challenge-EDD/fucked/tordGlass'));
+    glass.camera = camOther;
+    setObjectOrder(glass, camOther);
+
+    changeCharacter(0, 'tord');
+    dad.setPosition(-50, -35);
+    
+    FlxTween.tween(glass.scale, {x: 20, y: 20}, 0.75, {ease: FlxEase.quadOut}, {onComplete: function() {
+        remove(glass);
+    }});
+    FlxTween.tween(glass, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
 }
 
 function tordFall() {

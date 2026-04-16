@@ -2,7 +2,7 @@ public var sky:FlxSprite;
 var plane:FlxSprite;
 
 function create() {
-    defaultCamZoom = 0.65;
+    defaultCamZoom = 0.15;
 
     graphicCache.cache(getModImage('Challenge-EDD/plane'));
 
@@ -10,8 +10,9 @@ function create() {
     gf.setPosition(605, 94); gf.scrollFactor.set(1, 1);
     dad.setPosition(286, 190);
 
-    sky = new FlxSprite(-1060, -800, getModImage('Challenge-EDD/sky'));
-    sky.scrollFactor.set(0.2, 0.55);
+    sky = new FlxSprite(-660, -925, getModImage('Challenge-EDD/sky'));
+    sky.scale.set(1.5, 1.5);
+    sky.scrollFactor.set(0.2, 0.2);
     insert(1, sky);
 
     var clouds:FlxSprite = new FlxSprite(-1060, -220, getModImage('Challenge-EDD/clouds'));
