@@ -4,7 +4,7 @@ importScript('data/scripts/ExternalFunctions');
 
 public var songName:String = PlayState.SONG.meta.name;
 public var curDiff:String = PlayState.difficulty;
-var ratingPrefix:String = '';
+public var ratingPrefix:String = '';
 
 public var useCamMov:Bool = false;
 public var camMoveAmt:Float = 10;
