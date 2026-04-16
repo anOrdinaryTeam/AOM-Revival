@@ -46,9 +46,7 @@ function create(){
 function beatHit(){
 
     if (health <= 0.5 && curBeat % 2 == 0){
-
         playModSound('lowhp',7.5);
-
     }
 
 }
