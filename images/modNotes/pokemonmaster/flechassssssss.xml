@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="flechassssssss.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="blue0000" x="0" y="0" width="174" height="160" pivotX="11.2" pivotY="24.85"/>
+	<SubTexture name="green0000" x="174" y="0" width="174" height="160" pivotX="8.25" pivotY="4.6"/>
+	<SubTexture name="purple0000" x="348" y="0" width="160" height="173" pivotX="2.5" pivotY="10.75"/>
+	<SubTexture name="red0000" x="0" y="173" width="160" height="173" pivotX="1.35" pivotY="6.5"/>
+</TextureAtlas>

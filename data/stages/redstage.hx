@@ -1,3 +1,5 @@
+public var fondopm:FlxSprite;
+
 function postCreate(){
 
     loadHud('KadeEngine', '1.5.4');
@@ -25,8 +27,8 @@ function create(){
     pixelbg.setPosition(-945,-530);
     insert(0, pixelbg);
 
-    var fondo:FlxSprite = new FlxSprite(-852,-475, getModImage('pokemonmaster/fondo_pokemon_1'));
-    insert(1,fondo);
+    fondopm = new FlxSprite(-852,-475, getModImage('pokemonmaster/fondo_pokemon_1'));
+    insert(1,fondopm);
 
     var healthPM:FlxSprite = new FlxSprite(135,400, getModImage('pokemonmaster/health'));
     healthPM.scale.set(0.4,0.4);
