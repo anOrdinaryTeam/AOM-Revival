@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="agent.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="agentclimbanddie0000" x="709" y="824" width="203" height="319" frameX="-23" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0001" x="364" y="991" width="176" height="149" frameX="0" frameY="-126" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0002" x="364" y="991" width="176" height="149" frameX="0" frameY="-126" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0003" x="364" y="837" width="174" height="154" frameX="-2" frameY="-105" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0004" x="364" y="837" width="174" height="154" frameX="-2" frameY="-105" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0005" x="1876" y="671" width="122" height="370" frameX="-24" frameY="-91" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0006" x="1102" y="386" width="404" height="344" frameX="-45" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0007" x="1645" y="0" width="359" height="378" frameX="-45" frameY="-118" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0008" x="0" y="448" width="352" height="379" frameX="-52" frameY="-118" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0009" x="352" y="479" width="357" height="358" frameX="-52" frameY="-139" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0010" x="352" y="479" width="357" height="358" frameX="-52" frameY="-139" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0011" x="709" y="479" width="357" height="345" frameX="-52" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0012" x="709" y="479" width="357" height="345" frameX="-52" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0013" x="0" y="837" width="364" height="321" frameX="-52" frameY="-176" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0014" x="0" y="837" width="364" height="321" frameX="-52" frameY="-176" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0015" x="1066" y="730" width="360" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0016" x="1066" y="730" width="360" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0017" x="1066" y="730" width="360" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0018" x="1066" y="730" width="360" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0019" x="1066" y="730" width="360" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0020" x="1506" y="671" width="370" height="323" frameX="-53" frameY="-175" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0021" x="573" y="0" width="529" height="479" frameX="-31" frameY="0" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0022" x="573" y="0" width="529" height="479" frameX="-31" frameY="0" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0023" x="0" y="0" width="573" height="448" frameX="-1" frameY="-31" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0024" x="0" y="0" width="573" height="448" frameX="-1" frameY="-31" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0025" x="1102" y="0" width="543" height="386" frameX="-29" frameY="-93" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0026" x="1506" y="386" width="472" height="285" frameX="-29" frameY="-194" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0027" x="0" y="0" width="0" height="0" frameX="-45" frameY="-93" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="agentclimbanddie0028" x="0" y="0" width="0" height="0" frameX="-45" frameY="-93" frameWidth="574" frameHeight="498"/>
+</TextureAtlas>
