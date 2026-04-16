@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="pixelbf" antialiasing="false" flipX="true" isPlayer="true" color="#A1A1A1">
+	<anim name="idle" anim="bf idle dance"/>
+	<anim name="singDOWN" anim="BF DOWN" x="-35" y="-22"/>
+	<anim name="singRIGHT" anim="BF RIGHT" x="-26" y="-15"/>
+	<anim name="singLEFT" anim="bf left" x="21" y="-10"/>
+	<anim name="singUP" anim="BF UP" x="1" y="15"/>
+	<anim name="BF DIES" anim="BF DIES" x="173" y="-94"/>
+	<anim name="bf confirms" anim="bf confirms" x="152" y="-102"/>
+	<anim name="bf dies loop" anim="bf dies loop" x="118" y="-112"/>
+	<anim name="bf miss abajo" anim="bf miss abajo"/>
+	<anim name="bf miss arriba" anim="bf miss arriba"/>
+	<anim name="bf miss derecha" anim="bf miss derecha"/>
+	<anim name="bf miss izquierda" anim="bf miss izquierda"/>
+</character>
