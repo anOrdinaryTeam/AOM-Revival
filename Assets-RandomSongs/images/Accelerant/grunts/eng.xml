@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="eng.png">
+	<!-- Created with Adobe Animate version 23.0.0.407 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="engclimbanddie0000" x="0" y="824" width="203" height="319" frameX="-23" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0001" x="377" y="834" width="176" height="149" frameX="0" frameY="-126" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0002" x="377" y="834" width="176" height="149" frameX="0" frameY="-126" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0003" x="203" y="834" width="174" height="154" frameX="-2" frameY="-105" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0004" x="203" y="834" width="174" height="154" frameX="-2" frameY="-105" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0005" x="1865" y="671" width="122" height="370" frameX="-24" frameY="-91" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0006" x="1102" y="386" width="404" height="344" frameX="-45" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0007" x="1645" y="0" width="361" height="378" frameX="-45" frameY="-118" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0008" x="0" y="445" width="354" height="379" frameX="-52" frameY="-118" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0009" x="354" y="476" width="359" height="358" frameX="-52" frameY="-139" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0010" x="354" y="476" width="359" height="358" frameX="-52" frameY="-139" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0011" x="1506" y="671" width="359" height="345" frameX="-52" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0012" x="1506" y="671" width="359" height="345" frameX="-52" frameY="-152" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0013" x="713" y="819" width="366" height="321" frameX="-52" frameY="-176" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0014" x="713" y="819" width="366" height="321" frameX="-52" frameY="-176" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0015" x="1084" y="730" width="362" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0016" x="1084" y="730" width="362" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0017" x="1084" y="730" width="362" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0018" x="1084" y="730" width="362" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0019" x="1084" y="730" width="362" height="327" frameX="-52" frameY="-170" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0020" x="713" y="476" width="371" height="343" frameX="-53" frameY="-155" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0021" x="573" y="0" width="529" height="476" frameX="-31" frameY="0" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0022" x="573" y="0" width="529" height="476" frameX="-31" frameY="0" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0023" x="0" y="0" width="573" height="445" frameX="-1" frameY="-31" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0024" x="0" y="0" width="573" height="445" frameX="-1" frameY="-31" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0025" x="1102" y="0" width="543" height="386" frameX="-29" frameY="-93" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0026" x="1506" y="386" width="483" height="285" frameX="-29" frameY="-194" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0027" x="0" y="0" width="0" height="0" frameX="-45" frameY="-93" frameWidth="574" frameHeight="498"/>
+	<SubTexture name="engclimbanddie0028" x="0" y="0" width="0" height="0" frameX="-45" frameY="-93" frameWidth="574" frameHeight="498"/>
+</TextureAtlas>

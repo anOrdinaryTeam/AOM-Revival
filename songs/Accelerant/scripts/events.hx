@@ -16,7 +16,6 @@ function stepHit() switch(curStep) {
             FlxTween.tween(helicopter, {x: 3000}, 8);
         });
     case 289:
-        canGruntsSpawn = true;
         FlxTween.tween(opponentCam, {y: opponentCam.y - 110}, 0.6);
         FlxTween.tween(playerCam, {y: playerCam.y - 110}, 0.6);
         
@@ -49,6 +48,8 @@ function stepHit() switch(curStep) {
         tricky.playAnim('turn', true, "LOCK");
         camGame.followLerp = 0.2;
         setCamPos(camFollow.x - 120, camFollow.y - 160);
+
+    case 959, 1264: canGruntsSpawn = !canGruntsSpawn;
     case 936:
         playModSound('Hayyyyy');
         tricky.playAnim('getShot', true);

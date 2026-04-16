@@ -62,6 +62,8 @@ function create() {
             sanford.flipX = false;
             sanford.playAnim('idle');
         }
+        else if (Anim == 'shoot')
+            sanford.playAnim('idle');
     }
     sanford.playAnim('idle');
     sanford.color = 0x847F7F;
@@ -90,6 +92,8 @@ function create() {
                 }
             }
         }
+        else if (Anim == 'shoot')
+            deimos.playAnim('idle');
     }
     deimos.playAnim('idle');
     deimos.color = 0x847F7F;
@@ -110,6 +114,7 @@ function create() {
     addSprite(boombox);
 
     addSprite(gruntsLayer);
+    loadGrunts();
 
     gfHotdog.antialiasing = Options.antialiasing;
     addSprite(gfHotdog);
@@ -137,7 +142,7 @@ function create() {
     sanford.alpha = deimos.alpha = 0.001;
 }
 
-function postCreate()
+function postCreate() 
     loadHud('VS-Online');
 
 function beatHit() {
@@ -149,14 +154,53 @@ function beatHit() {
     if (deimos.animation.curAnim.name == 'idle')
         deimos.playAnim('idle');
 
-    // if (canGruntsSpawn && curBeat % 4 == 0)
-    //     spawnGrunts();
+    if (canGruntsSpawn && curBeat % 6 == 0)
+        spawnGrunts();
 }
 
 function loadGrunts() {
-    var grunt:FunkinSprite = new FunkinSprite().loadSprite(BG('grunts/1'));
-    grunt.antialiasing = Options.antialiasing;
-    grunt.addAnim('idle', 'gruntclimbanddie', 24, false);
+    graphicCache.cache(BG('grunts/grunt'));
+    graphicCache.cache(BG('grunts/agent'));
+    graphicCache.cache(BG('grunts/eng'));
+}
 
+function spawnGrunts() {
+    var amt:Int = FlxG.random.int(1, 2);
+    var excludedOffs:Array<Int> = [];
 
+    var offsets:Array<Array<Float>> = [
+        [320, -108],
+        [-400, 225],
+        [980, 240]
+    ];
+
+    var grunts:Array<Array<String>> = [
+        ['grunt', 'gruntclimbanddie'],
+        ['agent', 'agentclimbanddie'],
+        ['eng', 'engclimbanddie']
+    ];
+
+    for (i in 0...amt) {
+        var gruntType:Int = FlxG.random.int(0, 2);
+        var arr:Int = FlxG.random.int(0, 2, excludedOffs);
+        var offset:Array<Float> = offsets[arr].copy();
+
+        var sprite:String = grunts[gruntType][0];
+        var anim:String = grunts[gruntType][1];
+        var grunt:FunkinSprite = new FunkinSprite(offset[0] - 30, offset[1] - 90, BG('grunts/$sprite'));
+        grunt.antialiasing = Options.antialiasing;
+        grunt.addAnim('idle', anim, 24, false);
+        grunt.playAnim('idle', true);
+        gruntsLayer.add(grunt);
+
+        excludedOffs.push(arr);
+    }
+
+    new FlxTimer().start(0.73, () -> {
+        playModSound('argh', 0.6);
+        deimos.playAnim('shoot', true);
+        sanford.playAnim('shoot', true);
+
+        new FlxTimer().start(0.6, gruntsLayer.clear);
+    });
 }
