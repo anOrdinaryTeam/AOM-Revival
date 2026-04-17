@@ -11,6 +11,7 @@
 	<anim name="singRIGHT-shoot" anim="Hank right shoot" x="67" y="-101"/>
 	<anim name="singDOWN-shoot" anim="Hank Down Shoot" x="34" y="-133"/>
 	<anim name="singRIGHT-alt" anim="Hank screamright" x="66" y="-98"/>
+	<anim name="singLEFT-alt" anim="Hank screamright" x="66" y="-98"/>
 	<anim name="ready" anim="HankGetReady"/>
 	<anim name="shot" anim="HankScaredShootsTiky"/>
 </character>
