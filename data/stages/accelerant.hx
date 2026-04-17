@@ -8,7 +8,12 @@ public var gfHotdog:FunkinSprite = new Character(1800, 540, 'gfHotDog');
 public var gfArmsUp:Character = new Character(335, 275, 'gfArmsUp');
 public var tricky:Character = new Character(95, -330, 'tricky-acc');
 
+public var shootAtTricky:Bool = false;
 public var canGruntsSpawn:Bool = false;
+
+var trickyOffScreen:Float = 1500;
+var redFilter:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.RED);
+var hellclownLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var gruntsLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
 function BG(str:String) return getModImage('Accelerant/$str');
@@ -44,6 +49,43 @@ function create() {
     cliffs.x -= 120;
     cliffs.y += 80;
     addSprite(cliffs);
+
+    if (curDiff == 'fucked') {
+        addSprite(hellclownLayer);
+
+        var head:FunkinSprite = new FunkinSprite(10, -600).loadSprite(BG('hellClown/head'));
+        head.addAnim('idle', 'HellClownIdle', 24, true);
+        head.playAnim('idle');
+        head.antialiasing = Options.antialiasing;
+        head.scale.set(0.9, 0.9);
+        head.updateHitbox();
+        hellclownLayer.add(head);
+
+        var scale:Float = 0.9;
+        var handL:FunkinSprite = new FunkinSprite(-400, 0).loadSprite(BG('hellClown/hand'));
+        handL.addAnim('idle', 'HellClownHandsIdle', 24, true);
+        handL.playAnim('idle');
+        handL.antialiasing = Options.antialiasing;
+        handL.scale.set(scale, scale);
+        handL.updateHitbox();
+        hellclownLayer.add(handL);
+
+        var handR:FunkinSprite = new FunkinSprite(700, 0).loadSprite(BG('hellClown/hand'));
+        handR.addAnim('idle', 'HellClownHandsIdle', 24, true);
+        handR.playAnim('idle');
+        handR.antialiasing = Options.antialiasing;
+        handR.flipX = true;
+        handR.scale.set(scale, scale);
+        handR.updateHitbox();
+        hellclownLayer.add(handR);
+
+        for (hide in hellclownLayer)
+            hide.y += trickyOffScreen;
+
+        redFilter.alpha = 0.01;
+        redFilter.camera = camHUD;
+        insert(1, redFilter);
+    }
 
     sanford = new FunkinSprite(1100, -230).loadSprite(BG('sanford'));
     sanford.antialiasing = Options.antialiasing;
@@ -113,8 +155,12 @@ function create() {
     boombox.alpha = 0.001;
     addSprite(boombox);
 
-    addSprite(gruntsLayer);
-    loadGrunts();
+    if (curDiff == 'hard') {
+        addSprite(gruntsLayer);
+        graphicCache.cache(BG('grunts/grunt'));
+        graphicCache.cache(BG('grunts/agent'));
+        graphicCache.cache(BG('grunts/eng'));
+    }
 
     gfHotdog.antialiasing = Options.antialiasing;
     addSprite(gfHotdog);
@@ -158,12 +204,6 @@ function beatHit() {
         spawnGrunts();
 }
 
-function loadGrunts() {
-    graphicCache.cache(BG('grunts/grunt'));
-    graphicCache.cache(BG('grunts/agent'));
-    graphicCache.cache(BG('grunts/eng'));
-}
-
 function spawnGrunts() {
     var amt:Int = FlxG.random.int(1, 2);
     var excludedOffs:Array<Int> = [];
@@ -203,4 +243,15 @@ function spawnGrunts() {
 
         new FlxTimer().start(0.6, gruntsLayer.clear);
     });
+}
+
+public function hellClownShows() {
+    new FlxTimer().start(2, () -> {
+        shootAtTricky = true;
+        playModSound('Sound_clown_roar', 0.6);
+    }); 
+
+    FlxTween.tween(redFilter, {alpha: 0.09}, 5);
+    for (clown in hellclownLayer)
+        FlxTween.tween(clown, {y: clown.y - trickyOffScreen}, 5, {ease: FlxEase.quadInOut});
 }
