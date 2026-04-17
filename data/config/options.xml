@@ -1,5 +1,5 @@
 <!DOCTYPE codename-mod-options>
-<menu name="- ModPack Options" desc="dunno">
+<menu name="AOM Options" desc="Modpack Exc. Options">
 	<checkbox id="AOM_flashingLights" name="Flashing Lights" desc="self explanatory"/>
 	<checkbox id="AOM_disableSplashs" name="Disable Note Splash" desc="self explanatory"/>
 	<checkbox id="AOM_cpuStrumsGlow" name="Disable CPU Strum Glow" desc="just like old times"/>
@@ -21,6 +21,7 @@
 		</menu>
 
 		<menu name="Kade Engine" desc="HUD Settings">
+			<checkbox id="AOM_kade_HIT_MS" name="Show Note Hit in MS" desc="Displays the time you hit the Note in Miliseconds (script by @pharaotis on discord)"/>
 			<checkbox id="AOM_kade_TIMEBAR" name="Enable Time Bar"/>
 			<checkbox id="AOM_kade_RATINGS" name="Include Ratings"/>
 			<checkbox id="AOM_kade_WATERMARK" name="Enable The Watermark"/>
