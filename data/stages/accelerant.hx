@@ -245,7 +245,9 @@ function spawnGrunts() {
     });
 }
 
-public function hellClownShows() {
+var executed:Bool = false;
+public function hellClownShows() if (!executed) {
+    executed = true;
     new FlxTimer().start(2, () -> {
         shootAtTricky = true;
         playModSound('Sound_clown_roar', 0.6);
