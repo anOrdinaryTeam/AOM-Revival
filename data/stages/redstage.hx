@@ -44,3 +44,14 @@ function create(){
     dad.scale.set(0.6,0.6);
 
 }
+
+function beatHit(){
+
+    if (health <= 0.5 && curBeat % 2 == 0){
+        playModSound('lowhp',7.5);
+    }
+
+}
+
+function onPlayerHit(e) e.healthGain = 0;
+function onPlayerMiss(e) e.healthGain = -0.1;

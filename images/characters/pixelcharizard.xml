@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="red.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="chariidle instancia 10000" x="0" y="0" width="605" height="605" pivotX="8.25" pivotY="11.05" frameX="-9" frameY="-12" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10001" x="0" y="0" width="605" height="605" frameX="-9" frameY="-12" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10002" x="605" y="0" width="601" height="618" frameX="-11" frameY="0" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10003" x="605" y="0" width="601" height="618" frameX="-11" frameY="0" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10004" x="1206" y="0" width="623" height="590" frameX="0" frameY="-28" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10005" x="1206" y="0" width="623" height="590" frameX="0" frameY="-28" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10006" x="0" y="618" width="605" height="615" frameX="-9" frameY="-3" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10007" x="0" y="618" width="605" height="615" frameX="-9" frameY="-3" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10008" x="0" y="0" width="605" height="605" frameX="-9" frameY="-12" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10009" x="0" y="0" width="605" height="605" frameX="-9" frameY="-12" frameWidth="623" frameHeight="618"/>
+	<SubTexture name="chariidle instancia 10010" x="0" y="0" width="605" height="605" frameX="-9" frameY="-12" frameWidth="623" frameHeight="618"/>
+</TextureAtlas>

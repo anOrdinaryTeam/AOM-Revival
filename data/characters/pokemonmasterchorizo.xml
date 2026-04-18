@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="charizard" icon="pokemonmasterchorizo">
+	<anim name="idle" anim="chari idle"/>
+	<anim name="charizard atack" anim="charizard atack" x="448" y="32"/>
+</character>

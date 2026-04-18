@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="rederedred.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="chari idle0000" x="0" y="0" width="968" height="753" pivotX="110.5" pivotY="0" frameX="-8" frameY="-35" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0001" x="0" y="0" width="968" height="753" frameX="-8" frameY="-35" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0002" x="968" y="0" width="971" height="758" frameX="-6" frameY="-30" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0003" x="968" y="0" width="971" height="758" frameX="-6" frameY="-30" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0004" x="1939" y="0" width="979" height="769" frameX="-2" frameY="-16" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0005" x="2918" y="0" width="984" height="782" frameX="0" frameY="0" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0006" x="2918" y="0" width="984" height="782" frameX="0" frameY="0" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0007" x="0" y="782" width="984" height="780" frameX="0" frameY="-3" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0008" x="0" y="782" width="984" height="780" frameX="0" frameY="-3" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0009" x="0" y="782" width="984" height="780" frameX="0" frameY="-3" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="chari idle0010" x="0" y="782" width="984" height="780" frameX="0" frameY="-3" frameWidth="984" frameHeight="788"/>
+	<SubTexture name="charizard atack0000" x="984" y="782" width="825" height="815" pivotX="467.45" pivotY="11.65" frameX="-530" frameY="0" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0001" x="984" y="782" width="825" height="815" frameX="-530" frameY="0" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0002" x="1809" y="782" width="1368" height="854" frameX="0" frameY="-11" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0003" x="1809" y="782" width="1368" height="854" frameX="0" frameY="-11" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0004" x="0" y="1636" width="1289" height="790" frameX="-94" frameY="-60" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0005" x="1289" y="1636" width="921" height="755" frameX="-462" frameY="-60" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0006" x="2210" y="1636" width="933" height="760" frameX="-464" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0007" x="3143" y="1636" width="899" height="760" frameX="-498" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0008" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0009" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0010" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0011" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0012" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0013" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0014" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0015" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0016" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0017" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0018" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+	<SubTexture name="charizard atack0019" x="0" y="2426" width="902" height="760" frameX="-495" frameY="-55" frameWidth="1397" frameHeight="865"/>
+</TextureAtlas>

@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="pikachu" icon="pokemonmasterpikachu">
+	<anim name="idle" anim="PIKACHU IDLE"/>
+	<anim name="pikaatack" anim="pikaatack" x="-15" y="-13"/>
+</character>
