@@ -9,7 +9,7 @@ var bfDude:FlxSprite;
 var glass:FlxSprite;
 var tordBG:FlxSprite;
 
-var should:Bool = false;
+var should:String = '';
 
 var camOTHER:FlxCamera = new FlxCamera();
 function postCreate() {
@@ -21,26 +21,40 @@ function postCreate() {
 function create() {
     for (f in ['bf-tord', 'edd-tord', 'matt-tord', 'tomRunsIn', 'tordBot', 'tordGlass', 'tordBG', 'tordHelicopter', 'tordFlails', 'bf-lookup'])
         { graphicCache.cache(getModImage('Challenge-EDD/fucked/$f')); }
-    precacheCharacter(0, 'tord');
-    // tordCabine();
+    precacheCharacter(0, 'tord'); precacheCharacter(1, 'bf_fucked');
 }
 
 function onCameraMove(_) {
-    if (should && !_.cancelled)
-        _.position.set(950, 450);
+    if (!_.cancelled) {
+        if (should == 'WHATHEFUK') { _.position.set(950, 450); }
+        else if (should == 'dawg_tord') { _.position.set(925, -750); }
+    }
 }
 
 function stepHit() {
     switch(curStep) {
-        case 917: should = true;
+        case 917: should = 'WHATHEFUK';
         case 920: FlxG.camera.shake(0.005, 5.75);
         case 930: tordEntrance();
-        case 1026: tordCabine();
-        case 2015: tordFall();
+        case 1026: tordCabine(false);
+
+        case 1135, 1407, 1631, 1760:
+            FlxTween.tween(edd, {x: -65, y: 370}, 0.5, {ease: FlxEase.quadInOut});
+        case 1200, 1472, 1660, 1856:
+            FlxTween.tween(edd, {x: -565, y: 770}, 1, {ease: FlxEase.quadInOut});
+
+        case 1263, 1535, 1695, 1919:
+            FlxTween.tween(bf, {x: 835, y: 290}, 0.5, {ease: FlxEase.quadInOut});
+        case 1328, 1608, 1728, 1993:
+            FlxTween.tween(bf, {x: 1235, y: 790}, 1, {ease: FlxEase.quadInOut});
+
+        case 2017: tordCabine(true);
+
     }
 }
 
 function tordEntrance() {
+    remove(door);
     remove(matt);
     remove(gf); insert(6, gf);
 
@@ -69,7 +83,7 @@ function tordEntrance() {
     mattTord.addAnim('fiu', 'mattHarpoonBit', 12, false);
     
     mattTord.playAnim('dafuk');
-    insert(9, mattTord);
+    insert(10, mattTord);
     
     eddTord = new FunkinSprite(190, 195).loadSprite(getModImage('Challenge-EDD/fucked/edd-tord'));
     eddTord.antialiasing = true;
@@ -80,7 +94,7 @@ function tordEntrance() {
     eddTord.addAnim('look', 'EddLookingUp', 12, false);
 
     eddTord.playAnim('shaking');
-    insert(10, eddTord);
+    insert(11, eddTord);
 
     bfTord = new FunkinSprite(1160, 450).loadSprite(getModImage('Challenge-EDD/fucked/bf-tord'));
     bfTord.antialiasing = true;
@@ -99,7 +113,7 @@ function tordEntrance() {
         bfTord.playAnim('tord');
     });
 
-    new FlxTimer().start(1, () -> {
+    new FlxTimer().start(0.6, () -> {
         tomRush = new FunkinSprite(1315, 425).loadSprite(getModImage('Challenge-EDD/fucked/tomRUnsIn'));
         tomRush.antialiasing = true;
         tomRush.scale.set(1.7, 1.7);
@@ -110,30 +124,51 @@ function tordEntrance() {
     });
 }
 
-function tordCabine() {
-    for (t in [boyfriend, dad])
-        t.alpha = 1;
+function tordCabine(already:Bool) {
+    if (!already)
+    {
+        should = 'dawg_tord';
+        for (t in [boyfriend, dad])
+            t.alpha = 1;
 
-    tordBG = new FlxSprite(-330, -360, getModImage('Challenge-EDD/fucked/tordBG'));
-    tordBG.camera = camOTHER;
-    insert(1, tordBG);
-    
-    changeCharacter(0, 'tord');
-    dad.setPosition(-50, -35);
-    dad.camera = camOTHER;
-    
-    glass = new FlxSprite(0, -100, getModImage('Challenge-EDD/fucked/tordGlass'));
-    glass.camera = camOTHER;
-    add(glass);
+        tordBG = new FlxSprite(-330, -360, getModImage('Challenge-EDD/fucked/tordBG'));
+        tordBG.camera = camOTHER;
+        insert(1, tordBG);
+        
+        changeCharacter(0, 'tord');
+        dad.setPosition(-50, -35);
+        dad.camera = camOTHER;
+        
+        glass = new FlxSprite(0, -100, getModImage('Challenge-EDD/fucked/tordGlass'));
+        glass.camera = camHUD;
+        add(glass);
 
-    FlxTween.tween(glass.scale, {x: 20, y: 20}, 0.75, {ease: FlxEase.quadOut}, {onComplete: function() {
-        remove(glass);
-    }});
-    FlxTween.tween(glass, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+        FlxTween.tween(glass.scale, {x: 20, y: 20}, 0.75, {ease: FlxEase.quadInOut});
+        FlxTween.tween(glass, {alpha: 0}, 0.5, {ease: FlxEase.quadInOut});
+
+        changeCharacter(1, 'bf_fucked');
+        bf.setPosition(1235, 790);
+        bf.camera = camOTHER;
+
+        edd = new Character(-565, 770, "edd_fucked");
+        edd.camera = camOTHER;
+        add(edd);
+    }
+    else
+    {
+        FlxTween.tween(glass, {alpha: 0.8}, 0.3, {ease: FlxEase.quadInOut});
+        FlxTween.tween(glass.scale, {x: 10, y: 10}, 0.3, {ease: FlxEase.quadInOut});
+
+        new FlxTimer().start(0.28, () -> {
+            dad.alpha = 0; remove(glass); remove(tordBG);
+        });
+
+        new FlxTimer().start(0.1, () -> tordFall());
+    }
 }
 
 function tordFall() {
-    for (t in [boyfriend, dad, bfTord, tomRush])
+    for (t in [boyfriend, bfTord, tomRush])
         t.alpha = 0;
     
     eddTord.x += 135;

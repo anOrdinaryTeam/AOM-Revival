@@ -16,7 +16,7 @@ function stepHit() {
     switch(curStep)
     {
         case 416: Tom();
-
+        
         case 911: 
             Matt();
             Eduardo();
@@ -44,7 +44,6 @@ function stepHit() {
 
         case 1007, 1231, 1359, 1487: canEdd = true;
         case 1135, 1295, 1423, 1551: canEdd = false;
-
         case 1599: Dudes(true);
     }
 
