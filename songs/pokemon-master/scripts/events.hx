@@ -3,8 +3,8 @@ function create(){
         precacheCharacter(0, 'pixelpokemonmaster'); // los pendejos
         precacheCharacter(1, 'pixelpokemonmasterbf');
 
-        setRatingPrefix('KadeNewPixel');
-        setRatingPrefix('KadeNew');
+        //setRatingPrefix('KadeNewPixel');
+        //setRatingPrefix('KadeNew');
 
 }
 
@@ -49,3 +49,14 @@ function stepHit()
             //ratingPrefix = 'KadeNew';
 
         }
+
+function beatHit(){
+
+    if (health <= 0.5 && curBeat % 3 == 0){
+        playModSound('lowhp',7.5);
+    }
+
+}
+
+function onPlayerHit(e) e.healthGain = 0;
+function onPlayerMiss(e) e.healthGain = -0.1;

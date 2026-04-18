@@ -99,6 +99,9 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('Kade_RatingType') != FlxG.save.data.AOM_kade_RATINGS_TYPE)
         saveMap.set('Kade_RatingType', FlxG.save.data.AOM_kade_RATINGS_TYPE);
+
+    if (saveMap.get('Kade_HitMS') != FlxG.save.data.AOM_kade_HIT_MS)
+        saveMap.set('Kade_HitMS', FlxG.save.data.AOM_kade_HIT_MS);
     // [ END ]
 }
 
@@ -148,6 +151,9 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_kade_RATINGS_TYPE ??= 'KE';
     saveMap.set('Kade_RatingType', FlxG.save.data.AOM_kade_RATINGS_TYPE);
+
+    FlxG.save.data.AOM_kade_HIT_MS ??= false;
+    saveMap.set('Kade_HitMS', FlxG.save.data.AOM_kade_HIT_MS);
     // [ END ]
 }
 

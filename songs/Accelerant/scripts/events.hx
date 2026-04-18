@@ -49,7 +49,6 @@ function stepHit() switch(curStep) {
         camGame.followLerp = 0.2;
         setCamPos(camFollow.x - 120, camFollow.y - 160);
 
-    case 959, 1264: canGruntsSpawn = !canGruntsSpawn;
     case 936:
         playModSound('Hayyyyy');
         tricky.playAnim('getShot', true);
@@ -66,6 +65,13 @@ function stepHit() switch(curStep) {
     case 1012:
         gfHotdog.playAnim('walk');
         FlxTween.tween(gfHotdog, {x: 1120}, 2.5, {onComplete: gfHotdog.dance});
+
+    // [ HARD ]
+    case 959, 1264:
+        if (curDiff == 'hard')
+            canGruntsSpawn = !canGruntsSpawn;
+        else
+            hellClownShows();
 }
 
 function tweenZoom(target:Float, time:Float) {

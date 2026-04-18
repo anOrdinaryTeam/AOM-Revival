@@ -9,6 +9,23 @@ var fuckingcomboCamera:FlxCamera = new FlxCamera();
 var missesType:String = getSaveData('Kade_MissesType');
 doIconBop = false;
 
+// Made by @pharaotis in discord
+var currentTimingShown:FunkinText = new FunkinText(0, 0, 0, "0ms", 20);
+var tween:FlxTween = null;
+var colors:Map<String, FlxColor> = [
+    'shit' => FlxColor.RED,
+    'bad' => FlxColor.RED,
+    'good' => FlxColor.GREEN,
+    'sick' => FlxColor.CYAN
+];
+
+function pharaotisMsTiming() {
+    currentTimingShown.setFormat(null, 20, FlxColor.WHITE, null, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    currentTimingShown.setPosition(FlxG.width / 1.75, FlxG.height / 2.5); // change this to something else this was just a placeholder   
+    currentTimingShown.alpha = 0;
+    hudItems.add(currentTimingShown);
+}
+
 function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
     fuckingcomboCamera.bgColor = 0;
     FlxG.cameras.insert(fuckingcomboCamera, 1, false);
@@ -54,6 +71,9 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
         hudItems.add(watermark);
     }
 
+    if (getSaveData('Kade_HitMS'))
+        pharaotisMsTiming();
+
     scripts.call('postHudLoad');
 }
 
@@ -72,8 +92,19 @@ function beatHit() for (icons in [iconP1, iconP2]) {
 }
 
 var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
-function onPlayerHit(_)
+function onPlayerHit(_) {
     ratingsInt[_.rating] += 1;
+
+    if (getSaveData('Kade_HitMS') && !_.note.isSustainNote && _.player)
+        showMS(_);
+}
+
+function onRatingUpdate(_) {
+    var str:String = 'Score: ' + songScore + ' | ' + missesType + ': ' + misses + ' | Accuracy: ' + CoolUtil.quantize(accuracy * 100, 100) + '%';
+    if (getSaveData('Kade_Ratings')) str += ' | ' + getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _.rating.rating);
+    hudItems.members[0]?.text = str;
+    hudItems.members[0]?.screenCenter(FlxAxes.X);
+}
 
 function getRankLetter(acc:Float, cneRating:String) {
     var rating:String = 'N/A';
@@ -141,9 +172,23 @@ function getRankLetter(acc:Float, cneRating:String) {
     return rating;
 }
 
-function onRatingUpdate(_) {
-    var str:String = 'Score: ' + songScore + ' | ' + missesType + ': ' + misses + ' | Accuracy: ' + CoolUtil.quantize(accuracy * 100, 100) + '%';
-    if (getSaveData('Kade_Ratings')) str += ' | ' + getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _.rating.rating);
-    hudItems.members[0]?.text = str;
-    hudItems.members[0]?.screenCenter(FlxAxes.X);
+function showMS(e) {
+    var msTiming:Float = trunucateFloat(-(e.note.strumTime - Conductor.songPosition), 0);
+    currentTimingShown.alpha = 1;
+    currentTimingShown.color = colors[e.rating];
+    currentTimingShown.text = msTiming + "ms";
+
+    tween?.cancel();
+	tween = FlxTween.tween(currentTimingShown, {alpha: 0}, 0.2, {
+		startDelay: Conductor.crochet * 0.001,
+		onComplete: () -> tween = null
+	});
+}
+
+function trunucateFloat(number:Float, precision:Int):Float
+{
+    var num = number;
+    num = num * Math.pow(10, precision);
+    num = Math.round(num) / Math.pow(10, precision);
+    return num;
 }
