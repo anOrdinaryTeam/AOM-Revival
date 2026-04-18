@@ -36,12 +36,17 @@ function onPlayerMiss(e) if (e.noteType == t) {
     cancelHankAnim = true;
     dad.playSingAnim(e.direction, '-shoot');
 
+    e.animCancelled = true;
+    boyfriend.playAnim('hurt', true);
+
     timer.cancel();
     timer.start(0.3, () -> cancelHankAnim = false);
 
     shootTricky();
     if (curDiff == 'fucked') bulletSound.play(true);
     camGame.shake(0.01, 0.1);
+
+    e.healthGain -= curDiff == 'fucked' ? 20 : 0.6;
 }
 
 function onDadHit(e)

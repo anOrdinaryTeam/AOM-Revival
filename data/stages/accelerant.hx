@@ -2,7 +2,10 @@ public var sanford:FunkinSprite;
 public var deimos:FunkinSprite;
 public var helicopter:FunkinSprite;
 public var boombox:FunkinSprite;
+public var lever:FunkinSprite;
+
 public var floor:FlxSprite;
+public var laser:FlxSprite;
 
 public var gfHotdog:FunkinSprite = new Character(1800, 540, 'gfHotDog');
 public var gfArmsUp:Character = new Character(335, 275, 'gfArmsUp');
@@ -10,8 +13,13 @@ public var tricky:Character = new Character(95, -330, 'tricky-acc');
 
 public var shootAtTricky:Bool = false;
 public var canGruntsSpawn:Bool = false;
+var drainHealth:Bool = false;
 
+public var curLaserPoint:Float = 10;
+public var laserLerp:Float = 0.1;
+public var laserBop:Float = 20;
 var trickyOffScreen:Float = 1500;
+
 var redFilter:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.RED);
 var hellclownLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var gruntsLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
@@ -125,6 +133,10 @@ function create() {
             deimos.playAnim('idle');
 
             gf.alpha = 0;
+            new FlxTimer().start(0.1, () -> {
+                laser.alpha = laser.alpha == 0.001 ? 1 : 0.001;
+            }, 3);
+
             gfArmsUp.alpha = boombox.alpha = 1;
             gfArmsUp.playAnim('upArms', true);
             gfArmsUp.animation.finishCallback = (Anim) -> {
@@ -188,17 +200,69 @@ function create() {
     sanford.alpha = deimos.alpha = 0.001;
 }
 
-function postCreate() 
+function postCreate() {
     loadHud('VS-Online');
 
+    laser = new FlxSprite(500, curLaserPoint, BG('laser'));
+    laser.antialiasing = Options.antialiasing;
+    laser.scale.set(1.2, 1.2);
+    laser.updateHitbox();
+    laser.alpha = 0.001;
+    add(laser);
+
+    if (curDiff == 'fucked') {
+        lever = new FunkinSprite().loadSprite(BG('LeverAssets'));
+        lever.antialiasing = Options.antialiasing;
+        lever.addAnim('idle', 'Appear', 24, false);
+        lever.addAnim('idleR', 'Appear', 24, false, false, [6, 5, 4, 3, 2, 1, 0]);
+        lever.addAnim('pull', 'Pull', 24, false, false, [0, 1, 2, 3, 4, 5, 6]);
+        lever.addAnim('pull-loop', 'Pull', 24, true, false, [7, 8, 9, 10, 11, 12, 13, 14, 15]);
+        lever.addOffset('idle', 1, downscroll ? 29 : -24);
+        lever.animation.callback = (Anim) -> {
+            if (Anim == 'idle') lever.alpha = 1;
+            else if (Anim == 'idleR') drainHealth = false;
+        }
+        lever.animation.finishCallback = (Anim) -> {
+            if (Anim == 'idle') {
+                lever.playAnim('pull');
+                drainHealth = true;
+            }
+            else if (Anim == 'pull')
+                lever.playAnim('pull-loop');
+            else if (Anim == 'idleR')
+                lever.alpha = 0.001;
+        }
+        lever.alpha = 0.001;
+        lever.camera = camHUD;
+        lever.scale.set(0.7, 0.7);
+        lever.updateHitbox();
+        lever.flipY = downscroll;
+        lever.screenCenter();
+        lever.y += downscroll ? 180 : 182;
+        insert(getObjectOrder(healthBarBG) - 1, lever);
+    }
+}
+
+function update() {
+    var laserY:Float = lerp(laser.y, curLaserPoint, laserLerp);
+    laser.y = laserY;
+
+    if (curStep >= 662)
+        laser.alpha = tricky.animation.curAnim.name == 'idle' ? 1 : 0;
+
+    if (drainHealth)
+        health -= 0.0015;
+}
+
 function beatHit() {
+    laser.y += laserBop;
     boombox.playAnim('boom');
 
     if (sanford.animation.curAnim.name == 'idle')
-        sanford.playAnim('idle');
+        sanford.playAnim('idle', true);
 
     if (deimos.animation.curAnim.name == 'idle')
-        deimos.playAnim('idle');
+        deimos.playAnim('idle', true);
 
     if (canGruntsSpawn && curBeat % 6 == 0)
         spawnGrunts();

@@ -38,6 +38,9 @@ function stepHit() switch(curStep) {
         camGame.followLerp = 0.2;
         tweenZoom(0.85, 0.1);
         setCamPos(camFollow.x - 120, camFollow.y - 160);
+
+        curLaserPoint = 40;
+        laser.x = 690;
     case 736:
         camGame.followLerp = 0.04;
         tricky.playAnim('scream', true);
@@ -66,12 +69,18 @@ function stepHit() switch(curStep) {
         gfHotdog.playAnim('walk');
         FlxTween.tween(gfHotdog, {x: 1120}, 2.5, {onComplete: gfHotdog.dance});
 
-    // [ HARD ]
     case 959, 1264:
         if (curDiff == 'hard')
             canGruntsSpawn = !canGruntsSpawn;
         else
             hellClownShows();
+    
+    case 722:
+        if (curDiff == 'fucked')
+            lever.playAnim('idle');
+    case 1136:
+        if (curDiff == 'fucked')
+            lever.playAnim('idleR');
 }
 
 function tweenZoom(target:Float, time:Float) {

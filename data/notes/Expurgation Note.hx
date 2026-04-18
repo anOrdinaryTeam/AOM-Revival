@@ -13,6 +13,11 @@ function onPostNoteCreation(_) if (_.noteType == t) {
     _.note.offset.y = 55;
 }
 
+function onPlayerHit(e) if (e.noteType == t) {
+    e.animCancelled = true;
+    e.healthGain -= 20;
+}
+
 function onPlayerMiss(e) if (e.noteType == t) {
 	e.cancel();
 	deleteNote(e.note); 
