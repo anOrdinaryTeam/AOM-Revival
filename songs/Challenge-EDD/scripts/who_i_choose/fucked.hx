@@ -11,16 +11,18 @@ var tordBG:FlxSprite;
 
 var should:Bool = false;
 
-var camOther:FlxCamera = new FlxCamera();
+var camOTHER:FlxCamera = new FlxCamera();
+function postCreate() {
+    camOTHER.bgColor = FlxColor.TRANSPARENT;
+    FlxG.cameras.add(camOTHER, false);
+    FlxG.cameras.setOrder([camGame, camOTHER, camHUD]);
+}
 
 function create() {
-    camOther.bgColor = 0;
-    FlxG.cameras.add(camOther, false);
-
     for (f in ['bf-tord', 'edd-tord', 'matt-tord', 'tomRunsIn', 'tordBot', 'tordGlass', 'tordBG', 'tordHelicopter', 'tordFlails', 'bf-lookup'])
         { graphicCache.cache(getModImage('Challenge-EDD/fucked/$f')); }
     precacheCharacter(0, 'tord');
-    tordCabine();
+    // tordCabine();
 }
 
 function onCameraMove(_) {
@@ -40,8 +42,7 @@ function stepHit() {
 
 function tordEntrance() {
     remove(matt);
-    remove(gf);
-    insert(6, gf);
+    remove(gf); insert(6, gf);
 
     for (t in [boyfriend, dad])
         t.alpha = 0;
@@ -108,20 +109,23 @@ function tordEntrance() {
         insert(10, tomRush);
     });
 }
-var hah:Int = 3;
 
 function tordCabine() {
-    tordBG = new FlxSprite(-330, -360, getModImage('Challenge-EDD/fucked/tordBG'));
-    tordBG.camera = camHUD;
-    setObjectOrder(tordBG, camHUD);
-    
-    glass = new FlxSprite(0, -100, getModImage('Challenge-EDD/fucked/tordGlass'));
-    glass.camera = camOther;
-    setObjectOrder(glass, camOther);
+    for (t in [boyfriend, dad])
+        t.alpha = 1;
 
+    tordBG = new FlxSprite(-330, -360, getModImage('Challenge-EDD/fucked/tordBG'));
+    tordBG.camera = camOTHER;
+    insert(1, tordBG);
+    
     changeCharacter(0, 'tord');
     dad.setPosition(-50, -35);
+    dad.camera = camOTHER;
     
+    glass = new FlxSprite(0, -100, getModImage('Challenge-EDD/fucked/tordGlass'));
+    glass.camera = camOTHER;
+    add(glass);
+
     FlxTween.tween(glass.scale, {x: 20, y: 20}, 0.75, {ease: FlxEase.quadOut}, {onComplete: function() {
         remove(glass);
     }});
@@ -161,6 +165,5 @@ function tordFall() {
     tomHarpoon.animation.finishCallback = function(name:String) {
         if (name == 'line') tomHarpoon.playAnim('harpLoop');
     }
-
     new FlxTimer().start(6.5, () -> tomHarpoon.playAnim('harp'));
 }
