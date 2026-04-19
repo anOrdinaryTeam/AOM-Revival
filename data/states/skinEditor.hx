@@ -66,6 +66,9 @@ function create() {
     }
     
     changePage(0);
+    #if ARKOSE_PORT
+	addMobilePad("LEFT_FULL", "A_B");
+	#end
 }
 
 function update(dt) {
