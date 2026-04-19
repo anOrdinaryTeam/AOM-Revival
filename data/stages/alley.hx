@@ -47,4 +47,3 @@ function create() {
         addSprite(floor);
     }
 }
-
