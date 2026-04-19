@@ -69,8 +69,8 @@ function create() {
 
     scroll(0, true);
     #if ARKOSE_PORT
-addMobilePad("UP_DOWN", "A_B");
-#end
+	addMobilePad("LEFT_FULL", "A_B");
+	#end
 }
 
 function scroll(i:Int = 0, f:Bool = false) {
