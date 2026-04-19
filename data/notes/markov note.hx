@@ -6,8 +6,8 @@ function onNoteCreation(_) if (_.noteType == 'markov note') {
 }
 
 function onPostNoteCreation(_) if (_.noteType == 'markov note') {
-	_.note.offset.x += 50;
-	_.note.offset.y += 65;
+	_.note.offset.x -= 4000;
+	_.note.offset.y += 16;
 }
 
 function onPlayerHit(e) if (e.noteType == "markov note")
