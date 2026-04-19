@@ -67,6 +67,10 @@ function create() {
     bgFlasher.alpha = 0.001;
     add(bgFlasher);
 
+    #if ARKOSE_PORT
+	addMobilePad("NONE", "A_B_M_E");
+	#end
+
     // since Optionsmenu doesnt have callbacks events, I dont have other choice
     RefreshSaveDatas();
 }
@@ -119,13 +123,13 @@ function update(dt) {
             FlxG.switchState(new PlayState());
         }
 
-        if (controls.DEV_ACCESS) {
+        if (controls.DEV_ACCESS #if ARKOSE_PORT mobilePadJustPressed('E') #end) {
             persistentUpdate = false;
             persistentDraw = true;
             openSubState(new EditorPicker());
         }
 
-        if (controls.SWITCHMOD) {
+        if (controls.SWITCHMOD #if ARKOSE_PORT mobilePadJustPressed('M') #end) {
 			openSubState(new ModSwitchMenu());
 			persistentUpdate = false;
 			persistentDraw = true;
