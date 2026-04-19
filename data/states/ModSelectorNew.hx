@@ -118,10 +118,9 @@ function create() {
     scroll(0, true);
     currentMod = 'NONE';
     
-    hx
-#if ARKOSE_PORT
-addMobilePad("UP_DOWN", "A_B");
-#end
+	#if ARKOSE_PORT
+	addMobilePad("UP_DOWN", "A_B");
+	#end
 }
 
 function update(dt) {
