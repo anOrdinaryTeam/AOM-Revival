@@ -55,7 +55,7 @@ function stepHit() switch(curStep) {
     case 936:
         playModSound('Hayyyyy');
         tricky.playAnim('getShot', true);
-        FlxTween.tween(tricky, {y: tricky.y - 500}, 0.5, {ease: FlxEase.quadInOut, onComplete: () -> {
+        FlxTween.tween(tricky, {y: tricky.y - 500}, 0.4, {ease: FlxEase.quadInOut, onComplete: () -> {
             setObjectOrder(tricky, getObjectOrder(floor));
             FlxTween.tween(tricky, {y: tricky.y + 2000}, 1, {ease: FlxEase.quadInOut});
         }});
