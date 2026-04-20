@@ -38,36 +38,83 @@ public function setRatingPrefix(tag:String) {
     for (graphic in folder) graphicCache.cache(Paths.image('modCombos/Eteled/$graphic'));
 }
 
-public function changeNoteSkin(path:String, _strum:Dynamic, _part:String = 'both') if (_strum != null) {
-    var part:String = _part.toLowerCase();
-    if (!Assets.exists(Paths.image(path)) || !Assets.exists(Paths.getPath('images/$path.xml'))) {
+/**
+* Simple Strum/Note Skin Changer 
+* (TO USE IT IS REQUIRED TO PRECACHE THE SPRITES TO USE)
++
+* @param path Path to the sprite
+* @param _strum Designed Strum to change -> cpu/cpuStrums | player/playerStrums | strumLines.members[idx]
+* @param _part (Optional) Which part of the Object to change -> 'strum'/'strums' | 'note'/'notes' | 'both'
+* @param _pixel (Optional) Self-explain
+*/
+public function changeNoteSkin(path:String, _strum:Dynamic, ?_part:String, ?_pixel:Bool) if (_strum != null) {
+    var realPath:String = 'modsNotes/$path';
+    var part:String = _part ?? 'both';
+    var pixel:Bool = _pixel ?? false;
+
+    if (!pixel) if (!Assets.exists(Paths.image(path)) || !Assets.exists(Paths.getPath('images/$path.xml'))) {
         trace('Sprisheet/XML doesnt exists - [$path]');
         return;
     }
+    else 
+        if (!Assets.exists(Paths.image('$path-pixels') || Assets.exists(Paths.image(path + 'Ends'))) {
+            trace('One of two parts of the notes doesnt exists');
+            return;
+        }
 
     if (part == 'strum' || part == 'strums' || part == 'both') for (i => strum in _strum.members) {
-        var prefixes:Array<String> = ['LEFT', 'DOWN', 'UP', 'RIGHT'];
-        strum.frames = Paths.getSparrowAtlas(path);
-        strum.animation.addByPrefix('static', 'arrow${prefixes[i]}');
-        strum.animation.addByPrefix('pressed', '${prefixes[i].toLowerCase()} press', 24, false);
-        strum.animation.addByPrefix('confirm', '${prefixes[i].toLowerCase()} confirm', 24, false);
+        if (!pixel) {
+            var prefixes:Array<String> = ['LEFT', 'DOWN', 'UP', 'RIGHT'];
+            strum.frames = Paths.getSparrowAtlas(realPath);
+            strum.animation.addByPrefix('static', 'arrow${prefixes[i]}');
+            strum.animation.addByPrefix('pressed', '${prefixes[i].toLowerCase()} press', 24, false);
+            strum.animation.addByPrefix('confirm', '${prefixes[i].toLowerCase()} confirm', 24, false);
+        }
+        else {
+            var ID:Int = strum.strumID;
+            strum.loadGraphic(Paths.image(realPath));
+
+            strum.animation.add("static", [ID]);
+            strum.animation.add("pressed", [4 + ID, 8 + ID], 12, false);
+            strum.animation.add("confirm", [12 + ID, 16 + ID], 24, false);
+            strum.scale.set(6, 6);
+        }
+
         strum.updateHitbox();
     }
 
     if (part == 'note' || part == 'notes' || part == 'both') for (babyArrow in _strum.notes) {
-        var lastAnim:String = babyArrow.animation.name;
         var color:String = ["purple", "blue", "green", "red"][babyArrow.strumID % 4];
+        var lastAnim:String = babyArrow.animation.name;
 
-        babyArrow.frames = Paths.getFrames(path);
-        babyArrow.animation.addByPrefix(lastAnim, switch(lastAnim){
-            case 'scroll': '${color}0';
-            case 'hold': '${color} hold piece';
-            case 'holdend': '${(color == "purple" ? 'pruple end hold' : '${color} hold end')}0';
-        });
+        if (!pixel) {
+            var newPrefix:String = switch(lastAnim) {
+                case 'scroll': '${color}0';
+                case 'hold': '$color hold piece';
+                case 'holdend': '${(color == "purple" ? 'pruple end hold' : '$color hold end')}0';
+            }
+
+            babyArrow.frames = Paths.getSparrowAtlas(realPath);
+            babyArrow.animation.addByPrefix(lastAnim, newPrefix);
+        }
+        else {
+            babyArrow.loadGraphic(Paths.image(realPath));
+            note.animation.add(lastAnim, [4 + babyArrow.strumID]);
+        }
+
+        
         babyArrow.animation.play(lastAnim);
         babyArrow.updateHitbox();
     }
 }
+
+public function setObjectOrder(item:FlxBasic, pos:Int) if (item != null) {
+    remove(item);
+    insert(pos, item);
+}
+
+public function getObjectOrder(item:FlxBasic) if (item != null)
+    return members.indexOf(item);
 
 function create() {
     RefreshSaveDatas();
@@ -108,11 +155,3 @@ function onPlayerHit(_) {
     if (!_.note.isSustainNote) _.showSplash = !FlxG.save.data.AOM_disableSplashs;
     if (ratingPrefix != '') _.ratingPrefix = 'modCombos/$ratingPrefix/';
 }
-
-public function setObjectOrder(item:FlxBasic, pos:Int) if (item != null) {
-    remove(item);
-    insert(pos, item);
-}
-
-public function getObjectOrder(item:FlxBasic) if (item != null)
-    return members.indexOf(item);

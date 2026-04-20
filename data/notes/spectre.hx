@@ -33,6 +33,10 @@ function onNoteCreation(_) if (_.noteType == 'spectre') {
     if (_.strumLineID <= 0) _.note.wasGoodHit = true;
 }
 
+function onPostNoteCreation(_) if (_.noteType == 'spectre')
+	if (downscroll) _.note.offset.y += 16;
+    else _.note.offset.y = 4000;
+
 function onPlayerHit(_) if (_.noteType == 'spectre') {
     _.animCancelled = true;
     playModSound('SpectreArrow');

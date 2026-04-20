@@ -12,7 +12,8 @@ function postCreate() {
     healthBar.visible = false;
     healthBarBG.visible = false;
 
-    var newBar:FlxBar = new FlxBar(healthBarBG.x, healthBarBG.y - 50, FlxBarFillDirection.RIGHT_TO_LEFT, Std.int(healthBarBG.width), Std.int(healthBarBG.height), this, 'health', 0, 2);
+    var Y:Float = downscroll ? -50 : -15;
+    var newBar:FlxBar = new FlxBar(healthBarBG.x, healthBarBG.y + Y, FlxBarFillDirection.RIGHT_TO_LEFT, Std.int(healthBarBG.width), Std.int(healthBarBG.height), this, 'health', 0, 2);
     newBar.scrollFactor.set();
     newBar.antialiasing = Options.antialiasing;
     newBar.createImageEmptyBar(modPath('HealthBar_Placeholder_Red'), FlxColor.WHITE);
@@ -60,6 +61,9 @@ function onNoteCreation(_) if (_.noteType == 'poison') {
 	_.note.latePressWindow = 0.2;
     if (_.strumLineID <= 0) _.note.wasGoodHit = true;
 }
+
+function onPostNoteCreation(_) if (_.noteType == 'poison')
+	if (downscroll) _.note.offset.y += 16;
 
 function onPlayerHit(_) if (_.noteType == 'poison') {
     _.animCancelled = true;
