@@ -57,11 +57,11 @@ public function changeNoteSkin(path:String, _strum:Dynamic, ?_part:String, ?_pix
         return;
     }
     else 
-        if (!Assets.exists(Paths.image('$path-pixels') || Assets.exists(Paths.image(path + 'Ends'))) {
+        if (!Assets.exists(Paths.image('$path-pixels')) || Assets.exists(Paths.image(path + 'Ends'))) {
             trace('One of two parts of the notes doesnt exists');
             return;
         }
-
+    
     if (part == 'strum' || part == 'strums' || part == 'both') for (i => strum in _strum.members) {
         if (!pixel) {
             var prefixes:Array<String> = ['LEFT', 'DOWN', 'UP', 'RIGHT'];
