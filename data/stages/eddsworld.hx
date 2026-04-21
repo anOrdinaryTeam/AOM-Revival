@@ -2,7 +2,7 @@ public var sky:FlxSprite;
 var plane:FlxSprite;
 
 function create() {
-    defaultCamZoom = 0.65;
+    defaultCamZoom = 0.15;
 
     graphicCache.cache(getModImage('Challenge-EDD/plane'));
 

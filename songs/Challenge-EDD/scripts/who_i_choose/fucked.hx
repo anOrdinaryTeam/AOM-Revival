@@ -49,7 +49,14 @@ function stepHit() {
             FlxTween.tween(bf, {x: 1235, y: 790}, 1, {ease: FlxEase.quadInOut});
 
         case 2017: tordCabine(true);
+        case 2033: tordMecha.playAnim('blow');
 
+    }
+}
+
+function update() {
+    tordMecha.animation.finishCallback = function(name:String) {
+        if (name == 'blow') remove(tordMecha);
     }
 }
 
@@ -65,7 +72,7 @@ function tordEntrance() {
     tordMecha.antialiasing = true;
     tordMecha.scale.set(1.5, 1.5);
 
-    tordMecha.addAnim('idle', 'mattReactionTord', 12, true);
+    tordMecha.addAnim('idle', 'TordBotIdle', 12, true);
     tordMecha.addAnim('harp', 'TordBotHarpoonIdle', 12, true);
     tordMecha.addAnim('blow', 'TordBotBlowingUp', 12, false);
     
@@ -162,8 +169,8 @@ function tordCabine(already:Bool) {
         new FlxTimer().start(0.28, () -> {
             dad.alpha = 0; remove(glass); remove(tordBG);
         });
-
-        new FlxTimer().start(0.1, () -> tordFall());
+        
+        tordFall();
     }
 }
 
@@ -171,6 +178,9 @@ function tordFall() {
     for (t in [boyfriend, bfTord, tomRush])
         t.alpha = 0;
     
+    tordMecha.x += 200;
+    tordMecha.playAnim('harp');
+
     eddTord.x += 135;
     eddTord.playAnim('lookLoop');
 
