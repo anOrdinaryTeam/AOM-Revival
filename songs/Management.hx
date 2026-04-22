@@ -47,16 +47,16 @@ public function setRatingPrefix(tag:String) {
 * @param _part (Optional) Which part of the Object to change -> 'strum'/'strums' | 'note'/'notes' | 'both'
 * @param _pixel (Optional) Self-explain
 */
-public function changeNoteSkin(path:String, _strum:Dynamic, ?_part:String, ?_pixel:Bool) if (_strum != null) {
-    var realPath:String = 'modsNotes/$path';
-    var part:String = _part ?? 'both';
-    var pixel:Bool = _pixel ?? false;
+public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel:Bool) if (_strum != null) {
+    var realPath:String = 'modNotes/$path';
+    var part:String = _part; // fucking null-safety
+    var pixel:Bool = _pixel; // ^^^
 
-    if (!pixel) if (!Assets.exists(Paths.image(path)) || !Assets.exists(Paths.getPath('images/$path.xml'))) {
+    if (!pixel) if (!Assets.exists(Paths.image(realPath)) || !Assets.exists(Paths.getPath('images/$realPath.xml'))) {
         trace('Sprisheet/XML doesnt exists - [$path]');
         return;
     }
-    else 
+    else if (pixel)
         if (!Assets.exists(Paths.image('$path-pixels')) || Assets.exists(Paths.image(path + 'Ends'))) {
             trace('One of two parts of the notes doesnt exists');
             return;
@@ -69,14 +69,17 @@ public function changeNoteSkin(path:String, _strum:Dynamic, ?_part:String, ?_pix
             strum.animation.addByPrefix('static', 'arrow${prefixes[i]}');
             strum.animation.addByPrefix('pressed', '${prefixes[i].toLowerCase()} press', 24, false);
             strum.animation.addByPrefix('confirm', '${prefixes[i].toLowerCase()} confirm', 24, false);
+            strum.antialiasing = Options.antialiasing;
+            strum.scale.set(0.7, 0.7);
         }
         else {
-            var ID:Int = strum.strumID;
-            strum.loadGraphic(Paths.image(realPath));
+            var ID:Int = i;
+            strum.loadGraphic(Paths.image('$realPath-pixels'), true, 17, 17);
 
             strum.animation.add("static", [ID]);
             strum.animation.add("pressed", [4 + ID, 8 + ID], 12, false);
             strum.animation.add("confirm", [12 + ID, 16 + ID], 24, false);
+            strum.antialiasing = false;
             strum.scale.set(6, 6);
         }
 
@@ -86,25 +89,37 @@ public function changeNoteSkin(path:String, _strum:Dynamic, ?_part:String, ?_pix
     if (part == 'note' || part == 'notes' || part == 'both') for (babyArrow in _strum.notes) {
         var color:String = ["purple", "blue", "green", "red"][babyArrow.strumID % 4];
         var lastAnim:String = babyArrow.animation.name;
+        var newPrefix:String = switch(lastAnim) {
+            case 'scroll': '${color}0';
+            case 'hold': '$color hold piece';
+            case 'holdend': '${(color == "purple" ? 'pruple end hold' : '$color hold end')}0';
+        }
 
         if (!pixel) {
-            var newPrefix:String = switch(lastAnim) {
-                case 'scroll': '${color}0';
-                case 'hold': '$color hold piece';
-                case 'holdend': '${(color == "purple" ? 'pruple end hold' : '$color hold end')}0';
-            }
-
             babyArrow.frames = Paths.getSparrowAtlas(realPath);
             babyArrow.animation.addByPrefix(lastAnim, newPrefix);
+            babyArrow.antialiasing = Options.antialiasing;
+            babyArrow.scale.set(0.7, 0.7);
         }
         else {
-            babyArrow.loadGraphic(Paths.image(realPath));
-            note.animation.add(lastAnim, [4 + babyArrow.strumID]);
+            // XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD help
+            var isSus:Bool = babyArrow.isSustainNote;
+            var pixelPrefix:String = isSus ? 'Ends' : '-pixels';
+            babyArrow.loadGraphic(Paths.image(realPath + pixelPrefix), true, isSus ? 7 : 17, isSus ? 6 : 17);
+
+            if (isSus) {
+                babyArrow.animation.add('hold', [babyArrow.strumID]);
+                babyArrow.animation.add('holdend', [4 + babyArrow.strumID]);
+            }
+            else
+                babyArrow.animation.add('scroll', [4 + babyArrow.strumID]);
+
+            babyArrow.antialiasing = false;
+            babyArrow.scale.set(6, 6);
         }
 
-        
-        babyArrow.animation.play(lastAnim);
         babyArrow.updateHitbox();
+        babyArrow.animation.play(lastAnim);
     }
 }
 
