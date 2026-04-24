@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/Sonic_EXE" scale="1.1" color="#0056B7" applyStageMatrix="true">
+	<anim name="idle" anim="SONICmoveIDLE"/>
+	<anim name="singUP" anim="SONICmoveUP"/>
+	<anim name="singDOWN" anim="SONICmoveDOWN"/>
+	<anim name="singRIGHT" anim="SONICmoveRIGHT"/>
+	<anim name="singLEFT" anim="SONICmoveLEFT"/>
+	<anim name="Laugh" anim="SONIClaugh" x="-291" y="-180"/>
+	<anim name="Get Ya" anim="sonicImmagetya" x="-301" y="-153"/>
+</character>

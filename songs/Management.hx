@@ -35,7 +35,7 @@ public function loadHud(hud:String, ver:String = 'IS NULL PENDEJO') {
 public function setRatingPrefix(tag:String) {
     ratingPrefix = tag;
     var folder:Array<String> = Paths.getFolderContent('images/modCombos/$ratingPrefix', false, 1, true);
-    for (graphic in folder) graphicCache.cache(Paths.image('modCombos/Eteled/$graphic'));
+    for (graphic in folder) graphicCache.cache(Paths.image('modCombos/$ratingPrefix/$graphic'));
 }
 
 /**
@@ -134,7 +134,8 @@ public function getObjectOrder(item:FlxBasic) if (item != null)
 function create() {
     RefreshSaveDatas();
     updateDiscordPresence = () -> {
-        var image:String = currentMod == 'RandomSongs' ? curSongID : currentMod.toLowerCase();
+        var image:String = currentMod == 'RandomSongs' || currentMod == 'Sonic.EXE' ? curSongID : currentMod.toLowerCase();
+
         DiscordUtil.changePresenceAdvanced({
             state: '$songName - [${curDiff.toUpperCase()}]',
             details: paused ? '- Paused' : '- Playing',

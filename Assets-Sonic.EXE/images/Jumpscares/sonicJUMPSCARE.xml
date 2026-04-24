@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="sonicJUMPSCARE.png" width="4282" height="4328" spritePadding="0" borderPadding="0">
+	<SubTexture name="sonicSPOOK0000" x="1957" y="3367" width="1156" height="911" rotated="true" frameX="-115" frameY="-276" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0001" x="3113" y="3367" width="1157" height="911" rotated="true" frameX="-115" frameY="-249" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0002" x="0" y="3367" width="911" height="961" frameX="-115" frameY="-245" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0003" x="3344" y="0" width="793" height="968" rotated="true" frameX="-108" frameY="-47" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0004" x="700" y="1114" width="682" height="1148" rotated="true" frameX="-2" frameY="-160" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0005" x="631" y="0" width="643" height="1081" rotated="true" frameX="-42" frameY="-154" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0006" x="1382" y="1114" width="715" height="1099" rotated="true" frameX="-31" frameY="-76" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0007" x="1610" y="2262" width="780" height="1099" rotated="true" frameX="-27" frameY="-11" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0008" x="1959" y="0" width="686" height="1114" rotated="true" frameX="-22" frameY="-102" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0009" x="3178" y="2262" width="790" height="1100" rotated="true" frameX="-27" frameY="-1" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0010" x="0" y="1114" width="700" height="1100" rotated="true" frameX="-29" frameY="-91" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0011" x="2802" y="1114" width="738" height="1100" rotated="true" frameX="-33" frameY="-52" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0012" x="3540" y="1114" width="742" height="1098" rotated="true" frameX="-29" frameY="-48" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0013" x="846" y="2262" width="764" height="1105" rotated="true" frameX="-19" frameY="-40" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0014" x="1274" y="0" width="685" height="1113" rotated="true" frameX="-23" frameY="-102" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0015" x="2390" y="2262" width="788" height="1098" rotated="true" frameX="-28" frameY="-2" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0016" x="2645" y="0" width="699" height="1098" rotated="true" frameX="-30" frameY="-91" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0017" x="2802" y="1114" width="738" height="1100" rotated="true" frameX="-33" frameY="-52" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0018" x="3540" y="1114" width="742" height="1098" rotated="true" frameX="-29" frameY="-48" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0019" x="846" y="2262" width="764" height="1105" rotated="true" frameX="-19" frameY="-40" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0020" x="2097" y="1114" width="705" height="1122" rotated="true" frameX="-18" frameY="-84" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0021" x="1" y="0" width="630" height="1100" rotated="true" frameX="-36" frameY="-160" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0022" x="0" y="2262" width="846" height="968" rotated="true" frameX="-108" frameY="-91" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0023" x="911" y="3367" width="1046" height="911" rotated="true" frameX="-115" frameY="-331" frameWidth="1155" frameHeight="1456"/>
+	<SubTexture name="sonicSPOOK0024" x="0" y="0" width="1" height="1" frameX="0" frameY="0" frameWidth="1155" frameHeight="1456"/>
+</TextureAtlas>

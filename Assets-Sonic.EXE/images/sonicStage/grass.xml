@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="grass.png" width="143" height="197" spritePadding="0" borderPadding="0">
+	<SubTexture name="one0000" x="66" y="0" width="44" height="81" frameX="-481" frameY="-940" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="two0000" x="0" y="76" width="63" height="121" frameX="-531" frameY="-911" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="three0000" x="110" y="66" width="31" height="51" frameX="-644" frameY="-967" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="four0000" x="0" y="0" width="66" height="76" frameX="-679" frameY="-952" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="five0000" x="110" y="117" width="26" height="58" frameX="-1208" frameY="-960" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="six0000" x="66" y="81" width="41" height="59" frameX="-1277" frameY="-981" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="seven0000" x="66" y="140" width="34" height="54" frameX="-1370" frameY="-968" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="eight0000" x="110" y="0" width="33" height="66" frameX="-1537" frameY="-986" frameWidth="1920" frameHeight="1080"/>
+</TextureAtlas>
