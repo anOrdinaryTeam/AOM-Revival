@@ -50,7 +50,6 @@ function stepHit() {
 
         case 2017: tordCabine(true);
         case 2033: tordMecha.playAnim('blow');
-
     }
 }
 
