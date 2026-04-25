@@ -1,0 +1,26 @@
+{
+	"gfPos": [
+		485.5,
+		15.1
+	],
+	"opponentCamPos": [
+		420,
+		318.5
+	],
+	"playerCamPos": [
+		900,
+		370
+	],
+	"opponentPos": [
+		0,
+		0
+	],
+	"startCamPos": [
+		600,
+		600
+	],
+	"playerPos": [
+		1000,
+		-80
+	]
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<character y="450" sprite="exe/BF" scale="10" antialiasing="false" flipX="true" isPlayer="true" icon="bf-pixel-exe">
+	<anim name="idle" anim="BF idle dance" fps="12"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN0" y="-1"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-2" y="-1"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT0" x="-2" y="-1"/>
+	<anim name="singUP" anim="BF NOTE UP0" x="-1" y="-1"/>
+	<anim name="singUPmiss" anim="BF NOTE UP MISS" x="-1" y="-1"/>
+	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS" x="-1" y="-1"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS" x="-2" y="-1"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS" x="-2" y="-1"/>
+	<anim name="BF dies" anim="BF dies" x="2" y="-5" fps="10"/>
+	<anim name="BF Dead Loop" anim="BF Dead Loop" x="2" y="-5" fps="10" loop="true"/>
+</character>

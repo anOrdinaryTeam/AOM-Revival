@@ -2,6 +2,7 @@ public var camOther:FlxCamera = new FlxCamera();
 public function loadSpr(str:String) return getModImage(str);
 
 function create() {
+    useCamMov = true;
     defaultCamZoom = 1.0;
     camGame.followLerp = 0.05;
 
@@ -72,20 +73,18 @@ function create() {
     addSprite(sticklol);
 }
 
-function stepHit() {
-    switch(curStep){
-        case 764:
-            // shakeCam[0] = true;
-            FlxG.camera.flash(FlxColor.RED, 4);
-        // case 791: shakeCam[0] = false;
-        case 1305:
-            FlxTween.tween(camHUD, {alpha: 0}, 0.3);
-            dad.playAnim('Get Ya', true);
-        case 1362:
-            FlxG.camera.shake(0.002, 0.6);
-			camHUD.shake(0.002, 0.6);
-        case 1432:
-            FlxTween.tween(camHUD, {alpha: 1}, 0.3);
-            dad.dance();
-    }
+function stepHit() switch(curStep){
+    case 764:
+        // shakeCam[0] = true;
+        FlxG.camera.flash(FlxColor.RED, 4);
+    // case 791: shakeCam[0] = false;
+    case 1305:
+        FlxTween.tween(camHUD, {alpha: 0}, 0.3);
+        dad.playAnim('Get Ya', true);
+    case 1362:
+        FlxG.camera.shake(0.002, 0.6);
+		camHUD.shake(0.002, 0.6);
+    case 1432:
+        FlxTween.tween(camHUD, {alpha: 1}, 0.3);
+        dad.dance();
 }
