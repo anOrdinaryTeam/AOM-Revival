@@ -5,6 +5,8 @@ function postUpdate() {
     if (CoolUtil.mouseOverlaps(rushsonic) && FlxG.mouse.justPressed) {
 
         danceOnBeat = false;
+
+        FlxG.sound.stop;
         FlxG.sound.play(Paths.sound('menusounds/sonicyeah'));
 
         rushsonic.playAnim("Sonic Yeah", true);
