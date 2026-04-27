@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="heathers assets.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="heatherc alt down0000" x="3834" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt down0001" x="3834" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt down0002" x="4139" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt down0003" x="4139" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt down0004" x="4139" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt down0005" x="4139" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt down0006" x="4139" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt down0007" x="4139" y="4585" width="303" height="606"/>
+	<SubTexture name="heatherc alt idle0000" x="0" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt idle0001" x="0" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt idle0002" x="313" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt idle0003" x="313" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt idle0004" x="626" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt idle0005" x="626" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt idle0006" x="939" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt idle0007" x="939" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc alt left0000" x="7859" y="4568" width="313" height="615"/>
+	<SubTexture name="heatherc alt left0001" x="7859" y="4568" width="313" height="615"/>
+	<SubTexture name="heatherc alt left0002" x="7330" y="4583" width="313" height="615"/>
+	<SubTexture name="heatherc alt left0003" x="7330" y="4583" width="313" height="615"/>
+	<SubTexture name="heatherc alt left0004" x="7330" y="4583" width="313" height="615"/>
+	<SubTexture name="heatherc alt left0005" x="7330" y="4583" width="313" height="615"/>
+	<SubTexture name="heatherc alt left0006" x="7330" y="4583" width="313" height="615"/>
+	<SubTexture name="heatherc alt left0007" x="7330" y="4583" width="313" height="615"/>
+	<SubTexture name="heatherc alt right0000" x="3234" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt right0001" x="3234" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt right0002" x="3534" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt right0003" x="3534" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt right0004" x="3534" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt right0005" x="3534" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt right0006" x="3534" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt right0007" x="3534" y="4585" width="298" height="618"/>
+	<SubTexture name="heatherc alt up0000" x="7859" y="3930" width="313" height="636"/>
+	<SubTexture name="heatherc alt up0001" x="7859" y="3930" width="313" height="636"/>
+	<SubTexture name="heatherc alt up0002" x="7015" y="4566" width="313" height="636"/>
+	<SubTexture name="heatherc alt up0003" x="7015" y="4566" width="313" height="636"/>
+	<SubTexture name="heatherc alt up0004" x="7015" y="4566" width="313" height="636"/>
+	<SubTexture name="heatherc alt up0005" x="7015" y="4566" width="313" height="636"/>
+	<SubTexture name="heatherc alt up0006" x="7015" y="4566" width="313" height="636"/>
+	<SubTexture name="heatherc alt up0007" x="7015" y="4566" width="313" height="636"/>
+	<SubTexture name="heatherc down0000" x="2504" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc down0001" x="2504" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc down0002" x="2869" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc down0003" x="2869" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc down0004" x="2869" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc down0005" x="2869" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc down0006" x="2869" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc down0007" x="2869" y="4585" width="363" height="523"/>
+	<SubTexture name="heatherc idle0000" x="1252" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc idle0001" x="1252" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc idle0002" x="1565" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc idle0003" x="1565" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc idle0004" x="1878" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc idle0005" x="1878" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc idle0006" x="2191" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc idle0007" x="2191" y="4585" width="311" height="616"/>
+	<SubTexture name="heatherc intro0000" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0001" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0002" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0003" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0004" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0005" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0006" x="667" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0007" x="667" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0008" x="1334" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0009" x="1334" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0010" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0011" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0012" x="2668" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0013" x="2668" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0014" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0015" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0016" x="3335" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0017" x="3335" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0018" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0019" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0020" x="3335" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0021" x="3335" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0022" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0023" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0024" x="4002" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0025" x="4002" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0026" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0027" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0028" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0029" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0030" x="1334" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0031" x="1334" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0032" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0033" x="2001" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0034" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0035" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0036" x="3335" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0037" x="3335" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0038" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0039" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0040" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0041" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0042" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0043" x="4669" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0044" x="5336" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0045" x="5336" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0046" x="6003" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0047" x="6003" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0048" x="6670" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0049" x="6670" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0050" x="7337" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0051" x="7337" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0052" x="6670" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0053" x="6670" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0054" x="0" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0055" x="0" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0056" x="667" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0057" x="667" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0058" x="1334" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0059" x="1334" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0060" x="2001" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0061" x="2001" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0062" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0063" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0064" x="2668" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0065" x="2668" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0066" x="3335" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0067" x="3335" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0068" x="4002" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0069" x="4002" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0070" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0071" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0072" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0073" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0074" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0075" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0076" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0077" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0078" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0079" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0080" x="4669" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0081" x="4669" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0082" x="5336" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0083" x="5336" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0084" x="6003" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0085" x="6003" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0086" x="6670" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0087" x="6670" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0088" x="7337" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0089" x="7337" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0090" x="6003" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0091" x="6003" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0092" x="5336" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0093" x="5336" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0094" x="0" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0095" x="0" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0096" x="6670" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0097" x="6670" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0098" x="5336" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0099" x="5336" y="655" width="665" height="653"/>
+	<SubTexture name="heatherc intro0100" x="667" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0101" x="667" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0102" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0103" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0104" x="2001" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0105" x="2001" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0106" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0107" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0108" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0109" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0110" x="3335" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0111" x="3335" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0112" x="4002" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0113" x="4002" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0114" x="4002" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0115" x="4002" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0116" x="4669" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0117" x="4669" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0118" x="5336" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0119" x="5336" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0120" x="6003" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0121" x="6003" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0122" x="6670" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0123" x="6670" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0124" x="7337" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0125" x="7337" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0126" x="0" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0127" x="0" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0128" x="5336" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0129" x="5336" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0130" x="667" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0131" x="667" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0132" x="7337" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0133" x="7337" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0134" x="7337" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0135" x="7337" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0136" x="1334" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0137" x="1334" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0138" x="2001" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0139" x="2001" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0140" x="2668" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0141" x="2668" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0142" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0143" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0144" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0145" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0146" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0147" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0148" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0149" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0150" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0151" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0152" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0153" x="3335" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0154" x="4002" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0155" x="4002" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0156" x="4669" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0157" x="4669" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0158" x="5336" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0159" x="5336" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0160" x="6003" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0161" x="6003" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0162" x="6670" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0163" x="6670" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0164" x="4669" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0165" x="4669" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0166" x="7337" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0167" x="7337" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0168" x="6003" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0169" x="6003" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0170" x="6670" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0171" x="6670" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0172" x="4669" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0173" x="4669" y="1965" width="665" height="653"/>
+	<SubTexture name="heatherc intro0174" x="0" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0175" x="0" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0176" x="667" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0177" x="667" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0178" x="1334" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0179" x="1334" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0180" x="0" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0181" x="0" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0182" x="2001" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0183" x="2001" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0184" x="2668" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0185" x="2668" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0186" x="667" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0187" x="667" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0188" x="3335" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0189" x="3335" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0190" x="4002" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0191" x="4002" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0192" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0193" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0194" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0195" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0196" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0197" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0198" x="6003" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0199" x="6003" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0200" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0201" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0202" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0203" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0204" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0205" x="4669" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0206" x="6003" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0207" x="6003" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0208" x="6670" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0209" x="6670" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0210" x="7337" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0211" x="7337" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0212" x="0" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0213" x="0" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0214" x="667" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0215" x="667" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0216" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0217" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0218" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0219" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0220" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0221" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0222" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0223" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0224" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0225" x="5336" y="2620" width="665" height="653"/>
+	<SubTexture name="heatherc intro0226" x="1334" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0227" x="1334" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0228" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0229" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0230" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0231" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0232" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0233" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0234" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0235" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0236" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0237" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0238" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0239" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0240" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0241" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0242" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0243" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0244" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0245" x="2001" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0246" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0247" x="2668" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0248" x="3335" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0249" x="3335" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0250" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0251" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0252" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0253" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0254" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0255" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0256" x="4002" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0257" x="4002" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0258" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0259" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0260" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0261" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0262" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0263" x="1334" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0264" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0265" x="2668" y="1310" width="665" height="653"/>
+	<SubTexture name="heatherc intro0266" x="4669" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0267" x="4669" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0268" x="5336" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0269" x="5336" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0270" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0271" x="0" y="0" width="665" height="653"/>
+	<SubTexture name="heatherc intro0272" x="6003" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0273" x="6003" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0274" x="6670" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0275" x="6670" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0276" x="7337" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0277" x="7337" y="3275" width="665" height="653"/>
+	<SubTexture name="heatherc intro0278" x="0" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0279" x="0" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0280" x="667" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0281" x="667" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0282" x="1334" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0283" x="2001" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0284" x="2668" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0285" x="2668" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0286" x="3335" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0287" x="3335" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0288" x="4002" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0289" x="4002" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0290" x="4669" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0291" x="4669" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0292" x="5336" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0293" x="5336" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0294" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0295" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0296" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0297" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0298" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0299" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0300" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0301" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0302" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0303" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc intro0304" x="6003" y="3930" width="665" height="653"/>
+	<SubTexture name="heatherc left0000" x="4444" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc left0001" x="4444" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc left0002" x="4735" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc left0003" x="4735" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc left0004" x="4735" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc left0005" x="4735" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc left0006" x="4735" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc left0007" x="4735" y="4585" width="289" height="598"/>
+	<SubTexture name="heatherc right0000" x="6670" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc right0001" x="6670" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc right0002" x="7092" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc right0003" x="7092" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc right0004" x="7092" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc right0005" x="7092" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc right0006" x="7092" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc right0007" x="7092" y="3930" width="420" height="634"/>
+	<SubTexture name="heatherc up0000" x="7514" y="3930" width="343" height="651"/>
+	<SubTexture name="heatherc up0001" x="7514" y="3930" width="343" height="651"/>
+	<SubTexture name="heatherc up0002" x="6670" y="4566" width="343" height="651"/>
+	<SubTexture name="heatherc up0003" x="6670" y="4566" width="343" height="651"/>
+	<SubTexture name="heatherc up0004" x="6670" y="4566" width="343" height="651"/>
+	<SubTexture name="heatherc up0005" x="6670" y="4566" width="343" height="651"/>
+	<SubTexture name="heatherc up0006" x="6670" y="4566" width="343" height="651"/>
+	<SubTexture name="heatherc up0007" x="6670" y="4566" width="343" height="651"/>
+</TextureAtlas>

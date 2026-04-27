@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="veronica.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="veronica alt down0000" x="318" y="1869" width="272" height="601"/>
+	<SubTexture name="veronica alt down0001" x="318" y="1869" width="272" height="601"/>
+	<SubTexture name="veronica alt down0002" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0003" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0004" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0005" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0006" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0007" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0008" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0009" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0010" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt down0011" x="920" y="3089" width="272" height="601"/>
+	<SubTexture name="veronica alt idle0000" x="1312" y="1264" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0001" x="1312" y="1264" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0002" x="1630" y="1264" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0003" x="1630" y="1264" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0004" x="634" y="1841" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0005" x="634" y="1841" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0006" x="952" y="1841" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0007" x="952" y="1841" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0008" x="0" y="1869" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0009" x="0" y="1869" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0010" x="1270" y="1896" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0011" x="1270" y="1896" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0012" x="1588" y="1896" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0013" x="1588" y="1896" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0014" x="318" y="2473" width="316" height="630"/>
+	<SubTexture name="veronica alt idle0015" x="318" y="2473" width="316" height="630"/>
+	<SubTexture name="veronica alt left0000" x="636" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0001" x="636" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0002" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0003" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0004" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0005" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0006" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0007" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0008" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0009" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0010" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt left0011" x="933" y="2473" width="295" height="614"/>
+	<SubTexture name="veronica alt right0000" x="0" y="2501" width="290" height="618"/>
+	<SubTexture name="veronica alt right0001" x="0" y="2501" width="290" height="618"/>
+	<SubTexture name="veronica alt right0002" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0003" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0004" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0005" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0006" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0007" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0008" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0009" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0010" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0011" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0012" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0013" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt right0014" x="1230" y="2528" width="290" height="618"/>
+	<SubTexture name="veronica alt up0000" x="1522" y="2528" width="282" height="632"/>
+	<SubTexture name="veronica alt up0001" x="1522" y="2528" width="282" height="632"/>
+	<SubTexture name="veronica alt up0002" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0003" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0004" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0005" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0006" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0007" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0008" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0009" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0010" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0011" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0012" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0013" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica alt up0014" x="636" y="3089" width="282" height="632"/>
+	<SubTexture name="veronica down0000" x="292" y="3105" width="305" height="518"/>
+	<SubTexture name="veronica down0001" x="292" y="3105" width="305" height="518"/>
+	<SubTexture name="veronica down0002" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0003" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0004" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0005" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0006" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0007" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0008" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0009" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0010" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0011" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0012" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0013" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0014" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0015" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0016" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0017" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica down0018" x="1194" y="3148" width="305" height="518"/>
+	<SubTexture name="veronica idle0000" x="1542" y="0" width="326" height="630"/>
+	<SubTexture name="veronica idle0001" x="1542" y="0" width="326" height="630"/>
+	<SubTexture name="veronica idle0002" x="796" y="577" width="326" height="630"/>
+	<SubTexture name="veronica idle0003" x="796" y="577" width="326" height="630"/>
+	<SubTexture name="veronica idle0004" x="1124" y="577" width="326" height="630"/>
+	<SubTexture name="veronica idle0005" x="1124" y="577" width="326" height="630"/>
+	<SubTexture name="veronica idle0006" x="0" y="597" width="326" height="630"/>
+	<SubTexture name="veronica idle0007" x="0" y="597" width="326" height="630"/>
+	<SubTexture name="veronica idle0008" x="328" y="597" width="326" height="630"/>
+	<SubTexture name="veronica idle0009" x="328" y="597" width="326" height="630"/>
+	<SubTexture name="veronica idle0010" x="1452" y="632" width="326" height="630"/>
+	<SubTexture name="veronica idle0011" x="1452" y="632" width="326" height="630"/>
+	<SubTexture name="veronica idle0012" x="656" y="1209" width="326" height="630"/>
+	<SubTexture name="veronica idle0013" x="656" y="1209" width="326" height="630"/>
+	<SubTexture name="veronica idle0014" x="984" y="1209" width="326" height="630"/>
+	<SubTexture name="veronica idle0015" x="984" y="1209" width="326" height="630"/>
+	<SubTexture name="veronica left0000" x="0" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0001" x="0" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0002" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0003" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0004" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0005" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0006" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0007" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0008" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0009" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0010" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0011" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0012" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0013" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0014" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0015" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica left0016" x="398" y="0" width="396" height="595"/>
+	<SubTexture name="veronica right0000" x="796" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0001" x="796" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0002" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0003" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0004" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0005" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0006" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0007" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0008" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0009" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0010" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0011" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica right0012" x="1169" y="0" width="371" height="575"/>
+	<SubTexture name="veronica up0000" x="0" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0001" x="0" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0002" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0003" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0004" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0005" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0006" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0007" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0008" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0009" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0010" x="317" y="1229" width="315" height="638"/>
+	<SubTexture name="veronica up0011" x="317" y="1229" width="315" height="638"/>
+</TextureAtlas>

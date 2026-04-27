@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<character flipX="true" isPlayer="true" icon="face" color="#A1A1A1">
+	<anim name="singUP" anim="veronica up" x="-7" y="13"/>
+	<anim name="danceLeft" anim="veronica idle" indices="0..7"/>
+	<anim name="danceRight" anim="veronica idle" indices="8..15"/>
+	<anim name="singLEFT" anim="veronica left" x="130" y="-30"/>
+	<anim name="singDOWN" anim="veronica down" x="13" y="-109"/>
+	<anim name="singRIGHT" anim="veronica right" x="-70" y="-50"/>
+	<anim name="singRIGHT-alt" anim="veronica alt right" x="-68" y="-6"/>
+	<anim name="singUP-alt" anim="veronica alt up" x="-53" y="7"/>
+	<anim name="singDOWN-alt" anim="veronica alt down" x="-20" y="-24"/>
+	<anim name="singLEFT-alt" anim="veronica alt left" x="30" y="-10"/>
+	<anim name="danceLeft-alt" anim="veronica alt idle" x="-10" indices="0..7"/>
+	<anim name="danceRight-alt" anim="veronica alt idle" x="-10" indices="8..15"/>
+</character>

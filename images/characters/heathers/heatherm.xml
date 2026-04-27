@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="heatherm.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="heather m0000" x="1300" y="600" width="273" height="589"/>
+	<SubTexture name="heather m0001" x="1300" y="600" width="273" height="589"/>
+	<SubTexture name="heather m0002" x="1575" y="600" width="273" height="589"/>
+	<SubTexture name="heather m0003" x="1575" y="600" width="273" height="589"/>
+	<SubTexture name="heather m0004" x="0" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0005" x="0" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0006" x="275" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0007" x="275" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0008" x="550" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0009" x="550" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0010" x="825" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0011" x="825" y="1179" width="273" height="589"/>
+	<SubTexture name="heather m0012" x="1100" y="1191" width="273" height="589"/>
+	<SubTexture name="heather m0013" x="1100" y="1191" width="273" height="589"/>
+	<SubTexture name="heather m0014" x="1375" y="1191" width="273" height="589"/>
+	<SubTexture name="heather m0015" x="1375" y="1191" width="273" height="589"/>
+	<SubTexture name="heather m down0000" x="1650" y="1191" width="262" height="574"/>
+	<SubTexture name="heather m down0001" x="1650" y="1191" width="262" height="574"/>
+	<SubTexture name="heather m down0002" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m down0003" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m down0004" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m down0005" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m down0006" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m down0007" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m down0008" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m down0009" x="1650" y="1767" width="262" height="574"/>
+	<SubTexture name="heather m left0000" x="502" y="1770" width="241" height="580"/>
+	<SubTexture name="heather m left0001" x="502" y="1770" width="241" height="580"/>
+	<SubTexture name="heather m left0002" x="745" y="1770" width="241" height="580"/>
+	<SubTexture name="heather m left0003" x="745" y="1770" width="241" height="580"/>
+	<SubTexture name="heather m left0004" x="988" y="1782" width="241" height="580"/>
+	<SubTexture name="heather m left0005" x="988" y="1782" width="241" height="580"/>
+	<SubTexture name="heather m left0006" x="1231" y="1782" width="241" height="580"/>
+	<SubTexture name="heather m left0007" x="1231" y="1782" width="241" height="580"/>
+	<SubTexture name="heather m left0008" x="1231" y="1782" width="241" height="580"/>
+	<SubTexture name="heather m left0009" x="1231" y="1782" width="241" height="580"/>
+	<SubTexture name="heather m right0000" x="0" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0001" x="0" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0002" x="325" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0003" x="325" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0004" x="650" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0005" x="650" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0006" x="975" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0007" x="975" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0008" x="975" y="600" width="323" height="577"/>
+	<SubTexture name="heather m right0009" x="975" y="600" width="323" height="577"/>
+	<SubTexture name="heather m up0000" x="0" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0001" x="0" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0002" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0003" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0004" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0005" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0006" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0007" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0008" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m up0009" x="251" y="1770" width="249" height="588"/>
+	<SubTexture name="heather m walk0000" x="0" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0001" x="0" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0002" x="318" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0003" x="318" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0004" x="636" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0005" x="636" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0006" x="954" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0007" x="954" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0008" x="1272" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0009" x="1272" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0010" x="1590" y="0" width="316" height="598"/>
+	<SubTexture name="heather m walk0011" x="1590" y="0" width="316" height="598"/>
+</TextureAtlas>

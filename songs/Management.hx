@@ -35,7 +35,7 @@ public function loadHud(hud:String, ver:String = 'IS NULL PENDEJO') {
 public function setRatingPrefix(tag:String) {
     ratingPrefix = tag;
     var folder:Array<String> = Paths.getFolderContent('images/modCombos/$ratingPrefix', false, 1, true);
-    for (graphic in folder) graphicCache.cache(Paths.image('modCombos/Eteled/$graphic'));
+    for (graphic in folder) graphicCache.cache(Paths.image('modCombos/$ratingPrefix/$graphic'));
 }
 
 /**
@@ -48,11 +48,10 @@ public function setRatingPrefix(tag:String) {
 * @param _pixel (Optional) Self-explain
 */
 public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel:Bool) if (_strum != null) {
-    var realPath:String = 'modNotes/$path';
     var part:String = _part; // fucking null-safety
     var pixel:Bool = _pixel; // ^^^
 
-    if (!pixel) if (!Assets.exists(Paths.image(realPath)) || !Assets.exists(Paths.getPath('images/$realPath.xml'))) {
+    if (!pixel) if (!Assets.exists(Paths.image(path)) || !Assets.exists(Paths.getPath('images/$path.xml'))) {
         trace('Sprisheet/XML doesnt exists - [$path]');
         return;
     }
@@ -63,9 +62,11 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
         }
     
     if (part == 'strum' || part == 'strums' || part == 'both') for (i => strum in _strum.members) {
+        var lastAnim:String = strum.animation.name;
+
         if (!pixel) {
             var prefixes:Array<String> = ['LEFT', 'DOWN', 'UP', 'RIGHT'];
-            strum.frames = Paths.getSparrowAtlas(realPath);
+            strum.frames = Paths.getSparrowAtlas(path);
             strum.animation.addByPrefix('static', 'arrow${prefixes[i]}');
             strum.animation.addByPrefix('pressed', '${prefixes[i].toLowerCase()} press', 24, false);
             strum.animation.addByPrefix('confirm', '${prefixes[i].toLowerCase()} confirm', 24, false);
@@ -74,7 +75,7 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
         }
         else {
             var ID:Int = i;
-            strum.loadGraphic(Paths.image('$realPath-pixels'), true, 17, 17);
+            strum.loadGraphic(Paths.image('$path-pixels'), true, 17, 17);
 
             strum.animation.add("static", [ID]);
             strum.animation.add("pressed", [4 + ID, 8 + ID], 12, false);
@@ -84,6 +85,7 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
         }
 
         strum.updateHitbox();
+        strum.animation.play(lastAnim);
     }
 
     if (part == 'note' || part == 'notes' || part == 'both') for (babyArrow in _strum.notes) {
@@ -91,12 +93,12 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
         var lastAnim:String = babyArrow.animation.name;
         var newPrefix:String = switch(lastAnim) {
             case 'scroll': '${color}0';
-            case 'hold': '$color hold piece';
+            case 'hold': '$color hold piece0';
             case 'holdend': '${(color == "purple" ? 'pruple end hold' : '$color hold end')}0';
         }
 
         if (!pixel) {
-            babyArrow.frames = Paths.getSparrowAtlas(realPath);
+            babyArrow.frames = Paths.getSparrowAtlas(path);
             babyArrow.animation.addByPrefix(lastAnim, newPrefix);
             babyArrow.antialiasing = Options.antialiasing;
             babyArrow.scale.set(0.7, 0.7);
@@ -105,7 +107,7 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
             // XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD help
             var isSus:Bool = babyArrow.isSustainNote;
             var pixelPrefix:String = isSus ? 'Ends' : '-pixels';
-            babyArrow.loadGraphic(Paths.image(realPath + pixelPrefix), true, isSus ? 7 : 17, isSus ? 6 : 17);
+            babyArrow.loadGraphic(Paths.image(path + pixelPrefix), true, isSus ? 7 : 17, isSus ? 6 : 17);
 
             if (isSus) {
                 babyArrow.animation.add('hold', [babyArrow.strumID]);
@@ -118,8 +120,8 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
             babyArrow.scale.set(6, 6);
         }
 
-        babyArrow.updateHitbox();
         babyArrow.animation.play(lastAnim);
+        babyArrow.updateHitbox();
     }
 }
 
@@ -134,7 +136,8 @@ public function getObjectOrder(item:FlxBasic) if (item != null)
 function create() {
     RefreshSaveDatas();
     updateDiscordPresence = () -> {
-        var image:String = currentMod == 'RandomSongs' ? curSongID : currentMod.toLowerCase();
+        var image:String = currentMod == 'RandomSongs' || currentMod == 'Sonic.EXE' ? curSongID : currentMod.toLowerCase();
+
         DiscordUtil.changePresenceAdvanced({
             state: '$songName - [${curDiff.toUpperCase()}]',
             details: paused ? '- Paused' : '- Playing',
