@@ -6140,7 +6140,7 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "exe",
+		"player2": "EXE/exe",
 		"gfVersion": "gf",
 		"song": "too-slow",
 		"needsVoices": true,

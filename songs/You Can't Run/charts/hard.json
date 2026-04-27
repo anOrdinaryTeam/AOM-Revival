@@ -5989,7 +5989,7 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "exe-P2",
+		"player2": "EXE/exe-P2",
 		"song": "you-cant-run",
 		"stage": "sonicexeStage",
 		"validScore": true,

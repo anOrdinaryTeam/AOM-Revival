@@ -56,9 +56,9 @@ function create() {
 }
 
 function postCreate() {
-	precacheCharacter(0, 'exe-pixel');
-	precacheCharacter(1, 'bf-pixel-exe');
-	precacheCharacter(2, 'gf-pixel-exe');
+	precacheCharacter(0, 'EXE/exe-pixel');
+	precacheCharacter(1, 'EXE/bf-pixel-exe');
+	precacheCharacter(2, 'EXE/gf-pixel-exe');
 	graphicCache.cache(Paths.image('modNotes/arrow-pixels'));
 	graphicCache.cache(Paths.image('modNotes/arrowEnds'));
 
@@ -98,9 +98,9 @@ function switchToPixel(DO:Bool) {
 	changeNoteSkin(skin, cpu, 'both', DO);
 	changeNoteSkin(skin, player, 'both', DO);
 
-	changeCharacter(0, DO ? 'exe-pixel' : 'exe-P2');
-	changeCharacter(1, DO ? 'bf-pixel-exe' : 'bf');
-	changeCharacter(2, DO ? 'gf-pixel-exe' : 'gf');
+	changeCharacter(0, DO ? 'EXE/exe-pixel' : 'EXE/exe-P2');
+	changeCharacter(1, DO ? 'EXE/bf-pixel-exe' : 'bf');
+	changeCharacter(2, DO ? 'EXE/gf-pixel-exe' : 'gf');
 
 	if (DO) {
 		vgEffect('cancel');
