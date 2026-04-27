@@ -123,13 +123,13 @@ function update(dt) {
             FlxG.switchState(new PlayState());
         }
 
-        if (controls.DEV_ACCESS #if ARKOSE_PORT mobilePadJustPressed('E') #end) {
+        if (controls.DEV_ACCESS #if ARKOSE_PORT || mobilePadJustPressed('E') #end) {
             persistentUpdate = false;
             persistentDraw = true;
             openSubState(new EditorPicker());
         }
 
-        if (controls.SWITCHMOD #if ARKOSE_PORT mobilePadJustPressed('M') #end) {
+        if (controls.SWITCHMOD #if ARKOSE_PORT || mobilePadJustPressed('M') #end) {
 			openSubState(new ModSwitchMenu());
 			persistentUpdate = false;
 			persistentDraw = true;
