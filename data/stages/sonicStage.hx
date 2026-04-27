@@ -81,6 +81,7 @@ function stepHit() switch(curStep){
     case 1305:
         FlxTween.tween(camHUD, {alpha: 0}, 0.3);
         dad.playAnim('Get Ya', true);
+        vocals.volume = 1; // just in case.
     case 1362:
         FlxG.camera.shake(0.002, 0.6);
 		camHUD.shake(0.002, 0.6);
