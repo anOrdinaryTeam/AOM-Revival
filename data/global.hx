@@ -23,7 +23,7 @@ using StringTools;
 function new() {
     Handle.init([]);
     currentModsList = loadModFolders();
-    trace('Loaded Mod List: $currentModsList');
+    trace('Loaded Mod List: $currentModsList ');
 
     if (!Assets.exists(Paths.image('DO_NOT_DELETE', null, false, 'png'))) {
         NativeAPI.showMessageBox('NOOOOO', 'ENARD EPAGUETI :(((');
@@ -40,7 +40,6 @@ function loadModFolders():Array<String>
         var _file:String = folder.replace('Assets-', '');
         result.push(_file);
     }
-
     return result;
 }
 
