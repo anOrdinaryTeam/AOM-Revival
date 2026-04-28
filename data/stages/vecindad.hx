@@ -45,6 +45,10 @@ function create() {
     vecindadPOV.antialiasing = true;
     vecindadPOV.alpha = 0.001;
     insert(3, vecindadPOV);
+
+    quico = new Character(-300, 400, 'SuVecindad/quico');
+    quico.alpha = 0.001;
+    add(quico);
     // stage shit
 
     // bars shit
@@ -93,8 +97,7 @@ function change(already:Bool) {
         changeCharacter(0, 'SuVecindad/chavo');
         changeCharacter(1, 'SuVecindad/chavobf2');
 
-        quico = new Character(-300, 400, 'SuVecindad/quico');
-        add(quico);
+        quico.alpha = 1;
     }
     remove(quicoBG);
     for (i in [vecindad, boyfriend, gf])
