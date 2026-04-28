@@ -11,6 +11,8 @@ public var quico:Character;
 function preStageLoad()
     useStageData = false;
 function postCreate()
+    // changeNoteSkin('modNotes/SuVecindad/chavo', player, 'both', false);
+
     loadHud('PsychEngine', '');
 
 function create() {
@@ -24,8 +26,8 @@ function create() {
     useCamMov = true;
     camMoveAmt = 60;
 
-    precacheCharacter(0, 'chavo2');
-    precacheCharacter(1, 'chavobf2');
+    precacheCharacter(0, 'SuVecindad/chavo2');
+    precacheCharacter(1, 'SuVecindad/chavobf2');
     // settings shit
 
     // stage shit
@@ -73,6 +75,9 @@ function stepHit() {
         case 1854:
             FlxTween.tween(camHUD, {alpha: 0}, 1.1);
 
+        case 1440:
+            changeCharacter(0, 'SuVecindad/chavo');
+
         case 1954:
             camGame.alpha = 0;
     }
@@ -81,8 +86,15 @@ function stepHit() {
 function change(already:Bool) {
     if (!already) {
         vecindadPOV.alpha = 1;
+        changeCharacter(0, 'SuVecindad/chavo2');
     } else {
         remove(vecindadPOV);
+
+        changeCharacter(0, 'SuVecindad/chavo');
+        changeCharacter(1, 'SuVecindad/chavobf2');
+
+        quico = new Character(-300, 400, 'SuVecindad/quico');
+        add(quico);
     }
     remove(quicoBG);
     for (i in [vecindad, boyfriend, gf])
