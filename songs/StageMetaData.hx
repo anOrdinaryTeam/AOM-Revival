@@ -8,11 +8,15 @@ public var forceCamPos:Bool = false;
 var fileExists:Bool = false;
 var metaSongExists:Bool = false;
 public var stageName:String = PlayState.SONG.stage;
+public var useStageData:Bool = true;
 
 function create() {
     fileExists = Assets.exists(Paths.json('stagesData/$stageName'));
     metaSongExists = Assets.exists(Paths.getPath('songs/$songName/meta.json'));
     scripts.call('preStageLoad');
+
+    if (!useStageData)
+        return;
 
     if (!fileExists) {
         trace('$stageName.json doesnt exists-');
@@ -55,8 +59,8 @@ function create() {
     }
 }
 
-function postCreate() {
-    if (!fileExists && CREATE_FILE_FEATURE) {
+function postCreate() if (CREATE_FILE_FEATURE) {
+    if (!fileExists) {
         trace('Creating automatically StageMetaData File..');
         try {
             var content:Dynamic = {
@@ -83,7 +87,7 @@ function postCreate() {
     }
 
     // extra step in case this chart has been/is gonna be converted into a cne chart
-    if (!metaSongExists && CREATE_FILE_FEATURE) {
+    if (!metaSongExists) {
         trace('Creating automatically meta.json File..');
         try {
             var content = {
@@ -109,7 +113,7 @@ public function setCamPos(?x:Float, ?y:Float) {
 }
 
 function onCameraMove(_) {
-    if (!forceCamPos) {
+    if (!forceCamPos && useStageData) {
         var newPoint:FlxPoint = curCameraTarget == 0 ? opponentCam : playerCam;
         _.position.set(newPoint.x, newPoint.y);
     }
