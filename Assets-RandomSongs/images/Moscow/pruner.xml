@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="pruner.png">
+	<!-- Created with Adobe Flash CS6 version 12.0.0.481 -->
+	<!-- http://www.adobe.com/products/flash.html -->
+	<SubTexture name="lawn0000" x="2" y="2" width="406" height="362"/>
+	<SubTexture name="lawn0001" x="410" y="2" width="406" height="362"/>
+	<SubTexture name="lawn0002" x="2" y="366" width="406" height="362"/>
+	<SubTexture name="lawn0003" x="410" y="366" width="406" height="362"/>
+	<SubTexture name="lawn0004" x="2" y="730" width="406" height="362"/>
+	<SubTexture name="lawn0005" x="410" y="730" width="406" height="362"/>
+	<SubTexture name="lawn0006" x="2" y="1094" width="406" height="362"/>
+	<SubTexture name="lawn0007" x="410" y="1094" width="406" height="362"/>
+</TextureAtlas>
