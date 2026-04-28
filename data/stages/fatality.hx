@@ -9,11 +9,15 @@ function onEvent(_) if (_.event.name == 'Camera Movement')
 var launchBase:FunkinSprite = new FunkinSprite(-200, 100);
 var launchBaseCorrupted:FunkinSprite = new FunkinSprite(100, 200);
 var glitchedCrowd:FunkinSprite = new FunkinSprite(100, 200);
+var trueFatal:FunkinSprite = new FunkinSprite(250, 200);
+
 var sonicHUD:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 PauseSubState.script = 'data/scripts/ReziseWindow';
 
 function create() {
     defaultCamZoom = 0.5;
+    useCamMov = true;
+    camMoveAmt = 20;
 
     launchBase.loadSprite(getModImage('Fatality/launchbase'));
     launchBase.animation.addByIndices('base', 'idle', [0, 1, 2, 3, 4, 5, 6, 8, 9], "", 12, true);
@@ -44,6 +48,16 @@ function create() {
     glitchedCrowd.scrollFactor.set(1, 1);
     glitchedCrowd.visible = false;
 
+    trueFatal.loadSprite(getModImage('Fatality/truefatalstage'));
+    trueFatal.animation.addByIndices('piss', 'idle', [0, 1, 2, 3], "", 12, true);
+    trueFatal.playAnim('piss');
+    trueFatal.scale.set(4, 4);
+    trueFatal.antialiasing = false;
+    addSprite(trueFatal);
+    trueFatal.visible = false;
+
+    precacheCharacter(0, 'fatality/fatal-glitched');
+    precacheCharacter(1, 'fatality/bf-fatal-small');
     graphicCache.cache(getModImage('Fatality/statix'));
 }
 
@@ -139,10 +153,35 @@ function stepHit() switch(curStep) {
 
         playModSound('staticBUZZ');
         new FlxTimer().start(0.20, () -> remove(daStatic));
-        case 256:
+    case 256:
 		launchBase.visible = false;
 		launchBaseCorrupted.visible = true;
 		glitchedCrowd.visible = true;
+    case 1151: changeCharacter(0, 'fatality/fatal-glitched');
+    case 1984:
+        clearPopUps();
+        for (hide in cpuStrums) 
+            hide.x -= 1000;
+        for (strum in playerStrums)
+            strum.x -= 225;
+
+        launchBaseCorrupted.visible = false;
+        glitchedCrowd.visible = false;
+        trueFatal.visible = true;
+
+        var newFatalX:Float = dad.x + 740;
+        var newFatalY:Float = dad.y - 240;
+        changeCharacter(0, 'fatality/true-fatal');
+        dad.setPosition(newFatalX, newFatalY);
+        opponentCam.x = 620;
+        opponentCam.y += 50;
+
+        var newBfX:Float = boyfriend.x - 250;
+        var newBfY:Float = boyfriend.y + 135;
+        changeCharacter(1, 'fatality/bf-fatal-small');
+        boyfriend.setPosition(newBfX, newBfY);
+        playerCam.x = 620;
+        playerCam.y += 50;
 }
 
 function onSongEnd() {

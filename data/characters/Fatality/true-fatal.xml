@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="fatality/true-fatal" icon="true-fatal" color="#ff3c6e" x="100" y="200" antialiasing="false" camx="-810" camy="-300" holdTime="6.1" scale="4">
+	<anim name="idle" anim="Idle" fps="12" loop="true"/>
+	<anim name="singLEFT" anim="Left" x="-0.25" y="0" fps="12"/>
+	<anim name="singDOWN" anim="Down" x="-0.25" y="0" fps="12"/>
+	<anim name="singRIGHT" anim="Right" fps="12"/>
+	<anim name="singUP" anim="Up" x="0.25" y="0" fps="12"/>
+</character>

@@ -49,8 +49,8 @@ class FatalError extends MusicBeatGroup
     }
 }
 
-var canSpawn:Bool = true;
-var limiter:Bool = false;
+var canSpawn:Bool = false;
+var limiter:Bool = true;
 var xy:FlxRandom = new FlxRandom(666);
 var currentErrors:Array<FatalError> = [];
 var camOther:FlxCamera = new FlxCamera();
@@ -79,7 +79,7 @@ function spawnPopUp(?amount:Int = 1, ?type:Int = 2) if (canSpawn) {
     }
 }
 
-function clearPopUps() if (currentErrors.length > 0) {
+public function clearPopUps() if (currentErrors.length > 0) {
     for (i in 0...currentErrors.length) {
         var window = currentErrors[i];
         window.closeWindow();
