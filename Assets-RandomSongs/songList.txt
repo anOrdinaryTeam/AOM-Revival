@@ -1,5 +1,6 @@
 Silly Billy:billy
 Prey:furnace
+Fatality:fatal-sonic
 Phantasm:fleetway
 Sink:sink
 rush:rushblaze

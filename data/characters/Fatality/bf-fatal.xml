@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="120" icon="bf-fatal" camx="-50" y="410" scale="4" camy="-30" color="#31B0D1" flipX="true" antialiasing="false" sprite="fatality/fatal-bf" isPlayer="true">
+	<anim loop="true" x="-1.5" anim="Idle" name="idle"/>
+	<anim x="-0.25" anim="Down" name="singDOWN"/>
+	<anim x="-1.25" y="-0.75" anim="Left" name="singLEFT"/>
+	<anim x="0.25" y="2" anim="Up" name="singUP"/>
+	<anim x="-1" y="-0.5" anim="Right" name="singRIGHT"/>
+	<anim x="1.25" y="0.25" anim="MDown" name="singDOWNmiss"/>
+	<anim x="1.5" y="0.5" anim="MRight" name="singRIGHTmiss"/>
+	<anim x="1" y="1.75" anim="MUp" name="singUPmiss"/>
+	<anim x="1.75" y="-0.25" anim="MLeft" name="singLEFTmiss"/>
+</character>
