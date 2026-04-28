@@ -14,4 +14,3 @@ Epiphany:bigmonika
 pokemon-master:pokemonmaster
 Summit:red
 Candy:heathers
-Moscow:moscow/icon-tord
