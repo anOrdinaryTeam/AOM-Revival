@@ -15,8 +15,10 @@ function onPostNoteCreation(_) if (_.noteType == t) {
 
 function onPlayerHit(e) if (e.noteType == t) {
     FlxG.sound.play(Paths.sound('pokemonmaster/Flame'));
+    charizard.playAnim('attack');
     e.animCancelled = true;
     health = health - 0.2;
+    misses = misses+1;
     //e.healthGain -= -0.45; siseven ashjasjhashjasashjsahjhjadsjhhasjdkasdjhkasdjkashdjkashdjkasdhaqshz<<<<zzz
 }
 
