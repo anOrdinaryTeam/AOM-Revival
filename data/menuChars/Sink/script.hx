@@ -10,23 +10,12 @@ function postUpdate() {
     var sink:Character = charactersMenu.members[1];
     
     if (CoolUtil.mouseOverlaps(sink) && FlxG.mouse.justPressed) {
-        
         danceOnBeat = false;
 
         FlxG.sound.stop;
         FlxG.sound.play(Paths.sound('menusounds/sink'));
 
-        for (char in [ghost, sink]) {
-            char.animation.callback = (Anim) -> {
-            if (Anim == 'singUP') char.danceOnBeat = true;
-        }
-            char.animation.finishCallback = (Anim) -> {
-            if (Anim == 'singUP') char.danceOnBeat = true;
-        }
-
+        for (i in [ghost, sink]) 
+            i.playAnim('singUP', true);
     }
-        ghost.playAnim('singUP', true);
-        sink.playAnim('singUP', true);
-    }
-
 }

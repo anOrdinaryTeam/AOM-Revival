@@ -1,7 +1,5 @@
 function postUpdate() {
-
     var rushsonic:Character = charactersMenu.members[0];
-
     if (CoolUtil.mouseOverlaps(rushsonic) && FlxG.mouse.justPressed) {
 
         danceOnBeat = false;
