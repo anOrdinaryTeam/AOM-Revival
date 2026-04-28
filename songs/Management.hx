@@ -88,7 +88,7 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
         strum.animation.play(lastAnim);
     }
 
-    if (part == 'note' || part == 'notes' || part == 'both') for (babyArrow in _strum.notes) {
+    if (part == 'note' || part == 'notes' || part == 'both') for (babyArrow in _strum.notes) if (babyArrow.noteType == null) {
         var color:String = ["purple", "blue", "green", "red"][babyArrow.strumID % 4];
         var lastAnim:String = babyArrow.animation.name;
         var newPrefix:String = switch(lastAnim) {
