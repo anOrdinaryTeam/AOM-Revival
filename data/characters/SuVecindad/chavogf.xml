@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character camx="-170" camy="150" x="0" y="350" sprite="SuVecindad/GF" flipX="false" icon="gf" color="#A5004D">
+	<anim name="idle" anim="GF Idle" x="-5" fps="15" loop="true"/>
+</character>

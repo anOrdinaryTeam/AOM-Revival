@@ -1,0 +1,20 @@
+<!DOCTYPE codename-engine-character>
+<character x="60" y="350" sprite="SuVecindad/Chavo" icon="SuVecindad/chavo" flipX="true" color="#C1D954">
+	<anim name="idle" anim="Chavo Idle" x="-5" fps="15"/>
+
+	<anim name="singRIGHT" anim="Chavo Left0" x="-5"/>
+	<anim name="singDOWN" anim="Chavo Down0" x="-7" y="-3"/>
+	<anim name="singUP" anim="Chavo Up0" x="-2" y="-1"/>
+	<anim name="singLEFT" anim="Chavo Right0" x="-2" y="1"/>
+
+	<anim name="singRIGHTmiss" anim="Chavo Left Miss" x="-13"/>
+	<anim name="singDOWNmiss" anim="Chavo Down Miss" x="-15" y="1"/>
+	<anim name="singUPmiss" anim="Chavo Up Miss" x="-6" y="-13"/>
+	<anim name="singLEFTmiss" anim="Chavo Right Miss" x="-4" y="-2"/>
+
+	<anim name="hey" anim="Chavo Hey" x="-2"/>
+	
+	<anim name="firtsDeath" anim="Chavo Death" x="-5" y="-4" fps="15"/>
+	<anim name="deathLoop" anim="Chavo Death" x="-5" y="-4" loop="true" indices="20"/>
+	<anim name="deathConfirm" anim="Chavo Death" x="-5" y="-4" indices="20"/>
+</character>

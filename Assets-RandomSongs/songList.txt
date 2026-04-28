@@ -14,3 +14,4 @@ Epiphany:bigmonika
 pokemon-master:pokemonmaster
 Summit:red
 Candy:heathers
+Su-Vecindad:SuVecindad/chavo
