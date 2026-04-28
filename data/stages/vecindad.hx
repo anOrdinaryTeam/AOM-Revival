@@ -11,9 +11,12 @@ public var quico:Character;
 function preStageLoad()
     useStageData = false;
 function postCreate()
-    // changeNoteSkin('modNotes/SuVecindad/chavo', player, 'both', false);
-
     loadHud('PsychEngine', '');
+
+function onNoteCreation(_)
+    _.noteSprite = 'modNotes/SuVecindad/chavo';
+// function onStrumCreation(_)
+//     _.noteSprite = 'modNotes/SuVecindad/chavo_notes';
 
 function create() {
     // settings shit

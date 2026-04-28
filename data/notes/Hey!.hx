@@ -1,13 +1,5 @@
-function onPlayerHit(_) {
-    if (_.noteType == 'Hey!') {
+function onNoteHit(_)
+    if (_.noteType == 'Hey!'){
         _.cancelAnim();
-        boyfriend.playAnim('hey');
+        for(char in _.characters) char.playAnim('hey');
     }
-}
-
-function onDadHit(_) {
-    if (_.noteType == 'Hey!') {
-        _.cancelAnim();
-        dad.playAnim('hey');
-    }
-}
