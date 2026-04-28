@@ -1,3 +1,5 @@
+import flixel.text.FlxTextBorderStyle;
+import flixel.util.FlxStringUtil;
 importScript('data/scripts/FatalErrorPopUp');
 
 function onEvent(_) if (_.event.name == 'Camera Movement')
@@ -7,14 +9,11 @@ function onEvent(_) if (_.event.name == 'Camera Movement')
 var launchBase:FunkinSprite = new FunkinSprite(-200, 100);
 var launchBaseCorrupted:FunkinSprite = new FunkinSprite(100, 200);
 var glitchedCrowd:FunkinSprite = new FunkinSprite(100, 200);
+var sonicHUD:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 PauseSubState.script = 'data/scripts/ReziseWindow';
 
 function create() {
     defaultCamZoom = 0.5;
-
-    dad.x -= 550;
-	dad.y += 40;
-	boyfriend.y += 140;
 
     launchBase.loadSprite(getModImage('Fatality/launchbase'));
     launchBase.animation.addByIndices('base', 'idle', [0, 1, 2, 3, 4, 5, 6, 8, 9], "", 12, true);
@@ -46,6 +45,86 @@ function create() {
     glitchedCrowd.visible = false;
 
     graphicCache.cache(getModImage('Fatality/statix'));
+}
+
+function postCreate() if (getSaveData('allowCustomHud')) {
+    for (i in [scoreTxt, accuracyTxt, missesTxt]) i.visible = false;
+    healthBar.x += 150;
+    healthBarBG.x += 150;
+    sonicHUD.camera = camHUD;
+    insert(members.indexOf(iconP2) + 1, sonicHUD);
+
+    for (i in 0...6) {
+        var text:FlxText = new FlxText(20, 540 + (50 * i), FlxG.width, '', 45);
+        text.font = Paths.font('Sonic3.otf');
+        text.borderStyle = FlxTextBorderStyle.OUTLINE;
+        text.borderSize = 1;
+        text.borderColor = FlxColor.BLACK;
+        sonicHUD.add(text);
+
+        switch(i) {
+            case 0,1,2: text.color = FlxColor.YELLOW;
+            case 3,4,5:
+                text.color = FlxColor.WHITE;
+                text.alignment = 'right';
+        }
+        switch(i) {
+            case 0: text.text = 'SCORE';
+            case 1: text.text = 'TIME';
+            case 2: text.text = 'MISSES';
+            case 3,4,5: text.text = '0';
+        }
+    }
+
+    var xScreen:Float = -FlxG.width;
+    sonicHUD.members[3].setPosition(xScreen + 290, sonicHUD.members[0].y);
+    sonicHUD.members[4].setPosition(xScreen + 250, sonicHUD.members[1].y);
+    sonicHUD.members[5].setPosition(xScreen + 260, sonicHUD.members[2].y);
+}
+
+function onRatingUpdate(_) if (sonicHUD != null) {
+    sonicHUD.members[3].text = songScore;
+    sonicHUD.members[5].text = misses;
+}
+
+function update(_) if (sonicHUD != null) {
+    var songCalc:Float = Conductor.songPosition;
+    var secondsTotal:Int = Math.floor(songCalc / 1000);
+	if(secondsTotal < 0) secondsTotal = 0;
+
+    sonicHUD.members[4].text = FlxStringUtil.formatTime(secondsTotal, false);
+}
+
+function onStrumCreation(event)  {
+    event.cancel();
+
+    var spr:String = event.player == 0 ? 'fatal' : 'arrow';
+    var strum = event.strum;
+    strum.loadGraphic(Paths.image('modNotes/$spr-pixels'), true, 17, 17);
+    strum.animation.add("static", [event.strumID]);
+    strum.animation.add("pressed", [4 + event.strumID, 8 + event.strumID], 12, false);
+    strum.animation.add("confirm", [12 + event.strumID, 16 + event.strumID], 24, false);
+    strum.scale.set(6, 6);
+    strum.updateHitbox();
+}
+
+function onNoteCreation(event) {
+    event.cancel();
+
+    var note = event.note;
+    var spr:String = event.strumLineID == 0 ? 'fatal' : 'arrow';
+
+    if (note.isSustainNote) {
+        note.loadGraphic(Paths.image('modNotes/$spr' + 'Ends'), true, 7, 6);
+        note.animation.add("hold", [event.strumID]);
+        note.animation.add("holdend", [4 + event.strumID]);
+    } else {
+        note.loadGraphic(Paths.image('modNotes/$spr-pixels'), true, 17, 17);
+        note.animation.add("scroll", [4 + event.strumID]);
+    }
+    note.scale.set(6, 6);
+    note.updateHitbox();
+    note.splash = 'pixel-default';
 }
 
 function stepHit() switch(curStep) {
