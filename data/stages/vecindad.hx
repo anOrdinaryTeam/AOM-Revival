@@ -14,6 +14,7 @@ function postCreate()
     loadHud('PsychEngine', '');
 
 function create() {
+    // settings shit
     defaultCamZoom = 0.7;
 
     boyfriend.setPosition(1100, 500);
@@ -23,8 +24,11 @@ function create() {
     useCamMov = true;
     camMoveAmt = 60;
 
-    // precacheCharacter(0, 'chavoPOV');
+    precacheCharacter(0, 'chavo2');
+    precacheCharacter(1, 'chavobf2');
+    // settings shit
 
+    // stage shit
     vecindad = new FlxSprite(-600, 200, getModImage('SuVecindad/Vecindad'));
     vecindad.antialiasing = true;
     insert(1, vecindad);
@@ -39,7 +43,9 @@ function create() {
     vecindadPOV.antialiasing = true;
     vecindadPOV.alpha = 0.001;
     insert(3, vecindadPOV);
+    // stage shit
 
+    // bars shit
     barTop = new FlxSprite(0, -100).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barTop.camera = camHUD;
     insert(4, barTop);
@@ -47,8 +53,10 @@ function create() {
     barBottom = new FlxSprite(0, 900).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barBottom.camera = camHUD;
     insert(4, barBottom);
+    // bars shit
 }
 
+// events go brr
 function stepHit() {
     switch(curStep) {
         case 640:

@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="SuVecindad/Quico" camx="-460" icon="SuVecindad/icon-quico" color="#E8F07D">
+	<anim name="idle" anim="Quico Idle" x="-5" y="-2" fps="15"/>
+	<anim name="singLEFT" anim="Quico Left0" x="-5" y="-2"/>
+	<anim name="singDOWN" anim="Quico Down0" x="-9" y="1"/>
+	<anim name="singUP" anim="Quico Up0" x="-2" y="-11"/>
+	<anim name="singRIGHT" anim="Quico Right0" x="2"/>
+	<anim name="singLEFTmiss" anim="Quico Left Miss" x="-13"/>
+	<anim name="singDOWNmiss" anim="Quico Down Miss" x="-15" y="1"/>
+	<anim name="singUPmiss" anim="Quico Up Miss" x="-6" y="-13"/>
+	<anim name="singRIGHTmiss" anim="Quico Right Miss" x="-4" y="-2"/>
+	<anim name="hey" anim="Quico hey"/>
+</character>

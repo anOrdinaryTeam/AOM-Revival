@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-450" y="-20" sprite="SuVecindad/Chavo2" camx="-130" camy="-190" icon="SuVecindad/chavo" color="#C0FF52">
+	<anim name="idle" anim="Chavo2 Idle" x="-3" y="3" fps="15"/>
+	<anim name="singDOWN" anim="Chavo2 Down" x="-8" y="1"/>
+	<anim name="singRIGHT" anim="Chavo2 Right" x="2"/>
+	<anim name="singLEFT" anim="Chavo2 Left" x="-5"/>
+	<anim name="singUP" anim="Chavo2 Up" x="-2" y="-12"/>
+</character>

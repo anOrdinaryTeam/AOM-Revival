@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-170" y="290" sprite="SuVecindad/BF_Asustado" flipX="true" isPlayer="true" icon="SuVecindad/icon-bf_luigi" color="#2FB0D2">
+	<anim name="idle" anim="BF_Asustado Idle" x="-5" fps="15"/>
+	<anim name="singLEFT" anim="BF_Asustado Left" x="-4"/>
+	<anim name="singDOWN" anim="BF_Asustado Down" x="-9" y="1"/>
+	<anim name="singUP" anim="BF_Asustado Up" x="-2" y="-12"/>
+	<anim name="singRIGHT" anim="BF_Asustado Right" x="2"/>
+</character>
