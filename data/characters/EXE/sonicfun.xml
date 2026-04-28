@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/majin" icon="majin" color="BLUE" applyStageMatrix="true">
+	<anim name="idle" anim="export/SONICFUNIDLE"/>
+	<anim name="singUP" anim="export/SONICFUNUP" x="11" y="-69"/>
+	<anim name="singDOWN" anim="export/SONICFUNDOWN" x="34" y="-244"/>
+	<anim name="singRIGHT" anim="export/SONICFUNRIGHT" x="-138" y="-142"/>
+	<anim name="singLEFT" anim="export/SONICFUNLEFT" x="399" y="-245"/>
+</character>

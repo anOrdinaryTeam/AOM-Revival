@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character x="350" y="250" sprite="exe/Pixel_gf" scale="10" antialiasing="false" icon="gf-pixel-exe">
+	<anim name="sad" anim="Pixel gf miss" fps="12"/>
+	<anim name="danceLeft" anim="Pixel gf dance" fps="12" indices="0..4"/>
+	<anim name="danceRight" anim="Pixel gf dance" fps="12" indices="4..7"/>
+</character>

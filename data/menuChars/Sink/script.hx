@@ -1,5 +1,4 @@
 function onCharsLoaded() {
-
     var ghost:Character = charactersMenu.members[0];
     var sink:Character = charactersMenu.members[1];
 
@@ -7,15 +6,14 @@ function onCharsLoaded() {
 }
 
 function postUpdate() {
-
     var ghost:Character = charactersMenu.members[0];
     var sink:Character = charactersMenu.members[1];
-
     
     if (CoolUtil.mouseOverlaps(sink) && FlxG.mouse.justPressed) {
         
         danceOnBeat = false;
 
+        FlxG.sound.stop;
         FlxG.sound.play(Paths.sound('menusounds/sink'));
 
         for (char in [ghost, sink]) {
@@ -27,10 +25,8 @@ function postUpdate() {
         }
 
     }
-
         ghost.playAnim('singUP', true);
         sink.playAnim('singUP', true);
-
     }
 
 }

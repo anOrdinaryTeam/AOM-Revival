@@ -1,6 +1,8 @@
 import funkin.backend.system.framerate.Framerate;
+import funkin.backend.utils.ShaderResizeFix;
 import funkin.backend.utils.DiscordUtil;
 import funkin.backend.utils.NativeAPI;
+import openfl.system.Capabilities;
 import hxvlc.util.Handle;
 import Sys;
 
@@ -23,7 +25,7 @@ using StringTools;
 function new() {
     Handle.init([]);
     currentModsList = loadModFolders();
-    trace('Loaded Mod List: $currentModsList');
+    trace('Loaded Mod List: $currentModsList ');
 
     if (!Assets.exists(Paths.image('DO_NOT_DELETE', null, false, 'png'))) {
         NativeAPI.showMessageBox('NOOOOO', 'ENARD EPAGUETI :(((');
@@ -40,7 +42,6 @@ function loadModFolders():Array<String>
         var _file:String = folder.replace('Assets-', '');
         result.push(_file);
     }
-
     return result;
 }
 
@@ -168,4 +169,35 @@ public static function changeToDefaultRPC(_state:String) {
         state: _state,
         largeImageKey: 'icon'
     });
+}
+
+var winWidth:Int;
+var winHeight:Int;
+
+public static function windowShit(newWidth:Int, newHeight:Int, ?winScale:Float = 0.9){
+    if(newWidth != 1280 || newHeight != 720) {
+        aspectShit(newWidth, newHeight);
+        FlxG.resizeWindow(winWidth * winScale, winHeight * winScale);
+    } 
+    else
+        FlxG.resizeWindow(newWidth, newHeight);
+
+    FlxG.resizeGame(newWidth, newHeight);
+    FlxG.scaleMode.width = FlxG.width = FlxG.initialWidth = newWidth;
+    FlxG.scaleMode.height = FlxG.height = FlxG.initialHeight = newHeight;
+    ShaderResizeFix.doResizeFix = true;
+    ShaderResizeFix.fixSpritesShadersSizes();
+    window.x = Capabilities.screenResolutionX/2 - window.width/2;
+    window.y = Capabilities.screenResolutionY/2 - window.height/2;
+}
+
+function aspectShit(width:Int, height:Int):String {
+    var idk1:Int = height;
+    var idk2:Int = width;
+    while (idk1 != 0) {
+        idk1 = idk2 % idk1;
+        idk2 = height;
+    }
+    winWidth = Math.floor(Capabilities.screenResolutionX * ((height / idk2) / (width / idk2))) > Capabilities.screenResolutionY ? Math.floor(Capabilities.screenResolutionY * ((width / idk2) / (height / idk2))) : Capabilitities.screenResolutionX;
+    winHeight = Math.floor(Capabilities.screenResolutionX * ((height / idk2) / (width / idk2))) > Capabilities.screenResolutionY ? Capabilities.screenResolutionY : Math.floor(Capabilities.screenResolutionX * ((height / idk2) / (width / idk2)));
 }

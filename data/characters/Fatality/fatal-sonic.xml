@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character x="150" y="360" sprite="fatality/fatal-error-sonic" scale="4" antialiasing="false" camx="0" camy="-300" icon="fatal-sonic" color="#FF3C6E">
+	<anim name="idle" anim="Fatal sonic idle" x="1" y="129.75" fps="24" loop="false"/>
+	<anim name="singUP" anim="Fatal sonic up" x="1" y="129.75" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Fatal sonic right" x="1" y="129.75" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Fatal sonic left" x="1" y="129.75" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Fatal sonic down" x="1" y="129.75" fps="24" loop="false"/>
+	<anim name="singLEFT-loop" anim="Fatal sonic left" x="1" y="129.75" fps="25" loop="true" indices="15..18"/>
+</character>

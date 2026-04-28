@@ -1,5 +1,6 @@
 Silly Billy:billy
 Prey:furnace
+Fatality:fatal-sonic
 Phantasm:fleetway
 Sink:sink
 rush:rushblaze
@@ -12,3 +13,4 @@ Treacherous Thorns:senpai-emtpy
 Epiphany:bigmonika
 pokemon-master:pokemonmaster
 Summit:red
+Candy:heathers

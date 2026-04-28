@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character y="500" sprite="exe/bf-majin2" flipX="true" isPlayer="true" icon="bf" color="#30B0D1" applyStageMatrix="true">
+	<anim name="idle" anim="BF idle dance"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN" x="-301" y="164"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT"/>
+	<anim name="singUP" anim="BF NOTE UP" x="-300" y="266"/>
+	<anim name="singUPmiss" anim="BF NOTE UP MISS" x="-300" y="261"/>
+	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS" x="-308" y="164"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS"/>
+</character>

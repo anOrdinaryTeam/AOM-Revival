@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="stage.png">
+<SubTexture name="one0000" x="226" y="0" width="353" height="192" frameX="-998" frameY="-832" frameWidth="1351" frameHeight="1080" />
+<SubTexture name="two0000" x="0" y="0" width="226" height="243" frameX="0" frameY="-644" frameWidth="1920" frameHeight="1920" />
+<SubTexture name="three0000" x="0" y="243" width="273" height="121" frameX="-141" frameY="-938" frameWidth="1920" frameHeight="1080" />
+</TextureAtlas>

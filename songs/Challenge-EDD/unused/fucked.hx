@@ -42,23 +42,19 @@ function stepHit() {
             FlxTween.tween(edd, {x: -65, y: 370}, 0.5, {ease: FlxEase.quadInOut});
         case 1200, 1472, 1660, 1856:
             FlxTween.tween(edd, {x: -565, y: 770}, 1, {ease: FlxEase.quadInOut});
-
         case 1263, 1535, 1695, 1919:
             FlxTween.tween(bf, {x: 835, y: 290}, 0.5, {ease: FlxEase.quadInOut});
         case 1328, 1608, 1728, 1993:
             FlxTween.tween(bf, {x: 1235, y: 790}, 1, {ease: FlxEase.quadInOut});
 
         case 2017: tordCabine(true);
-        case 2033: tordMecha.playAnim('blow');
+        case 2033:
+            tordMecha.playAnim('blow');
+            tordMecha.animation.finishCallback = function(name:String) {
+                if (name == 'blow') remove(tordMecha);
+            }
     }
 }
-
-function update() {
-    tordMecha.animation.finishCallback = function(name:String) {
-        if (name == 'blow') remove(tordMecha);
-    }
-}
-
 function tordEntrance() {
     remove(door);
     remove(matt);
@@ -177,7 +173,7 @@ function tordFall() {
     for (t in [boyfriend, bfTord, tomRush])
         t.alpha = 0;
     
-    tordMecha.x += 200;
+    tordMecha.x -= 250; tordMecha.y -= 550;
     tordMecha.playAnim('harp');
 
     eddTord.x += 135;

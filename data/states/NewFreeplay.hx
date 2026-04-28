@@ -1,4 +1,5 @@
 import funkin.backend.chart.Chart;
+importScript('data/scripts/PreSongLoader');
 
 var songsList:Array<SongData> = [];
 var grpSongs:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
@@ -109,6 +110,8 @@ function enterSong() {
 	Options.freeplayLastDifficulty = diff;
 
     trace('Selected Song: $songName - ${diff.toUpperCase()}');
+    stateScripts.call('preEnterSong', [songName]);
+
 	PlayState.loadSong(songName, diff);
 	FlxG.switchState(new PlayState());
 }

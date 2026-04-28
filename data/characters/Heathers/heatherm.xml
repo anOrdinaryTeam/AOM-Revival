@@ -1,0 +1,11 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Heathers/heatherm" icon="face" color="#a1a1a1" holdTime="6.1">
+	<anim name="danceLeft" anim="heather m" indices="0..7"/>
+	<anim name="danceRight" anim="heather m" indices="8..15"/>
+	<anim name="singLEFT" anim="heather m left" x="15" y="-9"/>
+	<anim name="singDOWN" anim="heather m down" x="7" y="-14"/>
+	<anim name="singUP" anim="heather m up" x="-10" y="0"/>
+	<anim name="singRIGHT" anim="heather m right" x="0" y="-13"/>
+	<anim name="walk" anim="heather m walk" x="50" y="0" loop="true"/>
+</character>
