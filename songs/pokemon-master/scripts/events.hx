@@ -5,8 +5,6 @@ function create(){
     precacheCharacter(0, 'pixelpokemonmaster'); // los pendejos
     precacheCharacter(1, 'pixelpokemonmasterbf');
 
-}
-
 function stepHit()
 
     switch(curStep){
