@@ -1,9 +1,9 @@
 Silly Billy:billy
 Prey:furnace
-Fatality:fatal-sonic
 Phantasm:fleetway
 Sink:sink
 rush:rushblaze
+Fatality:fatal-sonic
 Accelerant:hank
 Challenge-EDD:icon-edd
 Corruptro:corruptro

@@ -4,17 +4,19 @@ function create(){
 
     precacheCharacter(0, 'pixelpokemonmaster'); // los pendejos
     precacheCharacter(1, 'pixelpokemonmasterbf');
+    precacheNotes('modNotes/pokemonmaster/NOTE_assets', false);
 
 }
 
 function stepHit()
 
     switch(curStep){
-
+        
         case 512, 640, 1056: // Switch... on!
-
+        
             changeCharacter(0, 'pixelpokemonmaster');
             changeCharacter(1, 'pixelpokemonmasterbf');
+            changeNoteSkin('modNotes/pokemonmaster/NOTE_assets', player, 'both', false);
 
             dad.flipX = false; // Me di cuenta que asi no era XDDDDDDDDDDD
             dad.scale.set(0.6,0.6);
@@ -33,6 +35,7 @@ function stepHit()
             
             changeCharacter(0, 'pokemonmaster');
             changeCharacter(1, 'pokemonmasterbf');
+            changeNoteSkin('game/notes/default', player, 'both', false);
             
             dad.flipX = true;
             dad.scale.set(0.6,0.6);
