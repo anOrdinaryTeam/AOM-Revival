@@ -5,5 +5,4 @@
 
 [ MODS ]
 - VS Kappi
-- Twinsomania
 - VS EXE (v2)
