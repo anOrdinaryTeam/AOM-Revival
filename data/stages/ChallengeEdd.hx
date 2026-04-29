@@ -1,6 +1,9 @@
 public var sky:FlxSprite;
 var plane:FlxSprite;
 
+function postCreate()
+    loadHud('VS-Online');
+
 function create() {
     defaultCamZoom = 0.65;
 
@@ -42,10 +45,6 @@ function stepHit() {
     switch(curStep) {
         case 380: Plane();
     }
-}
-
-function postCreate() {
-    loadHud('VS-Online');
 }
 
 function Plane() {

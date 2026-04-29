@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character x="300" y="300" sprite="TreacherousThorns/gfPixelD3" scale="6.1" antialiasing="false" icon="TreacherousThorns/gfPixelD3">
+	<anim name="idle" anim="GF IDLE" loop="true"/>
+</character>

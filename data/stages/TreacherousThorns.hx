@@ -1,10 +1,10 @@
 import flixel.addons.effects.FlxTrail;
 importScript('data/scripts/pixelate');
 static function senpaiPath(str:String)
-    return getModImage('Senpai/$str');
+    return getModImage('TreacherousThorns/$str');
 
 var filter:FlxSprite;
-var spiritChar:Character = new Character(0, 0, 'spiritCrazy');
+var spiritChar:Character = new Character(0, 0, 'TreacherousThorns/spiritCrazy');
 var spiritTrail:FlxTrail;
 
 var bgLayer1:FlxTypedGroup<Dynamic> = new FlxTypedGroup();

@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="300" y="600" sprite="rs/bfPixelD3" scale="6.1" antialiasing="false" flipX="true" isPlayer="true" icon="bfpixelcorrupt" color="0xFF66FF33">
+<character x="300" y="600" sprite="TreacherousThorns/bfPixelD3" scale="6.1" antialiasing="false" flipX="true" isPlayer="true" icon="TreacherousThorns/bfpixelcorrupt" color="0xFF66FF33">
 	<anim name="idle" anim="BF IDLE instance 1"/>
 	<anim name="singUP" anim="BF UP NOTE instance 1"/>
 	<anim name="singLEFT" anim="BF LEFT NOTE instance 1"/>

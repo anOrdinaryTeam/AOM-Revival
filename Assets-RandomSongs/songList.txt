@@ -14,4 +14,4 @@ Sink:sink
 Su-Vecindad:SuVecindad/chavo
 Summit:Summit/red
 rush:rushblaze
-Treacherous Thorns:senpai-emtpy
+Treacherous Thorns:TreacherousThorns/senpai-emtpy
