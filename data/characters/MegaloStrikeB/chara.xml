@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="rs/chara" camx="130" color="#F30808">
+<character sprite="MegaloStrikeB/chara" icon="MegaloStrikeB/chara" camx="130" color="#F30808">
 	<anim name="idle" anim="chara0"/>
 	<anim name="singUP" anim="chara up" x="2" y="2"/>
 	<anim name="singLEFT" anim="chara left" x="-7" y="-1"/>
