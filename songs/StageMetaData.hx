@@ -12,7 +12,7 @@ public var useStageData:Bool = true;
 
 function create() {
     fileExists = Assets.exists(Paths.json('stagesData/$stageName'));
-    metaSongExists = Assets.exists(Paths.getPath('songs/$songName/meta.json'));
+    metaSongExists = Assets.exists(Paths.getPath('songs/$currentMod/$songName/meta.json'));
     scripts.call('preStageLoad');
 
     if (!useStageData)
@@ -93,11 +93,13 @@ function postCreate() if (CREATE_FILE_FEATURE) {
             var content = {
                 "bpm": PlayState.SONG.meta.bpm ?? 150,
                 "icon": dad.getIcon(),
+                "displayName": songName
             };
             var _file:String = JsonPrinter.print(content, null, '\t');
+            var DIR:String = Paths.getAssetsRoot();
 
             CoolUtil.safeSaveFile(
-                '${Paths.getAssetsRoot()}/songs/$songName/meta.json',
+                '$DIR/songs/$currentMod/$songName/meta.json',
                 _file
             );
             trace('Created! [meta.json]');
