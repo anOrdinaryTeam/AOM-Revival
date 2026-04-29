@@ -63,6 +63,18 @@ public static function RefreshSaveDatas() {
         saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
     // [ END ]
 
+    
+    // [ MODS/SONGS CONFIGS ]
+    if (saveMap.get('Fatality_MoveWindow') != FlxG.save.data.AOM_Fatality_WindowMove)
+        saveMap.set('Fatality_MoveWindow', FlxG.save.data.AOM_Fatality_WindowMove);
+
+    if (saveMap.get('Fatality_SpawnPopUps') != FlxG.save.data.AOM_Fatality_PopUps)
+        saveMap.set('Fatality_SpawnPopUps', FlxG.save.data.AOM_Fatality_PopUps);
+
+    if (saveMap.get('Fatality_PopUpsLimiter') != FlxG.save.data.AOM_Fatality_PopUps)
+        saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_PopUps);
+    // [ END ]
+
 
     // [ PSYCH DATA ]
     if (saveMap.get('Psych_HideHud') != FlxG.save.data.AOM_psych_HIDEHUD)
@@ -115,6 +127,20 @@ static function LoadSaveData() {
     saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
     // [ END ]
 
+    // [ MODS/SONGS CONFIG ]
+
+        // [ FATALITY ]
+        FlxG.save.data.AOM_Fatality_WindowMove ??= true;
+        saveMap.set('Fatality_MoveWindow', FlxG.save.data.AOM_Fatality_WindowMove);
+
+        FlxG.save.data.AOM_Fatality_PopUps ??= true;
+        saveMap.set('Fatality_SpawnPopUps', FlxG.save.data.AOM_Fatality_PopUps);
+
+        FlxG.save.data.AOM_Fatality_Limiter_PopUps ??= false;
+        saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_Limiter_PopUps);
+        // [ END ]
+
+    // [ END ]
 
     // [ PSYCH DATA ]
     FlxG.save.data.AOM_psych_HIDEHUD ??= false;

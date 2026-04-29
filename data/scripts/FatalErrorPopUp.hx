@@ -60,10 +60,10 @@ function postCreate() {
     FlxG.cameras.add(camOther, false);
 }
 
-function spawnPopUp(?amount:Int = 1, ?type:Int = 2) if (canSpawn) {
+function spawnPopUp(?amount:Int = 1, ?type:Int = 2) if (getSaveData('Fatality_SpawnPopUps')) {
     var finalAmount:Int = amount;
 
-    if (limiter) {
+    if (getSaveData('Fatality_PopUpsLimiter')) {
         if (currentErrors.length == 5) finalAmount = 0;
         else finalAmount = finalAmount;
     }
