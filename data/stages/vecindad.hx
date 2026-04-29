@@ -3,6 +3,9 @@ var quicoBG:FunkinSprite;
 var gfBG:FunkinSprite;
 var vecindadPOV:FlxSprite;
 
+var chavoAnim:FunkinSprite;
+var quicoAnim:FunkinSprite;
+
 var barTop:FlxSprite;
 var barBottom:FlxSprite;
 
@@ -48,20 +51,35 @@ function create() {
     vecindadPOV.antialiasing = true;
     vecindadPOV.alpha = 0.001;
     insert(3, vecindadPOV);
+    // stage shit
 
+    // chars shit
     quico = new Character(-300, 400, 'SuVecindad/quico');
     quico.alpha = 0.001;
-    add(quico);
-    // stage shit
+    insert(3, quico);
+
+    quicoAnim = new FunkinSprite(-525, 660).loadSprite(getModImage('SuVecindad/QuicoMami'));
+    quicoAnim.addAnim('idle', 'QuicoMami mami0', 24, false);
+    // quicoAnim.playAnim('idle');
+    quicoAnim.alpha = 0.001;
+    insert(3, quicoAnim);
+
+    chavoAnim = new FunkinSprite(-190, 750).loadSprite(getModImage('SuVecindad/ChavoToma'));
+    chavoAnim.addAnim('idle', 'ChavoToma toma0', 24, false);
+    // chavoAnim.playAnim('idle');
+    chavoAnim.flipX = true;
+    chavoAnim.alpha = 0.001;
+    insert(4, chavoAnim);
+    // chars shit
 
     // bars shit
     barTop = new FlxSprite(0, -100).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barTop.camera = camHUD;
-    insert(4, barTop);
+    insert(5, barTop);
 
     barBottom = new FlxSprite(0, 900).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barBottom.camera = camHUD;
-    insert(4, barBottom);
+    insert(5, barBottom);
     // bars shit
 }
 
@@ -82,8 +100,26 @@ function stepHit() {
         case 1854:
             FlxTween.tween(camHUD, {alpha: 0}, 1.1);
 
+        case 1758:
+            dad.alpha = 0.001;
+            chavoAnim.alpha = 1;
+            chavoAnim.playAnim('idle');
+            chavoAnim.animation.finishCallback = function(name:String) {
+                if (name == 'idle') {
+                    new FlxTimer().start(1, () -> {
+                        remove(chavoAnim);
+                        dad.alpha = 1;
+                    });
+                }
+            }
+
+        case 1764:
+            remove(quico);
+            quicoAnim.alpha = 1;
+            quicoAnim.playAnim('idle');
+
         case 1440:
-            changeCharacter(0, 'SuVecindad/chavo');
+            changeCharacter(1, 'SuVecindad/chavobf');
 
         case 1954:
             camGame.alpha = 0;
