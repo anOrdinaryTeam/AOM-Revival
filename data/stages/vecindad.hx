@@ -55,18 +55,19 @@ function create() {
 
     // chars shit
     quico = new Character(-300, 400, 'SuVecindad/quico');
+    quico.antialiasing = true;
     quico.alpha = 0.001;
     insert(3, quico);
 
     quicoAnim = new FunkinSprite(-525, 660).loadSprite(getModImage('SuVecindad/QuicoMami'));
     quicoAnim.addAnim('idle', 'QuicoMami mami0', 24, false);
-    // quicoAnim.playAnim('idle');
+    quicoAnim.antialiasing = true;
     quicoAnim.alpha = 0.001;
     insert(3, quicoAnim);
 
     chavoAnim = new FunkinSprite(-190, 750).loadSprite(getModImage('SuVecindad/ChavoToma'));
     chavoAnim.addAnim('idle', 'ChavoToma toma0', 24, false);
-    // chavoAnim.playAnim('idle');
+    chavoAnim.antialiasing = true;
     chavoAnim.flipX = true;
     chavoAnim.alpha = 0.001;
     insert(4, chavoAnim);
@@ -112,7 +113,6 @@ function stepHit() {
                     });
                 }
             }
-
         case 1764:
             remove(quico);
             quicoAnim.alpha = 1;
