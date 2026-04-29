@@ -18,8 +18,8 @@ function postCreate()
 
 function onNoteCreation(_)
     _.noteSprite = 'modNotes/SuVecindad/chavo';
-// function onStrumCreation(_)
-//     _.noteSprite = 'modNotes/SuVecindad/chavo_notes';
+function onStrumCreation(_)
+    _.sprite = 'modNotes/SuVecindad/chavo';
 
 function create() {
     // settings shit
