@@ -11,7 +11,8 @@ pokemon-master:pokemonmaster
 Prey:furnace
 Silly Billy:SillyBilly/billy
 Sink:sink
-Su-Vecindad:SuVecindad/chavo
+Su Vecindad:SuVecindad/chavo
 Summit:Summit/red
 rush:rushblaze
+The Deathmatch
 Treacherous Thorns:TreacherousThorns/senpai-emtpy
