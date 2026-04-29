@@ -4,8 +4,7 @@ function postUpdate() {
 
         danceOnBeat = false;
 
-        FlxG.sound.stop;
-        FlxG.sound.play(Paths.sound('pokemonmaster/Thunder'));
+        FlxG.sound.play(Paths.sound('menusounds/sonicyeah'));
 
         rushsonic.playAnim("Sonic Yeah", true);
         rushsonic.animation.finishCallback = function(name:String) {

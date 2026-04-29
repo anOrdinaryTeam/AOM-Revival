@@ -5,7 +5,6 @@ function postUpdate() {
 
         danceOnBeat = false;
 
-        FlxG.sound.stop;
         FlxG.sound.play(Paths.sound('menusounds/blazeyeah'));
 
         rushblaze.playAnim("Blaze yeah", true);

@@ -12,7 +12,6 @@ function postUpdate() {
     if (CoolUtil.mouseOverlaps(sink) && FlxG.mouse.justPressed) {
         danceOnBeat = false;
 
-        FlxG.sound.stop;
         FlxG.sound.play(Paths.sound('menusounds/sink'));
 
         for (i in [ghost, sink]) 
