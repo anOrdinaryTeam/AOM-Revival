@@ -44,7 +44,7 @@ function create() {
     useCamMov = true;
     camMoveAmt = 25;
 
-    for (d in ['transLookalike', 'bf-lookalike', 'transLookalike2'])
+    for (d in ['SillyBilly/transLookalike', 'SillyBilly/bf-lookalike', 'SillyBilly/transLookalike2'])
         precacheCharacter(0, d);
 
     graphicCache.cache(BillyPath('broken_mirror'));
@@ -112,7 +112,7 @@ function postCreate() {
     add(black);
 
     video = new FlxVideoSprite(212, 121);
-    video.load(Paths.video('open'));
+    video.load(Paths.video('SillyBilly/open'));
     video.bitmap.onEndReached.add(video.destroy);
     video.camera = camHUD;
     video.antialiasing = true;
@@ -121,7 +121,7 @@ function postCreate() {
     add(video);
 
     MyWay = new FlxVideoSprite();
-    MyWay.load(Paths.video('SO_STAY_FINAL'));
+    MyWay.load(Paths.video('SillyBilly/SO_STAY_FINAL'));
     MyWay.bitmap.onEndReached.add(MyWay.destroy);
     MyWay.camera = camHUD;
     MyWay.antialiasing = true;

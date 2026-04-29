@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-character>
 <!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="rs/Yourself_BF_Assets" icon="bf" color="#31b0d1" x="-20" y="190" flipX="true" camx="-200" holdTime="4.00000000000001" scale="0.95" isPlayer="true">
+<character sprite="SillyBilly/Yourself_BF_Assets" icon="bf" color="#31b0d1" x="-20" y="190" flipX="true" camx="-200" holdTime="4.00000000000001" scale="0.95" isPlayer="true">
 	<anim name="singRIGHT" anim="BFRight0" x="-66.31578947368422" y="1.0526315789473684"/>
 	<anim name="singUP" anim="BFUp0" x="-58.94736842105264" y="68.42105263157895"/>
 	<anim name="singLEFT" anim="BFLeft0" x="87.36842105263159" y="-1.0526315789473684"/>

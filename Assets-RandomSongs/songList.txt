@@ -5,11 +5,11 @@ Corruptro:corruptro
 Defeat:black
 Epiphany:bigmonika
 Fatality:fatal-sonic
-Megalo Strike Back:chara
+Megalo Strike Back:MegaloStrikeB/chara
 Phantasm:fleetway
 pokemon-master:pokemonmaster
 Prey:furnace
-Silly Billy:billy
+Silly Billy:SillyBilly/billy
 Sink:sink
 Su-Vecindad:SuVecindad/chavo
 Summit:Summit/red
