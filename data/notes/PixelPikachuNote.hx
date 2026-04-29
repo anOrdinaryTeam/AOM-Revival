@@ -1,7 +1,7 @@
-var t:String = 'PikachuNote';
+var t:String = 'PixelPikachuNote';
 
 function onNoteCreation(_) if (_.noteType == t) {
-    _.noteSprite = 'modNotes/pokemonmaster/pikaflechas';
+    _.noteSprite = 'modNotes/pokemonmaster/flechassssssss';
     _.note.forceIsOnScreen = true;
     _.note.earlyPressWindow = 0.4;
 	_.note.latePressWindow = 0.4;
@@ -15,7 +15,6 @@ function onPostNoteCreation(_) if (_.noteType == t) {
 
 function onPlayerHit(e) if (e.noteType == t) {
     FlxG.sound.play(Paths.sound('pokemonmaster/Thunder'));
-    pikachu.playAnim('attack');
     e.animCancelled = true;
     health = health - 0.2;
     misses = misses+1;

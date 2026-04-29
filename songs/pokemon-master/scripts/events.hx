@@ -1,4 +1,4 @@
-var pixelpokemonmasterpikachu:Character;
+public var pixelMode:Bool = false;
 
 function create(){
 
@@ -14,6 +14,8 @@ function stepHit()
         
         case 512, 640, 1056: // Switch... on!
         
+            pixelMode = true;
+
             changeCharacter(0, 'pixelpokemonmaster');
             changeCharacter(1, 'pixelpokemonmasterbf');
             changeNoteSkin('modNotes/pokemonmaster/NOTE_assets', player, 'both', false);
@@ -27,11 +29,17 @@ function stepHit()
 
             defaultCamZoom = 1.25; // 0.85
             fondopm.visible = false;
+            charizard.visible = false;
+            pixelcharizard.visible = true;
+            pikachu.visible = false;
+            pixelpikachu.visible = true;
             playerCam.y = 128;
 
             //ratingPrefix = 'KadeNewPixel';
             
             case 576, 704, 1264: // Bite the dust!
+
+            pixelMode = false;
             
             changeCharacter(0, 'pokemonmaster');
             changeCharacter(1, 'pokemonmasterbf');
@@ -46,6 +54,10 @@ function stepHit()
             
             defaultCamZoom = 0.85; // 0.85
             fondopm.visible = true;
+            charizard.visible = true;
+            pixelcharizard.visible = false;
+            pikachu.visible = true;
+            pixelpikachu.visible = false;
             playerCam.y = 0;
 
             //ratingPrefix = 'KadeNew';
