@@ -109,8 +109,8 @@ function onRatingUpdate(_) if (sonicHUD != null) {
 
 function update(_) {
     if (IsWindowMoving) {
-        var thisX:Float = Math.sin(Xamount * (Xamount)) * 100;
-		var thisY:Float = Math.sin(Yamount * (Yamount)) * 100;
+        var thisX:Float = FlxMath.fastSin(Xamount * (Xamount)) * 100;
+		var thisY:Float = FlxMath.fastSin(Yamount * (Yamount)) * 100;
 		var yVal:Int = Std.int(windowY + thisY);
 		var xVal:Int = Std.int(windowX + thisX);
 

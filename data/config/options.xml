@@ -4,6 +4,14 @@
 	<checkbox id="AOM_disableSplashs" name="Disable Note Splash" desc="self explanatory"/>
 	<checkbox id="AOM_cpuStrumsGlow" name="Disable CPU Strum Glow" desc="just like old times"/>
 
+	<menu name="Mods/Songs Config">
+		<menu name="Fatality">
+			<checkbox id="AOM_Fatality_WindowMove" name="Moving Window"/>
+			<checkbox id="AOM_Fatality_PopUps" name="Pop Ups Mechanic"/>
+			<checkbox id="AOM_Fatality_Limiter_PopUps" name="Limite Pop Ups"/>
+		</menu>
+	</menu>
+
 	<menu name="HUD Configuration" desc="duh">
 		<checkbox id="AOM_engineHUD" name="Use Huds from Mods" desc="This allows you to use the Huds from the respective Engine of the Mod"/>
 
