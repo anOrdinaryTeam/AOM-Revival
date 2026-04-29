@@ -3,7 +3,8 @@
 	"color": "#FF0000",
 	"opponentModeAllowed": false,
 	"difficulties": [
-		"hard"
+		"hard",
+		"rc"
 	],
 	"icon": "pokemonmaster",
 	"coopAllowed": false,
