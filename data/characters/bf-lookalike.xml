@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="rs/Lookalike_Assets" icon="dad" color="#af66ce" x="130" y="280" camx="-60" camy="-130" holdTime="6.1">
-	<anim name="idle" anim="ElIdleSMALL"/>
-	<anim name="singLEFT" anim="ElLeftSMALL" x="57" y="23"/>
-	<anim name="singDOWN" anim="ElDownSMALL" x="10" y="-46"/>
-	<anim name="singRIGHT" anim="ElRightSMALL" x="-8" y="3"/>
-	<anim name="singUP" anim="ElUpSMALL" x="-20" y="50"/>
-</character>

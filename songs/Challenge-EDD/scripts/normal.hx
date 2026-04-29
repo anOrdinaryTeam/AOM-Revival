@@ -6,8 +6,9 @@ public var canTomIdle:Bool = false;
 var alreadyOpen:Bool = false;
 
 function create() {
-    for (n in ['matt', 'eddDoor']) { graphicCache.cache(getModImage('Challenge-EDD/$n')); }
     importScript('songs/Challenge-EDD/scripts/who_i_choose/$curDiff.hx');
+    for (n in ['matt', 'eddDoor'])
+        graphicCache.cache(getModImage('ChallengeEdd/$n'));
 }
 
 function stepHit() {
@@ -25,7 +26,7 @@ function beatHit() {
 
 function Door() {
     if (!alreadyOpen) {
-        door = new FunkinSprite(770, 305).loadSprite(getModImage('Challenge-EDD/eddDoor'));
+        door = new FunkinSprite(770, 305).loadSprite(getModImage('ChallengeEdd/eddDoor'));
         door.antialiasing = true;
         door.scale.set(1.5, 1.5);
 
@@ -45,7 +46,7 @@ function Door() {
 function Matt() {
     Door();
 
-    matt = new FunkinSprite(825, 240).loadSprite(getModImage('Challenge-EDD/matt'));
+    matt = new FunkinSprite(825, 240).loadSprite(getModImage('ChallengeEdd/matt'));
     matt.antialiasing = true;
     matt.scale.set(1.7, 1.7);
 

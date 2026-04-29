@@ -96,24 +96,24 @@ function stepHit() {
             black.alpha = 0;
             camGame.visible = true;
         case 1408:
-            changeCharacter(0, 'transLookalike');
+            changeCharacter(0, 'SillyBilly/transLookalike');
             dad.playAnim('Smallize');
             dad.animation.callback = (Anim, Frame) -> {
                 if (Anim == 'Smallize' && Frame == 18)
                     opponentCam.y += 250;
             }
         case 1424:
-            changeCharacter(0, 'bf-lookalike');
+            changeCharacter(0, 'SillyBilly/bf-lookalike');
             iconOpp.animation.play('2');
         case 2044:
-            changeCharacter(0, 'transLookalike2');
+            changeCharacter(0, 'SillyBilly/transLookalike2');
             dad.playAnim('Bigize');
             opponentCam.y -= 250;
         case 2048:
             addCameraZoom();
             iconOpp.animation.play('0');
         case 2063: 
-            changeCharacter(0, 'evilLookaLike');
+            changeCharacter(0, 'SillyBilly/evilLookaLike');
             camZoomingInterval = 1;
         case 2192: camZoomingInterval = 4;
         case 2832: iconOpp.animation.play('3');
@@ -170,7 +170,7 @@ function MyWayEvents(i:String) switch(i) {
         numText++;
     case 'break mirror':
         mirror.loadGraphic(BillyPath('broken_mirror'));
-        playModSound('mirror_break');
+        playModSound('SillyBilly/mirror_break');
 
         FlxTween.num(255, 0, 1.75, {ease: FlxEase.quadOut, onUpdate: function(twn){ mirror.setColorTransform(1,1,1,1,twn.value,twn.value,twn.value,0);}});
         camGame.shake(0.01, 0.25);
@@ -188,6 +188,6 @@ function MyWayEvents(i:String) switch(i) {
 }
 
 function onChangeCharacter(_, char) switch(char.curCharacter) {
-    case 'transLookalike' | 'bf-lookalike' | 'transLookalike2' | 'evilLookaLike':
+    case 'SillyBilly/transLookalike' | 'SillyBilly/bf-lookalike' | 'SillyBilly/transLookalike2' | 'SillyBilly/evilLookaLike':
         char.camera = camGame;
 }

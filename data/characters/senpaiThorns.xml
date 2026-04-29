@@ -1,8 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character x="150" y="360" sprite="rs/senpaiThorns" scale="6.1" antialiasing="false" icon="senpai-emtpy" color="#0xFFFF0000">
-	<anim name="idle" anim="Angry Senpai Idle instance 1"/>
-	<anim name="singUP" anim="Angry Senpai UP NOTE instance 1" x="2" y="6"/>
-	<anim name="singDOWN" anim="Angry Senpai DOWN NOTE instance 1" x="1" y="1"/>
-	<anim name="singLEFT" anim="Angry Senpai LEFT NOTE instance 1" x="3" y="1"/>
-	<anim name="singRIGHT" anim="Angry Senpai RIGHT NOTE instance 1"/>
-</character>

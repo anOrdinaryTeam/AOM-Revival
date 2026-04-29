@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="ChallengeEdd/hard/eduardo" camx="-194" camy="-7" icon="ChallengeEdd/icon-eduardo" color="#10712B">
+	<anim name="idle" anim="EduardoIdle" fps="12"/>
+	<anim name="singLEFT" anim="EduardoLeft" x="2" y="-6"/>
+	<anim name="singDOWN" anim="EduardoDown" x="13" y="-20"/>
+	<anim name="singUP" anim="EduardoUp" x="-17" y="20"/>
+	<anim name="singRIGHT" anim="EduardoRight" x="-3" y="-6"/>
+	<anim name="hey" anim="EduardoWell" x="-3" y="2" fps="12"/>
+</character>

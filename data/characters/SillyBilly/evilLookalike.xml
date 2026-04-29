@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="SillyBilly/Lookalike_Assets" icon="dad" color="#af66ce" x="70" y="-180" holdTime="6.1">
+	<anim name="singLEFT" anim="ElLeftBIG" x="111" y="30"/>
+	<anim name="singUP" anim="ElUpBIG" x="166" y="275"/>
+	<anim name="singRIGHT" anim="ElRightBIG" x="-10" y="27"/>
+	<anim name="idle" anim="ElIdleBIG"/>
+	<anim name="idle-alt" anim="ElIdleSMALL" x="-60" y="-480"/>
+	<anim name="singLEFT-alt" anim="ElLeftSMALL" x="-2" y="-457"/>
+	<anim name="singDOWN-alt" anim="ElDownSMALL" x="-50" y="-526"/>
+	<anim name="singUP-alt" anim="ElUpSMALL" x="-80" y="-429"/>
+	<anim name="singRIGHT-alt" anim="ElRightSMALL" x="-66" y="-476"/>
+	<anim name="singDOWN" anim="ElDownBIG" x="20" y="-129" indices="0..2,4..14"/>
+</character>

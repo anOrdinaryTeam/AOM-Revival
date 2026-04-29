@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="100" y="350" sprite="TreacherousThorns/spiritCrazy" scale="6.1" antialiasing="false" icon="TreacherousThorns/senpai-crazy" color="#000000">
+	<anim name="idle" anim="idle spirit" loop="true"/>
+	<anim name="singDOWN" anim="spirit down" x="65" y="60"/>
+	<anim name="singRIGHT" anim="right"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singUP" anim="up"/>
+</character>

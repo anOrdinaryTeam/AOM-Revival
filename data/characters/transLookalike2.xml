@@ -1,5 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="rs/unshrink" icon="dad" color="#af66ce" x="105" y="-165" camx="-160" camy="-50" holdTime="6.1">
-	<anim name="Bigize" anim="ElUnshrink" x="150" y="160"/>
-</character>

@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="SillyBilly/Lookalike_Alt" icon="dad" color="#af66ce" y="-180" camy="180" holdTime="6.1">
+	<anim name="Smallize" anim="ElUngrow"/>
+</character>

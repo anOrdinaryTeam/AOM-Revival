@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="ChallengeEdd/fucked/edd-enter" icon="ChallengeEdd/icon-edd" color="#33AD33">
+	<anim name="singLEFT" anim="EddEnterLeft"/>
+	<anim name="singDOWN" anim="EddEnterDown"/>
+	<anim name="singUP" anim="EddEnterUp"/>
+	<anim name="singRIGHT" anim="EddEnterRight"/>
+</character>

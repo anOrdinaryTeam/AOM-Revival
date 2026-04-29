@@ -1,17 +1,18 @@
-Silly Billy:billy
-Prey:furnace
-Phantasm:fleetway
-Sink:sink
-rush:rushblaze
-Fatality:fatal-sonic
 Accelerant:hank
-Challenge-EDD:icon-edd
+Candy:heathers
+Challenge-EDD:ChallengeEdd/icon-edd
 Corruptro:corruptro
 Defeat:black
-Megalo Strike Back:chara
-Treacherous Thorns:senpai-emtpy
 Epiphany:bigmonika
+Fatality:fatal-sonic
+Megalo Strike Back:MegaloStrikeB/chara
+Phantasm:fleetway
 pokemon-master:pokemonmaster
-Summit:red
-Candy:heathers
-Su-Vecindad:SuVecindad/chavo
+Prey:furnace
+Silly Billy:SillyBilly/billy
+Sink:sink
+Su Vecindad:SuVecindad/chavo
+Summit:Summit/red
+rush:rushblaze
+The Deathmatch
+Treacherous Thorns:TreacherousThorns/senpai-emtpy

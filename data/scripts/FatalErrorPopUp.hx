@@ -49,8 +49,8 @@ class FatalError extends MusicBeatGroup
     }
 }
 
-var canSpawn:Bool = false;
-var limiter:Bool = true;
+var canSpawn:Bool = true;
+var limiter:Bool = false;
 var xy:FlxRandom = new FlxRandom(666);
 var currentErrors:Array<FatalError> = [];
 var camOther:FlxCamera = new FlxCamera();

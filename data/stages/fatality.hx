@@ -10,8 +10,14 @@ var launchBase:FunkinSprite = new FunkinSprite(-200, 100);
 var launchBaseCorrupted:FunkinSprite = new FunkinSprite(100, 200);
 var glitchedCrowd:FunkinSprite = new FunkinSprite(100, 200);
 var trueFatal:FunkinSprite = new FunkinSprite(250, 200);
-
 var sonicHUD:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
+
+var IsWindowMoving:Bool = false;
+var windowX:Float = 0;
+var windowY:Float = 0;
+var Xamount:Float = 0;
+var Yamount:Float = 0;
+
 PauseSubState.script = 'data/scripts/ReziseWindow';
 
 function create() {
@@ -101,12 +107,25 @@ function onRatingUpdate(_) if (sonicHUD != null) {
     sonicHUD.members[5].text = misses;
 }
 
-function update(_) if (sonicHUD != null) {
-    var songCalc:Float = Conductor.songPosition;
-    var secondsTotal:Int = Math.floor(songCalc / 1000);
-	if(secondsTotal < 0) secondsTotal = 0;
+function update(_) {
+    if (IsWindowMoving) {
+        var thisX:Float = FlxMath.fastSin(Xamount * (Xamount)) * 100;
+		var thisY:Float = FlxMath.fastSin(Yamount * (Yamount)) * 100;
+		var yVal:Int = Std.int(windowY + thisY);
+		var xVal:Int = Std.int(windowX + thisX);
 
-    sonicHUD.members[4].text = FlxStringUtil.formatTime(secondsTotal, false);
+        window.move(xVal, yVal);
+        Yamount += 0.0015;
+		Xamount += 0.00075;
+    }
+
+    if (sonicHUD != null) {
+        var songCalc:Float = Conductor.songPosition;
+        var secondsTotal:Int = Math.floor(songCalc / 1000);
+	    if(secondsTotal < 0) secondsTotal = 0;
+
+        sonicHUD.members[4].text = FlxStringUtil.formatTime(secondsTotal, false);
+    }
 }
 
 function onStrumCreation(event)  {
@@ -138,10 +157,15 @@ function onNoteCreation(event) {
     }
     note.scale.set(6, 6);
     note.updateHitbox();
-    note.splash = 'pixel-default';
+    note.splash = 'blood';
 }
 
 function stepHit() switch(curStep) {
+    case 2240, 2560:
+        IsWindowMoving = !IsWindowMoving;
+    case 2530, 2535, 2540, 2545, 2550, 2555:
+        shakeWindow();
+
     case 255, 1983:
 		var daStatic = new FunkinSprite(0,0, getModImage('Fatality/statix'));
         daStatic.addAnim('a', 'statixx', 24, false);
@@ -160,21 +184,25 @@ function stepHit() switch(curStep) {
     case 1151: changeCharacter(0, 'fatality/fatal-glitched');
     case 1984:
         clearPopUps();
-        for (hide in cpuStrums) 
-            hide.x -= 1000;
-        for (strum in playerStrums)
-            strum.x -= 225;
+
+        windowX = window.x;
+		windowY = window.y;
+        Xamount += 2;
+		Yamount += 2;
+
+        for (hide in cpuStrums) hide.x -= 1000;
+        for (strum in playerStrums) strum.x -= 200;
 
         launchBaseCorrupted.visible = false;
         glitchedCrowd.visible = false;
         trueFatal.visible = true;
 
-        var newFatalX:Float = dad.x + 740;
-        var newFatalY:Float = dad.y - 240;
+        var newFatalX:Float = dad.x + 770;
+        var newFatalY:Float = dad.y - 80;
         changeCharacter(0, 'fatality/true-fatal');
         dad.setPosition(newFatalX, newFatalY);
         opponentCam.x = 620;
-        opponentCam.y += 50;
+        opponentCam.y += 150;
 
         var newBfX:Float = boyfriend.x - 250;
         var newBfY:Float = boyfriend.y + 135;
@@ -182,9 +210,35 @@ function stepHit() switch(curStep) {
         boyfriend.setPosition(newBfX, newBfY);
         playerCam.x = 620;
         playerCam.y += 50;
+    case 2230:
+		shakeWindow();
+		camGame.shake(0.02, 0.8);
+		camHUD.shake(0.02, 0.8);
+    case 2528:
+        shakeWindow();
+        camGame.shake(0.02, 2);
+		camHUD.shake(0.02, 2);
+        Yamount += 3;
+		Xamount += 3;
 }
+
+function shakeWindow() new FlxTimer().start(0.01, () -> {
+    window.move(window.x + FlxG.random.int(-10, 10), window.y + FlxG.random.int(-8, 8));
+}, 50);
 
 function onSongEnd() {
     windowShit(1280, 720);
     window.resizable = true;
+}
+
+function onCountdown(e) if (e.swagCounter != 4) {
+    var a:String = ['intro3', 'intro2', 'intro1', 'introGo'][e.swagCounter];
+    e.soundPath = 'fatalCountdown/$a';
+
+    switch(e.swagCounter) {
+        case 1: e.spritePath = 'modCountdowns/Fatality/fatal_2';
+        case 2: e.spritePath = 'modCountdowns/Fatality/fatal_1';
+        case 3: e.spritePath = 'modCountdowns/Fatality/fatal_go';
+    }
+    e.scale = 6.1;
 }
