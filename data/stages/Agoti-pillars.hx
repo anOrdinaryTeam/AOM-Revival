@@ -36,7 +36,7 @@ function create() {
 }
 
 function postCreate()
-    iconP1.setIcon('bf-alt');
+    iconP1.setIcon('Agoti/bf-alt');
 
 function beatHit()
     speaker.playAnim('bop');

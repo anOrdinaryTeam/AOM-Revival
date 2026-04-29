@@ -33,7 +33,7 @@ function create() {
 }
 
 function postCreate()
-    iconP1.setIcon('bf-alt');
+    iconP1.setIcon('Agoti/bf-alt');
 
 function update(_) {
     gf.y = -120 + Math.sin((Conductor.songPosition / 1000)*(Conductor.bpm/60) * 2.0) * 5.0;

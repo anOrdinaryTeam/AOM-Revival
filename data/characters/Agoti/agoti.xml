@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="agoti/agoti" icon="agoti" color="#2c252c" camx="100" camy="200">
+<character sprite="agoti/agoti" icon="Agoti/agoti" color="#2c252c" camx="100" camy="200">
 	<anim name="idle" anim="Agoti_Idle" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="Agoti_Left" x="190" y="30" fps="24" loop="false"/>
 	<anim name="singRIGHT" anim="Agoti_Right" x="85" y="-50" fps="24" loop="false"/>

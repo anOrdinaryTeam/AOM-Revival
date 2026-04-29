@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="agoti/agoti-mad" icon="agoti-mad" color="#2c252c">
+<character sprite="agoti/agoti-mad" icon="Agoti/agoti-mad" color="#2c252c">
 	<anim name="idle" anim="Angry_Agoti_Idle" loop="true"/>
 	<anim name="singDOWN" anim="Angry_Agoti_Down" x="85" y="-125"/>
 	<anim name="singRIGHT" anim="Angry_Agoti_Right" x="40" y="-20"/>
