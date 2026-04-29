@@ -3,7 +3,7 @@ import funkin.editors.charter.Charter;
 importScript('data/scripts/ExternalFunctions');
 using StringTools;
 
-public var songName:String = PlayState.SONG.meta.name;
+public var songName:String = PlayState.SONG.meta.name.split('/')[1];
 public var curDiff:String = PlayState.difficulty;
 public var ratingPrefix:String = '';
 

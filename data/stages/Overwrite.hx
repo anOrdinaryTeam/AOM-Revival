@@ -9,7 +9,7 @@ function create() {
     bg.scrollFactor.set(0.9, 0.9);
     addSprite(bg);
 
-    if (curSong == 'overwrite') for (i in 0...7){
+    if (songName == 'Overwrite') for (i in 0...7){
         var sqr:FlxSprite = new FlxSprite(-600 + 400 * i, -200, getModImage('Overwrite/square'));
         sqr.antialiasing = Options.antialiasing;
         sqr.scrollFactor.set(1.2, 1.2);

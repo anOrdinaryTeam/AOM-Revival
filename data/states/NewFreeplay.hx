@@ -28,7 +28,7 @@ function create() {
 
     var iconsList:Array<String> = getModSongList(currentMod).icon.copy();
     for (song in getModSongList(currentMod).songs) {
-        var metaData:SongData = new SongData(song, Chart.loadChartMeta(song).difficulties);
+        var metaData:SongData = new SongData(song, Chart.loadChartMeta('$currentMod/$song').difficulties);
         songsList.push(metaData);
     }
 
@@ -112,7 +112,7 @@ function enterSong() {
     trace('Selected Song: $songName - ${diff.toUpperCase()}');
     stateScripts.call('preEnterSong', [songName]);
 
-	PlayState.loadSong(songName, diff);
+	PlayState.loadSong('$currentMod/$songName', diff);
 	FlxG.switchState(new PlayState());
 }
 
