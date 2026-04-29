@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="challengedd/edd/edd" icon="icon-edd" color="#33AD33">
+<character sprite="ChallengeEdd/hard/edd" icon="ChallengeEdd/icon-edd" color="#33AD33">
 	<anim name="idle" anim="EddIdle" fps="12"/>
 	<anim name="singLEFT" anim="EddLeft" x="18" y="3"/>
 	<anim name="singDOWN" anim="EddDown" x="14" y="-60"/>

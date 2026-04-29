@@ -8,14 +8,14 @@ var canEdd:Bool = false;
 var canTom:Bool = true;
 
 function create() {
-    for (h in ['matt-eduardo', 'tom', 'Mark', 'Jon', 'EduardoPunch']) { graphicCache.cache(getModImage('Challenge-EDD/hard/' + h)); }
-    precacheCharacter(0, 'eduardo');
+    for (h in ['matt-eduardo', 'tom', 'Mark', 'Jon', 'EduardoPunch']) { graphicCache.cache(getModImage('ChallengeEdd/hard/' + h)); }
+    precacheCharacter(0, 'ChallengeEdd/eduardo');
 }
 
 function stepHit() {
-    switch(curStep)
-    {
-        case 416: Tom();
+    switch(curStep) {
+        case 416:
+            Tom();
         
         case 911: 
             Matt();
@@ -42,15 +42,18 @@ function stepHit() {
             tom.playAnim('idle', true);
             edd.playAnim('idle', true, 'DANCE');
 
-        case 1007, 1231, 1359, 1487: canEdd = true;
-        case 1135, 1295, 1423, 1551: canEdd = false;
-        case 1599: Dudes(true);
-    }
+        case 1007, 1231, 1359, 1487:
+            canEdd = true;
+        case 1135, 1295, 1423, 1551:
+            canEdd = false;
 
+        case 1599:
+            Dudes(true);
+    }
 }
 
 function beatHit() {
-    if (canTomIdle)   { // i hate ts but it works
+    if (canTomIdle) { // i hate ts but it works
         if (curCameraTarget == 1) {
             if (!canTom) {
                 tom.playAnim('turns2');
@@ -86,22 +89,21 @@ function onNoteHit(_) {
 
 function Matt() {
     remove(matt);
+    canMattIdle = false;
+    canTomIdle = false;
 
-    matt = new FunkinSprite(null, 240).loadSprite(getModImage('Challenge-EDD/hard/matt-eduardo'));
+    matt = new FunkinSprite(null, 240).loadSprite(getModImage('ChallengeEdd/hard/matt-eduardo'));
     matt.antialiasing = true;
     matt.scale.set(1.7, 1.7);
 
     matt.addAnim('react', 'reaction', 12, false);
     matt.addAnim('idle', 'mattPISSED', 12, false);
 
-    canMattIdle = false;
-    canTomIdle = false;
-
     insert(9, matt);
 }
 
 function Tom() {
-    tom = new FunkinSprite(825, 270).loadSprite(getModImage('Challenge-EDD/hard/tom'));
+    tom = new FunkinSprite(825, 270).loadSprite(getModImage('ChallengeEdd/hard/tom'));
     tom.antialiasing = true;
     tom.scale.set(1.7, 1.7);
     
@@ -128,13 +130,13 @@ function Eduardo() {
     remove(dad);
     insert(5, dad);
 
-    changeCharacter(0, 'eduardo');
+    changeCharacter(0, 'ChallengeEdd/eduardo');
     dad.setPosition(-886, 50);
 
     opponentCam.x = -620;
     opponentCam.y = 350;
 
-    edd = new Character(286, 190, "edd_side");
+    edd = new Character(286, 190, "ChallengeEdd/edd_side");
     insert(14, edd);
 
     Dudes(false);
@@ -142,13 +144,13 @@ function Eduardo() {
 
 function Dudes(canHit:Bool) {
     if (!canHit) {
-        jon = new FunkinSprite(-690, 180).loadSprite(getModImage('Challenge-EDD/hard/Jon'));
+        jon = new FunkinSprite(-690, 180).loadSprite(getModImage('ChallengeEdd/hard/Jon'));
         jon.antialiasing = true;
         jon.scale.set(1.3, 1.3);
         jon.addAnim('idle', 'JonIdle', 12, false);
         insert(5, jon);
         
-        mark = new FunkinSprite(-550, 165).loadSprite(getModImage('Challenge-EDD/hard/Mark'));
+        mark = new FunkinSprite(-550, 165).loadSprite(getModImage('ChallengeEdd/hard/Mark'));
         mark.antialiasing = true;
         mark.scale.set(1.1, 1.1);
         mark.addAnim('idle', 'MarkIdle', 12, false);
@@ -162,7 +164,7 @@ function Dudes(canHit:Bool) {
 
         canJMidle = false;
 
-        punch = new FunkinSprite(-800, 130).loadSprite(getModImage('Challenge-EDD/hard/EduardoPunch'));
+        punch = new FunkinSprite(-800, 130).loadSprite(getModImage('ChallengeEdd/hard/EduardoPunch'));
         punch.antialiasing = true;
         punch.scale.set(1.35, 1.35);
 

@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="-80" sprite="challengedd/edd/edd-gameover" icon="icon-edd" color="#33AD33">
+<character x="-80" sprite="ChallengeEdd/hard/edd-gameover" icon="ChallengeEdd/icon-edd" color="#33AD33">
 	<anim name="firstDeath" anim="EddGameOver" x="32" y="11"/>
 	<anim name="deathLoop" anim="EddRetryLoop" x="-86" y="10" loop="true"/>
 	<anim name="deathConfirm" anim="EddRetryConfirm" x="-86" y="46"/>

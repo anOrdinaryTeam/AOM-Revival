@@ -1,15 +1,4 @@
 {
-	"customValues": {},
-	"color": "#000000",
-	"opponentModeAllowed": true,
 	"icon": "SuVecindad/chavo",
-	"difficulties": [
-		"hard"
-	],
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "Su-Vecindad",
-	"beatsPerMeasure": 4,
-	"needsVoices": true,
 	"bpm": 172
 }

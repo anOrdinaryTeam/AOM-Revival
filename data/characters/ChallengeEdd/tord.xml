@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="challengedd/tord/tord" icon="icon-tord" color="#D9104A">
+<character sprite="ChallengeEdd/fucked/tord" icon="ChallengeEdd/icon-tord" color="#D9104A">
 	<anim name="idle" anim="TordIdle"/>
 	<anim name="singLEFT" anim="TordLeft" x="58" y="11"/>
 	<anim name="singDOWN" anim="TordDown" x="31" y="-8"/>
