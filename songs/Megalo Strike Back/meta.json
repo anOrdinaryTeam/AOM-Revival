@@ -1,4 +1,14 @@
 {
-	"icon": "MegaloStrikeB/chara",
+	"opponentModeAllowed": false,
+	"icon": "chara",
+	"difficulties": [
+		"genocide"
+	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Megalo Strike Back",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
 	"bpm": 144
 }
