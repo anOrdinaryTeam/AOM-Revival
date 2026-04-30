@@ -18,24 +18,28 @@ function postCreate(){
         hb.y -= 210;
     }
 
+    healthBar.createFilledBar(FlxColor.fromString('#302e2e'), FlxColor.fromString('#504644'));
+
     var strumBG:FlxSprite = new FlxSprite().makeSolid(230*2,360*2, 0xFF000000);
     strumBG.setPosition(410,0);
     strumBG.camera = camHUD;
     strumBG.alpha = 0.5;
-    insert(1, strumBG);
+    insert(2, strumBG);
 
-    video = new FlxVideoSprite(-320, -178);
+    video = new FlxVideoSprite(-319, -178);
     video.load(Paths.video('LPR/loopingtherooms'));
     video.bitmap.onEndReached.add(video.destroy);
     video.camera = camHUD;
     video.antialiasing = true;
     video.scale.set(0.67,0.67);
     video.updateHitbox();
-    insert(0, video);
+    insert(1, video);
     
 }
 
-function onSongStart() video.play();
+function onSongStart(){
+    video.play();
+}
 
 function onFocus() if (paused) {
     if (video != null) video.pause();
