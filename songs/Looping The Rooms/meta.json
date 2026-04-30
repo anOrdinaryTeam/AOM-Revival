@@ -4,16 +4,19 @@
 		"stickerPack": "standard-bf",
 		"ratings": "[easy => 5, normal => 7, hard => 9]",
 		"previewStart": "0",
-		"previewEnd": "15000",
-		"charter": "Desherr",
-		"artist": "rusino (feat. Hatsune Miku)",
+		"album": "loopingtherooms",
 		"noteStyle": "funkin",
-		"album": "loopingtherooms"
+		"artist": "rusino (feat. Hatsune Miku)",
+		"charter": "Desherr",
+		"previewEnd": "15000"
 	},
 	"opponentModeAllowed": false,
-	"icon": "face",
+	"icon": "ltr",
 	"difficulties": [
-		"hard"
+		"easy",
+		"normal",
+		"hard",
+		"rc"
 	],
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
