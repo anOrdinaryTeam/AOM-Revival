@@ -16,22 +16,17 @@ public var world:FunkinSprite;
 public var bpeople:FunkinSprite;
 public var fpeople:FunkinSprite;
 
-public var backpast:FlxSprite;
-public var rlightpast:FlxSprite;
-public var llightpast:FlxSprite;
-public var curtainspast:FlxSprite;
-public var stagepast:FlxSprite;
-
-var bfpast:FunkinSprite;
-var gfpast:FunkinSprite;
-var dadpast:FunkinSprite;
-
 function create() {
     // settings shit
     importScript('songs/The Deathmatch/$curDiff.hx');
 
     defaultCamZoom = 0.9;
     gf.alpha = 0;
+
+    for (d in ['dearest2', 'dearest3', 'dearest4'])
+        { precacheCharacter(0, 'TheDeathmatch/$d'); }
+    for (b in ['pico-death', 'bf-deathmatch', 'kids-death', 'mom-death'])
+        { precacheCharacter(1, 'TheDeathmatch/$b'); }
     // settings shit
 
     // stage shit
@@ -66,6 +61,8 @@ function create() {
     bpeople.alpha = 0.001;
     
     bpeople.addAnim('idle', 'people stage', 24, true);
+    bpeople.addAnim('mom', 'Dancers', 24, true);
+    bpeople.addOffset('mom', 0, 50);
     bpeople.playAnim('idle');
     insert(5, bpeople);
     
@@ -87,63 +84,6 @@ function create() {
     add(fpeople);
     // stage shit
 
-    if (curDiff != 'canon')
-    {
-        // stage memories n shit
-        camHUD.alpha = 0;
-
-        backpast = new FlxSprite(-600, -200, getModImage('TheDeathmatch/stagebackpast'));
-        backpast.scale.set(1.2, 1.2);
-        add(backpast);
-
-        stagepast = new FlxSprite(-600, 650, getModImage('TheDeathmatch/stagefrontpast'));
-        stagepast.scale.set(1.2, 1.2);
-        add(stagepast);
-
-        rlightpast = new FlxSprite(-200, -125, getModImage('TheDeathmatch/stage_lightpast'));
-        rlightpast.scale.set(1.2, 1.2);
-        add(rlightpast);
-
-        llightpast = new FlxSprite(1325, -125, getModImage('TheDeathmatch/stage_lightpast'));
-        llightpast.scale.set(1.2, 1.2);
-        llightpast.flipX = true;
-        add(llightpast);
-
-        curtainspast = new FlxSprite(-600, -200, getModImage('TheDeathmatch/stagecurtainspast'));
-        curtainspast.scale.set(1.2, 1.2);
-        add(curtainspast);
-
-        gfpast = new FunkinSprite(425, 125).loadSprite(getModImage('TheDeathmatch/past_GF'));
-        gfpast.addAnim('idle', 'GF Dancing Beat0', 24, true);
-        gfpast.playAnim('idle');
-        add(gfpast);
-
-        bfpast = new FunkinSprite(825, 475).loadSprite(getModImage('TheDeathmatch/past_BF'));
-        bfpast.addAnim('idle', 'BF idle dance', 24, true);
-        bfpast.playAnim('idle');
-        add(bfpast);
-
-        dadpast = new FunkinSprite(75, 75).loadSprite(getModImage('TheDeathmatch/past_dad'));
-        dadpast.addAnim('idle', 'Dad idle dance', 24, true);
-        dadpast.playAnim('idle');
-        add(dadpast);
-        // stage memories n shit
-        for (a in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
-                { a.antialiasing = true; }
-    }
     for (a in [kworld, world, wall, stage, mics, bpeople, lights, curtains, fpeople])
         { a.antialiasing = true; }
-}
-
-// events go brr
-function stepHit() {
-    if (curDiff != 'canon') {
-        switch(curStep) {
-            case 112:
-                defaultCamZoom = 0.45;
-                camHUD.alpha = 1;
-                for (i in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
-                    { remove(i); }
-        }
-    }
 }

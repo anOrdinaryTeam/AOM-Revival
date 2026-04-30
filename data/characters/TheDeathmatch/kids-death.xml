@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character y="225" sprite="TheDeathmatch/spooky_kids_assets" isPlayer="true" icon="TheDeathmatch/icon-spooky" color="#170A17" holdTime="6">
+	<anim name="idle" anim="spooky idle0" loop="true"/>
+	<anim name="singLEFT" anim="spooky left" x="-57" y="-21"/>
+	<anim name="singDOWN" anim="spooky down" x="5" y="-150"/>
+	<anim name="singUP" anim="spooky up" x="-90" y="38"/>
+	<anim name="singRIGHT" anim="spooky right" x="61" y="-29"/>
+	<anim name="singUPmiss" anim="spooky miss up" x="-78" y="39"/>
+	<anim name="singDOWNmiss" anim="spooky miss down" y="-145"/>
+	<anim name="singLEFTmiss" anim="spooky miss left" x="-55" y="-20"/>
+	<anim name="singRIGHTmiss" anim="spooky miss right" x="65" y="-25"/>
+</character>
