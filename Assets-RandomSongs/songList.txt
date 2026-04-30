@@ -16,4 +16,4 @@ Summit:Summit/red
 rush:rushblaze
 The Deathmatch:TheDeathmatch/icon-fightingdad
 Treacherous Thorns:TreacherousThorns/senpai-emtpy
-Looping The Rooms:shubs
+Looping The Rooms:ltr
