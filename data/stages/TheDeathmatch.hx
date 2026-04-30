@@ -30,8 +30,13 @@ function create() {
     // settings shit
     importScript('songs/The Deathmatch/$curDiff.hx');
 
-    defaultCamZoom = 0.9;
+    defaultCamZoom = 0.6;
     gf.alpha = 0;
+
+    for (d in ['dearest2', 'dearest3', 'dearest4'])
+        { precacheCharacter(0, 'TheDeathmatch/$d'); }
+    for (b in ['pico-death', 'bf-deathmatch', 'kids-death', 'mom-death'])
+        { precacheCharacter(1, 'TheDeathmatch/$b'); }
     // settings shit
 
     // stage shit

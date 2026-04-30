@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="30" y="310" sprite="TheDeathmatch/corrupt_pico" icon="TheDeathmatch/icon-pico" scale="1.1" flipX="true" camx="-120" camy="-80" isPlayer="true" color="#170A17" holdTime="6">
+	<anim name="idle" anim="Pico Idle Dance" x="20" y="-20"/>
+	<anim name="singLEFT" anim="Pico NOTE LEFT0" x="245" y="30"/>
+	<anim name="singDOWN" anim="Pico Down Note" x="110" y="-54"/>
+	<anim name="singUP" anim="pico Up note" x="41" y="37"/>
+	<anim name="singRIGHT" anim="Pico Note Right0" x="22" y="12"/>
+	<anim name="singLEFTmiss" anim="Pico MISS LEFT" x="245" y="30"/>
+	<anim name="singDOWNmiss" anim="Pico Miss Down" x="110" y="-54"/>
+	<anim name="singUPmiss" anim="pico miss UP" x="41" y="37"/>
+	<anim name="singRIGHTmiss" anim="Pico Miss Right" x="22" y="12"/>
+</character>

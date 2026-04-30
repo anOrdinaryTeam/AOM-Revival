@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="-210" y="-125" sprite="TheDeathmatch/deathmatch_mom" icon="TheDeathmatch/icon-cormom" scale="1.1" isPlayer="true" color="#170A17" holdTime="6">
+	<anim name="idle" anim="Corrupted Mearest Idle"/>
+	<anim name="singLEFT" anim="Corrupted Mearest Left" x="80" y="10"/>
+	<anim name="singDOWN" anim="Corrupted Mearest Down" y="-20"/>
+	<anim name="singUP" anim="Corrupted Mearest Up" y="1"/>
+	<anim name="singRIGHT" anim="Corrupted Mearest Right" x="-70" y="-20"/>
+	<anim name="singLEFTmiss" anim="Corrupted Fail Left" x="85" y="10"/>
+	<anim name="singDOWNmiss" anim="Corrupted Fail Down" y="-20"/>
+	<anim name="singUPmiss" anim="Corrupted Fail Up" y="1"/>
+	<anim name="singRIGHTmiss" anim="Corrupted Fail Right" x="-80" y="-25"/>
+</character>

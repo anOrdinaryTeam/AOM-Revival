@@ -1,8 +1,8 @@
 <!DOCTYPE codename-engine-character>
-<character x="-175" y="-50" sprite="TheDeathmatch/DEAREST" scale="1.1" icon="TheDeathmatch/icon-insanedad" color="#AE66CE" holdTime="6">
+<character x="-175" y="-50" sprite="TheDeathmatch/DEARESTS-DUET" scale="1.1" icon="TheDeathmatch/icon-fightingdad" color="#AE66CE" holdTime="6">
 	<anim name="idle" anim="DEAREST Idle"/>
 	<anim name="singDOWN" anim="DEAREST Down"/>
-	<anim name="singRIGHT" anim="DEAREST Right"/>
+	<anim name="singRIGHT" anim="DEAREST Right" x="3" y="1"/>
 	<anim name="singLEFT" anim="DEAREST Left"/>
 	<anim name="singUP" anim="DEAREST Up"/>
 </character>
