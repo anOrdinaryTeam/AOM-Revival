@@ -11,6 +11,9 @@ var barBottom:FlxSprite;
 
 public var quico:Character;
 
+function onPlayerHit(_)
+    if (_.rating == 'sick')
+        _.ratingPrefix = 'modCombos/SuVecindad/';
 function preStageLoad()
     useStageData = false;
 function postCreate()
@@ -74,7 +77,7 @@ function create() {
     // chars shit
 
     // bars shit
-    barTop = new FlxSprite(0, -100).makeSolid(FlxG.width * 2, 100, 0xFF000000);
+    barTop = new FlxSprite(0, -280).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barTop.camera = camHUD;
     insert(5, barTop);
 
@@ -93,11 +96,11 @@ function stepHit() {
             change(true);
 
         case 895:
-            FlxTween.tween(barTop, {y: -30}, 2);
-            FlxTween.tween(barBottom, {y: 650}, 2);
+            FlxTween.tween(barTop, {y: -30}, 4, {ease: FlxEase.quadOut});
+            FlxTween.tween(barBottom, {y: 650}, 4, {ease: FlxEase.quadOut});
         case 1439:
-            FlxTween.tween(barTop, {y: -100}, 2);
-            FlxTween.tween(barBottom, {y: 900}, 2);
+            FlxTween.tween(barTop, {y: -280}, 4, {ease: FlxEase.quadIn});
+            FlxTween.tween(barBottom, {y: 900}, 4, {ease: FlxEase.quadIn});
         case 1854:
             FlxTween.tween(camHUD, {alpha: 0}, 1.1);
 
