@@ -14,6 +14,6 @@ Su Vecindad:SuVecindad/chavo
 pokemon-master:pokemonmaster
 Summit:Summit/red
 rush:rushblaze
-The Deathmatch:TheDeathmatch/icon-fightingdad
+The Deathmatch:TheDeathmatch/icon-insanedad
 Treacherous Thorns:TreacherousThorns/senpai-emtpy
 Looping The Rooms:ltr
