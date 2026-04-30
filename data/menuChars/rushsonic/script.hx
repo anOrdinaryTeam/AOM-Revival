@@ -4,7 +4,7 @@ function postUpdate() {
 
         danceOnBeat = false;
 
-        FlxG.sound.play(Paths.sound('menusounds/sonicyeah'));
+        FlxG.sound.play(Paths.sound('menusounds/sonicyeah')); // IM GOING TO FUCKING KILL YOU FRED
 
         rushsonic.playAnim("Sonic Yeah", true);
         rushsonic.animation.finishCallback = function(name:String) {

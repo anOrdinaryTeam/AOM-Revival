@@ -7,12 +7,13 @@ Epiphany:bigmonika
 Fatality:fatal-sonic
 Megalo Strike Back:MegaloStrikeB/chara
 Phantasm:fleetway
-pokemon-master:pokemonmaster
 Prey:furnace
 Silly Billy:SillyBilly/billy
 Sink:sink
 Su Vecindad:SuVecindad/chavo
+pokemon-master:pokemonmaster
 Summit:Summit/red
 rush:rushblaze
 The Deathmatch:TheDeathmatch/icon-fightingdad
 Treacherous Thorns:TreacherousThorns/senpai-emtpy
+Looping The Rooms:shubs

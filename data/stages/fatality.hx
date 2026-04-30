@@ -108,7 +108,7 @@ function onRatingUpdate(_) if (sonicHUD != null) {
 }
 
 function update(_) {
-    if (IsWindowMoving) {
+    if (getSaveData('Fatality_MoveWindow') && IsWindowMoving) {
         var thisX:Float = FlxMath.fastSin(Xamount * (Xamount)) * 100;
 		var thisY:Float = FlxMath.fastSin(Yamount * (Yamount)) * 100;
 		var yVal:Int = Std.int(windowY + thisY);
@@ -222,7 +222,7 @@ function stepHit() switch(curStep) {
 		Xamount += 3;
 }
 
-function shakeWindow() new FlxTimer().start(0.01, () -> {
+function shakeWindow() if (getSaveData('Fatality_MoveWindow')) new FlxTimer().start(0.01, () -> {
     window.move(window.x + FlxG.random.int(-10, 10), window.y + FlxG.random.int(-8, 8));
 }, 50);
 

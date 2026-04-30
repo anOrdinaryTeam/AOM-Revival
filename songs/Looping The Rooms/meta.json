@@ -1,0 +1,24 @@
+{
+	"color": "#FDC071",
+	"customValues": {
+		"stickerPack": "standard-bf",
+		"ratings": "[easy => 5, normal => 7, hard => 9]",
+		"previewStart": "0",
+		"previewEnd": "15000",
+		"charter": "Desherr",
+		"artist": "rusino (feat. Hatsune Miku)",
+		"noteStyle": "funkin",
+		"album": "loopingtherooms"
+	},
+	"opponentModeAllowed": false,
+	"icon": "face",
+	"difficulties": [
+		"hard"
+	],
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Looping the Rooms",
+	"needsVoices": false,
+	"beatsPerMeasure": 4,
+	"bpm": 162
+}

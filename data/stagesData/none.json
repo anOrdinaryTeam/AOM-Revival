@@ -1,0 +1,11 @@
+{
+    "startCamPos": [0,0],
+
+    "playerPos": [0,0],
+    "playerCamPos": [0,0],
+
+    "opponentPos": [0,0],
+    "opponentCamPos": [0,0],
+
+    "gfPos": [0,0]
+}
