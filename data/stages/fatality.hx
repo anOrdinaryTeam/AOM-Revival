@@ -22,6 +22,14 @@ PauseSubState.script = 'data/scripts/ReziseWindow';
 
 function create() {
     defaultCamZoom = 0.5;
+    
+    #if ARKOSE_PORT
+    camGame.width = 960;
+    camGame.x += 160;
+    camHUD.width = 960;
+    camHUD.x += 160;
+    #end
+    
     useCamMov = true;
     camMoveAmt = 20;
 
@@ -69,8 +77,10 @@ function create() {
 
 function postCreate() if (getSaveData('allowCustomHud')) {
     for (i in [scoreTxt, accuracyTxt, missesTxt]) i.visible = false;
+    #if !ARKOSE_PORT
     healthBar.x += 150;
     healthBarBG.x += 150;
+    #end
     sonicHUD.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, sonicHUD);
 
@@ -100,6 +110,14 @@ function postCreate() if (getSaveData('allowCustomHud')) {
     sonicHUD.members[3].setPosition(xScreen + 290, sonicHUD.members[0].y);
     sonicHUD.members[4].setPosition(xScreen + 250, sonicHUD.members[1].y);
     sonicHUD.members[5].setPosition(xScreen + 260, sonicHUD.members[2].y);
+    
+    #if ARKOSE_PORT
+    for (i => notes in cpuStrums.members) notes.x = 15 + 115 * i;
+    for (i => notes in player.members) {
+    	var off:Float = (cpu.members[3].x + cpu.members[3].width) + 35;
+    	notes.x = off + 115 * i;
+    }
+    #end
 }
 
 function onRatingUpdate(_) if (sonicHUD != null) {
@@ -108,6 +126,7 @@ function onRatingUpdate(_) if (sonicHUD != null) {
 }
 
 function update(_) {
+	#if !ARKOSE_PORT
     if (getSaveData('Fatality_MoveWindow') && IsWindowMoving) {
         var thisX:Float = FlxMath.fastSin(Xamount * (Xamount)) * 100;
 		var thisY:Float = FlxMath.fastSin(Yamount * (Yamount)) * 100;
@@ -118,6 +137,7 @@ function update(_) {
         Yamount += 0.0015;
 		Xamount += 0.00075;
     }
+    #end
 
     if (sonicHUD != null) {
         var songCalc:Float = Conductor.songPosition;
