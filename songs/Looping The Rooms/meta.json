@@ -11,9 +11,12 @@
 		"album": "loopingtherooms"
 	},
 	"opponentModeAllowed": false,
-	"icon": "face",
+	"icon": "ltr",
 	"difficulties": [
-		"hard"
+		"easy",
+		"normal",
+		"hard",
+		"rc"
 	],
 	"coopAllowed": false,
 	"stepsPerBeat": 4,

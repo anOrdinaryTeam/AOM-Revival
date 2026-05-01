@@ -57,6 +57,10 @@ var camOther:FlxCamera = new FlxCamera();
 
 function postCreate() {
     camOther.bgColor = 0;
+    #if ARKOSE_PORT 
+    camOther.width = 960;
+    camOther.x += 160;
+    #end
     FlxG.cameras.add(camOther, false);
 }
 
@@ -71,7 +75,8 @@ function spawnPopUp(?amount:Int = 1, ?type:Int = 2) if (getSaveData('Fatality_Sp
     for (i in 0...finalAmount)
     {
         var error:FatalError = new FatalError(type);
-        var offset = [xy.int(0, Std.int(FlxG.width - error.width)), xy.int(0, Std.int(FlxG.height - error.height))];
+        var cam:Dynamic = #if !ARKOSE_PORT FlxG; #else camHUD; #end
+        var offset = [xy.int(0, Std.int(cam.width - error.width)), xy.int(0, Std.int(cam.height - error.height))];
         error.setPosition(offset[0], offset[1]);
         error.camera = camOther;
         add(error);
