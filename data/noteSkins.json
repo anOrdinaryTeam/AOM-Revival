@@ -1,0 +1,23 @@
+{
+    "skins": [
+        {
+            "displayName": "Custom (RGB)",
+            "variants": [
+                ["Default", "modNotes/RGB/default"],
+                ["Circle", "modNotes/RGB/circle"]
+            ]
+        },
+        {
+            "displayName": "Corruption",
+            "path": "modNotes/TheDeathmatch/death notes"
+        },
+        {
+            "displayName": "Chavo",
+            "path": "modNotes/SuVecindad/Chavo"
+        },
+        {
+            "displayName": "Heathers",
+            "path": "modNotes/heathers"
+        }
+    ]
+}

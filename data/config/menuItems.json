@@ -8,10 +8,10 @@
             "stateType": "ModState"
         },
         {
-            "text": "Skin Editor",
+            "text": "Note's Selector",
             "position": [45, 390],
             "size": 0.9,
-            "stateRedirect": "skinEditor",
+            "stateRedirect": "noteSkinSelector",
             "stateType": "ModState"
         },
         {
