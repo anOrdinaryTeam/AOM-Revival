@@ -41,19 +41,17 @@ function create() {
     add(car);
 }
 
-function stepHit() {
-    switch(curStep) {
-        case 380: Plane();
-    }
-}
-
 function Plane() {
     plane = new FlxSprite(1200, 0, getModImage('ChallengeEdd/plane'));
     plane.scrollFactor.set(0.2, 0.2);
     plane.scale.set(1.5, 1.5);
     insert(3, plane);
 
-    FlxTween.tween(plane, {x: 1900}, 10, {onComplete: function() {
-        remove(plane);
-    }});
+    FlxTween.tween(plane, {x: 1900}, 10, {onComplete: () -> remove(plane) });
+}
+
+function stepHit() {
+    switch(curStep) {
+        case 380: Plane();
+    }
 }

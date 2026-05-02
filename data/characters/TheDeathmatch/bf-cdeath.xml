@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character x="-80" y="275" sprite="TheDeathmatch/corruptbf" flipX="true" camx="110" isPlayer="true" icon="TheDeathmatch/icon-corbf" color="#170A17">
+	<anim name="firstDeath" anim="BF Death"/>
+	<anim name="deathLoop" anim="BF Loop Death" loop="true"/>
+	<anim name="deathConfirm" anim="BF Confirm"/>
+</character>

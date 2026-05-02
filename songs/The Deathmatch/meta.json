@@ -1,11 +1,6 @@
 {
 	"icon": "TheDeathmatch/icon-insanedad",
-	"difficulties": [
-		"evil",
-		"canon"
-	],
-	"variants": [
-		"canon"
-	],
+	"difficulties": ["evil", "canon"],
+	"variants": ["canon"],
 	"bpm": 180
 }
