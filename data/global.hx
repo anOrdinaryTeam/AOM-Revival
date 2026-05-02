@@ -67,9 +67,6 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('curSkinNote') != FlxG.save.data.AOM_curSkinNote)
         saveMap.set('curSkinNote', FlxG.save.data.AOM_curSkinNote);
-
-    // no way im checking every value, nuh uh
-    saveMap.set('RGB', FlxG.save.data.AOM_RGB);
     // [ END ]
 
     
@@ -147,7 +144,6 @@ static function LoadSaveData() {
         [0xFF12FA05, 0xFFFFFFFF, 0xFF0A4447],
         [0xFFF9393F, 0xFFFFFFFF, 0xFF651038]
     ];
-    saveMap.set('RGB', FlxG.save.data.AOM_RGB);
     // [ END ]
 
     // [ MODS/SONGS CONFIG ]

@@ -15,7 +15,8 @@ var optionsBoxes:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var optionsIcons:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var optionsTexts:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
-var currentColors:Array<Array<FlxColor>> = getSaveData('RGB');
+var currentColors:Array<Array<FlxColor>>;
+var lastColors:Array<Array<FlxColor>>;
 var defaultColors:Array<Array<FlxColor>> = [
     [0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],
     [0xFF00FFFF, 0xFFFFFFFF, 0xFF1542B7],
@@ -27,6 +28,7 @@ var colorWheel:UIColorwheel;
 var inColorEditor:Bool = false;
 var selectedStrum:Int = 0;
 var buttons:FlxTypedGroup<UIButton> = new FlxTypedGroup();
+var otherButtons:FlxTypedGroup<UIButton> = new FlxTypedGroup();
 var editingPart:Int = 0;
 
 var allowInput:Bool = true;
@@ -37,6 +39,11 @@ var _ChangeToVariants:Bool = true;
 var _TimeToChange:Float = 2;
 
 function create() {
+    // thxs karim uwu
+    // cdn.discordapp.com/attachments/1328061474509291632/1500094568870314164/image.png?ex=69f72f6f&is=69f5ddef&hm=971547086514ed1ff843c9fb54082dd2012b3ff536713a97c2602a802997d34e&animated=true
+    currentColors = [for (i in FlxG.save.data.AOM_RGB) [for (j in i) j]];
+    lastColors = [for (i in FlxG.save.data.AOM_RGB) [for (j in i) j]];
+
     var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/menuEditors'));
     bg.antialiasing = Options.antialiasing;
     add(bg);
@@ -100,12 +107,27 @@ function create() {
     }
 
     add(buttons);
+    add(otherButtons);
+
+    var saveColors:UIButton = new UIButton(1150, 80, 'Save Colors', _SaveColors);
+    saveColors.antialiasing = true;
+    saveColors.visible = false;
+    otherButtons.add(saveColors);
+
+    var resetColors:UIButton = new UIButton(saveColors.x - 135, 80, 'Reset Colors', _ResetColors);
+    resetColors.antialiasing = true;
+    resetColors.visible = false;
+    otherButtons.add(resetColors);
+
+    var defColors:UIButton = new UIButton(resetColors.x - 135, 80, 'Set Default Colors', _SetDefaultColors);
+    defColors.antialiasing = true;
+    defColors.visible = false;
+    otherButtons.add(defColors);
 
     curSkinTxt.x = (FlxG.width - curSkinTxt.width) - 10;
     add(curSkinTxt);
 
     scroll();
-    // generateStrumAndNotes();
 }
 
 function update(e) {
@@ -155,13 +177,16 @@ function openRGBPanel(id:Int) {
     allowInput = false;
 
     selectedStrum = id;
-    colorWheel = new UIColorwheel(510, 10, -1, currentColors[id][editingPart]);
+    colorWheel = new UIColorwheel(510, 10, currentColors[selectedStrum][editingPart]);
     add(colorWheel);
 
     for (i => str in ['R', 'G', 'B']) {
         var button:UIButton = new UIButton(colorWheel.x + 55 * i, 150, str, () -> {
             editingPart = i;
-            colorWheel.curColor = currentColors[id][editingPart];
+
+            remove(colorWheel);
+            colorWheel = new UIColorwheel(510, 10, currentColors[selectedStrum][editingPart]);
+            add(colorWheel);
         }, 50);
         button.antialiasing = true;
         buttons.add(button);
@@ -184,13 +209,40 @@ function updateNoteRGB(id:Int) {
         case 1: note.shader.green = getColorArray(colorWheel.curColor);
         case 2: note.shader.blue = getColorArray(colorWheel.curColor);
     }
+
+    currentColors[selectedStrum][editingPart] = colorWheel.curColor;
 }
 
-function refreshNoteColors() for (i in 0...4) {
-    var note:FunkinSprite = notesPreview.members[i];
-    note.shader.red = currentColors[i];
-    note.shader.green = currentColors[i];
-    note.shader.blue = currentColors[i];
+function _SaveColors() {
+    FlxG.save.data.AOM_RGB = currentColors;
+}
+
+function _ResetColors() for (i => note in notesPreview.members) {
+    var red:FlxColor = lastColors[i][0];
+    var green:FlxColor = lastColors[i][1];
+    var blue:FlxColor = lastColors[i][2];
+
+    note.shader.red = getColorArray(red);
+    note.shader.green = getColorArray(green);
+    note.shader.blue = getColorArray(blue);
+
+    currentColors[i][0] = red;
+    currentColors[i][1] = green;
+    currentColors[i][2] = blue;
+}
+
+function _SetDefaultColors() for (i => note in notesPreview.members) {
+    var red:FlxColor = defaultColors[i][0];
+    var green:FlxColor = defaultColors[i][1];
+    var blue:FlxColor = defaultColors[i][2];
+
+    note.shader.red = getColorArray(red);
+    note.shader.green = getColorArray(green);
+    note.shader.blue = getColorArray(blue);
+
+    currentColors[i][0] = red;
+    currentColors[i][1] = green;
+    currentColors[i][2] = blue;
 }
 
 function getColorValue(color:Int, rgb:String):Int
@@ -325,12 +377,20 @@ function generateStrumAndNotes(path:String) {
     }
     // [ END ]
 
+    for (btts in otherButtons) btts.visible = false;
+
     if (skinsList[curSelected].displayName == 'Custom') {
-        for (note in notesPreview) {
+        for (btts in otherButtons) btts.visible = true;
+
+        for (i => note in notesPreview.members) {
+            var red:FlxColor = currentColors[i][0];
+            var green:FlxColor = currentColors[i][1];
+            var blue:FlxColor = currentColors[i][2];
             note.shader = new CustomShader('RGB');
-            note.shader.red = [0, 0, 0];
-            note.shader.green = [0, 0, 0];
-            note.shader.blue = [0, 0, 0];
+
+            note.shader.red = getColorArray(red);
+            note.shader.green = getColorArray(green);
+            note.shader.blue = getColorArray(blue);
         }
     }
 }
