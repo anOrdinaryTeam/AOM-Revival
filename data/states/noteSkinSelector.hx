@@ -131,8 +131,8 @@ function create() {
 }
 
 function update(e) {
-    if (FlxG.sound.music.volume < 0.8)
-		FlxG.sound.music.volume += 0.5 * dt;
+    if (FlxG.sound.music.volume > 0.4)
+		FlxG.sound.music.volume -= 0.5 * e;
 
     for (k => option in skinsTexts.members) {
         var spaceBetween:Float = 100;
@@ -173,6 +173,8 @@ function update(e) {
 }
 
 function openRGBPanel(id:Int) {
+    playSound('editors/windowAppear', 3);
+
     inColorEditor = true;
     allowInput = false;
 
@@ -214,35 +216,44 @@ function updateNoteRGB(id:Int) {
 }
 
 function _SaveColors() {
+    playSound('editors/save');
     FlxG.save.data.AOM_RGB = currentColors;
 }
 
-function _ResetColors() for (i => note in notesPreview.members) {
-    var red:FlxColor = lastColors[i][0];
-    var green:FlxColor = lastColors[i][1];
-    var blue:FlxColor = lastColors[i][2];
+function _ResetColors() {
+    playSound('editors/character/ghostDisable');
 
-    note.shader.red = getColorArray(red);
-    note.shader.green = getColorArray(green);
-    note.shader.blue = getColorArray(blue);
+    for (i => note in notesPreview.members) {
+        var red:FlxColor = lastColors[i][0];
+        var green:FlxColor = lastColors[i][1];
+        var blue:FlxColor = lastColors[i][2];
 
-    currentColors[i][0] = red;
-    currentColors[i][1] = green;
-    currentColors[i][2] = blue;
+        note.shader.red = getColorArray(red);
+        note.shader.green = getColorArray(green);
+        note.shader.blue = getColorArray(blue);
+
+        currentColors[i][0] = red;
+        currentColors[i][1] = green;
+        currentColors[i][2] = blue;
+    }
 }
 
-function _SetDefaultColors() for (i => note in notesPreview.members) {
-    var red:FlxColor = defaultColors[i][0];
-    var green:FlxColor = defaultColors[i][1];
-    var blue:FlxColor = defaultColors[i][2];
+function _SetDefaultColors() {
+    playSound('editors/redo', 0.5);
 
-    note.shader.red = getColorArray(red);
-    note.shader.green = getColorArray(green);
-    note.shader.blue = getColorArray(blue);
+    for (i => note in notesPreview.members) {
+        var red:FlxColor = defaultColors[i][0];
+        var green:FlxColor = defaultColors[i][1];
+        var blue:FlxColor = defaultColors[i][2];
 
-    currentColors[i][0] = red;
-    currentColors[i][1] = green;
-    currentColors[i][2] = blue;
+        note.shader.red = getColorArray(red);
+        note.shader.green = getColorArray(green);
+        note.shader.blue = getColorArray(blue);
+
+        currentColors[i][0] = red;
+        currentColors[i][1] = green;
+        currentColors[i][2] = blue;
+    }
 }
 
 function getColorValue(color:Int, rgb:String):Int
@@ -296,6 +307,8 @@ function selectSkinOption(id:Int) {
 }
 
 function generateSkinOptions(variable:NoteSkin) {
+    playSound('editors/dropdownAppear', 2);
+
     var list:Array<Array<String>> = variable.variations.copy();
     var name:String = variable.displayName;
 
