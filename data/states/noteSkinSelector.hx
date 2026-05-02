@@ -15,14 +15,16 @@ var optionsBoxes:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var optionsIcons:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var optionsTexts:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
-var colorWheel:UIColorwheel;
-var inColorEditor:Bool = false;
+var currentColors:Array<Array<FlxColor>> = getSaveData('RGB');
 var defaultColors:Array<Array<FlxColor>> = [
     [0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],
     [0xFF00FFFF, 0xFFFFFFFF, 0xFF1542B7],
     [0xFF12FA05, 0xFFFFFFFF, 0xFF0A4447],
     [0xFFF9393F, 0xFFFFFFFF, 0xFF651038]
 ];
+
+var colorWheel:UIColorwheel;
+var inColorEditor:Bool = false;
 var selectedStrum:Int = 0;
 var buttons:FlxTypedGroup<UIButton> = new FlxTypedGroup();
 var editingPart:Int = 0;
@@ -153,12 +155,13 @@ function openRGBPanel(id:Int) {
     allowInput = false;
 
     selectedStrum = id;
-    colorWheel = new UIColorwheel(510, 10, -1);
+    colorWheel = new UIColorwheel(510, 10, -1, currentColors[id][editingPart]);
     add(colorWheel);
 
     for (i => str in ['R', 'G', 'B']) {
         var button:UIButton = new UIButton(colorWheel.x + 55 * i, 150, str, () -> {
             editingPart = i;
+            colorWheel.curColor = currentColors[id][editingPart];
         }, 50);
         button.antialiasing = true;
         buttons.add(button);
@@ -181,6 +184,13 @@ function updateNoteRGB(id:Int) {
         case 1: note.shader.green = getColorArray(colorWheel.curColor);
         case 2: note.shader.blue = getColorArray(colorWheel.curColor);
     }
+}
+
+function refreshNoteColors() for (i in 0...4) {
+    var note:FunkinSprite = notesPreview.members[i];
+    note.shader.red = currentColors[i];
+    note.shader.green = currentColors[i];
+    note.shader.blue = currentColors[i];
 }
 
 function getColorValue(color:Int, rgb:String):Int
