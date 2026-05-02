@@ -67,6 +67,9 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('curSkinNote') != FlxG.save.data.AOM_curSkinNote)
         saveMap.set('curSkinNote', FlxG.save.data.AOM_curSkinNote);
+
+    if (saveMap.get('curSkinNoteDisplay') != FlxG.save.data.AOM_curSkinNote_Display)
+        saveMap.set('curSkinNoteDisplay', FlxG.save.data.AOM_curSkinNote_Display);
     // [ END ]
 
     
@@ -137,6 +140,9 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_curSkinNote ??= '';
     saveMap.set('curSkinNote', FlxG.save.data.AOM_curSkinNote);
+
+    FlxG.save.data.AOM_curSkinNote_Display ??= 'NONE';
+    saveMap.set('curSkinNoteDisplay', FlxG.save.data.AOM_curSkinNote_Display);
 
     FlxG.save.data.AOM_RGB ??= [
         [0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],

@@ -2,7 +2,7 @@ import flixel.addons.display.FlxBackdrop;
 import funkin.editors.ui.UIColorwheel;
 import funkin.editors.ui.UIButton;
 
-var curSkinTxt:FunkinText = new FunkinText(0, 10, 0, '< Current Skin: RGB >', 30);
+var curSkinTxt:FunkinText = new FunkinText(0, 10, 0, '< Current Skin: ??? >', 30);
 var skinsList:Array<NoteSkin> = [];
 
 var skinsTexts:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
@@ -25,6 +25,8 @@ var defaultColors:Array<Array<FlxColor>> = [
 ];
 
 var colorWheel:UIColorwheel;
+var useThisSkin:UIButton;
+
 var inColorEditor:Bool = false;
 var selectedStrum:Int = 0;
 var buttons:FlxTypedGroup<UIButton> = new FlxTypedGroup();
@@ -33,6 +35,8 @@ var editingPart:Int = 0;
 
 var allowInput:Bool = true;
 var curSelected:Int = 0;
+var skinSelected:Int = 0;
+var lastSelected:Int = 0;
 
 // Auto icon switching while selecting
 var _ChangeToVariants:Bool = true;
@@ -124,6 +128,13 @@ function create() {
     defColors.visible = false;
     otherButtons.add(defColors);
 
+    useThisSkin = new UIButton(1150, saveColors.y + 50, 'Use This Skin', _SetSkin);
+    useThisSkin.antialiasing = true;
+    useThisSkin.visible = false;
+    add(useThisSkin);
+
+    curSkinTxt.text = '< Current Skin: ${FlxG.save.data.AOM_curSkinNote_Display} >';
+    curSkinTxt.alignment = 'left';
     curSkinTxt.x = (FlxG.width - curSkinTxt.width) - 10;
     add(curSkinTxt);
 
@@ -154,6 +165,11 @@ function update(e) {
 
         if (controls.ACCEPT)
             checkout();
+
+        if (controls.BACK) {
+            allowInput = false;
+            FlxG.switchState(new ModState('Menu'));
+        }
 
         if (optionsBoxes.members.length > 0) {
             for (box in optionsBoxes) if (CoolUtil.mouseOverlaps(box) && FlxG.mouse.justPressed)
@@ -215,6 +231,32 @@ function updateNoteRGB(id:Int) {
     currentColors[selectedStrum][editingPart] = colorWheel.curColor;
 }
 
+function _SetSkin() {
+    playSound('editors/save');
+
+    var selectedSkin:NoteSkin = skinsList[lastSelected];
+    var name:String = selectedSkin.displayName;
+    var str:String = '';
+
+    if (selectedSkin.variations != null) {
+        var skinName:String = selectedSkin.variations[skinSelected][0];
+        var skinPath:String = selectedSkin.variations[skinSelected][1];
+
+        FlxG.save.data.AOM_curSkinNote = skinPath;
+        str = '$name ($skinName)';
+    }
+    else {
+        var skinPath:String = selectedSkin.path;
+        FlxG.save.data.AOM_curSkinNote = skinPath;
+        str = '$name';
+    }
+
+    curSkinTxt.text = '< Current Skin: $str>';
+    curSkinTxt.x = (FlxG.width - curSkinTxt.width) - 10;
+    FlxG.save.data.AOM_curSkinNote_Display = str;
+    trace('Name $str | Path: ${FlxG.save.data.AOM_curSkinNote}');
+}
+
 function _SaveColors() {
     playSound('editors/save');
     FlxG.save.data.AOM_RGB = currentColors;
@@ -256,21 +298,6 @@ function _SetDefaultColors() {
     }
 }
 
-function getColorValue(color:Int, rgb:String):Int
-    return switch (rgb)
-    {
-        default: (Std.int(color) >> 16) & 0xFF;
-        case "g": (Std.int(color) >> 8) & 0xFF;
-        case "b": Std.int(color) & 0xFF;
-    }
-
-function getColorArray(color:Int):Array<Float>
-    return [
-        getColorValue(color, "r") / 255,
-        getColorValue(color, "g") / 255,
-        getColorValue(color, "b") / 255
-    ];
-
 function scroll(i:Int = 0, f:Bool = false) {
     if (i == 0 && !f) return;
     CoolUtil.playMenuSFX(0, 0.5);
@@ -300,6 +327,7 @@ function checkout() {
 function selectSkinOption(id:Int) {
     var SkinVar:NoteSkin = skinsList[curSelected];
     var skin:String = SkinVar.variations[id][1];
+    skinSelected = id;
 
     for (groups in [strumPreview, notesPreview])
         groups.clear();
@@ -308,6 +336,7 @@ function selectSkinOption(id:Int) {
 
 function generateSkinOptions(variable:NoteSkin) {
     playSound('editors/dropdownAppear', 2);
+    useThisSkin.visible = false;
 
     var list:Array<Array<String>> = variable.variations.copy();
     var name:String = variable.displayName;
@@ -390,6 +419,8 @@ function generateStrumAndNotes(path:String) {
     }
     // [ END ]
 
+    lastSelected = curSelected;
+    useThisSkin.visible = true;
     for (btts in otherButtons) btts.visible = false;
 
     if (skinsList[curSelected].displayName == 'Custom') {
@@ -407,6 +438,21 @@ function generateStrumAndNotes(path:String) {
         }
     }
 }
+
+function getColorValue(color:Int, rgb:String):Int
+    return switch (rgb)
+    {
+        default: (Std.int(color) >> 16) & 0xFF;
+        case "g": (Std.int(color) >> 8) & 0xFF;
+        case "b": Std.int(color) & 0xFF;
+    }
+
+function getColorArray(color:Int):Array<Float>
+    return [
+        getColorValue(color, "r") / 255,
+        getColorValue(color, "g") / 255,
+        getColorValue(color, "b") / 255
+    ];
 
 class NoteSkin
 {
