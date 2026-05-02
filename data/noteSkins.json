@@ -1,7 +1,7 @@
 {
     "skins": [
         {
-            "displayName": "Custom (RGB)",
+            "displayName": "Custom",
             "variants": [
                 ["Default", "modNotes/RGB/default"],
                 ["Circle", "modNotes/RGB/circle"]
@@ -16,8 +16,36 @@
             "path": "modNotes/SuVecindad/Chavo"
         },
         {
+            "displayName": "Doki",
+            "path": "modNotes/Epiphany/default"
+        },
+        {
+            "displayName": "Eteled",
+            "variants": [
+                ["BF", "modNotes/Eteled/bf"],
+                ["Eteled", "modNotes/Eteled/eteled"],
+                ["Austin", "modNotes/Eteled/austin"]
+            ]
+        },
+        {
             "displayName": "Heathers",
             "path": "modNotes/heathers"
+        },
+        {
+            "displayName": "Majin",
+            "path": "modNotes/EXE/Majin_Notes"
+        },
+        {
+            "displayName": "Tabi",
+            "path": "modNotes/Tabi/NOTE_assets"
+        },
+        {
+            "displayName": "Retrospecter",
+            "path": "modNotes/Corruptro/NOTE_assets_retrobf"
+        },
+        {
+            "displayName": "X-Event",
+            "path": "modNotes/X/NOTE_assets"
         }
     ]
 }

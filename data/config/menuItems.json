@@ -12,7 +12,7 @@
             "position": [45, 390],
             "size": 0.9,
             "stateRedirect": "noteSkinSelector",
-            "stateType": "ModState"
+            "stateType": "UIState"
         },
         {
             "text": "Credits",
