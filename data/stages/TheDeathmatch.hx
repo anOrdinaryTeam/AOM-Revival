@@ -2,6 +2,9 @@ function onNoteCreation(_)
     _.noteSprite = 'modNotes/TheDeathmatch/death notes';
 function onStrumCreation(_)
     _.sprite = 'modNotes/TheDeathmatch/death notes';
+function onGameOver(_) 
+    _.deathCharID = 'TheDeathmatch/bf-cdeath';
+
 function preStageLoad()
     useStageData = false;
 

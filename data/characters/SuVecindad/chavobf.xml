@@ -13,8 +13,4 @@
 	<anim name="singRIGHTmiss" anim="Bf Miss Right" x="-4" y="-2"/>
 
 	<anim name="hey" anim="Bf Emotisa Insana"/>
-	
-	<anim name="firtsDeath" anim="Bf Death0"/>
-	<anim name="deathLoop" anim="Bf Death0" indices="6"/>
-	<anim name="deathConfirm" anim="Bf Death Confirm0" x="1" y="-166"/>
 </character>

@@ -8,48 +8,50 @@ var bfpast:FunkinSprite;
 var gfpast:FunkinSprite;
 var dadpast:FunkinSprite;
 
+var dadDrain:Float = .04;
+
 function create() {
     // stage memories n shit
-    camHUD.alpha = 0;
+    // camHUD.alpha = 0;
     
-    backpast = new FlxSprite(-600, -200, getModImage('TheDeathmatch/stagebackpast'));
-    backpast.scale.set(1.2, 1.2);
-    add(backpast);
+    // backpast = new FlxSprite(-600, -200, getModImage('TheDeathmatch/stagebackpast'));
+    // backpast.scale.set(1.2, 1.2);
+    // add(backpast);
 
-    stagepast = new FlxSprite(-600, 650, getModImage('TheDeathmatch/stagefrontpast'));
-    stagepast.scale.set(1.2, 1.2);
-    add(stagepast);
+    // stagepast = new FlxSprite(-600, 650, getModImage('TheDeathmatch/stagefrontpast'));
+    // stagepast.scale.set(1.2, 1.2);
+    // add(stagepast);
 
-    rlightpast = new FlxSprite(-200, -125, getModImage('TheDeathmatch/stage_lightpast'));
-    rlightpast.scale.set(1.2, 1.2);
-    add(rlightpast);
+    // rlightpast = new FlxSprite(-200, -125, getModImage('TheDeathmatch/stage_lightpast'));
+    // rlightpast.scale.set(1.2, 1.2);
+    // add(rlightpast);
 
-    llightpast = new FlxSprite(1325, -125, getModImage('TheDeathmatch/stage_lightpast'));
-    llightpast.scale.set(1.2, 1.2);
-    llightpast.flipX = true;
-    add(llightpast);
+    // llightpast = new FlxSprite(1325, -125, getModImage('TheDeathmatch/stage_lightpast'));
+    // llightpast.scale.set(1.2, 1.2);
+    // llightpast.flipX = true;
+    // add(llightpast);
 
-    curtainspast = new FlxSprite(-600, -200, getModImage('TheDeathmatch/stagecurtainspast'));
-    curtainspast.scale.set(1.2, 1.2);
-    add(curtainspast);
+    // curtainspast = new FlxSprite(-600, -200, getModImage('TheDeathmatch/stagecurtainspast'));
+    // curtainspast.scale.set(1.2, 1.2);
+    // add(curtainspast);
 
-    gfpast = new FunkinSprite(425, 125).loadSprite(getModImage('TheDeathmatch/past_GF'));
-    gfpast.addAnim('idle', 'GF Dancing Beat0', 24, true);
-    gfpast.playAnim('idle');
-    add(gfpast);
+    // gfpast = new FunkinSprite(425, 125).loadSprite(getModImage('TheDeathmatch/past_GF'));
+    // gfpast.addAnim('idle', 'GF Dancing Beat0', 24, true);
+    // gfpast.playAnim('idle');
+    // add(gfpast);
 
-    bfpast = new FunkinSprite(825, 475).loadSprite(getModImage('TheDeathmatch/past_BF'));
-    bfpast.addAnim('idle', 'BF idle dance', 24, true);
-    bfpast.playAnim('idle');
-    add(bfpast);
+    // bfpast = new FunkinSprite(825, 475).loadSprite(getModImage('TheDeathmatch/past_BF'));
+    // bfpast.addAnim('idle', 'BF idle dance', 24, true);
+    // bfpast.playAnim('idle');
+    // add(bfpast);
 
-    dadpast = new FunkinSprite(75, 75).loadSprite(getModImage('TheDeathmatch/past_dad'));
-    dadpast.addAnim('idle', 'Dad idle dance', 24, true);
-    dadpast.playAnim('idle');
-    add(dadpast);
+    // dadpast = new FunkinSprite(75, 75).loadSprite(getModImage('TheDeathmatch/past_dad'));
+    // dadpast.addAnim('idle', 'Dad idle dance', 24, true);
+    // dadpast.playAnim('idle');
+    // add(dadpast);
     
-    for (a in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
-            { a.antialiasing = true; }
+    // for (a in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
+    //         { a.antialiasing = true; }
     // stage memories n shit
 }
 
@@ -61,7 +63,7 @@ function stepHit() {
                 defaultCamZoom = 0.5;
                 camHUD.alpha = 1;
                 for (i in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
-                    { remove(i); }
+                    { remove(i, true); }
 
             case 512:
                 for (i in [kworld, bpeople, fpeople])
@@ -76,20 +78,28 @@ function stepHit() {
                 changeCharacter(1, 'TheDeathmatch/kids-death');
 
             case 1408:
+                dadDrain = .03;
                 kworld.alpha = 1;
-                remove(world);
+                remove(world, true);
 
                 bpeople.playAnim('mom');
                 changeCharacter(0, 'TheDeathmatch/dearest2');
                 changeCharacter(1, 'TheDeathmatch/mom-death');
 
             case 1664:
+                dadDrain = .02;
                 bpeople.playAnim('idle');
                 changeCharacter(0, 'TheDeathmatch/dearest3');
                 changeCharacter(1, 'TheDeathmatch/bf-deathmatch');
 
             case 2432:
+                dadDrain = .01;
                 changeCharacter(0, 'TheDeathmatch/dearest4');
         }
     }
+}
+
+function onDadHit(_) {
+    if (health > 0.4)
+        health -= dadDrain;
 }

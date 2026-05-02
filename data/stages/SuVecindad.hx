@@ -24,6 +24,9 @@ function onNoteCreation(_)
 function onStrumCreation(_)
     _.sprite = 'modNotes/SuVecindad/chavo';
 
+function onGameOver(_) 
+    _.deathCharID = 'SuVecindad/chavobf-death';
+
 function create() {
     // settings shit
     defaultCamZoom = 0.7;

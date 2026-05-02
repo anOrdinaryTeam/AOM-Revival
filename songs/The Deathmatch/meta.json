@@ -1,11 +1,18 @@
 {
+	"opponentModeAllowed": false,
 	"icon": "TheDeathmatch/icon-insanedad",
 	"difficulties": [
 		"evil",
 		"canon"
 	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "The Deathmatch",
 	"variants": [
 		"canon"
 	],
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
 	"bpm": 180
 }
