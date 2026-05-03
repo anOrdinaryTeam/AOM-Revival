@@ -1,0 +1,10 @@
+{
+    "backgrounds": [
+        ["Zardy2BG", true]
+    ],
+    
+    "logo": "icon",
+    "logoData": [
+        [850, 420, 0.6]
+    ]
+}
