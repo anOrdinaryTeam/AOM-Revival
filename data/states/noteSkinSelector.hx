@@ -435,6 +435,7 @@ function generateStrumAndNotes(path:String) {
             note.shader.red = getColorArray(red);
             note.shader.green = getColorArray(green);
             note.shader.blue = getColorArray(blue);
+            note.shader.enabled = true;
         }
     }
 }

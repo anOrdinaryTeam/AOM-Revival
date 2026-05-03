@@ -1,5 +1,47 @@
-function onNoteCreation(e) if (getSaveData('usingSkins') && e.strumLineID == 1)
-    e.noteSprite = getSaveData('curSkinNote');
+using StringTools;
 
-function onStrumCreation(e) if (getSaveData('usingSkins') && e.player == 1)
+var daColors:Array<Array<FlxColor>>;
+var usingRGB:Bool = getSaveData('curSkinNoteDisplay').contains('Custom');
+
+function create() if (getSaveData('usingSkins') && usingRGB)
+    daColors = [for (i in FlxG.save.data.AOM_RGB) [for (j in i) j]];
+
+function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
+    var red:FlxColor = daColors[id][0];
+    var green:FlxColor = daColors[id][1];
+    var blue:FlxColor = daColors[id][2];
+
+    obj.shader = new CustomShader('RGB');
+    obj.shader.red = getColorArray(red);
+    obj.shader.green = getColorArray(green);
+    obj.shader.blue = getColorArray(blue);
+    obj.shader.enabled = true;
+    if (isStrum) obj.animation.onFrameChange.add((anim) -> {
+        obj.shader.enabled = anim != 'static';
+    });
+}
+
+function onNoteCreation(e) if (getSaveData('usingSkins') && e.strumLineID == 1) {
+    e.noteSprite = getSaveData('curSkinNote');
+    if (usingRGB) createShader(e.note, e.strumID);
+}
+
+function onStrumCreation(e) if (getSaveData('usingSkins') && e.player == 1) {
     e.sprite = getSaveData('curSkinNote');
+    if (usingRGB) createShader(e.strum, e.strumID, true);
+}
+
+function getColorValue(color:Int, rgb:String):Int
+    return switch (rgb)
+    {
+        default: (Std.int(color) >> 16) & 0xFF;
+        case "g": (Std.int(color) >> 8) & 0xFF;
+        case "b": Std.int(color) & 0xFF;
+    }
+
+function getColorArray(color:Int):Array<Float>
+    return [
+        getColorValue(color, "r") / 255,
+        getColorValue(color, "g") / 255,
+        getColorValue(color, "b") / 255
+    ];
