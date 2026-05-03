@@ -4,6 +4,7 @@ var Foolhardy:Bool;
 function create() {
     Foolhardy = songName == 'Foolhardy';
     defaultCamZoom = Foolhardy ? 0.9 : 0.7;
+    dad.alpha = 0.001;
 
     var spr:String = Foolhardy ? 'Maze' : 'Zardy2BG';
     bg = new FunkinSprite(-600, -200, getModImage('maze/$spr'));
@@ -12,11 +13,6 @@ function create() {
     bg.scrollFactor.set(0.9, 0.9);
     bg.antialiasing = Options.antialiasing;
     addSprite(bg);
-}
-
-function postCreate() {
-    dad.alpha = 0.001;
-    setSkin(0, Foolhardy ? 'zardy' : 'zardyDark');
 }
 
 function onCountdown(e)
