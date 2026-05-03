@@ -11,21 +11,18 @@ var barBottom:FlxSprite;
 
 public var quico:Character;
 
-function onPlayerHit(_)
-    if (_.rating == 'sick')
-        _.ratingPrefix = 'modCombos/SuVecindad/';
 function preStageLoad()
     useStageData = false;
-function postCreate()
-    loadHud('PsychEngine', '');
-
 function onNoteCreation(_)
     _.noteSprite = 'modNotes/SuVecindad/chavo';
 function onStrumCreation(_)
     _.sprite = 'modNotes/SuVecindad/chavo';
-
+function onPlayerHit(_)
+    _.ratingPrefix = 'modCombos/SuVecindad/';
 function onGameOver(_) 
     _.deathCharID = 'SuVecindad/chavobf-death';
+function postCreate()
+    loadHud('PsychEngine', '');
 
 function create() {
     // settings shit
