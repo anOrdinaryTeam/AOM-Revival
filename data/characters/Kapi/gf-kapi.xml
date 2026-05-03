@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Kapi/KAPIGIRLFRIEND" flipX="true" camx="125" camy="100" isPlayer="true" icon="gf" color="#A5004D">
+	<anim name="danceLeft" anim="GF Dancing Beat" indices="30,0..14"/>
+	<anim name="danceRight" anim="GF Dancing Beat" indices="15..29"/>
+</character>

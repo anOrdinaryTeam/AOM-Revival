@@ -1,5 +1,5 @@
-Dream Of Peace:eteled
-Diagraphephobia:eteled_mad
-Post Mortal:austin
-Plaything:eteled_mad
-System Failure:eteled_mad
+Wocky:Kapi/kapi
+Beathoven:Kapi/kapi
+Hairball:Kapi/kapi-angry
+Nyaw:Kapi/kapi-angry
+Flatzone:Kapi/gw
