@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="SuVecindad/Bf" flipX="true" isPlayer="true" icon="SuVecindad/icon-bf_luigi" color="#2FB0D2">	
+	<anim name="firstDeath" anim="Bf Death0"/>
+	<anim name="deathLoop" anim="Bf Death0" indices="6"/>
+	<anim name="deathConfirm" anim="Bf Death Confirm0" x="1" y="-166"/>
+</character>

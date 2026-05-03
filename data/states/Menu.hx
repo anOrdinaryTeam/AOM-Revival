@@ -2,6 +2,7 @@ import funkin.menus.ModSwitchMenu;
 import funkin.editors.EditorPicker;
 import flixel.addons.display.FlxBackdrop;
 import flixel.effects.FlxFlicker;
+import funkin.editors.ui.UIState;
 
 final pixelate:Bool = Options.antialiasing;
 final getOptions:Dynamic = CoolUtil.parseJson(Paths.json('config/menuItems'));
@@ -173,12 +174,13 @@ function onSelectedOption(option:Int) {
             FlxFlicker.flicker(spr, 1.1, Options.flashingMenu ? 0.06 : 0.15, false, false, function(flick:FlxFlicker) {
                 final Json:Dynamic = getOptions.options[option]; // not a damn switcher baby!!!
 
-                if (Json.stateType == 'SourceState') {
-                    final ClassToRedirect:Dynamic = Type.resolveClass(Json.stateRedirect);
-                    FlxG.switchState(new ClassToRedirect());
+                switch(Json.stateType) {
+                    default: FlxG.switchState(new ModState(Json.stateRedirect));
+                    case 'UIState': FlxG.switchState(new UIState(true, Json.stateRedirect));
+                    case 'SourceState':
+                        final ClassToRedirect:Dynamic = Type.resolveClass(Json.stateRedirect);
+                        FlxG.switchState(new ClassToRedirect());
                 }
-                else
-                    FlxG.switchState(new ModState(Json.stateRedirect));
             });
         }
         else {

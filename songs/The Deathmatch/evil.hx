@@ -8,6 +8,8 @@ var bfpast:FunkinSprite;
 var gfpast:FunkinSprite;
 var dadpast:FunkinSprite;
 
+var dadDrain:Float = .04;
+
 function create() {
     // stage memories n shit
     camHUD.alpha = 0;
@@ -61,7 +63,7 @@ function stepHit() {
                 defaultCamZoom = 0.5;
                 camHUD.alpha = 1;
                 for (i in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
-                    { remove(i); }
+                    { remove(i, true); }
 
             case 512:
                 for (i in [kworld, bpeople, fpeople])
@@ -76,20 +78,28 @@ function stepHit() {
                 changeCharacter(1, 'TheDeathmatch/kids-death');
 
             case 1408:
+                dadDrain = .03;
                 kworld.alpha = 1;
-                remove(world);
+                remove(world, true);
 
                 bpeople.playAnim('mom');
                 changeCharacter(0, 'TheDeathmatch/dearest2');
                 changeCharacter(1, 'TheDeathmatch/mom-death');
 
             case 1664:
+                dadDrain = .02;
                 bpeople.playAnim('idle');
                 changeCharacter(0, 'TheDeathmatch/dearest3');
                 changeCharacter(1, 'TheDeathmatch/bf-deathmatch');
 
             case 2432:
+                dadDrain = .01;
                 changeCharacter(0, 'TheDeathmatch/dearest4');
         }
     }
+}
+
+function onDadHit(_) {
+    if (health > 0.4)
+        health -= dadDrain;
 }

@@ -2,15 +2,14 @@
 <character x="-80" y="275" sprite="TheDeathmatch/corruptbf" flipX="true" camx="110" isPlayer="true" icon="TheDeathmatch/icon-corbf" color="#170A17">
 	<anim name="idle" anim="BF Idle"/>
 	<anim name="idle-alt" anim="BF ALT Idle"/>
+
 	<anim name="singLEFT" anim="BF Left"/>
 	<anim name="singDOWN" anim="BF Down" x="-15"/>
 	<anim name="singUP" anim="BF Up"/>
 	<anim name="singRIGHT" anim="BF Right" x="-2" y="1"/>
+
 	<anim name="singLEFTmiss" anim="BF Fail Left"/>
 	<anim name="singDOWNmiss" anim="BF Fail Down"/>
 	<anim name="singUPmiss" anim="BF Fail Up" y="-2"/>
 	<anim name="singRIGHTmiss" anim="BF Fail Right"/>
-	<anim name="firstDeath" anim="BF Death"/>
-	<anim name="deathLoop" anim="BF Loop Death" loop="true"/>
-	<anim name="deathConfirm" anim="BF Confirm"/>
 </character>

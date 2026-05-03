@@ -61,6 +61,15 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('allowCustomHud') != FlxG.save.data.AOM_engineHUD)
         saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
+
+    if (saveMap.get('usingSkins') != FlxG.save.data.AOM_usingSkin)
+        saveMap.set('usingSkins', FlxG.save.data.AOM_usingSkin);
+
+    if (saveMap.get('curSkinNote') != FlxG.save.data.AOM_curSkinNote)
+        saveMap.set('curSkinNote', FlxG.save.data.AOM_curSkinNote);
+
+    if (saveMap.get('curSkinNoteDisplay') != FlxG.save.data.AOM_curSkinNote_Display)
+        saveMap.set('curSkinNoteDisplay', FlxG.save.data.AOM_curSkinNote_Display);
     // [ END ]
 
     
@@ -125,6 +134,22 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_engineHUD ??= true;
     saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
+
+    FlxG.save.data.AOM_usingSkin ??= false;
+    saveMap.set('usingSkins', FlxG.save.data.AOM_usingSkin);
+
+    FlxG.save.data.AOM_curSkinNote ??= '';
+    saveMap.set('curSkinNote', FlxG.save.data.AOM_curSkinNote);
+
+    FlxG.save.data.AOM_curSkinNote_Display ??= 'NONE';
+    saveMap.set('curSkinNoteDisplay', FlxG.save.data.AOM_curSkinNote_Display);
+
+    FlxG.save.data.AOM_RGB ??= [
+        [0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],
+        [0xFF00FFFF, 0xFFFFFFFF, 0xFF1542B7],
+        [0xFF12FA05, 0xFFFFFFFF, 0xFF0A4447],
+        [0xFFF9393F, 0xFFFFFFFF, 0xFF651038]
+    ];
     // [ END ]
 
     // [ MODS/SONGS CONFIG ]

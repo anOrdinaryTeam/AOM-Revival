@@ -196,3 +196,13 @@ function Dudes(canHit:Bool) {
         }
     }
 }
+
+function onPlayerMiss(_) {
+    if (canEdd)
+        _.animCancelled = true;
+}
+
+function onGameOver(_) {
+    if (canEdd)
+        _.deathCharID = 'ChallengeEdd/edd_gameover';
+}

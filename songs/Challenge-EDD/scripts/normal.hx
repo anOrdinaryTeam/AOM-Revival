@@ -6,7 +6,7 @@ public var canTomIdle:Bool = false;
 var alreadyOpen:Bool = false;
 
 function create() {
-    importScript('songs/Challenge-EDD/scripts/who_i_choose/$curDiff.hx');
+    importScript('songs/Challenge-EDD/$curDiff.hx');
     for (n in ['matt', 'eddDoor'])
         graphicCache.cache(getModImage('ChallengeEdd/$n'));
 }
@@ -19,9 +19,8 @@ function stepHit() {
 }
 
 function beatHit() {
-    if (canMattIdle) {
+    if (canMattIdle)
         matt.playAnim('idle');
-    }
 }
 
 function Door() {
