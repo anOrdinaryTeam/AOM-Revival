@@ -1,0 +1,15 @@
+{
+	"color": "#9271FD",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"hard"
+	],
+	"icon": "Kapi/kapi",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Wocky",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 174
+}

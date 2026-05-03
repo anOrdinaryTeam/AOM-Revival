@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="10" sprite="Kapi/KAPI" icon="Kapi/kapi" color="#75709E" holdTime="6">
+<character x="10" camx="25" camy="20" sprite="Kapi/KAPI" icon="Kapi/kapi" color="#75709E" holdTime="6">
 	<anim name="idle" anim="Dad idle dance"/>
 	<anim name="singLEFT" anim="Dad Sing Note LEFT" x="-10" y="10"/>
 	<anim name="singDOWN" anim="Dad Sing Note DOWN" y="-30"/>

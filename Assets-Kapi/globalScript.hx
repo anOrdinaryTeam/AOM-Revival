@@ -1,2 +1,0 @@
-function postCreate()
-    loadHud('PsychEngine', '');
