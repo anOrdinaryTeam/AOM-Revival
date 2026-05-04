@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character y="350" sprite="Kapi/KAPIBOYFRIEND" flipX="true" camx="0" camy="-35" isPlayer="true" icon="bf" color="#30B0D1">
+<character y="350" sprite="Kapi/KAPIBOYFRIEND" flipX="true" camy="10" isPlayer="true" icon="bf" color="#30B0D1">
 	<anim name="idle" anim="BF idle dance0" x="-5"/>
 	<anim name="singLEFT" anim="BF NOTE LEFT0" x="5" y="-6"/>
 	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-10" y="-50"/>
