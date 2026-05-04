@@ -1,3 +1,5 @@
+importScript('data/scripts/Kapi/countdown.hx');
+
 function preStageLoad()
     useStageData = false;
 function postCreate()

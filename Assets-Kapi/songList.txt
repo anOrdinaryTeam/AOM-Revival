@@ -1,5 +1,5 @@
 Wocky:Kapi/kapi
 Beathoven:Kapi/kapi
 Hairball:Kapi/kapi-angry
-Nyaw:Kapi/kapi-angry
+Nyaw:Kapi/kapi
 Flatzone:Kapi/gw
