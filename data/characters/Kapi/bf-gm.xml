@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-character>
-<character y="350" sprite="Kapi/KAPIBOYFRIEND" flipX="true" camx="-360" camy="80" isPlayer="true" icon="bf" color="#30B0D1">
+<character y="350" sprite="Kapi/KAPIBOYFRIEND" flipX="true" camx="360" camy="-100" isPlayer="true" icon="bf" color="#30B0D1">
 	<anim name="firstDeath" anim="BF dies" x="100" y="493"/>
 	<anim name="deathLoop" anim="BF Dead Loop" x="102" y="488" loop="true"/>
-	<anim name="deathConfirm" anim="BF Dead confirm0" x="106" y="549" loop="true"/>
+	<anim name="deathConfirm" anim="BF Dead confirm0" x="106" y="549"/>
 </character>

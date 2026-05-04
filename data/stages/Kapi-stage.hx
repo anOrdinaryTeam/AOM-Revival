@@ -2,8 +2,11 @@ function preStageLoad()
     useStageData = false;
 function postCreate()
     loadHud('PsychEngine', '');
-function onGameOver(_) 
+function onGameOver(_) {
     _.deathCharID = 'Kapi/bf-gm';
+    _.lossSFX = 'Kapi/StoleYoBitch';
+    _.retrySFX = 'Kapi/NahNvm';
+}
 function onStrumCreation(_)
     _.sprite = 'modNotes/Kapi/kapi notes';
 function onNoteCreation(_) {
@@ -30,6 +33,7 @@ function create() {
     var back:FlxSprite = new FlxSprite(-715, -230);
     back.scrollFactor.set(0.9, 0.9);
     insert(0, back);
+
     if (curSong == 'wocky' || curSong == 'beathoven') {
         back.loadGraphic(getModImage('stage/old'));
     }
