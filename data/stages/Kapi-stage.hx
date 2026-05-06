@@ -37,40 +37,40 @@ function create() {
     insert(0, back);
 
     if (curSong == 'wocky' || curSong == 'beathoven') {
-        back.loadGraphic(getModImage('stage/old'));
+        back.loadGraphic(getModImage('stage/v1/old'));
     }
     if (curSong == 'hairball') {
-        back.loadGraphic(getModImage('stage/sunset'));
+        back.loadGraphic(getModImage('stage/v1/sunset'));
     }
     if (curSong == 'nyaw') {
-        back.loadGraphic(getModImage('stage/closed'));
+        back.loadGraphic(getModImage('stage/v1/closed'));
 
-        freaks = new FunkinSprite(-625, -200).loadSprite(getModImage('stage/bgFreaks'));
+        freaks = new FunkinSprite(-625, -200).loadSprite(getModImage('stage/v1/bgFreaks'));
         freaks.scrollFactor.set(0.9, 0.9);
         freaks.addAnim('idle', 'Bottom Level Boppers', 28, false);
         insert(1, freaks);
     }
     if (curSong == 'beathoven' || curSong == 'hairball') {
-        var spookys:FunkinSprite = new FunkinSprite(-25, 150).loadSprite(getModImage('stage/littleguys'));
+        var spookys:FunkinSprite = new FunkinSprite(-25, 150).loadSprite(getModImage('stage/v1/littleguys'));
         spookys.scrollFactor.set(0.9, 0.9);
         spookys.addAnim('idle', 'Bottom Level Boppers', 24, true);
         spookys.playAnim('idle');
         insert(1, spookys);
     }
     if (curSong == 'hairball' || curSong == 'nyaw') {
-        audience = new FunkinSprite(-625, -200).loadSprite(getModImage('stage/upperBop'));
+        audience = new FunkinSprite(-625, -200).loadSprite(getModImage('stage/v1/upperBop'));
         audience.scrollFactor.set(0.9, 0.9);
         audience.addAnim('idle', 'Upper Crowd Bob', 18, false);
         add(audience);
     }
     
-    var lights:FunkinSprite = new FunkinSprite(-715, -230).loadSprite(getModImage('stage/lights'));
+    var lights:FunkinSprite = new FunkinSprite(-715, -230).loadSprite(getModImage('stage/v1/lights'));
     lights.scrollFactor.set(0.9, 0.9);
     lights.addAnim('idle', 'lightblink', 1, true);
     lights.playAnim('idle');
     insert(3, lights);
 
-    var front:FlxSprite = new FlxSprite(-650, 600, getModImage('stage/front'));
+    var front:FlxSprite = new FlxSprite(-650, 600, getModImage('stage/v1/front'));
     front.scale.set(1.1, 1.1);
     insert(4, front);
     // stage shit

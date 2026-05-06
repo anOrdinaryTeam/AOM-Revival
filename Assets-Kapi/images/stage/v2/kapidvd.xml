@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="kapidvd.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="dvdmove0000" x="0" y="0" width="1570" height="638"/>
+	<SubTexture name="dvdmove0001" x="1570" y="0" width="1570" height="638"/>
+	<SubTexture name="dvdmove0002" x="3140" y="0" width="1570" height="638"/>
+	<SubTexture name="dvdmove0003" x="4710" y="0" width="1570" height="638"/>
+	<SubTexture name="dvdmove0004" x="6280" y="0" width="1570" height="638"/>
+	<SubTexture name="dvdmove0005" x="0" y="2552" width="1570" height="638"/>
+	<SubTexture name="dvdmove0006" x="0" y="1276" width="1570" height="638"/>
+	<SubTexture name="dvdmove0007" x="1570" y="1276" width="1570" height="638"/>
+	<SubTexture name="dvdmove0008" x="3140" y="1276" width="1570" height="638"/>
+	<SubTexture name="dvdmove0009" x="4710" y="1276" width="1570" height="638"/>
+	<SubTexture name="dvdmove0010" x="6280" y="1276" width="1570" height="638"/>
+	<SubTexture name="dvdmove0011" x="0" y="638" width="1570" height="638"/>
+	<SubTexture name="dvdmove0012" x="1570" y="638" width="1570" height="638"/>
+	<SubTexture name="dvdmove0013" x="3140" y="638" width="1570" height="638"/>
+	<SubTexture name="dvdmove0014" x="4710" y="638" width="1570" height="638"/>
+	<SubTexture name="dvdmove0015" x="6280" y="638" width="1570" height="638"/>
+	<SubTexture name="dvdmove0016" x="0" y="3190" width="1570" height="638"/>
+	<SubTexture name="dvdmove0017" x="0" y="1914" width="1570" height="638"/>
+	<SubTexture name="dvdmove0018" x="1570" y="1914" width="1570" height="638"/>
+	<SubTexture name="dvdmove0019" x="3140" y="1914" width="1570" height="638"/>
+	<SubTexture name="dvdmove0020" x="4710" y="1914" width="1570" height="638"/>
+	<SubTexture name="dvdmove0021" x="6280" y="1914" width="1570" height="638"/>
+</TextureAtlas>

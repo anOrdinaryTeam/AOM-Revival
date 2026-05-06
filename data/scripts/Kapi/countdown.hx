@@ -1,21 +1,20 @@
 var start:Bool = false;
 function onStartCountdown(_) {
-    if (!start) {
-        _.cancel();
-        camHUD.alpha = 0.001;
+    camHUD.alpha = 0;
+    if (!start) { _.cancel();
         playSound('Kapi/start');
         if (curSong == 'hairball') {
-            new FlxTimer().start(0.1, () -> {
+            new FlxTimer().start(.1, () -> {
                 dad.playAnim('intro');
                 playModSound('brokenpad');
             });
-            new FlxTimer().start(2, () -> {
-            start = true;
-            startCountdown();
+            new FlxTimer().start(1.8, () -> {
+                start = true;
+                startCountdown();
             });
         }
         else {
-            new FlxTimer().start(1, () -> {
+            new FlxTimer().start(.8, () -> {
                 start = true;
                 startCountdown();
             });

@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character y="200" sprite="Kapi/G&amp;W" icon="Kapi/gw" color="#3D3D41">
+<character y="200" camx="100" sprite="Kapi/G&amp;W" icon="Kapi/gw" color="#3D3D41">
 	<anim name="idle" anim="spooky dance idle"/>
 	<anim name="singLEFT" anim="note sing left" x="15" y="5"/>
 	<anim name="singDOWN" anim="spooky DOWN note" x="-115" y="5"/>

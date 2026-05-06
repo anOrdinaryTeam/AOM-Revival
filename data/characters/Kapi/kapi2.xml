@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Kapi/KAPI2" icon="Kapi/kapiv2" color="#747585" holdTime="6">
+	<anim name="idle" anim="Dad idle dance"/>
+	<anim name="singLEFT" anim="Dad Sing Note LEFT" x="-10" y="10"/>
+	<anim name="singDOWN" anim="Dad Sing Note DOWN" y="-30"/>
+	<anim name="singUP" anim="Dad Sing Note UP" x="-6" y="50"/>
+	<anim name="singRIGHT" anim="Dad Sing Note RIGHT" y="25"/>
+</character>
