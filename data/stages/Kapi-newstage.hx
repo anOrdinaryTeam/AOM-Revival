@@ -37,6 +37,12 @@ function create() {
         insert(1, back2);
     }
 
+    var lights:FunkinSprite = new FunkinSprite(-715, -230).loadSprite(getModImage('stage/v2/lights'));
+    lights.scrollFactor.set(.9, .9);
+    lights.addAnim('idle', 'idle', 1, true);
+    lights.playAnim('idle');
+    insert(2, lights);
+
     var front:FlxSprite = new FlxSprite(-650, -250, getModImage('stage/v2/stagefront'));
     insert(3, front);
 

@@ -4,4 +4,4 @@ Hairball:Kapi/kapi-angry
 Nyaw:Kapi/kapi
 Flatzone:Kapi/gw
 Meowgen:Kapi/kapiv2
-Scratch Post:kapiv2
+Scratch Post:Kapi/kapiv2
