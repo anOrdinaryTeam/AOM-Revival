@@ -2,8 +2,9 @@ using StringTools;
 
 var daColors:Array<Array<FlxColor>>;
 var usingRGB:Bool = getSaveData('curSkinNoteDisplay').contains('Custom');
+var usingSkins:Bool = getSaveData('usingSkins');
 
-function create() if (getSaveData('usingSkins') && usingRGB)
+function create() if (usingSkins && usingRGB)
     daColors = [for (i in FlxG.save.data.AOM_RGB) [for (j in i) j]];
 
 function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
@@ -21,12 +22,12 @@ function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
     });
 }
 
-function onNoteCreation(e) if (getSaveData('usingSkins') && e.strumLineID == 1) {
+function onNoteCreation(e) if (usingSkins && e.strumLineID == 1) {
     e.noteSprite = getSaveData('curSkinNote');
     if (usingRGB) createShader(e.note, e.strumID);
 }
 
-function onStrumCreation(e) if (getSaveData('usingSkins') && e.player == 1) {
+function onStrumCreation(e) if (usingSkins && e.player == 1) {
     e.sprite = getSaveData('curSkinNote');
     if (usingRGB) createShader(e.strum, e.strumID, true);
 }
