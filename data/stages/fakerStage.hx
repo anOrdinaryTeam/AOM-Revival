@@ -99,7 +99,7 @@ function stepHit() {
 	}
 }
 
-static function singleStatic() {
+function singleStatic() {
     daStatic.visible = true;
     daStatic.playAnim('static');
     daStatic.alpha = 1;

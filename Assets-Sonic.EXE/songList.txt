@@ -3,3 +3,4 @@ You Can't Run:exe-ycr
 Endless:majin
 Cycles:lordX
 Faker:faker
+Black Sun:faker-real

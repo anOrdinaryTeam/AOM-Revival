@@ -48,8 +48,8 @@ function loadModFolders():Array<String>
 function preStateSwitch() {
     importScript('data/scripts/ExternalFunctions');
 
-    // if (!changed)
-    //     Framerate.codenameBuildField.visible = false;
+    if (!changed)
+        Framerate.codenameBuildField.visible = false;
     if (!loadedSaveData)
         LoadSaveData();
 }
