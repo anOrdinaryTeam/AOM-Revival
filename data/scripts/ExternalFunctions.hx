@@ -36,13 +36,16 @@ public static function getModSongList(mod:String):Dynamic
 }
 
 // preventive
+// TODO: REMAKE THIS SYSTEM
 public function setManualPath(song:String) currentMod = switch(song) {
     case 'Screenplay' | 'Parasite' | 'A.G.O.T.I': 'Agoti';
     case 'Dream Of Peace' | 'Diagraphephobia' | 'Post Mortal' | 'Plaything' | 'System Failure': 'Eteled';
     case 'Wocky' | 'Beathoven' | 'Hairball' | 'Nyaw' | 'Flatzone' | 'Meowgen' | 'Scratch Post': 'Kapi';
     case 'Wife Forever' | 'Sky' | 'Manifest': 'Sky';
     case 'My Battle' | 'Last Chance' | 'Genocide': 'Tabi';
+    case 'Improbable Outset' | 'Madness' | 'HELLCLOWN' | 'EXPURGATION': 'Tricky';
     case 'Lo-Fight' | 'Overhead' | 'Ballistic' | 'Ballistic-OLD': 'Whitty';
     case 'Overwrite' | 'Inking Mistake' | 'Relighted': 'xEvent';
+    case 'Too Slow' | "You Can't Run" | 'Endless' | 'Cycles' | 'Faker' | 'Black Sun' | 'Chaos' | 'Milk': 'Sonic.EXE';
     default: 'RandomSongs';
 }
