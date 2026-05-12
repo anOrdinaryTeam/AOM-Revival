@@ -78,7 +78,7 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
 }
 
 function update() for (icons in [iconP1, iconP2]) {
-    icons.setGraphicSize(Std.int(lerp(150, icons.width, 0.50)));
+    icons.setGraphicSize(Std.int(CoolUtil.fpsLerp(150, icons.width, 0.50)));
     icons.updateHitbox();
 }
 
