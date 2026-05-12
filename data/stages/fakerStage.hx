@@ -16,7 +16,6 @@ function create() {
 	var eY:Float = -340;
 
     defaultCamZoom = 0.95;
-	useCamMov = true;
 
 	camOther.bgColor = 0;
 	FlxG.cameras.add(camOther, false);

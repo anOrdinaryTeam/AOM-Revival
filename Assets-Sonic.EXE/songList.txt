@@ -4,3 +4,4 @@ Endless:majin
 Cycles:lordX
 Faker:faker
 Black Sun:faker-real
+Chaos:fleetway-exe

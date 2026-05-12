@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="Wall.png">
+	<SubTexture name="normal0000" x="0" y="0" width="5680" height="408"/>
+	<SubTexture name="yellow0000" x="0" y="411" width="5680" height="408"/>
+</TextureAtlas>

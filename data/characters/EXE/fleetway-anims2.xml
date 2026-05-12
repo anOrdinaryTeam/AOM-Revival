@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/fleetway/anims2" icon="fleetway-exe" color="#FED000">
+	<anim name="a" anim="Fleetway Show You"/>
+	<anim name="b" anim="Fleetway Scream"/>
+	<anim name="c" anim="Fleetway Growl"/>
+	<anim name="d" anim="Fleetway Shut Up"/>
+	<anim name="e" anim="Fleetway Right Alt"/>
+</character>

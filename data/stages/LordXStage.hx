@@ -2,9 +2,7 @@ function LordXPath(str:String)
     return getModImage('lordXstage/$str');
 
 function create() {
-	useCamMov = true;
     defaultCamZoom = 0.8;
-	camGame.followLerp = 0.08;
 
     var sky:FlxSprite = new FlxSprite(-1900, -1006, LordXPath('sky'));
     sky.setGraphicSize(Std.int(sky.width * .5));
@@ -55,8 +53,10 @@ function create() {
 	addSprite(tree);
 }
 
-function postCreate()
+function postCreate() {
+	camGame.followLerp = 0.08;
 	boyfriend.scale.set(1.2, 1.2);
+}
 
 function stepHit() switch(curStep) {
 	case 320: defaultCamZoom = .9;

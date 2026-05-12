@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="Emerald Beam.png" width="4556" height="7541" spritePadding="3" borderPadding="1">
+	<SubTexture name="Emerald Beam instance 10000" x="1" y="1" width="1524" height="2513" frameX="-61" frameY="-68" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10001" x="1" y="5030" width="1519" height="2510" frameX="-63" frameY="-70" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10002" x="1523" y="5030" width="1516" height="2507" frameX="-65" frameY="-72" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10003" x="3042" y="5027" width="1512" height="2504" frameX="-67" frameY="-74" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10004" x="3043" y="2510" width="1510" height="2503" frameX="-67" frameY="-75" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10005" x="3045" y="1" width="1510" height="2503" frameX="-68" frameY="-75" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10006" x="1528" y="1" width="1514" height="2506" frameX="-66" frameY="-73" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10007" x="1524" y="2517" width="1516" height="2507" frameX="-65" frameY="-72" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10008" x="1" y="2517" width="1520" height="2510" frameX="-63" frameY="-70" frameWidth="1662" frameHeight="2680"/>
+	<SubTexture name="Emerald Beam instance 10009" x="1" y="1" width="1524" height="2513" frameX="-61" frameY="-68" frameWidth="1662" frameHeight="2680"/>
+</TextureAtlas>

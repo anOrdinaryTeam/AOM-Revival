@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="Emeralds.png" width="7966" height="1899" spritePadding="3" borderPadding="1">
+	<SubTexture name="TheEmeralds instance 10000" x="1" y="1" width="574" height="947" rotated="true" frameX="0" frameY="0" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10001" x="578" y="1" width="575" height="947" rotated="true" frameX="0" frameY="0" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10002" x="1156" y="1" width="574" height="947" rotated="true" frameX="0" frameY="-2" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10003" x="1733" y="1" width="570" height="947" rotated="true" frameX="0" frameY="-5" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10004" x="2306" y="1" width="572" height="947" rotated="true" frameX="0" frameY="-9" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10005" x="2881" y="1" width="567" height="947" rotated="true" frameX="0" frameY="-14" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10006" x="3451" y="1" width="566" height="947" rotated="true" frameX="0" frameY="-20" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10007" x="4020" y="1" width="564" height="947" rotated="true" frameX="0" frameY="-27" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10008" x="4587" y="1" width="566" height="947" rotated="true" frameX="0" frameY="-34" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10009" x="5156" y="1" width="561" height="947" rotated="true" frameX="0" frameY="-40" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10010" x="5720" y="1" width="560" height="947" rotated="true" frameX="0" frameY="-45" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10011" x="6283" y="1" width="558" height="947" rotated="true" frameX="0" frameY="-49" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10012" x="6844" y="1" width="561" height="947" rotated="true" frameX="0" frameY="-52" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10013" x="7408" y="1" width="557" height="947" rotated="true" frameX="0" frameY="-54" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10014" x="1" y="951" width="560" height="947" rotated="true" frameX="0" frameY="-54" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10015" x="564" y="951" width="560" height="947" rotated="true" frameX="0" frameY="-54" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10016" x="6844" y="1" width="561" height="947" rotated="true" frameX="0" frameY="-52" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10017" x="6283" y="1" width="558" height="947" rotated="true" frameX="0" frameY="-49" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10018" x="1127" y="951" width="559" height="947" rotated="true" frameX="0" frameY="-46" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10019" x="1689" y="951" width="560" height="947" rotated="true" frameX="0" frameY="-42" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10020" x="2252" y="951" width="561" height="947" rotated="true" frameX="0" frameY="-37" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10021" x="2816" y="951" width="566" height="947" rotated="true" frameX="0" frameY="-31" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10022" x="3385" y="951" width="565" height="947" rotated="true" frameX="0" frameY="-24" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10023" x="3953" y="951" width="567" height="947" rotated="true" frameX="0" frameY="-17" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10024" x="4523" y="951" width="571" height="947" rotated="true" frameX="0" frameY="-12" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10025" x="5097" y="951" width="572" height="947" rotated="true" frameX="0" frameY="-8" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10026" x="5672" y="951" width="569" height="947" rotated="true" frameX="0" frameY="-5" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10027" x="6244" y="951" width="571" height="947" rotated="true" frameX="0" frameY="-2" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10028" x="6818" y="951" width="571" height="947" rotated="true" frameX="0" frameY="-1" frameWidth="951" frameHeight="575"/>
+	<SubTexture name="TheEmeralds instance 10029" x="7392" y="951" width="570" height="947" rotated="true" frameX="0" frameY="0" frameWidth="951" frameHeight="575"/>
+</TextureAtlas>

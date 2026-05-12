@@ -2,9 +2,7 @@ public var camOther:FlxCamera = new FlxCamera();
 public function loadSpr(str:String) return getModImage(str);
 
 function create() {
-    useCamMov = true;
     defaultCamZoom = 1.0;
-    camGame.followLerp = 0.05;
 
     camOther.bgColor = 0;
     FlxG.cameras.add(camOther, false);
@@ -72,6 +70,9 @@ function create() {
     sticklol.scrollFactor.set(1.37, 1);
     addSprite(sticklol);
 }
+
+function postCreate()
+    camGame.followLerp = 0.05;
 
 function stepHit() switch(curStep){
     case 764:

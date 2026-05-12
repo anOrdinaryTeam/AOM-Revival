@@ -9,7 +9,6 @@ function loadSpr(str:String) return getModImage(str);
 function create() {
     final medaweba:String = 'SonicP2/';
     defaultCamZoom = 0.9;
-	useCamMov = true;
 
     gf.scrollFactor.set(1.37, 1);
     dad.scrollFactor.set(1.37, 1);

@@ -12,7 +12,6 @@ var tentas:FlxSprite;
 
 function create() {
     defaultCamZoom = 0.8;
-    useCamMov = true;
 
     var sky:FlxSprite = new FlxSprite(-414, -240.8, Fkaer('sky'));
     addF(sky);

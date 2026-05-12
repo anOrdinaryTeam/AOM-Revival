@@ -1,4 +1,5 @@
 function postCreate() {
+    useCamMov = true;
     loadHud('KadeEngine', '1.5.4');
     setRatingPrefix('EXE');
 }
