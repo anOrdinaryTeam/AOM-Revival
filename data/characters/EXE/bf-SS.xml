@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/SSBF_Assets" flipX="true" isPlayer="true" icon="bf-ss" color="#30B0D1">
+	<anim name="idle" anim="SSBF IDLE instance 1"/>
+	<anim name="singDOWN" anim="SSBF DOWN instance 10" x="3" y="-9"/>
+	<anim name="singRIGHT" anim="SSBF RIGHT instance 10" x="-1" y="-3"/>
+	<anim name="singLEFT" anim="SSBF LEFT instance 10" x="27" y="12"/>
+	<anim name="singUP" anim="SSBF UP instance 10" y="7"/>
+	<anim name="singUPmiss" anim="SSBF UPmiss instance 1" x="-3" y="5"/>
+	<anim name="singDOWNmiss" anim="SSBF DOWNmiss instance 1" x="18" y="14"/>
+	<anim name="singLEFTmiss" anim="SSBF LEFTmiss instance 1" x="18" y="-1"/>
+	<anim name="singRIGHTmiss" anim="SSBF RIGHTmiss instance 1" x="11" y="13"/>
+</character>

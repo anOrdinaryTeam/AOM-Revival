@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="-150" y="150" sprite="exe/Super_BoyFriend_Assets" flipX="true" isPlayer="true" icon="bf" color="#30B0D1">
+<character x="-155" y="145" sprite="exe/Super_BoyFriend_Assets" flipX="true" isPlayer="true" icon="bf" color="#30B0D1">
 	<anim name="idle" anim="BF Super idle dance instance 1"/>
 	<anim name="singDOWN" anim="BF NOTE DOWN instance 10" x="15" y="-84"/>
 	<anim name="singRIGHT" anim="BF NOTE RIGHT instance 10" x="-53" y="2"/>

@@ -1,3 +1,12 @@
+var go:Bool = false;
+introLength = 0;
+
+function onStartCountdown(e) if (!go) {
+    e.cancel();
+    go = true;
+    new FlxTimer().start(1, startCountdown);
+}
+
 function Fkaer(str:String)
     return getModImage('exeBg/$str');
 

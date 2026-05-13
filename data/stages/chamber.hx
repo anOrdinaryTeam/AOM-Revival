@@ -178,7 +178,7 @@ var floaty:Float = 0;
 function update() {
     floaty += 0.03;
 
-    if (/*dad.curCharacter == 'EXE/fleetway' && */!forceCamPos) {
+    if (!forceCamPos) {
         dad.y += Math.sin(floaty) * 1.3;
         opponentCam.y += Math.sin(floaty) * 1.3;
     }
