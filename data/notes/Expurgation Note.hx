@@ -8,10 +8,8 @@ function onNoteCreation(_) if (_.noteType == t) {
     if (_.strumLineID <= 0) _.note.wasGoodHit = true;
 }
 
-function onPostNoteCreation(_) if (_.noteType == t) {
-    _.note.offset.x -= 1;
-    _.note.offset.y = 55;
-}
+function onPostNoteCreation(_) if (_.noteType == t && !downscroll)
+    _.note.frameOffset.y = 55;
 
 function onPlayerHit(e) if (e.noteType == t) {
     e.animCancelled = true;

@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/fleetway/sprite" color="#FED000" icon="fleetway-exe">
+	<anim name="idle" anim="Fleetway Idle"/>
+	<anim name="singUP" anim="Fleetway Up" x="-35" y="4"/>
+	<anim name="singDOWN" anim="Fleetway Down" x="8" y="-98"/>
+	<anim name="singRIGHT" anim="Fleetway Right" x="-35" y="-134"/>
+	<anim name="singLEFT" anim="Fleetway Left" x="95" y="-118"/>
+	<anim name="fastanim" anim="Fleetway HowFast"/>
+</character>

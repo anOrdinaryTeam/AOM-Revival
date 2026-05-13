@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="ExeAnimatedBG_Assets.png" width="2260" height="5211" spritePadding="1" borderPadding="0">
+	<SubTexture name="ExeBGAnim0000" x="0" y="0" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0001" x="0" y="0" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0002" x="0" y="0" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0003" x="0" y="0" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0004" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0005" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0006" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0007" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0008" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0009" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0010" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0011" x="0" y="1303" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0012" x="0" y="2606" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0013" x="0" y="2606" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0014" x="0" y="2606" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0015" x="0" y="2606" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0016" x="0" y="3909" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0017" x="0" y="3909" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0018" x="0" y="3909" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="ExeBGAnim0019" x="0" y="3909" width="2260" height="1302" frameX="-194" frameY="-98" frameWidth="2560" frameHeight="1400"/>
+</TextureAtlas>

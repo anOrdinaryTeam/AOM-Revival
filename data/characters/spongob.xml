@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="SpingeBinge">
+	<anim name="idle" anim="si"/>
+</character>

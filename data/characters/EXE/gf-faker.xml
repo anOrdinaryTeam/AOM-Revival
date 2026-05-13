@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/faker-gf" icon="gf-faker">
+	<anim name="danceLeft" anim="gf dance" indices="30,0..14"/>
+	<anim name="danceRight" anim="gf dance" indices="15..29"/>
+	<anim name="sad" anim="gf miss" x="-9" y="-12"/>
+</character>

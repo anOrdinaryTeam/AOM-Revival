@@ -5,10 +5,8 @@ function onNoteCreation(_) if (_.noteType == 'markov note') {
 	if (_.strumLineID <= 0) _.note.wasGoodHit = true;
 }
 
-function onPostNoteCreation(_) if (_.noteType == 'markov note') {
-	_.note.offset.x -= 4000;
-	_.note.offset.y += 16;
-}
+function onPostNoteCreation(_) if (_.noteType == 'markov note' && !downscroll)
+	_.note.frameOffset.y += 45;
 
 function onPlayerHit(e) if (e.noteType == "markov note")
 	health = -1;

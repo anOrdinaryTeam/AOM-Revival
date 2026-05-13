@@ -6,7 +6,6 @@ function loadStageSpr(str:String)
 
 function create() {
     defaultCamZoom = 0.9;
-    useCamMov = true;
     camMoveAmt = 15;
     camFollow.setPosition(800, 500);
 

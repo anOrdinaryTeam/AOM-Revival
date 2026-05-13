@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="si.png">
+	<SubTexture name="si0000" x="0" y="0" width="421" height="326"/>
+</TextureAtlas>

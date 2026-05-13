@@ -134,7 +134,7 @@ function onRatingUpdate(_) {
 function update(_) {
     var lerpVal = Math.max(0, Math.min(1, 1 - (_ * 9)));
     for (icons in [iconP1, iconP2]) {
-        var mult:Float = FlxMath.lerp(1, icons.scale.x, lerpVal);
+        var mult:Float = CoolUtil.fpsLerp(1, icons.scale.x, lerpVal);
 	    icons.scale.set(mult, mult);
 	    icons.updateHitbox();
     }

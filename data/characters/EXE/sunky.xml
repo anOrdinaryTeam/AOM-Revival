@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/sunky" icon="sunky" color="#2445F8" applyStageMatrix="true">
+	<anim name="idle" anim="sunkyIDLE" loop="true"/>
+	<anim name="singUP" anim="sunkyUP"/>
+	<anim name="singDOWN" anim="sunkyDOWN"/>
+	<anim name="singRIGHT" anim="sunkyRIGHT"/>
+	<anim name="singLEFT" anim="sunkyLEFT"/>
+</character>

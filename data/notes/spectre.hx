@@ -26,16 +26,12 @@ function update(_) {
 
 function onNoteCreation(_) if (_.noteType == 'spectre') {
     _.note.alpha = 1;
-    _.noteSprite = 'modNotes/Corruptro/' + spr;
+    _.noteSprite = 'modNotes/Corruptro/$spr';
     _.note.forceIsOnScreen = true;
     _.note.earlyPressWindow = 0.5;
 	_.note.latePressWindow = 0.5;
     if (_.strumLineID <= 0) _.note.wasGoodHit = true;
 }
-
-function onPostNoteCreation(_) if (_.noteType == 'spectre')
-	if (downscroll) _.note.offset.y += 16;
-    else _.note.offset.y = 4000;
 
 function onPlayerHit(_) if (_.noteType == 'spectre') {
     _.animCancelled = true;

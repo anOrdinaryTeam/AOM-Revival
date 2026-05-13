@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="-155" y="145" sprite="exe/Super_BoyFriend_Assets" flipX="true" isPlayer="true" icon="bf" color="#30B0D1">
+	<anim name="idle" anim="BF Super idle dance instance 1"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN instance 10" x="15" y="-84"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT instance 10" x="-53" y="2"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT instance 10" x="14" y="3"/>
+	<anim name="singUP" anim="BF NOTE UP instance 10" x="-8" y="31"/>
+	<anim name="singUPmiss" anim="BF NOTE UP MISS instance 1" x="-7" y="27"/>
+	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS instance 1" x="19" y="-81"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS instance 1" x="12" y="3"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS instance 1" x="-53" y="2"/>
+</character>

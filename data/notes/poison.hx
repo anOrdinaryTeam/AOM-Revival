@@ -63,7 +63,8 @@ function onNoteCreation(_) if (_.noteType == 'poison') {
 }
 
 function onPostNoteCreation(_) if (_.noteType == 'poison')
-	if (downscroll) _.note.offset.y += 16;
+	if (downscroll) _.note.frameOffset.y += 20;
+    else _.note.frameOffset.y -= 50;
 
 function onPlayerHit(_) if (_.noteType == 'poison') {
     _.animCancelled = true;

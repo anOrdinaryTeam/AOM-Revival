@@ -1,6 +1,6 @@
+importScript('data/scripts/ExternalFunctions');
 import funkin.backend.utils.DiscordUtil;
 import funkin.editors.charter.Charter;
-importScript('data/scripts/ExternalFunctions');
 using StringTools;
 
 public var songName:String = PlayState.SONG.meta.name;
@@ -154,7 +154,7 @@ function follow(offsets:Array<Float>) {
     camFollow.y += offsets[1];
 }
 
-function postUpdate() if (useCamMov) switch(strumLines.members[curCameraTarget].characters[0].animation.curAnim.name) {
+function postUpdate() if (useCamMov && !forceCamPos) switch(strumLines.members[curCameraTarget].characters[0].animation.curAnim.name) {
     case "singLEFT", "singLEFT-alt": follow([-camMoveAmt, 0]);
     case "singDOWN", "singDOWN-alt": follow([0, camMoveAmt]);
     case "singUP", "singUP-alt": follow([0, -camMoveAmt]);
