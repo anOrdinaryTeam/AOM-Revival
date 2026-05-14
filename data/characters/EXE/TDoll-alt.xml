@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="exe/Tails_Doll_Alt" icon="TDoll" color="#EE9A00">
+	<anim name="idle" anim="TailsDoll IDLE instance" x="-21" y="189"/>
+	<anim name="singUP" anim="TailsDoll UP instance" y="297"/>
+	<anim name="singDOWN" anim="TailsDoll DOWN instance" x="-34" y="70"/>
+	<anim name="singRIGHT" anim="TailsDoll RIGHT instance" x="-164" y="187"/>
+	<anim name="singLEFT" anim="TailsDoll LEFT instance" x="80" y="156"/>
+</character>

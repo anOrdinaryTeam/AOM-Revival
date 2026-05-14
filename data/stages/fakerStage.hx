@@ -64,8 +64,12 @@ function postCreate() {
 
 	daStatic.loadSprite(getModImage('daSTAT'));
     daStatic.addAnim('static', 'staticFLASH', 24, false);
+    daStatic.addAnim('loop', 'staticFLASH', 24, true);
     daStatic.playAnim('static');
-	daStatic.animation.finishCallback = (_) -> daStatic.visible = false;
+	daStatic.animation.finishCallback = (_) -> {
+		if (_ == 'static')
+			daStatic.visible = false;
+	};
     daStatic.camera = camOther;
     daStatic.setGraphicSize(FlxG.width, FlxG.height);
     daStatic.screenCenter();
@@ -76,11 +80,17 @@ function postCreate() {
 var switchAnim:Int = 1;
 
 function stepHit() {
-	if (curStep > 858 && curStep < 884)
-		singleStatic();
+	if (curStep > 858 && curStep < 884) {
+		playModSound('staticBUZZ');
+		daStatic.visible = true;
+    	daStatic.playAnim('loop');
+	}
+
+	if (curStep == 885)
+		daStatic.visible = false;
 
 	switch(curStep) {
-		case 787, 795, 902, 800, 811, 819, 823, 827, 832, 835, 839, 847, 847:
+		case 787, 795, 800, 811, 819, 823, 827, 832, 835, 839, 847, 902:
 			singleStatic();
 		case 768:
 			FlxTween.tween(camHUD, {alpha: 0}, 1);

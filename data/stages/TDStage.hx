@@ -34,6 +34,8 @@ function create() {
 }
 
 function postCreate() {
+    precacheCharacter(0, 'EXE/TDoll-alt');
+
     var stat:FunkinSprite = new FunkinSprite().loadSprite(getModImage('daSTAT'));
     stat.addAnim('idle', 'staticFLASH', 24, true);
     stat.playAnim('idle');
@@ -77,33 +79,86 @@ function onStartCountdown(e) if (!go) {
 }
 
 var floaty:Float = 0;
-var flyX:Bool = false;
-var flyY:Bool = false;
+var typeFly:String = '';
 
 function update() {
     floaty += 0.03;
 
-    if (flyX) {
-        dad.x += Math.cos(floaty) * 1.3;
-        opponentCam.x += Math.cos(floaty) * 1.3;
-    }
-
-    if (flyY) {
+    if (typeFly == 'hovering' || typeFly == 'circling') {
         dad.y += Math.sin(floaty) * 1.3;
         opponentCam.y += Math.sin(floaty) * 1.3;
     }
+
+    if (typeFly == 'circling') {
+        dad.x += Math.cos(floaty) * 1.3;
+        opponentCam.x += Math.cos(floaty) * 1.3;
+    }
 }
+
+var ogX:Float = 0;
+var ogXcpu:Float = 0;
 
 function stepHit() switch(curStep) {
-    case 64: flyY = true;
-    case 128: flyX = true;
+    case 64: typeFly = 'hovering';
+    case 128, 319, 866: typeFly = 'circling';
+
+    case 256, 575: FlxTween.tween(dad, {x: -150, y: 330}, 0.2, {onComplete: () -> {
+		dad.setPosition(-150, 330);
+		typeFly = 'hovering';
+		floaty = 41.82;
+	}});
+
+    case 588:
+        bg.visible = 0.001;
+        boyfriend.alpha = 0.001;
+        changeCharacter(0, 'EXE/TDoll-alt');
+
+        ogX = player.members[0].x;
+        ogXcpu = cpu.members[0].x;
+
+        for (otherHide in [iconP1, iconP2, healthBar, healthBarBG])
+            otherHide.alpha = 0;
+
+        for (hide in hudItems)
+            hide.alpha = 0;
+
+        for (hideCpu in cpu)
+            hideCpu.x -= 1000;
+
+        for (i => note in player.members) {
+            note.alpha = 0;
+            note.x = 435 + 115 * i;
+        }
+    case 593: camGame.snapToTarget();
+    case 860:
+        bg.visible = 1;
+        boyfriend.alpha = 1;
+        changeCharacter(0, 'EXE/TDoll');
+
+        for (otherHide in [iconP1, iconP2, healthBar, healthBarBG])
+            otherHide.alpha = 1;
+
+        for (hide in hudItems)
+            hide.alpha = 1;
+
+        for (i => hiCpu in cpu.members)
+            hiCpu.x = ogXcpu + 115 * i;
+
+        for (i => note in player.members) {
+            note.alpha = 1;
+            note.x = ogX + 115 * i;
+        }
+    case 1120:
+        FlxTween.tween(dad, {x: -150, y: 330}, 0.2, {onComplete: () -> {
+            dad.setPosition(-150, 330);
+            typeFly = '';
+        }});
 }
 
-// cuz botplay
-// function onDadHit(e) if (e.character.curCharacter == 'EXE/TDoll' && (curStep > 588 && curStep < 860) && !e.note.isSustainNote) {
-//     for (p in player) alphaShit(p);
-//     for (p in player.notes) alphaShit(p);
-// }
+function onDadHit(e) if (!e.note.isSustainNote && curStep > 588 && curStep < 860) {
+    player.forEachAlive(note -> alphaShit(note));
+    player.notes.forEachAlive(note -> alphaShit(note));
+}   
 
 function alphaShit(obj:Dynamic) if (obj != null) {
     obj.alpha = 0.7;
