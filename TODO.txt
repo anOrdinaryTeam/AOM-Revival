@@ -1,0 +1,36 @@
+pongan aca lo q falte o por pulir en alguna cosa
+
+[ SONIC.EXE ]
+- Menu Sprites
+- Notas Invisibles en You Can't Run
+- Mecanica de Chaos
+
+[ ZARDY ]
+- Re-Implementar el modchart de Foolhardy
+- Pulir todo Bushwhack
+
+[ TRICKY ]
+- Notas Fuego/Instakill en todo el Mod
+- Optimizar Tricky Hell
+
+[ CHARTS CON STACKED NOTES ]
+- Overwrite
+- Phantasm
+
+[ ETELED ]
+- Terminar la Mecanica de Austin
+
+[ SKY ]
+- Menu Sprites
+
+[ RANDOM SONGS ]
+- Agregar los Textos de Tricky a Accelerant
+- Agregar los subtitlos a Heathers
+- Pulir Prey
+
+[ GENERAL ]
+- Gameovers a todos los Mods (tengo weba de mencionarlos)
+- Adaptar el Sistema de Skins a todos los Mods
+- Detalles al Menu de Skins
+- Precargar videos antes de cargar la cancion (Silly Billy, Looping The Rooms)
+- Ordenar todos los Datos de Characters a carpetas + Iconos
