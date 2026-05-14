@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="TdollStart.png" width="7706" height="2171" spritePadding="3" borderPadding="1">
+	<SubTexture name="Start0000" x="1288" y="1" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0001" x="2572" y="1" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0002" x="3856" y="1" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0003" x="5140" y="1" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0004" x="6424" y="1" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0005" x="1" y="724" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0006" x="1285" y="725" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0007" x="2569" y="725" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0008" x="3853" y="725" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0009" x="5137" y="725" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0010" x="6421" y="725" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0011" x="1" y="1448" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0012" x="1285" y="1449" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0013" x="2569" y="1449" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0014" x="3853" y="1449" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0015" x="5" y="1" width="1280" height="720" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0016" x="5137" y="1449" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0017" x="6421" y="1449" width="1281" height="721" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0018" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0019" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0020" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0021" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0022" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0023" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0024" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0025" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0026" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0027" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0028" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0029" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+	<SubTexture name="Start0030" x="1" y="1" width="1" height="1" frameX="-1" frameY="-1" frameWidth="1282" frameHeight="722"/>
+</TextureAtlas>

@@ -135,6 +135,10 @@ public function getObjectOrder(item:FlxBasic) if (item != null)
 
 function create() {
     RefreshSaveDatas();
+
+    if (Assets.exists(Paths.script('Assets-$currentMod/globalScript')))
+        importScript('Assets-$currentMod/globalScript');
+
     updateDiscordPresence = () -> {
         var image:String = currentMod == 'RandomSongs' || currentMod == 'Sonic.EXE' ? curSongID : currentMod.toLowerCase();
 
@@ -144,9 +148,6 @@ function create() {
             largeImageKey: image
         });
     }
-
-    if (Assets.exists(Paths.script('Assets-$currentMod/globalScript')))
-        importScript('Assets-$currentMod/globalScript');
 }
 
 function follow(offsets:Array<Float>) {

@@ -1,5 +1,4 @@
 var go:Bool = false;
-introLength = 0;
 
 function onStartCountdown(e) if (!go) {
     e.cancel();
