@@ -1,9 +1,10 @@
-// importScript('data/scripts/TrickyLines');
-
-static function modPath(str:String)
+function modPath(str:String)
     return getModImage(str);
 
 var hank:FunkinSprite;
+var TrickyPoses:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
+var arr:Array<String> = ["Left", "Down", "Up", "Right"];
+var timerForIdle:FlxTimer = new FlxTimer();
 
 function create() {
     defaultCamZoom = 0.35;
@@ -27,49 +28,44 @@ function create() {
     hank.setGraphicSize(Std.int(hank.width * 1.55));
     hank.antialiasing = Options.antialiasing;
     addSprite(hank);
+
+    for (anim in arr)
+        graphicCache.cache(Paths.image('characters/tricky/Hellclown/$anim'));
 }
-
-function beatHit()
-    hank.playAnim('dance');
-
-var TrickyPoses:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
-var arr:Array<String> = ["Left", "Down", "Up", "Right"];
 
 function postCreate() {
+    var offs:Array<Array<Float>> = [
+        [dad.x - 1300, dad.y - 1300],
+        [dad.x - 1300, dad.y - 900],
+        [dad.x - 1500, dad.y - 800],
+        [dad.x - 1300, dad.y - 1000]
+    ];
     insert(members.indexOf(dad) + 1, TrickyPoses);
 
-    for (i in 0...arr.length) {
-        var tricky:FunkinSprite = new FunkinSprite();
-        tricky.loadSprite(Paths.image('characters/tricky/Hellclown/' + arr[i]));
-        tricky.addAnim('anim', 'Proper ' + arr[i], 24, false);
+    for (i => anim in arr) {
+        var tricky:FunkinSprite = new FunkinSprite(offs[i][0], offs[i][1], Paths.image('characters/tricky/Hellclown/$anim'));
+        tricky.addAnim('anim', 'Proper $anim', 24, false);
         tricky.antialiasing = Options.antialiasing;
-        tricky.alpha = 0.001;
         TrickyPoses.add(tricky);
-
-        switch(i) {
-            case 0: tricky.setPosition(dad.x - 1300, dad.y - 1300);
-            case 1: tricky.setPosition(dad.x - 1300, dad.y - 900);
-            case 2: tricky.setPosition(dad.x - 1500, dad.y - 800);
-            case 3: tricky.setPosition(dad.x - 1300, dad.y - 1000);
-        }
+        tricky.alpha = 0.001;
     }
 }
-
-var timerForIdle:FlxTimer = new FlxTimer();
 
 function onDadHit(_) {
     dad.alpha = 0;
     camGame.shake(0.02,0.2);
     timerForIdle?.cancel();
 
-    for (i in 0...TrickyPoses.members.length) TrickyPoses.members[i].alpha = 0;
+    TrickyPoses.forEachAlive(tricky -> tricky.alpha = 0.001);
     TrickyPoses.members[_.direction].alpha = 1;
-    TrickyPoses.members[_.direction].playAnim('anim', _.note.isSustainNote);
+    TrickyPoses.members[_.direction].playAnim('anim', true);
 
     timerForIdle.start(0.5, () -> {
-        for (i in 0...TrickyPoses.members.length)
-            TrickyPoses.members[i].alpha = 0;
+        TrickyPoses.forEachAlive(tricky -> tricky.alpha = 0.001);
         dad.alpha = 1;
         dad.dance();
     });
 }
+
+function beatHit()
+    hank.playAnim('dance');
