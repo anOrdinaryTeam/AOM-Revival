@@ -246,10 +246,12 @@ function shakeWindow() if (getSaveData('Fatality_MoveWindow')) new FlxTimer().st
     window.move(window.x + FlxG.random.int(-10, 10), window.y + FlxG.random.int(-8, 8));
 }, 50);
 
+#if !ARKOSE_PORT
 function onSongEnd() {
-    windowShit(1280, 720);
+    windowShit(ORIGINAL_RES[0], ORIGINAL_RES[1]);
     window.resizable = true;
 }
+#end
 
 function onCountdown(e) if (e.swagCounter != 4) {
     var a:String = ['intro3', 'intro2', 'intro1', 'introGo'][e.swagCounter];

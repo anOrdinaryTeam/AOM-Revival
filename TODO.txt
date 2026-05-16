@@ -31,5 +31,4 @@ pongan aca lo q falte o por pulir en alguna cosa
 - Gameovers a todos los Mods (tengo weba de mencionarlos)
 - Adaptar el Sistema de Skins a todos los Mods
 - Detalles al Menu de Skins
-- Precargar videos antes de cargar la cancion (Silly Billy, Looping The Rooms)
 - Ordenar todos los Datos de Characters a carpetas + Iconos

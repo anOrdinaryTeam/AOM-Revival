@@ -19,6 +19,11 @@ public static var lastSongSelected:Int = 0;
 public static var lastDiffSelected:Int = 0;
 
 public static var CREATE_FILE_FEATURE:Bool = true;
+#if !ARKOSE_PORT
+// Meant to be use in Fatality + saving the Res for anybody
+// who uses a custom res on Cne (like me with a 768p monitor)
+public static var ORIGINAL_RES:Array<Float>;
+#end
 
 using StringTools;
 

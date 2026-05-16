@@ -42,23 +42,21 @@ function onSongStart(){
 }
 
 function onFocus() if (paused) {
-    if (video != null) video.pause();
+    video?.pause();
 }
 else {
-    if (video != null) video.resume();
+    video?.resume();
 }
 
 function onGamePause() {
     paused = true;
     persistentUpdate = false;
     persistentDraw = true;
-    if (video != null) video.pause();
+    video?.pause();
 }
 
-function update() {
-    if (!paused) {
-        if (video != null) video.resume();
-    }
+function update() if (!paused) {
+    video?.resume();
 }
 
 function onPlayerHit(e) e.healthGain = 0.025;
