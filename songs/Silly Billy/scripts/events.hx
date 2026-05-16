@@ -170,7 +170,7 @@ function MyWayEvents(i:String) switch(i) {
         numText++;
     case 'break mirror':
         mirror.loadGraphic(BillyPath('broken_mirror'));
-        playModSound('SillyBilly/mirror_break');
+        playModSound('mirror_break');
 
         FlxTween.num(255, 0, 1.75, {ease: FlxEase.quadOut, onUpdate: function(twn){ mirror.setColorTransform(1,1,1,1,twn.value,twn.value,twn.value,0);}});
         camGame.shake(0.01, 0.25);
