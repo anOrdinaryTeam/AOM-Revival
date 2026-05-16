@@ -1,9 +1,7 @@
-importScript('data/scripts/Kapi/countdown.hx');
-
 function preStageLoad()
     useStageData = false;
 function postCreate()
-    loadHud('PsychEngine', '');
+    loadHud('KadeEngine', '');
 function onGameOver(_) {
     _.deathCharID = 'Kapi/bf-gm';
     _.lossSFX = 'Kapi/StoleYoBitch';
