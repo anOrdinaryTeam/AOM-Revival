@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tinkyicfy.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="coming0000" x="151" y="1610" width="151" height="246" frameX="-529" frameY="-160" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0001" x="0" y="1610" width="151" height="247" frameX="-528" frameY="-160" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0002" x="1671" y="1066" width="153" height="250" frameX="-526" frameY="-159" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0003" x="1515" y="1066" width="156" height="255" frameX="-522" frameY="-157" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0004" x="1355" y="1066" width="160" height="262" frameX="-517" frameY="-155" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0005" x="1190" y="1066" width="165" height="271" frameX="-511" frameY="-152" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0006" x="1018" y="1066" width="172" height="283" frameX="-502" frameY="-149" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0007" x="838" y="1066" width="180" height="298" frameX="-492" frameY="-144" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0008" x="648" y="1066" width="190" height="315" frameX="-479" frameY="-139" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0009" x="446" y="1066" width="202" height="336" frameX="-464" frameY="-133" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0010" x="229" y="1066" width="217" height="362" frameX="-445" frameY="-125" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0011" x="1264" y="544" width="234" height="394" frameX="-423" frameY="-115" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0012" x="1007" y="544" width="257" height="433" frameX="-395" frameY="-103" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0013" x="724" y="544" width="283" height="453" frameX="-361" frameY="-89" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0014" x="409" y="544" width="315" height="471" frameX="-320" frameY="-71" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0015" x="1548" y="544" width="357" height="493" frameX="-267" frameY="-49" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0016" x="0" y="544" width="409" height="522" frameX="-200" frameY="-20" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0017" x="1071" y="0" width="477" height="544" frameX="-112" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0018" x="0" y="0" width="564" height="544" frameX="2" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0019" x="564" y="0" width="507" height="544" frameX="2" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0020" x="1548" y="0" width="390" height="544" frameX="2" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0021" x="0" y="1066" width="229" height="544" frameX="2" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="coming0022" x="1905" y="544" width="4" height="4" frameX="0" frameY="0" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="idle0000" x="1905" y="544" width="4" height="4" frameX="0" frameY="0" frameWidth="960" frameHeight="540"/>
+</TextureAtlas>

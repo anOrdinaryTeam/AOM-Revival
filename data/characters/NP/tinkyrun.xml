@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="NP/tinkyrun" icon="NP/tinky" color="#6200b7" x="820" y="40" camx="-700" camy="-270" scale="1.2">
+	<anim name="idle" anim="idle" x="-4.166666666666667" y="0" fps="38" loop="true"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singRIGHT" anim="right"/>
+</character>

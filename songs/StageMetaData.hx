@@ -27,35 +27,35 @@ function create() {
 
     if (raw.startCamPos != null) {
         var offs:Array<Float> = raw.startCamPos.copy();
-        camFollow.setPosition(offs[0], offs[1]);
+        camFollow?.setPosition(offs[0], offs[1]);
     }
 
     // player shit
     if (raw.playerPos != null) {
         var offs:Array<Float> = raw.playerPos.copy();
-        boyfriend.setPosition(offs[0], offs[1]);
+        boyfriend?.setPosition(offs[0], offs[1]);
     }
 
     if (raw.playerCamPos != null) {
         var offs:Array<Float> = raw.playerCamPos.copy();
-        playerCam.set(offs[0], offs[1]);
+        playerCam?.set(offs[0], offs[1]);
     }
 
     // opponent shit
     if (raw.opponentPos != null) {
         var offs:Array<Float> = raw.opponentPos.copy();
-        dad.setPosition(offs[0], offs[1]);
+        dad?.setPosition(offs[0], offs[1]);
     }
 
     if (raw.opponentCamPos != null) {
         var offs:Array<Float> = raw.opponentCamPos.copy();
-        opponentCam.set(offs[0], offs[1]);
+        opponentCam?.set(offs[0], offs[1]);
     }
 
     // gf shit
     if (raw.gfPos != null) {
         var offs:Array<Float> = raw.gfPos.copy();
-        gf.setPosition(offs[0], offs[1]);
+        gf?.setPosition(offs[0], offs[1]);
     }
 }
 
@@ -65,13 +65,13 @@ function postCreate() if (CREATE_FILE_FEATURE) {
         try {
             var content:Dynamic = {
                 "startCamPos": [600, 600],
-                "gfPos": [gf.x, gf.y],
+                "gfPos": [gf?.x, gf?.y],
 
-                "playerPos": [boyfriend.x, boyfriend.y],
-                "playerCamPos": [boyfriend.getMidpoint().x, boyfriend.getMidpoint().y],
+                "playerPos": [boyfriend?.x, boyfriend?.y],
+                "playerCamPos": [boyfriend?.getMidpoint().x, boyfriend?.getMidpoint().y],
 
-                "opponentPos": [dad.x, dad.y],
-                "opponentCamPos": [dad.getMidpoint().x, dad.getMidpoint().y],
+                "opponentPos": [dad?.x, dad?.y],
+                "opponentCamPos": [dad?.getMidpoint().x, dad?.getMidpoint().y],
             };
             var _file:String = JsonPrinter.print(content, null, '\t');
 

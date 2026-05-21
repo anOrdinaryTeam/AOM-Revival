@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="guardianfinal.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idle0000" x="0" y="0" width="290" height="504" frameX="-425" frameY="-38" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="idle0001" x="0" y="0" width="290" height="504" frameX="-425" frameY="-38" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0000" x="290" y="0" width="270" height="505" frameX="-433" frameY="-37" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0001" x="290" y="0" width="270" height="505" frameX="-433" frameY="-37" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0002" x="1593" y="1019" width="242" height="504" frameX="-432" frameY="-38" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0003" x="1593" y="1019" width="242" height="504" frameX="-432" frameY="-38" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0004" x="1847" y="1020" width="233" height="502" frameX="-436" frameY="-40" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0005" x="1847" y="1020" width="233" height="502" frameX="-436" frameY="-40" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0006" x="1239" y="1523" width="247" height="511" frameX="-457" frameY="-31" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0007" x="992" y="1523" width="247" height="512" frameX="-462" frameY="-30" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0008" x="745" y="1523" width="247" height="512" frameX="-462" frameY="-30" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0009" x="497" y="1523" width="248" height="513" frameX="-472" frameY="-29" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0010" x="249" y="1523" width="248" height="513" frameX="-472" frameY="-29" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0011" x="0" y="1523" width="249" height="514" frameX="-482" frameY="-28" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0012" x="1847" y="508" width="251" height="512" frameX="-492" frameY="-30" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0013" x="1847" y="508" width="251" height="512" frameX="-492" frameY="-30" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0014" x="257" y="1017" width="255" height="506" frameX="-512" frameY="-36" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0015" x="257" y="1017" width="255" height="506" frameX="-512" frameY="-36" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0016" x="1024" y="1017" width="257" height="501" frameX="-533" frameY="-41" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0017" x="768" y="1017" width="256" height="503" frameX="-541" frameY="-39" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0018" x="512" y="1017" width="256" height="503" frameX="-541" frameY="-39" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0019" x="1847" y="0" width="254" height="508" frameX="-558" frameY="-34" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0020" x="1593" y="511" width="254" height="508" frameX="-558" frameY="-34" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0021" x="0" y="504" width="271" height="513" frameX="-574" frameY="-29" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0022" x="560" y="0" width="259" height="511" frameX="-587" frameY="-31" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0023" x="290" y="505" width="259" height="511" frameX="-587" frameY="-31" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0024" x="0" y="1017" width="257" height="506" frameX="-611" frameY="-36" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0025" x="0" y="1017" width="257" height="506" frameX="-611" frameY="-36" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0026" x="1332" y="0" width="261" height="501" frameX="-635" frameY="-41" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0027" x="560" y="511" width="259" height="503" frameX="-647" frameY="-39" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0028" x="1332" y="501" width="259" height="503" frameX="-647" frameY="-39" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0029" x="819" y="508" width="258" height="508" frameX="-670" frameY="-34" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0030" x="819" y="0" width="258" height="508" frameX="-670" frameY="-34" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0031" x="1077" y="0" width="255" height="513" frameX="-694" frameY="-29" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0032" x="1593" y="0" width="254" height="511" frameX="-708" frameY="-31" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0033" x="1593" y="0" width="254" height="511" frameX="-708" frameY="-31" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0034" x="1486" y="1523" width="224" height="507" frameX="-738" frameY="-35" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0035" x="1486" y="1523" width="224" height="507" frameX="-738" frameY="-35" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0036" x="1077" y="513" width="195" height="502" frameX="-767" frameY="-40" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0037" x="1891" y="1523" width="181" height="504" frameX="-781" frameY="-38" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0038" x="1710" y="1523" width="181" height="504" frameX="-781" frameY="-38" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0039" x="2101" y="0" width="152" height="509" frameX="-810" frameY="-33" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0040" x="2101" y="509" width="152" height="509" frameX="-810" frameY="-33" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="walk0041" x="2101" y="1018" width="124" height="513" frameX="-838" frameY="-29" frameWidth="960" frameHeight="540"/>
+</TextureAtlas>

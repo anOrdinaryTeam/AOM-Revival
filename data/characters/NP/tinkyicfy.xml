@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="NP/tinkyicfy" icon="NP/tinky" color="#6200b7" x="380" y="-230" camx="-90" camy="-70" scale="2.1">
+	<anim name="idle" anim="idle" x="-2.380952380952381" y="0" fps="28"/>
+	<anim name="coming" anim="coming" x="1.4285714285714286" y="0" fps="28"/>
+</character>

@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="NP/tinkyturn" icon="NP/guardian" color="#f3f3f3" x="-1040" y="-500" flipX="true" isPlayer="true" camx="560" camy="-70" scale="1.45">
+	<anim name="idle" anim="idle" x="-3.4482758620689657" y="0" fps="23" loop="true"/>
+	<anim name="turn" anim="turn" fps="20"/>
+</character>

@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="NP/guardian" icon="NP/guardian" color="#f3f3f3" x="-930" y="-220" flipX="true" isPlayer="true" camx="350" camy="-70" scale="2.85">
+	<anim name="idle" anim="idle" x="-1.7543859649122806" y="0" fps="28"/>
+	<anim name="singDOWN" anim="down" fps="28"/>
+	<anim name="singRIGHT" anim="right" fps="28"/>
+	<anim name="singLEFT" anim="left" x="17.19298245614035" y="0" fps="28"/>
+	<anim name="singUP" anim="up" fps="28"/>
+	<anim name="run" anim="run" x="0.7017543859649122" y="0" fps="28"/>
+</character>

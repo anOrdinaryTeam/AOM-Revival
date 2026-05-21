@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="NP/guardianbd" icon="NP/guardianglow" color="#f3f3f3" x="-690" y="-220" flipX="true" isPlayer="true" camx="590" camy="-70" scale="2.85">
+	<anim name="idle" anim="idle" x="-1.7543859649122806" y="0"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singRIGHT" anim="right"/>
+</character>

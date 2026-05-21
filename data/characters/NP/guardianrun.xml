@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="NP/guardianrun" icon="NP/guardianglow" color="#f3f3f3" x="-1010" y="-220" flipX="true" isPlayer="true" camx="280" camy="-70" scale="2.85">
+	<anim name="idle" anim="idle" x="-1.7543859649122806" y="0" fps="38" loop="true"/>
+</character>

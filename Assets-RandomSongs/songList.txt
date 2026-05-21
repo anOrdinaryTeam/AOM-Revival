@@ -6,6 +6,7 @@ Defeat:black
 Epiphany:bigmonika
 Fatality:fatal-sonic
 Megalo Strike Back:MegaloStrikeB/chara
+Nocturnal Protocol:NP/tinky
 Phantasm:fleetway
 Prey:furnace
 Silly Billy:SillyBilly/billy

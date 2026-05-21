@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="guardianbtinky.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="anim0000" x="0" y="0" width="528" height="544" frameX="-138" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0001" x="528" y="0" width="512" height="544" frameX="-165" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0002" x="999" y="544" width="484" height="544" frameX="-213" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0003" x="1544" y="544" width="469" height="544" frameX="-239" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0004" x="1544" y="0" width="478" height="544" frameX="-224" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0005" x="504" y="544" width="495" height="544" frameX="-195" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0006" x="1040" y="0" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0007" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0008" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0009" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0010" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0011" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0012" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0013" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0014" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0015" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0016" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0017" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0018" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0019" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0020" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0021" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0022" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0023" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0024" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0025" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0026" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0027" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0028" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0029" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0030" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0031" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0032" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0033" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0034" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0035" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0036" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0037" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0038" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0039" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0040" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0041" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0042" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0043" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0044" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="anim0045" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+	<SubTexture name="idle0000" x="0" y="544" width="504" height="544" frameX="-179" frameY="2" frameWidth="960" frameHeight="540"/>
+</TextureAtlas>

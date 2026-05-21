@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="NP/tinkyrun" icon="NP/guardian" color="#f3f3f3" x="-420" y="-30" flipX="true" camx="280" camy="-70" scale="1.55">
+	<anim name="idle" anim="idle" x="-3.225806451612903" y="0" fps="38" loop="true"/>
+	<anim name="singLEFT" anim="left"/>
+	<anim name="singUP" anim="up"/>
+	<anim name="singDOWN" anim="down"/>
+	<anim name="singRIGHT" anim="right"/>
+</character>
