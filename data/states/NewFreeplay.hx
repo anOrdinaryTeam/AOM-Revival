@@ -1,6 +1,8 @@
 import funkin.backend.chart.Chart;
 importScript('data/scripts/PreSongLoader');
 
+public var LOAD_SONG:Bool = true;
+
 var songsList:Array<SongData> = [];
 var grpSongs:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
 var grpIcons:FlxTypedGroup<HealthIcon> = new FlxTypedGroup();
@@ -101,7 +103,7 @@ function updateDifficulties(i:Int = 0) {
     difficultyTxt.text = '[${curSongDiffs[curDiff].toUpperCase()}]';
 }
 
-function enterSong() {
+public function enterSong() {
     var songName:String = songsList[curSelected].name;
     var diff:String = songsList[curSelected].difficulties[curDiff];
     allowInput = false;
@@ -109,11 +111,13 @@ function enterSong() {
     Options.freeplayLastSong = songName;
 	Options.freeplayLastDifficulty = diff;
 
-    trace('Selected Song: $songName - ${diff.toUpperCase()}');
     stateScripts.call('preEnterSong', [songName]);
 
-	PlayState.loadSong(songName, diff);
-	FlxG.switchState(new PlayState());
+    if (LOAD_SONG) {
+        trace('Selected Song: $songName - ${diff.toUpperCase()}');
+        PlayState.loadSong(songName, diff);
+        FlxG.switchState(new PlayState());
+    }
 }
 
 function update(dt) {
@@ -140,7 +144,6 @@ class SongData
 {
     public var name:String = '';
     public var difficulties:Array<String> = [];
-    // public var color:String = 'fffff';
 
     public function new(name:String, difficulties:Array<String>) {
         this.name = name;
