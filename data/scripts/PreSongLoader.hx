@@ -53,7 +53,7 @@ function preEnterSong(song) switch(song) {
         }
 }
 
-public function allowSongLoading() {
+function allowSongLoading() {
     trace('Preloaded. Moving to Song');
     LOAD_SONG = true;
     preloaded = true;
@@ -62,7 +62,7 @@ public function allowSongLoading() {
     removeLoadingScreen();
 }
 
-public function createLoadingScreen(totalVids:Int) {
+function createLoadingScreen(totalVids:Int) {
     trace('Preloading Videos..');
     bgLoading.alpha = 0.5;
     add(bgLoading);
