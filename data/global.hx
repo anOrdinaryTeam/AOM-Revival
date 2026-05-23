@@ -40,7 +40,7 @@ function new() {
     }
 }
 
-function loadModFolders():Array<String>
+public static function loadModFolders():Array<String>
 {
     final folders:Array<String> = Paths.getFolderDirectories('');
     final result:Array<String> = [];

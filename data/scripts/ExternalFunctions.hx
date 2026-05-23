@@ -36,17 +36,24 @@ public static function getModSongList(mod:String):Dynamic
 }
 
 // preventive
-// TODO: REMAKE THIS SYSTEM
-public function setManualPath(song:String) currentMod = switch(song) {
-    case 'Screenplay' | 'Parasite' | 'A.G.O.T.I': 'Agoti';
-    case 'Dream Of Peace' | 'Diagraphephobia' | 'Post Mortal' | 'Plaything' | 'System Failure': 'Eteled';
-    case 'Headache' | 'Nerves' | 'Release' | 'Fading': 'Garcello';
-    case 'Wocky' | 'Beathoven' | 'Hairball' | 'Nyaw' | 'Flatzone' | 'Meowgen' | 'Scratch Post': 'Kapi';
-    case 'Wife Forever' | 'Sky' | 'Manifest': 'Sky';
-    case 'My Battle' | 'Last Chance' | 'Genocide': 'Tabi';
-    case 'Improbable Outset' | 'Madness' | 'HELLCLOWN' | 'EXPURGATION': 'Tricky';
-    case 'Lo-Fight' | 'Overhead' | 'Ballistic' | 'Ballistic-OLD': 'Whitty';
-    case 'Overwrite' | 'Inking Mistake' | 'Relighted': 'xEvent';
-    case 'Too Slow' | "You Can't Run" | 'Endless' | 'Cycles' | 'Faker' | 'Black Sun' | 'Chaos' | 'Milk': 'Sonic.EXE';
-    default: 'RandomSongs';
+public function findModSong(song:String) {
+    var getModsList:Array<String> = loadModFolders();
+    var modResult:String = '';
+
+    for (mod in getModsList) {
+        var songList:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + '$mod/songList.txt'));
+
+        for (i in 0...songList.length) {
+            var name:String = songList[i].split(':')[0];
+
+            if (name == song) {
+                modResult = mod;
+                trace('Found Mod From Song: $mod');
+                break;
+            }
+        }
+    }
+
+    if (modResult != '')
+        currentMod = modResult;
 }

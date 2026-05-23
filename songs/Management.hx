@@ -13,7 +13,7 @@ public var usePsychSplashes:Bool = false;
 
 public function getModImage(str:String) {
     if (currentMod == 'NONE')
-        setManualPath(songName);
+        findModSong(songName);
 
     return Paths.getPath('$pathSuffix' + '$currentMod/images/$str.png');
 }

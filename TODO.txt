@@ -1,7 +1,6 @@
 pongan aca lo q falte o por pulir en alguna cosa
 
 [ SONIC.EXE ]
-- Menu Sprites
 - Notas Invisibles en You Can't Run
 - Mecanica de Chaos
 
@@ -18,9 +17,6 @@ pongan aca lo q falte o por pulir en alguna cosa
 
 [ ETELED ]
 - Terminar la Mecanica de Austin
-
-[ SKY ]
-- Menu Sprites
 
 [ RANDOM SONGS ]
 - Agregar los Textos de Tricky a Accelerant
