@@ -1,3 +1,4 @@
+import funkin.backend.system.macros.GitCommitMacro;
 import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.ShaderResizeFix;
 import funkin.backend.utils.DiscordUtil;
@@ -32,8 +33,9 @@ function new() {
     currentModsList = loadModFolders();
     trace('Loaded Mod List: $currentModsList ');
 
-    if (!Assets.exists(Paths.image('DO_NOT_DELETE', null, false, 'png'))) {
-        NativeAPI.showMessageBox('NOOOOO', 'ENARD EPAGUETI :(((');
+    if (GitCommitMacro.commitHash == '9757b00') {
+        NativeAPI.showMessageBox('Not in Nightly Build', 'Download the Experimental CNE');
+        CoolUtil.openURL("https://codename-engine.com/");
         Sys.exit(0);
     }
 }
