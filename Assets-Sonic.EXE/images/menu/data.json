@@ -1,10 +1,10 @@
 {
     "backgrounds": [
-        ["menu2", true]
+        ["menu", true]
     ],
     
     "logo": "icon",
     "logoData": [
-        [1000, 500, 0.6]
+        [1000, 500, 0.35]
     ]
 }
