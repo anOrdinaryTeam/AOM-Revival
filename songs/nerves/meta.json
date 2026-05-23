@@ -1,0 +1,14 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "bf",
+	"difficulties": [
+		"hard"
+	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Nerves",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 100
+}
