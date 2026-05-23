@@ -4,11 +4,15 @@ function preStageLoad()
 function create() {
     defaultCamZoom = 0.9;
 
+    boyfriend.x += 50;
+
 	var bg:FlxSprite = new FlxSprite(-500, -170);
     bg.antialiasing = Options.antialiasing;
+    bg.scrollFactor.set(0.7, 0.7);
 
     var alley:FlxSprite = new FlxSprite(-500, -200);
     alley.antialiasing = Options.antialiasing;
+    alley.scrollFactor.set(0.9, 0.9);
 
     switch(curSong) {
         case 'headache' | 'nerves':
@@ -37,6 +41,7 @@ function create() {
 
             var corpse:FlxSprite = new FlxSprite(-230, 540, getModImage('stage/gardead'));
             corpse.antialiasing = Options.antialiasing;
+            smoke1.scrollFactor.set(0.9, 0.9);
             addSprite(corpse);
 
             var smoke2:FunkinSprite = new FunkinSprite(0, 0, getModImage('stage/garSmoke'));
@@ -58,5 +63,17 @@ function create() {
             var corpse:FlxSprite = new FlxSprite(-230, 540, getModImage('stage/gardead'));
             corpse.antialiasing = Options.antialiasing;
             addSprite(corpse);
+    }
+}
+
+function stepHit() {
+    if (curSong == 'fading' && curStep == 240) {
+        new FlxTimer().start(.1, function(tmr:FlxTimer) {
+            dad.alpha -= 0.05;
+            iconP2.alpha -= 0.05;
+
+            if (dad.alpha > 0)
+                tmr.reset(.1);
+        });
     }
 }

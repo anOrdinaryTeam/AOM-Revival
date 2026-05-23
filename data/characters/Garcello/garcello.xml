@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character icon="Garcello/Headache" color="#8E40A5">
+	<anim name="idle" anim="garcello idle dance"/>
+	<anim name="singDOWN" anim="garcello Sing Note DOWN"/>
+	<anim name="singRIGHT" anim="garcello Sing Note RIGHT"/>
+	<anim name="singLEFT" anim="garcello Sing Note LEFT"/>
+	<anim name="singUP" anim="garcello Sing Note UP"/>
+</character>

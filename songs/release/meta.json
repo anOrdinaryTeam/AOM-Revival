@@ -1,14 +1,4 @@
 {
-	"opponentModeAllowed": false,
-	"icon": "bf",
-	"difficulties": [
-		"hard"
-	],
-	"color": "#9271FD",
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "Release",
-	"beatsPerMeasure": 4,
-	"needsVoices": true,
+	"icon": "Garcello/Release",
 	"bpm": 120
 }
