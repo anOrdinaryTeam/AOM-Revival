@@ -1,0 +1,10 @@
+{
+    "backgrounds": [
+        ["menu2", true]
+    ],
+    
+    "logo": "icon",
+    "logoData": [
+        [950, 500, 0.5]
+    ]
+}
