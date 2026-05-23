@@ -51,51 +51,49 @@ function create() {
     add(dadpast);
     
     for (a in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
-            { a.antialiasing = true; }
+            { a.antialiasing = Options.antialiasing; }
     // stage memories n shit
 }
 
 // events go brr
 function stepHit() {
-    if (curDiff != 'canon') {
-        switch(curStep) {
-            case 112:
-                defaultCamZoom = 0.5;
-                camHUD.alpha = 1;
-                for (i in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
-                    { remove(i, true); }
+    switch(curStep) {
+        case 112:
+            defaultCamZoom = 0.5;
+            camHUD.alpha = 1;
+            for (i in [backpast, stagepast, rlightpast, llightpast, curtainspast, gfpast, bfpast, dadpast])
+                { remove(i, true); }
 
-            case 512:
-                for (i in [kworld, bpeople, fpeople])
-                    { i.alpha = 1; }
-            
-            case 768:
-                changeCharacter(1, 'TheDeathmatch/pico-death');
+        case 512:
+            for (i in [kworld, bpeople, fpeople])
+                { i.alpha = 1; }
+        
+        case 768:
+            changeCharacter(1, 'TheDeathmatch/pico-death');
 
-            case 1024:
-                kworld.alpha = 0.001;
-                world.alpha = 1;
-                changeCharacter(1, 'TheDeathmatch/kids-death');
+        case 1024:
+            kworld.alpha = 0.001;
+            world.alpha = 1;
+            changeCharacter(1, 'TheDeathmatch/kids-death');
 
-            case 1408:
-                dadDrain = .03;
-                kworld.alpha = 1;
-                remove(world, true);
+        case 1408:
+            dadDrain = .03;
+            kworld.alpha = 1;
+            remove(world, true);
 
-                bpeople.playAnim('mom');
-                changeCharacter(0, 'TheDeathmatch/dearest2');
-                changeCharacter(1, 'TheDeathmatch/mom-death');
+            bpeople.playAnim('mom');
+            changeCharacter(0, 'TheDeathmatch/dearest2');
+            changeCharacter(1, 'TheDeathmatch/mom-death');
 
-            case 1664:
-                dadDrain = .02;
-                bpeople.playAnim('idle');
-                changeCharacter(0, 'TheDeathmatch/dearest3');
-                changeCharacter(1, 'TheDeathmatch/bf-deathmatch');
+        case 1664:
+            dadDrain = .02;
+            bpeople.playAnim('idle');
+            changeCharacter(0, 'TheDeathmatch/dearest3');
+            changeCharacter(1, 'TheDeathmatch/bf-deathmatch');
 
-            case 2432:
-                dadDrain = .01;
-                changeCharacter(0, 'TheDeathmatch/dearest4');
-        }
+        case 2432:
+            dadDrain = .01;
+            changeCharacter(0, 'TheDeathmatch/dearest4');
     }
 }
 

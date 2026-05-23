@@ -24,5 +24,5 @@ function create() {
 
     var flat:FlxSprite = new FlxSprite(-250, -150, getModImage('stage/v1/halloween_bggame'));
     flat.scrollFactor.set(0.9, 0.9);
-    insert(0, flat);
+    addSprite(flat);
 } // holy shit

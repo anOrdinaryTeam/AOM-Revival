@@ -32,7 +32,7 @@ function create() {
     // stage shit
     var back:FlxSprite = new FlxSprite(-715, -230);
     back.scrollFactor.set(0.9, 0.9);
-    insert(0, back);
+    addSprite(back);
 
     if (curSong == 'wocky' || curSong == 'beathoven') {
         back.loadGraphic(getModImage('stage/v1/old'));
@@ -46,14 +46,14 @@ function create() {
         freaks = new FunkinSprite(-625, -200).loadSprite(getModImage('stage/v1/bgFreaks'));
         freaks.scrollFactor.set(0.9, 0.9);
         freaks.addAnim('idle', 'Bottom Level Boppers', 28, false);
-        insert(1, freaks);
+        addSprite(freaks);
     }
     if (curSong == 'beathoven' || curSong == 'hairball') {
         var spookys:FunkinSprite = new FunkinSprite(-25, 150).loadSprite(getModImage('stage/v1/littleguys'));
         spookys.scrollFactor.set(0.9, 0.9);
         spookys.addAnim('idle', 'Bottom Level Boppers', 24, true);
         spookys.playAnim('idle');
-        insert(1, spookys);
+        addSprite(spookys);
     }
     if (curSong == 'hairball' || curSong == 'nyaw') {
         audience = new FunkinSprite(-625, -200).loadSprite(getModImage('stage/v1/upperBop'));
@@ -66,11 +66,11 @@ function create() {
     lights.scrollFactor.set(0.9, 0.9);
     lights.addAnim('idle', 'lightblink', 1, true);
     lights.playAnim('idle');
-    insert(3, lights);
+    addSprite(lights);
 
     var front:FlxSprite = new FlxSprite(-650, 600, getModImage('stage/v1/front'));
     front.scale.set(1.1, 1.1);
-    insert(4, front);
+    addSprite(front);
     // stage shit
 }
 

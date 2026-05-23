@@ -17,7 +17,7 @@ function stepHit() {
         
         case 1401:
             kworld.alpha = 1;
-            remove(world);
+            remove(world, true);
 
             bpeople.playAnim('mom');
             changeCharacter(0, 'TheDeathmatch/dearest2');

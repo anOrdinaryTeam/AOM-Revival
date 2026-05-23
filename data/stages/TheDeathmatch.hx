@@ -88,5 +88,5 @@ function create() {
     // stage shit
 
     for (a in [kworld, world, wall, stage, mics, bpeople, lights, curtains, fpeople])
-        { a.antialiasing = true; }
+        { a.antialiasing = Options.antialiasing; }
 }

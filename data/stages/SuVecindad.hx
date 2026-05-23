@@ -42,48 +42,48 @@ function create() {
     // stage shit
     vecindad = new FlxSprite(-600, 200, getModImage('SuVecindad/Vecindad'));
     vecindad.antialiasing = true;
-    insert(1, vecindad);
+    addSprite(vecindad);
 
     quicoBG = new FunkinSprite(-700, 200).loadSprite(getModImage('SuVecindad/Quico_Background'));
     quicoBG.antialiasing = true;
     quicoBG.addAnim('idle', 'Quico_Background Idle', 15, true);
     quicoBG.playAnim('idle');
-    insert(2, quicoBG);
+    addSprite(quicoBG);
 
     vecindadPOV = new FlxSprite(-600, 200, getModImage('SuVecindad/VecindadPOV'));
     vecindadPOV.antialiasing = true;
     vecindadPOV.alpha = 0.001;
-    insert(3, vecindadPOV);
+    addSprite(vecindadPOV);
     // stage shit
 
     // chars shit
     quico = new Character(-300, 400, 'SuVecindad/quico');
     quico.antialiasing = true;
     quico.alpha = 0.001;
-    insert(3, quico);
+    addSprite(quico);
 
     quicoAnim = new FunkinSprite(-525, 660).loadSprite(getModImage('SuVecindad/QuicoMami'));
     quicoAnim.addAnim('idle', 'QuicoMami mami0', 24, false);
     quicoAnim.antialiasing = true;
     quicoAnim.alpha = 0.001;
-    insert(3, quicoAnim);
+    addSprite(quicoAnim);
 
     chavoAnim = new FunkinSprite(-190, 750).loadSprite(getModImage('SuVecindad/ChavoToma'));
     chavoAnim.addAnim('idle', 'ChavoToma toma0', 24, false);
     chavoAnim.antialiasing = true;
     chavoAnim.flipX = true;
     chavoAnim.alpha = 0.001;
-    insert(4, chavoAnim);
+    addSprite(chavoAnim);
     // chars shit
 
     // bars shit
     barTop = new FlxSprite(0, -280).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barTop.camera = camHUD;
-    insert(5, barTop);
+    addSprite(barTop);
 
     barBottom = new FlxSprite(0, 900).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barBottom.camera = camHUD;
-    insert(5, barBottom);
+    addSprite(barBottom);
     // bars shit
 }
 
