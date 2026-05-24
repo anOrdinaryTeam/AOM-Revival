@@ -46,7 +46,7 @@ public function findModSong(song:String) {
         for (i in 0...songList.length) {
             var name:String = songList[i].split(':')[0];
 
-            if (name == song) {
+            if (name.toLowerCase() == song.toLowerCase()) {
                 modResult = mod;
                 trace('Found Mod From Song: $mod');
                 break;
