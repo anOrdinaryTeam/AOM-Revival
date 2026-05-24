@@ -8,7 +8,6 @@ var loadingText:FlxText = new FlxText(0, 0, 0, 'Loading Videos..', 50);
 function preEnterSong(song) switch(song) {
     case 'Fatality':
     	#if !ARKOSE_PORT
-        ORIGINAL_RES = [window.width, window.height];
         var determineScale:Float = switch(Capabilities.screenResolutionY) {
             default: 0.9;
             case 768 | 1080: 0.75;

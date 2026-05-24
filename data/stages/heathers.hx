@@ -72,13 +72,17 @@ function postUpdate() {
     shadows.members[3].setPosition(gf.x, gf.y + 560);
 }
 
-function onNoteCreation(_) if (_.strumLineID == 1) {
-    _.noteSprite = "modNotes/heathers";
-    _.note.splash = 'heathers';
+var skin:String = "modNotes/heathers";
+function onNoteCreation(_) {
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+    if (_.strumLineID == 1) _.note.splash = 'heathers';
 }
 
-function onStrumCreation(_) if (_.player == 1)
-    _.sprite = "modNotes/heathers";
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
+}
 
 function TweenZoom(z:Float, t:Float) {
     FlxTween.cancelTweensOf(camGame);

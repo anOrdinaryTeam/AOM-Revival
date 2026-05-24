@@ -134,9 +134,18 @@ function postUpdate() {
 	iconP2.x = p2ToUse;
 }
 
+var skin:String = 'modNotes/Tabi/NOTE_assets';
+function onNoteCreation(_) {
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
+}
+
 function update() vignette.alpha = 1 - (health / 3);
-function onNoteCreation(e) e.noteSprite = "modNotes/Tabi/NOTE_assets";
-function onStrumCreation(e) e.sprite = "modNotes/Tabi/NOTE_assets";
 function onPlayerHit(e) e.healthGain = 0.035;
 function beatHit() aight_U_win_gweb.shake(0.005, (60 / Conductor.bpm), null, true, FlxAxes.X);
 
@@ -145,5 +154,4 @@ function onDadHit(e) {
     if (health > 0.1) health -= e.note.isSustainNote ? 0.0005 : 0.042;
 }
 function onEvent(e) if (e.event.name == 'Camera Movement')
-    if (e.event.params[0] == 0) FlxTween.tween(this, {defaultCamZoom: 0.65}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
-    else if (e.event.params[0] == 1) FlxTween.tween(this, {defaultCamZoom: 0.8}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
+    FlxTween.tween(this, {defaultCamZoom: e.event.params[0] == 0 ? 0.65 : 0.8}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});

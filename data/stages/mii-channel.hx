@@ -41,10 +41,15 @@ function create() {
     }
 }
 
-function onNoteCreation(_)
-    if (_.strumLineID == 0) _.noteSprite = "modNotes/Eteled/eteled";
-    else _.noteSprite = "modNotes/Eteled/bf";
+var skin:String = 'modNotes/Eteled/bf';
+var oppSkin:String = "modNotes/Eteled/eteled";
 
-function onStrumCreation(_)
-    if (_.player == 0) _.sprite = "modNotes/Eteled/eteled";
-    else _.sprite = "modNotes/Eteled/bf";
+function onNoteCreation(_) {
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = _.strumLineID == 1 ? skin : oppSkin;
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = _.player == 1 ? skin : oppSkin;
+}

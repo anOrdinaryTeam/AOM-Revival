@@ -1,17 +1,23 @@
 function preStageLoad()
     useStageData = false;
 function postCreate()
-    loadHud('KadeEngine', '');
+    loadHud('KadeEngine', '1.4.1');
 function onGameOver(_) {
     _.deathCharID = 'Kapi/bf-gm';
     _.lossSFX = 'Kapi/StoleYoBitch';
     _.retrySFX = 'Kapi/NahNvm';
 }
-function onStrumCreation(_)
-    _.sprite = 'modNotes/Kapi/kapi notes';
+
+var skin:String = 'modNotes/Kapi/kapi notes';
 function onNoteCreation(_) {
-    _.noteSprite = 'modNotes/Kapi/kapi notes';
-    _.note.splash = 'Kapi/v1';
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+    if (_.strumLineID == 1) _.note.splash = 'Kapi/v1';
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
 }
 
 var audience:FunkinSprite;

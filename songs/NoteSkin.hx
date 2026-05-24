@@ -2,7 +2,7 @@ using StringTools;
 
 var daColors:Array<Array<FlxColor>>;
 var usingRGB:Bool = getSaveData('curSkinNoteDisplay').contains('Custom');
-var usingSkins:Bool = getSaveData('usingSkins');
+public var usingSkins:Bool = getSaveData('usingSkins');
 
 function create() if (usingSkins && usingRGB)
     daColors = [for (i in FlxG.save.data.AOM_RGB) [for (j in i) j]];

@@ -11,12 +11,19 @@ var barBottom:FlxSprite;
 
 public var quico:Character;
 
+var skin:String = 'modNotes/SuVecindad/chavo';
+function onNoteCreation(_) {
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
+}
+
 function preStageLoad()
     useStageData = false;
-function onNoteCreation(_)
-    _.noteSprite = 'modNotes/SuVecindad/chavo';
-function onStrumCreation(_)
-    _.sprite = 'modNotes/SuVecindad/chavo';
 function onPlayerHit(_)
     _.ratingPrefix = 'modCombos/SuVecindad/';
 function onGameOver(_) 

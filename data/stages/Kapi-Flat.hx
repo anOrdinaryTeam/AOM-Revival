@@ -5,11 +5,16 @@ function preStageLoad()
 function postCreate()
     loadHud('PsychEngine', '');
 
-function onStrumCreation(_)
-    _.sprite = 'modNotes/Kapi/gw notes';
+var skin:String = 'modNotes/Kapi/gw notes';
 function onNoteCreation(_) {
-    _.noteSprite = 'modNotes/Kapi/gw notes';
-    _.note.splash = 'Kapi/gw';
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+    if (_.strumLineID == 1) _.note.splash = 'Kapi/gw';
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
 }
 
 function create() {

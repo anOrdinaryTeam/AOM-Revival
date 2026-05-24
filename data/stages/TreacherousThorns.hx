@@ -1,5 +1,4 @@
 import flixel.addons.effects.FlxTrail;
-importScript('data/scripts/pixelate');
 static function senpaiPath(str:String)
     return getModImage('TreacherousThorns/$str');
 
@@ -10,10 +9,8 @@ var spiritTrail:FlxTrail;
 var bgLayer1:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var bgLayer2:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 
-// var senpaiCamPoint:FlxPoint = FlxPoint.get(470, 550);
-// var corruptCamPoint:FlxPoint = FlxPoint.get(950, 650);
-
 function create() {
+    importScript('data/scripts/pixelate');
     var xPos:Float = -300;
     var pixelZoom:Float = 6.5;
     defaultCamZoom = 1;
@@ -23,7 +20,6 @@ function create() {
 
     // [ first layer ]
 
-    // I feel the scroll factor its not making effect 
     var sky:FlxSprite = new FlxSprite(xPos, 0, senpaiPath('Sky'));
     sky.scrollFactor.set(0.1, 0.1);
     bgLayer1.add(sky);

@@ -4,11 +4,17 @@ function preStageLoad()
     useStageData = false;
 function postCreate()
     loadHud('PsychEngine', '');
-function onStrumCreation(_)
-    _.sprite = 'modNotes/Kapi/kapi notes 2';
+
+var skin:String = 'modNotes/Kapi/kapi notes 2';
 function onNoteCreation(_) {
-    _.noteSprite = 'modNotes/Kapi/kapi notes 2';
-    _.note.splash = 'Kapi/v2';
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+    if (_.strumLineID == 1) _.note.splash = 'Kapi/v2';
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
 }
 
 var back2:FlxSprite;

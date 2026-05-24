@@ -36,6 +36,14 @@
             "path": "modNotes/EXE/Majin_Notes"
         },
         {
+            "displayName": "Kapi",
+            "variants": [
+                ["V1", "modNotes/Kapi/kapi notes"],
+                ["V2", "modNotes/Kapi/kapi notes 2"],
+                ["Flatzone", "modNotes/Kapi/gw notes"]
+            ]
+        },
+        {
             "displayName": "Tabi",
             "path": "modNotes/Tabi/NOTE_assets"
         },

@@ -39,9 +39,14 @@ function postCreate() {
     add(popup);
 }
 
-function onStrumCreation(_)
-    _.sprite = "modNotes/Epiphany/default";
+var skin:String = 'modNotes/Epiphany/default';
 function onNoteCreation(_) {
-    _.noteSprite = "modNotes/Epiphany/default";
-    _.note.splash = 'doki';
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+    if (_.strumLineID == 1) _.note.splash = 'doki';
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
 }

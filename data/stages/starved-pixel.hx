@@ -111,6 +111,7 @@ function update(_) if (sonicHUD != null) {
 }
 
 function onStrumCreation(event) {
+    if (e.player == 1 && usingSkins) return;    
     event.cancel();
 
     var strum = event.strum;
@@ -123,6 +124,7 @@ function onStrumCreation(event) {
 }
 
 function onNoteCreation(event) {
+    if (e.strumLineID == 1 && usingSkins) return; 
     event.cancel();
 
     var note = event.note;

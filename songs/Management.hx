@@ -51,6 +51,11 @@ public function changeNoteSkin(path:String, _strum:Dynamic, _part:String, _pixel
     var part:String = _part; // fucking null-safety
     var pixel:Bool = _pixel; // ^^^
 
+    if (usingSkins && getSaveData('curSkinNote') == path) {
+        trace('- ChangeNoteSkin: Stopped Function, current Skin Note is already in use');
+        return;
+    }
+
     if (!pixel) if (!Assets.exists(Paths.image(path)) || !Assets.exists(Paths.getPath('images/$path.xml'))) {
         trace('Sprisheet/XML doesnt exists - [$path]');
         return;

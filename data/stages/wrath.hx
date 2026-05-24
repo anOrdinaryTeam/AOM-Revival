@@ -58,20 +58,29 @@ function setColorSwapShader(spr:FlxSprite, hue:Float = 0, sat:Float = 0, bri:Flo
     spr.shader = colorSwap;
 }
 
+var skin:String = 'modNotes/Corruptro/NOTE_assets_retrobf';
+var oppSkin:String = "modNotes/Corruptro/NOTE_assets_corruptro";
+
 function onNoteCreation(_) {
     if (_.strumLineID == 0)
-        _.noteSprite = "modNotes/Corruptro/NOTE_assets_corruptro";
-    else if (_.strumLineID == 1 && !getSaveData('usingSkins')) {
-        _.noteSprite = "modNotes/Corruptro/NOTE_assets_retrobf";
+        _.noteSprite = oppSkin;
+    else if (_.strumLineID == 1 && !usingSkins) {
+        _.noteSprite = skin;
         _.note.splash = 'retrospecter';
     }
 
     if (_.noteType == 'poison') 
         setColorSwapShader(_.note, 180, 0, 0);
 }
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = _.player == 1 ? skin : oppSkin;
+}
+
 function onStrumCreation(_)
     if (_.player == 0) _.sprite = "modNotes/Corruptro/NOTE_assets_corruptro";
-    else if (_.player == 1 && !getSaveData('usingSkins')) _.sprite = "modNotes/Corruptro/NOTE_assets_retrobf";
+    else if (_.player == 1 && !usingSkins) _.sprite = "modNotes/Corruptro/NOTE_assets_retrobf";
 
 function create() {
     defaultCamZoom = 0.525;

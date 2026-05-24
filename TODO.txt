@@ -25,7 +25,6 @@ pongan aca lo q falte o por pulir en alguna cosa
 - Pulir Prey
 
 [ GENERAL ]
+- Crear Splashes para algunas Skins (Eteled, Austin, xEvent, Majin, Chavo, RGB?)
 - Gameovers a todos los Mods (tengo weba de mencionarlos)
-- Adaptar el Sistema de Skins a todos los Mods
-- Detalles al Menu de Skins
 - Ordenar todos los Datos de Characters a carpetas + Iconos

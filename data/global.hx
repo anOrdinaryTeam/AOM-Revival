@@ -20,11 +20,6 @@ public static var lastSongSelected:Int = 0;
 public static var lastDiffSelected:Int = 0;
 
 public static var CREATE_FILE_FEATURE:Bool = true;
-#if !ARKOSE_PORT
-// Meant to be use in Fatality + saving the Res for anybody
-// who uses a custom res on Cne (like me with a 768p monitor)
-public static var ORIGINAL_RES:Array<Float>;
-#end
 
 using StringTools;
 
@@ -256,6 +251,19 @@ function aspectShit(width:Int, height:Int):String {
         idk1 = idk2 % idk1;
         idk2 = height;
     }
-    winWidth = Math.floor(Capabilities.screenResolutionX * ((height / idk2) / (width / idk2))) > Capabilities.screenResolutionY ? Math.floor(Capabilities.screenResolutionY * ((width / idk2) / (height / idk2))) : Capabilitities.screenResolutionX;
+    winWidth = Math.floor(Capabilities.screenResolutionX * ((height / idk2) / (width / idk2))) > Capabilities.screenResolutionY ? Math.floor(Capabilities.screenResolutionY * ((width / idk2) / (height / idk2))) : Capabilities.screenResolutionX;
     winHeight = Math.floor(Capabilities.screenResolutionX * ((height / idk2) / (width / idk2))) > Capabilities.screenResolutionY ? Capabilities.screenResolutionY : Math.floor(Capabilities.screenResolutionX * ((height / idk2) / (width / idk2)));
+}
+
+public static function matense(newWidth:Int, newHeight:Int, winScale:Float) {
+    aspectShit(newWidth, newHeight);
+    FlxG.resizeWindow(winWidth * winScale, winHeight * winScale);
+
+    FlxG.resizeGame(newWidth, newHeight);
+    FlxG.scaleMode.width = FlxG.width = FlxG.initialWidth = newWidth;
+    FlxG.scaleMode.height = FlxG.height = FlxG.initialHeight = newHeight;
+    ShaderResizeFix.doResizeFix = true;
+    ShaderResizeFix.fixSpritesShadersSizes();
+    window.x = Capabilities.screenResolutionX/2 - window.width/2;
+    window.y = Capabilities.screenResolutionY/2 - window.height/2;
 }

@@ -1,5 +1,6 @@
 import flixel.text.FlxTextBorderStyle;
 import flixel.util.FlxStringUtil;
+import openfl.system.Capabilities;
 importScript('data/scripts/FatalErrorPopUp');
 
 function onEvent(_) if (_.event.name == 'Camera Movement')
@@ -148,7 +149,8 @@ function update(_) {
     }
 }
 
-function onStrumCreation(event)  {
+function onStrumCreation(event) {
+    if (event.player == 1 && usingSkins) return; 
     event.cancel();
 
     var spr:String = event.player == 0 ? 'fatal' : 'arrow';
@@ -162,6 +164,7 @@ function onStrumCreation(event)  {
 }
 
 function onNoteCreation(event) {
+    if (event.strumLineID == 1 && usingSkins) return; 
     event.cancel();
 
     var note = event.note;
@@ -246,12 +249,18 @@ function shakeWindow() if (getSaveData('Fatality_MoveWindow')) new FlxTimer().st
     window.move(window.x + FlxG.random.int(-10, 10), window.y + FlxG.random.int(-8, 8));
 }, 50);
 
-#if !ARKOSE_PORT
+
 function onSongEnd() {
-    windowShit(ORIGINAL_RES[0], ORIGINAL_RES[1]);
+    #if !ARKOSE_PORT
+    var determineScale:Float = switch(Capabilities.screenResolutionY) {
+        default: 0.9;
+        case 768 | 1080: 0.75;
+        case 720: 0.6;
+    }
+    matense(1280, 720, determineScale);
     window.resizable = true;
+    #end
 }
-#end
 
 function onCountdown(e) if (e.swagCounter != 4) {
     var a:String = ['intro3', 'intro2', 'intro1', 'introGo'][e.swagCounter];

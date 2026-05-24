@@ -13,18 +13,15 @@ function preStageLoad() if (songName == 'Plaything')
 function postCreate()
     gf.color = 0x0F6C6B6B;
 
-function onNoteCreation(_) {
-    var dadNotes:String = songName == 'Post Mortal' ? 'austin' : 'eteled';
-    var bfNotes:String = songName == 'Post Mortal' ? 'bf' : 'austin';
+var dadNotes:String = songName == 'Post Mortal' ? 'modNotes/Eteled/austin' : 'modNotes/Eteled/eteled';
+var bfNotes:String = songName == 'Post Mortal' ? 'modNotes/Eteled/bf' : 'modNotes/Eteled/austin';
 
-    if (_.strumLineID == 0) _.noteSprite = 'modNotes/Eteled/$dadNotes';
-    else _.noteSprite = 'modNotes/Eteled/$bfNotes';
+function onNoteCreation(_) {
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = _.strumLineID == 1 ? bfNotes : dadNotes;
 }
 
 function onStrumCreation(_) {
-    var dadNotes:String = songName == 'Post Mortal' ? 'austin' : 'eteled';
-    var bfNotes:String = songName == 'Post Mortal' ? 'bf' : 'austin';
-
-    if (_.player == 0) _.sprite = 'modNotes/Eteled/$dadNotes';
-    else _.sprite = 'modNotes/Eteled/$bfNotes';
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = _.player == 1 ? bfNotes : dadNotes;
 }

@@ -1,7 +1,14 @@
-function onNoteCreation(_)
-    _.noteSprite = 'modNotes/TheDeathmatch/death notes';
-function onStrumCreation(_)
-    _.sprite = 'modNotes/TheDeathmatch/death notes';
+var skin:String = 'modNotes/TheDeathmatch/death notes';
+function onNoteCreation(_) {
+    if (_.strumLineID == 1 && usingSkins) return;
+    _.noteSprite = skin;
+}
+
+function onStrumCreation(_) {
+    if (_.player == 1 && usingSkins) return;
+    _.sprite = skin;
+}
+
 function onGameOver(_) 
     _.deathCharID = 'TheDeathmatch/bf-cdeath';
 
