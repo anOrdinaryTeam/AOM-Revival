@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character y="-20" sprite="Sonic" flipX="true" camx="-305" camy="10" isPlayer="true" color="#0074D1" holdTime="6.6">
+<character y="-20" sprite="rush/Sonic" icon="Rush/rushsonic" flipX="true" camx="-305" camy="10" isPlayer="true" color="#0074D1" holdTime="6.6">
 	<anim name="idle" anim="Sonic Idle" x="-305" y="10"/>
 	<anim name="singDOWN" anim="Sonic Down" x="-150" y="-51"/>
 	<anim name="singRIGHT" anim="Sonic Right" x="-226" y="-2"/>

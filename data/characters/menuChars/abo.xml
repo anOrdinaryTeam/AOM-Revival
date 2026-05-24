@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character icon="menuChars/abo">
+	<anim name="idle" anim="s-"/>
+</character>

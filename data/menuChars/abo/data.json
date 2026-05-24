@@ -1,7 +1,7 @@
 {
     "list": [
         {
-            "char": "abo",
+            "char": "menuChars/abo",
             "position": [700, 100],
             "scale": 1,
             "flipped": false

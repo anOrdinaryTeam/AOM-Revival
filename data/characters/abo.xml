@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character icon="abo">
-	<anim name="idle" anim="s-"/>
-	<anim name="singDOWN" anim="s-"/>
-	<anim name="singRIGHT" anim="s-"/>
-	<anim name="singLEFT" anim="s-"/>
-	<anim name="singUP" anim="s-"/>
-	<anim name="s-" anim="s-"/>
-</character>
