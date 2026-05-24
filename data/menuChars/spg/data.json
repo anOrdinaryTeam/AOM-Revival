@@ -1,7 +1,7 @@
 {
     "list": [
         {
-            "char": "spongob",
+            "char": "menuChars/spongob",
             "position": [750, 300],
             "scale": "1.3"
         }

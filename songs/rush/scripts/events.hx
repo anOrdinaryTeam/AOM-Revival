@@ -12,7 +12,6 @@ function create() {
     downline.setPosition(0,658);
     downline.camera = camHUD;
     insert(1, downline);
-    
 }
 
 function stepHit()

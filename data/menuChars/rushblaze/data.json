@@ -1,8 +1,8 @@
 {
     "list": [
         {
-            "char": "menurushblaze",
-            "position": [750, -100],
+            "char": "Rush/blaze",
+            "position": [1150, 0],
             "scale": 0.85,
             "flipped": false
         }

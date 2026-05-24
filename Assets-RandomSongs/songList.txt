@@ -14,7 +14,7 @@ Sink:sink
 Su Vecindad:SuVecindad/chavo
 pokemon-master:pokemonmaster
 Summit:Summit/red
-rush:rushblaze
+rush:Rush/rushblaze
 The Deathmatch:TheDeathmatch/icon-insanedad
 Treacherous Thorns:TreacherousThorns/senpai-emtpy
 Looping The Rooms:ltr
