@@ -22,6 +22,10 @@ function postCreate(){
     healthBar.y = (downscroll ? 608.95 : 593.25);
 
     health += 1;
+
+    hudItems.members[0]?.y = (downscroll ? 500 : 680);
+    for (i in 1...4)
+        hudItems.members[i]?.alpha = 0;
 }
 
 function create(){
@@ -34,7 +38,7 @@ function create(){
     fondopm.antialiasing = Options.antialiasing;
     insert(1,fondopm);
 
-    var healthPM:FlxSprite = new FlxSprite(135,400, getModImage('pokemonmaster/health'));
+    var healthPM:FlxSprite = new FlxSprite(135, 400, getModImage('pokemonmaster/health'));
     healthPM.antialiasing = Options.antialiasing;
     healthPM.scale.set(0.4,0.4);
     healthPM.camera = camHUD;
@@ -74,7 +78,7 @@ function create(){
     insert(getObjectOrder(dad)+1, pixelpikachu);
     pixelpikachu.visible = false;
 
-    defaultCamZoom = 0.8; // 0.8
+    defaultCamZoom = 0.85; // 0.8
     dad.scale.set(0.6,0.6);
 }
 

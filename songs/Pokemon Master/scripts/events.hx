@@ -1,7 +1,6 @@
 public var pixelMode:Bool = false;
 
 function create(){
-
     precacheCharacter(0, 'PokemonMaster/pixelpokemonmaster'); // los pendejos
     precacheCharacter(1, 'PokemonMaster/pixelpokemonmasterbf');
     // precacheNotes('modNotes/pokemonmaster/NOTE_assets');
