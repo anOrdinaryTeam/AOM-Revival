@@ -32,7 +32,7 @@ function stepHit()
             for (strum in cpu)
                 FlxTween.tween(strum, {y: 120}, 1, {ease: FlxEase.backInOut});
 
-            // for (acheude in [healthBar, healthBarBG, iconP1, iconP2])
+            for (acheude in [healthBar, healthBarBG, iconP1, iconP2])
                 FlxTween.tween(acheude, {alpha: 0}, 0.5);
 
         case 577:
