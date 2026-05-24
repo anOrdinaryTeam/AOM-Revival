@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="pixelred" antialiasing="false" flipX="true" color="#FF0000">
+<character sprite="pokemonmaster/pixelred" antialiasing="false" flipX="true" color="#FF0000">
 	<anim name="idle" anim="red idle"/>
 	<anim name="singDOWN" anim="red down" x="13" y="-68"/>
 	<anim name="singRIGHT" anim="red right" x="-14" y="-5"/>

@@ -1,4 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character sprite="pixelpikachu" antialiasing="false" icon="pixelpokemonmasterpikachu">
-	<anim name="idle" anim="pikachu idle instancia 1"/>
-</character>

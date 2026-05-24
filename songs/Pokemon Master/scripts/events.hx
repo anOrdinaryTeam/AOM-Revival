@@ -2,9 +2,9 @@ public var pixelMode:Bool = false;
 
 function create(){
 
-    precacheCharacter(0, 'pixelpokemonmaster'); // los pendejos
-    precacheCharacter(1, 'pixelpokemonmasterbf');
-    precacheNotes('modNotes/pokemonmaster/NOTE_assets', false);
+    precacheCharacter(0, 'PokemonMaster/pixelpokemonmaster'); // los pendejos
+    precacheCharacter(1, 'PokemonMaster/pixelpokemonmasterbf');
+    // precacheNotes('modNotes/pokemonmaster/NOTE_assets');
 
 }
 
@@ -16,8 +16,8 @@ function stepHit()
         
             pixelMode = true;
 
-            changeCharacter(0, 'pixelpokemonmaster');
-            changeCharacter(1, 'pixelpokemonmasterbf');
+            changeCharacter(0, 'PokemonMaster/pixelpokemonmaster');
+            changeCharacter(1, 'PokemonMaster/pixelpokemonmasterbf');
             changeNoteSkin('modNotes/pokemonmaster/NOTE_assets', player, 'both', false);
 
             dad.flipX = false; // Me di cuenta que asi no era XDDDDDDDDDDD
@@ -41,8 +41,8 @@ function stepHit()
 
             pixelMode = false;
             
-            changeCharacter(0, 'pokemonmaster');
-            changeCharacter(1, 'pokemonmasterbf');
+            changeCharacter(0, 'PokemonMaster/pokemonmaster');
+            changeCharacter(1, 'PokemonMaster/pokemonmasterbf');
             changeNoteSkin('game/notes/default', player, 'both', false);
             
             dad.flipX = true;

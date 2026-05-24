@@ -5,7 +5,6 @@ public var pixelcharizard:FunkinSprite;
 public var pixelpikachu:FunkinSprite;
 
 function postCreate(){
-
     loadHud('KadeEngine', '1.5.4');
 
     for (strum in cpu)
@@ -18,34 +17,37 @@ function postCreate(){
         ic.visible = false;
 
     healthBar.flipX = true;
-    healthBar.scale.set(0.345,0.225);
-    healthBar.setPosition(370.25,593.25);
+    healthBar.scale.set(0.35,0.225);
+    healthBar.x = 370.25;
+    healthBar.y = (downscroll ? 608.95 : 593.25);
 
     health += 1;
-
 }
 
 function create(){
 
-        
     var pixelbg:FlxSprite = new FlxSprite().makeSolid(FlxG.width*1.5, FlxG.height*1.5, 0xFFFFFFFF);
     pixelbg.setPosition(-945,-530);
     insert(0, pixelbg);
 
     fondopm = new FlxSprite(-852,-475, getModImage('pokemonmaster/fondo_pokemon_1'));
+    fondopm.antialiasing = Options.antialiasing;
     insert(1,fondopm);
 
     var healthPM:FlxSprite = new FlxSprite(135,400, getModImage('pokemonmaster/health'));
+    healthPM.antialiasing = Options.antialiasing;
     healthPM.scale.set(0.4,0.4);
     healthPM.camera = camHUD;
-    insert(1,healthPM);
+    add(healthPM);
 
-   var healthBarPM:FlxSprite = new FlxSprite(150,507, getModImage('pokemonmaster/healthBar'));
+    var healthBarPM:FlxSprite = new FlxSprite(150,507, getModImage('pokemonmaster/healthBar'));
+    healthBarPM.antialiasing = Options.antialiasing;
     healthBarPM.scale.set(0.35,0.35);
     healthBarPM.camera = camHUD;
-    insert(2,healthBarPM);
+    add(healthBarPM);
 
     charizard = new FunkinSprite(dad.x - 340, dad.y - 750).loadSprite(getModImage('pokemonmaster/charizard'));
+    charizard.antialiasing = Options.antialiasing;
     charizard.addAnim('idle', 'chari idle', 24, false, false);
     charizard.addAnim('attack', 'charizard atack', 24, false, false);
     charizard.scale.set(0.55,0.55);
@@ -53,6 +55,7 @@ function create(){
     insert(4, charizard);
 
     pikachu = new FunkinSprite(dad.x + 235, dad.y - (750/2)+20).loadSprite(getModImage('pokemonmaster/pikachu'));
+    pikachu.antialiasing = Options.antialiasing;
     pikachu.addAnim('idle', 'PIKACHU IDLE', 24, false, false);
     pikachu.addAnim('attack', 'pikaatack', 24, false, false);
     pikachu.scale.set(0.55,0.55);
@@ -73,11 +76,9 @@ function create(){
 
     defaultCamZoom = 0.8; // 0.8
     dad.scale.set(0.6,0.6);
-
 }
 
 function beatHit(){
-
     if (curBeat % 2 == 0){
         charizard.playAnim('idle');
         pixelcharizard.playAnim('idle');

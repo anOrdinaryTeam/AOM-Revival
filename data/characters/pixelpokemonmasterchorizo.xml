@@ -1,4 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character sprite="pixelcharizard" antialiasing="false" icon="pixelpokemonmasterchorizo">
-	<anim name="idle" anim="chariidle instancia 1"/>
-</character>

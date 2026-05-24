@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="pixelbf" antialiasing="false" flipX="true" isPlayer="true" color="#00ff00">
+<character sprite="pokemonmaster/pixelbf" antialiasing="false" flipX="true" isPlayer="true" color="#00ff00">
 	<anim name="idle" anim="bf idle dance"/>
 	<anim name="singDOWN" anim="BF DOWN" x="-35" y="-22"/>
 	<anim name="singRIGHT" anim="BF RIGHT" x="-26" y="-15"/>

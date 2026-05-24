@@ -1,4 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character x="300" y="300" sprite="ShubBump" scale="0.8" isPlayer="true" icon="shubs">
-	<anim name="idle" anim="Shub Title Bump" loop="true"/>
-</character>

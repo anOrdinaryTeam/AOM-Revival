@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="rederedred" flipX="true" color="#FF0000">
+<character sprite="pokemonmaster/rederedred" flipX="true" color="#FF0000">
 	<anim name="idle" anim="red idle"/>
 	<anim name="singDOWN" anim="abajored" x="7" y="-19"/>
 	<anim name="singRIGHT" anim="redright" x="24" y="2"/>
