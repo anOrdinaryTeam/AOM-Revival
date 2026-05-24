@@ -1,7 +1,7 @@
 {
  "song": {
-  "player1": "bf-mii",
-  "gfVersion": "gf-mii",
+  "player1": "Eteled/bf-mii",
+  "gfVersion": "Eteled/gf-mii",
   "sectionLengths": [],
   "notes": [
    {
@@ -26869,7 +26869,7 @@
     "mustHitSection": true
    }
   ],
-  "player2": "eteled_atlas",
+  "player2": "Eteled/eteled_atlas",
   "eventObjects": [
    {
     "name": "Init BPM",
@@ -26878,10 +26878,8 @@
     "type": "BPM Change"
    }
   ],
-  "chartVersion": "2",
   "song": "Dream-Of-Peace",
   "needsVoices": true,
-  "sections": 0,
   "validScore": true,
   "stage": "mii-channel",
   "bpm": 110,

@@ -1,9 +1,9 @@
 import haxe.format.JsonPrinter;
 
-// ease's position of the camera, more tough but more easy for characters with custom skins
 public var playerCam:FlxPoint = FlxPoint.get(900, 600);
 public var opponentCam:FlxPoint = FlxPoint.get(300, 600);
 public var forceCamPos:Bool = false;
+public var rawJson:Dynamic = null;
 
 var fileExists:Bool = false;
 var metaSongExists:Bool = false;
@@ -23,38 +23,38 @@ function create() {
         return;
     }
 
-    var raw:Dynamic = CoolUtil.parseJson(Paths.json('stagesData/$stageName'));
+    rawJson = CoolUtil.parseJson(Paths.json('stagesData/$stageName'));
 
-    if (raw.startCamPos != null) {
-        var offs:Array<Float> = raw.startCamPos.copy();
+    if (rawJson.startCamPos != null) {
+        var offs:Array<Float> = rawJson.startCamPos.copy();
         camFollow?.setPosition(offs[0], offs[1]);
     }
 
     // player shit
-    if (raw.playerPos != null) {
-        var offs:Array<Float> = raw.playerPos.copy();
+    if (rawJson.playerPos != null) {
+        var offs:Array<Float> = rawJson.playerPos.copy();
         boyfriend?.setPosition(offs[0], offs[1]);
     }
 
-    if (raw.playerCamPos != null) {
-        var offs:Array<Float> = raw.playerCamPos.copy();
+    if (rawJson.playerCamPos != null) {
+        var offs:Array<Float> = rawJson.playerCamPos.copy();
         playerCam?.set(offs[0], offs[1]);
     }
 
     // opponent shit
-    if (raw.opponentPos != null) {
-        var offs:Array<Float> = raw.opponentPos.copy();
+    if (rawJson.opponentPos != null) {
+        var offs:Array<Float> = rawJson.opponentPos.copy();
         dad?.setPosition(offs[0], offs[1]);
     }
 
-    if (raw.opponentCamPos != null) {
-        var offs:Array<Float> = raw.opponentCamPos.copy();
+    if (rawJson.opponentCamPos != null) {
+        var offs:Array<Float> = rawJson.opponentCamPos.copy();
         opponentCam?.set(offs[0], offs[1]);
     }
 
     // gf shit
-    if (raw.gfPos != null) {
-        var offs:Array<Float> = raw.gfPos.copy();
+    if (rawJson.gfPos != null) {
+        var offs:Array<Float> = rawJson.gfPos.copy();
         gf?.setPosition(offs[0], offs[1]);
     }
 }

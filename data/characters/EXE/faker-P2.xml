@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="exe/faker-P2" icon="faker-real" color="#3118A7" applyStageMatrix="true">
+<character sprite="exe/faker-P2" icon="EXE/faker-real" color="#3118A7" applyStageMatrix="true">
 	<anim name="idle" anim="Export these/Exe Idle"/>
 	<anim name="singUP" anim="Export these/Exe Up" x="91" y="27"/>
 	<anim name="singDOWN" anim="Export these/Exe Down" x="203" y="-189"/>

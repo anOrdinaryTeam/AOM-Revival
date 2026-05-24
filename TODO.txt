@@ -4,12 +4,8 @@ pongan aca lo q falte o por pulir en alguna cosa
 - Notas Invisibles en You Can't Run
 - Mecanica de Chaos
 
-[ ZARDY ]
-- Re-Implementar el modchart de Foolhardy
-- Pulir todo Bushwhack
-
 [ TRICKY ]
-- Notas Fuego/Instakill en todo el Mod
+- Mecanica Drain en Expurgation
 
 [ ETELED ]
 - Terminar la Mecanica de Austin

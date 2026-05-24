@@ -1,13 +1,13 @@
 {
     "list": [
         {
-            "char": "GHOUL",
+            "char": "Sink/GHOUL",
             "position": [200, 30],
             "scale": 0.85,
             "flipped": false
         },
         {
-            "char": "Sink",
+            "char": "Sink/Sink",
             "position": [550, 50],
             "scale": 0.85,
             "flipped": false

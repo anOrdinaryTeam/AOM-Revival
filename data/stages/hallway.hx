@@ -1,10 +1,16 @@
 importScript('data/scripts/EteledGlitch');
 
+var dadNotes:String = '';
+var bfNotes:String = '';
+
 function create() {
     defaultCamZoom = 0.63;
     useGlitchedNotes = true;
     var bg:FlxSprite = new FlxSprite(-360, -210, getModImage('glitchhallway'));
     addSprite(bg);
+
+    dadNotes = songName == 'Post Mortal' ? 'modNotes/Eteled/austin' : 'modNotes/Eteled/eteled';
+    bfNotes = songName == 'Post Mortal' ? 'modNotes/Eteled/bf' : 'modNotes/Eteled/austin';
 }
 
 function preStageLoad() if (songName == 'Plaything')
@@ -12,9 +18,6 @@ function preStageLoad() if (songName == 'Plaything')
 
 function postCreate()
     gf.color = 0x0F6C6B6B;
-
-var dadNotes:String = songName == 'Post Mortal' ? 'modNotes/Eteled/austin' : 'modNotes/Eteled/eteled';
-var bfNotes:String = songName == 'Post Mortal' ? 'modNotes/Eteled/bf' : 'modNotes/Eteled/austin';
 
 function onNoteCreation(_) {
     if (_.strumLineID == 1 && usingSkins) return;

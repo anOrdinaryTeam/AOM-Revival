@@ -1,4 +1,4 @@
-Improbable Outset:tricky-mask
-Madness:tricky
-HELLCLOWN:trickyH
-EXPURGATION:exTricky
+Improbable Outset:Tricky/mask
+Madness:Tricky/nomask
+HELLCLOWN:Tricky/hell
+EXPURGATION:Tricky/ex

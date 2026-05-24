@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character y="450" sprite="exe/BF" scale="10" antialiasing="false" flipX="true" isPlayer="true" icon="bf-pixel-exe">
+<character y="450" sprite="exe/BF" scale="10" antialiasing="false" flipX="true" isPlayer="true" icon="EXE/bf-pixel-exe">
 	<anim name="idle" anim="BF idle dance" fps="12"/>
 	<anim name="singDOWN" anim="BF NOTE DOWN0" y="-1"/>
 	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-2" y="-1"/>

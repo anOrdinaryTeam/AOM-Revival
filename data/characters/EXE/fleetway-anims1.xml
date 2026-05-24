@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="exe/fleetway/anims1" icon="fleetway-exe" color="#FED000">
+<character sprite="exe/fleetway/anims1" icon="EXE/fleetway-exe" color="#FED000">
 	<anim name="a" anim="Fleetway StepItUp"/>
 	<anim name="b" anim="Fleetway Laugh"/>
 	<anim name="c" anim="Fleetway Too Slow"/>

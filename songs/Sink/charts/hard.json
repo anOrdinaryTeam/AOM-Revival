@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "sink",
+		"player1": "Sink/sink",
 		"gfVersion": "empty",
 		"notes": [
 			{
@@ -29241,9 +29241,7 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "GHOUL",
-		"events": [],
-		"chartVersion": "2",
+		"player2": "Sink/GHOUL",
 		"eventObjects": [
 			{
 				"type": "BPM Change",
@@ -29257,7 +29255,6 @@
 		"stage": "depths",
 		"validScore": true,
 		"bpm": 140,
-		"speed": 2.8,
-		"noteStyle": "normal"
+		"speed": 2.8
 	}
 }

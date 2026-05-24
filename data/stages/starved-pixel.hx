@@ -58,8 +58,8 @@ function create() {
 
 function postCreate() {
     camHUD.alpha = 0;
-    precacheCharacter(0, 'starved-pixel');
-    precacheCharacter(1, 'bf-Sonic-Peelout');
+    precacheCharacter(0, 'Prey/starved-pixel');
+    precacheCharacter(1, 'Prey/bf-Sonic-Peelout');
 
     if (getSaveData('allowCustomHud')) {
         for (i in [scoreTxt, accuracyTxt, missesTxt]) i.visible = false;
@@ -172,7 +172,7 @@ function stepHit()
         case 1542: dad.visible = false;
         case 1544:
             cinematicBars(true);
-            changeCharacter(0, 'starved-pixel');
+            changeCharacter(0, 'Prey/starved-pixel');
             dad.setPosition(-950, 200);
             opponentCam.set(1500, 800);
         case 1546,1587,1599,1624,1675,3334:
@@ -185,7 +185,7 @@ function stepHit()
             boyfriend.animation.finishCallback = function(name:String) {
                 if (name == 'first dialogue') {
                     setSpeed(16);
-                    changeCharacter(1, 'bf-Sonic-Peelout');
+                    changeCharacter(1, 'Prey/bf-Sonic-Peelout');
                     boyfriend.playAnim('idle', true);
                 }
             }

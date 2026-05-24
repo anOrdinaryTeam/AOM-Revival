@@ -1,10 +1,8 @@
 {
 	"song": {
-		"player1": "bf-corrupt",
+		"player1": "Corruptro/bf-corrupt",
 		"gfVersion": "empty",
-		"events": [],
-		"arrowSkindad": "NOTE_assets_corruptro",
-		"player2": "corruptro",
+		"player2": "Corruptro/corruptro",
 		"notes": [
 			{
 				"lengthInSteps": 16,

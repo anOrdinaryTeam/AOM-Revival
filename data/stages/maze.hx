@@ -1,14 +1,17 @@
 public var bg:FunkinSprite;
-var Foolhardy:Bool;
+var FH:Bool;
+
+function preStageLoad() if (!FH)
+    stageName += '-BS';
 
 function create() {
-    Foolhardy = songName == 'Foolhardy';
-    defaultCamZoom = Foolhardy ? 0.9 : 0.7;
+    FH = songName == 'Foolhardy';
+    defaultCamZoom = FH ? 0.9 : 0.7;
     dad.alpha = 0.001;
 
-    var spr:String = Foolhardy ? 'Maze' : 'Zardy2BG';
+    var spr:String = FH ? 'Maze' : 'Zardy2BG';
     bg = new FunkinSprite(-600, -200, getModImage('maze/$spr'));
-    bg.addAnim('idle', 'Stage', Foolhardy ? 16 : 24, true);
+    bg.addAnim('idle', 'Stage', FH ? 16 : 24, true);
     bg.playAnim('idle');
     bg.scrollFactor.set(0.9, 0.9);
     bg.antialiasing = Options.antialiasing;

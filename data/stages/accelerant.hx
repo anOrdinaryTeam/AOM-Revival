@@ -7,9 +7,9 @@ public var lever:FunkinSprite;
 public var floor:FlxSprite;
 public var laser:FlxSprite;
 
-public var gfHotdog:FunkinSprite = new Character(1800, 540, 'gfHotDog');
-public var gfArmsUp:Character = new Character(335, 275, 'gfArmsUp');
-public var tricky:Character = new Character(95, -330, 'tricky-acc');
+public var gfHotdog:FunkinSprite = new Character(1800, 540, 'Accelerant/gfHotDog');
+public var gfArmsUp:Character = new Character(335, 275, 'Accelerant/gfArmsUp');
+public var tricky:Character = new Character(95, -330, 'Accelerant/tricky-acc');
 
 public var shootAtTricky:Bool = false;
 public var canGruntsSpawn:Bool = false;

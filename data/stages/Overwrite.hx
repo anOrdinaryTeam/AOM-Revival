@@ -16,15 +16,19 @@ function create() {
         addSprite(sqr);
         FlxTween.tween(sqr, {y: sqr.y + 200}, (Math.random() * 5 + 1) / 3, {ease: FlxEase.quadInOut, type: 4, loopDelay: Math.random() / 2});
     }
-    else for (i in 0...7){
-        var sqr:FunkinSprite = new FunkinSprite(-790 + 400 * i, 240 + [300, 175, 75, 0, 0, 75, 175, 300][i]);
-        sqr.loadSprite(getModImage('Overwrite/rpgfire'));
-        sqr.addAnim('idle', 'fire_iddle', 24, true);
-        sqr.playAnim("idle");
-        sqr.antialiasing = Options.antialiasing;
-        sqr.scrollFactor.set(0.93, 0.93);            
-        sqr.scale.set(0.6 * [1.2, 1.1, 1.05, 1, 1, 1.05, 1.1, 1.2][i], 0.6 * [1.2, 1.1, 1.05, 1, 1, 1.05, 1.1, 1.2][i]);
-        addSprite(sqr);
+    else {
+        gf.scale.set(0.45, 0.45);
+
+        for (i in 0...7) {
+            var sqr:FunkinSprite = new FunkinSprite(-790 + 400 * i, 240 + [300, 175, 75, 0, 0, 75, 175, 300][i]);
+            sqr.loadSprite(getModImage('Overwrite/rpgfire'));
+            sqr.addAnim('idle', 'fire_iddle', 24, true);
+            sqr.playAnim("idle");
+            sqr.antialiasing = Options.antialiasing;
+            sqr.scrollFactor.set(0.93, 0.93);            
+            sqr.scale.set(0.6 * [1.2, 1.1, 1.05, 1, 1, 1.05, 1.1, 1.2][i], 0.6 * [1.2, 1.1, 1.05, 1, 1, 1.05, 1.1, 1.2][i]);
+            addSprite(sqr);
+        }
     }
 
     var lg:FlxSprite = new FlxSprite(-600, -200, getModImage('Overwrite/light'));

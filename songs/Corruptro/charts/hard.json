@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "bf-corrupt",
-		"player2": "corruptro",
+		"player1": "Corruptro/bf-corrupt",
+		"player2": "Corruptro/corruptro",
 		"notes": [
 			{
 				"lengthInSteps": 16,

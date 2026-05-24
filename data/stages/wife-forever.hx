@@ -16,7 +16,6 @@ function create() {
         bg.loadSprite(getModImage('normal/bg_annoyed'));
         bg.addAnim("idle", "bg2", 24, false, false, [5]);
         bg.addAnim("bop", "bg2", 24, false);
-        bg.addAnim("manifest", "bgBOOM", 24, false);
         bg.scrollFactor.set(0, 1);
     }
     else {

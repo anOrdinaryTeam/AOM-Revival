@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="exe/fakerScene" icon="faker-real" color="#0000FF" applyStageMatrix="true">
+<character sprite="exe/fakerScene" icon="EXE/faker-real" color="#0000FF" applyStageMatrix="true">
 	<anim name="1" anim="TransformationRIGHT" loop="true"/>
 	<anim name="2" anim="TransformationLEFT" x="131" y="-24" loop="true"/>
 	<anim name="3" anim="TransformationUP" x="20" y="168" loop="true"/>

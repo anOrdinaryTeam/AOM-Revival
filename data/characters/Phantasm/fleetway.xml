@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/fleetway" icon="Phantasm/fleetway" color="#ffaa30" isPlayer="true" flipX="true" holdTime="6.1">
+	<anim name="singLEFT" anim="Fleet left" x="35" y="22"/>
+	<anim name="idle" anim="Fleet left" x="35" y="22" fps="1"/>
+	<anim name="singDOWN" anim="Fleet down"/>
+	<anim name="singUP" anim="Fleet up" x="-22" y="-31"/>
+	<anim name="singRIGHT" anim="Fleet right" x="-20" y="14"/>
+	<anim name="singRIGHTmiss" anim="MISS Fleet right" x="-19" y="10"/>
+	<anim name="singLEFTmiss" anim="MISS Fleet left" x="47" y="20"/>
+	<anim name="singUPmiss" anim="MISS Fleet up" x="-14" y="3"/>
+	<anim name="singDOWNmiss" anim="MISS Fleet down" x="10" y="-10"/>
+</character>

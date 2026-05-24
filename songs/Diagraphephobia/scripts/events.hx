@@ -2,7 +2,7 @@ var transition:FunkinSprite = new FunkinSprite();
 var screaming:Bool = false;
 
 function postCreate() {
-    precacheCharacter(0, 'eteled_crazy');
+    precacheCharacter(0, 'Eteled/eteled_crazy');
 
     transition.loadSprite(getModImage('effects/glitchAnim'));
     transition.addAnim('play', 'g', 24, false);
@@ -47,7 +47,7 @@ function switchStage(bool:Bool) {
     startGlitchedBGS = bool;
     hallway.alpha = bool ? 1 : 0;
     mainBG.alpha = miibuttons.alpha = overlay.alpha = bool ? 0 : 1;
-    changeCharacter(0, bool ? 'eteled_crazy' : 'eteled_mad');
+    changeCharacter(0, bool ? 'Eteled/eteled_crazy' : 'Eteled/eteled_mad');
     gf.color = bool ? 0x0F6C6B6B : -1;
 }
 

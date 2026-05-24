@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="120" icon="bf-fatal" camx="-60" y="410" scale="4" camy="-140" color="#31B0D1" antialiasing="false" sprite="fatality/tiny-bf" isPlayer="true">
+<character x="120" icon="EXE/bf-fatal" camx="-60" y="410" scale="4" camy="-140" color="#31B0D1" antialiasing="false" sprite="fatality/tiny-bf" isPlayer="true">
 	<anim x="-1.25" y="-0.25" anim="Down" name="singDOWN"/>
 	<anim x="-1.25" y="-0.25" anim="Right" name="singLEFT"/>
 	<anim x="-1.5" y="0.25" anim="Up" name="singUP"/>

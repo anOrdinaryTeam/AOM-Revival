@@ -8731,10 +8731,9 @@
                 "mustHitSection":true
             }
         ],
-        "player2":"whitty-angry",
-        "song":"Ballistic-Old",
+        "player2":"Whitty/whitty-angry",
         "stage":"alley",
-        "gfVersion":"gf-whitty",
+        "gfVersion":"Whitty/gf-whitty",
         "validScore":true,
         "needsVoices":true,
         "speed":2.6,

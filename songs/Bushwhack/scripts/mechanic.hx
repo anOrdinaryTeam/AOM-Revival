@@ -1,4 +1,4 @@
-var grabbedInput:Bool = false;
+public var grabbedInput:Bool = false;
 var cancelAnimations:Bool = false;
 var misc = [0.7, 150, 150, -60];
 
@@ -10,7 +10,7 @@ var vineSpr:FunkinSprite;
 var curVine:Int = 0;
 
 function create() {
-    vineSpr = new FunkinSprite(dad.x + 500, dad.y + 430, getModImage('maze/vines'));
+    vineSpr = new FunkinSprite().loadSprite(getModImage('maze/vines'));
     vineSpr.addAnim('catch', 'Vine Whip instance 1', 24, false);
     vineSpr.scale.set(0.8, 0.8);
     vineSpr.updateHitbox();
@@ -20,7 +20,12 @@ function create() {
     add(notesToHit);
 }
 
-function GRAB() {
+function postCreate() {
+    vineSpr.setPosition(dad.x + 170, dad.y + 600);
+    graphicCache.cache(getModImage('maze/notes'));
+}
+
+public function GRAB() {
     notesToHit_Input = [];
     notesToHit.clear();
     
@@ -55,13 +60,10 @@ function GRAB() {
     });
 }
 
-function onInputUpdate(_) if (grabbedInput)
-    _.cancel();
-
 function checkWhichPressed(key:String) {
     if (curVine != 4 && notesToHit_Input[curVine] == key) {
         FlxTween.tween(notesToHit.members[curVine], {alpha: 0}, 0.3);
-        curVine += 1;
+        curVine++;
     }
 
     if (curVine == 4) {
@@ -77,7 +79,7 @@ function checkWhichPressed(key:String) {
                 boyfriend.dance();
             }
         }
-        new FlxTimer().start(0.050, () -> vineSpr.playAnim('catch', false, true));
+        new FlxTimer().start(0.050, () -> vineSpr.playAnim('catch', false, 'NONE', true));
         vineSpr.animation.finishCallback = function() {
             if (!grabbedInput)
                 vineSpr.alpha = 0;
@@ -86,17 +88,18 @@ function checkWhichPressed(key:String) {
     }
 }
 
-function onPlayerMiss(_) _.animCancelled = cancelAnimations;
-function onPlayerHit(_) _.animCancelled = cancelAnimations;
-
-function stepHit() switch(curStep) {
-    case 383, 768, 1151, 1536, 1905, 2466, 2767, 3071, 4143:
-        GRAB();
-}
-
 function update(_) if (grabbedInput) {
     if (controls.NOTE_LEFT_P) checkWhichPressed('Left');
     if (controls.NOTE_DOWN_P) checkWhichPressed('Down');
     if (controls.NOTE_UP_P) checkWhichPressed('Up');
     if (controls.NOTE_RIGHT_P) checkWhichPressed('Right');
 }
+
+function onInputUpdate(_) if (grabbedInput)
+    _.cancel();
+
+function onPlayerMiss(_)
+    _.animCancelled = cancelAnimations;
+
+function onPlayerHit(_)
+    _.animCancelled = cancelAnimations;

@@ -1,9 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character y="50" sprite="deleted/eteled_crazy/sheet" icon="eteled_mad" color="#000000">
-	<anim name="idle" anim="eteled idle dance" loop="true"/>
-	<anim name="singDOWN" anim="eteled Sing Note DOWN" x="-10" y="-95"/>
-	<anim name="singRIGHT" anim="eteled Sing Note RIGHT" x="-26" y="-65"/>
-	<anim name="singLEFT" anim="eteled Sing Note LEFT" x="232" y="16"/>
-	<anim name="singUP" anim="eteled Sing Note UP" x="-7" y="68"/>
-	<anim name="scream" anim="eteled SCREAM" x="141" y="149" loop="true"/>
-</character>

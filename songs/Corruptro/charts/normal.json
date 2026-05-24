@@ -1,7 +1,6 @@
 {
 	"song": {
-		"player1": "bf-corrupt",
-		"arrowSkindad": "NOTE_assets_corruptro",
+		"player1": "Corruptro/bf-corrupt",
 		"notes": [
 			{
 				"sectionNotes": [
@@ -14073,17 +14072,11 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "corruptro",
-		"player3": "null",
+		"player2": "Corruptro/corruptro",
 		"initialSpeed": 1.215,
-		"song": "Corruptro",
 		"validScore": true,
 		"speed": 2.4,
 		"gfVersion": "empty",
-		"events": [],
-		"sliderVelocities": null,
-		"instVol": 1,
-		"vocalVol": 1,
 		"stage": "wrath",
 		"needsVoices": true,
 		"bpm": 151

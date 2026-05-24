@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bf-running-sonic",
+		"player1": "Prey/bf-running-sonic",
 		"notes": [
 			{
 				"sectionNotes": [],
@@ -8350,10 +8350,8 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "Furnace",
-		"player3": "empty",
-		"song": "Prey",
-		"stage": "starved-pixel",
+		"player2": "Prey/Furnace",
+		"stage": "Prey/starved-pixel",
 		"needsVoices": true,
 		"validScore": true,
 		"bpm": 176,

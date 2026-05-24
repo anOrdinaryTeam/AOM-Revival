@@ -1,8 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character sprite="tabi/tabi" camx="400" camy="100" color="#FFBB81">
-	<anim name="idle" anim="Dad idle dance"/>
-	<anim name="singUP" anim="Dad Sing Note UP" x="50" y="40"/>
-	<anim name="singLEFT" anim="Dad Sing Note LEFT" x="95" y="-25"/>
-	<anim name="singRIGHT" anim="Dad Sing Note RIGHT" x="-10" y="12"/>
-	<anim name="singDOWN" anim="Dad Sing Note DOWN" x="15" y="-105"/>
-</character>

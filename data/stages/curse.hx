@@ -14,6 +14,7 @@ function create() {
     add(sumtable);
 }
 
-function onEvent(e) if (e.event.name == 'Camera Movement')
-    if (e.event.params[0] == 0) FlxTween.tween(this, {defaultCamZoom: 0.55}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
-    else if (e.event.params[0] == 1) FlxTween.tween(this, {defaultCamZoom: 0.65}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
+function onEvent(e) if (e.event.name == 'Camera Movement') {
+    FlxTween.cancelTweensOf(defaultCamZoom);
+    FlxTween.tween(this, {defaultCamZoom: e.event.params[0] == 0 ? 0.55 : 0.65}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
+}

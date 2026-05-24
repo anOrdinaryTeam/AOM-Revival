@@ -26,7 +26,7 @@ function create() {
 }
 
 function postCreate() {
-    precacheCharacter(1, 'fleetway');
+    precacheCharacter(1, 'Phantasm/fleetway');
     loadHud('PsychEngine');
     for (w in cpu) w.visible = false;
     PlayState.instance.comboGroup.x += 500;
@@ -50,5 +50,5 @@ function fleetwaySwitch(bool:Bool) {
 
     bgs[1].alpha = bool ? 0 : 1;
     playModSound('stat', 0.3);
-    changeCharacter(1, bool ? 'fleetway' : 'sonic');
+    changeCharacter(1, bool ? 'Phantasm/fleetway' : 'Phantasm/sonic');
 }

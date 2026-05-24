@@ -1,2 +1,2 @@
-Foolhardy:zardy
-Bushwhack:zardy-dark
+Foolhardy:Zardy/normal
+Bushwhack:Zardy/dark

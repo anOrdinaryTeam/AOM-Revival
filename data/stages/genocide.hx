@@ -153,5 +153,7 @@ function onDadHit(e) {
     camGame.shake(0.03, 0.02, null, true);
     if (health > 0.1) health -= e.note.isSustainNote ? 0.0005 : 0.042;
 }
-function onEvent(e) if (e.event.name == 'Camera Movement')
+function onEvent(e) if (e.event.name == 'Camera Movement') {
+    FlxTween.cancelTweensOf(defaultCamZoom);
     FlxTween.tween(this, {defaultCamZoom: e.event.params[0] == 0 ? 0.65 : 0.8}, (Conductor.stepCrochet * 4 / 1000), {ease: FlxEase.elasticInOut});
+}

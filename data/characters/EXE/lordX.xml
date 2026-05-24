@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="exe/lordX" scale="1.2" icon="lordX" color="RED" applyStageMatrix="true">
+<character sprite="exe/lordX" scale="1.2" icon="EXE/lordX" color="RED" applyStageMatrix="true">
 	<anim name="idle" anim="X_Idle"/>
 	<anim name="singUP" anim="X_Up" x="20" y="86.67"/>
 	<anim name="singDOWN" anim="X_Down" x="74.17" y="-27.33"/>

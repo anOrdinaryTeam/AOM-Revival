@@ -87,7 +87,7 @@ function generateStrum(player:Bool) {
     var getterStrums = player ? playerStrums : cpuStrums;
     var group:FlxTypedGroup = player ? glitchedStrumPlayer : glitchedStrumCpu;
     var name:String = player ? boyfriend.curCharacter : dad.curCharacter;
-    var skin:String = player ? (name == 'bf-mii' ? 'bfGlitch' : 'austinGlitch') : (name.contains('eteled') ? 'eteled' : 'austinGlitch');
+    var skin:String = player ? (name == 'Eteled/bf-mii' ? 'bfGlitch' : 'austinGlitch') : (name.contains('eteled') ? 'eteled' : 'austinGlitch');
     graphicCache.cache(Paths.image('modNotes/Eteled/$skin'));
 
     for (i in 0...4) {
@@ -112,12 +112,12 @@ function addStuff() if (useGlitchedNotes) {
     generateStrum(true);
     generateStrum(false);
 
-    if (dad.curCharacter == 'austin' || boyfriend.curCharacter == 'austin-playable') {
+    if (dad.curCharacter == 'Eteled/austin' || boyfriend.curCharacter == 'Eteled/austin-playable') {
         var playerVersion:Bool = boyfriend.curCharacter.contains('-playable');
         var getter:Character = playerVersion ? boyfriend : dad;
         var str:String = playerVersion ? 'austin-glitch-playable' : 'austin-glitch';
 
-        austinGlitch = new Character(getter.x, getter.y, str, playerVersion);
+        austinGlitch = new Character(getter.x, getter.y, 'Eteled/$str', playerVersion);
         austinGlitch.antialiasing = Options.antialiasing;
         austinGlitch.alpha = 0.001;
         insert(members.indexOf(dad), austinGlitch);

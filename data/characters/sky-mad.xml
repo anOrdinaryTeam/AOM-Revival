@@ -1,8 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character y="50" sprite="sky/sky_manifest" camy="100" color="#FD1313" applyStageMatrix="true">
-	<anim name="idle" anim="sky mad idle"/>
-	<anim name="singUP" anim="sky mad up" x="24" y="-10"/>
-	<anim name="singLEFT" anim="sky mad left" x="-5"/>
-	<anim name="singRIGHT" anim="sky mad right" x="5" y="2"/>
-	<anim name="singDOWN" anim="sky mad down" x="5" y="-5"/>
-</character>

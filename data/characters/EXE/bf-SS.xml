@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="exe/SSBF_Assets" flipX="true" isPlayer="true" icon="bf-ss" color="#30B0D1">
+<character sprite="exe/SSBF_Assets" flipX="true" isPlayer="true" icon="EXE/bf-ss" color="#30B0D1">
 	<anim name="idle" anim="SSBF IDLE instance 1"/>
 	<anim name="singDOWN" anim="SSBF DOWN instance 10" x="3" y="-9"/>
 	<anim name="singRIGHT" anim="SSBF RIGHT instance 10" x="-1" y="-3"/>

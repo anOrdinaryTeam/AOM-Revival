@@ -4,8 +4,8 @@ var lastStep:Int = 0;
 var curID:Int;
 var rendered:Bool = false;
 var probablyText:Map<String, Float> = [
-    "tricky-mask" => 1, "tricky" => 20, 
-    "trickyH" => 45, "trickyEx" => 60
+    "Tricky/tricky-mask" => 1, "Tricky/tricky" => 20, 
+    "Tricky/trickyH" => 45, "Tricky/trickyEx" => 60
 ];
 var TrickyLinesArray:Array<Array<String>> = [
     ["SUFFER","INCORRECT", "INCOMPLETE", "INSUFFICIENT", "INVALID", "CORRECTION", "MISTAKE", "REDUCE", "ERROR", "ADJUSTING", "IMPROBABLE", "IMPLAUSIBLE", "MISJUDGED"],

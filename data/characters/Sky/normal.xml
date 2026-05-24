@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="sky/sky_assets" icon="Sky/normal" color="#9B6ECC" camx="0" camy="100">
+	<anim name="idle" anim="sky idle" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="sky up" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="sky left" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="sky right" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="sky down" x="0" y="0" fps="24" loop="false"/>
+</character>

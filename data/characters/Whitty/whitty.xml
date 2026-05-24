@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="whitty/WhittySprites" icon="whitty/normal" color="#1D1D35">
+	<anim name="idle" anim="Idle"/>
+	<anim name="singDOWN" anim="Sing Down" x="10" y="-55"/>
+	<anim name="singRIGHT" anim="Sing Right" x="-10" y="30"/>
+	<anim name="singLEFT" anim="Sing Left" x="27" y="-17"/>
+	<anim name="singUP" anim="Sing Up" y="50"/>
+</character>

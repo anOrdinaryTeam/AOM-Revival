@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
--->
 <TextureAtlas imagePath="bf.png" width="4736" height="852" spritePadding="0" borderPadding="0">
 	<SubTexture name="BF NOTE DOWN MISS00000" x="4361" y="446" width="357" height="374" rotated="true" frameX="-1" frameY="-34" frameWidth="378" frameHeight="393"/>
 	<SubTexture name="BF NOTE DOWN MISS00001" x="3247" y="446" width="375" height="393" frameX="-2" frameY="0" frameWidth="378" frameHeight="393"/>
@@ -32,8 +29,8 @@ Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="BF NOTE DOWN MISS00026" x="3622" y="446" width="378" height="388" frameX="0" frameY="-4" frameWidth="378" frameHeight="393"/>
 	<SubTexture name="BF NOTE DOWN MISS00027" x="3622" y="446" width="378" height="388" frameX="0" frameY="-4" frameWidth="378" frameHeight="393"/>
 	<SubTexture name="BF NOTE DOWN MISS00028" x="3622" y="446" width="378" height="388" frameX="0" frameY="-4" frameWidth="378" frameHeight="393"/>
-	<SubTexture name="BF NOTE DOWN00000" x="4361" y="446" width="357" height="374" rotated="true" frameX="-1" frameY="-34" frameWidth="374" frameHeight="361"/>
-	<SubTexture name="BF NOTE DOWN00001" x="4361" y="446" width="357" height="374" rotated="true" frameX="-1" frameY="-34" frameWidth="374" frameHeight="361"/>
+	<SubTexture name="BF NOTE DOWN00000" x="4361" y="446" width="357" height="374" rotated="true" frameX="-1" frameY="-5" frameWidth="374" frameHeight="361"/>
+	<SubTexture name="BF NOTE DOWN00001" x="4361" y="446" width="357" height="374" rotated="true" frameX="-1" frameY="-5" frameWidth="374" frameHeight="361"/>
 	<SubTexture name="BF NOTE DOWN00002" x="4000" y="446" width="361" height="373" rotated="true" frameX="-1" frameY="0" frameWidth="374" frameHeight="361"/>
 	<SubTexture name="BF NOTE DOWN00003" x="4000" y="446" width="361" height="373" rotated="true" frameX="-1" frameY="0" frameWidth="374" frameHeight="361"/>
 	<SubTexture name="BF NOTE DOWN00004" x="4000" y="446" width="361" height="373" rotated="true" frameX="-1" frameY="0" frameWidth="374" frameHeight="361"/>
@@ -157,8 +154,8 @@ Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="BF NOTE RIGHT MISS00043" x="0" y="0" width="399" height="433" frameX="-1" frameY="0" frameWidth="408" frameHeight="433"/>
 	<SubTexture name="BF NOTE RIGHT MISS00044" x="0" y="0" width="399" height="433" frameX="-1" frameY="0" frameWidth="408" frameHeight="433"/>
 	<SubTexture name="BF NOTE RIGHT MISS00045" x="0" y="0" width="399" height="433" frameX="-1" frameY="0" frameWidth="408" frameHeight="433"/>
-	<SubTexture name="BF NOTE RIGHT0000" x="2800" y="0" width="405" height="408" rotated="true" frameX="-1" frameY="-1" frameWidth="408" frameHeight="407"/>
-	<SubTexture name="BF NOTE RIGHT00001" x="2800" y="0" width="405" height="408" rotated="true" frameX="-1" frameY="-1" frameWidth="408" frameHeight="407"/>
+	<SubTexture name="BF NOTE RIGHT0000" x="2800" y="0" width="405" height="408" rotated="true" frameX="-2" frameY="-1" frameWidth="408" frameHeight="407"/>
+	<SubTexture name="BF NOTE RIGHT00001" x="2800" y="0" width="405" height="408" rotated="true" frameX="-2" frameY="-1" frameWidth="408" frameHeight="407"/>
 	<SubTexture name="BF NOTE RIGHT00002" x="1613" y="0" width="407" height="407" frameX="0" frameY="0" frameWidth="408" frameHeight="407"/>
 	<SubTexture name="BF NOTE RIGHT00003" x="1613" y="0" width="407" height="407" frameX="0" frameY="0" frameWidth="408" frameHeight="407"/>
 	<SubTexture name="BF NOTE RIGHT00004" x="1613" y="0" width="407" height="407" frameX="0" frameY="0" frameWidth="408" frameHeight="407"/>
@@ -258,10 +255,10 @@ Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="BF NOTE UP00012" x="2020" y="0" width="375" height="441" frameX="0" frameY="-5" frameWidth="375" frameHeight="446"/>
 	<SubTexture name="BF NOTE UP00013" x="2020" y="0" width="375" height="441" frameX="0" frameY="-5" frameWidth="375" frameHeight="446"/>
 	<SubTexture name="BF NOTE UP00014" x="2020" y="0" width="375" height="441" frameX="0" frameY="-5" frameWidth="375" frameHeight="446"/>
-	<SubTexture name="BF idle dance00000" x="0" y="446" width="392" height="406" rotated="true" frameX="-1" frameY="-19" frameWidth="410" frameHeight="413"/>
-	<SubTexture name="BF idle dance00001" x="0" y="446" width="392" height="406" rotated="true" frameX="-1" frameY="-19" frameWidth="410" frameHeight="413"/>
-	<SubTexture name="BF idle dance00002" x="4342" y="0" width="394" height="408" rotated="true" frameX="0" frameY="-18" frameWidth="410" frameHeight="413"/>
-	<SubTexture name="BF idle dance00003" x="4342" y="0" width="394" height="408" rotated="true" frameX="0" frameY="-18" frameWidth="410" frameHeight="413"/>
+	<SubTexture name="BF idle dance00000" x="0" y="446" width="392" height="406" rotated="true" frameX="-1" frameY="-20" frameWidth="410" frameHeight="413"/>
+	<SubTexture name="BF idle dance00001" x="0" y="446" width="392" height="406" rotated="true" frameX="-1" frameY="-20" frameWidth="410" frameHeight="413"/>
+	<SubTexture name="BF idle dance00002" x="4342" y="0" width="394" height="408" rotated="true" frameX="0" frameY="-19" frameWidth="410" frameHeight="413"/>
+	<SubTexture name="BF idle dance00003" x="4342" y="0" width="394" height="408" rotated="true" frameX="0" frameY="-19" frameWidth="410" frameHeight="413"/>
 	<SubTexture name="BF idle dance00004" x="3943" y="0" width="399" height="405" rotated="true" frameX="-3" frameY="-14" frameWidth="410" frameHeight="413"/>
 	<SubTexture name="BF idle dance00005" x="3943" y="0" width="399" height="405" rotated="true" frameX="-3" frameY="-14" frameWidth="410" frameHeight="413"/>
 	<SubTexture name="BF idle dance00006" x="795" y="0" width="410" height="412" frameX="-1" frameY="-2" frameWidth="410" frameHeight="413"/>

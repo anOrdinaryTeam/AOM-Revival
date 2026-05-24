@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="400" y="250" sprite="tricky/maskOff" camx="-700" camy="-100" icon="Tricky/nomask" color="#185F40">
+	<anim name="idle" anim="Idle" x="0" y="0" fps="24" loop="true"/>
+	<anim name="singUP" anim="Sing Up" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Sing Left" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Sing Right" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Sing Down" x="0" y="0" fps="24" loop="false"/>
+</character>

@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="150" y="250" sprite="exe/P2" icon="exe-ycr" color="#010065" applyStageMatrix="true">
+<character x="150" y="250" sprite="exe/P2" icon="EXE/exe-ycr" color="#010065" applyStageMatrix="true">
 	<anim name="idle" anim="NewPhase2Sonic Idle"/>
 	<anim name="singUP" anim="NewPhase2Sonic Up" x="83" y="52"/>
 	<anim name="singDOWN" anim="Duplicate Items Folder/NewPhase2Sonic Down" x="36" y="-3"/>

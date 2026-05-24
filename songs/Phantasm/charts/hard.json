@@ -1,7 +1,7 @@
 {
 	"song": {
 		"sectionLengths": [],
-		"player1": "sonic",
+		"player1": "Phantasm/sonic",
 		"events": [],
 		"gfVersion": "empty",
 		"player2": "empty",
@@ -6848,10 +6848,8 @@
 				"mustHitSection": true
 			}
 		],
-		"player3": null,
 		"song": "phantasm",
 		"validScore": true,
-		"sections": 0,
 		"needsVoices": true,
 		"stage": "fleet",
 		"speed": 2.8,

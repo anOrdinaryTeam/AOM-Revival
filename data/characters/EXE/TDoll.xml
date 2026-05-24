@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="exe/Tails_Doll" icon="TDoll" color="#EE9A00">
+<character sprite="exe/Tails_Doll" icon="EXE/TDoll" color="#EE9A00">
 	<anim name="idle" anim="TailsDoll IDLE instance 1" x="-21" y="189"/>
 	<anim name="singUP" anim="TailsDoll UP instance 1" y="297"/>
 	<anim name="singDOWN" anim="TailsDoll DOWN instance 1" x="-34" y="70"/>

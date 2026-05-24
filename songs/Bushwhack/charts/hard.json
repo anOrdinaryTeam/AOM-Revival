@@ -1,6 +1,6 @@
 {
  "song": {
-  "player1": "bf-zar",
+  "player1": "Zardy/bf",
   "gfVersion": "empty",
   "notes": [
    {
@@ -55359,7 +55359,7 @@
     "mustHitSection": true
    }
   ],
-  "player2": "zardyDark_Normal",
+  "player2": "Zardy/dark",
   "eventObjects": [
    {
     "name": "0SM",
@@ -55380,13 +55380,10 @@
     "type": "BPM Change"
    }
   ],
-  "chartVersion": "KE1",
-  "song": "Bushwhack",
   "needsVoices": true,
   "stage": "maze",
   "validScore": true,
   "bpm": 193,
-  "speed": 2.8,
-  "noteStyle": "normal"
+  "speed": 2.8
  }
 }

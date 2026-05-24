@@ -1,8 +1,0 @@
-<!DOCTYPE codename-engine-character>
-<character sprite="tabi/MadTabi" camx="300" camy="100" color="#333333">
-	<anim name="idle" anim="MadTabiIdle" loop="true"/>
-	<anim name="singUP" anim="MadTabiUp" x="51" y="102"/>
-	<anim name="singLEFT" anim="MadTabiLeft" x="104"/>
-	<anim name="singRIGHT" anim="MadTabiRight" x="5" y="-14"/>
-	<anim name="singDOWN" anim="MadTabiDown" x="-25" y="-65"/>
-</character>

@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="150" icon="fatal-sonic" camx="-740" y="360" scale="4.00000000000001" camy="-810" color="#FF3C6E" antialiasing="false" sprite="fatality/fatal-error-sonic-glitched">
+<character x="150" icon="EXE/fatal-sonic" camx="-740" y="360" scale="4.00000000000001" camy="-810" color="#FF3C6E" antialiasing="false" sprite="fatality/fatal-error-sonic-glitched">
 	<anim x="0.999999999999998" y="129.75" anim="Fatal sonic up" name="singUP"/>
 	<anim x="0.999999999999998" y="129.75" anim="Fatal sonic right" name="singRIGHT"/>
 	<anim x="0.999999999999998" y="129.75" anim="Fatal sonic left" name="singLEFT"/>

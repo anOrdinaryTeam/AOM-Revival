@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="x/Ink" icon="xEvent/ink" color="#FFFFFF" camx="150" camy="50">
+	<anim name="idle" anim="Ink idle dance" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Ink Sing Note UP" x="0" y="4" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Ink Sing Note LEFT" x="1" y="-5" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Ink Sing Note RIGHT" x="-7" y="8" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Ink Sing Note DOWN" x="0" y="-21" fps="24" loop="false"/>
+</character>

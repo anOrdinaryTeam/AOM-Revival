@@ -1,8 +1,8 @@
 {
  "song": {
-  "player1": "bf-mii",
-  "gfVersion": "gf-mii",
-  "player2": "eteled_crazy",
+  "player1": "Eteled/bf-mii",
+  "gfVersion": "Eteled/gf-mii",
+  "player2": "Eteled/eteled_crazy",
   "notes": [
    {
     "sectionNotes": [],

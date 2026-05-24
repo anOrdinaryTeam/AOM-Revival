@@ -1,5 +1,5 @@
-Dream Of Peace:eteled
-Diagraphephobia:eteled_mad
-Post Mortal:austin
-Plaything:eteled_mad
-System Failure:eteled_mad
+Dream Of Peace:Eteled/eteled
+Diagraphephobia:Eteled/eteled_mad
+Post Mortal:Eteled/austin
+Plaything:Eteled/eteled_mad
+System Failure:Eteled/eteled_mad

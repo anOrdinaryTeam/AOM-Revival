@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="zardy/zardyDark" icon="Zardy/dark" color="#0A090F" x="-300" y="140">
+	<anim name="idle" anim="Idle" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Sing Up" x="-85" y="-5" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Sing Left" x="180" y="-20" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Sing Right" x="-80" y="-5" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Sing Down" x="-30" y="-30" fps="24" loop="false"/>
+</character>

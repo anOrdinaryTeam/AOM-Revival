@@ -5,7 +5,7 @@ var clones:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
 function create() {
     defaultCamZoom = 0.55;
-    graphicCache.cache(getModImage('stages/fourth/mech/Sign_Post_Mechanic_copy'));
+    graphicCache.cache(getModImage('stages/fourth/mech/Sign_Post_Mechanic'));
 
     var bg:FlxSprite = new FlxSprite(-10, -10, getModImage('stages/fourth/bg'));
     bg.antialiasing = Options.antialiasing;
@@ -24,21 +24,7 @@ function create() {
     hole.scrollFactor.set(0.9, 0.9);
     insert(members.indexOf(dad) - 1, hole);
 
-    for (i in 0...2) {
-        var clone:FunkinSprite = new FunkinSprite(0, dad.y + 140);
-        clone.loadSprite(getModImage('stages/fourth/Clone'));
-        clone.addAnim('appaer', 'Clone', 24, false);
-        clone.alpha = 0.001;
-        clone.antialiasing = Options.antialiasing;
-        clones.add(clone);
-
-        switch(i) {
-            case 0: clone.x = dad.x - 20;
-            case 1: clone.x = dad.x + 390;
-        }
-    }
-
-    exSpikes = new FunkinSprite(dad.x - 70, dad.y + 170);
+    exSpikes = new FunkinSprite();
     exSpikes.loadSprite(getModImage('stages/fourth/FloorSpikes'));
     exSpikes.addAnim('spike','Floor Spikes', 24, false);
     exSpikes.playAnim('spike');
@@ -67,6 +53,21 @@ function create() {
 }
 
 function postCreate() {
+    for (i in 0...2) {
+        var clone:FunkinSprite = new FunkinSprite(0, dad.y + 140);
+        clone.loadSprite(getModImage('stages/fourth/Clone'));
+        clone.addAnim('appaer', 'Clone', 24, false);
+        clone.alpha = 0.001;
+        clone.antialiasing = Options.antialiasing;
+        clones.add(clone);
+
+        switch(i) {
+            case 0: clone.x = dad.x - 20;
+            case 1: clone.x = dad.x + 390;
+        }
+    }
+    exSpikes.setPosition(dad.x - 70, dad.y + 170);
+
     signPostCam.bgColor = 0;
     FlxG.cameras.add(signPostCam, false);
 }
@@ -109,7 +110,7 @@ function beatHit() {
 
 function doStopSign(sign:Int, fuck:Bool = false) {
 	var daSign:FunkinSprite = new FunkinSprite();
-	daSign.loadSprite(getModImage('stages/fourth/mech/Sign_Post_Mechanic_copy'));
+	daSign.loadSprite(getModImage('stages/fourth/mech/Sign_Post_Mechanic'));
 	daSign.setGraphicSize(Std.int(daSign.width * 0.67));
 	daSign.camera = signPostCam;
 

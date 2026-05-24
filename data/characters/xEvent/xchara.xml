@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="x/xchara" camx="50" camy="80" icon="xEvent/xchara" color="#FFFFFF">
+	<anim name="idle" anim="Dad idle dance" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Dad Sing Note UP" x="46" y="28" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Dad Sing Note LEFT" x="16" y="31" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Dad Sing Note RIGHT" x="44" y="14" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Dad Sing Note DOWN" x="30" y="5" fps="24" loop="false"/>
+</character>

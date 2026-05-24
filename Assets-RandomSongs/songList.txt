@@ -1,14 +1,14 @@
 Accelerant:hank
 Candy:heathers
 Challenge-EDD:ChallengeEdd/icon-edd
-Corruptro:corruptro
+Corruptro:Corruptro/corruptro
 Defeat:black
 Epiphany:bigmonika
-Fatality:fatal-sonic
+Fatality:EXE/fatal-sonic
 Megalo Strike Back:MegaloStrikeB/chara
 Nocturnal Protocol:NP/tinky
-Phantasm:fleetway
-Prey:furnace
+Phantasm:Phantasm/fleetway
+Prey:EXE/furnace
 Silly Billy:SillyBilly/billy
 Sink:sink
 Su Vecindad:SuVecindad/chavo
