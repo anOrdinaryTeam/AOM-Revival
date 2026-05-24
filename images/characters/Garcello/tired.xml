@@ -1,72 +1,73 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="garcellotiredtired_assets.png">
-	<!-- Created with Adobe Animate version 20.0.0.17400 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="garcellotired Sing Note DOWN0000" x="5624" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note DOWN0001" x="4921" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note DOWN0002" x="7030" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note DOWN0003" x="6327" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note DOWN0004" x="4218" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note DOWN0005" x="703" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note DOWN0006" x="0" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note DOWN0007" x="0" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note DOWN0008" x="0" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note DOWN0009" x="0" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note DOWN0010" x="0" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0000" x="1406" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0001" x="703" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0002" x="0" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0003" x="7030" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0004" x="6327" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0005" x="5624" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0006" x="4921" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0007" x="4218" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0008" x="4218" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0009" x="4218" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note LEFT0010" x="4218" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0000" x="7030" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0001" x="6327" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0002" x="5624" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0003" x="4921" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0004" x="4218" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0005" x="6327" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0006" x="3515" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note RIGHT0007" x="2812" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note RIGHT0008" x="2812" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note RIGHT0009" x="2812" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note RIGHT0010" x="2812" y="2109" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note UP0000" x="2812" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note UP0001" x="2109" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note UP0002" x="1406" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired Sing Note UP0003" x="703" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note UP0004" x="0" y="1406" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note UP0005" x="7030" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note UP0006" x="6327" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note UP0007" x="5624" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note UP0008" x="5624" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note UP0009" x="5624" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired Sing Note UP0010" x="5624" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0000" x="2812" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0001" x="2109" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0002" x="1406" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0003" x="3515" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0004" x="2812" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0005" x="2109" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0006" x="1406" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0007" x="703" y="2812" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0008" x="3515" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0009" x="3515" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0010" x="3515" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-	<SubTexture name="garcellotired idle dance0011" x="3515" y="703" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0000" x="6327" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0001" x="5624" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0002" x="4921" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0003" x="4218" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0004" x="3515" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0005" x="2812" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0006" x="2109" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0007" x="1406" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0008" x="703" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0009" x="703" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
-  <SubTexture name="garcellotired cough0010" x="703" y="0" width="700" height="700" frameX="0" frameY="-80" frameWidth="800" frameHeight="800"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="tired.png" width="5771" height="2775" spritePadding="3" borderPadding="1">
+	<SubTexture name="garcellotired Sing Note DOWN0000" x="1" y="1" width="341" height="590" frameX="-173" frameY="-170" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0001" x="345" y="1" width="340" height="593" frameX="-173" frameY="-167" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0002" x="688" y="1" width="342" height="596" frameX="-173" frameY="-164" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0003" x="1033" y="1" width="343" height="598" frameX="-172" frameY="-162" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0004" x="1379" y="1" width="344" height="600" frameX="-172" frameY="-160" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0005" x="1726" y="1" width="700" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0006" x="2429" y="1" width="700" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0007" x="2429" y="1" width="700" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0008" x="2429" y="1" width="700" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0009" x="2429" y="1" width="700" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note DOWN0010" x="2429" y="1" width="700" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0000" x="3132" y="1" width="348" height="629" frameX="-136" frameY="-133" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0001" x="3483" y="1" width="351" height="630" frameX="-138" frameY="-132" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0002" x="3837" y="1" width="351" height="631" frameX="-139" frameY="-131" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0003" x="4191" y="1" width="494" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0004" x="4688" y="1" width="494" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0005" x="5185" y="1" width="497" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0006" x="1" y="704" width="496" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0007" x="500" y="704" width="499" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0008" x="500" y="704" width="499" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0009" x="500" y="704" width="499" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note LEFT0010" x="500" y="704" width="499" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0000" x="1002" y="704" width="367" height="643" frameX="-180" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0001" x="1372" y="704" width="370" height="643" frameX="-180" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0002" x="1745" y="704" width="368" height="643" frameX="-180" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0003" x="2116" y="704" width="370" height="643" frameX="-180" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0004" x="2489" y="704" width="371" height="643" frameX="-179" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0005" x="1372" y="704" width="370" height="643" frameX="-180" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0006" x="2863" y="704" width="364" height="643" frameX="-179" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0007" x="3230" y="704" width="352" height="643" frameX="-179" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0008" x="3230" y="704" width="352" height="643" frameX="-179" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0009" x="3230" y="704" width="352" height="643" frameX="-179" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note RIGHT0010" x="3230" y="704" width="352" height="643" frameX="-179" frameY="-119" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0000" x="3585" y="704" width="537" height="681" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0001" x="4125" y="704" width="532" height="681" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0002" x="4660" y="704" width="537" height="681" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0003" x="5200" y="704" width="530" height="681" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0004" x="1" y="1389" width="527" height="681" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0005" x="531" y="1389" width="700" height="676" frameX="0" frameY="-104" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0006" x="1234" y="1389" width="700" height="676" frameX="0" frameY="-104" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0007" x="1937" y="1389" width="700" height="676" frameX="0" frameY="-104" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0008" x="1937" y="1389" width="700" height="676" frameX="0" frameY="-104" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0009" x="1937" y="1389" width="700" height="676" frameX="0" frameY="-104" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired Sing Note UP0010" x="1937" y="1389" width="700" height="676" frameX="0" frameY="-104" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0000" x="1460" y="2074" width="700" height="643" frameX="0" frameY="-137" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0001" x="2163" y="2074" width="700" height="650" frameX="0" frameY="-130" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0002" x="2866" y="2074" width="700" height="655" frameX="0" frameY="-125" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0003" x="3569" y="2074" width="298" height="637" frameX="-166" frameY="-123" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0004" x="3870" y="2074" width="297" height="639" frameX="-167" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0005" x="4170" y="2074" width="297" height="639" frameX="-167" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0006" x="4470" y="2074" width="297" height="639" frameX="-167" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0007" x="4770" y="2074" width="297" height="639" frameX="-167" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0008" x="5070" y="2074" width="700" height="659" frameX="0" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0009" x="5070" y="2074" width="700" height="659" frameX="0" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0010" x="5070" y="2074" width="700" height="659" frameX="0" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired idle dance0011" x="5070" y="2074" width="700" height="659" frameX="0" frameY="-121" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0000" x="2640" y="1389" width="489" height="681" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0001" x="3132" y="1389" width="488" height="681" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0002" x="3623" y="1389" width="487" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0003" x="4113" y="1389" width="488" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0004" x="4604" y="1389" width="489" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0005" x="5096" y="1389" width="481" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0006" x="1" y="2074" width="484" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0007" x="488" y="2074" width="482" height="682" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0008" x="973" y="2074" width="484" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0009" x="973" y="2074" width="484" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
+	<SubTexture name="garcellotired cough0010" x="973" y="2074" width="484" height="700" frameX="0" frameY="-80" frameWidth="700" frameHeight="700"/>
 </TextureAtlas>

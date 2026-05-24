@@ -11,10 +11,6 @@ pongan aca lo q falte o por pulir en alguna cosa
 [ TRICKY ]
 - Notas Fuego/Instakill en todo el Mod
 
-[ CHARTS CON STACKED NOTES ]
-- Overwrite
-- Phantasm
-
 [ ETELED ]
 - Terminar la Mecanica de Austin
 

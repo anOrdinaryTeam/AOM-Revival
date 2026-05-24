@@ -12,9 +12,9 @@ Prey:furnace
 Silly Billy:SillyBilly/billy
 Sink:sink
 Su Vecindad:SuVecindad/chavo
-pokemon-master:pokemonmaster
+Pokemon Master:pokemonmaster
 Summit:Summit/red
-rush:Rush/rushblaze
+Rush:Rush/rushblaze
 The Deathmatch:TheDeathmatch/icon-insanedad
 Treacherous Thorns:TreacherousThorns/senpai-emtpy
 Looping The Rooms:ltr

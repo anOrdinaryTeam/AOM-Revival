@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character icon="Garcello/Fading" color="#8E40A5">
+<character icon="Garcello/Fading" color="#8E40A5" camx="-100" camy="100">
 	<anim name="idle" anim="garcello idle dance"/>
 	<anim name="singDOWN" anim="garcello Sing Note DOWN"/>
 	<anim name="singRIGHT" anim="garcello Sing Note RIGHT"/>
