@@ -1,9 +1,5 @@
 pongan aca lo q falte o por pulir en alguna cosa
 
-[ SONIC.EXE ]
-- Notas Invisibles en You Can't Run
-- Mecanica de Chaos
-
 [ TRICKY ]
 - Mecanica Drain en Expurgation
 
@@ -19,4 +15,3 @@ pongan aca lo q falte o por pulir en alguna cosa
 [ GENERAL ]
 - Crear Splashes para algunas Skins (Eteled, Austin, xEvent, Majin, Chavo, RGB?)
 - Gameovers a todos los Mods (tengo weba de mencionarlos)
-- Ordenar todos los Datos de Characters a carpetas + Iconos

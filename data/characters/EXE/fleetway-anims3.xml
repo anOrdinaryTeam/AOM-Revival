@@ -1,4 +1,4 @@
 <!DOCTYPE codename-engine-character>
 <character sprite="exe/fleetway/anims3" icon="EXE/fleetway-exe" color="#FED000">
-	<anim name="a" anim="Fleetway Laser Blas"/>
+	<anim name="laser" anim="Fleetway Laser Blas"/>
 </character>

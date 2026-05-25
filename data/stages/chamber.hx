@@ -11,6 +11,8 @@ var bgB:FunkinSprite;
 var floor:FunkinSprite;
 var pebles:FunkinSprite;
 
+var dodgeIcon:FunkinSprite;
+
 function ChaosPath(str:String)
     return getModPath('chamber/$str');
 
@@ -100,6 +102,17 @@ function postCreate() {
     camGame.followLerp = 0.06;
     PlayState.instance.comboGroup.x += 200;
 
+    dodgeIcon = new FunkinSprite().loadSprite(ChaosPath('spacebar_icon'));
+    dodgeIcon.antialiasing = Options.antialiasing;
+    dodgeIcon.camera = camHUD;
+    dodgeIcon.scale.set(0.5, 0.5);
+    dodgeIcon.addAnim('a', 'space', 24, false);
+    dodgeIcon.playAnim('a');
+    dodgeIcon.alpha = 0.001;
+    dodgeIcon.screenCenter();
+    dodgeIcon.x -= 60;
+    add(dodgeIcon);
+
     precacheCharacter(1, 'EXE/bf-super');
     for (cache in ['anims1', 'anims2', 'anims3'])
         precacheCharacter(0, 'EXE/fleetway-$cache');
@@ -126,6 +139,40 @@ function onSongStart() {
         remove(bgA, false);
         remove(emeraldbeam, false);
     }
+}
+
+var canDodge:Bool = false;
+var dodging:Bool = false;
+var canFly:Bool = true;
+var floaty:Float = 0;
+
+function dodgeEvent() {
+    var stepEvent:Int = 0;
+    canDodge = true;
+
+    dodgeIcon.alpha = 1;
+    dodgeIcon.playAnim('a', true);
+
+    new FlxTimer().start(0, (tmr) -> {
+        stepEvent++;
+
+        if (stepEvent < 4)
+            tmr.reset(0.32);
+
+        if (stepEvent == 3) {
+            canFly = false;
+            changeCharacter(0, 'EXE/fleetway-anims3');
+            dad.playAnim('laser', true);
+            dad.animation.finishCallback = (Anim) -> {
+                if (Anim == 'laser') {
+                    canFly = true;
+                    changeCharacter(0, 'EXE/fleetway');
+                }
+            }
+        }
+        else if (stepEvent == 4)
+            remove(dodgeIcon, true);
+    });
 }
 
 function stepHit() switch(curStep) {
@@ -165,6 +212,8 @@ function stepHit() switch(curStep) {
         opponentCam.set(camFollow.x, camFollow.y);
         forceCamPos = false;
         FlxTween.tween(camHUD, {alpha: 1}, 0.2, {ease: FlxEase.cubeOut});
+    case 256:
+        dodgeEvent();
     case 1008:
         playModSound('SUPERBF');
         changeCharacter(1, 'EXE/bf-super');
@@ -173,12 +222,31 @@ function stepHit() switch(curStep) {
 		FlxG.camera.flash(FlxColor.YELLOW, 0.2);
 }
 
-var floaty:Float = 0;
-
 function update() {
     floaty += 0.03;
 
-    if (!forceCamPos) {
+    if (FlxG.keys.justPressed.SPACE && canDodge) {
+        dodging = true;
+        boyfriend.playAnim('dodge', true, 'LOCK');
+        boyfriend.animation.finishCallback = (Anim) -> {
+            if (Anim == 'dodge') {
+                dodging = false;
+                canDodge = false;
+                boyfriend.dance();
+            }
+        }
+    }
+
+    // might be more large than the og code but its more safety
+    if (dad.curCharacter == 'EXE/fleetway-anims3') {
+        var curAnim:String = dad.animation.curAnim.name;
+        var curFrame:Int = dad.animation.curAnim.curFrame;
+
+        if ((curAnim == 'laser' && curFrame == 15) && !dodging)
+            health -= 999;
+    }
+
+    if (!forceCamPos && canFly) {
         dad.y += Math.sin(floaty) * 1.3;
         opponentCam.y += Math.sin(floaty) * 1.3;
     }
