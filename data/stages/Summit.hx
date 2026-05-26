@@ -1,5 +1,5 @@
 function postCreate()
-    loadHud('ForeverEngine', '0.3.1');
+    loadHud('ForeverEngine');
 
 function create() {
     defaultCamZoom = 0.5;

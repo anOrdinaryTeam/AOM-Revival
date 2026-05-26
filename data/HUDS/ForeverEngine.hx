@@ -3,7 +3,7 @@ import flixel.text.FlxTextBorderStyle;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 
-function onHudLoad(hud, ver) if (hud == 'ForeverEngine') {
+function onHudLoad(hud) if (hud == 'ForeverEngine') {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
@@ -13,7 +13,7 @@ function onHudLoad(hud, ver) if (hud == 'ForeverEngine') {
     score.screenCenter(FlxAxes.X);
     hudItems.add(score);
 
-    var txtMark:String = getSaveData('Forever_WatermarkType') == 'FE' ? 'FOREVER ENGINE v$ver' : 'CODENAME ENGINE ${GitCommitMacro.commitHash}';
+    var txtMark:String = getSaveData('Forever_WatermarkType') == 'FE' ? 'FOREVER ENGINE v0.3.1' : 'CODENAME ENGINE ${GitCommitMacro.commitHash}';
     var cornerMark:FunkinText = new FunkinText(0, 0, 0, txtMark);
     cornerMark.setFormat(Paths.font('vcr.ttf'), 18, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
 	cornerMark.setPosition(FlxG.width - (cornerMark.width + 5), 5);
@@ -39,8 +39,9 @@ function onRatingUpdate(_) {
 var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
 function onPlayerHit(_) {
     ratingsInt[_.rating] += 1;
-
-    trace(ratingsInt);
+    if (getAccuracyLetter() == '[SFC]') {
+        _.ratingPrefix = 'modCombos/ForeverEngine/';
+    }
 }
 function getAccuracyLetter() {
     var rating:String = '';
@@ -53,6 +54,8 @@ function getAccuracyLetter() {
         rating = '[FC]';
     else 
         rating = '';
+
+    return rating;
 }
 
 function getRankLetter(rank) {
