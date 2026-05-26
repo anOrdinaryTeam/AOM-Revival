@@ -130,7 +130,7 @@ function createRating(shit) {
 
 		FlxTween.tween(numScore, {alpha: 0}, 0.2, {
 			onComplete: function(tween:FlxTween) {
-				numScore.kill();
+                destroitSmash(numScore);
 			},
 			startDelay: Conductor.crochet * 0.002
 		});
@@ -156,14 +156,13 @@ function createRating(shit) {
     rating.scale.set(shit.ratingScale, shit.ratingScale);
     rating.updateHitbox();
 
-
     rating.antialiasing = shit.ratingAntialiasing;
     add(rating);
 
     FlxTween.tween(rating, {alpha: 0}, 0.2, {
         startDelay: Conductor.crochet * 0.001,
         onComplete: function(tween:FlxTween) {
-            rating.kill();
+            destroitSmash(rating);
         }
     });
 }
@@ -185,7 +184,7 @@ function createRatingMiss() {
     FlxTween.tween(rating, {alpha: 0}, 0.2, {
         startDelay: Conductor.crochet * 0.001,
         onComplete: function(tween:FlxTween) {
-            rating.kill();
+            destroitSmash(rating);
         }
     });
 }

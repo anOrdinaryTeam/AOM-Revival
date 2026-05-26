@@ -138,6 +138,14 @@ public function setObjectOrder(item:FlxBasic, pos:Int) if (item != null) {
 public function getObjectOrder(item:FlxBasic) if (item != null)
     return members.indexOf(item);
 
+public function destroitSmash(item) {
+    if (item != null) {
+        item.kill();
+        item.destroy();
+        remove(item, true);
+    }
+}
+
 function create() {
     RefreshSaveDatas();
 
