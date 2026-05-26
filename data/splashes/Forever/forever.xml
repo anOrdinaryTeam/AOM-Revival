@@ -1,0 +1,19 @@
+<!DOCTYPE codename-engine-splashes>
+<splashes sprite="splashes/Forever/noteSplashes" alpha="0.6">
+	<strum id="0"> <!-- LEFT -->
+		<anim name="splashleft1" anim="purple impact 1" fps="24" x="20" y="20" />
+		<anim name="splashleft2" anim="purple impact 2" fps="24" x="20" y="20" />
+	</strum>
+	<strum id="1"> <!-- DOWN -->
+		<anim name="splashdown1" anim="blue impact 1" fps="24" x="20" y="20" />
+		<anim name="splashdown2" anim="blue impact 2" fps="24" x="20" y="20" />
+	</strum>
+	<strum id="2"> <!-- UP -->
+		<anim name="splashup1" anim="green impact 1" fps="24" x="20" y="20" />
+		<anim name="splashup2" anim="green impact 2" fps="24" x="20" y="20" />
+	</strum>
+	<strum id="3"> <!-- RIGHT -->
+		<anim name="splashright1" anim="red impact 1" fps="24" x="20" y="20" />
+		<anim name="splashright2" anim="red impact 2" fps="24" x="20" y="20" />
+	</strum>
+</splashes>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="noteSplashes.png">
+<SubTexture name="purple impact 10000" x="1061" y="342" width="140" height="152" frameX="0" frameY="0" frameWidth="138" frameHeight="150" />
+<SubTexture name="purple impact 10001" x="354" y="795" width="173" height="183" frameX="0" frameY="0" frameWidth="171" frameHeight="181" />
+<SubTexture name="purple impact 10002" x="356" y="598" width="179" height="185" frameX="0" frameY="0" frameWidth="177" frameHeight="183" />
+<SubTexture name="purple impact 10003" x="882" y="370" width="177" height="184" frameX="0" frameY="0" frameWidth="175" frameHeight="182" />
+<SubTexture name="purple impact 10004" x="0" y="979" width="174" height="158" frameX="0" frameY="0" frameWidth="172" frameHeight="156" />
+
+<SubTexture name="purple impact 20000" x="540" y="400" width="146" height="171" frameX="0" frameY="0" frameWidth="144" frameHeight="169" />
+<SubTexture name="purple impact 20001" x="702" y="198" width="178" height="197" frameX="0" frameY="0" frameWidth="176" frameHeight="195" />
+<SubTexture name="purple impact 20002" x="0" y="400" width="180" height="198" frameX="0" frameY="0" frameWidth="178" frameHeight="196" />
+<SubTexture name="purple impact 20003" x="0" y="0" width="176" height="200" frameX="0" frameY="0" frameWidth="174" frameHeight="198" />
+<SubTexture name="purple impact 20004" x="176" y="200" width="174" height="199" frameX="0" frameY="0" frameWidth="172" frameHeight="197" />
+
+<SubTexture name="blue impact 10000" x="1061" y="494" width="140" height="152" frameX="0" frameY="0" frameWidth="138" frameHeight="150" />
+<SubTexture name="blue impact 10001" x="527" y="795" width="173" height="183" frameX="0" frameY="0" frameWidth="171" frameHeight="181" />
+<SubTexture name="blue impact 10002" x="535" y="598" width="179" height="185" frameX="0" frameY="0" frameWidth="177" frameHeight="183" />
+<SubTexture name="blue impact 10003" x="882" y="554" width="177" height="184" frameX="0" frameY="0" frameWidth="175" frameHeight="182" />
+<SubTexture name="blue impact 10004" x="174" y="979" width="174" height="158" frameX="0" frameY="0" frameWidth="172" frameHeight="156" />
+
+<SubTexture name="blue impact 20000" x="714" y="598" width="146" height="171" frameX="0" frameY="0" frameWidth="144" frameHeight="169" />
+<SubTexture name="blue impact 20001" x="702" y="395" width="178" height="197" frameX="0" frameY="0" frameWidth="176" frameHeight="195" />
+<SubTexture name="blue impact 20002" x="180" y="400" width="180" height="198" frameX="0" frameY="0" frameWidth="178" frameHeight="196" />
+<SubTexture name="blue impact 20003" x="176" y="0" width="176" height="200" frameX="0" frameY="0" frameWidth="174" frameHeight="198" />
+<SubTexture name="blue impact 20004" x="350" y="200" width="174" height="199" frameX="0" frameY="0" frameWidth="172" frameHeight="197" />
+
+<SubTexture name="green impact 10000" x="1061" y="646" width="140" height="152" frameX="0" frameY="0" frameWidth="138" frameHeight="150" />
+<SubTexture name="green impact 10001" x="700" y="795" width="173" height="183" frameX="0" frameY="0" frameWidth="171" frameHeight="181" />
+<SubTexture name="green impact 10002" x="882" y="0" width="179" height="185" frameX="0" frameY="0" frameWidth="177" frameHeight="183" />
+<SubTexture name="green impact 10003" x="0" y="795" width="177" height="184" frameX="0" frameY="0" frameWidth="175" frameHeight="182" />
+<SubTexture name="green impact 10004" x="348" y="979" width="174" height="158" frameX="0" frameY="0" frameWidth="172" frameHeight="156" />
+
+<SubTexture name="green impact 20000" x="1061" y="0" width="146" height="171" frameX="0" frameY="0" frameWidth="144" frameHeight="169" />
+<SubTexture name="green impact 20001" x="0" y="598" width="178" height="197" frameX="0" frameY="0" frameWidth="176" frameHeight="195" />
+<SubTexture name="green impact 20002" x="360" y="400" width="180" height="198" frameX="0" frameY="0" frameWidth="178" frameHeight="196" />
+<SubTexture name="green impact 20003" x="352" y="0" width="176" height="200" frameX="0" frameY="0" frameWidth="174" frameHeight="198" />
+<SubTexture name="green impact 20004" x="528" y="0" width="174" height="199" frameX="0" frameY="0" frameWidth="172" frameHeight="197" />
+
+<SubTexture name="red impact 10000" x="1061" y="798" width="140" height="152" frameX="0" frameY="0" frameWidth="138" frameHeight="150" />
+<SubTexture name="red impact 10001" x="873" y="795" width="173" height="183" frameX="0" frameY="0" frameWidth="171" frameHeight="181" />
+<SubTexture name="red impact 10002" x="882" y="185" width="179" height="185" frameX="0" frameY="0" frameWidth="177" frameHeight="183" />
+<SubTexture name="red impact 10003" x="177" y="795" width="177" height="184" frameX="0" frameY="0" frameWidth="175" frameHeight="182" />
+<SubTexture name="red impact 10004" x="522" y="979" width="174" height="158" frameX="0" frameY="0" frameWidth="172" frameHeight="156" />
+
+<SubTexture name="red impact 20000" x="1061" y="171" width="146" height="171" frameX="0" frameY="0" frameWidth="144" frameHeight="169" />
+<SubTexture name="red impact 20001" x="178" y="598" width="178" height="197" frameX="0" frameY="0" frameWidth="176" frameHeight="195" />
+<SubTexture name="red impact 20002" x="702" y="0" width="180" height="198" frameX="0" frameY="0" frameWidth="178" frameHeight="196" />
+<SubTexture name="red impact 20003" x="0" y="200" width="176" height="200" frameX="0" frameY="0" frameWidth="174" frameHeight="198" />
+<SubTexture name="red impact 20004" x="528" y="199" width="174" height="199" frameX="0" frameY="0" frameWidth="172" frameHeight="197" />
+</TextureAtlas>
