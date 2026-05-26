@@ -47,5 +47,12 @@
 				<value name="Kade" value="KE"/>
 			</choice>
 		</menu>
+
+		<menu name="Forever Engine" desc="HUD Settings">
+			<choice id="AOM_forever_WATERMARK_engine" name="Engine Type" desc="Type of Engine for the Watermark">
+				<value name="Forever" value="FE"/>
+				<value name="Codename" value="CNE"/>
+			</choice>
+		</menu>
 	</menu>
 </menu>

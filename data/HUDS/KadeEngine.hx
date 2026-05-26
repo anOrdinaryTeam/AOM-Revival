@@ -99,9 +99,8 @@ function onPlayerHit(_) {
         showMS(_);
 }
 
-public var str:String;
 function onRatingUpdate(_) {
-    str = 'Score: ' + songScore + ' | ' + missesType + ': ' + misses + ' | Accuracy: ' + CoolUtil.quantize(accuracy * 100, 100) + '%';
+    var str = 'Score: ' + songScore + ' | ' + missesType + ': ' + misses + ' | Accuracy: ' + CoolUtil.quantize(accuracy * 100, 100) + '%';
     if (getSaveData('Kade_Ratings')) str += ' | ' + getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _.rating.rating);
     hudItems.members[0]?.text = str;
     hudItems.members[0]?.screenCenter(FlxAxes.X);

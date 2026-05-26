@@ -127,6 +127,11 @@ public static function RefreshSaveDatas() {
     if (saveMap.get('Kade_HitMS') != FlxG.save.data.AOM_kade_HIT_MS)
         saveMap.set('Kade_HitMS', FlxG.save.data.AOM_kade_HIT_MS);
     // [ END ]
+
+    // [ FOREVER DATA ]
+    if (saveMap.get('Forever_WatermarkType') != FlxG.save.data.AOM_forever_WATERMARK_engine)
+        saveMap.set('Forever_WatermarkType', FlxG.save.data.AOM_forever_WATERMARK_engine);
+    // [ END ]
 }
 
 static function LoadSaveData() {
@@ -208,6 +213,11 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_kade_HIT_MS ??= false;
     saveMap.set('Kade_HitMS', FlxG.save.data.AOM_kade_HIT_MS);
+    // [ END ]
+
+    // [ FOREVER DATA ]
+    FlxG.save.data.AOM_forever_WATERMARK_engine ??= 'FE';
+    saveMap.set('Forever_WatermarkType', FlxG.save.data.AOM_forever_WATERMARK_engine);
     // [ END ]
 }
 
