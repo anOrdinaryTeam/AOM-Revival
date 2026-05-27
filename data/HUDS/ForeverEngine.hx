@@ -27,9 +27,8 @@ function onHudLoad(hud) if (hud == 'ForeverEngine') {
     hudItems.add(centerMark);
 
     scripts.call('postHudLoad');
-}
 
-function createPost(_) {
+    trace('Warning: This HUD increases the RAM usage.');
 }
 
 function onRatingUpdate(_) {
@@ -39,6 +38,8 @@ function onRatingUpdate(_) {
 }
 
 var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
+var missNumScale:Float;
+var missRatingScale:Float;
 function onPlayerHit(_) {
     _.displayRating = false;
     _.showRating = false;
@@ -47,11 +48,13 @@ function onPlayerHit(_) {
 
     if (!_.note.isSustainNote)
         createRating(_);
+
+    missNumScale = _.numScale; 
+    missRatingScale = _.ratingScale;
 }
 
-function onPlayerMiss(_)
-    if (!_.note.isSustainNote)
-        createRatingMiss();
+function onPlayerMiss()
+    createRatingMiss();
 
 function getAccuracyLetter() {
     var rating:String = '';
@@ -69,37 +72,14 @@ function getAccuracyLetter() {
 }
 
 function getRankLetter(rank) {
-    var rating:String = '';
-
-    var scoreRank:Array<Bool> = [
-        rank >= 100,
-        rank >= 95,
-        rank >= 90,
-        rank >= 85,
-        rank >= 80,
-        rank >= 75,
-        rank >= 70,
-        rank >= 65
-    ];
-
-    for (i in 0...scoreRank.length) {
-        var shit = scoreRank[i];
-
-        if (shit) {
-            switch(i) {
-                case 0: rating += 'S+';
-                case 1: rating += 'S';
-                case 2: rating += 'A';
-                case 3: rating += 'B';
-                case 4: rating += 'C';
-                case 5: rating += 'D';
-                case 6: rating += 'E';
-                case 6: rating += 'F';
-            }
-            break;
-        }
-    }
-    return rating;
+    if (rank >= 100) return 'S+';
+    if (rank >= 95)  return 'S';
+    if (rank >= 90)  return 'A';
+    if (rank >= 85)  return 'B';
+    if (rank >= 80)  return 'C';
+    if (rank >= 75)  return 'D';
+    if (rank >= 70)  return 'E';
+    return 'F';
 }
 
 function createRating(shit) {
@@ -111,11 +91,12 @@ function createRating(shit) {
     else if (combo >= 10)
 	    shitScore.push(Math.floor(combo / 10) % 10);
 
+    if (combo == 0) combo = 1;
 	shitScore.push(combo % 10);
 
     var i = 0;
     for (n in shitScore) {
-        var numScore:FlxSprite = new FlxSprite((43 * i) +comboGroup.x, comboGroup.y + 150);
+        var numScore:FlxSprite = new FlxSprite((43 * i) + comboGroup.x, comboGroup.y + 150);
         numScore.loadGraphic(Paths.image((accuracy == 1 ? 'modCombos/ForeverEngine/num$n' : 'game/score/num$n')));
  
 		numScore.acceleration.y = FlxG.random.int(200, 300);
@@ -125,7 +106,7 @@ function createRating(shit) {
         numScore.scale.set(shit.numScale, shit.numScale);
 		numScore.updateHitbox();
         
-		numScore.antialiasing = shit.numAntialiasing;
+		numScore.antialiasing = Options.antialiasing;
         add(numScore);
 
 		FlxTween.tween(numScore, {alpha: 0}, 0.2, {
@@ -156,7 +137,7 @@ function createRating(shit) {
     rating.scale.set(shit.ratingScale, shit.ratingScale);
     rating.updateHitbox();
 
-    rating.antialiasing = shit.ratingAntialiasing;
+    rating.antialiasing = Options.antialiasing;
     add(rating);
 
     FlxTween.tween(rating, {alpha: 0}, 0.2, {
@@ -168,6 +149,66 @@ function createRating(shit) {
 }
 
 function createRatingMiss() {
+    var fixMisses:Int = 1;
+    fixMisses += misses;
+
+    var shitScore = []; 
+	if (fixMisses >= 1000)
+        shitScore.push(Math.floor(fixMisses / 1000) % 10);
+    else if (fixMisses >= 100)
+	    shitScore.push(Math.floor(fixMisses / 100) % 10);
+    else if (fixMisses >= 10)
+	    shitScore.push(Math.floor(fixMisses / 10) % 10);
+
+	shitScore.push(fixMisses % 10);
+
+    var i = 0;
+    for (n in shitScore) {
+        var numScore:FlxSprite = new FlxSprite((43 * i) + comboGroup.x, comboGroup.y + 150);
+        numScore.loadGraphic(Paths.image('game/score/num$n'));
+        numScore.color = FlxColor.fromRGB(204, 66, 66);
+ 
+		numScore.acceleration.y = FlxG.random.int(200, 300);
+		numScore.velocity.y -= FlxG.random.int(140, 160);
+		numScore.velocity.x = FlxG.random.float(-10, 10);
+
+        numScore.scale.set(missNumScale, missNumScale);
+		numScore.updateHitbox();
+        
+		numScore.antialiasing = Options.antialiasing;
+        add(numScore);
+
+		FlxTween.tween(numScore, {alpha: 0}, 0.2, {
+			onComplete: function(tween:FlxTween) {
+                destroitSmash(numScore);
+			},
+			startDelay: Conductor.crochet * 0.002
+		});
+
+        i++;
+
+        var line:FlxSprite = new FlxSprite(numScore.x - (43 * i), comboGroup.y + 150);
+        line.loadGraphic(Paths.image('modCombos/ForeverEngine/line'));
+        line.color = FlxColor.fromRGB(204, 66, 66);
+    
+        line.acceleration.y = FlxG.random.int(200, 300);
+    	line.velocity.y -= FlxG.random.int(140, 160);
+    	line.velocity.x = FlxG.random.float(-10, 10);
+    
+        line.scale.set(missNumScale, missNumScale);
+        line.updateHitbox();
+    
+        line.antialiasing = Options.antialiasing;
+        add(line);
+    
+		FlxTween.tween(line, {alpha: 0}, 0.2, {
+			onComplete: function(tween:FlxTween) {
+                destroitSmash(line);
+			},
+			startDelay: Conductor.crochet * 0.002
+		});
+    }
+
     var rating:FlxSprite = new FlxSprite(comboGroup.x, comboGroup.y);
     rating.loadGraphic(Paths.image('modCombos/ForeverEngine/miss'));
 
@@ -175,7 +216,7 @@ function createRatingMiss() {
     rating.velocity.y -= FlxG.random.int(140, 175);
     rating.velocity.x -= FlxG.random.int(0, 10);
 
-    rating.scale.set(0.7, 0.7);
+    rating.scale.set(missRatingScale, missRatingScale);
     rating.updateHitbox();
 
     rating.antialiasing = Options.antialiasing;
