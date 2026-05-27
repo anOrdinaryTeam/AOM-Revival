@@ -28,6 +28,8 @@ function create() {
 
 function postCreate() {
     loadHud('KadeEngine', 'no me acuerdo');
+    setRatingPrefix('Doki-old');
+
     iconP1.setIcon('bf');
     healthBar.createColoredFilledBar(FlxColor.fromString('#31B0D1'));
     healthBar.updateBar();
@@ -43,10 +45,18 @@ var skin:String = 'modNotes/Epiphany/default';
 function onNoteCreation(_) {
     if (_.strumLineID == 1 && usingSkins) return;
     _.noteSprite = skin;
-    if (_.strumLineID == 1) _.note.splash = 'doki';
+    if (_.strumLineID == 1) _.note.splash = 'Doki/old';
 }
 
 function onStrumCreation(_) {
     if (_.player == 1 && usingSkins) return;
     _.sprite = skin;
+}
+
+function onCountdown(_) if (_.swagCounter != 4) {
+    switch(_.swagCounter) {
+        case 1: _.spritePath = 'modCountdowns/Doki/ready';
+        case 2: _.spritePath = 'modCountdowns/Doki/set';
+        case 3: _.spritePath = 'modCountdowns/Doki/go';
+    }
 }
