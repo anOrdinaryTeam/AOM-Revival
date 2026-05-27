@@ -29,7 +29,7 @@ function new() {
     trace('Loaded Mod List: $currentModsList ');
 
     if (GitCommitMacro.commitHash == '9757b00') {
-        NativeAPI.showMessageBox('Not in Nightly Build', 'Download the Experimental CNE');
+        NativeAPI.showMessageBox('Not in Nightly Build', 'Download the Experimental Version');
         CoolUtil.openURL("https://codename-engine.com/");
         Sys.exit(0);
     }
@@ -132,6 +132,9 @@ public static function RefreshSaveDatas() {
     if (saveMap.get('Forever_Opacity') != FlxG.save.data.AOM_Forever_OPACITY)
         saveMap.set('Forever_Opacity', FlxG.save.data.AOM_Forever_OPACITY);
 
+    if (saveMap.get('Forever_Splash') != FlxG.save.data.AOM_forever_SPLASH)
+        saveMap.set('Forever_Splash', FlxG.save.data.AOM_forever_SPLASH);
+
     if (saveMap.get('Forever_Ratings') != FlxG.save.data.AOM_forever_RATINGS)
         saveMap.set('Forever_Ratings', FlxG.save.data.AOM_forever_RATINGS);
 
@@ -146,6 +149,9 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('Forever_Miss') != FlxG.save.data.AOM_forever_MISS)
         saveMap.set('Forever_Miss', FlxG.save.data.AOM_forever_MISS);
+
+    if (saveMap.get('Forever_MissType') != FlxG.save.data.AOM_forever_MISS_TYPE)
+        saveMap.set('Forever_MissType', FlxG.save.data.AOM_forever_MISS_TYPE);
     // [ END ]
 }
 
@@ -234,6 +240,9 @@ static function LoadSaveData() {
     FlxG.save.data.AOM_Forever_OPACITY ??= 1;
     saveMap.set('Forever_Opacity', FlxG.save.data.AOM_Forever_OPACITY);
 
+    FlxG.save.data.AOM_forever_SPLASH ??= true;
+    saveMap.set('Forever_Splash', FlxG.save.data.AOM_forever_SPLASH);
+
     FlxG.save.data.AOM_forever_RATINGS ??= true;
     saveMap.set('Forever_Ratings', FlxG.save.data.AOM_forever_RATINGS);
 
@@ -248,6 +257,9 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_forever_MISS ??= true;
     saveMap.set('Forever_Miss', FlxG.save.data.AOM_forever_MISS);
+
+    FlxG.save.data.AOM_forever_MISS_TYPE ??= 'Combo Breaks';
+    saveMap.set('Forever_MissType', FlxG.save.data.AOM_forever_MISS_TYPE);
     // [ END ]
 }
 

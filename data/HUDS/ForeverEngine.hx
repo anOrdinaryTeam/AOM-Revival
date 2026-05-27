@@ -14,7 +14,7 @@ function onHudLoad(hud) if (hud == 'ForeverEngine') {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
-    var score:FunkinText = new FunkinText(0, Math.floor(healthBarBG.y + 40), 0, 'Score: 0 • Accuracy: 0% • Combo Breaks: 0 • Rank: F', 20);
+    var score:FunkinText = new FunkinText(0, Math.floor(healthBarBG.y + 40), 0, 'Score: 0 • Accuracy: 0% • ${getSaveData('Forever_MissType')}: 0 • Rank: F', 20);
     score.setFormat(Paths.font('vcr.ttf'), 18, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 1.5);
     score.screenCenter(FlxAxes.X);
     hudItems.add(score);
@@ -26,7 +26,7 @@ function onHudLoad(hud) if (hud == 'ForeverEngine') {
     cornerMark.antialiasing = Options.antialiasing;
     hudItems.add(cornerMark);
 
-    if (getSaveData('Forever_Combo')) {
+    if (getSaveData('Forever_Info')) {
         var centerMark:FunkinText = new FunkinText(0, 0, 0, '- ${PlayState.SONG.meta?.name} [${curDiff.toUpperCase()}] -');
         centerMark.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
         centerMark.y = (FlxG.height / 24) - 24;
@@ -60,16 +60,17 @@ function beatHit() for (icons in [iconP1, iconP2]) {
 }
 
 function onRatingUpdate(_) {
-    var str = 'Score: $songScore • Accuracy: ${CoolUtil.quantize(accuracy * 100, 100)}% ${getAccuracyLetter()} • Combo Breaks: $misses • Rank: ${getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _)}';
+    var quanAcc:Float = CoolUtil.quantize(accuracy * 100, 100);
+    var str = 'Score: $songScore • Accuracy: $quanAcc% ${getAccuracyLetter()} • ${getSaveData('Forever_MissType')}: $misses • Rank: ${getRankLetter(quanAcc, _)}';
     hudItems.members[0]?.text = str;
     hudItems.members[0]?.screenCenter(FlxAxes.X);
 }
-function onPlayerHit(_) {
+
+function onPlayerHit(_) {    
     ratingsInt[_.rating] += 1;
 
     if (getSaveData('Forever_Combo')) {
-        _.displayRating = false;
-        _.showRating = false;
+        _.displayRating = _.showRating = false;
 
         if (!_.note.isSustainNote)
             createRating(_);
@@ -77,13 +78,13 @@ function onPlayerHit(_) {
         missNumScale = _.numScale; 
         missRatingScale = _.ratingScale;
     }
+    if (getSaveData('Forever_Splash'))
+        _.note.splash = "Forever/forever";
 }
 
-function onPlayerMiss() {
-    if (getSaveData('Forever_Miss')) {
+function onPlayerMiss()
+    if (getSaveData('Forever_Miss'))
         createRatingMiss();
-    }
-}
 
 function getAccuracyLetter() {
     var rating:String = '';

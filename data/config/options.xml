@@ -50,11 +50,16 @@
 
 		<menu name="Forever Engine" desc="HUD Settings">
 			<number   id="AOM_Forever_OPACITY"   name="HUD Opacity"        desc="Change the HUD opacity" min="0" max="1" change="0.1"/>
-			<checkbox id="AOM_forever_WATERMARK" name="Forever Watermark"  desc="Wanna watermark Forever Engine style?"/>
-			<checkbox id="AOM_forever_INFO"      name="Forever Info"       desc="Wanna info Forever Engine style?"/>
-			<checkbox id="AOM_forever_RATINGS"   name="Forever Ratings"    desc="Wanna ratings Forever Engine style?"/>
-			<checkbox id="AOM_forever_COMBO"     name="Forever Combo"      desc="Wanna combo Forever Engine style? WARNING: THIS WILL INCREASE YOUR RAM USAGE."/>
-			<checkbox id="AOM_forever_MISS"      name="Forever Combo Miss" desc="Wanna combo miss Forever Engine style? WARNING: THIS WILL INCREASE YOUR RAM USAGE."/>
+			<checkbox id="AOM_forever_SPLASH"    name="Forever Splash"     desc="Wanna splashes like Forever style?"/>
+			<checkbox id="AOM_forever_WATERMARK" name="Forever Watermark"  desc="Wanna watermark like Forever style?"/>
+			<checkbox id="AOM_forever_INFO"      name="Forever Info"       desc="Wanna info like Forever style?"/>
+			<checkbox id="AOM_forever_RATINGS"   name="Forever Ratings"    desc="Wanna ratings like Forever style?"/>
+			<checkbox id="AOM_forever_COMBO"     name="Forever Combo"      desc="Wanna combo like Forever style? WARNING: THIS WILL INCREASE YOUR RAM USAGE."/>
+			<checkbox id="AOM_forever_MISS"      name="Forever Combo Miss" desc="Wanna combo miss like Forever style? WARNING: THIS WILL INCREASE YOUR RAM USAGE."/>
+			<choice   id="AOM_forever_MISS_TYPE" name="Misses Type"        desc="Type of the Misses Text">
+				<value name="Combo Breaks" value="Combo Breaks"/>
+				<value name="Misses"       value="Misses"/>
+			</choice>
 		</menu>
 	</menu>
 </menu>
