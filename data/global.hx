@@ -143,6 +143,9 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('Forever_Combo') != FlxG.save.data.AOM_forever_COMBO)
         saveMap.set('Forever_Combo', FlxG.save.data.AOM_forever_COMBO);
+
+    if (saveMap.get('Forever_Miss') != FlxG.save.data.AOM_forever_MISS)
+        saveMap.set('Forever_Miss', FlxG.save.data.AOM_forever_MISS);
     // [ END ]
 }
 
@@ -242,6 +245,9 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_forever_COMBO ??= true;
     saveMap.set('Forever_Combo', FlxG.save.data.AOM_forever_COMBO);
+
+    FlxG.save.data.AOM_forever_MISS ??= true;
+    saveMap.set('Forever_Miss', FlxG.save.data.AOM_forever_MISS);
     // [ END ]
 }
 

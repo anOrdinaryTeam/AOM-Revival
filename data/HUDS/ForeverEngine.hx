@@ -40,6 +40,16 @@ function onHudLoad(hud) if (hud == 'ForeverEngine') {
     scripts.call('postHudLoad');
 }
 
+function update() for (icons in [iconP1, iconP2]) {
+	icons.setGraphicSize(Std.int(FlxMath.lerp(150, icons.width, .5)));
+	icons.updateHitbox();
+}
+
+function beatHit() for (icons in [iconP1, iconP2]) {
+    icons.setGraphicSize(Std.int(icons.width + 45));
+    icons.updateHitbox();
+}
+
 function onRatingUpdate(_) {
     var str = 'Score: $songScore • Accuracy: ${CoolUtil.quantize(accuracy * 100, 100)}% ${getAccuracyLetter()} • Combo Breaks: $misses • Rank: ${getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _)}';
     hudItems.members[0]?.text = str;
@@ -66,7 +76,7 @@ function onPlayerHit(_) {
 }
 
 function onPlayerMiss() {
-    if (getSaveData('Forever_Combo')) {
+    if (getSaveData('Forever_Miss')) {
         createRatingMiss();
     }
 }
