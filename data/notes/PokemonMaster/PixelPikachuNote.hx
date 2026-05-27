@@ -9,7 +9,7 @@ function onNoteCreation(_) if (_.noteType == t) {
 function onPlayerHit(e) if (e.noteType == t) {
     FlxG.sound.play(Paths.sound('pokemonmaster/Thunder'));
     e.animCancelled = true;
-    health -= 0.2;
+    health -= .2;
     misses += 1;
 }
 
