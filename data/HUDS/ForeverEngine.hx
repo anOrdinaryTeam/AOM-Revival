@@ -3,6 +3,13 @@ import flixel.text.FlxTextBorderStyle;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 
+var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
+
+var missNumScale:Float;
+var missRatingScale:Float;
+
+var isGold:Bool = true;
+
 function onHudLoad(hud) if (hud == 'ForeverEngine') {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
@@ -43,6 +50,8 @@ function onHudLoad(hud) if (hud == 'ForeverEngine') {
 function update() for (icons in [iconP1, iconP2]) {
 	icons.setGraphicSize(Std.int(FlxMath.lerp(150, icons.width, .5)));
 	icons.updateHitbox();
+
+    isGold = (accuracy == -1 || accuracy == 1);
 }
 
 function beatHit() for (icons in [iconP1, iconP2]) {
@@ -55,11 +64,6 @@ function onRatingUpdate(_) {
     hudItems.members[0]?.text = str;
     hudItems.members[0]?.screenCenter(FlxAxes.X);
 }
-
-var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
-
-var missNumScale:Float;
-var missRatingScale:Float;
 function onPlayerHit(_) {
     ratingsInt[_.rating] += 1;
 
@@ -130,7 +134,7 @@ function createRating(shit) {
     var i = 0;
     for (n in shitScore) {
         var numScore:FlxSprite = new FlxSprite((43 * i) + comboGroup.x, comboGroup.y + 150);
-        numScore.loadGraphic(Paths.image((accuracy == 1 ? 'modCombos/ForeverEngine/num$n' : 'game/score/num$n')));
+        numScore.loadGraphic(Paths.image((isGold ? 'modCombos/ForeverEngine/num$n' : 'game/score/num$n')));
  
 		numScore.acceleration.y = FlxG.random.int(200, 300);
 		numScore.velocity.y -= FlxG.random.int(140, 160);
@@ -152,7 +156,7 @@ function createRating(shit) {
     }
 
     var rating:FlxSprite = new FlxSprite(comboGroup.x, comboGroup.y);
-    rating.loadGraphic(Paths.image((accuracy == 1 ? 'modCombos/ForeverEngine/sick' : 'game/score/sick')));
+    rating.loadGraphic(Paths.image((isGold ? 'modCombos/ForeverEngine/sick' : 'game/score/sick')));
 
     var ratingSuffix:String = '';
     if (shit.note.strumTime < Conductor.songPosition)
