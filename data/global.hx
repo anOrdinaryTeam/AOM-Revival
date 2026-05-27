@@ -129,8 +129,20 @@ public static function RefreshSaveDatas() {
     // [ END ]
 
     // [ FOREVER DATA ]
-    if (saveMap.get('Forever_WatermarkType') != FlxG.save.data.AOM_forever_WATERMARK_engine)
-        saveMap.set('Forever_WatermarkType', FlxG.save.data.AOM_forever_WATERMARK_engine);
+    if (saveMap.get('Forever_Opacity') != FlxG.save.data.AOM_Forever_OPACITY)
+        saveMap.set('Forever_Opacity', FlxG.save.data.AOM_Forever_OPACITY);
+
+    if (saveMap.get('Forever_Ratings') != FlxG.save.data.AOM_forever_RATINGS)
+        saveMap.set('Forever_Ratings', FlxG.save.data.AOM_forever_RATINGS);
+
+    if (saveMap.get('Forever_Info') != FlxG.save.data.AOM_forever_INFO)
+        saveMap.set('Forever_Info', FlxG.save.data.AOM_forever_INFO);
+
+    if (saveMap.get('Forever_Watermark') != FlxG.save.data.AOM_forever_WATERMARK)
+        saveMap.set('Forever_Watermark', FlxG.save.data.AOM_forever_WATERMARK);
+
+    if (saveMap.get('Forever_Combo') != FlxG.save.data.AOM_forever_COMBO)
+        saveMap.set('Forever_Combo', FlxG.save.data.AOM_forever_COMBO);
     // [ END ]
 }
 
@@ -216,8 +228,20 @@ static function LoadSaveData() {
     // [ END ]
 
     // [ FOREVER DATA ]
-    FlxG.save.data.AOM_forever_WATERMARK_engine ??= 'FE';
-    saveMap.set('Forever_WatermarkType', FlxG.save.data.AOM_forever_WATERMARK_engine);
+    FlxG.save.data.AOM_Forever_OPACITY ??= 1;
+    saveMap.set('Forever_Opacity', FlxG.save.data.AOM_Forever_OPACITY);
+
+    FlxG.save.data.AOM_forever_RATINGS ??= true;
+    saveMap.set('Forever_Ratings', FlxG.save.data.AOM_forever_RATINGS);
+
+    FlxG.save.data.AOM_forever_INFO ??= true;
+    saveMap.set('Forever_Info', FlxG.save.data.AOM_forever_INFO);
+
+    FlxG.save.data.AOM_forever_WATERMARK ??= true;
+    saveMap.set('Forever_Watermark', FlxG.save.data.AOM_forever_WATERMARK);
+
+    FlxG.save.data.AOM_forever_COMBO ??= true;
+    saveMap.set('Forever_Combo', FlxG.save.data.AOM_forever_COMBO);
     // [ END ]
 }
 

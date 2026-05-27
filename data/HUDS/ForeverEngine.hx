@@ -12,74 +12,97 @@ function onHudLoad(hud) if (hud == 'ForeverEngine') {
     score.screenCenter(FlxAxes.X);
     hudItems.add(score);
 
-    var txtMark:String = getSaveData('Forever_WatermarkType') == 'FE' ? 'FOREVER ENGINE v0.3.1' : 'CODENAME ENGINE ${GitCommitMacro.commitHash}';
+    var txtMark:String = getSaveData('Forever_Watermark') ? 'FOREVER ENGINE v0.3.1' : 'CODENAME ENGINE ${GitCommitMacro.commitHash}';
     var cornerMark:FunkinText = new FunkinText(0, 0, 0, txtMark);
     cornerMark.setFormat(Paths.font('vcr.ttf'), 18, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
 	cornerMark.setPosition(FlxG.width - (cornerMark.width + 5), 5);
     cornerMark.antialiasing = Options.antialiasing;
     hudItems.add(cornerMark);
 
-    var centerMark:FunkinText = new FunkinText(0, 0, 0, '- ${PlayState.SONG.meta?.name} [${curDiff.toUpperCase()}] -');
-    centerMark.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
-    centerMark.y = (FlxG.height / 24) - 24;
-    centerMark.antialiasing = Options.antialiasing;
-    centerMark.screenCenter(FlxAxes.X);
-    hudItems.add(centerMark);
+    if (getSaveData('Forever_Combo')) {
+        var centerMark:FunkinText = new FunkinText(0, 0, 0, '- ${PlayState.SONG.meta?.name} [${curDiff.toUpperCase()}] -');
+        centerMark.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
+        centerMark.y = (FlxG.height / 24) - 24;
+        centerMark.antialiasing = Options.antialiasing;
+        centerMark.screenCenter(FlxAxes.X);
+        centerMark.alpha = getSaveData('Forever_Opacity');
+        hudItems.add(centerMark);
+    }
+
+    for (i in [healthBar, healthBarBG, iconP1, iconP2, score, cornerMark])
+        i.alpha = getSaveData('Forever_Opacity');
+
+    for (i in cpuStrums)    i.alpha = getSaveData('Forever_Opacity');
+    for (i in cpu.notes)    i.alpha = getSaveData('Forever_Opacity');
+    for (i in playerStrums) i.alpha = getSaveData('Forever_Opacity');
+    for (i in player.notes) i.alpha = getSaveData('Forever_Opacity');
 
     scripts.call('postHudLoad');
-
-    trace('Warning: This HUD increases the RAM usage.');
 }
 
 function onRatingUpdate(_) {
-    var str = 'Score: $songScore • Accuracy: ${CoolUtil.quantize(accuracy * 100, 100)}% ${getAccuracyLetter()} • Combo Breaks: $misses • Rank: ${getRankLetter(CoolUtil.quantize(accuracy * 100, 100))}';
+    var str = 'Score: $songScore • Accuracy: ${CoolUtil.quantize(accuracy * 100, 100)}% ${getAccuracyLetter()} • Combo Breaks: $misses • Rank: ${getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _)}';
     hudItems.members[0]?.text = str;
     hudItems.members[0]?.screenCenter(FlxAxes.X);
 }
 
 var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
+
 var missNumScale:Float;
 var missRatingScale:Float;
 function onPlayerHit(_) {
-    _.displayRating = false;
-    _.showRating = false;
-
     ratingsInt[_.rating] += 1;
 
-    if (!_.note.isSustainNote)
-        createRating(_);
+    if (getSaveData('Forever_Combo')) {
+        _.displayRating = false;
+        _.showRating = false;
 
-    missNumScale = _.numScale; 
-    missRatingScale = _.ratingScale;
+        if (!_.note.isSustainNote)
+            createRating(_);
+
+        missNumScale = _.numScale; 
+        missRatingScale = _.ratingScale;
+    }
 }
 
-function onPlayerMiss()
-    createRatingMiss();
+function onPlayerMiss() {
+    if (getSaveData('Forever_Combo')) {
+        createRatingMiss();
+    }
+}
 
 function getAccuracyLetter() {
     var rating:String = '';
-    
-    if (misses == 0 && ratingsInt['sick'] >= 1 && ratingsInt['good'] == 0 && ratingsInt['bad'] == 0 && ratingsInt['shit'] == 0)
-        rating = '[SFC]';
-    else if (misses == 0 && ratingsInt['good'] >= 1 && ratingsInt['bad'] == 0 && ratingsInt['shit'] == 0)
-        rating = '[GFC]';
-    else if (misses == 0)
-        rating = '[FC]';
-    else 
-        rating = '';
+
+    if (getSaveData('Forever_Ratings')) {
+        if (misses == 0 && ratingsInt['sick'] >= 1 && ratingsInt['good'] == 0 && ratingsInt['bad'] == 0 && ratingsInt['shit'] == 0)
+            rating = '[SFC]';
+        else if (misses == 0 && ratingsInt['good'] >= 1 && ratingsInt['bad'] == 0 && ratingsInt['shit'] == 0)
+            rating = '[GFC]';
+        else if (misses == 0)
+            rating = '[FC]';
+        else 
+            rating = '';
+    }
 
     return rating;
 }
 
-function getRankLetter(rank) {
-    if (rank >= 100) return 'S+';
-    if (rank >= 95)  return 'S';
-    if (rank >= 90)  return 'A';
-    if (rank >= 85)  return 'B';
-    if (rank >= 80)  return 'C';
-    if (rank >= 75)  return 'D';
-    if (rank >= 70)  return 'E';
-    return 'F';
+function getRankLetter(rank, cneRating) {
+    if (getSaveData('Forever_Ratings')) {
+        if (rank >= 100) return 'S+';
+        if (rank >= 95)  return 'S';
+        if (rank >= 90)  return 'A';
+        if (rank >= 85)  return 'B';
+        if (rank >= 80)  return 'C';
+        if (rank >= 75)  return 'D';
+        if (rank >= 70)  return 'E';
+        if (rank >= 65)  return 'F';
+    }
+    else {
+        rank = cneRating.rating.rating;
+    }
+    return rank;
 }
 
 function createRating(shit) {

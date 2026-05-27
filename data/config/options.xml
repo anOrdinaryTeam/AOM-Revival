@@ -49,10 +49,11 @@
 		</menu>
 
 		<menu name="Forever Engine" desc="HUD Settings">
-			<choice id="AOM_forever_WATERMARK_engine" name="Engine Type" desc="Type of Engine for the Watermark">
-				<value name="Forever" value="FE"/>
-				<value name="Codename" value="CNE"/>
-			</choice>
+			<number   id="AOM_Forever_OPACITY"   name="HUD Opacity"       desc="Change the HUD opacity" min="0" max="1" change="0.1"/>
+			<checkbox id="AOM_forever_WATERMARK" name="Forever Watermark" desc="Wanna watermark Forever Engine style?"/>
+			<checkbox id="AOM_forever_INFO"      name="Forever Info"      desc="Wanna info Forever Engine style?"/>
+			<checkbox id="AOM_forever_RATINGS"   name="Forever Ratings"   desc="Wanna ratings Forever Engine style?"/>
+			<checkbox id="AOM_forever_COMBO"     name="Forever Combo"     desc="Wanna combo Forever Engine style? WARNING: THIS WILL INCREASE YOUR RAM USAGE."/>
 		</menu>
 	</menu>
 </menu>
