@@ -7,7 +7,8 @@ function beatHit() switch(curBeat) {
     case 776:
         blockAnim = true;
         dad.playAnim('lastNOTE', true);
-        dad.animation.finishCallback = () -> dad.visible = false;
+        if (curDiff =~ 'lyrics')
+            dad.animation.finishCallback = () -> dad.visible = false;
     case 788:
         new FlxTimer().start(0.05, function(tmr:FlxTimer) {
 			if (!paused)

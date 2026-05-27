@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/Doki_BigMonikaDress_Assets" icon="bigmonika" color="#8CD465" x="325">
+	<anim name="idle" anim="Big Monika Idle" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Big Monika Sing Up" x="156.11" y="12.22" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Big Monika Sing Right" x="-24.44" y="1.11" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Big Monika Sing Down" x="1.11" y="-54.44" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Big Monika Sing Left" x="167.78" y="-15.56" fps="24" loop="false"/>
+	<anim name="lastNOTE" anim="Big Monika Last Note0" x="156.44" y="-1.11" fps="24" loop="false"/>
+	<anim name="lastNOTE_end" anim="Big Monika Last Note First" x="312.89" y="-8.11" fps="24" loop="false"/>
+</character>

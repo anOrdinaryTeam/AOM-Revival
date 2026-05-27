@@ -24,11 +24,20 @@ function create() {
 	stageFront.antialiasing = Options.antialiasing;
 	stageFront.scrollFactor.set(1, 1);
 	addSprite(stageFront);
+
+    if (curDiff == 'lyrics')
+        importScript('songs/Epiphany/lyrics');
 }
 
 function postCreate() {
-    loadHud('KadeEngine', 'no me acuerdo');
-    setRatingPrefix('Doki-old');
+    if (curDiff != 'lyrics') {
+        loadHud('KadeEngine', 'no me acuerdo');
+        setRatingPrefix('Doki-old');
+    }
+    else {
+        loadHud('PsychEngine', '');
+        setRatingPrefix('Doki-new');
+    }
 
     iconP1.setIcon('bf');
     healthBar.createColoredFilledBar(FlxColor.fromString('#31B0D1'));
@@ -45,7 +54,12 @@ var skin:String = 'modNotes/Epiphany/default';
 function onNoteCreation(_) {
     if (_.strumLineID == 1 && usingSkins) return;
     _.noteSprite = skin;
-    if (_.strumLineID == 1) _.note.splash = 'Doki/old';
+    if (_.strumLineID == 1) {
+        if (curDiff != 'lyrics')
+            _.note.splash = 'Doki/old';
+        else
+            _.note.splash = 'Doki/new';
+    }
 }
 
 function onStrumCreation(_) {
