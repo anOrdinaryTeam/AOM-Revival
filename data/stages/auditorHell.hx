@@ -93,9 +93,60 @@ function onDadHit(_)
         }
     }
 
-function update(_)
+// var multDrain:Float = 0.0050;
+
+function update(dt) {
+    // if (grabbed && !canDrain && durationDrain > 0) {
+    //     gremlin.x = (iconP1.x + iconP1.width) + 100;
+    //     durationDrain -= dt;
+    //     health -= multDrain;
+    // }
+    // else if (canDrain && durationDrain < 0) {
+    //     canDrain = false;
+    //     grabbed = false;
+    //     gremlin.playAnim('release');
+    // }
+
     if (exSpikes.animation.frameIndex >= 3 && dad.animation.curAnim.name == 'singUP')
         exSpikes.animation.pause();
+}
+
+// function doGremlin(hpToTake:Int, _duration:Int) {
+//     health += 1;
+
+//     var startHealth:Float = health;
+//     var toHealth:Float = (hpToTake / 100) * startHealth;
+//     var perct:Float = toHealth / 2 * 100;
+//     var duration:Float = _duration;
+
+//     gremlin.alpha = 1;
+//     gremlin.setPosition(iconP1.x, iconP1.y + (downscroll ? -100 : -100));
+//     gremlin.playAnim('come');
+
+//     grabbed = true;
+//     playModSound('GremlinWoosh');
+//     trace('ola, vengoa chuparte la vida');
+
+//     new FlxTimer().start(0.13, () -> {
+//         gremlin.playAnim('grab');
+
+//         var calc:Float = FlxMath.remapToRange(perct, 0, 100, 100, 0) * 0.01;
+//         var calc2:Float = (healthBar.x + (healthBar.width * (calc * 0.01) - 26)) - 75;
+
+//         FlxTween.tween(gremlin, {x: iconP1.x - 140}, 1, {ease: FlxEase.elasticIn, onComplete: () -> {
+//             FlxTween.tween(gremlin, {x: calc2}, duration, {
+//                 onUpdate: (twn) -> {
+//                     var drain:Float = lerp(startHealth, toHealth, twn.percent);
+//                     health = drain <= 0 ? 0.1 : drain;
+//                 },
+//                 onComplete: () -> {
+//                     grabbed = false;
+//                     gremlin.playAnim('release');
+//                 }
+//             });
+//         }});
+//     });
+// }
 
 var lastbeat:Int = 0;
 function beatHit() {
@@ -155,6 +206,7 @@ function stepHit() {
         case 2032:
 			doStopSign(2);
 			doStopSign(0);
+        case 2128: dad.playAnim('Hank', true);
         case 2162:
 			doStopSign(2);
 			doStopSign(3);
@@ -177,6 +229,6 @@ function stepHit() {
 			doStopSign(0, true);
 			doStopSign(0);
         case 2655:
-			//doGremlin(20,13,true);
+			grabHealth(20, 13);
     }
 }
