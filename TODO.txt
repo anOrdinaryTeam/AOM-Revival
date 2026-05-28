@@ -8,6 +8,7 @@ pongan aca lo q falte o por pulir en alguna cosa
 - Agregar los subtitlos a Heathers
 - Lil modchart en Heathers
 - Pulir Prey
+- Bola de Pinchos en el Stage de Sink
 
 [ GENERAL ]
 - Crear Splashes para algunas Skins (Eteled, Austin, xEvent, Majin, Chavo, RGB?)
