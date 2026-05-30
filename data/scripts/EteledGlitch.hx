@@ -1,11 +1,12 @@
 // made by myself because i didnt understand Eteled Code
+import funkin.game.Note;
 using StringTools;
 
 var austinGlitch:Character;
 
 var glitchedStrumCpu:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var glitchedStrumPlayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
-var glitchedNotes:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
+var glitchedNotes:FlxTypedGroup<Note> = new FlxTypedGroup();
 
 var bgsGlitched:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 var glitchedCam:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
@@ -34,6 +35,9 @@ function set_visibleGlitch(val:Bool) {
         }
     }
 
+    for (notes in glitchedNotes)
+        notes.alpha = val ? 1 : 0.001;
+
     return val;
 }
 
@@ -55,6 +59,13 @@ function set_currentGlitchedBG(val:Int) if (bgsGlitched.members.length > 0 && gl
     }
 }
 
+function onNoteCreation(e) {
+    if (e.strumLineID == 0) return;
+
+    var curNote:Note = e.note;
+    glitchedNotes.add(curNote);
+}
+
 function postCreate() if (!getSaveData('allowCustomHud'))
     addStuff();
 function postHudLoad() if (getSaveData('allowCustomHud'))
@@ -72,6 +83,13 @@ function stepHit() {
 
     if (usingGlitchedBGs && startGlitchedBGS)
         currentGlitchedBG = FlxG.random.int(0, 15);
+}
+
+function update() if (useGlitchedNotes) {
+    player.notes.forEachAlive(daNote -> {
+        glitchedNotes.members[player.notes.members.indexOf(daNote)].x = daNote.x;
+	    glitchedNotes.members[player.notes.members.indexOf(daNote)].y = daNote.y;
+    });
 }
 
 function beatHit() if (austinGlitch != null)
@@ -108,6 +126,9 @@ function generateStrum(player:Bool) {
 function addStuff() if (useGlitchedNotes) {
     insert(members.indexOf(strumLines), glitchedStrumCpu);
     insert(members.indexOf(strumLines), glitchedStrumPlayer);
+
+    glitchedNotes.camera = camHUD;
+    insert(members.indexOf(strumLines), glitchedNotes);
 
     generateStrum(true);
     generateStrum(false);
