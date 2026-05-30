@@ -56,4 +56,6 @@ public function findModSong(song:String) {
 
     if (modResult != '')
         currentMod = modResult;
+    else
+        trace('Mod Not Found');
 }
