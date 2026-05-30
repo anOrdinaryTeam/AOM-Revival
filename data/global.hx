@@ -84,6 +84,8 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('Fatality_PopUpsLimiter') != FlxG.save.data.AOM_Fatality_PopUps)
         saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_PopUps);
+        
+    if (saveMap.get('Corruptro_levelBG') != FlxG.save.data.AOM_Corruptro_levelBG)
     // [ END ]
 
 
@@ -191,6 +193,11 @@ static function LoadSaveData() {
 
         FlxG.save.data.AOM_Fatality_Limiter_PopUps ??= false;
         saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_Limiter_PopUps);
+        // [ END ]
+        
+        // [ CORRUPTRO ]
+        FlxG.save.data.AOM_Corruptro_levelBG ??= 2;
+        saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
         // [ END ]
 
     // [ END ]

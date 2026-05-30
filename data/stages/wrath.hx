@@ -2,7 +2,7 @@ import openfl.display.BlendMode;
 
 var corruptroSprites:Map<String, Dynamic> = [];
 var crystalsMap:Map<String, FlxSprite> = [];
-var backgroundLevel:Int = 5;
+var backgroundLevel:Int = getSaveData('Corruptro_levelBG');
 var hide:Float = 0.001;
 var an:Bool = Options.antialiasing;
 var x:Float = 0; // fr?
@@ -48,7 +48,7 @@ function insertSprite(spr:FlxSprite, name:String) if (spr != null) {
     corruptroSprites[name] = spr;
 }
 
-function setColorSwapShader(spr:FlxSprite, hue:Float = 0, sat:Float = 0, bri:Float = 0) if (spr != null) {
+public function setColorSwapShader(spr:FlxSprite, hue:Float = 0, sat:Float = 0, bri:Float = 0) if (spr != null) {
     var colorSwap:CustomShader = new CustomShader('colorSwap');
     colorSwap.uHsv = [0,0,0];
     colorSwap.uHsv[0] = hue / 360;
@@ -62,25 +62,15 @@ var skin:String = 'modNotes/Corruptro/NOTE_assets_retrobf';
 var oppSkin:String = "modNotes/Corruptro/NOTE_assets_corruptro";
 
 function onNoteCreation(_) {
-    if (_.strumLineID == 0)
-        _.noteSprite = oppSkin;
-    else if (_.strumLineID == 1 && !usingSkins) {
-        _.noteSprite = skin;
-        _.note.splash = 'retrospecter';
-    }
-
-    if (_.noteType == 'poison') 
-        setColorSwapShader(_.note, 180, 0, 0);
+	if (_.strumLineID == 1 && usingSkins) return;
+	_.noteSprite = _.strumLineID == 1 ? skin : oppSkin;
+	if (_.strumLineID == 1) _.note.splash = 'retrospecter';
 }
 
 function onStrumCreation(_) {
     if (_.player == 1 && usingSkins) return;
     _.sprite = _.player == 1 ? skin : oppSkin;
 }
-
-function onStrumCreation(_)
-    if (_.player == 0) _.sprite = "modNotes/Corruptro/NOTE_assets_corruptro";
-    else if (_.player == 1 && !usingSkins) _.sprite = "modNotes/Corruptro/NOTE_assets_retrobf";
 
 function create() {
     defaultCamZoom = 0.525;

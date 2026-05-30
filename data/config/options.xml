@@ -11,6 +11,10 @@
 			<checkbox id="AOM_Fatality_PopUps" name="Pop Ups Mechanic"/>
 			<checkbox id="AOM_Fatality_Limiter_PopUps" name="Limite Pop Ups"/>
 		</menu>
+		
+		<menu name="Corruptro">
+			<number id="AOM_Corruptro_levelBG" name="BG Level" min="0" max="2" change="1"/>
+		</menu>
 	</menu>
 
 	<menu name="HUD Configuration" desc="duh">
