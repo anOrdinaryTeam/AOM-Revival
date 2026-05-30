@@ -86,6 +86,7 @@ public static function RefreshSaveDatas() {
         saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_PopUps);
         
     if (saveMap.get('Corruptro_levelBG') != FlxG.save.data.AOM_Corruptro_levelBG)
+    	saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
     // [ END ]
 
 
