@@ -1,5 +1,14 @@
 var in:Int = 0;
 
+var ballsGrp:FlxTypedGroup<FlxSprite> = new FlxTypedGroup();
+var ballScales:Array<Float> = [];
+var ballPos:Array<Float> = [];
+var fall:Array<Int> = [5];
+
+var speed:Float = 0;
+var gravity:Float = 9.8;
+var exclusion:String = '5';
+
 static function addSprite(spr:Dynamic) if (spr != null) {
     spr.antialiasing = Options.antialiasing;
     insert(in++, spr);
@@ -18,8 +27,26 @@ function create() {
         sprites.scale.set(1.11, 1.1);
         sprites.updateHitbox();
         addSprite(sprites);
+
         if (i == 3) sprites.scrollFactor.set(0.9, 0.9);
     }
+
+    insert(2, ballsGrp);
+
+
+    for (i in 0...9) {
+        var scale:Float = FlxG.random.float(0.1, 1);
+        ballScales.push(scale);
+        ballPos.push(0);
+
+        var ball:FlxSprite = new FlxSprite(-80 + 200 * i, -380, getModImage('Sink/ball'));
+        ball.antialiasing = Options.antialiasing;
+        ball.scale.set(scale, scale);
+        ball.updateHitbox();
+        ballsGrp.add(ball);
+    }
+
+    speed = 240 / Options.framerate;
 }
 
 var waves:FunkinSprite;
@@ -53,6 +80,34 @@ function beatHit() {
             defaultCamZoom = camGame.zoom -= 0.36 / 8;
         }});
     }
+
+    if (curBeat % 16 == 0 && fall.length < 10) {
+        var rng:Int = FlxG.random.int(0, 9, exclusion);
+        fall.insert(fall.length + 1, rng);
+        exclusion = '$exclusion,$rng';
+    }
+}
+
+function update() for (i in 0...fall.length)
+    moveBall(fall[i]);
+
+function moveBall(i:Int) {
+    var songPos:Float = Conductor.songPosition / 1000;
+    var ball:FlxSprite = ballsGrp.members[i];
+    ballPos[i] += 0.003 * speed * ballScales[i];
+
+    var yPos:Float = getHeight(-380, ballPos[i]);
+    var xPos:Float = FlxMath.fastSin(songPos + i * 0.45) * 50 * ballScales[i] + -80 + 200 * i;
+    if (yPos >= 1700) ballPos[i] = 0;
+
+    ball.y = yPos;
+    ball.x = xPos;
+}
+
+function getHeight(baseH:Float, time:Float) {
+    var height:Float = 0;
+    height = baseH + ((gravity) * time * time) / 2;
+    return height;
 }
 
 var first:Bool = true;
