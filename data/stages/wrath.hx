@@ -8,6 +8,7 @@ var an:Bool = Options.antialiasing;
 var x:Float = 0; // fr?
 var y:Float = -128;
 var defaultZoom:Float;
+var runesCanGlow:Bool = false;
 
 var crystalPos:Array<Array<Float>> = [
     [1600, 200], [1200, -100], [1400, -500],
@@ -322,16 +323,17 @@ var moveCrystals:Bool = false;
 var rockColor:Bool = false;
 
 function glowRune(str:String) {
-    corruptroSprites[str].alpha = 1;
-    FlxTween.cancelTweensOf(corruptroSprites.get(str));
-    FlxTween.tween(corruptroSprites[str], {alpha: 0}, 13/24);
+    var spr:String = corruptroSprites.get(str);
+    spr.alpha = 1;
+    FlxTween.cancelTweensOf(spr);
+    FlxTween.tween(spr, {alpha: 0}, 13/24);
 }
 
 function update(_) if (backgroundLevel > 1) {
     var songPos:Float = Conductor.songPosition / 1000;
 
-    for (i in 0...8) {
-        var spr:FlxSprite = crystalsMap.get('crystal' + i);
+    for (i in 0...8) if (corruptroSprites.exists('crystal$i')) {
+        var spr:FlxSprite = crystalsMap.get('crystal$i');
         spr.y += 50 * Math.sin((songPos) + crystalFloatData[i][1]) * _;
         
         if (moveCrystals) {
@@ -371,17 +373,24 @@ function beatHit() {
         isCrackVisible = !isCrackVisible;
 
         camGame.flash(0xFFFFFFFF, 0.5);
-        corruptroSprites["flames"].alpha = 1;
-        corruptroSprites["flames"].y -= 1000;
+
+        if (corruptroSprites.exists('flames')) {
+            corruptroSprites["flames"].alpha = 1;
+            corruptroSprites["flames"].y -= 1000;
+        }
 
         if (backgroundLevel > 1) {
-            corruptroSprites["crack"].active = true;
-            corruptroSprites["crack"].playAnim('appear');
-            corruptroSprites["vortex"].alpha = 1;
+            if (corruptroSprites.exists('crack')) {
+                corruptroSprites["crack"].active = true;
+                corruptroSprites["crack"].playAnim('appear');
+            }
+            
+            if (corruptroSprites.exists('vortex'))
+                corruptroSprites["vortex"].alpha = 1;
 
-            for (i in 0...8 - 1) {
-                crystalsMap["crystal" + i].alpha = 1;
-                crystalsMap["crystal" + i].y -= 1500;
+            for (i in 0...8 - 1) if (corruptroSprites.exists('crystal$i')) {
+                crystalsMap['crystal$i'].alpha = 1;
+                crystalsMap['crystal$i'].y -= 1500;
             }
         }
     }
@@ -389,10 +398,12 @@ function beatHit() {
         canBop = false;
 
     if (canBop && curBeat % 2 == 0) {
-        corruptroSprites["crack"].active = isCrackVisible;
-        corruptroSprites["crack"].playAnim('bop');
+        if (corruptroSprites.exists('crack')) {
+            corruptroSprites["crack"].active = isCrackVisible;
+            corruptroSprites["crack"].playAnim('bop');
+        }
 
-        if (runesCanGlow) for (i in ['glowL1', 'glowL2', 'glowR1', 'glowR2'])
+        if (runesCanGlow) for (i in ['glowL1', 'glowL2', 'glowR1', 'glowR2']) if (corruptroSprites.exists(i))
             glowRune(i);
     }
 
@@ -401,10 +412,16 @@ function beatHit() {
             rockColor = !rockColor;
             var color:String = rockColor ? 'cyan' : 'green';
 
-            corruptroSprites["ground"].playAnim(color);
-            corruptroSprites["rockFront_0"].playAnim(color);
-            corruptroSprites["rockFront_1"].playAnim(color);
-            corruptroSprites["gems1"].playAnim(color);
-            corruptroSprites["gems2"].playAnim(color);
+            if (corruptroSprites.exists('ground')) corruptroSprites["ground"].playAnim(color);
+
+            if (corruptroSprites.exists('rockFront_0') && corruptroSprites.exists('rockFront_1')) {
+                corruptroSprites["rockFront_0"].playAnim(color);
+                corruptroSprites["rockFront_1"].playAnim(color);
+            }
+
+            if (corruptroSprites.exists('gems1') && corruptroSprites.exists('gems2')) {
+                corruptroSprites["gems1"].playAnim(color);
+                corruptroSprites["gems2"].playAnim(color);
+            }
         }
 }
