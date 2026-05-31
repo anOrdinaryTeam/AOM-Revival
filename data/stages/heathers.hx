@@ -56,12 +56,21 @@ function create() {
     camHUD.alpha = 0.001;
 }
 
+var c:Int = 2;
+var offY:Float = 0;
+var d:Float = 210;
+
 function postCreate() {
     for (bye in [scoreTxt, missesTxt, accuracyTxt, healthBar, healthBarBG, iconP1, iconP2])
         bye.visible = false;
 
     for (bye in cpuStrums)
         bye.visible = false;
+
+    offY = player.members[0].y;
+    player.forEachAlive(strum -> {
+        FlxTween.tween(strum, {y: offY - (d * c)}, 0.01);
+    });
 }
 
 function postUpdate() {
@@ -114,8 +123,9 @@ function beatHit() {
 
             opponentCam.x += 100;
             opponentCam.y += 20;
-        case 75:
-            // notas
+        case 75: player.forEachAlive(strum -> {
+            FlxTween.tween(strum, {y: offY}, 2 * Conductor.crochet / 1000, {ease: FlxEase.elasticOut});
+        });
         case 196:
             camHUD.flash(-1, 0.5, true);
             spotlightFront.visible = true;
