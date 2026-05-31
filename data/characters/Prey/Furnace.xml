@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character holdTime="6.1" antialiasing="false" icon="furnace" sprite="rs/Furnace_sheet" camx="200" camy="400" scale="6" color="#4E4E4E">
+<character holdTime="6.1" antialiasing="false" icon="EXE/furnace" sprite="rs/Furnace_sheet" camx="200" camy="400" scale="6" color="#4E4E4E">
 	<anim x="-46.6666666666667" y="-53.1666666666667" anim="Furnace down" name="singDOWN"/>
 	<anim x="-47.6666666666667" y="-46.6666666666667" anim="Furnace up" name="singUP"/>
 	<anim x="-45" y="-55.5" anim="Furnace right" name="singRIGHT"/>

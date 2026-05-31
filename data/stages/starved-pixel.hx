@@ -12,6 +12,8 @@ var lyricTimer:FlxTimer = new FlxTimer();
 var sonicHUD:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var stardustBgPixel:FlxBackdrop;
 var stardustFloorPixel:FlxBackdrop;
+var furnaceFollow:FunkinSprite = new FunkinSprite();
+var gotcha:FlxSprite;
 defaultCamZoom = 0.6;
 
 function setSpeed(i:Int) {
@@ -23,7 +25,21 @@ function create() {
     stardustBgPixel = new FlxBackdrop(loadStageSpr('stardustBg'), FlxAxes.X);
     stardustBgPixel.scrollFactor.set(0.4, 0.4);
     stardustBgPixel.antialiasing = false;
-    addSprite(stardustBgPixel);
+    insert(1, stardustBgPixel);
+
+    furnaceFollow.loadSprite(loadStageSpr('Furnace_sheet'));
+    furnaceFollow.addAnim('idle', 'Furnace idle', 24, true);
+    furnaceFollow.playAnim('idle', true);
+    furnaceFollow.scale.set(6, 6);
+    furnaceFollow.updateHitbox();
+    furnaceFollow.setPosition(-500, 1300);
+    insert(2, furnaceFollow);
+
+    gotcha = new FlxSprite(boyfriend.x + 2000, boyfriend.y + 900, loadStageSpr('furnace_gotcha'));
+	gotcha.setGraphicSize(Std.int(gotcha.width * 5));
+    gotcha.antialiasing = false;
+	gotcha.flipX = true;
+	insert(3, gotcha);
 
     stardustFloorPixel = new FlxBackdrop(loadStageSpr('stardustFloor'), FlxAxes.X);
     stardustFloorPixel.antialiasing = false;
@@ -111,7 +127,7 @@ function update(_) if (sonicHUD != null) {
 }
 
 function onStrumCreation(event) {
-    if (e.player == 1 && usingSkins) return;    
+    if (event.player == 1 && usingSkins) return;    
     event.cancel();
 
     var strum = event.strum;
@@ -124,7 +140,7 @@ function onStrumCreation(event) {
 }
 
 function onNoteCreation(event) {
-    if (e.strumLineID == 1 && usingSkins) return; 
+    if (event.strumLineID == 1 && usingSkins) return; 
     event.cancel();
 
     var note = event.note;
@@ -200,19 +216,17 @@ function stepHit()
         case 1548: dad.visible = true;
         case 1570: FlxTween.tween(dad, {x: 1300}, 2.5,{ease: FlxEase.cubeInOut});
         case 1780: FlxTween.tween(camHUD, {alpha: 1}, 1.0);
+        case 2432: FlxTween.tween(furnaceFollow, {x: 3000}, 7);
         case 3328:
 	        FlxTween.tween(camHUD, {alpha: 0}, 1,{ease: FlxEase.cubeInOut});
 	        FlxTween.tween(dad, {x: -300}, 4,{ease: FlxEase.cubeInOut});
         case 3335: boyfriend.playAnim("dialogue peel");
         case 3364:
             cinematicBars(true);
-            var gotcha:FlxSprite = new FlxSprite(boyfriend.x + 1500, boyfriend.y + 505, loadStageSpr('furnace_gotcha'));
-			gotcha.setGraphicSize(Std.int(gotcha.width * 5));
-			gotcha.antialiasing = false;
-			gotcha.flipX = true;
-			add(gotcha);
-            FlxTween.tween(gotcha, {x: boyfriend.x + 500}, 0.2, {onComplete: remove(gotcha)});
+            FlxTween.tween(gotcha, {x: gotcha.x - (boyfriend.x - 50)}, 0.2);
         case 3367:
+            FlxTween.cancelTweensOf(gotcha);
+            remove(gotcha);
             FlxG.camera.flash(FlxColor.RED, 2);
             boyfriend.visible = dad.visible = false;
             stardustBgPixel.visible = stardustFloorPixel.visible = false;	

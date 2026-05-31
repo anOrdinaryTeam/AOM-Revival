@@ -7,7 +7,6 @@ pongan aca lo q falte o por pulir en alguna cosa
 - Agregar los Textos de Tricky a Accelerant
 - Agregar los subtitlos a Heathers
 - Lil modchart en Heathers
-- Pulir Prey
 
 [ GENERAL ]
 - Crear Splashes para algunas Skins (Eteled, Austin, xEvent, Majin, Chavo, RGB?)
