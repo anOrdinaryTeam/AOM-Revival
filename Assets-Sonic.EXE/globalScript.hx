@@ -90,4 +90,4 @@ function destroyIntroSprites() {
 }
 
 function onNoteCreation(_) if (songName != 'Endless')
-    _.note.splash = 'blood';
+    _.note.splash = 'EXE/blood';

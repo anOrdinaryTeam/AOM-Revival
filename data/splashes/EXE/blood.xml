@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-splashes>
-<splashes sprite="splashes/BloodSplash" alpha="1">
+<splashes sprite="splashes/EXE/BloodSplash" alpha="1">
 	<strum id="0"> <!-- LEFT -->
 		<anim name="splashleft1" anim="Squirt" fps="24" x="0" y="0" />
 	</strum>

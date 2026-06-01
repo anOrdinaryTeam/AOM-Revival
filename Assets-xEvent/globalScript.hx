@@ -7,6 +7,7 @@ var skin:String = 'modNotes/X/NOTE_assets';
 function onNoteCreation(_) {
     if (_.strumLineID == 1 && usingSkins) return;
     _.noteSprite = skin;
+    if (_.strumLineID == 1) _.note.splash = 'x';
 }
 
 function onStrumCreation(_) {

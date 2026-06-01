@@ -154,7 +154,7 @@ function onNoteCreation(event) {
     }
     note.scale.set(6, 6);
     note.updateHitbox();
-	note.splash = 'blood';
+	note.splash = 'EXE/blood';
 }
 
 var lyricInt:Int = 0;
