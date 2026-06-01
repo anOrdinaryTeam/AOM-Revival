@@ -1,4 +1,4 @@
-importScript('data/scripts/EteledGlitch');
+// importScript('data/scripts/EteledGlitch');
 
 var dadNotes:String = '';
 var bfNotes:String = '';
@@ -22,6 +22,7 @@ function postCreate()
 function onNoteCreation(_) {
     if (_.strumLineID == 1 && usingSkins) return;
     _.noteSprite = _.strumLineID == 1 ? bfNotes : dadNotes;
+    if (_.noteSprite == 'modNotes/Eteled/austin') _.note.splash = 'Eteled/austin';
 }
 
 function onStrumCreation(_) {
