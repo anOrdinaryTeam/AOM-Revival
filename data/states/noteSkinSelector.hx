@@ -361,18 +361,18 @@ function generateSkinOptions(variable:NoteSkin) {
         box.ID = i;
         optionsBoxes.add(box);
 
-        var midPoint:Float = box.getMidpoint().x - iconAddX;
+        var midPoint:Float = (box.x + box.width / 2) - iconAddX;
         var icon:FlxSprite = new FlxSprite(midPoint, box.y + 15, Paths.image('Menu/skinsIcons/$name/$prefix'));
         icon.antialiasing = Options.antialiasing;
         icon.scale.set(iconScale, iconScale);
         icon.updateHitbox();
         optionsIcons.add(icon);
 
-        var midPoint:Float = icon.getGraphicMidpoint().x - 85;
+        var midPoint:Float = (icon.x + icon.width / 2) - 40;
         var skinTitle:FunkinText = new FunkinText(0, box.y + 90, 0, prefix, 20);
         skinTitle.antialiasing = true;
         skinTitle.alignment = 'center';
-        skinTitle.x = midPoint;
+        skinTitle.x = (icon.x + (icon.width - skinTitle.width) / 2);
         optionsTexts.add(skinTitle);
     }
 }
