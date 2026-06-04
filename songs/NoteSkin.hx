@@ -22,7 +22,7 @@ function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
     });
 }
 
-function onNoteCreation(e) if (usingSkins && e.strumLineID == 1) {
+function onNoteCreation(e) if (usingSkins && e.strumLineID == 1 && e.noteType == null) {
     e.noteSprite = getSaveData('curSkinNote');
     e.note.splash = getSaveData('curSplash');
     if (usingRGB) createShader(e.note, e.strumID);
