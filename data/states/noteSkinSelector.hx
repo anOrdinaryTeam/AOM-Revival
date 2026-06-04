@@ -80,7 +80,6 @@ function create() {
         var display:String = jsonRaw.displayName;
         var pathSkin:String = jsonRaw.path ?? null;
         var variants:Array<Array<String>> = jsonRaw.variants != null ? jsonRaw.variants.copy() : null;
-        var splash:String = 
 
         var SkinVar:NoteSkin = new NoteSkin();
         SkinVar.displayName = display;
