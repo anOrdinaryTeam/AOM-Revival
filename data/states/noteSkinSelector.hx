@@ -80,11 +80,16 @@ function create() {
         var display:String = jsonRaw.displayName;
         var pathSkin:String = jsonRaw.path ?? null;
         var variants:Array<Array<String>> = jsonRaw.variants != null ? jsonRaw.variants.copy() : null;
+        var splash:String = 
 
         var SkinVar:NoteSkin = new NoteSkin();
         SkinVar.displayName = display;
-        if (pathSkin != null) SkinVar.path = pathSkin;
-        else SkinVar.variations = variants.copy();
+        if (pathSkin != null) {
+            SkinVar.path = pathSkin;
+            SkinVar.splash = jsonRaw.splash;
+        }
+        else
+            SkinVar.variations = variants.copy();
         skinsList.push(SkinVar);
 
         var designedIcon:String = SkinVar.variations != null ? '${SkinVar.displayName}/${SkinVar.variations[0][0]}' : SkinVar.displayName;
@@ -241,13 +246,18 @@ function _SetSkin() {
     if (selectedSkin.variations != null) {
         var skinName:String = selectedSkin.variations[skinSelected][0];
         var skinPath:String = selectedSkin.variations[skinSelected][1];
+        var splash:String = selectedSkin.variations[skinSelected][2];
 
         FlxG.save.data.AOM_curSkinNote = skinPath;
+        FlxG.save.data.AOM_curSplash = splash;
         str = '$name ($skinName)';
     }
     else {
         var skinPath:String = selectedSkin.path;
+        var splash:String = selectedSkin.splash;
+
         FlxG.save.data.AOM_curSkinNote = skinPath;
+        FlxG.save.data.AOM_curSplash = splash;
         str = '$name';
     }
 
@@ -440,25 +450,11 @@ function generateStrumAndNotes(path:String) {
     }
 }
 
-function getColorValue(color:Int, rgb:String):Int
-    return switch (rgb)
-    {
-        default: (Std.int(color) >> 16) & 0xFF;
-        case "g": (Std.int(color) >> 8) & 0xFF;
-        case "b": Std.int(color) & 0xFF;
-    }
-
-function getColorArray(color:Int):Array<Float>
-    return [
-        getColorValue(color, "r") / 255,
-        getColorValue(color, "g") / 255,
-        getColorValue(color, "b") / 255
-    ];
-
 class NoteSkin
 {
     public var displayName:String = 'NULL';
     public var path:String = '';
+    public var splash:String = '';
 
     public var variations:Array<Array<String>> = null;
     public var onChange:Int = 0;

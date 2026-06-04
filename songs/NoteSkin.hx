@@ -24,6 +24,7 @@ function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
 
 function onNoteCreation(e) if (usingSkins && e.strumLineID == 1) {
     e.noteSprite = getSaveData('curSkinNote');
+    e.note.splash = getSaveData('curSplash');
     if (usingRGB) createShader(e.note, e.strumID);
 }
 
@@ -32,17 +33,5 @@ function onStrumCreation(e) if (usingSkins && e.player == 1) {
     if (usingRGB) createShader(e.strum, e.strumID, true);
 }
 
-function getColorValue(color:Int, rgb:String):Int
-    return switch (rgb)
-    {
-        default: (Std.int(color) >> 16) & 0xFF;
-        case "g": (Std.int(color) >> 8) & 0xFF;
-        case "b": Std.int(color) & 0xFF;
-    }
-
-function getColorArray(color:Int):Array<Float>
-    return [
-        getColorValue(color, "r") / 255,
-        getColorValue(color, "g") / 255,
-        getColorValue(color, "b") / 255
-    ];
+function onPlayerHit(e) if (e.noteType == null && usingRGB)
+    e.showSplash = false;

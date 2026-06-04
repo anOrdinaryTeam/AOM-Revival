@@ -65,7 +65,11 @@ function postCreate() {
     graphicCache.cache(loadStageSpr('one'));
     graphicCache.cache(loadStageSpr('two'));
     graphicCache.cache(loadStageSpr('three'));
-    graphicCache.cache(Paths.image('modNotes/EXE/Majin_Notes'));
+
+    if (!usingSkins) {
+        graphicCache.cache(Paths.image('modNotes/EXE/Majin_Notes'));
+        graphicCache.cache(Paths.image('splashes/EXE/majin'));
+    }
 }
 
 function onNoteCreation(e) {
@@ -133,3 +137,6 @@ function stepHit() {
             FlxTween.tween(FlxG.camera, {zoom: 0.9}, 0.7, {ease: FlxEase.cubeInOut, onComplete: () -> defaultCamZoom = 0.9});
     }
 }
+
+function onPlayerHit(e) if (curStep > 898 && !usingSkins)
+    e.note.splash = 'EXE/majin';

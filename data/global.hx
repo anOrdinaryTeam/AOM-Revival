@@ -63,7 +63,9 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('allowCustomHud') != FlxG.save.data.AOM_engineHUD)
         saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
+    // [ END ]
 
+    // [ NOTE SKIN SYSTEM ]
     if (saveMap.get('usingSkins') != FlxG.save.data.AOM_usingSkin)
         saveMap.set('usingSkins', FlxG.save.data.AOM_usingSkin);
 
@@ -72,10 +74,15 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('curSkinNoteDisplay') != FlxG.save.data.AOM_curSkinNote_Display)
         saveMap.set('curSkinNoteDisplay', FlxG.save.data.AOM_curSkinNote_Display);
+
+    if (saveMap.get('curSplash') != FlxG.save.data.AOM_curSplash)
+        saveMap.set('curSplash', FlxG.save.data.AOM_curSplash);
     // [ END ]
 
     
     // [ MODS/SONGS CONFIGS ]
+
+    // [ FATALITY ]
     if (saveMap.get('Fatality_MoveWindow') != FlxG.save.data.AOM_Fatality_WindowMove)
         saveMap.set('Fatality_MoveWindow', FlxG.save.data.AOM_Fatality_WindowMove);
 
@@ -84,9 +91,13 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('Fatality_PopUpsLimiter') != FlxG.save.data.AOM_Fatality_PopUps)
         saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_PopUps);
+    // [ END ]
         
+    // [ CORRUPTRO ]
     if (saveMap.get('Corruptro_levelBG') != FlxG.save.data.AOM_Corruptro_levelBG)
     	saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
+    // [ END ]
+
     // [ END ]
 
 
@@ -165,12 +176,18 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_engineHUD ??= true;
     saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
+    // [ END ]
 
+
+    // [ NOTE SKIN SYSTEM ]
     FlxG.save.data.AOM_usingSkin ??= false;
     saveMap.set('usingSkins', FlxG.save.data.AOM_usingSkin);
 
     FlxG.save.data.AOM_curSkinNote ??= '';
     saveMap.set('curSkinNote', FlxG.save.data.AOM_curSkinNote);
+
+    FlxG.save.data.AOM_curSplash ??= '';
+    saveMap.set('curSplash', FlxG.save.data.AOM_curSplash);
 
     FlxG.save.data.AOM_curSkinNote_Display ??= 'NONE';
     saveMap.set('curSkinNoteDisplay', FlxG.save.data.AOM_curSkinNote_Display);

@@ -5,6 +5,3 @@ pongan aca lo q falte o por pulir en alguna cosa
 
 [ RANDOM SONGS ]
 - Agregar los Textos de Tricky a Accelerant
-
-[ GENERAL ]
-- Crear Splashes para algunas Skins (Eteled, Majin, Chavo, RGB?)

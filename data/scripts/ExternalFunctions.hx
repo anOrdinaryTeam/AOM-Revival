@@ -59,3 +59,19 @@ public function findModSong(song:String) {
     else
         trace('Mod Not Found');
 }
+
+// Functions from https://discord.com/channels/860561967383445535/1490173810585108622
+public static function getColorValue(color:Int, rgb:String):Int
+    return switch (rgb)
+    {
+        default: (Std.int(color) >> 16) & 0xFF;
+        case "g": (Std.int(color) >> 8) & 0xFF;
+        case "b": Std.int(color) & 0xFF;
+    }
+
+public static function getColorArray(color:Int):Array<Float>
+    return [
+        getColorValue(color, "r") / 255,
+        getColorValue(color, "g") / 255,
+        getColorValue(color, "b") / 255
+    ];

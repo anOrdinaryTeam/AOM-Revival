@@ -3,57 +3,65 @@
         {
             "displayName": "Custom",
             "variants": [
-                ["Default", "modNotes/RGB/default"],
-                ["Circle", "modNotes/RGB/circle"]
+                ["Default", "modNotes/RGB/default", "default"],
+                ["Circle", "modNotes/RGB/circle", "default"]
             ]
         },
         {
             "displayName": "Corruption",
-            "path": "modNotes/TheDeathmatch/death notes"
+            "path": "modNotes/TheDeathmatch/death notes",
+            "splash": "default"
         },
         {
             "displayName": "Chavo",
-            "path": "modNotes/SuVecindad/Chavo"
+            "path": "modNotes/SuVecindad/Chavo",
+            "splash": "default"
         },
         {
             "displayName": "Doki",
-            "path": "modNotes/Epiphany/default"
+            "path": "modNotes/Epiphany/default",
+            "splash": "Doki/old"
         },
         {
             "displayName": "Eteled",
             "variants": [
-                ["BF", "modNotes/Eteled/bf"],
-                ["Eteled", "modNotes/Eteled/eteled"],
-                ["Austin", "modNotes/Eteled/austin"]
+                ["BF", "modNotes/Eteled/bf", "default"],
+                ["Eteled", "modNotes/Eteled/eteled", "Eteled/eteled"],
+                ["Austin", "modNotes/Eteled/austin", "Eteled/austin"]
             ]
         },
         {
             "displayName": "Heathers",
-            "path": "modNotes/heathers"
+            "path": "modNotes/heathers",
+            "splash": "heathers"
         },
         {
             "displayName": "Majin",
-            "path": "modNotes/EXE/Majin_Notes"
+            "path": "modNotes/EXE/Majin_Notes",
+            "splash": "EXE/majin"
         },
         {
             "displayName": "Kapi",
             "variants": [
-                ["V1", "modNotes/Kapi/kapi notes"],
-                ["V2", "modNotes/Kapi/kapi notes 2"],
-                ["Flatzone", "modNotes/Kapi/gw notes"]
+                ["V1", "modNotes/Kapi/kapi notes", "Kapi/v1"],
+                ["V2", "modNotes/Kapi/kapi notes 2", "Kapi/v2"],
+                ["Flatzone", "modNotes/Kapi/gw notes", "Kapi/gw"]
             ]
         },
         {
             "displayName": "Tabi",
-            "path": "modNotes/Tabi/NOTE_assets"
+            "path": "modNotes/Tabi/NOTE_assets",
+            "splash": "default"
         },
         {
             "displayName": "Retrospecter",
-            "path": "modNotes/Corruptro/NOTE_assets_retrobf"
+            "path": "modNotes/Corruptro/NOTE_assets_retrobf",
+            "splash": "retrospecter"
         },
         {
             "displayName": "X-Event",
-            "path": "modNotes/X/NOTE_assets"
+            "path": "modNotes/X/NOTE_assets",
+            "splash": "x"
         }
     ]
 }
