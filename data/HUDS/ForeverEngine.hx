@@ -149,7 +149,7 @@ function createRating(shit) {
 
 		FlxTween.tween(numScore, {alpha: 0}, 0.2, {
             startDelay: Conductor.crochet * 0.002,
-			onComplete: () -> destroitSmash(numScore)
+			onComplete: () -> remove(numScore, true)
 		});
         i++;
     }
@@ -178,7 +178,7 @@ function createRating(shit) {
 
     FlxTween.tween(rating, {alpha: 0}, 0.2, {
         startDelay: Conductor.crochet * 0.001,
-        onComplete: () -> destroitSmash(rating)
+        onComplete: () -> remove(rating, true)
     });
 }
 
@@ -214,7 +214,7 @@ function createRatingMiss() {
 
 		FlxTween.tween(numScore, {alpha: 0}, 0.2, {
 			startDelay: Conductor.crochet * 0.002,
-			onComplete: () -> destroitSmash(numScore)
+			onComplete: () -> remove(numScore, true)
 		});
 
         i++;
@@ -235,7 +235,7 @@ function createRatingMiss() {
     
 		FlxTween.tween(line, {alpha: 0}, 0.2, {
             startDelay: Conductor.crochet * 0.002,
-			onComplete: () -> destroitSmash(line)
+			onComplete: () -> remove(line, true)
 		});
     }
 
@@ -254,6 +254,6 @@ function createRatingMiss() {
 
     FlxTween.tween(rating, {alpha: 0}, 0.2, {
         startDelay: Conductor.crochet * 0.001,
-        onComplete: () -> destroitSmash(rating)
+        onComplete: () -> remove(rating, true)
     });
 }

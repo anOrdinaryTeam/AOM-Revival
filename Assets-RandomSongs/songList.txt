@@ -1,6 +1,5 @@
 Accelerant:hank
 Candy:heathers
-Challenge-EDD:ChallengeEdd/icon-edd
 Corruptro:Corruptro/corruptro
 Defeat:black
 Epiphany:bigmonika
