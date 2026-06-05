@@ -1,4 +1,8 @@
-// TODO: Look to somehow override BACK action for redirect to `FreeplayMod` State
+/*
+    DO NOT DELETE
+    IN CASE SOMETHING GOES WRONG
+    THIS WILL BE THE FALLBACK
+*/
 
 import funkin.backend.chart.Chart;
 
