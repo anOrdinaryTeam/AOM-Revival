@@ -96,6 +96,9 @@ public static function RefreshSaveDatas() {
     // [ CORRUPTRO ]
     if (saveMap.get('Corruptro_levelBG') != FlxG.save.data.AOM_Corruptro_levelBG)
     	saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
+
+    if (saveMap.get('Corruptro_poisonShader') != FlxG.save.data.AOM_Corruptro_poisonShader)
+    	saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
     // [ END ]
 
     // [ END ]
@@ -216,6 +219,9 @@ static function LoadSaveData() {
         // [ CORRUPTRO ]
         FlxG.save.data.AOM_Corruptro_levelBG ??= 2;
         saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
+        
+        FlxG.save.data.AOM_Corruptro_poisonShader ??= true;
+    	saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
         // [ END ]
 
     // [ END ]
