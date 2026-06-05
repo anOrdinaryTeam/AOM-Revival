@@ -124,9 +124,9 @@ function createRating(shit) {
     var shitScore = []; 
 	if (combo >= 1000)
         shitScore.push(Math.floor(combo / 1000) % 10);
-    else if (combo >= 100)
+    if (combo >= 100)
 	    shitScore.push(Math.floor(combo / 100) % 10);
-    else if (combo >= 10)
+    if (combo >= 10)
 	    shitScore.push(Math.floor(combo / 10) % 10);
 
     if (combo == 0) combo = 1;
@@ -148,10 +148,8 @@ function createRating(shit) {
         add(numScore);
 
 		FlxTween.tween(numScore, {alpha: 0}, 0.2, {
-			onComplete: function(tween:FlxTween) {
-                destroitSmash(numScore);
-			},
-			startDelay: Conductor.crochet * 0.002
+            startDelay: Conductor.crochet * 0.002,
+			onComplete: () -> destroitSmash(numScore)
 		});
         i++;
     }
@@ -180,9 +178,7 @@ function createRating(shit) {
 
     FlxTween.tween(rating, {alpha: 0}, 0.2, {
         startDelay: Conductor.crochet * 0.001,
-        onComplete: function(tween:FlxTween) {
-            destroitSmash(rating);
-        }
+        onComplete: () -> destroitSmash(rating)
     });
 }
 
@@ -193,9 +189,9 @@ function createRatingMiss() {
     var shitScore = []; 
 	if (fixMisses >= 1000)
         shitScore.push(Math.floor(fixMisses / 1000) % 10);
-    else if (fixMisses >= 100)
+    if (fixMisses >= 100)
 	    shitScore.push(Math.floor(fixMisses / 100) % 10);
-    else if (fixMisses >= 10)
+    if (fixMisses >= 10)
 	    shitScore.push(Math.floor(fixMisses / 10) % 10);
 
 	shitScore.push(fixMisses % 10);
@@ -217,10 +213,8 @@ function createRatingMiss() {
         add(numScore);
 
 		FlxTween.tween(numScore, {alpha: 0}, 0.2, {
-			onComplete: function(tween:FlxTween) {
-                destroitSmash(numScore);
-			},
-			startDelay: Conductor.crochet * 0.002
+			startDelay: Conductor.crochet * 0.002,
+			onComplete: () -> destroitSmash(numScore)
 		});
 
         i++;
@@ -240,10 +234,8 @@ function createRatingMiss() {
         add(line);
     
 		FlxTween.tween(line, {alpha: 0}, 0.2, {
-			onComplete: function(tween:FlxTween) {
-                destroitSmash(line);
-			},
-			startDelay: Conductor.crochet * 0.002
+            startDelay: Conductor.crochet * 0.002,
+			onComplete: () -> destroitSmash(line)
 		});
     }
 
@@ -262,8 +254,6 @@ function createRatingMiss() {
 
     FlxTween.tween(rating, {alpha: 0}, 0.2, {
         startDelay: Conductor.crochet * 0.001,
-        onComplete: function(tween:FlxTween) {
-            destroitSmash(rating);
-        }
+        onComplete: () -> destroitSmash(rating)
     });
 }
