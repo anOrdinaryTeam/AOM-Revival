@@ -65,7 +65,7 @@ function createTrickyLine(text:String) if (!rendered) {
     rendered = true;
     trickyLine.visible = true;
 
-    playModSound('staticSound');
+    playSound('staticSound');
     trickyLine.setPosition(FlxG.random.float(dad.x + 40,dad.x + 120), FlxG.random.float(dad.y + 200, dad.y + 300));
 	trickyLine.text = text;
     tstatic.alpha = 0.5;
