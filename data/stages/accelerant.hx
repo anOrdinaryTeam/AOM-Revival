@@ -1,3 +1,5 @@
+importScript('data/scripts/TrickyLines');
+
 public var sanford:FunkinSprite;
 public var deimos:FunkinSprite;
 public var helicopter:FunkinSprite;

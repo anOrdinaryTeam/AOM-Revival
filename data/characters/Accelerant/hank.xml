@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character y="200" sprite="accelerant/HankNew" color="#16162C" applyStageMatrix="true">
+<character y="200" sprite="accelerant/HankNew" icon="hank" color="#16162C" applyStageMatrix="true">
 	<anim name="idle" anim="Hank Idle"/>
 	<anim name="idle-alt" anim="HankScaredIdle"/>
 	<anim name="singUP" anim="Hank Up note" y="-10"/>

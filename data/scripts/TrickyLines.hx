@@ -2,7 +2,11 @@ var trickyLine:FlxText;
 var tstatic:FlxSprite;
 var lastStep:Int = 0;
 var curID:Int;
+
 var rendered:Bool = false;
+var spawnOnDad:Bool = true;
+var spawnOnMiss:Bool = true;
+
 var probablyText:Map<String, Float> = [
     "Tricky/tricky-mask" => 1, "Tricky/tricky" => 20, 
     "Tricky/trickyH" => 45, "Tricky/trickyEx" => 60
@@ -24,7 +28,7 @@ function postCreate() {
     add(trickyLine);
 
     var scale:Float = curSong == 'hellclown' ? 12 : 8.3;
-    tstatic = new FlxSprite().loadGraphic(getModImage('TrickyStatic'), true, 320, 180);
+    tstatic = new FlxSprite().loadGraphic(Paths.image('TrickyStatic'), true, 320, 180);
     tstatic.antialiasing = true;
     tstatic.scrollFactor.set(0,0);
     tstatic.setGraphicSize(Std.int(tstatic.width * scale));
@@ -35,8 +39,25 @@ function postCreate() {
         tstatic.x += 600;
         tstatic.y += 300;
     }
+    else if (curSong == 'accelerant')
+        tstatic.x += 600;
+
     add(tstatic);
     curID = dad.curCharacter == 'exTricky' ? 1 : 0;
+
+    if (curSong == 'accelerant')
+        spawnOnDad = spawnOnMiss = false;
+}
+
+public function customLine(text:String, offX:Float, offY:Float) {
+    lastStep = curStep;
+    rendered = true;
+    trickyLine.visible = true;
+
+    playSound('staticSound');
+    trickyLine.setPosition(offX, offY);
+	trickyLine.text = text;
+    tstatic.alpha = 0.5;
 }
 
 function createTrickyLine(text:String) if (!rendered) {
@@ -61,10 +82,10 @@ function update() if (rendered) {
     if (tstatic.alpha != 0) tstatic.alpha = FlxG.random.float(0.1,0.5);
 }
 
-function onDadHit(_) if (!_.note.isSustainNote)
+function onDadHit(_) if (!_.note.isSustainNote && spawnOnDad)
     if (FlxG.random.bool(probablyText[_.character.curCharacter]))
         createTrickyLine(TrickyLinesArray[curID][FlxG.random.int(0, TrickyLinesArray[curID].length - 1)]);
 
-function onNoteMiss(_) if (!_.note.isSustainNote)
+function onNoteMiss(_) if (!_.note.isSustainNote && spawnOnDad)
     if (FlxG.random.bool(dad.curCharacter == 'tricky' ? 10 : 4))
         createTrickyLine(TrickyLinesArray[2][FlxG.random.int(0, TrickyLinesArray[2].length - 1)]);
