@@ -14,11 +14,7 @@ public static function getModPath(str:String)
 
 public static function getModSongList(mod:String):Dynamic
 {
-    var data = {
-        songs: [],
-        icon: [],
-        color: []
-    }
+    var data = {songs: [], icon: []}
 
     try {
         var _file:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + '$mod/songList.txt'));
@@ -29,10 +25,14 @@ public static function getModSongList(mod:String):Dynamic
             data.icon.push(info[1]);
         }
 
-        return data;
     }
-    catch(e:Dynamic)
+    catch(e:Dynamic) {
         trace(e.toString());
+        data.songs.push('ERROR');
+        data.songs.icon('face');
+    }
+
+    return data;
 }
 
 // preventive
