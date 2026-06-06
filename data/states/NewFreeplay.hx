@@ -1,3 +1,4 @@
+import ModPage;
 import funkin.backend.chart.Chart;
 import funkin.savedata.FunkinSave;
 importScript('data/scripts/PreSongLoader');
@@ -7,6 +8,7 @@ public var LOAD_SONG:Bool = true;
 var songsList:Array<SongData> = [];
 var grpSongs:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
 var grpIcons:FlxTypedGroup<HealthIcon> = new FlxTypedGroup();
+var grpPages:FlxTypedGroup<HealthIcon> = new FlxTypedGroup();
 
 var scoreTxt:FunkinText;
 var difficultyTxt:FunkinText;
@@ -28,6 +30,7 @@ function create() {
 
     add(grpSongs);
     add(grpIcons);
+    // add(grpPages);
 
     var iconsList:Array<String> = getModSongList(currentMod).icon.copy();
     for (song in getModSongList(currentMod).songs) {
@@ -47,6 +50,8 @@ function create() {
         icon.ID = i;
         icon.antialiasing = Options.antialiasing;
         grpIcons.add(icon);
+
+        // var link:ModPage = new ModPage();
     }
 
     if (lastModSelected_Str == currentMod) {
@@ -64,17 +69,17 @@ function create() {
     graphic.alpha = 0.5;
     add(graphic);
 
-    difficultyTxt = new FunkinText(0, 0, FlxG.width, '[? ? ?]', 27);
+    difficultyTxt = new FunkinText(0, 0, FlxG.width, '[? ? ?]', 25);
     difficultyTxt.alignment = 'center';
     difficultyTxt.x += 470;
     difficultyTxt.y += 43;
     difficultyTxt.antialiasing = true;
     add(difficultyTxt);
 
-    scoreTxt = new FunkinText(0, 0, FlxG.width, '- Score: 0 -', 30);
+    scoreTxt = new FunkinText(0, 0, FlxG.width, '- Score: 0 -', 31);
     scoreTxt.alignment = 'center';
     scoreTxt.x += 470;
-    scoreTxt.y += 5;
+    scoreTxt.y += 4;
     scoreTxt.antialiasing = true;
     add(scoreTxt);
 

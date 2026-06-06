@@ -1,18 +1,18 @@
-Accelerant:hank
-Candy:heathers
-Corruptro:Corruptro/corruptro
-Defeat:black
-Epiphany:bigmonika
-Fatality:EXE/fatal-sonic
-Megalo Strike Back:MegaloStrikeB/chara
-Phantasm:Phantasm/fleetway
-Prey:EXE/furnace
-Silly Billy:SillyBilly/billy
-Sink:sink
-Su Vecindad:SuVecindad/chavo
-Pokemon Master:pokemonmaster
-Summit:Summit/red
-Rush:Rush/rushblaze
-The Deathmatch:TheDeathmatch/icon-insanedad
-Treacherous Thorns:TreacherousThorns/senpai-emtpy
-Looping The Rooms:ltr
+Accelerant::hank::https://gamebanana.com/mods/286594
+Candy::heathers::https://gamebanana.com/mods/410094
+Corruptro::Corruptro/corruptro
+Defeat::black
+Epiphany::bigmonika
+Fatality::EXE/fatal-sonic
+Megalo Strike Back::MegaloStrikeB/chara
+Phantasm::Phantasm/fleetway
+Prey::EXE/furnace
+Silly Billy::SillyBilly/billy
+Sink::sink
+Su Vecindad::SuVecindad/chavo
+Pokemon Master::pokemonmaster
+Summit::Summit/red
+Rush::Rush/rushblaze
+The Deathmatch::TheDeathmatch/icon-insanedad
+Treacherous Thorns::TreacherousThorns/senpai-emtpy
+Looping The Rooms::ltr

@@ -14,15 +14,20 @@ public static function getModPath(str:String)
 
 public static function getModSongList(mod:String):Dynamic
 {
-    var data = {songs: [], icon: []}
+    var data = {songs: [], icon: [] /*, pages: []*/}
+    var isRandomSection:Bool = mod == 'RandomSongs';
 
     try {
         var _file:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + '$mod/songList.txt'));
+        var format:String = isRandomSection ? '::' : ':';
         
         for (raw in _file) {
-            var info:Array<String> = raw.split(':');
+            var info:Array<String> = raw.split(format);
             data.songs.push(info[0]);
             data.icon.push(info[1]);
+
+            // if (isRandomSection)
+            //     data.pages.push(info);
         }
 
     }
