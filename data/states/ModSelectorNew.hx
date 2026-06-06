@@ -95,11 +95,15 @@ function create() {
                 for (pos => data in stuff) {
                     var pageIcon:String = data[0];
                     var url:String = data[1];
+
                     var xOffset:Float = modsAlphabet.members[i].x + modsAlphabet.members[i].width;
+                    var yOffset:Float = modsAlphabet.members[i].y;
 
                     var modpage:ModPage = new ModPage(pageIcon, url, xOffset);
                     modpage.x = (xOffset + 10) + 80 * pos;
+                    modpage.y = yOffset;
                     modpage.ID = i;
+                    modpage.alpha = lastModSelected == modpage.ID ? 1 : 0;
                     pagesGrp.add(modpage);
                 }
             }
