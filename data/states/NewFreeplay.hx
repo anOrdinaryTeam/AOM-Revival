@@ -1,4 +1,5 @@
 import funkin.backend.chart.Chart;
+import funkin.savedata.FunkinSave;
 importScript('data/scripts/PreSongLoader');
 
 public var LOAD_SONG:Bool = true;
@@ -66,9 +67,16 @@ function create() {
     difficultyTxt = new FunkinText(0, 0, FlxG.width, '[? ? ?]', 27);
     difficultyTxt.alignment = 'center';
     difficultyTxt.x += 470;
-    difficultyTxt.y += 40;
+    difficultyTxt.y += 43;
     difficultyTxt.antialiasing = true;
     add(difficultyTxt);
+
+    scoreTxt = new FunkinText(0, 0, FlxG.width, '- Score: 0 -', 30);
+    scoreTxt.alignment = 'center';
+    scoreTxt.x += 470;
+    scoreTxt.y += 5;
+    scoreTxt.antialiasing = true;
+    add(scoreTxt);
 
     scroll(0, true);
     #if ARKOSE_PORT
@@ -94,13 +102,31 @@ function scroll(i:Int = 0, f:Bool = false) {
     }
 }
 
+function updateScore() {
+    var curSong:String = songsList[curSelected].name;
+    var curSongDiffs:Array<String> = songsList[curSelected].difficulties.copy();
+
+    if (curSongDiffs.length == 0) {
+        intendedScore = 0;
+        return;
+    }
+
+    var getScore:Int = FunkinSave.getSongHighscore(curSong, curSongDiffs[curDiff]).score;
+    intendedScore = getScore;
+}
+
 function updateDifficulties(i:Int = 0) {
     var curSong:String = songsList[curSelected].name;
     var curSongDiffs:Array<String> = songsList[curSelected].difficulties.copy();
 
     curDiff = FlxMath.wrap(curDiff + i, 0, curSongDiffs.length - 1);
     lastDiffSelected = curDiff;
-    difficultyTxt.text = '[${curSongDiffs[curDiff].toUpperCase()}]';
+
+    var diffString:String = curSongDiffs[curDiff].toUpperCase();
+    var str:String = curSongDiffs.length > 1 ? '< [$diffString] >' : '[$diffString]';
+    difficultyTxt.text = str;
+
+    updateScore();
 }
 
 public function enterSong() {
@@ -120,9 +146,19 @@ public function enterSong() {
     }
 }
 
+var lerpScore:Float = 0;
+var intendedScore:Int = 0;
+
 function update(dt) {
+    lerpScore = lerp(lerpScore, intendedScore, 0.4);
+
+	if (Math.abs(lerpScore - intendedScore) <= 10)
+		lerpScore = intendedScore;
+
     if (FlxG.sound.music.volume < 0.8)
 		FlxG.sound.music.volume += 0.5 * dt;
+
+    scoreTxt.text = '- Score: ${Math.round(lerpScore)} -';
 
     if (allowInput) {
         scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
