@@ -8,5 +8,9 @@
     "logoData": [
         [700, 300, 0.85],
         [700, 300, 0.85]
+    ],
+
+    "pages": [
+        ["GB", "https://gamebanana.com/mods/44366"]
     ]
 }

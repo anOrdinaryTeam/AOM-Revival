@@ -6,5 +6,9 @@
     "logo": "icon",
     "logoData": [
         [825, 450, 0.5]
+    ],
+
+    "pages": [
+        ["GB", "https://gamebanana.com/mods/44683"]
     ]
 }

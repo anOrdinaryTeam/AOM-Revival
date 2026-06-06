@@ -8,5 +8,10 @@
     "logoData": [
         [700, 470, 0.6],
         [860, 550, 0.45]
+    ],
+
+    "pages": [
+        ["GB", "https://gamebanana.com/mods/284934"],
+        ["GJ", "https://gamejolt.com/games/entity/643508"]
     ]
 }

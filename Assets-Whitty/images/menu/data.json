@@ -6,5 +6,9 @@
     "logo": "VsWhitty-staticLogo",
     "logoData": [
         [820, 450, 0.6]
+    ],
+
+    "pages": [
+        ["GB", "https://gamebanana.com/mods/44214"]
     ]
 }

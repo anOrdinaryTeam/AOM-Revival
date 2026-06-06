@@ -1,10 +1,12 @@
+import ModPage;
+
 class Background extends FlxSprite
 {
     public var contrastBG:Bool = false;
     public function new(image:String, contrast:Bool) {
         super();
+        this.loadGraphic(Paths.getPath('$image.png'));
         this.contrastBG = contrast;
-        loadGraphic(image);
     }
 }
 
@@ -12,8 +14,7 @@ class Logo extends FlxSprite
 {
     public var ogPos:Array = [0, 0];
     public function new(image:String, pos:Array) {
-        super(pos[0], pos[1]);
-        loadGraphic(image);
+        super(pos[0], pos[1], Paths.getPath('$image.png'));
         this.ogPos = pos.copy();        
     }
 }
@@ -22,7 +23,9 @@ var allowInput:Bool = true;
 var curSelected:Int = lastModSelected;
 
 var contrastGraphic:FlxSprite;
+
 var modsAlphabet:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
+var pagesGrp:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
 var backgroundsGrp:FlxTypedGroup<Background> = new FlxTypedGroup();
 var logosGrp:FlxTypedGroup<Logo> = new FlxTypedGroup();
 
@@ -45,6 +48,7 @@ function create() {
     add(bgItems);
 
     add(modsAlphabet);
+    add(pagesGrp);
     add(logosGrp);
 
     for (i => ModName in currentModsList) {
@@ -60,56 +64,53 @@ function create() {
         if (findFile('$modPath/data.json')) {
             var rawJson:Dynamic = CoolUtil.parseJson(Paths.getPath('$modPath/data.json'));
 
-            if (rawJson != null) {
-                var chooseData:Int = FlxG.random.int(0, rawJson.backgrounds.length - 1);
+            var chooseData:Int = FlxG.random.int(0, rawJson.backgrounds.length - 1);
+            var chooseBG:Array<Dynamic> = rawJson.backgrounds[chooseData];
+            var bgStr:String = chooseBG[0];
+            var contrastBool:Bool = chooseBG[1];
 
-                var chooseBG:Array<Dynamic> = rawJson.backgrounds[chooseData];
-                var bgStr:String = chooseBG[0];
-                var contrastBool:Bool = chooseBG[1];
+            var bg:Background = new Background('$modPath/$bgStr', contrastBool);
+            bg.setGraphicSize(FlxG.width, FlxG.height);
+            bg.updateHitbox();
+            bg.screenCenter();
+            bg.antialiasing = Options.antialiasing;
+            backgroundsGrp.add(bg);
 
-                var bg:Background = new Background(Paths.getPath('$modPath/$bgStr.png'), contrastBool);
-                bg.setGraphicSize(FlxG.width, FlxG.height);
-                bg.updateHitbox();
-                bg.screenCenter();
-                bg.antialiasing = Options.antialiasing;
-                backgroundsGrp.add(bg);
+            var logoStr:String = rawJson.logo;
+            var chooseLogoData:Array<Dynamic> = rawJson.logoData[chooseData];
+            var logoPos:Array<Float> = [chooseLogoData[0], chooseLogoData[1]];
+            var logoScale:Float = chooseLogoData[2];
 
-                var logoStr:String = rawJson.logo;
-                var chooseLogoData:Array<Dynamic> = rawJson.logoData[chooseData];
-                var logoPos:Array<Float> = [chooseLogoData[0], chooseLogoData[1]];
-                var logoScale:Float = chooseLogoData[2];
-
-                var logo:Logo = new Logo(Paths.getPath('$modPath/$logoStr.png'), logoPos);
-                logo.scale.set(logoScale, logoScale);
-                logo.updateHitbox();
-                logo.ID = i;
-                logo.alpha = 0.001;
-                logo.antialiasing = Options.antialiasing;
-                logosGrp.add(logo);
-            }
-        }
-        else {
-            var defLogoPos:Array<Float> = [1000, 400]; 
-            var defLogoScale:Float = 0.45;
-
-            var logo:Logo = new Logo(Paths.image('missing-icon'), defLogoPos);
-            logo.scale.set(defLogoScale, defLogoScale);
+            var logo:Logo = new Logo('$modPath/$logoStr', logoPos);
+            logo.scale.set(logoScale, logoScale);
             logo.updateHitbox();
             logo.ID = i;
             logo.alpha = 0.001;
             logo.antialiasing = Options.antialiasing;
             logosGrp.add(logo);
 
-            var bg:Background = new Background(Paths.image('missing-bg'), false);
-            bg.setGraphicSize(FlxG.width, FlxG.height);
-            bg.updateHitbox();
-            bg.screenCenter();
-            bg.antialiasing = Options.antialiasing;
-            backgroundsGrp.add(bg);
+            if (rawJson.pages != null && rawJson.pages.length > 0) {
+                var stuff:Array<Array<String>> = rawJson.pages.copy();
+
+                for (pos => data in stuff) {
+                    var pageIcon:String = data[0];
+                    var url:String = data[1];
+                    var xOffset:Float = modsAlphabet.members[i].x + modsAlphabet.members[i].width;
+
+                    var modpage:ModPage = new ModPage(pageIcon, url, xOffset);
+                    modpage.x = (xOffset + 10) + 80 * pos;
+                    modpage.ID = i;
+                    pagesGrp.add(modpage);
+                }
+            }
         }
+        else
+            generateTemplate(i);
     }
-    catch(e:String)
+    catch(e:String) {
         trace(e.toString());
+        generateTemplate(i);
+    }
 
     var info:FunkinText = new FunkinText(0, 15, 0, '[Select The Mod To Play]', 25);
     info.x = (FlxG.width - info.width) - 5;
@@ -123,9 +124,35 @@ function create() {
 	#end
 }
 
+// In case the data.json don't exists or data.json haves something wrong.
+function generateTemplate(i:Int) {
+    var defLogoPos:Array<Float> = [1000, 400]; 
+    var defLogoScale:Float = 0.45;
+
+    var bg:Background = new Background('images/missing-bg', false);
+    bg.setGraphicSize(FlxG.width, FlxG.height);
+    bg.updateHitbox();
+    bg.screenCenter();
+    bg.antialiasing = Options.antialiasing;
+    backgroundsGrp.add(bg);
+
+    var logo:Logo = new Logo('images/missing-icon', defLogoPos);
+    logo.scale.set(defLogoScale, defLogoScale);
+    logo.updateHitbox();
+    logo.ID = i;
+    logo.alpha = 0.001;
+    logo.antialiasing = Options.antialiasing;
+    logosGrp.add(logo);
+}
+
 function update(dt) {
     if (FlxG.sound.music.volume < 0.8)
 		FlxG.sound.music.volume += 0.5 * dt;
+
+    pagesGrp.forEachAlive(page -> {
+        var followTo:Alphabet = modsAlphabet.members[page.ID].y;
+        page.y = followTo;
+    });
 
     if (allowInput) {
         scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
@@ -137,6 +164,9 @@ function update(dt) {
             allowInput = false;
             FlxG.switchState(new ModState('Menu'));
         }
+
+        for (page in pagesGrp) if (page.alpha == 1 && (CoolUtil.mouseOverlaps(page) && FlxG.mouse.justPressed))
+            CoolUtil.openURL(page.url);
 
         for (k => option in modsAlphabet.members) {
             var spaceBetween:Float = 130;
@@ -151,24 +181,31 @@ function scroll(i:Int = 0, f:Bool = false) {
     CoolUtil.playMenuSFX(0, 0.5);
 
     // old
-    var curLogo:Logo = logosGrp.members[curSelected];
-    FlxTween.tween(curLogo, {alpha: 0, y: i == 1 ? curLogo.y + 100 : curLogo.y - 100}, 0.2, {ease: FlxEase.quadInOut});
+    TweenLogo(i, true);
     modsAlphabet.members[curSelected].alpha = 0.5;
 
     curSelected = FlxMath.wrap(curSelected + i, 0, currentModsList.length-1);
     lastModSelected = curSelected;
 
     // new
-    var curLogo:Logo = logosGrp.members[curSelected];
-    FlxTween.tween(curLogo, {y: curLogo.ogPos[1], alpha: 1}, 0.2, {ease: FlxEase.quadInOut});
+    TweenLogo(i, false);
     modsAlphabet.members[curSelected].alpha = 1;
 
+    pagesGrp.forEachAlive(page -> {
+        FlxTween.cancelTweensOf(page);
+
+        if (page.ID == curSelected)
+            FlxTween.tween(page, {alpha: 1}, 0.2, {ease: FlxEase.quadInOut});
+        else
+            FlxTween.tween(page, {alpha: 0}, 0.2, {ease: FlxEase.quadInOut});
+    });
     changeBackground();
 }
 
-function TweenLogo(i:Int) {
+function TweenLogo(i:Int, fading:Bool) {
     var curLogo:Logo = logosGrp.members[curSelected];
-    FlxTween.tween(curLogo, {alpha: 0, y: i == 1 ? curLogo.y + 100 : curLogo.y - 100}, 0.2, {ease: FlxEase.quadInOut});
+    var yPoint:Float = fading ? (i == 1 ? curLogo.y + 100 : curLogo.y - 100) : curLogo.ogPos[1];
+    FlxTween.tween(curLogo, {alpha: fading ? 0 : 1, y: yPoint}, 0.2, {ease: FlxEase.quadInOut});
 }
 
 function changeBackground() {

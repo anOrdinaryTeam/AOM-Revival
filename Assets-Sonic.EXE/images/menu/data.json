@@ -1,10 +1,16 @@
 {
     "backgrounds": [
-        ["menu", true]
+        ["menu", false],
+        ["menu2", true]
     ],
     
     "logo": "icon",
     "logoData": [
-        [1000, 500, 0.35]
+        [1050, 500, 0.35],
+        [1050, 500, 0.35]
+    ],
+
+    "pages": [
+        ["GB", "https://gamebanana.com/mods/316022"]
     ]
 }
