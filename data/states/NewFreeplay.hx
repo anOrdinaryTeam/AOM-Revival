@@ -58,8 +58,9 @@ function create() {
 
             for (pos => url in pages) {
                 var pageIcon:String = getPageIcon(url);
+                var reOffY:Float = #if ARKOSE_PORT 220; #else 80; #end
                 var offX:Float = FlxG.width - 90;
-                var offY:Float = (FlxG.height - 80) - 70 * pos;
+                var offY:Float = (FlxG.height - reOffY) - 75 * pos;
 
                 var link:ModPage = new ModPage(pageIcon, url, 0);
                 link.setPosition(offX, offY);
