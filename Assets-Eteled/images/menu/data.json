@@ -9,7 +9,7 @@
     ],
 
     "pages": [
-        ["GH", "https://github.com/ash237/eteled"],
-        ["GB", "https://gamebanana.com/mods/498798"]
+        "https://github.com/ash237/eteled",
+        "https://gamebanana.com/mods/498798"
     ]
 }

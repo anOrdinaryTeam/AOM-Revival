@@ -10,7 +10,5 @@
         [700, 300, 0.85]
     ],
 
-    "pages": [
-        ["GB", "https://gamebanana.com/mods/44366"]
-    ]
+    "pages": ["https://gamebanana.com/mods/44366"]
 }

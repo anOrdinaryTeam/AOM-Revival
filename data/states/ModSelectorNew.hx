@@ -90,12 +90,10 @@ function create() {
             logosGrp.add(logo);
 
             if (rawJson.pages != null && rawJson.pages.length > 0) {
-                var stuff:Array<Array<String>> = rawJson.pages.copy();
+                var links:Array<Array<String>> = rawJson.pages.copy();
 
-                for (pos => data in stuff) {
-                    var pageIcon:String = data[0];
-                    var url:String = data[1];
-
+                for (pos => url in links) {
+                    var pageIcon:String = getPageIcon(url);
                     var xOffset:Float = modsAlphabet.members[i].x + modsAlphabet.members[i].width;
                     var yOffset:Float = modsAlphabet.members[i].y;
 

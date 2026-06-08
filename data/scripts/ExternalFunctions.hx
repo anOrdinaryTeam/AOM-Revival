@@ -1,3 +1,5 @@
+using StringTools;
+
 public static var pathSuffix:String = 'Assets-';
 
 public static function playModSound(str:String, vol:Float = 1)
@@ -14,7 +16,7 @@ public static function getModPath(str:String)
 
 public static function getModSongList(mod:String):Dynamic
 {
-    var data = {songs: [], icon: [] /*, pages: []*/}
+    var data = {songs: [], icon: []}
     var isRandomSection:Bool = mod == 'RandomSongs';
 
     try {
@@ -25,9 +27,6 @@ public static function getModSongList(mod:String):Dynamic
             var info:Array<String> = raw.split(format);
             data.songs.push(info[0]);
             data.icon.push(info[1]);
-
-            // if (isRandomSection)
-            //     data.pages.push(info);
         }
 
     }
@@ -38,6 +37,56 @@ public static function getModSongList(mod:String):Dynamic
     }
 
     return data;
+}
+
+public static function getSongPages(_song:String):Array<String> try {
+    var song:String = _song;
+    var pages:Array<String> = [];
+    var file:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + 'RandomSongs/songList.txt'));
+
+    for (songs in file) {
+        var vars:Array<String> = songs.split('::');
+        var songInLoop:String = vars[0];
+
+        if (song == songInLoop) {
+            for (i => content in vars)
+                if (i < 2)
+                    continue;
+                else
+                    pages.push(content);
+
+            break;
+        }
+    }
+
+    return pages;
+}
+catch(e:String)
+    trace(e.toString());
+
+public static function getPageIcon(_url:String):String {
+    var urlName:String = getWebName(_url);
+    var icon:String = switch(urlName) {
+        case 'github': 'GH';
+        case 'gamejolt': 'GJ';
+        case 'gamebanana': 'GB';
+        case 'youtube' | 'youtu' | 'm': 'YT';
+        default: 'missing-icon';
+    };
+
+    // trace('Web: $urlName - Icon: $icon');
+    return icon;
+}
+
+function getWebName(url:String):String {
+    var noProtocol:String = url.split('://')[1];
+    var host:String = noProtocol.split('/')[0];
+
+    if (host.startsWith('www.'))
+        host.subtr(4);
+
+    var result:String = host.split('.')[0];
+    return result;
 }
 
 // preventive

@@ -10,6 +10,7 @@ class ModPage extends FlxSprite
 
         var defScale:Float = switch(type) {
             default: 0.25;
+            case 'YT': 0.090;
             case 'GB' | 'GJ': 2;
         };
         var smooth:Bool = switch(type) {

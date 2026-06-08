@@ -11,7 +11,7 @@
     ],
 
     "pages": [
-        ["GB", "https://gamebanana.com/mods/284934"],
-        ["GJ", "https://gamejolt.com/games/entity/643508"]
+        "https://gamebanana.com/mods/284934",
+        "https://gamejolt.com/games/entity/643508"
     ]
 }

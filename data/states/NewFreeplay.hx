@@ -30,7 +30,9 @@ function create() {
 
     add(grpSongs);
     add(grpIcons);
-    // add(grpPages);
+
+    if (currentMod == 'RandomSongs')
+        add(grpPages);
 
     var iconsList:Array<String> = getModSongList(currentMod).icon.copy();
     for (song in getModSongList(currentMod).songs) {
@@ -51,7 +53,21 @@ function create() {
         icon.antialiasing = Options.antialiasing;
         grpIcons.add(icon);
 
-        // var link:ModPage = new ModPage();
+        if (grpPages != null) {
+            var pages:Array<String> = getSongPages(song.name);
+
+            for (pos => url in pages) {
+                var pageIcon:String = getPageIcon(url);
+                var offX:Float = FlxG.width - 90;
+                var offY:Float = (FlxG.height - 80) - 70 * pos;
+
+                var link:ModPage = new ModPage(pageIcon, url, 0);
+                link.setPosition(offX, offY);
+                link.ID = i;
+                link.alpha = 0;
+                grpPages.add(link);
+            }
+        }
     }
 
     if (lastModSelected_Str == currentMod) {
@@ -105,6 +121,14 @@ function scroll(i:Int = 0, f:Bool = false) {
         item.alpha = item.ID == curSelected ? 1 : alphaUnselected;
         item.targetY = i - curSelected;
     }
+    grpPages.forEachAlive(page -> {
+        FlxTween.cancelTweensOf(page);
+
+        if (page.ID == curSelected)
+            FlxTween.tween(page, {alpha: 1}, 0.2, {ease: FlxEase.quadInOut});
+        else
+            FlxTween.tween(page, {alpha: 0}, 0.2, {ease: FlxEase.quadInOut});
+    });
 }
 
 function updateScore() {
@@ -167,6 +191,9 @@ function update(dt) {
 
     if (allowInput) {
         scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
+        
+        for (page in grpPages) if (page.alpha == 1 && (CoolUtil.mouseOverlaps(page) && FlxG.mouse.justPressed))
+            CoolUtil.openURL(page.url);
 
         if (controls.LEFT_P || controls.RIGHT_P)
             updateDifficulties((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
