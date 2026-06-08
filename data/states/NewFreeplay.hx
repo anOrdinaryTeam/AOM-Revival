@@ -121,7 +121,7 @@ function scroll(i:Int = 0, f:Bool = false) {
         item.alpha = item.ID == curSelected ? 1 : alphaUnselected;
         item.targetY = i - curSelected;
     }
-    grpPages.forEachAlive(page -> {
+    if (grpPages != null) grpPages.forEachAlive(page -> {
         FlxTween.cancelTweensOf(page);
 
         if (page.ID == curSelected)
@@ -192,7 +192,7 @@ function update(dt) {
     if (allowInput) {
         scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
         
-        for (page in grpPages) if (page.alpha == 1 && (CoolUtil.mouseOverlaps(page) && FlxG.mouse.justPressed))
+        if (grpPages != null) for (page in grpPages) if (page.alpha == 1 && (CoolUtil.mouseOverlaps(page) && FlxG.mouse.justPressed))
             CoolUtil.openURL(page.url);
 
         if (controls.LEFT_P || controls.RIGHT_P)
