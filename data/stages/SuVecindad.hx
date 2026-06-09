@@ -31,8 +31,16 @@ function onGameOver(_)
 function postCreate()
     loadHud('PsychEngine', '');
 
+
+var _startCam:Bool = false;
+function onCameraMove(_) {
+    if (_startCam != (_startCam = true)) {
+        camFollow.setPosition(_.position.x, _.position.y);
+        camGame.snapToTarget();
+    }
+}
+
 function create() {
-    // settings shit
     defaultCamZoom = 0.7;
 
     boyfriend.setPosition(1100, 500);
@@ -44,46 +52,43 @@ function create() {
 
     precacheCharacter(0, 'SuVecindad/chavo2');
     precacheCharacter(1, 'SuVecindad/chavobf2');
-    // settings shit
 
-    // stage shit
     vecindad = new FlxSprite(-600, 200, getModImage('SuVecindad/Vecindad'));
-    vecindad.antialiasing = true;
+    vecindad.antialiasing = Options.antialiasing;
     addSprite(vecindad);
 
     quicoBG = new FunkinSprite(-700, 200).loadSprite(getModImage('SuVecindad/Quico_Background'));
-    quicoBG.antialiasing = true;
+    quicoBG.antialiasing = Options.antialiasing;
     quicoBG.addAnim('idle', 'Quico_Background Idle', 15, true);
     quicoBG.playAnim('idle');
     addSprite(quicoBG);
 
     vecindadPOV = new FlxSprite(-600, 200, getModImage('SuVecindad/VecindadPOV'));
-    vecindadPOV.antialiasing = true;
+    vecindadPOV.antialiasing = Options.antialiasing;
     vecindadPOV.alpha = 0.001;
     addSprite(vecindadPOV);
-    // stage shit
 
-    // chars shit
     quico = new Character(-300, 400, 'SuVecindad/quico');
-    quico.antialiasing = true;
+    quico.antialiasing = Options.antialiasing;
     quico.alpha = 0.001;
     addSprite(quico);
 
     quicoAnim = new FunkinSprite(-525, 660).loadSprite(getModImage('SuVecindad/QuicoMami'));
-    quicoAnim.addAnim('idle', 'QuicoMami mami0', 24, false);
-    quicoAnim.antialiasing = true;
+    quicoAnim.antialiasing = Options.antialiasing;
     quicoAnim.alpha = 0.001;
     addSprite(quicoAnim);
 
+    quicoAnim.addAnim('idle', 'QuicoMami mami0', 24, false);
+
     chavoAnim = new FunkinSprite(-190, 750).loadSprite(getModImage('SuVecindad/ChavoToma'));
-    chavoAnim.addAnim('idle', 'ChavoToma toma0', 24, false);
-    chavoAnim.antialiasing = true;
+    chavoAnim.antialiasing = Options.antialiasing;
+    addSprite(chavoAnim);
+
     chavoAnim.flipX = true;
     chavoAnim.alpha = 0.001;
-    addSprite(chavoAnim);
-    // chars shit
 
-    // bars shit
+    chavoAnim.addAnim('idle', 'ChavoToma toma0', 24, false);
+
     barTop = new FlxSprite(0, -280).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barTop.camera = camHUD;
     addSprite(barTop);
@@ -91,10 +96,8 @@ function create() {
     barBottom = new FlxSprite(0, 900).makeSolid(FlxG.width * 2, 100, 0xFF000000);
     barBottom.camera = camHUD;
     addSprite(barBottom);
-    // bars shit
 }
 
-// events go brr
 function stepHit() {
     switch(curStep) {
         case 640:
@@ -114,15 +117,15 @@ function stepHit() {
         case 1758:
             dad.alpha = 0.001;
             chavoAnim.alpha = 1;
+
             chavoAnim.playAnim('idle');
-            chavoAnim.animation.finishCallback = function(name:String) {
-                if (name == 'idle') {
-                    new FlxTimer().start(1, () -> {
-                        remove(chavoAnim);
-                        dad.alpha = 1;
-                    });
-                }
-            }
+            chavoAnim.animation.finishCallback = () -> {
+                new FlxTimer().start(1, () -> {
+                    remove(chavoAnim);
+                    dad.alpha = 1;
+                });
+            };
+            
         case 1764:
             remove(quico);
             quicoAnim.alpha = 1;
