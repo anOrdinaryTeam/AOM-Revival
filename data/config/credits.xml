@@ -1,0 +1,6 @@
+<menu name="AOM Credits" desc="People who helped">
+    <github user="SantiYea" customName="Zanxt" desc="Director - Main Coder" size="100" portrait="false"/>
+    <github user="Lite6G" customName="Boache" desc="Helper Coder - Artist" size="100" portrait="false"/>
+    <github user="wohfredd" desc="Helper Coder" size="100" portrait="false"/>
+    <github user="SanfordxDD" desc="Tester" size="100" portrait="false"/>
+</menu>

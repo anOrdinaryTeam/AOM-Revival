@@ -52,15 +52,15 @@ function create() {
 
     insert(1, forestStage);
     insert(2, greenHill);
-}
 
-function postCreate() {
 	precacheCharacter(0, 'EXE/exe-pixel');
 	precacheCharacter(1, 'EXE/bf-pixel-exe');
 	precacheCharacter(2, 'EXE/gf-pixel-exe');
 	graphicCache.cache(Paths.image('modNotes/arrow-pixels'));
 	graphicCache.cache(Paths.image('modNotes/arrowEnds'));
+}
 
+function postCreate() {
 	camGame.followLerp = 0.06;
     vg.loadGraphic(loadSpr('RedVG'));
     vg.alpha = 0;

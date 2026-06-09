@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="250" y="400" sprite="exe/Sonic_EXE_Pixel" scale="12" antialiasing="false" icon="EXE/exe-pixel">
+<character x="250" y="400" sprite="exe/Sonic_EXE_Pixel" color="#010065" scale="12" antialiasing="false" icon="EXE/exe-pixel">
 	<anim name="idle" anim="Sonic_EXE_Pixel idle" fps="12"/>
 	<anim name="singDOWN" anim="Sonic_EXE_Pixel Sonic_EXE_Pixel NOTE DOWN"/>
 	<anim name="singRIGHT" anim="Sonic_EXE_Pixel NOTE RIGHT"/>
