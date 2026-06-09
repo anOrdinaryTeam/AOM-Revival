@@ -63,3 +63,8 @@ Thanks to [ArkoseLabs](https://github.com/ArkoseLabsOfficial), is totally possib
 
 > [!NOTE]
 > if you're the Director, Dev or Creator of ANY of these Mods and you don't want your Mod to be included here, you can contact me in Discord (solexbreaker) or Making a Issue in Issues Tab, just make sure when you try to contact me in Discord or making a Issue prove yourself that you're one of the Devs of your Mod.
+
+.
+.
+.
+![secret](readmeStuff/nextmods.png)
