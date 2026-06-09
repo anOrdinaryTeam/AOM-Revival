@@ -16,8 +16,8 @@ AOM (anOrdinaryModpack) is a recopilation of the golden Era of [Friday Night' Fu
 
 # [ Menus ]
 ![1](readmeStuff/Menu-1.png)
-![2](readmeStuff/Menu-2.png)
 ![3](readmeStuff/Menu-3.png)
+![2](readmeStuff/Menu-2.png)
 ![4](readmeStuff/Menu-4.png)
 
 # [ Features ]
