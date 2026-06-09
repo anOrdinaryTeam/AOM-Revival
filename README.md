@@ -62,7 +62,9 @@ Thanks to [ArkoseLabs](https://github.com/ArkoseLabsOfficial), is totally possib
 ![Mobile-4](readmeStuff/Mobile-Gameplay.jpg)
 
 > [!NOTE]
-> if you're the Director, Dev or Creator of ANY of these Mods and you don't want your Mod to be included here, you can contact me in Discord (solexbreaker) or Making a Issue in Issues Tab, just make sure when you try to contact me in Discord or making a Issue prove yourself that you're one of the Devs of your Mod.
+> if you're the Director, Dev or Creator of ANY of these Mods and you don't want your Mod to be included here, you can contact me in Discord (solexbreaker) or Making a Issue in Issues Tab, just make sure when you try to contact me prove yourself that you're one of the Devs of your Mod.
+>
+> ABOUT CREDITS: All the credits are reflected in the "Mod Freeplay" with its respective original Page and Icon too, by clicking them it redirects you to their Pages, same goes for the "RandomSongs" Section when scrolling though the Songs.
 
 .
 .
