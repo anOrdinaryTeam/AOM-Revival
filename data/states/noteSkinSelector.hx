@@ -142,6 +142,9 @@ function create() {
     curSkinTxt.x = (FlxG.width - curSkinTxt.width) - 10;
     add(curSkinTxt);
 
+	#if ARKOSE_PORT
+	addMobilePad("UP_DOWN", "A_B");
+	#end
     scroll();
 }
 
