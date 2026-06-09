@@ -8,6 +8,12 @@ AOM (anOrdinaryModpack) is a recopilation of the golden Era of [Friday Night' Fu
 >
 > -. Zanxt
 
+> [!CAUTION]
+> This Modpack only works under most updated Builds (aka Nightly's Builds or Actions Builds) of Codename Engine, It's not gonna work in the latest PUBLIC Release, the Modpack itself will detect that and will close automatically.
+>
+> For download these Nightly's Builds, [CNE Page](https://codename-engine.com/) provides that scrolling a bit down.
+![Warning](readmeStuff/Warning.png)
+
 # [ Menus ]
 ![1](readmeStuff/Menu-1.png)
 ![2](readmeStuff/Menu-2.png)
