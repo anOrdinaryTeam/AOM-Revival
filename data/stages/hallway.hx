@@ -1,4 +1,4 @@
-// importScript('data/scripts/EteledGlitch');
+importScript('data/scripts/EteledGlitch');
 
 var dadNotes:String = '';
 var bfNotes:String = '';
