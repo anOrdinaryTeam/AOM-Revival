@@ -1,6 +1,6 @@
 <menu name="AOM Credits" desc="People who helped">
-    <github user="SantiYea" customName="Zanxt" desc="Director - Main Coder" size="100" portrait="false"/>
-    <github user="Lite6G" customName="Boache" desc="Helper Coder - Artist" size="100" portrait="false"/>
-    <github user="wohfredd" desc="Helper Coder" size="100" portrait="false"/>
-    <github user="SanfordxDD" desc="Tester" size="100" portrait="false"/>
+    <credit name="Zanxt" desc="Director - Main Coder" icon="zanxt" url="https://github.com/SantiYea" size="140" portrait="false" />
+    <credit name="Boache" desc="Helper Coder - Artist" icon="boache" url="https://github.com/SantiYea" size="140" portrait="false" />
+    <credit name="wohfredd" desc="Helper Coder" icon="fred" url="https://github.com/wohfredd" size="140" portrait="false" />
+    <github user="SanfordxDD" desc="Tester" size="100" portrait="true"/>
 </menu>
