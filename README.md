@@ -3,7 +3,7 @@
 
 AOM (anOrdinaryModpack) is a recopilation of the golden Era of [Friday Night' Funkin](https://www.newgrounds.com/portal/view/770371) Mods totally Ported/Recreated in a modern Engine using [Codename Engine](https://codename-engine.com/).
 
-# [Lastest Release](https://github.com/SantiYea/AOM-Revival/releases/tag/1.0.0)
+# [Lastest Release](https://github.com/SantiYea/AOM-Revival/releases/latest)
 
 > [!IMPORTANT]
 > This project doesn't incite to replace all the Mods/Songs added to this Recopilation, we only do this as a Love Cart to the Community and provide a new Way to Replay these Mods/Songs and also because we love FNF aside of all Controversies that some Mods/Songs got.
