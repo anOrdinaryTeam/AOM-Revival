@@ -3,6 +3,7 @@ import funkin.editors.EditorPicker;
 import flixel.addons.display.FlxBackdrop;
 import flixel.effects.FlxFlicker;
 import funkin.editors.ui.UIState;
+import funkin.backend.system.macros.GitCommitMacro;
 
 final pixelate:Bool = Options.antialiasing;
 final getOptions:Dynamic = CoolUtil.parseJson(Paths.json('config/menuItems'));
@@ -19,6 +20,9 @@ public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 var charMenu:String = '';
 
 function create() {
+    if (GitCommitMacro.commitHash == '9757b00')
+        FlxG.switchState(new ModState('IncompatibleState'));
+
     FlxG.mouse.visible = true;
     CoolUtil.playMenuSong();
     changeToDefaultRPC('In The Main Menu');
