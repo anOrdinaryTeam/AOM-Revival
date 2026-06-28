@@ -4,6 +4,7 @@ import flixel.addons.display.FlxBackdrop;
 import flixel.effects.FlxFlicker;
 import funkin.editors.ui.UIState;
 import funkin.backend.system.macros.GitCommitMacro;
+import funkin.backend.system.Flags;
 
 final pixelate:Bool = Options.antialiasing;
 final getOptions:Dynamic = CoolUtil.parseJson(Paths.json('config/menuItems'));
@@ -20,7 +21,8 @@ public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 var charMenu:String = '';
 
 function create() {
-    if (GitCommitMacro.commitHash == '9757b00')
+    var commit:String = Flags.COMMIT_HASH;
+    if (commit == '9757b00')
         FlxG.switchState(new ModState('IncompatibleState'));
 
     FlxG.mouse.visible = true;
@@ -63,8 +65,8 @@ function create() {
     logo.x -= 20; logo.y += 20;
     add(logo);
 
-    final str:String = 'Author: ${Flags.MOD_AUTHOR}\nAnOrdinaryModpack: ${Flags.customFlags.get('MODPACK_VERSION')}';
-    final verTxt:FunkinText = new FunkinText(5, 0, 0, str, 20);
+    var str:String = 'Author: ${Flags.MOD_AUTHOR}\nAnOrdinaryModpack: ${Flags.customFlags.get('MODPACK_VERSION')}';
+    var verTxt:FunkinText = new FunkinText(5, 0, 0, str, 20);
     verTxt.y = (FlxG.height - verTxt.height) - 5;
     verTxt.antialiasing = true;
     add(verTxt);

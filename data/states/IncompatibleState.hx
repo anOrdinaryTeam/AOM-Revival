@@ -71,11 +71,12 @@ function update() {
 
 static function getSystem():String
 {
-    return #if linux 'Linux'; #elseif (mac || macos) 'MacOS'; #elseif windows 'Windows'; #end
+    return #if linux 'Linux'; #elseif (mac || macos) 'MacOS'; #elseif windows 'Windows'; #else 'Unknown' #end
 }
 
 static function getSystemLink():String
 {
-    var sys:String = getSystem();
-    return 'https://nightly.link/CodenameCrew/CodenameEngine/workflows/${sys.toLowerCase()}/main/Codename%20Engine.zip';
+    var sys:String = getSystem().toLowerCase();
+    var link:String = sys == 'Unknown' ? "https://codename-engine.com/" : 'https://nightly.link/CodenameCrew/CodenameEngine/workflows/' + sys + '/main/Codename%20Engine.zip';
+    return link;
 }
