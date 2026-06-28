@@ -77,6 +77,6 @@ static function getSystem():String
 static function getSystemLink():String
 {
     var sys:String = getSystem().toLowerCase();
-    var link:String = sys == 'Unknown' ? "https://codename-engine.com/" : 'https://nightly.link/CodenameCrew/CodenameEngine/workflows/' + sys + '/main/Codename%20Engine.zip';
+    var link:String = sys == 'unknown' ? "https://codename-engine.com/" : 'https://nightly.link/CodenameCrew/CodenameEngine/workflows/' + sys + '/main/Codename%20Engine.zip';
     return link;
 }
