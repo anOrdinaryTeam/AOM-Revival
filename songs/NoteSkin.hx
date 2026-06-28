@@ -24,13 +24,13 @@ function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
     });
 }
 
-function onNoteCreation(e) if ((usingSkins && skinStr != '') && e.strumLineID == 1 && e.noteType == null) {
+function onNoteCreation(e) if ((usingSkins && skinStr.length > 0) && e.strumLineID == 1 && e.noteType == null) {
     e.noteSprite = getSaveData('curSkinNote');
     e.note.splash = getSaveData('curSplash');
     if (usingRGB) createShader(e.note, e.strumID);
 }
 
-function onStrumCreation(e) if ((usingSkins && skinStr != '') && e.player == 1) {
+function onStrumCreation(e) if ((usingSkins && skinStr.length > 0) && e.player == 1) {
     e.sprite = getSaveData('curSkinNote');
     if (usingRGB) createShader(e.strum, e.strumID, true);
 }
