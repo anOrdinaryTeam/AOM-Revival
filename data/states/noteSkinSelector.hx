@@ -137,7 +137,8 @@ function create() {
     useThisSkin.visible = false;
     add(useThisSkin);
 
-    curSkinTxt.text = '< Current Skin: ${FlxG.save.data.AOM_curSkinNote_Display} >';
+    var str:String = FlxG.save.data.AOM_curSkinNote_Display == '' ? 'NONE' : FlxG.save.data.AOM_curSkinNote_Display;
+    curSkinTxt.text = '< Current Skin: $str >';
     curSkinTxt.alignment = 'left';
     curSkinTxt.x = (FlxG.width - curSkinTxt.width) - 10;
     add(curSkinTxt);
