@@ -21,10 +21,6 @@ public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 var charMenu:String = '';
 
 function create() {
-    var commit:String = Flags.COMMIT_HASH;
-    if (commit == '9757b00')
-        FlxG.switchState(new ModState('IncompatibleState'));
-
     FlxG.mouse.visible = true;
     CoolUtil.playMenuSong();
     changeToDefaultRPC('In The Main Menu');
@@ -141,6 +137,9 @@ function update(dt) {
 			persistentUpdate = false;
 			persistentDraw = true;
 		}
+
+        if (controls.BACK)
+            FlxG.switchState(new TitleState());
 
         if (FlxG.keys.justPressed.T) {
             input = false;
