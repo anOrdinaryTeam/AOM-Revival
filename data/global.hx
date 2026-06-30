@@ -8,7 +8,6 @@ import Sys;
 
 static var saveMap:Map<String, Dynamic> = [];
 static var loadedSaveData:Bool = false;
-static var changed:Bool = false;
 
 public static var currentMod:String = 'NONE';
 public static var currentModsList:Array<String>;
@@ -26,31 +25,17 @@ function new() {
     Handle.init([]);
     currentModsList = loadModFolders();
     trace('Loaded Mod List: $currentModsList ');
-
-    // if (GitCommitMacro.commitHash == '9757b00') {
-    //     NativeAPI.showMessageBox('Not in Nightly Build', 'Download the Experimental Version');
-    //     CoolUtil.openURL("https://codename-engine.com/");
-    //     Sys.exit(0);
-    // }
 }
 
 public static function loadModFolders():Array<String>
 {
-    final folders:Array<String> = Paths.getFolderDirectories('');
-    final result:Array<String> = [];
-
-    for (folder in folders) if (folder.contains('Assets-')) {
-        var _file:String = folder.replace('Assets-', '');
-        result.push(_file);
-    }
-    return result;
+    final folders:Array<String> = Paths.getFolderDirectories('Mods/');
+    return folders;
 }
 
 function preStateSwitch() {
     importScript('data/scripts/ExternalFunctions');
 
-    // if (!changed)
-    //     Framerate.codenameBuildField.visible = false;
     if (!loadedSaveData)
         LoadSaveData();
 }
