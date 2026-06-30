@@ -87,5 +87,5 @@ function onDadHit(_) if (!_.note.isSustainNote && spawnOnDad)
         createTrickyLine(TrickyLinesArray[curID][FlxG.random.int(0, TrickyLinesArray[curID].length - 1)]);
 
 function onNoteMiss(_) if (!_.note.isSustainNote && spawnOnDad)
-    if (FlxG.random.bool(dad.curCharacter == 'tricky' ? 10 : 4))
+    if (FlxG.random.bool(dad.curCharacter == 'Tricky/tricky' ? 10 : 4))
         createTrickyLine(TrickyLinesArray[2][FlxG.random.int(0, TrickyLinesArray[2].length - 1)]);
