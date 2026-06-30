@@ -159,7 +159,7 @@ function update(dt) {
     if (allowInput) {
         scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
 
-        if (controls.ACCEPT)
+        if (controls.ACCEPT || FlxG.mouse.justPressed)
             select();
         
         if (controls.BACK) {

@@ -204,7 +204,7 @@ function update(dt) {
             FlxG.switchState(new ModState('ModSelectorNew'));
         }
 
-        if (controls.ACCEPT)
+        if (controls.ACCEPT || FlxG.mouse.justPressed)
             enterSong();
     }
 }
