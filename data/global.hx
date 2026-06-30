@@ -24,12 +24,12 @@ using StringTools;
 function new() {
     Handle.init([]);
     currentModsList = loadModFolders();
-    trace('Loaded Mod List: $currentModsList ');
+    trace('Loaded Mod List: $currentModsList');
 }
 
 public static function loadModFolders():Array<String>
 {
-    final folders:Array<String> = Paths.getFolderDirectories('Mods/');
+    var folders:Array<String> = Paths.getFolderDirectories('Mods/');
     return folders;
 }
 

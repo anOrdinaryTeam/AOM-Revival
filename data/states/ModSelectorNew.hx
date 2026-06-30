@@ -59,7 +59,7 @@ function create() {
     }
 
     for (i => str in currentModsList) try {
-        var modPath:String = 'Assets-$str/images/menu';
+        var modPath:String = 'Mods/$str/images/menu';
 
         if (findFile('$modPath/data.json')) {
             var rawJson:Dynamic = CoolUtil.parseJson(Paths.getPath('$modPath/data.json'));

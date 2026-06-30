@@ -1,18 +1,16 @@
 using StringTools;
 
-public static var pathSuffix:String = 'Assets-';
-
-public static function playModSound(str:String, vol:Float = 1)
-    FlxG.sound.play(Paths.getPath(pathSuffix + '$currentMod/sounds/$str.ogg'), vol);
-
 public static function playSound(str:String, vol:Float = 1)
     FlxG.sound.play(Paths.sound(str), vol);
+
+public static function playModSound(str:String, vol:Float = 1)
+    FlxG.sound.play(Paths.getPath('Mods/$currentMod/sounds/$str.ogg'), vol);
 
 public static function getImage(str:String)
     return Paths.image(str);
 
 public static function getModPath(str:String)
-    return Paths.getPath(pathSuffix + '$currentMod/images/$str.png');
+    return Paths.getPath('Mods/$currentMod/images/$str.png');
 
 public static function getModSongList(mod:String):Dynamic
 {
@@ -20,7 +18,7 @@ public static function getModSongList(mod:String):Dynamic
     var isRandomSection:Bool = mod == 'RandomSongs';
 
     try {
-        var _file:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + '$mod/songList.txt'));
+        var _file:Array<String> = CoolUtil.coolTextFile(Paths.file('Mods/$mod/songList.txt'));
         var format:String = isRandomSection ? '::' : ':';
         
         for (raw in _file) {
@@ -42,7 +40,7 @@ public static function getModSongList(mod:String):Dynamic
 public static function getSongPages(_song:String):Array<String> try {
     var song:String = _song;
     var pages:Array<String> = [];
-    var file:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + 'RandomSongs/songList.txt'));
+    var file:Array<String> = CoolUtil.coolTextFile(Paths.file('Mods/RandomSongs/songList.txt'));
 
     for (songs in file) {
         var vars:Array<String> = songs.split('::');
@@ -95,7 +93,7 @@ public function findModSong(song:String) {
     var modResult:String = '';
 
     for (mod in getModsList) {
-        var songList:Array<String> = CoolUtil.coolTextFile(Paths.file(pathSuffix + '$mod/songList.txt'));
+        var songList:Array<String> = CoolUtil.coolTextFile(Paths.file('Mods/$mod/songList.txt'));
 
         for (i in 0...songList.length) {
             var name:String = songList[i].split(':')[0];
