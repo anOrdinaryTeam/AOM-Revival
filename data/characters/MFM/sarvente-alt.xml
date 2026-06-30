@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="MFM/sarvente_dark" icon="MFM/sarv" color="#F691C5">
+	<anim name="idle" anim="SarvDarkIdle"/>
+	<anim name="singDOWN" anim="SarvDarkDown0" x="107" y="-3"/>
+	<anim name="singRIGHT" anim="SarvDarkRight0" x="35"/>
+	<anim name="singLEFT" anim="SarvDarkLeft0" x="107" y="-2"/>
+	<anim name="singUP" anim="SarvDarkUp0" x="-52" y="-36"/>
+	<anim name="singUP-alt" anim="SarvDarkUp2" x="-62" y="-4"/>
+	<anim name="singLEFT-alt" anim="SarvDarkLeft2" x="27" y="2"/>
+	<anim name="singDOWN-alt" anim="SarvDarkDown2"/>
+	<anim name="singRIGHT-alt" anim="SarvDarkRight2" x="-11" y="-3"/>
+</character>

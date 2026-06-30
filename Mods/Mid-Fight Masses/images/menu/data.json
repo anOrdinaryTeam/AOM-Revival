@@ -1,0 +1,10 @@
+{
+    "backgrounds": [
+        ["bg", true]
+    ],
+    
+    "logo": "logo",
+    "logoData": [
+        [900, 450, 0.5]
+    ]
+}

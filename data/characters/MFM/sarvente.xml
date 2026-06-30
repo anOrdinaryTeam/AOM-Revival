@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="MFM/sarvente_sheet" icon="MFM/sarv" color="#F691C5">
+	<anim name="idle" anim="SarventeIdle"/>
+	<anim name="singDOWN" anim="SarventeDown" x="90" y="-16"/>
+	<anim name="singRIGHT" anim="SarventeRight"/>
+	<anim name="singLEFT" anim="SarventeLeft" x="85"/>
+	<anim name="singUP" anim="SarventeUp" x="-38" y="-2"/>
+	<anim name="Hey" anim="SarventeHey" x="-11"/>
+</character>

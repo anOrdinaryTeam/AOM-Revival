@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="MFM/smokinhotbabe" icon="MFM/sarv-demon" color="#AE1B64">
+	<anim name="idle" anim="LuciferSarvIdle"/>
+	<anim name="singDOWN" anim="LuciferSarvDown"/>
+	<anim name="singRIGHT" anim="LuciferSarvRight"/>
+	<anim name="singLEFT" anim="LuciferSarvLeft"/>
+	<anim name="singUP" anim="LuciferSarvUp"/>
+</character>

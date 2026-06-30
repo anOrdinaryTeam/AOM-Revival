@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="MFM/ruv_sheet" icon="MFM/ruv" color="#808080">
+	<anim name="idle" anim="RuvIdle"/>
+	<anim name="singDOWN" anim="RuvDown" x="-25" y="-1"/>
+	<anim name="singRIGHT" anim="RuvRight"/>
+	<anim name="singLEFT" anim="RuvLeft" x="-3" y="-63"/>
+	<anim name="singUP" anim="RuvUp" x="-1" y="2"/>
+</character>

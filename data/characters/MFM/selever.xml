@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="MFM/fuckboi_sheet" icon="MFM/selever" color="#972651">
+	<anim name="idle" anim="SelIdle"/>
+	<anim name="singDOWN" anim="SelDown" x="-65" y="1"/>
+	<anim name="singRIGHT" anim="SelRight" x="-79" y="-2"/>
+	<anim name="singLEFT" anim="SelLeft" x="-133"/>
+	<anim name="singUP" anim="SelUp" x="19" y="4"/>
+	<anim name="Intro" anim="SelHey" x="-81" y="2"/>
+</character>
