@@ -30,6 +30,7 @@
 				<value name="Time left" value="timeLeft"/>
 				<value name="Time Elapsed" value="timeElapsed"/>
 				<value name="Song Name" value="songName"/>
+				<value name="All" value="all"/>
 				<value name="Disabled" value="disabled"/>
 			</choice>
 		</menu>

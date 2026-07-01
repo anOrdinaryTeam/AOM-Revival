@@ -66,24 +66,32 @@ public static function RefreshSaveDatas() {
     
     // [ MODS/SONGS CONFIGS ]
 
-    // [ FATALITY ]
-    if (saveMap.get('Fatality_MoveWindow') != FlxG.save.data.AOM_Fatality_WindowMove)
-        saveMap.set('Fatality_MoveWindow', FlxG.save.data.AOM_Fatality_WindowMove);
+        // [ MID-FIGHT MASSES ]
+        if (saveMap.get('MFM_altNotes') != FlxG.save.data.AOM_MFM_altNotes)
+            saveMap.set('MFM_altNotes', FlxG.save.data.AOM_MFM_altNotes);
 
-    if (saveMap.get('Fatality_SpawnPopUps') != FlxG.save.data.AOM_Fatality_PopUps)
-        saveMap.set('Fatality_SpawnPopUps', FlxG.save.data.AOM_Fatality_PopUps);
+        if (saveMap.get('MFM_ruvShake') != FlxG.save.data.AOM_MFM_ruvShake)
+            saveMap.set('MFM_ruvShake', FlxG.save.data.AOM_MFM_ruvShake);
+        // [ END ]
 
-    if (saveMap.get('Fatality_PopUpsLimiter') != FlxG.save.data.AOM_Fatality_PopUps)
-        saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_PopUps);
-    // [ END ]
+        // [ FATALITY ]
+        if (saveMap.get('Fatality_MoveWindow') != FlxG.save.data.AOM_Fatality_WindowMove)
+            saveMap.set('Fatality_MoveWindow', FlxG.save.data.AOM_Fatality_WindowMove);
+
+        if (saveMap.get('Fatality_SpawnPopUps') != FlxG.save.data.AOM_Fatality_PopUps)
+            saveMap.set('Fatality_SpawnPopUps', FlxG.save.data.AOM_Fatality_PopUps);
+
+        if (saveMap.get('Fatality_PopUpsLimiter') != FlxG.save.data.AOM_Fatality_PopUps)
+            saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_PopUps);
+        // [ END ]
         
-    // [ CORRUPTRO ]
-    if (saveMap.get('Corruptro_levelBG') != FlxG.save.data.AOM_Corruptro_levelBG)
-    	saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
+        // [ CORRUPTRO ]
+        if (saveMap.get('Corruptro_levelBG') != FlxG.save.data.AOM_Corruptro_levelBG)
+            saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
 
-    if (saveMap.get('Corruptro_poisonShader') != FlxG.save.data.AOM_Corruptro_poisonShader)
-    	saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
-    // [ END ]
+        if (saveMap.get('Corruptro_poisonShader') != FlxG.save.data.AOM_Corruptro_poisonShader)
+            saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
+        // [ END ]
 
     // [ END ]
 
@@ -188,6 +196,14 @@ static function LoadSaveData() {
     // [ END ]
 
     // [ MODS/SONGS CONFIG ]
+
+        // [ MID-FIGHT MASSES]
+        FlxG.save.data.AOM_MFM_ruvShake ??= true;
+        saveMap.set('MFM_ruvShake', FlxG.save.data.AOM_MFM_ruvShake);
+
+        FlxG.save.data.AOM_MFM_altNotes ??= false;
+        saveMap.set('MFM_altNotes', FlxG.save.data.AOM_MFM_altNotes);
+        // [ END ]
 
         // [ FATALITY ]
         FlxG.save.data.AOM_Fatality_WindowMove ??= true;

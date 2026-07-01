@@ -11,6 +11,9 @@ var Settings:Map<String, Dynamic> = [
     "tweenScoreTxt" => getSaveData('Psych_BopScore'),
     "timeBarType" => getSaveData('Psych_TimeBarType'),
 ];
+
+var lengthSong:String = '';
+
 doIconBop = false;
 
 function onHudLoad(hud) if (hud == 'PsychEngine') {
@@ -62,6 +65,7 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
         hudItems.add(timeTxt);
     }
 
+    lengthSong = FlxStringUtil.formatTime(inst.length / 1000, false);
     scripts.call('postHudLoad');
 }
 
@@ -139,12 +143,31 @@ function update(_) {
 	    icons.updateHitbox();
     }
 
-    if (Settings["timeBarType"] != 'songName' && !startingSong) {
-        var songCalc:Float = Settings["timeBarType"] == 'timeLeft' ? (inst.length - Conductor.songPosition) : Conductor.songPosition;
-        var secondsTotal:Int = Math.floor(songCalc / 1000);
-		if(secondsTotal < 0) secondsTotal = 0;
+    if (!startingSong && Settings["timeBarType"] != 'songName') {
+        var fullStr:String = '';
+        var timeTxt:FlxText = hudItems.members[3];
 
-        hudItems.members[3].text = FlxStringUtil.formatTime(secondsTotal, false);
+        if (Settings["timeBarType"] != 'all') {
+            var songCalc:Float = Settings["timeBarType"] == 'timeLeft' ? (inst.length - Conductor.songPosition) : Conductor.songPosition;
+            var secondsTotal:Int = Math.floor(songCalc / 1000);
+            if(secondsTotal < 0) secondsTotal = 0;
+
+            fullStr = FlxStringUtil.formatTime(secondsTotal, false);
+        }
+        else {
+
+            var timeElapsed:Int = Math.floor(Conductor.songPosition / 1000);
+            if (timeElapsed < 0) secondsTotal = 0;
+
+            var timeElapsedStr:String = FlxStringUtil.formatTime(timeElapsed, false);
+            fullStr = '$songName - ($timeElapsedStr / $lengthSong)';
+
+            var timeBar:FlxSprite = hudItems.members[1];
+            timeTxt.size = (fullStr.length / 2) * 1.5;
+            timeTxt.y = (timeBar.y + (timeBar.height - timeTxt.height) / 2);
+        }
+
+        timeTxt.text = fullStr;
     }
 }
 
