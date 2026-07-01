@@ -7,7 +7,7 @@ function create() {
     useCamMov = true;
     usePsychSplashes = true;
     camMoveAmt = 30;
-    statSfx = FlxG.sound.load(Paths.getPath('Assets-RandomSongs/sounds/stat.ogg'));
+    statSfx = FlxG.sound.load(Paths.getPath('Mods/RandomSongs/sounds/stat.ogg'));
 
     for (str in ['alt', 'normal']) {
         var bg:FlxSprite = new FlxSprite().loadGraphic(getModImage('Phantasm/$str'));

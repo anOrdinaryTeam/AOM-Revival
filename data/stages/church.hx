@@ -34,10 +34,12 @@ function postCreate() {
 var goIdle:FlxTimer = new FlxTimer();
 
 function onDadHit(e) if (songName == 'Zavodila') {
-    FlxG.camera.shake(0.01, 0.05);
-	camHUD.shake(0.01, 0.015);
+    if (getSaveData('MFM_ruvShake')) {
+        FlxG.camera.shake(0.01, 0.05);
+        camHUD.shake(0.01, 0.015);
+    }
+    
     gf.playAnim('scared');
-
     goIdle?.cancel();
     goIdle.start(0.6, () -> gf.dance());
 }

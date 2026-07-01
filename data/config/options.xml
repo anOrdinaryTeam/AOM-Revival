@@ -6,6 +6,11 @@
 	<checkbox id="AOM_cpuStrumsGlow" name="Disable CPU Strum Glow" desc="just like old times"/>
 
 	<menu name="Mods/Songs Config">
+		<menu name="Mid-Fight Masses">
+			<checkbox id="AOM_MFM_altNotes" name="Alt Notes" desc="If checked, the Game will use the Old Skin used for Gospel before the Selever Update." />
+			<checkbox id="AOM_MFM_ruvShake" name="Ruv Shake Screen" desc="I mean, if you wanna a smooth gameplay go ahead i don't mind." />
+		</menu>
+
 		<menu name="Fatality">
 			<checkbox id="AOM_Fatality_WindowMove" name="Moving Window"/>
 			<checkbox id="AOM_Fatality_PopUps" name="Pop Ups Mechanic"/>
