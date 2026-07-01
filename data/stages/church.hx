@@ -1,10 +1,14 @@
+import flixel.addons.effects.FlxTrail;
+var trail:FlxTrail;
+
 function create() {
+    defaultCamZoom = 0.9;
     var suffix:String = switch(songName) {
         default: '1';
         case 'Worship': '2';
         case 'Zavodila': '3';
+        case 'Casanova': '-s';
     }
-    defaultCamZoom = 0.9;
 
     var bg:FlxSprite = new FlxSprite(-240, -630, getModImage('church$suffix/bg'));
 	bg.antialiasing = Options.antialiasing;
@@ -29,13 +33,19 @@ function postCreate() {
     boyfriend.scale.set(0.8, 0.8);
 	gf.scale.set(0.8, 0.8);
 	dad.scale.set(0.8, 0.8);
+
+    if (songName == 'Zavodila')
+        opponentCam.y -= 20;
+
+    trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+    // setObjectOrder(trail, getObjectOrder(dad));
 }
 
 var goIdle:FlxTimer = new FlxTimer();
 
 function onDadHit(e) if (songName == 'Zavodila') {
     if (getSaveData('MFM_ruvShake')) {
-        FlxG.camera.shake(0.01, 0.05);
+        FlxG.camera.shake(0.01, 0.07);
         camHUD.shake(0.01, 0.015);
     }
     
