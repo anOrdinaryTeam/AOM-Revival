@@ -79,7 +79,7 @@ function onDadHit(e) if (songName == 'Zavodila') {
 function stepHit() if (trailShows.get(songName).contains(curStep))
     showTrail();
 
-function onCountdown(e) if (e.swagCounter == 3) {
+function onCountdown(e) if (songName == 'Casanova' && e.swagCounter == 3) {
     dad.playAnim('Intro', true);
     SeleverThing(true);
 }
