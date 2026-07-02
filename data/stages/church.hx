@@ -17,8 +17,9 @@ function create() {
         case 'Casanova': '-s';
     }
 
-    var bg:FlxSprite = new FlxSprite(-240, -630, getModImage('church$suffix/bg'));
+    var bg:FlxSprite = new FlxSprite(-250, -650, getModImage('church$suffix/bg'));
 	bg.antialiasing = Options.antialiasing;
+    bg.scrollFactor.set(0.8, 0.8);
 	addSprite(bg);
 	
 	var pillars:FlxSprite = new FlxSprite(-240, -630, getModImage('church$suffix/pillars'));
@@ -55,7 +56,7 @@ function postCreate() {
     if (songName == 'Zavodila')
         opponentCam.y -= 20;
 
-    trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+    trail = new FlxTrail(dad, null, 10, 15, 0.3, 0.069);
     trail.color = dad.iconColor;
     setObjectOrder(trail, getObjectOrder(dad));
     trail.visible = false;

@@ -1,3 +1,5 @@
+import flixel.addons.effects.FlxTrail;
+
 var skin:String = getSaveData('MFM_altNotes') ? 'old' : 'new';
 
 function create() {
@@ -42,7 +44,8 @@ function postCreate() {
     FlxTween.tween(opponentCam, {x: opponentCam.x + amt}, tmr + 0.4, {type: 4, ease: FlxEase.sineInOut});
     FlxTween.tween(opponentCam, {y: opponentCam.y + amt}, tmr, {type: 4, ease: FlxEase.sineInOut});
 
-    trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+    trail = new FlxTrail(dad, null, 10, 15, 0.3, 0.069);
+    trail.color = dad.iconColor;
     setObjectOrder(trail, getObjectOrder(dad));
     trail.visible = false;
 }
