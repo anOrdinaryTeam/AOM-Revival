@@ -6,6 +6,7 @@ var trail:FlxTrail;
 
 var trailShows:Map<String, Dynamic> = [];
 var goIdle:FlxTimer = new FlxTimer();
+var trailTimer:FlxTimer = new FlxTimer();
 
 function create() {
     defaultCamZoom = 0.9;
@@ -60,7 +61,7 @@ function postCreate() {
     trail.visible = false;
 
     trailShows.set("Parish", [387, 451]);
-    trailShows.set("Worship", [515, 543, 643, 672]);
+    trailShows.set("Worship", [418, 485, 503, 770]);
     trailShows.set("Zavodila", [131, 195, 655, 685, 1047, 1111]);
     trailShows.set("Casanova", [288, 352, 448, 512, 576, 768, 896, 1024, 1088, 1152, 1216]);
 }
@@ -108,5 +109,6 @@ public function SeleverThing(_isIntro:Bool) {
 
 function showTrail() {
     trail.visible = true;
-    new FlxTimer().start(3.50, () -> trail.visible = false);
+    trailTimer?.cancel();
+    trailTimer.start(3.50, () -> trail.visible = false);
 }
