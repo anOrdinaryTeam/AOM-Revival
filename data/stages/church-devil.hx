@@ -41,6 +41,10 @@ function postCreate() {
 
     FlxTween.tween(opponentCam, {x: opponentCam.x + amt}, tmr + 0.4, {type: 4, ease: FlxEase.sineInOut});
     FlxTween.tween(opponentCam, {y: opponentCam.y + amt}, tmr, {type: 4, ease: FlxEase.sineInOut});
+
+    trail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+    setObjectOrder(trail, getObjectOrder(dad));
+    trail.visible = false;
 }
 
 function onNoteCreation(e) if (!usingSkins)
@@ -48,3 +52,8 @@ function onNoteCreation(e) if (!usingSkins)
 
 function onStrumCreation(e) if (!usingSkins)
     e.sprite = 'modNotes/MFM/$skin';
+
+function stepHit() switch(curStep) {
+    case 128 | 576 | 1153: trail.visible = true;
+    case 191 | 607 | 1276: trail.visible = false;
+}
