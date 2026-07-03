@@ -207,7 +207,7 @@ function update(e) {
     else if (!allowInput && inColorEditor) {
         updateNoteRGB(selectedStrum);
 
-        if (controls.BACK)
+        if (controls.BACK || FlxG.mouse.justPressedRight)
             closeRGBPanel();
     }
 }
