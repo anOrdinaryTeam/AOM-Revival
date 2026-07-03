@@ -68,10 +68,8 @@ function postCreate() {
 }
 
 function onDadHit(e) if (songName == 'Zavodila') {
-    if (getSaveData('MFM_ruvShake')) {
-        FlxG.camera.shake(0.01, 0.07);
-        camHUD.shake(0.01, 0.015);
-    }
+    if (getSaveData('MFM_ruvShake'))
+        FlxG.camera.shake(0.012, 0.03);
     
     gf.playAnim('scared');
     goIdle?.cancel();

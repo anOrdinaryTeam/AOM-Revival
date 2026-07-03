@@ -19,6 +19,8 @@ public static var lastDiffSelected:Int = 0;
 
 public static var CREATE_FILE_FEATURE:Bool = true;
 
+public static var BACK_TO_PLAYSTATE:Bool = false;
+
 using StringTools;
 
 function new() {

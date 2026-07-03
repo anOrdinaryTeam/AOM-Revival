@@ -43,7 +43,10 @@ var lastSelected:Int = 0;
 var _ChangeToVariants:Bool = true;
 var _TimeToChange:Float = 2;
 
+var backToPlayState:Bool = BACK_TO_PLAYSTATE;
+
 function create() {
+    CoolUtil.playMenuSong();
     // thxs karim uwu
     // cdn.discordapp.com/attachments/1328061474509291632/1500094568870314164/image.png?ex=69f72f6f&is=69f5ddef&hm=971547086514ed1ff843c9fb54082dd2012b3ff536713a97c2602a802997d34e&animated=true
     currentColors = [for (i in FlxG.save.data.AOM_RGB) [for (j in i) j]];
@@ -183,7 +186,13 @@ function update(e) {
 
         if (controls.BACK) {
             allowInput = false;
-            FlxG.switchState(new ModState('Menu'));
+
+            if (backToPlayState) {
+                FlxG.switchState(new PlayState());
+                BACK_TO_PLAYSTATE = false;
+            }
+            else
+                FlxG.switchState(new ModState('Menu'));
         }
 
         if (optionsBoxes.members.length > 0) {
