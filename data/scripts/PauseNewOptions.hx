@@ -10,8 +10,11 @@ var newOptions:Array<String> = [
     "Exit to charter"
 ];
 
-function create(e)
+function create(e) {
+    if (newOptions.contains('Exit to charter') && !PlayState.chartingMode)
+        newOptions.remove('Exit to charter');
     e.options = newOptions;
+}
 
 function onSelectOption(e) if (e.name == 'Change Note Skin') {
     BACK_TO_PLAYSTATE = true;
