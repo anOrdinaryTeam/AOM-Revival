@@ -1,13 +1,14 @@
 import flixel.text.FlxTextBorderStyle;
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 doIconBop = false;
+var npsTimes:Array<Float> = [];
 
 function onHudLoad(hud) if (hud == "Mic'dUpEngine") {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
     for (i in 0...4) {
-        var txt:FunkinText = new FunkinText(healthBarBG.x - healthBarBG.width / 2, healthBarBG.y - 26 * i, 0, 20);
+        var txt:FunkinText = new FunkinText(healthBarBG.x - healthBarBG.width / 2, healthBarBG.y - 26 * (3 - i), 0, 20);
         txt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         txt.setBorderStyle(FlxTextBorderStyle.OUTLINE, 0xFF000000, 3, 1);
         txt.scrollFactor.set();
@@ -28,7 +29,15 @@ function update(_) {
 
     iconP1.updateHitbox();
     iconP2.updateHitbox();
+
+    while (npsTimes.length > 0 && Conductor.songPosition - npsTimes[0] > 1000)
+        npsTimes.shift();
+
+    hudItems.members[0].text = 'NPS: ' + npsTimes.length;
 }
+
+function onPlayerHit(_) if (_.player && !_.note.isSustainNote)
+    npsTimes.push(Conductor.songPosition);
 
 function beatHit() {
     iconP1.setGraphicSize(Std.int(iconP1.width + 30));
