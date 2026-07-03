@@ -1,5 +1,6 @@
 import flixel.addons.display.FlxBackdrop;
 import funkin.editors.ui.UIColorwheel;
+import funkin.editors.ui.UICheckbox;
 import funkin.editors.ui.UIButton;
 
 var curSkinTxt:FunkinText = new FunkinText(0, 10, 0, '< Current Skin: ??? >', 30);
@@ -142,6 +143,12 @@ function create() {
     curSkinTxt.alignment = 'left';
     curSkinTxt.x = (FlxG.width - curSkinTxt.width) - 10;
     add(curSkinTxt);
+
+    var useSkins:UICheckbox = new UICheckbox((listBG.x + listBG.width) + 15, 30, 'Use Custom Skins', FlxG.save.data.AOM_usingSkin);
+    useSkins.antialiasing = true;
+    useSkins.onChecked = () -> FlxG.save.data.AOM_usingSkin = !FlxG.save.data.AOM_usingSkin;
+    useSkins.scale.set(1.4, 1.4);
+    add(useSkins);
 
 	#if ARKOSE_PORT
 	addMobilePad("UP_DOWN", "A_B");
