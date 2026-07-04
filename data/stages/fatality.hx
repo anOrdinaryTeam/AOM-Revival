@@ -19,8 +19,6 @@ var windowY:Float = 0;
 var Xamount:Float = 0;
 var Yamount:Float = 0;
 
-PauseSubState.script = 'data/scripts/ReziseWindow';
-
 function create() {
     defaultCamZoom = 0.5;
     

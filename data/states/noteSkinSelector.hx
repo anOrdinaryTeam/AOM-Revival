@@ -2,6 +2,7 @@ import flixel.addons.display.FlxBackdrop;
 import funkin.editors.ui.UIColorwheel;
 import funkin.editors.ui.UICheckbox;
 import funkin.editors.ui.UIButton;
+import openfl.system.Capabilities;
 
 var curSkinTxt:FunkinText = new FunkinText(0, 10, 0, '< Current Skin: ??? >', 30);
 var skinsList:Array<NoteSkin> = [];
@@ -44,6 +45,7 @@ var _ChangeToVariants:Bool = true;
 var _TimeToChange:Float = 2;
 
 var backToPlayState:Bool = BACK_TO_PLAYSTATE;
+var lastSong:String = LAST_SONG;
 
 function create() {
     CoolUtil.playMenuSong();
@@ -188,8 +190,20 @@ function update(e) {
             allowInput = false;
 
             if (backToPlayState) {
-                FlxG.switchState(new PlayState());
+                if (lastSong == 'Fatality') {
+                    #if !ARKOSE_PORT
+                    var determineScale:Float = switch(Capabilities.screenResolutionY) {
+                        default: 0.9;
+                        case 768 | 1080: 0.75;
+                        case 720: 0.6;
+                    }
+                    windowShit(960, 720, determineScale);
+                    window.resizable = false;
+                    #end
+                }
+
                 BACK_TO_PLAYSTATE = false;
+                FlxG.switchState(new PlayState());
             }
             else
                 FlxG.switchState(new ModState('Menu'));
