@@ -22,7 +22,8 @@ function onSelectOption(e) {
         BACK_TO_PLAYSTATE = true;
         LAST_SONG = PlayState.SONG.meta.name;
 
-        restoreWindowSize();
+        if (PlayState.SONG.meta.name == 'Fatality')
+            restoreWindowSize();
         FlxG.switchState(new UIState(true, 'noteSkinSelector'));
     }
     else if (e.name == 'Exit to menu' && PlayState.SONG.meta.name == 'Fatality') {
