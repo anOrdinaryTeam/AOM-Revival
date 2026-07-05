@@ -1,5 +1,4 @@
 import flixel.addons.effects.FlxTrail;
-import flixel.tweens.misc.AngleTween;
 
 var skin:String = getSaveData('MFM_altNotes') ? 'old' : 'new';
 var devilbg_1:FlxSprite;

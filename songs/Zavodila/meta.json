@@ -1,15 +1,4 @@
 {
-	"opponentModeAllowed": false,
 	"icon": "MFM/ruv",
-	"difficulties": [
-		"alt",
-		"hard"
-	],
-	"color": "#9271FD",
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "Zavodila",
-	"beatsPerMeasure": 4,
-	"needsVoices": true,
 	"bpm": 135
 }
