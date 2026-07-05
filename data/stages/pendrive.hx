@@ -1,6 +1,10 @@
 introLength = 0;
 
-var iTimeShaders:Array<FlxRuntimeShader> = [];
+var wave   = new CustomShader('pendrive/wave');
+var glitch = new CustomShader('pendrive/glitch2');
+var chrom  = new CustomShader('pendrive/chromAbb');
+var mosaic = new CustomShader('pendrive/mosaic');
+
 var bg:FlxSprite;
 var bg2:FlxSprite;
 
@@ -69,19 +73,69 @@ function create() {
     addSprite(frame);
 }
 
-var wave = new CustomShader('pendrive/wave');
 function postCreate() {
     iconP1.setIcon('Countdown/b1');
 
-    wave.speed = 0.0025;
+    wave.speed     = .0025;
     wave.intensity = 6;
-    wave.bloom = 0;
-    wave.iTime = .1;
+    wave.bloom     = 0;
 
-    bg.shader = wave;
+    glitch.AMT   = 0;
+    glitch.SPEED = .5;
+
+    for (huh in [wave, glitch])
+        huh.iTime = .1;
+
+    bg.shader  = wave;
     bg2.shader = wave;
+
+    camGame.addShader(glitch);
+
+    chrom.amount = 0;
+    comp.shader = chrom;
+
+    mosaic.pixel = .1;
+    camGame.addShader(mosaic);
+
 }
 
 function postUpdate(elapsed:Float) {
-    wave.iTime = wave.iTime + elapsed;
+    for (huh in [wave, glitch])
+        huh.iTime = huh.iTime + elapsed;
+}
+
+function tweenMosaic(value, time, ?ease:FlxEase = FlxEase.linear, ?remove = false) {
+	FlxTween.tween(mosaic, {pixel: value}, time, {ease: ease, onComplete: () -> {
+		if (remove) FlxTween.num(mosaic, {pixel: .1}, .5);
+    }});
+}
+
+function tweenChrom(value, time, ?ease:FlxEase = FlxEase.linear, ?remove = false) {
+	FlxTween.tween(chrom, {amount: value}, time, {ease: ease, onComplete: () -> {
+        if (remove) comp.shader = null;
+    }});
+}
+
+function tweenGlitch(value, time, ?ease:FlxEase = FlxEase.linear,?remove = false) {
+	FlxTween.tween(glitch, {AMT: value}, time, {ease: ease, onComplete: () -> {
+        if (remove) glitch.AMT = 0;
+    }});
+}
+
+function numbers() {
+    var X:Int = FlxG.random.int(600, 1500);
+    var Y:Int = FlxG.random.int(600, 1100);
+
+	var number:FunkinText = new FunkinText(X, Y, 0, FlxG.random.int(1, 10), 120);
+    number.setFormat(Paths.font('pendrive/sonic-1-hud-font.ttf'), 120, FlxColor.WHITE);
+    addSprite(number);
+
+    number.angle = FlxG.random.int(-5,5);
+    number.alpha = 0;
+
+    FlxTween.tween(number, {alpha: 1}, 1, {onComplete: () -> {
+        FlxTween.tween(number, {alpha: 0}, 2, {onComplete: () -> remove(number, true) });
+    }});
+
+    FlxTween.circularMotion(number, number.x, number.y, 10, 0, FlxG.random.bool(50), 2, true);
 }
