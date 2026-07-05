@@ -1,3 +1,7 @@
+import flixel.addons.effects.FlxTrail;
+
+var skin:String = getSaveData('MFM_altNotes') ? 'old' : 'new';
+
 function create() {
     defaultCamZoom = 0.9;
 
@@ -39,4 +43,20 @@ function postCreate() {
 
     FlxTween.tween(opponentCam, {x: opponentCam.x + amt}, tmr + 0.4, {type: 4, ease: FlxEase.sineInOut});
     FlxTween.tween(opponentCam, {y: opponentCam.y + amt}, tmr, {type: 4, ease: FlxEase.sineInOut});
+
+    trail = new FlxTrail(dad, null, 10, 15, 0.3, 0.069);
+    trail.color = dad.iconColor;
+    setObjectOrder(trail, getObjectOrder(dad));
+    trail.visible = false;
+}
+
+function onNoteCreation(e) if (!usingSkins)
+    e.noteSprite = 'modNotes/MFM/$skin';
+
+function onStrumCreation(e) if (!usingSkins)
+    e.sprite = 'modNotes/MFM/$skin';
+
+function stepHit() switch(curStep) {
+    case 128 | 576 | 1153: trail.visible = true;
+    case 191 | 607 | 1276: trail.visible = false;
 }

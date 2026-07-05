@@ -1,24 +1,26 @@
-import flixel.text.FlxTextBorderStyle;
-import openfl.geom.ColorTransform;
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 
-function postCreate() {
+function onHudLoad(hud) if (hud == 'MFM') {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
-    var whiteBox:FlxSprite = new FlxSprite(0, downscroll ? healthBarBG.y - 65 : healthBarBG + 15).makeSolid(600, 30, FlxColor.BLACK);
+    for (i in cpuStrums) i.x -= 45;
+    for (i in playerStrums) i.x -= 45;
+
+    var whiteBox:FlxSprite = new FlxSprite(0, downscroll ? healthBarBG.y - 65 : healthBarBG.y + 35).makeSolid(600, 30, FlxColor.BLACK);
     whiteBox.screenCenter(FlxAxes.X);
     whiteBox.alpha = 0.3;
     hudItems.add(whiteBox);
 
     for (i in 0...4) {
-        var score:FunkinText = new FunkinText(0,whiteBox.y + 4,0,"",16,false);
+        var score:FunkinText = new FunkinText(0, whiteBox.y + 4, 0, "", 16, false);
         score.scrollFactor.set();
+        score.antialiasing = true;
         hudItems.add(score);
 
         switch(i) {
             case 0:
-                score.text = 'DEATHS: ' + PlayState.instance.deathCounter;
+                score.text = 'DEATHS: ' + PlayState.deathCounter;
                 score.x = whiteBox.x + 10;
             case 1:
                 score.text = 'MISSED: 0';

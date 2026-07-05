@@ -1,6 +1,5 @@
 <!DOCTYPE codename-mod-options>
 <menu name="AOM Options" desc="Modpack Exc. Options">
-	<checkbox id="AOM_usingSkin" name="use Custom Skins" desc="self explanatory"/>
 	<checkbox id="AOM_flashingLights" name="Flashing Lights" desc="self explanatory"/>
 	<checkbox id="AOM_disableSplashs" name="Disable Note Splash" desc="self explanatory"/>
 	<checkbox id="AOM_cpuStrumsGlow" name="Disable CPU Strum Glow" desc="just like old times"/>

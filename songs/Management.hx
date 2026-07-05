@@ -173,6 +173,7 @@ function postCreate() {
 
     camGame.pixelPerfectShake = true;
     camHUD.pixelPerfectShake = true;
+    PauseSubState.script = 'data/scripts/PauseNewOptions';
 }
 
 function postUpdate() if (useCamMov && !forceCamPos) switch(strumLines.members[curCameraTarget].characters[0].animation.curAnim.name) {

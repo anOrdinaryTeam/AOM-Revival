@@ -1,6 +1,8 @@
 import flixel.addons.display.FlxBackdrop;
 import funkin.editors.ui.UIColorwheel;
+import funkin.editors.ui.UICheckbox;
 import funkin.editors.ui.UIButton;
+import openfl.system.Capabilities;
 
 var curSkinTxt:FunkinText = new FunkinText(0, 10, 0, '< Current Skin: ??? >', 30);
 var skinsList:Array<NoteSkin> = [];
@@ -42,7 +44,11 @@ var lastSelected:Int = 0;
 var _ChangeToVariants:Bool = true;
 var _TimeToChange:Float = 2;
 
+var backToPlayState:Bool = BACK_TO_PLAYSTATE;
+var lastSong:String = LAST_SONG;
+
 function create() {
+    CoolUtil.playMenuSong();
     // thxs karim uwu
     // cdn.discordapp.com/attachments/1328061474509291632/1500094568870314164/image.png?ex=69f72f6f&is=69f5ddef&hm=971547086514ed1ff843c9fb54082dd2012b3ff536713a97c2602a802997d34e&animated=true
     currentColors = [for (i in FlxG.save.data.AOM_RGB) [for (j in i) j]];
@@ -143,6 +149,12 @@ function create() {
     curSkinTxt.x = (FlxG.width - curSkinTxt.width) - 10;
     add(curSkinTxt);
 
+    var useSkins:UICheckbox = new UICheckbox((listBG.x + listBG.width) + 15, 30, 'Use Custom Skins', FlxG.save.data.AOM_usingSkin);
+    useSkins.antialiasing = true;
+    useSkins.onChecked = () -> FlxG.save.data.AOM_usingSkin = !FlxG.save.data.AOM_usingSkin;
+    useSkins.scale.set(1.4, 1.4);
+    add(useSkins);
+
 	#if ARKOSE_PORT
 	addMobilePad("UP_DOWN", "A_B");
 	#end
@@ -176,7 +188,25 @@ function update(e) {
 
         if (controls.BACK) {
             allowInput = false;
-            FlxG.switchState(new ModState('Menu'));
+
+            if (backToPlayState) {
+                if (lastSong == 'Fatality') {
+                    #if !ARKOSE_PORT
+                    var determineScale:Float = switch(Capabilities.screenResolutionY) {
+                        default: 0.9;
+                        case 768 | 1080: 0.75;
+                        case 720: 0.6;
+                    }
+                    windowShit(960, 720, determineScale);
+                    window.resizable = false;
+                    #end
+                }
+
+                BACK_TO_PLAYSTATE = false;
+                FlxG.switchState(new PlayState());
+            }
+            else
+                FlxG.switchState(new ModState('Menu'));
         }
 
         if (optionsBoxes.members.length > 0) {
