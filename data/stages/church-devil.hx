@@ -1,5 +1,8 @@
 import flixel.addons.effects.FlxTrail;
 
+playCutscenes = true;
+cutscene = 'Mods/$currentMod/MFM-Intro.hx';
+
 var skin:String = getSaveData('MFM_altNotes') ? 'old' : 'new';
 var devilbg_1:FlxSprite;
 
