@@ -4,6 +4,7 @@ Corruptro::Corruptro/corruptro::https://gamebanana.com/mods/317366::https://game
 Countdown::Countdown/pen1::https://gamebanana.com/mods/418826
 Defeat::black::https://gamebanana.com/mods/55652::https://gamejolt.com/games/vsimpostor/643430
 Epiphany::bigmonika::https://gamebanana.com/mods/47364
+Your Demise::monika-angry::https://gamebanana.com/mods/47364
 Fatality::EXE/fatal-sonic::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
 Megalo Strike Back::MegaloStrikeB/chara::https://gamebanana.com/mods/55836
 Phantasm::Phantasm/fleetway::https://gamebanana.com/mods/359046

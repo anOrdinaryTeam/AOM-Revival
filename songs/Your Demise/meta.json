@@ -1,0 +1,8 @@
+{
+	"displayName": "Your Demise",
+	"icon": "monika-angry",
+	"bpm": 157,
+	"needsVoices": true,
+	"difficulties": ["easy", "normal", "hard"],
+	"color": "#C9CEFF"
+}
