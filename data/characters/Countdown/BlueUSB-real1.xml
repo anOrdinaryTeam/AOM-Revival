@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Countdown/pendrive" icon="Countdown/pen1" color="#204ac0" y="100" antialiasing="false" camx="132" camy="124" holdTime="6.1" scale="0.5">
+	<anim name="idle" anim="idle"/>
+	<anim name="singLEFT" anim="left" x="134" y="28"/>
+	<anim name="singUP" anim="up" x="76" y="96"/>
+	<anim name="singDOWN" anim="down" x="52" y="-82"/>
+	<anim name="singRIGHT" anim="right" x="-6" y="64"/>
+</character>

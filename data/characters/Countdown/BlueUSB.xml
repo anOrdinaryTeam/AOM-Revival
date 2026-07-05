@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="150" y="360" scale="7" antialiasing="false" camx="-240" camy="-330" icon="Countdown/pen1" color="#204AC0">
+	<anim name="idle" anim="idle" y="0.14" loop="true"/>
+	<anim name="singDOWN" anim="Down" x="0.14" y="0.14" fps="12"/>
+	<anim name="singLEFT" anim="Left" y="0.28" fps="12"/>
+	<anim name="singUP" anim="Up" y="0.43" fps="12"/>
+	<anim name="singRIGHT" anim="Right" x="-0.14" fps="12"/>
+</character>

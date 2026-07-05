@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Countdown/BLUEUSB-real" icon="Countdown/pen2" color="#0000ff" x="-650" y="-360" antialiasing="false" camx="155" camy="230" holdTime="6.1" scale="0.8">
+	<anim name="idle" anim="BLUEUSB-real idle" fps="8"/>
+	<anim name="singLEFT" anim="BLUEUSB-real left" fps="8"/>
+	<anim name="singDOWN" anim="BLUEUSB-real down" fps="8"/>
+	<anim name="singUP" anim="BLUEUSB-real up" fps="8"/>
+	<anim name="singRIGHT" anim="BLUEUSB-real right" fps="8"/>
+</character>

@@ -1,0 +1,15 @@
+{
+	"color": "#9271FD",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"hard"
+	],
+	"icon": "Countdown/pen1",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "countdown",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 182
+}
