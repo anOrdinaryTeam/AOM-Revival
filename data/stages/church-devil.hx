@@ -1,6 +1,10 @@
 import flixel.addons.effects.FlxTrail;
 
+playCutscenes = true;
+cutscene = 'Mods/$currentMod/MFM-Intro.hx';
+
 var skin:String = getSaveData('MFM_altNotes') ? 'old' : 'new';
+var devilbg_1:FlxSprite;
 
 function create() {
     defaultCamZoom = 0.9;
@@ -21,10 +25,10 @@ function create() {
     devilbg_0.antialiasing = Options.antialiasing;
     addSprite(devilbg_0);
 
-    var devilbg_1:FlxSprite = new FlxSprite(420, -310, getModImage('devil/sprite'));
+    devilbg_1 = new FlxSprite(420, -310, getModImage('devil/sprite'));
     devilbg_1.antialiasing = Options.antialiasing;
     addSprite(devilbg_1);
-    FlxTween.angle(devilbg_1, 0, 360, 2, {type: 2});
+    FlxTween.angle(devilbg_1, devilbg_1.angle, -360, 3, {type: 2});
 
     var devilbg_2:FlxSprite = new FlxSprite(-240, -630, getModImage('devil/circ2'));
     devilbg_2.antialiasing = Options.antialiasing;
@@ -50,13 +54,25 @@ function postCreate() {
     trail.visible = false;
 }
 
-function onNoteCreation(e) if (!usingSkins)
+function onNoteCreation(e) {
+    if (e.strumLineID == 1 && usingSkins) return;
     e.noteSprite = 'modNotes/MFM/$skin';
+}
 
-function onStrumCreation(e) if (!usingSkins)
+function onStrumCreation(e) {
+    if (e.player == 1 && usingSkins) return;
     e.sprite = 'modNotes/MFM/$skin';
+}
 
 function stepHit() switch(curStep) {
     case 128 | 576 | 1153: trail.visible = true;
     case 191 | 607 | 1276: trail.visible = false;
+}
+
+function onEvent(e) if (e.event.name == 'Camera Movement') {
+    var bfTurn:Bool = e.event.params[0] == 1;
+    var toAngle:Float = bfTurn ? 360 : -360;
+    
+    FlxTween.cancelTweensOf(devilbg_1);
+    FlxTween.angle(devilbg_1, devilbg_1.angle, (devilbg_1.angle + toAngle), 3, {type: 2});
 }

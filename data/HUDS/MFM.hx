@@ -12,25 +12,24 @@ function onHudLoad(hud) if (hud == 'MFM') {
     whiteBox.alpha = 0.3;
     hudItems.add(whiteBox);
 
-    for (i in 0...4) {
-        var score:FunkinText = new FunkinText(0, whiteBox.y + 4, 0, "", 16, false);
+    var accWb:FlxSprite = new FlxSprite(0, downscroll ? healthBarBG.y - 65 : healthBarBG.y + 35).makeSolid(200, 30, FlxColor.BLACK);
+    accWb.alpha = 0.3;
+    accWb.x = (whiteBox.x + whiteBox.width) + 60;
+    hudItems.add(accWb);
+
+    var texts:Array<String> = ['DEATHS: ${PlayState.deathCounter}', 'MISSES: 0', 'RATING: Unrated', 'SCORE: 0', 'ACCURACY: 0%'];
+    for (i => text in texts) {
+        var score:FunkinText = new FunkinText(0, whiteBox.y + 4, 0, text, 16, false);
         score.scrollFactor.set();
         score.antialiasing = true;
         hudItems.add(score);
 
         switch(i) {
-            case 0:
-                score.text = 'DEATHS: ' + PlayState.deathCounter;
-                score.x = whiteBox.x + 10;
-            case 1:
-                score.text = 'MISSED: 0';
-                score.x = whiteBox.x + 120;
-            case 2:
-                score.text = 'RATING: Unrated';
-                score.x = whiteBox.x + 250;
-            case 3:
-                score.text = 'SCORE: 0';
-                score.x = whiteBox.x + 450;
+            case 0: score.x = whiteBox.x + 10;
+            case 1: score.x = whiteBox.x + 120;
+            case 2: score.x = whiteBox.x + 240;
+            case 3: score.x = whiteBox.x + 450;
+            case 4: score.x = accWb.x + 20;
         }
     }
 }
@@ -40,9 +39,14 @@ function onRatingUpdate(_) {
         case 'S++': 0xDDEC05;
         default: _.rating.color;
     };
-    hudItems.members[0].colorTransform.color = color;
+    var rating:String = misses == 0 ? 'PERFECT COMBO' : _.rating.rating;
+    var acc:Float = CoolUtil.quantize(accuracy * 100, 100);
 
-    hudItems.members[2].text = 'MISSED: ' + misses;
-    hudItems.members[3].text = 'RATING: ' + _.rating.rating;
-    hudItems.members[4].text = 'SCORE: ' + songScore;
+    hudItems.members[0].colorTransform.color = color;
+    hudItems.members[1].colorTransform.color = color;
+
+    hudItems.members[3].text = 'MISSED: $misses';
+    hudItems.members[4].text = 'RATING: $rating';
+    hudItems.members[5].text = 'SCORE: $songScore';
+    hudItems.members[6].text = 'ACCURACY: $acc%';
 }
