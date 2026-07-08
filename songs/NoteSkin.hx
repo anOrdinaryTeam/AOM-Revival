@@ -19,7 +19,7 @@ function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
     obj.shader.green = getColorArray(green);
     obj.shader.blue = getColorArray(blue);
     obj.shader.enabled = true;
-    if (isStrum) obj.animation.onFrameChange.add((anim) -> {
+    if (isStrum) obj.animation.onPlay.add((anim) -> {
         obj.shader.enabled = anim != 'static';
     });
 }
