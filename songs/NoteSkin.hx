@@ -24,7 +24,7 @@ function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
     });
 }
 
-function onNoteCreation(e) if ((usingSkins && skinStr.length > 0) && e.strumLineID == 1 && e.noteType == null) {
+function onNoteCreation(e) if ((usingSkins && skinStr.length > 0) && e.strumLineID == 1 && (e.noteType == null || e.noteSprite == 'game/notes/default')) {
     e.noteSprite = getSaveData('curSkinNote');
     e.note.splash = getSaveData('curSplash');
     if (usingRGB) createShader(e.note, e.strumID);
