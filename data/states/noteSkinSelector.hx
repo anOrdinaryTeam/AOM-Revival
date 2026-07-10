@@ -206,7 +206,7 @@ function update(e) {
                 FlxG.switchState(new PlayState());
             }
             else
-                FlxG.switchState(new ModState('Menu'));
+                FlxG.switchState(new ModState('NewMenu'));
         }
 
         if (optionsBoxes.members.length > 0) {

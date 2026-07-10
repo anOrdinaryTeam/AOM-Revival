@@ -164,7 +164,7 @@ function update(dt) {
         
         if (controls.BACK) {
             allowInput = false;
-            FlxG.switchState(new ModState('Menu'));
+            FlxG.switchState(new ModState('NewMenu'));
         }
 
         for (page in pagesGrp) if (page.alpha == 1 && (CoolUtil.mouseOverlaps(page) && FlxG.mouse.justPressed))
