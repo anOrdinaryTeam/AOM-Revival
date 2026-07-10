@@ -77,6 +77,11 @@ public static function RefreshSaveDatas() {
             saveMap.set('MFM_ruvShake', FlxG.save.data.AOM_MFM_ruvShake);
         // [ END ]
 
+        // [ BOB ]
+        if (saveMap.get('Bob_happy') != FlxG.save.data.AOM_happyBob)
+            saveMap.set('Bob_happy', FlxG.save.data.AOM_happyBob);
+        // [ END ]
+
         // [ FATALITY ]
         if (saveMap.get('Fatality_MoveWindow') != FlxG.save.data.AOM_Fatality_WindowMove)
             saveMap.set('Fatality_MoveWindow', FlxG.save.data.AOM_Fatality_WindowMove);
@@ -206,6 +211,11 @@ static function LoadSaveData() {
 
         FlxG.save.data.AOM_MFM_altNotes ??= false;
         saveMap.set('MFM_altNotes', FlxG.save.data.AOM_MFM_altNotes);
+        // [ END ]
+
+        // [ BOB ]
+        FlxG.save.data.AOM_happyBob ??= false;
+        saveMap.set('Bob_happy', FlxG.save.data.AOM_happyBob);
         // [ END ]
 
         // [ FATALITY ]
