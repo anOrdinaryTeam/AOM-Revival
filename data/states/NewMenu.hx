@@ -149,9 +149,6 @@ function update() {
 			persistentDraw = true;
 		}
 
-        if (controls.BACK)
-            FlxG.switchState(new TitleState());
-
         if (FlxG.keys.justPressed.T) {
             input = false;
             FlxG.switchState(new ModState('testing'));
