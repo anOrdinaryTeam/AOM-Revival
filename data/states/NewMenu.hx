@@ -105,6 +105,15 @@ function loadCharacterMenu() {
             char.flipX = flip;
             char.scale.set(scale, scale);
             char.updateHitbox();
+			// ENABLE THIS AFTER FIXING MENU CHAR POSSES
+            //char.extraOffset.set(-char.offset.x, -char.offset.y);
+            //char.dance();
+            //var vx:Float = char.offset.x + char.frameOffset.x * char.scale.x;
+            //var vy:Float = char.offset.y + char.frameOffset.y * char.scale.y;
+            //char.x -= vx;
+            //char.y -= vy;
+            //char.extraOffset.x += vx;
+            //char.extraOffset.y += vy;
             charactersMenu.add(char);
         }
         add(charactersMenu);
