@@ -129,7 +129,7 @@ function loadCharacterMenu() {
         trace(e.toString());
 }
 
-function update() {
+function update(dt:Float) {
     var logoScale:Float = lerp(logo.scale.x, 0.95, 0.1);
     logo.scale.set(logoScale, logoScale);
 
