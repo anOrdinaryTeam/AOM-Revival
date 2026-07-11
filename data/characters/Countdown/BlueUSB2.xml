@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Countdown/newpenpixel" icon="Countdown/pen1" color="#204ac0" x="210" y="380" antialiasing="false" camx="-269" camy="-210" scale="7">
+	<anim name="idle" anim="i" fps="12"/>
+	<anim name="singDOWN" anim="d" fps="12"/>
+	<anim name="singLEFT" anim="l" fps="12"/>
+	<anim name="singUP" anim="u" fps="12"/>
+	<anim name="singRIGHT" anim="r" fps="12"/>
+	<anim name="hey" anim="hey"/>
+</character>

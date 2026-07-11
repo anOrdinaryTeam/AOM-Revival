@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="BLUEUSB-real.png">
+<SubTexture name="BLUEUSB-real idle0000" x="1520" y="3458" width="765" height="707" frameX="-486" frameY="-357" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real idle0001" x="2989" y="1527" width="764" height="716" frameX="-491" frameY="-352" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real idle0002" x="3049" y="2700" width="763" height="716" frameX="-511" frameY="-339" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real idle0003" x="760" y="3458" width="760" height="712" frameX="-522" frameY="-335" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real idle0004" x="0" y="3458" width="760" height="713" frameX="-526" frameY="-334" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real up0000" x="2124" y="0" width="865" height="878" frameX="-501" frameY="-179" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real up0001" x="0" y="1878" width="914" height="822" frameX="-465" frameY="-232" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real up0002" x="914" y="1878" width="880" height="795" frameX="-464" frameY="-259" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real up0003" x="2124" y="878" width="851" height="788" frameX="-488" frameY="-266" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real right0000" x="0" y="0" width="1067" height="942" frameX="-340" frameY="-280" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real right0001" x="0" y="942" width="1056" height="936" frameX="-339" frameY="-275" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real right0002" x="1067" y="0" width="1057" height="942" frameX="-331" frameY="-284" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real right0003" x="1056" y="942" width="1061" height="936" frameX="-328" frameY="-279" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real left0000" x="1794" y="1878" width="1085" height="789" frameX="-292" frameY="-376" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real left0001" x="2989" y="0" width="854" height="770" frameX="-297" frameY="-370" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real left0002" x="881" y="2700" width="877" height="752" frameX="-290" frameY="-388" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real left0003" x="0" y="2700" width="881" height="758" frameX="-289" frameY="-395" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real down0000" x="1758" y="2700" width="1291" height="732" frameX="-398" frameY="-442" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real down0001" x="2989" y="770" width="744" height="757" frameX="-398" frameY="-408" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real down0002" x="3843" y="714" width="745" height="707" frameX="-421" frameY="-397" frameWidth="1890" frameHeight="1280" />
+<SubTexture name="BLUEUSB-real down0003" x="3843" y="0" width="746" height="714" frameX="-428" frameY="-395" frameWidth="1890" frameHeight="1280" />
+</TextureAtlas>

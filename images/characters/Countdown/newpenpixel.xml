@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="newpenpixel.png">
+<SubTexture name="i0000" x="240" y="0" width="54" height="67" frameX="-28" frameY="-14" frameWidth="91" frameHeight="60" />
+<SubTexture name="i0001" x="185" y="0" width="55" height="68" frameX="-28" frameY="-13" frameWidth="91" frameHeight="60" />
+<SubTexture name="i0002" x="185" y="68" width="55" height="68" frameX="-28" frameY="-13" frameWidth="91" frameHeight="60" />
+<SubTexture name="i0003" x="0" y="209" width="57" height="67" frameX="-28" frameY="-14" frameWidth="91" frameHeight="60" />
+<SubTexture name="i0004" x="0" y="141" width="58" height="68" frameX="-28" frameY="-13" frameWidth="91" frameHeight="60" />
+<SubTexture name="u0000" x="0" y="0" width="56" height="71" frameX="-27" frameY="-10" frameWidth="91" frameHeight="60" />
+<SubTexture name="u0001" x="56" y="0" width="56" height="70" frameX="-27" frameY="-11" frameWidth="91" frameHeight="60" />
+<SubTexture name="r0000" x="58" y="141" width="73" height="68" frameX="-20" frameY="-13" frameWidth="91" frameHeight="60" />
+<SubTexture name="r0001" x="112" y="0" width="73" height="70" frameX="-19" frameY="-11" frameWidth="91" frameHeight="60" />
+<SubTexture name="l0000" x="57" y="209" width="81" height="63" frameX="-4" frameY="-18" frameWidth="91" frameHeight="60" />
+<SubTexture name="l0001" x="138" y="209" width="75" height="63" frameX="-9" frameY="-18" frameWidth="91" frameHeight="60" />
+<SubTexture name="d0000" x="54" y="71" width="54" height="69" frameX="-27" frameY="-12" frameWidth="91" frameHeight="60" />
+<SubTexture name="d0001" x="0" y="71" width="54" height="70" frameX="-27" frameY="-11" frameWidth="91" frameHeight="60" />
+<SubTexture name="hey0000" x="131" y="141" width="59" height="68" frameX="-28" frameY="-13" frameWidth="91" frameHeight="60" />
+<SubTexture name="hey0001" x="108" y="71" width="60" height="69" frameX="-28" frameY="-12" frameWidth="91" frameHeight="60" />
+</TextureAtlas>

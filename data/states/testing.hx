@@ -78,5 +78,5 @@ function update() {
     if (controls.DOWN) FlxG.camera.scroll.y += mult;
 
     if (controls.BACK)
-        FlxG.switchState(new ModState('Menu'));
+        FlxG.switchState(new ModState('NewMenu'));
 }

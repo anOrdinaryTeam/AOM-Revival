@@ -6,11 +6,15 @@ public static function playSound(str:String, vol:Float = 1)
 public static function playModSound(str:String, vol:Float = 1)
     FlxG.sound.play(Paths.getPath('Mods/$currentMod/sounds/$str.ogg'), vol);
 
-public static function getImage(str:String)
+public static function getImage(str:String):String
     return Paths.image(str);
 
-public static function getModPath(str:String)
+public static function getModPath(str:String):String
     return Paths.getPath('Mods/$currentMod/images/$str.png');
+
+// just if we use FlxSound
+public static function getModSoundPath(str:String):String
+    return Paths.getPath('Mods/$currentMod/sounds/$str.ogg');
 
 public static function getModSongList(mod:String):Dynamic
 {

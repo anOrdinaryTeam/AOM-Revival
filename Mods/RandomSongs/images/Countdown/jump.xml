@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="jump.png">
+<SubTexture name="i0000" x="0" y="0" width="2058" height="1546" frameX="0" frameY="0" frameWidth="2048" frameHeight="1536" />
+<SubTexture name="i0001" x="2058" y="0" width="2058" height="1546" frameX="0" frameY="0" frameWidth="2048" frameHeight="1536" />
+<SubTexture name="i0002" x="0" y="1546" width="2058" height="1546" frameX="0" frameY="0" frameWidth="2048" frameHeight="1536" />
+<SubTexture name="i0003" x="2058" y="1546" width="2058" height="1546" frameX="0" frameY="0" frameWidth="2048" frameHeight="1536" />
+</TextureAtlas>

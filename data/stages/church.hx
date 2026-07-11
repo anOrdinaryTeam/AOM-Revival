@@ -1,5 +1,8 @@
 import flixel.addons.effects.FlxTrail;
 
+playCutscenes = true;
+cutscene = 'Mods/$currentMod/MFM-Intro.hx';
+
 var bgFade:FlxSprite;
 var circSelever:FlxSprite;
 var trail:FlxTrail;

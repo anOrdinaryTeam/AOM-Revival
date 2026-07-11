@@ -20,6 +20,7 @@ public static var lastDiffSelected:Int = 0;
 public static var CREATE_FILE_FEATURE:Bool = true;
 
 public static var BACK_TO_PLAYSTATE:Bool = false;
+public static var LAST_SONG:String = ''; // meant to use only for Fatality 'cause of the window changes
 
 using StringTools;
 
@@ -74,6 +75,11 @@ public static function RefreshSaveDatas() {
 
         if (saveMap.get('MFM_ruvShake') != FlxG.save.data.AOM_MFM_ruvShake)
             saveMap.set('MFM_ruvShake', FlxG.save.data.AOM_MFM_ruvShake);
+        // [ END ]
+
+        // [ BOB ]
+        if (saveMap.get('Bob_happy') != FlxG.save.data.AOM_happyBob)
+            saveMap.set('Bob_happy', FlxG.save.data.AOM_happyBob);
         // [ END ]
 
         // [ FATALITY ]
@@ -205,6 +211,11 @@ static function LoadSaveData() {
 
         FlxG.save.data.AOM_MFM_altNotes ??= false;
         saveMap.set('MFM_altNotes', FlxG.save.data.AOM_MFM_altNotes);
+        // [ END ]
+
+        // [ BOB ]
+        FlxG.save.data.AOM_happyBob ??= false;
+        saveMap.set('Bob_happy', FlxG.save.data.AOM_happyBob);
         // [ END ]
 
         // [ FATALITY ]

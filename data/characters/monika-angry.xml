@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="rs/Monika_Finale" scale="6.3" antialiasing="false" color="#C9CEFF" holdTime="6.1">
+	<anim name="idle" anim="MONIKA IDLE"/>
+	<anim name="singLEFT" anim="MONIKA LEFT NOTE"/>
+	<anim name="singDOWN" anim="MONIKA DOWN NOTE"/>
+	<anim name="singUP" anim="MONIKA UP NOTE"/>
+	<anim name="singRIGHT" anim="MONIKA RIGHT NOTE"/>
+	<anim name="singLEFT-alt" anim="MONIKA LEFT GLITCH"/>
+	<anim name="singDOWN-alt" anim="MONIKA DOWN GLITCH" x="10" y="-1"/>
+	<anim name="singUP-alt" anim="MONIKA UP GLITCH" x="10" y="-1"/>
+	<anim name="singRIGHT-alt" anim="MONIKA RIGHT GLITCH" x="10" y="-1"/>
+</character>

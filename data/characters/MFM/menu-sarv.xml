@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="MFM/theseknees" icon="MFM/sarv" color="#F691C5">
+	<anim name="idle" anim="TiredSarv"/>
+</character>

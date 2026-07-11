@@ -5,6 +5,10 @@
 	<checkbox id="AOM_cpuStrumsGlow" name="Disable CPU Strum Glow" desc="just like old times"/>
 
 	<menu name="Mods/Songs Config">
+		<menu name="Bob">
+			<checkbox id="AOM_happyBob" name="Happy Bob" desc="funny check (for Hell song)" />
+		</menu>
+
 		<menu name="Mid-Fight Masses">
 			<checkbox id="AOM_MFM_altNotes" name="Alt Notes" desc="If checked, the Game will use the Old Skin used for Gospel before the Selever Update." />
 			<checkbox id="AOM_MFM_ruvShake" name="Ruv Shake Screen" desc="I mean, if you wanna a smooth gameplay go ahead i don't mind." />
@@ -64,7 +68,7 @@
 			<checkbox id="AOM_forever_WATERMARK" name="Forever Watermark"  desc="Wanna watermark like Forever style?"/>
 			<checkbox id="AOM_forever_INFO"      name="Forever Info"       desc="Wanna info like Forever style?"/>
 			<checkbox id="AOM_forever_RATINGS"   name="Forever Ratings"    desc="Wanna ratings like Forever style?"/>
-			<checkbox id="AOM_forever_COMBO"     name="Forever Combo"      desc="Wanna combo like Forever style? WARNING: THIS WILL INCREASE YOUR RAM USAGE."/>
+			<checkbox id="AOM_forever_COMBO"     name="Forever Combo"      desc="Wanna combo like Forever style?"/>
 			<checkbox id="AOM_forever_MISS"      name="Forever Combo Miss" desc="Wanna combo miss like Forever style? WARNING: THIS WILL INCREASE YOUR RAM USAGE."/>
 			<choice   id="AOM_forever_MISS_TYPE" name="Misses Type"        desc="Type of the Misses Text">
 				<value name="Combo Breaks" value="Combo Breaks"/>

@@ -19,12 +19,12 @@ function createShader(obj:Dynamic, id:Int, isStrum:Bool = false) {
     obj.shader.green = getColorArray(green);
     obj.shader.blue = getColorArray(blue);
     obj.shader.enabled = true;
-    if (isStrum) obj.animation.onFrameChange.add((anim) -> {
+    if (isStrum) obj.animation.onPlay.add((anim) -> {
         obj.shader.enabled = anim != 'static';
     });
 }
 
-function onNoteCreation(e) if ((usingSkins && skinStr.length > 0) && e.strumLineID == 1 && e.noteType == null) {
+function onNoteCreation(e) if ((usingSkins && skinStr.length > 0) && e.strumLineID == 1 && (e.noteType == null || e.noteSprite == 'game/notes/default')) {
     e.noteSprite = getSaveData('curSkinNote');
     e.note.splash = getSaveData('curSplash');
     if (usingRGB) createShader(e.note, e.strumID);
