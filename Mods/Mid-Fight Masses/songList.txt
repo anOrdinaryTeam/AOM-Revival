@@ -1,5 +1,5 @@
-Parish:MFM/sarv
-Worship:MFM/sarv
-Zavodila:MFM/ruv
-Gospel:MFM/sarv-demon
-Casanova:MFM/selever
+Parish
+Worship
+Zavodila
+Gospel
+Casanova

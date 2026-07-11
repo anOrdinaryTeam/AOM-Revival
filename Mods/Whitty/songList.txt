@@ -1,4 +1,4 @@
-Lo-Fight:whitty/normal
-Overhead:whitty/normal
-Ballistic:whitty/angry
-Ballistic-OLD:whitty/angry
+Lo-Fight
+Overhead
+Ballistic
+Ballistic-OLD

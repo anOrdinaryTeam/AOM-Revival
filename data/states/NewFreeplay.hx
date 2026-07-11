@@ -34,20 +34,27 @@ function create() {
     if (currentMod == 'RandomSongs')
         add(grpPages);
 
-    var iconsList:Array<String> = getModSongList(currentMod).icon.copy();
-    for (song in getModSongList(currentMod).songs) {
-        var metaData:SongData = new SongData(song, Chart.loadChartMeta(song).difficulties);
+    for (song in getModSongList(currentMod)) {
+        var Meta:Dynamic = Chart.loadChartMeta(song);
+
+        var displayName:String = Meta.displayName;
+        var icon:String = Meta.icon;
+        var diffs:Array<String> = Meta.difficulties.copy();
+
+        var metaData:SongData = new SongData(song, displayName, icon, diffs);
         songsList.push(metaData);
     }
 
     for (i => song in songsList) {
-        var item:Alphabet = new Alphabet(0, 0, song.name, 'bold');
+        var nameSong:String = song.displayName;        
+        var item:Alphabet = new Alphabet(0, 0, nameSong, 'bold');
         item.isMenuItem = true;
         item.ID = i;
         item.antialiasing = Options.antialiasing;
         grpSongs.add(item);
 
-        var icon:HealthIcon = new HealthIcon(iconsList[i]);
+        var iconSong:String = song.icon;
+        var icon:HealthIcon = new HealthIcon(iconSong);
         icon.sprTracker = item;
         icon.ID = i;
         icon.antialiasing = Options.antialiasing;
@@ -212,10 +219,14 @@ function update(dt) {
 class SongData
 {
     public var name:String = '';
+    public var displayName:String = '';
+    public var icon:String = '';
     public var difficulties:Array<String> = [];
 
-    public function new(name:String, difficulties:Array<String>) {
+    public function new(name:String, displayName:String, icon:String, difficulties:Array<String>) {
         this.name = name;
+        this.displayName = displayName;
+        this.icon = icon;
         this.difficulties = difficulties.copy();
     }
 }

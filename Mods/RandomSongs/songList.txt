@@ -1,20 +1,20 @@
-Accelerant::hank::https://gamebanana.com/mods/286594
-Candy::heathers::https://gamebanana.com/mods/410094
-Corruptro::Corruptro/corruptro::https://gamebanana.com/mods/317366::https://gamejolt.com/games/VsRetroSpecter/646208
-Countdown::Countdown/pen1::https://gamebanana.com/mods/418826
-Defeat::black::https://gamebanana.com/mods/55652::https://gamejolt.com/games/vsimpostor/643430
-Epiphany::bigmonika::https://gamebanana.com/mods/47364
-Your Demise::monika-angry::https://gamebanana.com/mods/47364
-Fatality::EXE/fatal-sonic::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
-Megalo Strike Back::MegaloStrikeB/chara::https://gamebanana.com/mods/55836
-Phantasm::Phantasm/fleetway::https://gamebanana.com/mods/359046
-Prey::EXE/furnace::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
-Silly Billy::SillyBilly/billy::https://gamebanana.com/mods/395039
-Sink::sink::https://gamebanana.com/mods/368430
-Su Vecindad::SuVecindad/chavo::https://gamebanana.com/mods/422004
-Pokemon Master::pokemonmaster::https://gamebanana.com/mods/343113
-Summit::Summit/red::https://gamebanana.com/mods/350828
-Rush::Rush/rushblaze::https://gamebanana.com/mods/419175
-The Deathmatch::TheDeathmatch/icon-insanedad::https://gamejolt.com/games/farewelltofunk/664112
-Treacherous Thorns::TreacherousThorns/senpai-emtpy::https://gamejolt.com/games/fnfcorruption/588842
-Looping The Rooms::ltr::https://youtu.be/icBDYkfxpMs?si=q4bsZBUnNv1m994y
+Accelerant::https://gamebanana.com/mods/286594
+Candy::https://gamebanana.com/mods/410094
+Corruptro::https://gamebanana.com/mods/317366::https://gamejolt.com/games/VsRetroSpecter/646208
+Countdown::https://gamebanana.com/mods/418826
+Defeat::https://gamebanana.com/mods/55652::https://gamejolt.com/games/vsimpostor/643430
+Epiphany::https://gamebanana.com/mods/47364
+Your Demise::https://gamebanana.com/mods/47364
+Fatality::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
+Megalo Strike Back::https://gamebanana.com/mods/55836
+Phantasm::https://gamebanana.com/mods/359046
+Prey::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
+Silly Billy::https://gamebanana.com/mods/395039
+Sink::https://gamebanana.com/mods/368430
+Su Vecindad::https://gamebanana.com/mods/422004
+Pokemon Master::https://gamebanana.com/mods/343113
+Summit::https://gamebanana.com/mods/350828
+Rush::https://gamebanana.com/mods/419175
+The Deathmatch::https://gamejolt.com/games/farewelltofunk/664112
+Treacherous Thorns::https://gamejolt.com/games/fnfcorruption/588842
+Looping The Rooms::https://youtu.be/icBDYkfxpMs?si=q4bsZBUnNv1m994y
