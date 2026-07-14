@@ -1,13 +1,15 @@
 var sarv:Character;
+public var pillar:FlxSprite;
+public var ruv:FlxSprite;
 
 function onCharsLoaded() {
     var path:String = 'Mods/Mid-Fight Masses/images/church3';
     sarv = charactersMenu.members[0];
 
-    var pillar:FlxSprite = new FlxSprite(155, -160, Paths.file('$path/pillarbroke.png'));
+    pillar = new FlxSprite(155, -160, Paths.file('$path/pillarbroke.png'));
     insert(members.indexOf(charactersMenu), pillar);
 
-    var ruv:FlxSprite = new FlxSprite(980, 310, Paths.file('$path/he likes to be alone.png'));
+    ruv = new FlxSprite(980, 310, Paths.file('$path/he likes to be alone.png'));
     insert(members.indexOf(charactersMenu), ruv);
 
     for (tr in [pillar, ruv]) {
