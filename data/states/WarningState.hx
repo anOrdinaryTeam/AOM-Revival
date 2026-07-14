@@ -17,7 +17,7 @@ function postCreate() {
     disclaimer.y -= 45;
     titleAlphabet.y -= 100;
 
-    var warnImage:FlxSprite = new FlxSprite(900, 200, getImage('Menu/warning/12-02-2025'));
+    var warnImage:FlxSprite = new FlxSprite(900, 200, getImage('Menu/warning/12-12-2025'));
     warnImage.setGraphicSize(Std.int(warnImage.width * 1.75));
     warnImage.alpha = 0;
     insert(0, warnImage);
