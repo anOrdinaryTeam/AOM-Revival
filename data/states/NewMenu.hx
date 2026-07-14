@@ -62,7 +62,8 @@ function create() {
     loadCharacterMenu();
 
     for (i in charactersMenu)
-        i.alpha = (!startmenu ? 0 : 1);
+        if (!startmenu)
+            i.x += 800;
 
     logo = new FlxSprite(305, 100).loadGraphic(getImage('Menu/logo'));
     logo.antialiasing = pixelate;
@@ -79,6 +80,12 @@ function create() {
         enterText.screenCenter(FlxAxes.X);
         enterText.scale.set(.65, .65);
         add(enterText);
+
+        var path:String = 'Mods/Mid-Fight Masses/images/church3';
+        if (Assets.exists(Paths.file('$path/pillarbroke.png'))) {
+            pillar.x += 800;
+            ruv.x += 800;
+        }
     }
 }
 
@@ -184,13 +191,19 @@ function moveMainMenu() {
     FlxTween.tween(logo, {x: 20, y: 20}, 2.5, {startDelay: 1, ease: FlxEase.expoOut});
 
     for (i in charactersMenu)
-        FlxTween.tween(i, {alpha: 1}, 1.5, {startDelay: 1});
+        FlxTween.tween(i, {x: i.x - 800}, 1.5, {startDelay: 1.5, ease: FlxEase.elasticInOut});
 
     menuItemsGroup.forEach(function(spr) {
         var delay:Float = 0.1 * spr.ID;
         FlxTween.tween(spr, {x: spr.x + 800}, 2.5, {startDelay: delay, ease: FlxEase.elasticInOut});
         FlxTween.tween(spr, {alpha: 1}, 2.5, {startDelay: delay, ease: FlxEase.BackInOut});
     });
+
+    var path:String = 'Mods/Mid-Fight Masses/images/church3';
+    if (Assets.exists(Paths.file('$path/pillarbroke.png'))) {
+        for (i in [pillar, ruv])
+            FlxTween.tween(i, {x: i.x - 800}, 1.5, {startDelay: 1.5, ease: FlxEase.elasticInOut});
+    }
 }
 
 function onSelectedOption(option:Int) {
