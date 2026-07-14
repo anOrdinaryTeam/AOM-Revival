@@ -19,7 +19,7 @@ public var danceOnBeat:Bool = true;
 public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 
 // TESTING
-var charMenu:String = '';
+var charMenu:String = 'sarv-ruv';
 
 static var startmenu:Bool = false;
 
@@ -80,12 +80,6 @@ function create() {
         enterText.screenCenter(FlxAxes.X);
         enterText.scale.set(.65, .65);
         add(enterText);
-
-        var path:String = 'Mods/Mid-Fight Masses/images/church3';
-        if (Assets.exists(Paths.file('$path/pillarbroke.png'))) {
-            pillar.x += 800;
-            ruv.x += 800;
-        }
     }
 }
 
@@ -198,12 +192,6 @@ function moveMainMenu() {
         FlxTween.tween(spr, {x: spr.x + 800}, 2.5, {startDelay: delay, ease: FlxEase.elasticInOut});
         FlxTween.tween(spr, {alpha: 1}, 2.5, {startDelay: delay, ease: FlxEase.BackInOut});
     });
-
-    var path:String = 'Mods/Mid-Fight Masses/images/church3';
-    if (Assets.exists(Paths.file('$path/pillarbroke.png'))) {
-        for (i in [pillar, ruv])
-            FlxTween.tween(i, {x: i.x - 800}, 1.5, {startDelay: 1.5, ease: FlxEase.elasticInOut});
-    }
 }
 
 function onSelectedOption(option:Int) {

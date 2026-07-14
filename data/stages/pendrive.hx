@@ -1,5 +1,5 @@
 introLength = 0;
-camZoomOnBeat = false;
+Options.camZoomOnBeat = false;
 
 var wave   = new CustomShader('pendrive/wave');
 var glitch = new CustomShader('pendrive/glitch2');
@@ -215,7 +215,6 @@ function stepHit() {
 
             camGame.removeShader(glitch);
             camGame.removeShader(mosaic);
-            camZoomingMult = 0;
             canBop = false;
 
         case 2356:
