@@ -56,16 +56,13 @@ function create() {
         text.ID = i;
         menuItemsGroup.add(text);
 
-        if (!startmenu) {
-            text.alpha = .5;
-            text.x = XY[0] - 800;
-        }
-        else {
-            text.x = XY[0];
-        }
+        text.x = (!startmenu ? XY[0] - 800 : XY[0]);
     }
 
     loadCharacterMenu();
+
+    for (i in charactersMenu)
+        i.alpha = (!startmenu ? 0 : 1);
 
     logo = new FlxSprite(305, 100).loadGraphic(getImage('Menu/logo'));
     logo.antialiasing = pixelate;
@@ -73,14 +70,10 @@ function create() {
     logo.updateHitbox();
     add(logo);
 
-    if (startmenu) {
-        logo.x = 20; logo.y = 20;
-    }
-    else {
-        logo.x = 305; logo.y = 100;
-        for (i in charactersMenu)
-            i.alpha = 0.001;
+    logo.x = (!startmenu ? 305 : 20);
+    logo.y = (!startmenu ? 100 : 20);
 
+    if (!startmenu) {
         enterText = new Alphabet(0, 550, 'Press ENTER to continue', 'bold');
         enterText.antialiasing = Options.antialiasing;
         enterText.screenCenter(FlxAxes.X);
