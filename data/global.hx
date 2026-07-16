@@ -50,6 +50,9 @@ public static function RefreshSaveDatas() {
 
     if (saveMap.get('allowCustomHud') != FlxG.save.data.AOM_engineHUD)
         saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
+
+    if (saveMap.get('customHud') != FlxG.save.data.AOM_customHUD)
+        saveMap.set('customHud', FlxG.save.data.AOM_customHUD);
     // [ END ]
 
     // [ NOTE SKIN SYSTEM ]
@@ -179,8 +182,10 @@ static function LoadSaveData() {
 
     FlxG.save.data.AOM_engineHUD ??= true;
     saveMap.set('allowCustomHud', FlxG.save.data.AOM_engineHUD);
-    // [ END ]
 
+    FlxG.save.data.AOM_customHUD ??= 'none';
+    saveMap.set('allowCustomHud', FlxG.save.data.AOM_customHUD);
+    // [ END ]
 
     // [ NOTE SKIN SYSTEM ]
     FlxG.save.data.AOM_usingSkin ??= false;
