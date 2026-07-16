@@ -1,6 +1,12 @@
 {
     "list": [
         {
+            "char": "menuChars/rub",
+            "position": [255, 180],
+            "scale": 0.6,
+            "flipped": false
+        },
+        {
             "char": "MFM/menu-sarv",
             "position": [400, 30],
             "scale": 0.6,

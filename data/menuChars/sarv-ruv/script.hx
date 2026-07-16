@@ -1,25 +1,13 @@
 var sarv:Character;
-public var pillar:FlxSprite;
-public var ruv:FlxSprite;
+var rub:Character;
 
 function onCharsLoaded() {
     var path:String = 'Mods/Mid-Fight Masses/images/church3';
     sarv = charactersMenu.members[0];
-
-    pillar = new FlxSprite(155, -160, Paths.file('$path/pillarbroke.png'));
-    insert(members.indexOf(charactersMenu), pillar);
-
-    ruv = new FlxSprite(980, 310, Paths.file('$path/he likes to be alone.png'));
-    insert(members.indexOf(charactersMenu), ruv);
-
-    for (tr in [pillar, ruv]) {
-        tr.antialiasing = Options.antialiasing;
-        tr.scale.set(0.6, 0.6);
-        tr.updateHitbox();
-    }
+    rub = charactersMenu.members[1];
 
     if (FlxG.random.bool(20)) {
-        var sorry:FunkinText = new FunkinText(ruv.x - 200, ruv.y - 150, 0, 'This in my mind looked way better\nsorry :p\n- Zanxt', 20);
+        var sorry:FunkinText = new FunkinText(780, 160, 0, 'This in my mind looked way better\nsorry :p\n- Zanxt', 20);
         sorry.alignment = 'center';
         sorry.antialiasing = true;
         sorry.alpha = 0.001;

@@ -19,7 +19,7 @@ public var danceOnBeat:Bool = true;
 public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
 
 // TESTING
-var charMenu:String = 'sarv-ruv';
+var charMenu:String = '';
 
 static var startmenu:Bool = false;
 
@@ -61,10 +61,6 @@ function create() {
 
     loadCharacterMenu();
 
-    for (i in charactersMenu)
-        if (!startmenu)
-            i.x += 800;
-
     logo = new FlxSprite(305, 100).loadGraphic(getImage('Menu/logo'));
     logo.antialiasing = pixelate;
     logo.scale.set(0.95, 0.95);
@@ -75,6 +71,9 @@ function create() {
     logo.y = (!startmenu ? 100 : 20);
 
     if (!startmenu) {
+        for (i in charactersMenu)
+            i.x += 800;
+
         enterText = new Alphabet(0, 550, 'Press ENTER to continue', 'bold');
         enterText.antialiasing = Options.antialiasing;
         enterText.screenCenter(FlxAxes.X);
