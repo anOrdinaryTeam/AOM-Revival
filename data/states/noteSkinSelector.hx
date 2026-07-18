@@ -2,7 +2,10 @@ import flixel.addons.display.FlxBackdrop;
 import funkin.editors.ui.UIColorwheel;
 import funkin.editors.ui.UICheckbox;
 import funkin.editors.ui.UIButton;
+import funkin.editors.ui.UISubstateWindow;
 import openfl.system.Capabilities;
+
+public static var pathList:String = 'images/noteSkinsDatas';
 
 var curSkinTxt:FunkinText = new FunkinText(0, 10, 0, '< Current Skin: ??? >', 30);
 var skinsList:Array<NoteSkin> = [];
@@ -78,14 +81,15 @@ function create() {
     add(optionsIcons);
     add(optionsTexts);
 
-    var pathList:String = 'images/noteSkinsDatas';
     var skinList:Dynamic = Paths.getFolderDirectories(pathList);
-
     var textScale:Float = 0.65;
     var textX:Float = 100;
 
     for (skin in skinList) {
-        var jsonRaw:Dynamic = CoolUtil.parseJson(Paths.file('$pathList/$skin/data.json'));
+        var pathJson:String = Paths.file('$pathList/$skin/data.json');
+        if (!Assets.exists(pathJson)) return;
+
+        var jsonRaw:Dynamic = CoolUtil.parseJson(pathJson);
 
         var display:String = jsonRaw.displayName;
         var pathSkin:String = jsonRaw.path ?? null;
@@ -158,6 +162,10 @@ function create() {
     useSkins.onChecked = () -> FlxG.save.data.AOM_usingSkin = !FlxG.save.data.AOM_usingSkin;
     useSkins.scale.set(1.4, 1.4);
     add(useSkins);
+
+    var addSkin:UIButton = new UIButton(useSkins.x, useSkins.y + 50, 'Add Skin', _AddSkinSubstate);
+    addSkin.antialiasing = true;
+    add(addSkin);
 
 	#if ARKOSE_PORT
 	addMobilePad("UP_DOWN", "A_B");
@@ -345,6 +353,9 @@ function _SetDefaultColors() {
     }
 }
 
+function _AddSkinSubstate()
+    openSubState(new UISubstateWindow(true, 'AddSkinSubstate'));
+
 function scroll(i:Int = 0, f:Bool = false) {
     if (i == 0 && !f) return;
     CoolUtil.playMenuSFX(0, 0.5);
@@ -409,7 +420,7 @@ function generateSkinOptions(variable:NoteSkin) {
         optionsBoxes.add(box);
 
         var midPoint:Float = (box.x + box.width / 2) - iconAddX;
-        var icon:FlxSprite = new FlxSprite(midPoint, box.y + 15, Paths.image('Menu/skinsIcons/$name/$prefix'));
+        var icon:FlxSprite = new FlxSprite(midPoint, box.y + 15, Paths.image('noteSkinsDatas/$name/icons/$prefix'));
         icon.antialiasing = Options.antialiasing;
         icon.scale.set(iconScale, iconScale);
         icon.updateHitbox();
