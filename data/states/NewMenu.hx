@@ -56,13 +56,7 @@ function create() {
         text.ID = i;
         menuItemsGroup.add(text);
 
-        if (!startmenu) {
-            text.alpha = .5;
-            text.x = XY[0] - 800;
-        }
-        else {
-            text.x = XY[0];
-        }
+        text.x = (!startmenu ? XY[0] - 800 : XY[0]);
     }
 
     loadCharacterMenu();
@@ -73,13 +67,12 @@ function create() {
     logo.updateHitbox();
     add(logo);
 
-    if (startmenu) {
-        logo.x = 20; logo.y = 20;
-    }
-    else {
-        logo.x = 305; logo.y = 100;
+    logo.x = (!startmenu ? 305 : 20);
+    logo.y = (!startmenu ? 100 : 20);
+
+    if (!startmenu) {
         for (i in charactersMenu)
-            i.alpha = 0.001;
+            i.x += 800;
 
         enterText = new Alphabet(0, 550, 'Press ENTER to continue', 'bold');
         enterText.antialiasing = Options.antialiasing;
@@ -105,6 +98,15 @@ function loadCharacterMenu() {
             char.flipX = flip;
             char.scale.set(scale, scale);
             char.updateHitbox();
+			// ENABLE THIS AFTER FIXING MENU CHAR POSSES
+            //char.extraOffset.set(-char.offset.x, -char.offset.y);
+            //char.dance();
+            //var vx:Float = char.offset.x + char.frameOffset.x * char.scale.x;
+            //var vy:Float = char.offset.y + char.frameOffset.y * char.scale.y;
+            //char.x -= vx;
+            //char.y -= vy;
+            //char.extraOffset.x += vx;
+            //char.extraOffset.y += vy;
             charactersMenu.add(char);
         }
         add(charactersMenu);
@@ -120,7 +122,7 @@ function loadCharacterMenu() {
         trace(e.toString());
 }
 
-function update() {
+function update(dt:Float) {
     var logoScale:Float = lerp(logo.scale.x, 0.95, 0.1);
     logo.scale.set(logoScale, logoScale);
 
@@ -182,7 +184,7 @@ function moveMainMenu() {
     FlxTween.tween(logo, {x: 20, y: 20}, 2.5, {startDelay: 1, ease: FlxEase.expoOut});
 
     for (i in charactersMenu)
-        FlxTween.tween(i, {alpha: 1}, 1.5, {startDelay: 1});
+        FlxTween.tween(i, {x: i.x - 800}, 1.5, {startDelay: 1.5, ease: FlxEase.elasticInOut});
 
     menuItemsGroup.forEach(function(spr) {
         var delay:Float = 0.1 * spr.ID;

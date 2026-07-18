@@ -1,4 +1,5 @@
 introLength = 0;
+Options.camZoomOnBeat = false;
 
 var wave   = new CustomShader('pendrive/wave');
 var glitch = new CustomShader('pendrive/glitch2');
@@ -16,6 +17,9 @@ var desk:FlxSprite;
 var comp:FlxSprite;
 var frame:FlxSprite;
 
+var jump:FunkinSprite;
+var blackshit:FlxSprite;
+
 var canBop:Bool = true;
 var numBop:Int = 4;
 
@@ -30,8 +34,6 @@ function create() {
     for (s in ['BlueUSB', 'BlueUSB-real', 'BlueUSB-real1'])
         precacheCharacter(0, 'Countdown/$s');
 
-    // changeCharacter(0, 'Countdown/BlueUSB-real1');
-
     bg = new FlxSprite(0, 50, getModImage('Countdown/penbg'));
     bg.antialiasing = Options.antialiasing;
     addSprite(bg);
@@ -40,15 +42,23 @@ function create() {
     circle.antialiasing = Options.antialiasing;
     addSprite(circle);
 
-    bg2 = new FlxSprite(0, 50, getModImage('Countdown/penbg2'));
+    bg2 = new FlxSprite(0, 80, getModImage('Countdown/penbg2'));
     bg2.antialiasing = Options.antialiasing;
-    // addSprite(bg2);
+    bg2.visible = false;
+    addSprite(bg2);
 
     fog = new FlxSprite(0, 50, getModImage('Countdown/fog3'));
     fog.antialiasing = Options.antialiasing;
     fog.scale.set(2, 2);
-    fog.alpha = .001;
+    fog.visible = false;
     addSprite(fog);
+
+    jump = new FunkinSprite().loadSprite(getModImage('Countdown/jump'));
+    jump.scale.set(.6, .6);
+    addSprite(jump);
+    
+    jump.addAnim('idle', 'i', 24, true);
+    jump.alpha = .001;
 
     behind = new FlxSprite(-275, 75, getModImage('Countdown/bgthingreal'));
     behind.antialiasing = Options.antialiasing;
@@ -79,6 +89,11 @@ function create() {
     frame.scale.set(1.25, 1.25);
     frame.updateHitbox();
     addSprite(frame);
+    
+    blackshit = new FlxSprite().makeSolid(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+    blackshit.camera = camGame;
+    blackshit.alpha = 0;
+    add(blackshit);
 }
 
 function postCreate() {
@@ -126,7 +141,7 @@ function stepHit() {
 
                 for (i in [comp, comp2, desk, frame, behind])
                     FlxTween.tween(i.scale, {x: 2, y: 2},1.3, {ease: FlxEase.expoOut, onComplete: () ->
-                        remove(i, true)
+                        i.alpha = 0
                     });
             }});
         
@@ -142,7 +157,70 @@ function stepHit() {
             canBop = true;
             numBop = 2;
             wave.speed = .02;
+
+        case 1308:
+            FlxTween.tween(blackshit, {alpha: 1},  .6, {ease: FlxEase.expoOut});
+            FlxTween.tween(glitch,    {AMT:  .4},  .4, {ease: FlxEase.sineOut});
+            FlxTween.tween(camGame,   {zoom: 1.5}, .4, {ease: FlxEase.cubeOut});
+
+            canBop = false;
+
+        case 1312:
+            changeCharacter(0, 'Countdown/BlueUSB-real');
+            iconP1.setIcon('Countdown/b2');
+
+            FlxTween.tween(blackshit, {alpha: 0},  .75, {ease: FlxEase.expoOut});
+            FlxTween.tween(glitch,    {AMT:   0},   .5, {ease: FlxEase.sineOut});
+            FlxTween.tween(camGame,   {zoom: .65}, .75, {ease: FlxEase.expoOut, onUpdate: () -> 
+                defaultCamZoom = camGame.zoom
+            });
+
+            for (i in [circle, bg])
+                remove(i, true);
+            for (i in [bg2, fog])
+                i.visible = true;
+
+            canBop = true;
+            wave.bloom = 0;
+
+        case 1936:
+            FlxTween.tween(wave,      {bloom: .5},        1.3, {ease: FlxEase.cubeOut});
+			FlxTween.tween(fog.scale, {x: 1.25, y: 1.25}, 15);
+
+        case 2096:
+            FlxTween.tween(camGame, {zoom: 2}, 2.6, {ease: FlxEase.sineInOut, onUpdate: () ->
+                defaultCamZoom = camGame.zoom
+            });
             
+            FlxTween.tween(glitch, {AMT:   .4},  2.6, {ease: FlxEase.sineInOut});
+            FlxTween.tween(mosaic, {pixel: 40},  2.6, {ease: FlxEase.sineInOut});
+
+            FlxTween.tween(blackshit, {alpha: 1}, 2.6, {ease: FlxEase.sineInOut});
+            FlxTween.tween(camHUD,    {alpha: 0}, 2.6, {ease: FlxEase.sineInOut});
+
+
+        case 2180:
+            dad.alpha = 0;
+            for (i in [bg2, fog, blackshit])
+                remove(i, true);
+
+            for (i in [comp, comp2, desk, frame, behind]) {
+                FlxTween.tween(i,       {alpha: 1},         2.6, {ease: FlxEase.sineInOut});
+                FlxTween.tween(i.scale, {x: 1.25, y: 1.25}, 5.2, {ease: FlxEase.sineInOut});
+            }
+
+            FlxTween.tween(camGame, {zoom: .5}, 5.2, {ease: FlxEase.sineInOut, onUpdate: () -> 
+                defaultCamZoom = camGame.zoom
+            });
+
+            camGame.removeShader(glitch);
+            camGame.removeShader(mosaic);
+            canBop = false;
+
+        case 2356:
+            jump.alpha = 1;
+            jump.playAnim('idle');
+
     }
 }
 
@@ -154,18 +232,6 @@ function beatHit() {
         camGame.zoom += .015 * camZoomingMult;
         camHUD.zoom  += .03  * camZoomingMult;
     }
-}
-
-function tweenChrom(value, time, ?ease:FlxEase = FlxEase.linear, ?remove = false) {
-	FlxTween.tween(chrom, {amount: value}, time, {ease: ease, onComplete: () ->
-		FlxTween.tween(chrom, {amount: .1}, .1)
-    });
-}
-
-function tweenGlitch(value, time, ?ease:FlxEase = FlxEase.linear,?remove = false) {
-	FlxTween.tween(glitch, {AMT: value}, time, {ease: ease, onComplete: () -> {
-        if (remove) glitch.AMT = 0;
-    }});
 }
 
 function numbers() {

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="rub.png" width="1274" height="662">
+	<SubTexture name="ruv alone lol" x="1" y="1" width="1272" height="660" frameX="-1" frameY="-0" frameWidth="1273" frameHeight="660"/>
+</TextureAtlas>

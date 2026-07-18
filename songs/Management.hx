@@ -21,19 +21,22 @@ public function getModImage(str:String) {
 public function addSprite(spr:Dynamic) if (spr != null)
     insert(members.indexOf(gf), spr);
 
-public function loadHud(hud:String, ver:String = 'IS NULL PENDEJO') {
+public function loadHud(hud:String, ?ver:String = 'IS NULL PENDEJO') {
     if (!getSaveData('allowCustomHud'))
         return;
     
-    if (Assets.exists(Paths.script('data/HUDS/$hud'))) {
-        importScript('data/HUDS/$hud');
-        scripts.call('onHudLoad', [hud, ver]);
+    var nameHUD:String = getSaveData('customHud');
+    var customHUD:String = (nameHUD != 'none' ? nameHUD : hud);
+
+    if (Assets.exists(Paths.script('data/HUDS/$customHUD'))) {
+        importScript('data/HUDS/$customHUD');
+        scripts.call('onHudLoad', [customHUD, ver]);
 
         for (chau in [scoreTxt, accuracyTxt, missesTxt])
             chau.visible = false;
     }
     else
-        trace('Hud "$hud" is missing');
+        trace('Hud "$customHUD" is missing');
 }
 
 public function setRatingPrefix(tag:String) {

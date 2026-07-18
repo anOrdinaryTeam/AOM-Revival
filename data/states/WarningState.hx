@@ -17,6 +17,13 @@ function postCreate() {
     disclaimer.y -= 45;
     titleAlphabet.y -= 100;
 
+    var warnImage:FlxSprite = new FlxSprite(900, 200, getImage('Menu/warning/12-12-2025'));
+    warnImage.setGraphicSize(Std.int(warnImage.width * 1.75));
+    warnImage.alpha = 0;
+    insert(0, warnImage);
+
+    FlxTween.tween(warnImage, {alpha: .04}, 20, {startDelay: 5});
+
     if (commit == '9757b00') {
         var IMSOFUKINGANGRY:FunkinText = new FunkinText(16, 0, FlxG.width - 32, '', 32);
         IMSOFUKINGANGRY.y = disclaimer.y + 300;
