@@ -1,14 +1,5 @@
 {
-	"opponentModeAllowed": false,
-	"icon": "rushblaze",
-	"difficulties": [
-		"rush"
-	],
-	"color": "#000000",
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
+	"icon": "Rush/rushblaze",
 	"displayName": "Rush",
-	"beatsPerMeasure": 4,
-	"needsVoices": false,
 	"bpm": 140
 }

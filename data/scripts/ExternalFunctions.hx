@@ -16,29 +16,28 @@ public static function getModPath(str:String):String
 public static function getModSoundPath(str:String):String
     return Paths.getPath('Mods/$currentMod/sounds/$str.ogg');
 
-public static function getModSongList(mod:String):Dynamic
+public static function getModSongList(mod:String):Array<String>
 {
-    var data = {songs: [], icon: []}
+    var songs:Array<String> = [];
     var isRandomSection:Bool = mod == 'RandomSongs';
 
     try {
         var _file:Array<String> = CoolUtil.coolTextFile(Paths.file('Mods/$mod/songList.txt'));
-        var format:String = isRandomSection ? '::' : ':';
-        
-        for (raw in _file) {
-            var info:Array<String> = raw.split(format);
-            data.songs.push(info[0]);
-            data.icon.push(info[1]);
+
+        if (isRandomSection) for (data in _file) {
+            var song:String = data.split('::')[0];
+            songs.push(song);
         }
+        else
+            songs = _file.copy();
 
     }
     catch(e:Dynamic) {
         trace(e.toString());
-        data.songs.push('ERROR');
-        data.songs.icon('face');
+        songs = ['Songs not found', 'Or Null'];
     }
 
-    return data;
+    return songs;
 }
 
 public static function getSongPages(_song:String):Array<String> try {
@@ -52,7 +51,7 @@ public static function getSongPages(_song:String):Array<String> try {
 
         if (song == songInLoop) {
             for (i => content in vars)
-                if (i < 2)
+                if (i < 1)
                     continue;
                 else
                     pages.push(content);

@@ -1,9 +1,9 @@
-Too Slow:EXE/exe
-You Can't Run:EXE/exe-ycr
-Endless:EXE/majin
-Cycles:EXE/lordX
-Faker:EXE/faker
-Black Sun:EXE/faker-real
-Chaos:EXE/fleetway-exe
-Sunshine:EXE/TDoll
-Milk:EXE/sunky
+Too Slow
+You Can't Run
+Endless
+Cycles
+Faker
+Black Sun
+Chaos
+Sunshine
+Milk
