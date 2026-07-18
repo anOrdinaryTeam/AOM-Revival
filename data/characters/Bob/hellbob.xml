@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Bob/hellbob_assets" flipX="true" icon="Bob/bob-r" color="#000000">
+	<anim name="idle" anim="bobismad" loop="true"/>
+</character>

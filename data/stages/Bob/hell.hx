@@ -24,7 +24,7 @@ function create() {
 	addSprite(dead);
 
     var ground:FlxSprite = new FlxSprite(-537, -158).loadGraphic(bobStage('ground'));
-	ground.antialiasing = true;
+	ground.antialiasing = Options.antialiasing;
 	addSprite(ground);
 }
 
@@ -41,6 +41,8 @@ function postCreate() {
     bobScreen.setGraphicSize(FlxG.width, FlxG.height);
     bobScreen.updateHitbox();
     bobScreen.screenCenter();
+    bobScreen.x += 20;
+    bobScreen.y -= 80;
     bobScreen.alpha = 0.001;
     add(bobScreen);
 
@@ -49,7 +51,7 @@ function postCreate() {
 
 public function bobMad() {
     bobScreenBG.alpha = bobScreen.alpha = 1;
-    FlxTween.shake(bobScreen, 0.05, 0.5);
+    FlxTween.shake(bobScreen, 0.015, 0.5);
     bobSfx.play();
 
     new FlxTimer().start(0.5, () -> {
@@ -57,3 +59,6 @@ public function bobMad() {
         bobSfx.stop();
     });
 }
+
+function beatHit() if ((bobScreen.alpha != 1 && bobScreenBG.alpha != 1) && FlxG.random.bool(10))
+    bobMad();

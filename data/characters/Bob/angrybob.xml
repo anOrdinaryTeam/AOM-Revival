@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Bob/angrybob_asset" flipX="true" icon="Bob/bob-w" color="#FFFFFF">
+	<anim name="idle" anim="bob_idle"/>
+	<anim name="singDOWN" anim="bob_DOWN"/>
+	<anim name="singRIGHT" anim="bob_RIGHT"/>
+	<anim name="singLEFT" anim="bob_LEFT"/>
+	<anim name="singUP" anim="bob_UP"/>
+</character>

@@ -37,6 +37,8 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
+    var nameSong:String = PlayState.SONG.meta.displayName;
+
     var score:FunkinText = new FunkinText(FlxG.width / 2 - 235, downscroll ? healthBarBG.y - 45 : healthBarBG.y + 45, 0, "Score: 0 | " + missesType + ": 0 | Accuracy: N/A", 20);
     score.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     score.screenCenter(FlxAxes.X);
@@ -56,7 +58,7 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
         timeBar.numDivisions = timeBar.width;
         hudItems.add(timeBar);
 
-        var songName = new FlxText(timeBarBG.x + (timeBarBG.width / 2) - (songName.length * 5), timeBarBG.y, 0, songName, 16);
+        var songName = new FlxText(timeBarBG.x + (timeBarBG.width / 2) - (nameSong.length * 5), timeBarBG.y, 0, nameSong, 16);
 		songName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, 'right', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		songName.scrollFactor.set();
 		hudItems.add(songName);
@@ -64,7 +66,8 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
 
     if (getSaveData('Kade_Watermark')) {
         var ke_Version:String = getSaveData('Kade_WatermarkType') == 'KE' ? ver : GitCommitMacro.commitHash;
-        var str:String = songName + ' - ' + curDiff.toUpperCase() + ' | ' + getSaveData('Kade_WatermarkType') + ': ' + ke_Version;
+        var str:String = '$nameSong - ${curDiff.toUpperCase()} | ${getSaveData('Kade_WatermarkType')}: $ke_Version';
+        
         var watermark:FunkinText = new FunkinText(4, downscroll ? 5 : healthBarBG.y + 50, 0, str);
         watermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, 'right', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         watermark.scrollFactor.set();
