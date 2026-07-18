@@ -1,5 +1,5 @@
 function create() {
-    var prefix:String = songName == 'Sunshine' ? 'happy' : 'withered';
+    var prefix:String = songName == 'Sunshine-bob' ? 'happy' : 'withered';
 
     var bg:FlxSprite = new FlxSprite(-100).loadGraphic(getModImage('$prefix/sky'));
 	bg.antialiasing = Options.antialiasing;
