@@ -1,0 +1,8 @@
+{
+    "displayName": "Eteled",
+    "variants": [
+        ["BF", "modNotes/Eteled/bf", "default"],
+        ["Eteled", "modNotes/Eteled/eteled", "Eteled/eteled"],
+        ["Austin", "modNotes/Eteled/austin", "Eteled/austin"]
+    ]
+}

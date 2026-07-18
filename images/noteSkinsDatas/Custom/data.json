@@ -1,0 +1,7 @@
+{
+    "displayName": "Custom",
+    "variants": [
+        ["Default", "modNotes/RGB/default", "default"],
+        ["Circle", "modNotes/RGB/circle", "default"]
+    ]
+}

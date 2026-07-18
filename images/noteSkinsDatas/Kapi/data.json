@@ -1,0 +1,8 @@
+{
+    "displayName": "Kapi",
+    "variants": [
+        ["V1", "modNotes/Kapi/kapi notes", "Kapi/v1"],
+        ["V2", "modNotes/Kapi/kapi notes 2", "Kapi/v2"],
+        ["Flatzone", "modNotes/Kapi/gw notes", "Kapi/gw"]
+    ]
+}

@@ -78,11 +78,15 @@ function create() {
     add(optionsIcons);
     add(optionsTexts);
 
-    var getList:Dynamic = CoolUtil.parseJson(Paths.json('noteSkins'));
+    var pathList:String = 'images/noteSkinsDatas';
+    var skinList:Dynamic = Paths.getFolderDirectories(pathList);
+
     var textScale:Float = 0.65;
     var textX:Float = 100;
 
-    for (jsonRaw in getList.skins) {
+    for (skin in skinList) {
+        var jsonRaw:Dynamic = CoolUtil.parseJson(Paths.file('$pathList/$skin/data.json'));
+
         var display:String = jsonRaw.displayName;
         var pathSkin:String = jsonRaw.path ?? null;
         var variants:Array<Array<String>> = jsonRaw.variants != null ? jsonRaw.variants.copy() : null;
@@ -97,8 +101,8 @@ function create() {
             SkinVar.variations = variants.copy();
         skinsList.push(SkinVar);
 
-        var designedIcon:String = SkinVar.variations != null ? '${SkinVar.displayName}/${SkinVar.variations[0][0]}' : SkinVar.displayName;
-        var iconSkin:FlxSprite = new FlxSprite().loadGraphic(Paths.image('Menu/skinsIcons/$designedIcon'));
+        var skinIconPath:String = SkinVar.variations != null ? 'icons/${SkinVar.variations[0][0]}' : 'icon';
+        var iconSkin:FlxSprite = new FlxSprite().loadGraphic(Paths.image('noteSkinsDatas/$skin/$skinIconPath'));
         iconSkin.scale.set(0.5, 0.5);
         iconSkin.updateHitbox();
         iconSkin.antialiasing = Options.antialiasing;
@@ -108,8 +112,8 @@ function create() {
         if (_ChangeToVariants && SkinVar.variations != null) new FlxTimer().start(_TimeToChange, () -> {
             SkinVar.onChange = FlxMath.wrap(SkinVar.onChange + 1, 0, SkinVar.variations.length - 1);
 
-            var newGraphic:String = '${SkinVar.displayName}/${SkinVar.variations[SkinVar.onChange][0]}';
-            iconSkin.loadGraphic(Paths.image('Menu/skinsIcons/$newGraphic'));
+            var newGraphic:String = 'noteSkinsDatas/$skin/icons/${SkinVar.variations[SkinVar.onChange][0]}';
+            iconSkin.loadGraphic(Paths.image(newGraphic));
         }, 0);
 
         var txt:String = SkinVar.variations != null ? '$display (+1)' : display;
@@ -397,7 +401,7 @@ function generateSkinOptions(variable:NoteSkin) {
     for (i in 0...list.length) {
         var prefix:String = list[i][0];
 
-        var box:FlxSprite = new FlxSprite(startX + addX * i, Yoffset, Paths.image('Menu/skinsIcons/iconbox'));
+        var box:FlxSprite = new FlxSprite(startX + addX * i, Yoffset, Paths.image('Menu/iconbox'));
         box.antialiasing = true;
         box.scale.set(boxScale, boxScale);
         box.updateHitbox();
