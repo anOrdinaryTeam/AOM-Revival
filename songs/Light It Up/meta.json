@@ -1,0 +1,15 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "bf",
+	"difficulties": [
+		"hard",
+		"old"
+	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Light It Up",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 125
+}

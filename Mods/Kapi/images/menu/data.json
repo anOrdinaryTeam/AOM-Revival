@@ -1,10 +1,14 @@
 {
     "backgrounds": [
-        ["Desat", true]
+        ["Desat", true],
+        ["KapiV1", true],
+        ["KapiV2", true]
     ],
     
     "logo": "icon",
     "logoData": [
+        [825, 450, 0.5],
+        [825, 450, 0.5],
         [825, 450, 0.5]
     ],
 

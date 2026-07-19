@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<character flipX="true" isPlayer="true" icon="bf" color="#30B0D1">
+	<anim name="idle" anim="BF idle dance"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT0" x="7" y="-8"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-27" y="-50"/>
+	<anim name="singUP" anim="BF NOTE UP0" x="-35" y="30"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-42" y="-5"/>
+	<anim name="firstDeath" anim="BF dies0" x="30" y="5"/>
+	<anim name="deathLoop" anim="BF Dead Loop0" x="30" y="-1"/>
+	<anim name="deathConfirm" anim="BF Dead confirm0" x="30" y="63"/>
+	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS0" x="-15" y="-20"/>
+	<anim name="singUPmiss" anim="BF NOTE UP MISS0" x="-40" y="25"/>
+	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS0" x="5" y="17"/>
+	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS0" x="-35" y="20"/>
+</character>

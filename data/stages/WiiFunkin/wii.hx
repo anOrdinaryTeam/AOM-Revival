@@ -1,0 +1,2 @@
+function preStageLoad()
+    useStageData = false;

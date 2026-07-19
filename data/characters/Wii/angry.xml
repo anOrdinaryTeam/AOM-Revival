@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character color="#FF8C00">
+	<anim name="idle" anim="matt idle"/>
+	<anim name="singDOWN" anim="matt down note" x="20" y="-17"/>
+	<anim name="singRIGHT" anim="matt right note" x="43" y="-18"/>
+	<anim name="singLEFT" anim="matt left note" x="30" y="-26"/>
+	<anim name="singUP" anim="matt up note" x="-5" y="6"/>
+</character>

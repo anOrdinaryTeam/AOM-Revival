@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character icon="Wii/matt" color="#FF8C00">
+	<anim name="idle" anim="matt idle"/>
+	<anim name="singLEFT" anim="matt left note" x="42" y="-35"/>
+	<anim name="singDOWN" anim="matt down note" x="-70" y="-20"/>
+	<anim name="singUP" anim="matt up note" x="-45" y="15"/>
+	<anim name="singRIGHT" anim="matt right note" x="-14" y="-20"/>
+</character>

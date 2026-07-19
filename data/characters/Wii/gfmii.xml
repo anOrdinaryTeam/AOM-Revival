@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character icon="gf" color="#A5004D">
+	<anim name="danceLeft" anim="GF Dancing Beat" indices="0..14"/>
+	<anim name="danceRight" anim="GF Dancing Beat" indices="15..30"/>
+	<anim name="sad" anim="gf sad"/>
+</character>
