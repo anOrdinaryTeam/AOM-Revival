@@ -4,17 +4,18 @@ introLength = 0;
 function preStageLoad()
     useStageData = false;
 
-function postCreate()
+function postCreate() {
     loadHud('PsychEngine');
 
     if (getSaveData('customHud') == 'none') {
-    hudItems.members[0]?.font = Paths.font('brotherly/Super Mario Bros. 2.ttf');
-    hudItems.members[0]?.scale.set(.9, .8);
-    hudItems.members[0]?.borderSize = 1;
-
-    hudItems.members[3]?.font = Paths.font('brotherly/Super Mario Bros. 2.ttf');
-    hudItems.members[3]?.scale.set(.8, .6);
-    hudItems.members[3]?.y -= 4;
+        hudItems?.members[0]?.font = Paths.font('brotherly/Super Mario Bros. 2.ttf');
+        hudItems?.members[0]?.scale.set(.9, .8);
+        hudItems?.members[0]?.borderSize = 1;
+    
+        hudItems?.members[3]?.font = Paths.font('brotherly/Super Mario Bros. 2.ttf');
+        hudItems?.members[3]?.scale.set(.8, .6);
+        hudItems?.members[3]?.y -= 4;
+    }
 }
 
 function onRatingsShown(_) if (getSaveData('customHud') == 'none') {
