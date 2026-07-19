@@ -1,14 +1,13 @@
+importScript('data/scripts/pixelate');
 introLength = 0;
 
 function preStageLoad()
     useStageData = false;
 
-if (getSaveData('customHud') == 'none')
-    importScript('data/scripts/pixelate');
-
-function postCreate() if (getSaveData('customHud') == 'none') {
+function postCreate()
     loadHud('PsychEngine');
 
+    if (getSaveData('customHud') == 'none') {
     hudItems.members[0]?.font = Paths.font('brotherly/Super Mario Bros. 2.ttf');
     hudItems.members[0]?.scale.set(.9, .8);
     hudItems.members[0]?.borderSize = 1;
