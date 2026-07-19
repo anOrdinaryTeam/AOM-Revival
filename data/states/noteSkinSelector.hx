@@ -356,6 +356,15 @@ function _SetDefaultColors() {
 function _AddSkinSubstate()
     openSubState(new UISubstateWindow(true, 'AddSkinSubstate'));
 
+// public static function _AddSkin(data:Dynamic) {
+//     if (data == null) {
+//         trace('Skin failed to import.');
+//         return;
+//     }
+    
+//     var skinName:String = data.
+// }
+
 function scroll(i:Int = 0, f:Bool = false) {
     if (i == 0 && !f) return;
     CoolUtil.playMenuSFX(0, 0.5);

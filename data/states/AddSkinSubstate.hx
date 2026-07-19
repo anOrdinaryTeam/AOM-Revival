@@ -4,6 +4,8 @@ import funkin.editors.ui.UITextBox;
 import funkin.editors.ui.UIImageExplorer;
 import funkin.editors.ui.UIWarningSubstate;
 
+import haxe.format.JsonPrinter;
+
 function create() {
     winTitle = 'Add Custom Skin';
     winWidth = 900;
@@ -17,6 +19,7 @@ var imageExplorer:UIImageExplorer;
 function postCreate() {
     imageExplorer = new UIImageExplorer(20, 50, null, 150, 58, null, 'images/noteSkinsDatas/Test');
     imageExplorer.allowAtlases = false;
+    imageExplorer.allowDirectories = false;
     imageExplorer.maxSize.x *= 0.4;
     imageExplorer.maxSize.y *= 0.4;
     add(imageExplorer);
@@ -29,7 +32,7 @@ function postCreate() {
 
     saveButton = new UIButton(0, 475, 'Save Skin', () -> {
 	    trace('done');
-        // _SetSkin();
+        _SaveFiles();
 	    close();
 	}, 125);
     saveButton.x = ((windowSpr.x + windowSpr.bWidth) - saveButton.bWidth) - 10;
@@ -39,6 +42,23 @@ function postCreate() {
     closeButton = new UIButton(saveButton.x - 20 - saveButton.bWidth, saveButton.y, 'Close', close, 125);
 	add(closeButton);
 	closeButton.color = 0xFFFF0000;
+}
+
+function _SaveFiles() {
+    var name:String = noteName.label.text;
+    var skinPath:String = 'noteSkinsDatas/$name';
+    var dir:String = '${Paths.getAssetsRoot()}/images/$skinPath';
+
+    var imageName:String = imageExplorer.imageName;
+    var content:Dynamic = {
+        "displayName": name,
+        "path": '$skinPath/${imageExplorer.imageName}',
+        "splash": "default"
+    };
+    var _file:String = JsonPrinter.print(content, null, '\t');
+    
+    CoolUtil.safeSaveFile('$dir/data.json', _file);
+    UIImageExplorer.saveFilesGlobal(imageExplorer, '${Paths.getAssetsRoot()}/images/$skinPath');
 }
 
 function checkNoteName() {
