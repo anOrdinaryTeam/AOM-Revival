@@ -1,0 +1,15 @@
+{
+	"color": "#9271FD",
+	"customValues": {},
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"normal"
+	],
+	"icon": "Brotherly/luigi",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Brotherly Rivalry",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 143
+}
