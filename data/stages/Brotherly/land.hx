@@ -68,7 +68,7 @@ function beatHit() {
         case 34: canBop = false;
         case 36: canBop = true; numBop = 4;
         
-        case 128 | 112: defaultCamZoom = .5;
+        case 128, 112: defaultCamZoom = .5;
         case 116: defaultCamZoom = .6;
 
         case 99: defaultCamZoom = .6; numBop = 1;
