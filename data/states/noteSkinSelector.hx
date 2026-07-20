@@ -457,7 +457,7 @@ function generateStrumAndNotes(path:String) {
     // [ STRUMS ]
     for (i in 0...4) {
         var strum:FunkinSprite = new FunkinSprite(startX + addX * i, yOffset, Paths.image(pathSkin));
-        strum.addAnim('static', 'arrow${prefixs[i]}');
+        strum.addAnim('static', 'arrow${prefixs[i]}', 24, true);
         strum.addAnim('pressed', '${prefixs[i].toLowerCase()} press', 24, false);
         strum.addAnim('confirm', '${prefixs[i].toLowerCase()} confirm', 24, false);
         strum.antialiasing = Options.antialiasing;

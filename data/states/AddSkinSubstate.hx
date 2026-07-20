@@ -5,6 +5,10 @@ import funkin.editors.ui.UIImageExplorer;
 import funkin.editors.ui.UIWarningSubstate;
 
 import haxe.format.JsonPrinter;
+import openfl.display.BitmapData;
+import openfl.utils.ByteArray;
+import openfl.display.PNGEncoderOptions;
+import openfl.geom.Point;
 
 function create() {
     winTitle = 'Add Custom Skin';
@@ -19,7 +23,6 @@ var imageExplorer:UIImageExplorer;
 function postCreate() {
     imageExplorer = new UIImageExplorer(20, 50, null, 150, 58, null, 'images/noteSkinsDatas/Test');
     imageExplorer.allowAtlases = false;
-    imageExplorer.allowDirectories = false;
     imageExplorer.maxSize.x *= 0.4;
     imageExplorer.maxSize.y *= 0.4;
     add(imageExplorer);
@@ -33,7 +36,6 @@ function postCreate() {
     saveButton = new UIButton(0, 475, 'Save Skin', () -> {
 	    trace('done');
         _SaveFiles();
-	    close();
 	}, 125);
     saveButton.x = ((windowSpr.x + windowSpr.bWidth) - saveButton.bWidth) - 10;
     saveButton.shouldPress = false;
@@ -45,20 +47,42 @@ function postCreate() {
 }
 
 function _SaveFiles() {
-    var name:String = noteName.label.text;
-    var skinPath:String = 'noteSkinsDatas/$name';
-    var dir:String = '${Paths.getAssetsRoot()}/images/$skinPath';
+    var skinName:String = noteName.label.text;
+    var dir:String = '${Paths.getAssetsRoot()}/images/noteSkinsDatas';
+    var data:Dynamic = imageExplorer.getSaveData();
 
-    var imageName:String = imageExplorer.imageName;
     var content:Dynamic = {
-        "displayName": name,
-        "path": '$skinPath/${imageExplorer.imageName}',
+        "displayName": skinName,
+        "path": 'noteSkinsDatas/$skinName/${data.imageName}',
         "splash": "default"
     };
-    var _file:String = JsonPrinter.print(content, null, '\t');
     
-    CoolUtil.safeSaveFile('$dir/data.json', _file);
-    UIImageExplorer.saveFilesGlobal(imageExplorer, '${Paths.getAssetsRoot()}/images/$skinPath');
+    // crapy fix to the directory
+    data.directory = skinName;
+    var _file:String = JsonPrinter.print(content, null, '\t');
+
+    CoolUtil.safeSaveFile('$dir/$skinName/data.json', _file);
+    UIImageExplorer.saveFilesGlobal(data, dir, () -> {
+        var iconSkin = _GetNoteFrame('noteSkinsDatas/$skinName/${data.imageName}');
+        CoolUtil.safeSaveFile('$dir/$skinName/icon.png', iconSkin);
+
+        close();
+    });
+}
+
+function _GetNoteFrame(image:String)
+{
+    var spr:FlxSprite = new FlxSprite();
+    spr.frames = Paths.getSparrowAtlas(image);
+    spr.animation.addByIndices('animation', 'green0', [0], '', 0, false);
+    spr.animation.play('animation', true);
+
+    var Frame:FlxFrame = spr.frame;
+    var bmd:BitmapData = new BitmapData(Frame.sourceSize.x, Frame.sourceSize.y, true, 0x00000000);
+    Frame.paint(bmd, new Point(0,0));
+
+    var bytes = bmd.encode(bmd.rect, new PNGEncoderOptions());
+    return bytes;
 }
 
 function checkNoteName() {
