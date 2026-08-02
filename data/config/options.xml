@@ -29,7 +29,7 @@
 	<menu name="HUD Configuration" desc="duh">
 		<checkbox id="AOM_engineHUD" name="Use Huds from Mods" desc="This allows you to use the Huds from the respective Engine of the Mod"/>
 
-		<choice id="AOM_customHUD" name="Custom Hud" desc="Select a custom hud for any mod">
+		<!-- <choice id="AOM_customHUD" name="Custom Hud" desc="Select a custom hud for any mod">
 			<value name="None"      value="none"/>
 			<value name="Vanilla"   value="Vanilla"/>
 			<value name="Kade"      value="KadeEngine"/>
@@ -38,7 +38,7 @@
 			<value name="VsOnline"  value="VS-Online"/>
 			<value name="Mic'd Up"  value="Mic'dUpEngine"/>
 			<value name="Mid-Fight" value="MFM"/>
-		</choice>
+		</choice> -->
 
 		<menu name="Psych Engine" desc="HUD Settings">
 			<checkbox id="AOM_psych_HIDEHUD" name="Hide Hud"/>

@@ -25,18 +25,18 @@ public function loadHud(hud:String, ?ver:String = 'IS NULL PENDEJO') {
     if (!getSaveData('allowCustomHud'))
         return;
     
-    var nameHUD:String = getSaveData('customHud');
-    var customHUD:String = (nameHUD != 'none' ? nameHUD : hud);
+    // var nameHUD:String = getSaveData('customHud');
+    // var customHUD:String = (nameHUD != 'none' ? nameHUD : hud);
 
-    if (Assets.exists(Paths.script('data/HUDS/$customHUD'))) {
-        importScript('data/HUDS/$customHUD');
-        scripts.call('onHudLoad', [customHUD, ver]);
+    if (Assets.exists(Paths.script('data/HUDS/$hud'))) {
+        importScript('data/HUDS/$hud');
+        scripts.call('onHudLoad', [hud, ver]);
 
         for (chau in [scoreTxt, accuracyTxt, missesTxt])
             chau.visible = false;
     }
     else
-        trace('Hud "$customHUD" is missing');
+        trace('Hud "$hud" is missing');
 }
 
 public function setRatingPrefix(tag:String) {
