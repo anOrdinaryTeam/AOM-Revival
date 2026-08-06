@@ -56,7 +56,7 @@ Depending the Mod/Song you play, your RPC will Display a cool AlbumArt.
 ![RPC-2](readmeStuff/RPC-2.png)
 
 ### - Mobile Support!
-Thanks to [ArkoseLabs](https://github.com/ArkoseLabsOfficial), is totally possible to enjoy this Modpack under this [Codename Engine Mobile Port](https://github.com/ArkoseLabsOfficial/CodenameEngine-Mobile) (Unnoficial Port).
+It is totally possible to enjoy this Modpack under this [Codename Engine Mobile Port](https://github.com/CPsP-Team/CodenameEngine-Mobile) (Unnoficial Port).
 
 ![Mobile-1](readmeStuff/Mobile-Menu.jpg)
 ![Mobile-2](readmeStuff/Mobile-MF.jpg)
