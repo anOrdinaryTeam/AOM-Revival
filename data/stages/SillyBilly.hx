@@ -111,7 +111,7 @@ function postCreate() {
     black.camera = camHUD;
     add(black);
 
-    video = new FlxVideoSprite(212, 121);
+    video = new FlxVideoSprite(null, 212, 121);
     video.load(Paths.video('SillyBilly/open'));
     video.bitmap.onEndReached.add(video.destroy);
     video.camera = camHUD;
