@@ -20,19 +20,17 @@ var TrickyLinesArray:Array<Array<String>> = [
 ];
 
 function postCreate() {
-    var scaleSize:Float = 5;
-    var normalSize:Int = 40; // 128
+    var scaleSize:Float = switch(songName) {
+        default: 1.6;
+        case 'Expurgation': 2.5;
+        case 'HELLCLOWN': 5;
+    };
+
     trickyLine = new FlxBitmapText(0, 0, '', getBitmapFont('Impact'));
     trickyLine.color = FlxColor.RED;
-    // if (curSong == 'hellclown') {
-    //     trickyLine.size = 200;
-    //     trickyLine.x += 250;
-    // }
-    // trickyLine.scale.set(scaleSize, scaleSize);
     trickyLine.antialiasing = true;
     trickyLine.scale.set(scaleSize, scaleSize);
     trickyLine.updateHitbox();
-    // trickyLine.bold = true;
     add(trickyLine);
 
     var scale:Float = curSong == 'hellclown' ? 12 : 8.3;
@@ -74,7 +72,7 @@ function createTrickyLine(text:String) if (!rendered) {
     trickyLine.visible = true;
 
     playSound('staticSound');
-    trickyLine.setPosition(FlxG.random.float(dad.x + 40,dad.x + 120), FlxG.random.float(dad.y + 200, dad.y + 300));
+    trickyLine.setPosition(FlxG.random.float(dad.x + 40, dad.x + 120), FlxG.random.float(dad.y + 200, dad.y + 300));
 	trickyLine.text = text;
     tstatic.alpha = 0.5;
 }
@@ -86,7 +84,7 @@ function stepHit() if (rendered && lastStep + 3 < curStep) {
 }
 
 function update() if (rendered) {
-    trickyLine.angle = FlxG.random.int(-5,5);
+    trickyLine.angle = FlxG.random.int(-5, 5);
     if (tstatic.alpha != 0) tstatic.alpha = FlxG.random.float(0.1,0.5);
 }
 

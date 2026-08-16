@@ -3,8 +3,8 @@ using StringTools;
 
 public static function getBitmapFont(name:String):FlxBitmapFont
 {
-    var image:String = Paths.font('$name/image.png');
-    var fnt:String = Paths.font('$name/font.fnt');
+    var image:String = Paths.getPath('fonts-bmd/$name/data.png');
+    var fnt:String = Paths.getPath('fonts-bmd/$name/data.fnt');
 
     return FlxBitmapFont.fromAngelCode(image, fnt);
 }
