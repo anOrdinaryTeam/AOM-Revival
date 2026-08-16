@@ -23,7 +23,7 @@ function postCreate() {
     var scaleSize:Float = switch(songName) {
         default: 1.6;
         case 'Expurgation': 2.5;
-        case 'HELLCLOWN': 5;
+        case 'HELLCLOWN': 4;
     };
 
     trickyLine = new FlxBitmapText(0, 0, '', getBitmapFont('Impact'));

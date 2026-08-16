@@ -3,6 +3,7 @@ import funkin.backend.system.macros.GitCommitMacro;
 import flixel.ui.FlxBar;
 import flixel.ui.FlxBarFillDirection;
 import flixel.util.FlxStringUtil;
+import flixel.text.FlxBitmapText;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var fuckingcomboCamera:FlxCamera = new FlxCamera();
@@ -10,7 +11,7 @@ var missesType:String = getSaveData('Kade_MissesType');
 doIconBop = false;
 
 // Made by @pharaotis in discord
-var currentTimingShown:FunkinText = new FunkinText(0, 0, 0, "0ms", 20);
+var currentTimingShown:FlxBitmapText;
 var tween:FlxTween = null;
 var colors:Map<String, FlxColor> = [
     'shit' => FlxColor.RED,
@@ -20,8 +21,11 @@ var colors:Map<String, FlxColor> = [
 ];
 
 function pharaotisMsTiming() {
-    currentTimingShown.setFormat(null, 20, FlxColor.WHITE, null, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    currentTimingShown = new FlxBitmapText(0, 0, '0ms', getBitmapFont('Pixel'));
+    setBmdFormat(currentTimingShown, FlxColor.WHITE, 'none', 'outline', 3, FlxColor.BLACK);
+    setBmdSize(currentTimingShown, 0.3);
     currentTimingShown.setPosition(FlxG.width / 1.75, FlxG.height / 2.5); // change this to something else this was just a placeholder   
+    currentTimingShown.antialiasing = true;
     currentTimingShown.alpha = 0;
     hudItems.add(currentTimingShown);
 }
@@ -39,8 +43,10 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
 
     var nameSong:String = PlayState.SONG.meta.displayName;
 
-    var score:FunkinText = new FunkinText(FlxG.width / 2 - 235, downscroll ? healthBarBG.y - 45 : healthBarBG.y + 45, 0, "Score: 0 | " + missesType + ": 0 | Accuracy: N/A", 20);
-    score.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    var score:FlxBitmapText = new FlxBitmapText(FlxG.width / 2 - 235, (downscroll ? healthBarBG.y - 45 : healthBarBG.y + 45), 'Score: 0 | $missesType: 0 | Accuracy: N/A', getBitmapFont('VCR'));
+    setBmdFormat(score, FlxColor.WHITE, 'center', 'OUTLINE', 7, FlxColor.BLACK);
+    setBmdSize(score, 0.23);
+    score.antialiasing = true;
     score.screenCenter(FlxAxes.X);
     score.scrollFactor.set();
     hudItems.add(score);
@@ -58,18 +64,22 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
         timeBar.numDivisions = timeBar.width;
         hudItems.add(timeBar);
 
-        var songName = new FlxText(timeBarBG.x + (timeBarBG.width / 2) - (nameSong.length * 5), timeBarBG.y, 0, nameSong, 16);
-		songName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, 'right', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		songName.scrollFactor.set();
-		hudItems.add(songName);
+        var songName:FlxBitmapText = new FlxBitmapText(timeBarBG.x + (timeBarBG.width / 2) - (nameSong.length * 5), timeBarBG.y - 2, nameSong, getBitmapFont('VCR'));
+        setBmdFormat(songName, FlxColor.WHITE, 'center', 'OUTLINE', 7, FlxColor.BLACK);
+        setBmdSize(songName, 0.23);
+        songName.antialiasing = true;
+        songName.scrollFactor.set();
+        hudItems.add(songName);
     }
 
     if (getSaveData('Kade_Watermark')) {
         var ke_Version:String = getSaveData('Kade_WatermarkType') == 'KE' ? ver : GitCommitMacro.commitHash;
         var str:String = '$nameSong - ${curDiff.toUpperCase()} | ${getSaveData('Kade_WatermarkType')}: $ke_Version';
-        
-        var watermark:FunkinText = new FunkinText(4, downscroll ? 5 : healthBarBG.y + 50, 0, str);
-        watermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, 'right', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+
+        var watermark:FlxBitmapText = new FlxBitmapText(4, downscroll ? 5 : healthBarBG.y + 50, str, getBitmapFont('VCR'));
+        setBmdFormat(watermark, FlxColor.WHITE, 'right', 'OUTLINE', 7, FlxColor.BLACK);
+        setBmdSize(watermark, 0.23);
+        watermark.antialiasing = true;
         watermark.scrollFactor.set();
         hudItems.add(watermark);
     }
@@ -103,8 +113,10 @@ function onPlayerHit(_) {
 }
 
 function onRatingUpdate(_) {
-    var str = 'Score: ' + songScore + ' | ' + missesType + ': ' + misses + ' | Accuracy: ' + CoolUtil.quantize(accuracy * 100, 100) + '%';
-    if (getSaveData('Kade_Ratings')) str += ' | ' + getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _.rating.rating);
+    var str = 'Score: $songScore | $missesType: $misses | Accuracy: ${CoolUtil.quantize(accuracy * 100, 100)}%';
+    if (getSaveData('Kade_Ratings'))
+        str += ' | ${getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _.rating.rating)}';
+
     hudItems.members[0]?.text = str;
     hudItems.members[0]?.screenCenter(FlxAxes.X);
 }
@@ -124,23 +136,9 @@ function getRankLetter(acc:Float, cneRating:String) {
         rating = "(Clear)";
 
     if (getSaveData('Kade_RatingType') == 'KE') {
-        var wifeConditions:Array<Bool> = [
-            acc >= 99.9935, // AAAAA
-            acc >= 99.980, // AAAA:
-            acc >= 99.970, // AAAA.
-            acc >= 99.955, // AAAA
-            acc >= 99.90, // AAA:
-            acc >= 99.80, // AAA.
-            acc >= 99.70, // AAA
-            acc >= 99, // AA:
-            acc >= 96.50, // AA.
-            acc >= 93, // AA
-            acc >= 90, // A:
-            acc >= 85, // A.
-            acc >= 80, // A
-            acc >= 70, // B
-            acc >= 60, // C
-            acc < 60 // D
+        var wifeConditions:Array<Bool> = [acc >= 99.9935, acc >= 99.980, acc >= 99.970, acc >= 99.955, 
+            acc >= 99.90, acc >= 99.80, acc >= 99.70, acc >= 99, acc >= 96.50, acc >= 93, acc >= 90,
+            acc >= 85, acc >= 80, acc >= 70, acc >= 60, acc < 60 
         ];
 
         for(i in 0...wifeConditions.length) {
@@ -148,17 +146,17 @@ function getRankLetter(acc:Float, cneRating:String) {
             if (b) {
                 switch(i) {
                     case 0: rating += " AAAAA";
-                    case 1: rating += " AAAA:";
-                    case 2: rating += " AAAA.";
+                    case 1: rating += " AAAA";
+                    case 2: rating += " AAAA";
                     case 3: rating += " AAAA";
-                    case 4: rating += " AAA:";
-                    case 5: rating += " AAA.";
+                    case 4: rating += " AAA";
+                    case 5: rating += " AAA";
                     case 6: rating += " AAA";
-                    case 7: rating += " AA:";
-                    case 8: rating += " AA.";
+                    case 7: rating += " AA";
+                    case 8: rating += " AA";
                     case 9: rating += " AA";
-                    case 10: rating += " A:";
-                    case 11: rating += " A.";
+                    case 10: rating += " A";
+                    case 11: rating += " A";
                     case 12: rating += " A";
                     case 13: rating += " B";
                     case 14: rating += " C";
@@ -169,7 +167,7 @@ function getRankLetter(acc:Float, cneRating:String) {
         }
     }
     else
-        rating += ' - ' + cneRating;
+        rating += ' - $cneRating';
 
     // this is kade engine
     return rating;
