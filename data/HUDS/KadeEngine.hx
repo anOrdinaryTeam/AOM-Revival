@@ -1,4 +1,3 @@
-import flixel.text.FlxTextBorderStyle;
 import funkin.backend.system.macros.GitCommitMacro;
 import flixel.ui.FlxBar;
 import flixel.ui.FlxBarFillDirection;
