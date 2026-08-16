@@ -1,4 +1,6 @@
-var trickyLine:FlxText;
+import flixel.text.FlxBitmapText;
+
+var trickyLine:FlxBitmapText;
 var tstatic:FlxSprite;
 var lastStep:Int = 0;
 var curID:Int;
@@ -18,13 +20,19 @@ var TrickyLinesArray:Array<Array<String>> = [
 ];
 
 function postCreate() {
-    trickyLine = new FlxText();
-    trickyLine.setFormat(Paths.font('impact.ttf'), 128, FlxColor.RED);
-    if (curSong == 'hellclown') {
-        trickyLine.size = 200;
-        trickyLine.x += 250;
-    }
-    trickyLine.bold = true;
+    var scaleSize:Float = 5;
+    var normalSize:Int = 40; // 128
+    trickyLine = new FlxBitmapText(0, 0, '', getBitmapFont('Impact'));
+    trickyLine.color = FlxColor.RED;
+    // if (curSong == 'hellclown') {
+    //     trickyLine.size = 200;
+    //     trickyLine.x += 250;
+    // }
+    // trickyLine.scale.set(scaleSize, scaleSize);
+    trickyLine.antialiasing = true;
+    trickyLine.scale.set(scaleSize, scaleSize);
+    trickyLine.updateHitbox();
+    // trickyLine.bold = true;
     add(trickyLine);
 
     var scale:Float = curSong == 'hellclown' ? 12 : 8.3;
@@ -82,9 +90,12 @@ function update() if (rendered) {
     if (tstatic.alpha != 0) tstatic.alpha = FlxG.random.float(0.1,0.5);
 }
 
-function onDadHit(_) if (!_.note.isSustainNote && spawnOnDad)
-    if (FlxG.random.bool(probablyText[_.character.curCharacter]))
-        createTrickyLine(TrickyLinesArray[curID][FlxG.random.int(0, TrickyLinesArray[curID].length - 1)]);
+function onDadHit(_) {
+    if (_.character.curCharacter == boyfriend.curCharacter) return;
+    if (!_.note.isSustainNote && spawnOnDad)
+        if (FlxG.random.bool(probablyText[_.character.curCharacter]))
+            createTrickyLine(TrickyLinesArray[curID][FlxG.random.int(0, TrickyLinesArray[curID].length - 1)]);
+}
 
 function onNoteMiss(_) if (!_.note.isSustainNote && spawnOnDad)
     if (FlxG.random.bool(dad.curCharacter == 'Tricky/tricky' ? 10 : 4))

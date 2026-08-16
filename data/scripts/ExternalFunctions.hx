@@ -1,4 +1,13 @@
+import flixel.graphics.frames.FlxBitmapFont;
 using StringTools;
+
+public static function getBitmapFont(name:String):FlxBitmapFont
+{
+    var image:String = Paths.font('$name/image.png');
+    var fnt:String = Paths.font('$name/font.fnt');
+
+    return FlxBitmapFont.fromAngelCode(image, fnt);
+}
 
 public static function playSound(str:String, vol:Float = 1)
     FlxG.sound.play(Paths.sound(str), vol);

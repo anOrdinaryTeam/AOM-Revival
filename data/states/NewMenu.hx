@@ -155,14 +155,14 @@ function update(dt:Float) {
             input = false;
             FlxG.switchState(new ModState('testing'));
         }
-    }
 
-    for (i => txt in menuItemsGroup.members) {
-        var lerping:Float = lerp(txt.scale.x, FlxG.mouse.overlaps(txt, FlxG.camera) ? getOptions.options[i].size + 0.075 : getOptions.options[i].size, 0.3);
-        txt.scale.set(lerping, lerping);
+        for (i => txt in menuItemsGroup.members) {
+            var lerping:Float = lerp(txt.scale.x, FlxG.mouse.overlaps(txt, FlxG.camera) ? getOptions.options[i].size + 0.075 : getOptions.options[i].size, 0.3);
+            txt.scale.set(lerping, lerping);
 
-        if (FlxG.mouse.overlaps(txt, FlxG.camera) && FlxG.mouse.justPressed)
-            onSelectedOption(txt.ID);
+            if (FlxG.mouse.overlaps(txt, FlxG.camera) && FlxG.mouse.justPressed)
+                onSelectedOption(txt.ID);
+        }
     }
 }
 
