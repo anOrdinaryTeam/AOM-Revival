@@ -46,7 +46,7 @@ function postCreate() {
 var nose:Int = 0;
 function insertSprite(spr:FlxSprite, name:String) if (spr != null) {
     insert(nose++, spr);
-    corruptroSprites[name] = spr;
+    corruptroSprites.set(name, spr);
 }
 
 public function setColorSwapShader(spr:FlxSprite, hue:Float = 0, sat:Float = 0, bri:Float = 0) if (spr != null) {
@@ -261,7 +261,7 @@ function create() {
 
         if (backgroundLevel > 1) for (i in 0...8) {
             var crystal:FunkinSprite = new FunkinSprite().loadSprite(modPath('Crystals'));
-            crystal.addAnim('idle', 'Crystal' + i, 24, true);
+            crystal.addAnim('idle', 'Crystal$i', 24, true);
             crystal.playAnim('idle');
             crystal.scrollFactor.set(0.9, 0.9);
             crystal.x = crystalPos[i][0];
@@ -270,7 +270,7 @@ function create() {
             crystal.alpha = hide;
             crystal.antialiasing = an;
             setColorSwapShader(crystal, 180, -40);
-            crystalsMap["crystal" + i] = crystal;
+            crystalsMap.set('crystal$i', crystal);
             insert(nose++, crystal);
         }
 
@@ -307,7 +307,7 @@ function create() {
             rock.x += x + 25;
             rock.y += y + 175;
             insert(members.indexOf(boyfriend) + 1, rock);
-            corruptroSprites['rockFront_' + i] = rock;
+            corruptroSprites.set('rockFront_$i', rock);
         }
     }
 }
@@ -332,7 +332,7 @@ function glowRune(str:String) {
 function update(_) if (backgroundLevel > 1) {
     var songPos:Float = Conductor.songPosition / 1000;
 
-    for (i in 0...8) if (corruptroSprites.exists('crystal$i')) {
+    for (i in 0...8) if (crystalsMap.exists('crystal$i')) {
         var spr:FlxSprite = crystalsMap.get('crystal$i');
         spr.y += 50 * Math.sin((songPos) + crystalFloatData[i][1]) * _;
         
@@ -388,7 +388,7 @@ function beatHit() {
             if (corruptroSprites.exists('vortex'))
                 corruptroSprites["vortex"].alpha = 1;
 
-            for (i in 0...8 - 1) if (corruptroSprites.exists('crystal$i')) {
+            for (i in 0...8 - 1) if (crystalsMap.exists('crystal$i')) {
                 crystalsMap['crystal$i'].alpha = 1;
                 crystalsMap['crystal$i'].y -= 1500;
             }
