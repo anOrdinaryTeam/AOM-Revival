@@ -1,25 +1,20 @@
-import flixel.text.FlxTextBorderStyle;
+import flixel.text.FlxBitmapText;
+
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
-doIconBop = false;
 var npsTimes:Array<Float> = [];
+doIconBop = false;
 
 function onHudLoad(hud) if (hud == "Mic'dUpEngine") {
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
-    for (i in 0...4) {
-        var txt:FunkinText = new FunkinText(healthBarBG.x - healthBarBG.width / 2, healthBarBG.y - 26 * (3 - i), 0, 20);
-        txt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, 'left', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        txt.setBorderStyle(FlxTextBorderStyle.OUTLINE, 0xFF000000, 3, 1);
+    var strs:String = ['NPS: 0', 'Accuracy: N/A', 'Misses: 0', 'Score: 0'];
+    for (i => str in strs) {
+        var txt:FlxBitmapText = new FlxBitmapText(healthBarBG.x - healthBarBG.width / 2, healthBarBG.y - 26 * (3 - i), str, getBitmapFont('VCR'));
+        setBmdFormat(txt, FlxColor.WHITE, 'left', 'OUTLINE', 7, FlxColor.BLACK);
+        setBmdSize(txt, 0.26);
         txt.scrollFactor.set();
         hudItems.add(txt);
-
-        switch(i) {
-            case 0: txt.text = 'NPS: 0';
-            case 1: txt.text = 'Accuracy: N/A';
-            case 2: txt.text = 'Misses: 0';
-            case 3: txt.text = 'Score: 0';
-        }
     }
 }
 

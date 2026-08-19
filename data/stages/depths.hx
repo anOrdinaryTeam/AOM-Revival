@@ -81,8 +81,8 @@ function beatHit() {
         }});
     }
 
-    if (curBeat % 16 == 0 && fall.length < 10) {
-        var rng:Int = FlxG.random.int(0, 9, exclusion);
+    if (curBeat % 16 == 0 && fall.length <= (ballsGrp.members.length - 1)) {
+        var rng:Int = FlxG.random.int(0, (ballsGrp.members.length - 1), exclusion);
         fall.insert(fall.length + 1, rng);
         exclusion = '$exclusion,$rng';
     }

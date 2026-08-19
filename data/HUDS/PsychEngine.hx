@@ -1,3 +1,4 @@
+import flixel.text.FlxBitmapText;
 import flixel.text.FlxTextBorderStyle;
 import flixel.ui.FlxBar;
 import flixel.ui.FlxBarFillDirection;
@@ -12,6 +13,8 @@ var Settings:Map<String, Dynamic> = [
     "timeBarType" => getSaveData('Psych_TimeBarType'),
 ];
 
+var normalScale:Float = 0.28;
+var onBopSize:Float = 0.3;
 var lengthSong:String = '';
 
 doIconBop = false;
@@ -28,10 +31,13 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
         i.alpha = Settings["opacity"];
 
     var offsetY:Float = downscroll ? healthBarBG.y - 56 : healthBarBG.y + 35;
-    var score:FlxText = new FlxText(0, offsetY, FlxG.width, 'Score: 0 | Misses: 0 | Rating: ?', 20);
-    score.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    var score:FlxBitmapText = new FlxBitmapText(0, offsetY, 'Score: 0 | Misses: 0 | Rating: ?', getBitmapFont('VCR'));
+    setBmdFormat(score, FlxColor.WHITE, 'center', 'OUTLINE', 6, FlxColor.BLACK);
+    setBmdSize(score, normalScale);
+    score.screenCenter(FlxAxes.X);
+    score.fieldWidth = FlxG.width;
     score.scrollFactor.set();
-	score.borderSize = 1.25;
+    score.antialiasing = true;
 	score.visible = Settings["hide"];
 	score.active = false;
     hudItems.add(score);
@@ -104,8 +110,8 @@ function onPlayerHit(_) if (!_.note.isSustainNote) {
 function bopScoreTxt(bop:Bool) {
     if (!bop) return;
     if(scoreTxtTween != null) scoreTxtTween.cancel();
-    hudItems.members[0].scale.set(1.075, 1.075);
-    scoreTxtTween = FlxTween.tween(hudItems.members[0].scale, {x: 1, y: 1}, 0.2, {onComplete: () -> scoreTxtTween = null});
+    setBmdSize(hudItems.members[0], onBopSize);
+    scoreTxtTween = FlxTween.tween(hudItems.members[0].scale, {x: normalScale, y: normalScale}, 0.2, {onComplete: () -> scoreTxtTween = null});
 }
 
 function updateRatingCombo() {
@@ -131,8 +137,9 @@ function updateRatingCombo() {
     
 function onRatingUpdate(_) {
     updateRatingCombo();
-    var str:String = 'Score: ' + songScore + ' | Misses: ' + misses + ' | Rating: ' + ratingName + ' (' + CoolUtil.quantize(accuracy * 100, 100) + '%)' + ' - ' + ratingFC;
+    var str:String = 'Score: $songScore | Misses: $misses | Rating: $ratingName (${CoolUtil.quantize(accuracy * 100, 100)}%) - $ratingFC';
     hudItems.members[0].text = str;
+    hudItems.members[0].screenCenter(FlxAxes.X);
 }
 
 function update(_) {

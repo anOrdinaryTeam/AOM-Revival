@@ -1,4 +1,6 @@
-var trickyLine:FlxText;
+import flixel.text.FlxBitmapText;
+
+var trickyLine:FlxBitmapText;
 var tstatic:FlxSprite;
 var lastStep:Int = 0;
 var curID:Int;
@@ -18,13 +20,17 @@ var TrickyLinesArray:Array<Array<String>> = [
 ];
 
 function postCreate() {
-    trickyLine = new FlxText();
-    trickyLine.setFormat(Paths.font('impact.ttf'), 128, FlxColor.RED);
-    if (curSong == 'hellclown') {
-        trickyLine.size = 200;
-        trickyLine.x += 250;
-    }
-    trickyLine.bold = true;
+    var scaleSize:Float = switch(songName) {
+        default: 1.6;
+        case 'Expurgation': 2.5;
+        case 'HELLCLOWN': 4;
+    };
+
+    trickyLine = new FlxBitmapText(0, 0, '', getBitmapFont('Impact'));
+    trickyLine.color = FlxColor.RED;
+    trickyLine.antialiasing = true;
+    trickyLine.scale.set(scaleSize, scaleSize);
+    trickyLine.updateHitbox();
     add(trickyLine);
 
     var scale:Float = curSong == 'hellclown' ? 12 : 8.3;
@@ -66,7 +72,7 @@ function createTrickyLine(text:String) if (!rendered) {
     trickyLine.visible = true;
 
     playSound('staticSound');
-    trickyLine.setPosition(FlxG.random.float(dad.x + 40,dad.x + 120), FlxG.random.float(dad.y + 200, dad.y + 300));
+    trickyLine.setPosition(FlxG.random.float(dad.x + 40, dad.x + 120), FlxG.random.float(dad.y + 200, dad.y + 300));
 	trickyLine.text = text;
     tstatic.alpha = 0.5;
 }
@@ -78,13 +84,16 @@ function stepHit() if (rendered && lastStep + 3 < curStep) {
 }
 
 function update() if (rendered) {
-    trickyLine.angle = FlxG.random.int(-5,5);
+    trickyLine.angle = FlxG.random.int(-5, 5);
     if (tstatic.alpha != 0) tstatic.alpha = FlxG.random.float(0.1,0.5);
 }
 
-function onDadHit(_) if (!_.note.isSustainNote && spawnOnDad)
-    if (FlxG.random.bool(probablyText[_.character.curCharacter]))
-        createTrickyLine(TrickyLinesArray[curID][FlxG.random.int(0, TrickyLinesArray[curID].length - 1)]);
+function onDadHit(_) {
+    if (_.character.curCharacter == boyfriend.curCharacter) return;
+    if (!_.note.isSustainNote && spawnOnDad)
+        if (FlxG.random.bool(probablyText[_.character.curCharacter]))
+            createTrickyLine(TrickyLinesArray[curID][FlxG.random.int(0, TrickyLinesArray[curID].length - 1)]);
+}
 
 function onNoteMiss(_) if (!_.note.isSustainNote && spawnOnDad)
     if (FlxG.random.bool(dad.curCharacter == 'Tricky/tricky' ? 10 : 4))

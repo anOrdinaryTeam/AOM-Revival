@@ -1,4 +1,37 @@
+import flixel.graphics.frames.FlxBitmapFont;
+import flixel.text.FlxBitmapText;
+import flixel.text.FlxTextBorderStyle;
 using StringTools;
+
+public static function getBitmapFont(name:String):FlxBitmapFont
+{
+    var image:String = Paths.getPath('fonts-bmd/$name/data.png');
+    var fnt:String = Paths.getPath('fonts-bmd/$name/data.fnt');
+
+    return FlxBitmapFont.fromAngelCode(image, fnt);
+}
+
+public static function setBmdFormat(Object:FlxBitmapText, color:FlxColor, alignment:String, borderStyle:String, borderSize:Float, borderColor:FlxColor)
+{
+    if (Object == null) return;
+    Object.color = color;
+    Object.alignment = alignment;
+    Object.borderStyle = switch(borderStyle.toLowerCase()) {
+        default: FlxTextBorderStyle.NONE;
+        case 'outline': FlxTextBorderStyle.OUTLINE;
+        case 'shadow': FlxTextBorderStyle.SHADOW;
+        case 'fast': FlxTextBorderStyle.OUTLINE_FAST;
+    };
+    Object.borderSize = borderSize;
+    Object.borderColor = borderColor;
+}
+
+public static function setBmdSize(Object:FlxBitmapText, size:Float)
+{
+    if (Object == null) return;
+    Object.scale.set(size, size);
+    Object.updateHitbox();
+}
 
 public static function playSound(str:String, vol:Float = 1)
     FlxG.sound.play(Paths.sound(str), vol);

@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="tricky/TrickyH" icon="Tricky/hell" color="#FFFFFF" camx="-700" camy="-700">
+	<spritesheet>characters/tricky/Hellclown/Down </spritesheet>
+	<spritesheet>characters/tricky/Hellclown/Up </spritesheet>
+	<spritesheet>characters/tricky/Hellclown/Right </spritesheet>
+	<spritesheet>characters/tricky/Hellclown/Left </spritesheet>
+
+	<anim name="danceRight" anim="Proper Idle 2" x="0" y="0" fps="24" loop="false"/>
+	<anim name="danceLeft" anim="Proper Idle 1" x="0" y="0" fps="24" loop="false"/>
+
+	<anim name="singLEFT" anim="Proper Left" x="1200" y="1300" fps="24" loop="false" isAnimate="false"/>
+	<anim name="singDOWN" anim="Proper Down" x="1100" y="800" fps="24" loop="false" isAnimate="false"/>
+	<anim name="singUP" anim="Proper Up" x="1400" y="750" fps="24" loop="false" isAnimate="false"/>
+	<anim name="singRIGHT" anim="Proper Right" x="1200" y="1000" fps="24" loop="false" isAnimate="false"/>
+</character>

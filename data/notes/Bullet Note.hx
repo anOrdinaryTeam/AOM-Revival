@@ -5,8 +5,8 @@ var timer:FlxTimer = new FlxTimer();
 var bulletSound:FlxSound;
 
 function postCreate() {
-    bulletSound = FlxG.sound.load(Paths.getPath('Assets-RandomSongs/sounds/bullet.ogg'));
-    bulletSound.volume = 0.45;
+    bulletSound = FlxG.sound.load(getModSoundPath('bullet'));
+    bulletSound.volume = 0.8;
 }
 
 function shootTricky() if (shootAtTricky) {

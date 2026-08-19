@@ -1,3 +1,4 @@
+import flixel.text.FlxBitmapText;
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 
 function onHudLoad(hud) if (hud == 'MFM') {
@@ -19,7 +20,9 @@ function onHudLoad(hud) if (hud == 'MFM') {
 
     var texts:Array<String> = ['DEATHS: ${PlayState.deathCounter}', 'MISSES: 0', 'RATING: Unrated', 'SCORE: 0', 'ACCURACY: 0%'];
     for (i => text in texts) {
-        var score:FunkinText = new FunkinText(0, whiteBox.y + 4, 0, text, 16, false);
+        var score:FlxBitmapText = new FlxBitmapText(0, whiteBox.y + 4, text, getBitmapFont('VCR'));
+        setBmdFormat(score, FlxColor.WHITE, 'none', 'OUTLINE', 0, -1);
+        setBmdSize(score, 0.22);
         score.scrollFactor.set();
         score.antialiasing = true;
         hudItems.add(score);

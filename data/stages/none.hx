@@ -26,7 +26,7 @@ function postCreate(){
     strumBG.alpha = 0.5;
     insert(2, strumBG);
 
-    video = new FlxVideoSprite(-319, -178);
+    video = new FlxVideoSprite(null, -319, -178);
     video.load(Paths.video('LPR/loopingtherooms'));
     video.bitmap.onEndReached.add(video.destroy);
     video.camera = camHUD;

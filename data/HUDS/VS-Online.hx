@@ -1,11 +1,13 @@
-public var vsScore:FunkinText;
-public var vsMisses:FunkinText;
+import flixel.text.FlxBitmapText;
+
 var fuckingcomboCamera:FlxCamera = new FlxCamera();
+public var vsScore:FlxBitmapText;
+public var vsMisses:FlxBitmapText;
 doIconBop = false;
 
 function onHudLoad(hud) if (hud == 'VS-Online') {
     var offY:Float = downscroll ? healthBar.y - 65 : healthBar.y + 25;
-    var size:Int = 22;
+    var size:Int = 0.3;
 
     for (items in [healthBar, healthBarBG])
         items.y -= downscroll ? 10 : 15;
@@ -18,12 +20,16 @@ function onHudLoad(hud) if (hud == 'VS-Online') {
     PlayState.instance.comboGroup.x -= 130;
     // camGame.followLerp = 0.025;
 
-    vsScore = new FunkinText(iconP2.x - 70, offY, 0, 'Score: 0', size);
+    vsScore = new FlxBitmapText(iconP2.x - 70, offY, 'Score: 0', getBitmapFont('VCR'));
+    setBmdFormat(vsScore, FlxColor.WHITE, 'none', 'OUTLINE', 6, FlxColor.BLACK);
+    setBmdSize(vsScore, size);
     vsScore.antialiasing = true;
     vsScore.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, vsScore);
 
-    vsMisses = new FunkinText(iconP1.x + 90, offY, 0, 'Misses: 0', size);
+    vsMisses = new FlxBitmapText(iconP1.x + 90, offY, 'Misses: 0', getBitmapFont('VCR'));
+    setBmdFormat(vsMisses, FlxColor.WHITE, 'none', 'OUTLINE', 6, FlxColor.BLACK);
+    setBmdSize(vsMisses, size);
     vsMisses.antialiasing = true;
     vsMisses.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, vsMisses);
