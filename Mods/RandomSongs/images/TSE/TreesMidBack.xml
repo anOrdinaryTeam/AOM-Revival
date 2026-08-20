@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+	<SubTexture name="sprite0000" x="0" y="0" width="1540" height="968" frameX="-124" frameY="-11" frameWidth="1920" frameHeight="1080"/>
+</TextureAtlas>

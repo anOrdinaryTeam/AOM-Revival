@@ -14,9 +14,9 @@ var Settings:Map<String, Dynamic> = [
 
 var normalScale:Float = 0.28;
 var onBopSize:Float = 0.3;
-var lengthSong:String = '';
+var lerpVal:Float = 0;
 
-doIconBop = false;
+var lengthSong:String = '';
 
 function onHudLoad(hud) if (hud == 'PsychEngine') {
     fuckingcomboCamera.bgColor = 0;
@@ -28,6 +28,19 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
 
     for (i in [healthBar, healthBarBG, iconP1, iconP2])
         i.alpha = Settings["opacity"];
+
+    for (icon in iconArray) {
+        icon.bump = () -> {
+            icon.scale.set(1.2, 1.2);
+            icon.updateHitbox();
+        };
+
+        icon.updateBump = () -> {
+            var mult:Float = CoolUtil.fpsLerp(1, icon.scale.x, lerpVal);
+	        icon.scale.set(mult, mult);
+	        icon.updateHitbox();
+        }
+    }
 
     var offsetY:Float = downscroll ? healthBarBG.y - 56 : healthBarBG.y + 35;
     var score:AomText = new AomText(0, offsetY, 'Score: 0 | Misses: 0 | Rating: ?', normalScale);
@@ -142,12 +155,7 @@ function onRatingUpdate(_) {
 }
 
 function update(_) {
-    var lerpVal = Math.max(0, Math.min(1, 1 - (_ * 9)));
-    for (icons in [iconP1, iconP2]) {
-        var mult:Float = CoolUtil.fpsLerp(1, icons.scale.x, lerpVal);
-	    icons.scale.set(mult, mult);
-	    icons.updateHitbox();
-    }
+    lerpVal = Math.max(0, Math.min(1, 1 - (_ * 9)));
 
     if (!startingSong && Settings["timeBarType"] != 'songName') {
         var fullStr:String = '';
@@ -180,8 +188,3 @@ function update(_) {
 
 function postUpdate()
     PlayState.instance.comboGroup.cameras = [fuckingcomboCamera];
-
-function beatHit() for (icon in iconArray) {
-    icon.scale.set(1.2, 1.2);
-    icon.updateHitbox();
-}

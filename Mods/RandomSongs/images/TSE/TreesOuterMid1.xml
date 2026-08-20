@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+	<SubTexture name="tree10000" x="1" y="837" width="564" height="793" frameX="-227" frameY="0" frameWidth="1920" frameHeight="1080"/>
+	<SubTexture name="tree20000" x="1" y="1" width="540" height="833" frameX="-1076" frameY="0" frameWidth="1920" frameHeight="1080"/>
+</TextureAtlas>

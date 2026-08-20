@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="TSE/ENCORE_BF" icon="bf" color="#31b0d1" y="270" flipX="true" isPlayer="true" scale="0.9">
+	<anim name="singLEFT" anim="Left instance" x="105" y="-2"/>
+	<anim name="singDOWN" anim="down instance" x="-7" y="-56"/>
+	<anim name="idle" anim="idle instance" x="-5" y="0"/>
+	<anim name="singDOWNmiss" anim="miss DOWN instance" x="-7" y="-53"/>
+	<anim name="singLEFTmiss" anim="miss LEFT instance" x="107" y="-1"/>
+	<anim name="singRIGHTmiss" anim="miss RIGHT instance" x="-24" y="-24"/>
+	<anim name="singUPmiss" anim="miss UP instance" x="-36" y="27"/>
+	<anim name="singRIGHT" anim="right instance" x="-28" y="-27"/>
+	<anim name="singUP" anim="up instance" x="-35" y="37"/>
+</character>

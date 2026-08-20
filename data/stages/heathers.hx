@@ -1,3 +1,4 @@
+importScript('data/scripts/PsychHold');
 function sprite(str:String)
     return getModImage('Heathers/$str');
 
