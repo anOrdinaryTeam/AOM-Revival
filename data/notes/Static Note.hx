@@ -2,7 +2,7 @@ var staticSpr:FunkinSprite = new FunkinSprite();
 var staticTimer:FlxTimer = new FlxTimer();
 
 function postCreate() {
-    staticSpr.loadSprite(getModImage('hitStatic'));
+    staticSpr.loadSprite(Paths.image('hitStatic'));
     staticSpr.addAnim('hit', 'staticANIMATION', 24, false);
     staticSpr.camera = camHUD;
     staticSpr.alpha = 0.0001;
@@ -15,8 +15,8 @@ function onNoteCreation(_) if (_.noteType == 'Static Note') {
 }
 
 function onPlayerMiss(_) if (_.noteType == 'Static Note') {
+    playSound('hitStatic1');
     FlxG.camera.shake(0.005, 0.005);
-    playModSound('hitStatic1');
 
     staticSpr.playAnim('hit', true);
     staticSpr.alpha = 1;
