@@ -78,7 +78,7 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
     }
 
     // lengthSong = FlxStringUtil.formatTime(inst.length / 1000, false);
-    scripts.call('postHudLoad');
+    scripts.call('postHudLoad', [hud]);
 }
 
 function onSongStart() if (Settings["timeBarType"] != 'disabled')

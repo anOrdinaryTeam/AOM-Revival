@@ -5,6 +5,9 @@ doIconBop = false;
 var zoomBoost:Bool = false;
 var gainHealth:Bool = false;
 
+var camBars:FlxCamera = new FlxCamera();
+var Bars:FlxTypedGroup<FlxSprite> = new FlxTypedGroup();
+
 function bgPath(str:String):String
     return getModImage('TSE/$str');
 
@@ -20,7 +23,7 @@ function onPlayerHit(e) if (!gainHealth)
     e.healthGain = 0;
 
 function onDadHit(e) if (gainHealth && health >= 0.4)
-    e.healthGain = 0.015;
+    e.healthGain = e.note.isSustainNote ? 0.024 : 0.015;
 
 function create() {
     useCamMov = true;
@@ -83,18 +86,41 @@ function create() {
 	addBG(grass);
 }
 
-function postCreate()
+function postCreate() {
     loadHud('PsychEngine');
 
-function postHudLoad() if (hudItems != null)
+    camBars.bgColor = 0;
+    FlxG.cameras.add(camBars, false);
+    Bars.camera = camBars;
+    add(Bars);
+
+    for (i in 0...2) {
+        var bar:FlxSprite = new FlxSprite().makeSolid(FlxG.width, 90, FlxColor.BLACK);
+        bar.y = i == 0 ? (0 - bar.height) : FlxG.height;
+        bar.scrollFactor.set();
+        bar.ID = i;
+        Bars.add(bar);
+    }
+}
+
+function ShowBars(bool:Bool, speed:Float) Bars.forEachAlive(bar -> {
+    FlxTween.tween(bar, {y: bar.ID == 0 ? (bool ? 0 : (0 - bar.height)) : (bool ? (FlxG.height - bar.height) : FlxG.height)}, speed, {ease: FlxEase.circInOut});
+});
+
+function postHudLoad(hud) if (hud == 'PsychEngine' && hudItems != null)
     hudItems.members[2].createFilledBar(FlxColor.BLACK, FlxColor.RED);
 
 function stepHit() switch(curStep) {
+    case 402, 404, 406, 408, 410, 412, 1424, 1428, 1432, 1436: dad.playAnim('Laugh', true);
     case 415, 687, 751, 1055: zoomBoost = true;
     case 675, 736: zoomBoost = false;
+    case 880, 896, 912: defaultCamZoom += 0.1;
+    case 1504, 1760: FlxTween.tween(this, {scrollSpeed: scrollSpeed + 0.2}, 0.8, {ease: FlxEase.quadInOut});
 
     case 384: camGame.alpha = 0;
     case 400:
+        dad.playAnim('Laugh', true);
+
         camGame.alpha = 1;
         defaultCamZoom = 0.9;
     case 416:
@@ -102,19 +128,27 @@ function stepHit() switch(curStep) {
         doIconBop = true;
         gainHealth = true;
     case 928:
+        opponentCam.x -= 150;
         defaultCamZoom = 1.0;
         zoomBoost = false;
 
+        ShowBars(true, .4);
         dad.playAnim('Getcha', true);
         FlxTween.tween(camHUD, {alpha: 0}, 0.7);
         FlxTween.tween(FlxG.camera, {zoom: 1.0}, 0.7);
+
+    case 986:
+        opponentCam.x += 100;
+        camGame.shake(0.003, 1.8);
+    case 1003: opponentCam.x -= 100;
     case 1039:
         defaultCamZoom = 0.65;
 
+        ShowBars(false, 1.4);
         FlxTween.tween(camHUD, {alpha: 1}, 1.4);
         FlxTween.tween(FlxG.camera, {zoom: 0.65}, 1.4);
+        FlxTween.tween(opponentCam, {x: opponentCam.x + 150}, 1.4);
     case 1056: dad.scale.set(1, 1);
-    case 1504: FlxTween.tween(this, {scrollSpeed: scrollSpeed + 0.2}, 0.4, {ease: FlxEase.quadInOut});
     case 1888:
         zoomBoost = false;
         doIconBop = false;
