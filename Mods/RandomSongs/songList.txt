@@ -18,4 +18,5 @@ Summit::https://gamebanana.com/mods/350828
 Rush::https://gamebanana.com/mods/419175
 The Deathmatch::https://gamejolt.com/games/farewelltofunk/664112
 Treacherous Thorns::https://gamejolt.com/games/fnfcorruption/588842
+Too Slow Encore::https://github.com/duckiewhy/exe-2.5-code
 Looping The Rooms::https://youtu.be/icBDYkfxpMs?si=q4bsZBUnNv1m994y

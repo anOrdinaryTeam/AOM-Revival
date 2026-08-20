@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="TSE/getcha-opt" icon="exe-encore" color="#00548E">
+	<anim name="idle" anim="im gonna getchaaa"/>
+</character>

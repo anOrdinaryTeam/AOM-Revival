@@ -1,8 +1,7 @@
-import flixel.text.FlxBitmapText;
-import flixel.text.FlxTextBorderStyle;
 import flixel.ui.FlxBar;
 import flixel.ui.FlxBarFillDirection;
 import flixel.util.FlxStringUtil;
+import AomText;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var fuckingcomboCamera:FlxCamera = new FlxCamera();
@@ -31,13 +30,10 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
         i.alpha = Settings["opacity"];
 
     var offsetY:Float = downscroll ? healthBarBG.y - 56 : healthBarBG.y + 35;
-    var score:FlxBitmapText = new FlxBitmapText(0, offsetY, 'Score: 0 | Misses: 0 | Rating: ?', getBitmapFont('VCR'));
-    setBmdFormat(score, FlxColor.WHITE, 'center', 'OUTLINE', 6, FlxColor.BLACK);
-    setBmdSize(score, normalScale);
+    var score:AomText = new AomText(0, offsetY, 'Score: 0 | Misses: 0 | Rating: ?', normalScale);
+    score.setFormat(-1, 'center', 'OUTLINE');
     score.screenCenter(FlxAxes.X);
-    score.fieldWidth = FlxG.width;
     score.scrollFactor.set();
-    score.antialiasing = true;
 	score.visible = Settings["hide"];
 	score.active = false;
     hudItems.add(score);
@@ -52,26 +48,23 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
         var timeBar:FlxBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, FlxBarFillDirection.LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), inst,
             'time', 0, inst.length);
         timeBar.scrollFactor.set();
-        timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+        timeBar.createFilledBar(FlxColor.BLACK, -1);
         timeBar.numDivisions = timeBar.width;
         timeBar.unbounded = getSaveData('Psych_SmoothTimeBar');
         timeBar.alpha = 0;
         hudItems.add(timeBar);
 
-        var songNameBool:Bool = Settings["timeBarType"] == 'songName' ? true : false;
-        var offsettxt:Float = songNameBool ? 6 : 10;
-
-        var timeTxt:FlxText = new FlxText(0, timeBar.y - offsettxt, 400, songNameBool ? songName : "", 32);
-        timeTxt.setFormat(Paths.font("vcr.ttf"), songNameBool ? 24 : 32, FlxColor.WHITE, 'center', FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        var songNameBool:Bool = Settings["timeBarType"] == 'songName';
+        var timeTxt:AomText = new AomText(0, 0, songNameBool ? songName : "", 0.35);
+        timeTxt.setFormat(-1, 'center', 'OUTLINE');
         timeTxt.scrollFactor.set();
         timeTxt.screenCenter(FlxAxes.X);
+        timeTxt.y = (timeBarBG.y + (timeBarBG.height - timeTxt.height) / 2) + (downscroll ? -2 : 3);
         timeTxt.alpha = 0;
-        timeTxt.borderSize = 2;
-        timeTxt.active = false;
         hudItems.add(timeTxt);
     }
 
-    lengthSong = FlxStringUtil.formatTime(inst.length / 1000, false);
+    // lengthSong = FlxStringUtil.formatTime(inst.length / 1000, false);
     scripts.call('postHudLoad');
 }
 
@@ -109,9 +102,12 @@ function onPlayerHit(_) if (!_.note.isSustainNote) {
 
 function bopScoreTxt(bop:Bool) {
     if (!bop) return;
-    if(scoreTxtTween != null) scoreTxtTween.cancel();
-    setBmdSize(hudItems.members[0], onBopSize);
-    scoreTxtTween = FlxTween.tween(hudItems.members[0].scale, {x: normalScale, y: normalScale}, 0.2, {onComplete: () -> scoreTxtTween = null});
+
+    var score:AomText = hudItems.members[0];
+    scoreTxtTween?.cancel();
+
+    score.size = onBopSize;
+    scoreTxtTween = FlxTween.tween(score.scale, {x: normalScale, y: normalScale}, 0.2, {onComplete: () -> scoreTxtTween = null});
 }
 
 function updateRatingCombo() {
@@ -137,9 +133,12 @@ function updateRatingCombo() {
     
 function onRatingUpdate(_) {
     updateRatingCombo();
+
+    var score:AomText = hudItems.members[0];
     var str:String = 'Score: $songScore | Misses: $misses | Rating: $ratingName (${CoolUtil.quantize(accuracy * 100, 100)}%) - $ratingFC';
-    hudItems.members[0].text = str;
-    hudItems.members[0].screenCenter(FlxAxes.X);
+
+    score.text = str;
+    score.screenCenter(FlxAxes.X);
 }
 
 function update(_) {
@@ -152,7 +151,7 @@ function update(_) {
 
     if (!startingSong && Settings["timeBarType"] != 'songName') {
         var fullStr:String = '';
-        var timeTxt:FlxText = hudItems.members[3];
+        var timeTxt:AomText = hudItems.members[3];
 
         if (Settings["timeBarType"] != 'all') {
             var songCalc:Float = Settings["timeBarType"] == 'timeLeft' ? (inst.length - Conductor.songPosition) : Conductor.songPosition;
@@ -170,18 +169,19 @@ function update(_) {
             fullStr = '$songName - ($timeElapsedStr / $lengthSong)';
 
             var timeBar:FlxSprite = hudItems.members[1];
-            timeTxt.size = (fullStr.length / 2) * 1.5;
+            timeTxt.forceSize(0.4);
             timeTxt.y = (timeBar.y + (timeBar.height - timeTxt.height) / 2);
         }
 
         timeTxt.text = fullStr;
+        timeTxt.screenCenter(FlxAxes.X);
     }
 }
 
 function postUpdate()
     PlayState.instance.comboGroup.cameras = [fuckingcomboCamera];
 
-function beatHit() for (i in [iconP1, iconP2]) {
-    i.scale.set(1.2, 1.2);
-    i.updateHitbox();
+function beatHit() for (icon in iconArray) {
+    icon.scale.set(1.2, 1.2);
+    icon.updateHitbox();
 }

@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="TSE/sonic" icon="exe-encore" color="#00548E" applyStageMatrix="true">
+	<spritesheet>characters/TSE/getcha-opt</spritesheet>
+
+	<anim name="idle" anim="SONICmoveIDLE"/>
+	<anim name="singDOWN" anim="SONICmoveDOWN" x="-43" y="-21"/>
+	<anim name="singRIGHT" anim="SONICmoveRIGHT" x="89" y="14"/>
+	<anim name="singLEFT" anim="SONICmoveLEFT" x="-144" y="-14"/>
+	<anim name="singUP" anim="SONICmoveUP" x="16" y="6"/>
+
+	<anim name="Laugh" anim="SONIClaugh" x="-336" y="-178"/>
+	<anim name="Getcha" anim="im gonna getchaaa" x="-255" y="-55" isAnimate="false"/>
+</character>

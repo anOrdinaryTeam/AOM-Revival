@@ -2,7 +2,7 @@ import funkin.backend.system.macros.GitCommitMacro;
 import flixel.ui.FlxBar;
 import flixel.ui.FlxBarFillDirection;
 import flixel.util.FlxStringUtil;
-import flixel.text.FlxBitmapText;
+import AomText;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var fuckingcomboCamera:FlxCamera = new FlxCamera();
@@ -10,7 +10,7 @@ var missesType:String = getSaveData('Kade_MissesType');
 doIconBop = false;
 
 // Made by @pharaotis in discord
-var currentTimingShown:FlxBitmapText;
+var currentTimingShown:AomText;
 var tween:FlxTween = null;
 var colors:Map<String, FlxColor> = [
     'shit' => FlxColor.RED,
@@ -20,11 +20,8 @@ var colors:Map<String, FlxColor> = [
 ];
 
 function pharaotisMsTiming() {
-    currentTimingShown = new FlxBitmapText(0, 0, '0ms', getBitmapFont('Pixel'));
-    setBmdFormat(currentTimingShown, FlxColor.WHITE, 'none', 'outline', 3, FlxColor.BLACK);
-    setBmdSize(currentTimingShown, 0.3);
-    currentTimingShown.setPosition(FlxG.width / 1.75, FlxG.height / 2.5); // change this to something else this was just a placeholder   
-    currentTimingShown.antialiasing = true;
+    currentTimingShown = new AomText(FlxG.width / 1.75, FlxG.height / 2.5, '0ms', 0.3, 'Pixel');
+    currentTimingShown.setFormat(-1, 'none', 'outline', 3, FlxColor.BLACK);
     currentTimingShown.alpha = 0;
     hudItems.add(currentTimingShown);
 }
@@ -34,18 +31,18 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
     FlxG.cameras.insert(fuckingcomboCamera, 1, false);
     PlayState.instance.comboGroup.x -= 200;
 
-    for (i in cpuStrums) i.x -= 45;
-    for (i in playerStrums) i.x -= 45;
+    for (i => player in playerStrums.members) {
+        player.x -= 45;
+        cpu.members[i].x -= 45;
+    }
     
     hudItems.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, hudItems);
 
     var nameSong:String = PlayState.SONG.meta.displayName;
 
-    var score:FlxBitmapText = new FlxBitmapText(FlxG.width / 2 - 235, (downscroll ? healthBarBG.y - 45 : healthBarBG.y + 45), 'Score: 0 | $missesType: 0 | Accuracy: N/A', getBitmapFont('VCR'));
-    setBmdFormat(score, FlxColor.WHITE, 'center', 'OUTLINE', 7, FlxColor.BLACK);
-    setBmdSize(score, 0.23);
-    score.antialiasing = true;
+    var score:AomText = new AomText(0, (downscroll ? healthBarBG.y - 45 : healthBarBG.y + 45), 'Score: 0 | $missesType: 0 | Accuracy: N/A', 0.22);
+    score.setFormat(-1, 'center', 'OUTLINE', 6, FlxColor.BLACK);
     score.screenCenter(FlxAxes.X);
     score.scrollFactor.set();
     hudItems.add(score);
@@ -63,10 +60,8 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
         timeBar.numDivisions = timeBar.width;
         hudItems.add(timeBar);
 
-        var songName:FlxBitmapText = new FlxBitmapText(timeBarBG.x + (timeBarBG.width / 2) - (nameSong.length * 5), timeBarBG.y - 2, nameSong, getBitmapFont('VCR'));
-        setBmdFormat(songName, FlxColor.WHITE, 'center', 'OUTLINE', 7, FlxColor.BLACK);
-        setBmdSize(songName, 0.23);
-        songName.antialiasing = true;
+        var songName:AomText = new AomText(timeBarBG.x + (timeBarBG.width / 2) - (nameSong.length * 5), timeBarBG.y - 2, nameSong, 0.23);
+        songName.setFormat(-1, 'center', 'OUTLINE', 7, FlxColor.BLACK);
         songName.scrollFactor.set();
         hudItems.add(songName);
     }
@@ -75,10 +70,8 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
         var ke_Version:String = getSaveData('Kade_WatermarkType') == 'KE' ? ver : GitCommitMacro.commitHash;
         var str:String = '$nameSong - ${curDiff.toUpperCase()} | ${getSaveData('Kade_WatermarkType')}: $ke_Version';
 
-        var watermark:FlxBitmapText = new FlxBitmapText(4, downscroll ? 5 : healthBarBG.y + 50, str, getBitmapFont('VCR'));
-        setBmdFormat(watermark, FlxColor.WHITE, 'right', 'OUTLINE', 7, FlxColor.BLACK);
-        setBmdSize(watermark, 0.23);
-        watermark.antialiasing = true;
+        var watermark:AomText = new AomText(4, downscroll ? 5 : healthBarBG.y + 50, str, 0.23);
+        watermark.setFormat(-1, 'right', 'OUTLINE', 7, FlxColor.BLACK);
         watermark.scrollFactor.set();
         hudItems.add(watermark);
     }

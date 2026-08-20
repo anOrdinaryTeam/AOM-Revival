@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="TSE/im gonna getchaaa">
+	<anim name="idle" anim="exes Head Idle"/>
+	<anim name="singDOWN" anim="exe body down"/>
+	<anim name="singRIGHT" anim="e1"/>
+	<anim name="singLEFT" anim="e1"/>
+	<anim name="singUP" anim="e1"/>
+</character>
