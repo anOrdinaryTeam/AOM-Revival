@@ -14,7 +14,7 @@ var shit:Array<Array<Dynamic>> = [
     ['set', 'listen'],
     ['sung', 'UP'],
     ['set', 'BIATCH!!!'],
-    ['set', '']
+    ['remove', '']
 ];
 
 function stepHit() if (stepShit.contains(curStep)) {
@@ -23,6 +23,8 @@ function stepHit() if (stepShit.contains(curStep)) {
 }
 
 var size:Float = 0.4;
+var borSize:Int = 5;
+
 var lyric:AomText = new AomText(0, 0, '', size, 'Cherri');
 var otherLyric:AomText = new AomText(0, 0, '', size, 'Cherri');
 var camLyrics:FlxCamera = new FlxCamera();
@@ -31,13 +33,13 @@ function postCreate() {
     camLyrics.bgColor = 0;
     FlxG.cameras.add(camLyrics, false);
 
-    lyric.setFormat(-1, 'center', 'outline', 8, FlxColor.BLACK);
+    lyric.setFormat(-1, 'center', 'outline', borSize, FlxColor.BLACK);
     lyric.camera = camLyrics;
     lyric.screenCenter();
     lyric.y += 180;
     add(lyric);
 
-    otherLyric.setFormat(-1, 'center', 'outline', 8, FlxColor.BLACK);
+    otherLyric.setFormat(-1, 'center', 'outline', borSize, FlxColor.BLACK);
     otherLyric.camera = camLyrics;
     otherLyric.screenCenter();
     otherLyric.y += 180 + (30 + 10);
@@ -52,4 +54,7 @@ function setLyric(type:String, str:String) switch(type) {
     case 'sung':
         otherLyric.text = str;
         otherLyric.screenCenter(FlxAxes.X);
+    case 'remove':
+        remove(lyric);
+        remove(otherLyric);
 }
