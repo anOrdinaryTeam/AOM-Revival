@@ -1,8 +1,8 @@
-import flixel.text.FlxBitmapText;
+import AomText;
 
 var fuckingcomboCamera:FlxCamera = new FlxCamera();
-public var vsScore:FlxBitmapText;
-public var vsMisses:FlxBitmapText;
+public var vsScore:AomText;
+public var vsMisses:AomText;
 doIconBop = false;
 
 function onHudLoad(hud) if (hud == 'VS-Online') {
@@ -20,17 +20,13 @@ function onHudLoad(hud) if (hud == 'VS-Online') {
     PlayState.instance.comboGroup.x -= 130;
     // camGame.followLerp = 0.025;
 
-    vsScore = new FlxBitmapText(iconP2.x - 70, offY, 'Score: 0', getBitmapFont('VCR'));
-    setBmdFormat(vsScore, FlxColor.WHITE, 'none', 'OUTLINE', 6, FlxColor.BLACK);
-    setBmdSize(vsScore, size);
-    vsScore.antialiasing = true;
+    vsScore = new AomText(iconP2.x - 70, offY, 'Score: 0', size);
+    vsScore.setFormat(-1, 'none', 'OUTLINE', 6, FlxColor.BLACK);
     vsScore.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, vsScore);
 
-    vsMisses = new FlxBitmapText(iconP1.x + 90, offY, 'Misses: 0', getBitmapFont('VCR'));
-    setBmdFormat(vsMisses, FlxColor.WHITE, 'none', 'OUTLINE', 6, FlxColor.BLACK);
-    setBmdSize(vsMisses, size);
-    vsMisses.antialiasing = true;
+    vsMisses = new AomText(iconP1.x + 90, offY, 'Misses: 0', size);
+    vsMisses.setFormat(-1, 'none', 'OUTLINE', 6, FlxColor.BLACK);
     vsMisses.camera = camHUD;
     insert(members.indexOf(iconP2) + 1, vsMisses);
 }

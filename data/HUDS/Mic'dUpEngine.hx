@@ -1,4 +1,4 @@
-import flixel.text.FlxBitmapText;
+import AomText;
 
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var npsTimes:Array<Float> = [];
@@ -10,9 +10,8 @@ function onHudLoad(hud) if (hud == "Mic'dUpEngine") {
 
     var strs:String = ['NPS: 0', 'Accuracy: N/A', 'Misses: 0', 'Score: 0'];
     for (i => str in strs) {
-        var txt:FlxBitmapText = new FlxBitmapText(healthBarBG.x - healthBarBG.width / 2, healthBarBG.y - 26 * (3 - i), str, getBitmapFont('VCR'));
-        setBmdFormat(txt, FlxColor.WHITE, 'left', 'OUTLINE', 7, FlxColor.BLACK);
-        setBmdSize(txt, 0.26);
+        var txt:AomText = new FlxBitmapText(healthBarBG.x - healthBarBG.width / 2, healthBarBG.y - 26 * (3 - i), str, 0.26);
+        txt.setFormat(-1, 'left', 'OUTLINE', 7, FlxColor.BLACK);
         txt.scrollFactor.set();
         hudItems.add(txt);
     }

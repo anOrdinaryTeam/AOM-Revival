@@ -95,10 +95,11 @@ function postCreate() {
     add(Bars);
 
     for (i in 0...2) {
-        var bar:FlxSprite = new FlxSprite().makeSolid(FlxG.width, 90, FlxColor.BLACK);
+        var bar:FlxSprite = new FlxSprite().makeSolid((FlxG.width + 2), 90, FlxColor.BLACK);
         bar.y = i == 0 ? (0 - bar.height) : FlxG.height;
         bar.scrollFactor.set();
         bar.ID = i;
+        bar.screenCenter(FlxAxes.X);
         Bars.add(bar);
     }
 }
