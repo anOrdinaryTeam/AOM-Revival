@@ -1,4 +1,4 @@
-import flixel.text.FlxTextBorderStyle;
+import AomText;
 
 var curShit:Int = 0;
 var stepShit:Array<Int> = [3, 18, 34, 51, 67, 83, 99, 108, 115, 119, 123, 128];
@@ -22,33 +22,25 @@ function stepHit() if (stepShit.contains(curStep)) {
     curShit++;
 }
 
-var lyric:FlxText = new FlxText(0, 0, 0, '', 30);
-var otherLyric:FlxText = new FlxText(0, 0, 0, '', 30);
+var size:Float = 0.4;
+var lyric:AomText = new AomText(0, 0, '', size, 'Cherri');
+var otherLyric:AomText = new AomText(0, 0, '', size, 'Cherri');
 var camLyrics:FlxCamera = new FlxCamera();
 
 function postCreate() {
     camLyrics.bgColor = 0;
     FlxG.cameras.add(camLyrics, false);
 
-    lyric.font = Paths.font('cheri.ttf');
+    lyric.setFormat(-1, 'center', 'outline', 8, FlxColor.BLACK);
     lyric.camera = camLyrics;
-    lyric.borderStyle = FlxTextBorderStyle.OUTLINE;
-    lyric.borderColor = FlxColor.BLACK;
-    lyric.borderSize = 2;
     lyric.screenCenter();
     lyric.y += 180;
-    lyric.antialiasing = true;
     add(lyric);
 
-    otherLyric.font = Paths.font('cheri.ttf');
+    otherLyric.setFormat(-1, 'center', 'outline', 8, FlxColor.BLACK);
     otherLyric.camera = camLyrics;
-    otherLyric.borderColor = FlxColor.BLACK;
-    otherLyric.borderStyle = FlxTextBorderStyle.OUTLINE;
-    otherLyric.borderColor = FlxColor.BLACK;
-    otherLyric.borderSize = 2;
     otherLyric.screenCenter();
     otherLyric.y += 180 + (30 + 10);
-    otherLyric.antialiasing = true;
     add(otherLyric);
 }
 
