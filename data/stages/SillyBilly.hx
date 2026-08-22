@@ -86,9 +86,9 @@ function postCreate() {
         modManager.addModifier('Boost', 0);
         add(modManager);
 
-        modManager.setPercent('x', 700, 0);
-        modManager.setPercent('y', downscroll ? 680 : 400, 0);
-        modManager.setPercent('z', 0.25, 0);
+        modManager.setPercent('x', 640, 0);
+        modManager.setPercent('y', downscroll ? 550 : 400, 0);
+        modManager.setPercent('z', 120, 0);
         modManager.setPercent('flip', -0.25, 0);
         modManager.setPercent('Boost', 2.0, 0);
         modManager.setPercent('brake', 0.2, 0);
