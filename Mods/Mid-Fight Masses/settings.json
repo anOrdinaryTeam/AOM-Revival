@@ -1,0 +1,16 @@
+{
+    "settings": [
+        {
+            "text": "Alt Notes",
+            "type": "Checkbox",
+            "id": "AOM_MFM_altNotes",
+            "desc": "If checked, the Game will use the Old Skin used for Gospel\nbefore the Selever Update."
+        },
+        {
+            "text": "Ruv Shake Screen",
+            "type": "Checkbox",
+            "id": "AOM_MFM_ruvShake",
+            "desc": "I mean, if you wanna a smooth gameplay go ahead\ni don't mind."
+        }
+    ]
+}

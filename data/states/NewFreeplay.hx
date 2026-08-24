@@ -199,6 +199,12 @@ function update(dt) {
 
     if (allowInput) {
         scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
+
+        if (FlxG.keys.justPressed.TAB) {
+            openSubState(new ModSubState('ModSettingsSubstate', currentMod));
+            persistentUpdate = false;
+			persistentDraw = true;
+        }
         
         if (grpPages != null) for (page in grpPages) if (page.alpha == 1 && (CoolUtil.mouseOverlaps(page) && FlxG.mouse.justPressed))
             CoolUtil.openURL(page.url);
