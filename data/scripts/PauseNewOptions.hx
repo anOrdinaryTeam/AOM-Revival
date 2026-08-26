@@ -4,6 +4,7 @@ import openfl.system.Capabilities;
 var newOptions:Array<String> = [
     'Resume',
     'Restart Song',
+    'Change Mod Options',
     'Change Note Skin',
     'Change Controls',
     'Change Options',
@@ -12,8 +13,15 @@ var newOptions:Array<String> = [
 ];
 
 function create(e) {
+    var nameSong:String = PlayState.SONG.meta.displayName;
+    var pathShi:String = currentMod == 'RandomSongs' ? 'RandomSongs/settings/$nameSong' : '$currentMod/settings';
+    var exists:Bool = Assets.exists(Paths.file('Mods/$pathShi.json'));
+
+    if (!exists && newOptions.contains('Change Mod Options'))
+        newOptions.remove('Change Mod Options');
     if (newOptions.contains('Exit to charter') && !PlayState.chartingMode)
         newOptions.remove('Exit to charter');
+
     e.options = newOptions;
 }
 
@@ -25,6 +33,12 @@ function onSelectOption(e) {
         if (PlayState.SONG.meta.name == 'Fatality')
             restoreWindowSize();
         FlxG.switchState(new UIState(true, 'noteSkinSelector'));
+    }
+    else if (e.name == 'Change Mod Options') {
+        var data:Dynamic = {Mod: currentMod, Song: PlayState.SONG.meta.displayName, PauseState: true};
+        openSubState(new ModSubState('ModSettingsSubstate', data));
+        persistentUpdate = false;
+		persistentDraw = true;
     }
     else if (e.name == 'Exit to menu' && PlayState.SONG.meta.name == 'Fatality') {
         restoreWindowSize();

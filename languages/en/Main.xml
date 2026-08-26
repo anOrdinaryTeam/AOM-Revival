@@ -91,6 +91,7 @@
 			<str id="pause.changeControls">Change Controls</str>
 			<str id="pause.changeOptions">Change Options</str>
 			<str id="pause.changeNoteSkin">Change Note Skin</str>
+			<str id="pause.changeModOptions">Change Mod Options</str>
 			<str id="pause.exitToMenu">Exit to menu</str>
 			<str id="pause.exitToCharter">Exit to charter</str>
 			<str id="pause.resumeCutscene">Resume Cutscene</str>

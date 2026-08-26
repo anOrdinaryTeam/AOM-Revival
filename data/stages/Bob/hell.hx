@@ -60,5 +60,6 @@ public function bobMad() {
     });
 }
 
-function beatHit() if ((bobScreen.alpha != 1 && bobScreenBG.alpha != 1) && FlxG.random.bool(10))
-    bobMad();
+function beatHit() if (getSaveData('Bob_jumpscares'))
+    if ((bobScreen.alpha != 1 && bobScreenBG.alpha != 1) && FlxG.random.bool(10))
+        bobMad();

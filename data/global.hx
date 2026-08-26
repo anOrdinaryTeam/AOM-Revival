@@ -53,6 +53,7 @@ public static function RefreshSaveDatas() {
 
     // if (saveMap.get('customHud') != FlxG.save.data.AOM_customHUD)
     //     saveMap.set('customHud', FlxG.save.data.AOM_customHUD);
+
     // [ END ]
 
     // [ NOTE SKIN SYSTEM ]
@@ -83,6 +84,9 @@ public static function RefreshSaveDatas() {
         // [ BOB ]
         if (saveMap.get('Bob_happy') != FlxG.save.data.AOM_happyBob)
             saveMap.set('Bob_happy', FlxG.save.data.AOM_happyBob);
+
+        if (saveMap.get('Bob_jumpscares') != FlxG.save.data.AOM_bobJumpsares)
+            saveMap.set('Bob_jumpscares', FlxG.save.data.AOM_bobJumpsares);
         // [ END ]
 
         // [ FATALITY ]
@@ -221,6 +225,9 @@ static function LoadSaveData() {
         // [ BOB ]
         FlxG.save.data.AOM_happyBob ??= false;
         saveMap.set('Bob_happy', FlxG.save.data.AOM_happyBob);
+
+        FlxG.save.data.AOM_bobJumpsares ??= true;
+        saveMap.set('Bob_jumpscares', FlxG.save.data.AOM_bobJumpsares);
         // [ END ]
 
         // [ FATALITY ]

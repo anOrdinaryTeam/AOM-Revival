@@ -5,17 +5,23 @@ import AomText;
 var optionsY:Array<Dynamic> = [];
 var options:Array<Dynamic> = [];
 var curOption:Int = 0;
+var input:Bool = true;
 
 var descText:AomText;
 var descTextBG:FlxSprite;
 
 function create() {
-    var modName:String = data;
-    if (modName == '' || modName == null){
+    var modName:String = data.Mod;
+    var songName:String = data.Song;
+    var inPause:Bool = data.PauseState;
+
+    var pathJson:String = modName != 'RandomSongs' ? '$modName/settings' : 'RandomSongs/settings/$songName';
+
+    if ((modName == '' || modName == null) || (modName == 'RandomSongs' && (songName != null && songName == ''))) {
         close();
         return;
     }
-    if (!Assets.exists(Paths.file('Mods/$modName/settings.json'))) {
+    if (!Assets.exists(Paths.file('Mods/$pathJson.json'))) {
         trace('No mod settings');
         close();
         return;
@@ -30,16 +36,38 @@ function create() {
     bg.alpha = 0.5;
     add(bg);
 
-    var Settings:Dynamic = CoolUtil.parseJson(Paths.file('Mods/$modName/settings.json')).settings;
-    for (i => values in Settings) {
-        var setting:Dynamic = createOption(values.text, values.type, values.desc, values.id, values.value_modifier ?? null);
-        setting.x += 50;
-        setting.y = 0 + 150 * i;
-        setting.ID = i;
-        add(setting);
+    if (inPause) {
+        var pauseWarning:AomText = new AomText(0, 0, 'You may need to restart the Song for any\nchange takes effect', 0.4);
+        pauseWarning.alignment = 'center';
+        pauseWarning.color = FlxColor.RED;
+        pauseWarning.screenCenter(FlxAxes.X);
+        pauseWarning.alpha = 0.001;
+        add(pauseWarning);
+        FlxTween.tween(pauseWarning, {alpha: 1}, 0.5);
 
-        optionsY.push(setting.y);
-        options.push(setting);
+        input = false;
+        new FlxTimer().start(0.1, () -> input = true);
+    }
+    
+    try {
+        var Settings:Dynamic = CoolUtil.parseJson(Paths.file('Mods/$pathJson.json')).settings;
+
+        for (i => values in Settings) {
+            var setting:Dynamic = createOption(values.text, values.type, values.desc ?? '', values.id, values.value_modifier ?? null);
+            setting.x += 50;
+            setting.y = 0 + 150 * i;
+            setting.ID = i;
+            add(setting);
+
+            optionsY.push(setting.y);
+            options.push(setting);
+        }
+    }
+    catch(e:Dynamic) {
+        var file:String = modName != 'RandomSongs' ? modName : songName;
+        trace('Failed to load settings file - [$file.json]');
+        close();
+        return;
     }
 
     descTextBG = new FlxSprite().makeSolid(1, 1, 0);
@@ -48,29 +76,36 @@ function create() {
 
     descText = new AomText(0, 0, '', 0.4);
     descText.alignment = 'center';
-    descText.numSpacesInTab = 100;
     add(descText);
 
     scrolls();
 }
 
-function update() {
+function update() if (input) {
     if (controls.BACK) {
-        close();
+        input = false;
+        RefreshSaveDatas();
         CoolUtil.playMenuSFX(2);
+
+        close();
         return;
     }
 
     if (controls.UP_P || controls.DOWN_P)
         scrolls((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0), true);
 
-    var Item:Dynamic = options[curOption];
-    if (controls.ACCEPT) Item.select();
-    if (controls.LEFT_P || controls.RIGHT_P)
-        Item.changeSelection((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
+    if (options[curOption] != null) {
+        var Item:Dynamic = options[curOption];
 
-    for (i => items in options)
-        updateItemsPos(items, optionsY[i]);
+        if (controls.ACCEPT)
+            Item.select();
+
+        if (controls.LEFT_P || controls.RIGHT_P)
+            Item.changeSelection((controls.LEFT_P ? -1 : 0) + (controls.RIGHT_P ? 1 : 0));
+
+        for (i => items in options)
+            updateItemsPos(items, optionsY[i]);
+    }
 }
 
 function scrolls(i:Int = 0, s:Bool = false) {
@@ -101,7 +136,7 @@ function createOption(text:String, type:String, desc:String, id:Dynamic, ?values
             var maxVal:Float = values[1];
             var stepVal:Float = values[2];
 
-            Option = new NumOption(text, 'nell', minVal, maxVal, stepVal, id, null, FlxG.save.data);
+            Option = new NumOption(text, desc, minVal, maxVal, stepVal, id, null, FlxG.save.data);
     }
 
     return Option;

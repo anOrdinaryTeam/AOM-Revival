@@ -1,0 +1,23 @@
+{
+    "settings": [
+        {
+            "text": "Moving Window",
+            "type": "Checkbox",
+            "id": "AOM_Fatality_WindowMove",
+            "desc": "Visual movement for the final part of the Song"
+        },
+        {
+            "text": "Pop Ups Mechanic",
+            "type": "Checkbox",
+            "id": "AOM_Fatality_PopUps",
+            "desc": "Checking will enable PopUps Mechanic"
+        },
+        {
+            "text": "Limit PopUps",
+            "type": "Checkbox",
+            "id": "AOM_Fatality_Limiter_PopUps",
+            "desc": "Limit how much Windows popups shows at the screen\n(Limited to 4)"
+
+        }
+    ]
+}

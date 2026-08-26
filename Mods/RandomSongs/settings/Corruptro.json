@@ -1,0 +1,17 @@
+{
+    "settings": [
+        {
+            "text": "BG Level",
+            "type": "Number",
+            "id": "AOM_Corruptro_levelBG",
+            "value_modifier": [0, 2, 1],
+            "desc": "Changing this Value will change how much Sprites will load to the Stage\n(Lower = +FPS - Higher = -FPS)"
+        },
+        {
+            "text": "Poison Notes Shader",
+            "type": "Checkbox",
+            "id": "AOM_Corruptro_poisonShader",
+            "desc": "(OPTIONAL)\nApply tints to the Poison Note Types"
+        }
+    ]
+}

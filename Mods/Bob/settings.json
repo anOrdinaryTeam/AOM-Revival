@@ -1,0 +1,16 @@
+{
+    "settings": [
+        {
+            "text": "Happy Bob",
+            "type": "Checkbox",
+            "id": "AOM_happyBob",
+            "desc": "funny check (for Hell song)"
+        },
+        {
+            "text": "Jumpscares",
+            "type": "Checkbox",
+            "id": "AOM_bobJumpsares",
+            "desc": "boo"
+        }
+    ]
+}

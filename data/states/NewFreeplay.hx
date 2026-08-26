@@ -12,6 +12,7 @@ var grpPages:FlxTypedGroup<HealthIcon> = new FlxTypedGroup();
 
 var scoreTxt:FunkinText;
 var difficultyTxt:FunkinText;
+var configTab:FunkinText;
 
 var curSelected:Int = 0;
 var curDiff:Int = 1;
@@ -42,6 +43,7 @@ function create() {
         var diffs:Array<String> = Meta.difficulties.copy();
 
         var metaData:SongData = new SongData(song, displayName, icon, diffs);
+        if (currentMod == 'RandomSongs') metaData.containsConfigFile = Assets.exists(Paths.file('Mods/RandomSongs/settings/$displayName.json'));
         songsList.push(metaData);
     }
 
@@ -106,6 +108,12 @@ function create() {
     scoreTxt.y += 4;
     scoreTxt.antialiasing = true;
     add(scoreTxt);
+
+    configTab = new FunkinText(0, (difficultyTxt.y + 45), 0, 'Press [TAB] to open Mod settings', 18);
+    configTab.x = (FlxG.width - configTab.width) - 5;
+    configTab.antialiasing = true;
+    if (currentMod != 'RandomSongs') configTab.visible = Assets.exists(Paths.file('Mods/$currentMod/settings.json'));
+    add(configTab);
 
     scroll(0, true);
     #if ARKOSE_PORT
@@ -196,12 +204,15 @@ function update(dt) {
 		FlxG.sound.music.volume += 0.5 * dt;
 
     scoreTxt.text = '- Score: ${Math.round(lerpScore)} -';
+    if (currentMod == 'RandomSongs')
+        configTab.alpha = lerp(configTab.alpha, songsList[curSelected].containsConfigFile ? 1 : 0, 0.15);
 
     if (allowInput) {
         scroll((controls.UP_P ? -1 : 0) + (controls.DOWN_P ? 1 : 0) - FlxG.mouse.wheel);
 
         if (FlxG.keys.justPressed.TAB) {
-            openSubState(new ModSubState('ModSettingsSubstate', currentMod));
+            var data:Dynamic = {Mod: currentMod, Song: songsList[curSelected].name};
+            openSubState(new ModSubState('ModSettingsSubstate', data));
             persistentUpdate = false;
 			persistentDraw = true;
         }
@@ -228,6 +239,7 @@ class SongData
     public var displayName:String = '';
     public var icon:String = '';
     public var difficulties:Array<String> = [];
+    public var containsConfigFile:Bool = false;
 
     public function new(name:String, displayName:String, icon:String, difficulties:Array<String>) {
         this.name = name;
