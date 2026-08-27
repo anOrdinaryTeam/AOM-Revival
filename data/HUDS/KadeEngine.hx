@@ -7,7 +7,6 @@ import AomText;
 public var hudItems:FlxTypedGroup<Dynamic> = new FlxTypedGroup();
 var fuckingcomboCamera:FlxCamera = new FlxCamera();
 var missesType:String = getSaveData('Kade_MissesType');
-doIconBop = false;
 
 // Made by @pharaotis in discord
 var currentTimingShown:AomText;
@@ -40,6 +39,18 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
     insert(members.indexOf(iconP2) + 1, hudItems);
 
     var nameSong:String = PlayState.SONG.meta.displayName;
+    for (icon in iconArray) {
+        icon.bump = () -> {
+            var value:Float = (Conductor.bpm < 340) ? 30 : 4;
+            icon.setGraphicSize(Std.int(icon.width + value));
+	        icon.updateHitbox();
+        };
+
+        icon.updateBump = () -> {
+            icon.setGraphicSize(Std.int(CoolUtil.fpsLerp(150, icon.width, 0.50)));
+            icon.updateHitbox();
+        }
+    }
 
     var score:AomText = new AomText(0, (downscroll ? healthBarBG.y - 45 : healthBarBG.y + 45), 'Score: 0 | $missesType: 0 | Accuracy: N/A', 0.22);
     score.setFormat(-1, 'center', 'OUTLINE', 6, FlxColor.BLACK);
@@ -82,19 +93,8 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
     scripts.call('postHudLoad');
 }
 
-function update() for (icons in [iconP1, iconP2]) {
-    icons.setGraphicSize(Std.int(CoolUtil.fpsLerp(150, icons.width, 0.50)));
-    icons.updateHitbox();
-}
-
 function postUpdate()
     PlayState.instance.comboGroup.cameras = [fuckingcomboCamera];
-
-function beatHit() for (icons in [iconP1, iconP2]) {
-    var value:Float = (Conductor.bpm < 340) ? 30 : 4;
-    icons.setGraphicSize(Std.int(icons.width + value));
-	icons.updateHitbox();
-}
 
 var ratingsInt:Map<String, Int> = ["sick" => 0, "good" => 0, "bad" => 0, "shit" => 0];
 function onPlayerHit(_) {

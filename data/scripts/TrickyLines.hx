@@ -1,6 +1,6 @@
-import flixel.text.FlxBitmapText;
+import AomText;
 
-var trickyLine:FlxBitmapText;
+var trickyLine:AomText;
 var tstatic:FlxSprite;
 var lastStep:Int = 0;
 var curID:Int;
@@ -26,11 +26,8 @@ function postCreate() {
         case 'HELLCLOWN': 4;
     };
 
-    trickyLine = new FlxBitmapText(0, 0, '', getBitmapFont('Impact'));
+    trickyLine = new AomText(0, 0, '', scaleSize, 'Impact');
     trickyLine.color = FlxColor.RED;
-    trickyLine.antialiasing = true;
-    trickyLine.scale.set(scaleSize, scaleSize);
-    trickyLine.updateHitbox();
     add(trickyLine);
 
     var scale:Float = curSong == 'hellclown' ? 12 : 8.3;
