@@ -1,6 +1,7 @@
 import ModPage;
 import funkin.backend.chart.Chart;
 import funkin.savedata.FunkinSave;
+import funkin.editors.ui.UIState;
 importScript('data/scripts/PreSongLoader');
 
 public var LOAD_SONG:Bool = true;
@@ -225,7 +226,7 @@ function update(dt) {
 
         if (controls.BACK) {
             allowInput = false;
-            FlxG.switchState(new ModState('ModSelectorNew'));
+            FlxG.switchState(new UIState(true, 'ModSelectorNew'));
         }
 
         if (controls.ACCEPT /*|| FlxG.mouse.justPressed*/)

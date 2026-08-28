@@ -5,7 +5,7 @@
             "position": [25, 290],
             "size": 0.9,
             "stateRedirect": "ModSelectorNew",
-            "stateType": "ModState"
+            "stateType": "UIState"
         },
         {
             "text": "Note's Selector",

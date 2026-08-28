@@ -1,3 +1,4 @@
+import funkin.editors.ui.UISubstateWindow;
 import ModPage;
 
 class Background extends FlxSprite
@@ -28,6 +29,9 @@ var modsAlphabet:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
 var pagesGrp:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
 var backgroundsGrp:FlxTypedGroup<Background> = new FlxTypedGroup();
 var logosGrp:FlxTypedGroup<Logo> = new FlxTypedGroup();
+
+public static function GetCurSelectedName():String
+    return currentModsList[curSelected];
 
 function create() {
     CoolUtil.playMenuSong();
@@ -167,6 +171,9 @@ function update(dt) {
             FlxG.switchState(new ModState('NewMenu'));
         }
 
+        if (FlxG.keys.justPressed.TAB)
+            openSubState(new UISubstateWindow(true, 'Dev/CreateMenuFile'));
+
         for (page in pagesGrp) if (page.alpha == 1 && (CoolUtil.mouseOverlaps(page) && FlxG.mouse.justPressed))
             CoolUtil.openURL(page.url);
 
@@ -228,5 +235,5 @@ function select() {
     FlxG.switchState(new ModState('NewFreeplay'));
 }
 
-static function findFile(str:String)
+public static function findFile(str:String)
     return Assets.exists(Paths.getPath(str));
