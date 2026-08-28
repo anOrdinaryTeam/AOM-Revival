@@ -5,11 +5,9 @@ import funkin.editors.ui.UIWarningSubstate;
 
 var modName:String = GetCurSelectedName();
 
-function new() {
-    if (findFile('Mods/$modName/images/menu/data.json')) {
-        trace('Ya existe el archivo.');
-        close();
-    }
+function new() if (findFile('Mods/$modName/images/menu/data.json')) {
+    trace('Ya existe el archivo.');
+    close();
 }
 
 function create() {
@@ -31,4 +29,10 @@ function postCreate() {
 
 function _Save() {
 
+}
+
+class MenuTab extends UIButton
+{
+    var closed:Bool = true;
+    var foldableIcons:Array<Dynamic> = [];
 }
