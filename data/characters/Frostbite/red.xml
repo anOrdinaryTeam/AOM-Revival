@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="frostbite/mt_silver_red_norm" icon="frostbite/red" color="#FF3737" scale="0.6">
+	<anim name="idle" anim="Norm Red Idle"/>
+	<anim name="singLEFT" anim="Norm Red left" x="20"/>
+	<anim name="singRIGHT" anim="Norm Red right" x="-59"/>
+	<anim name="singDOWN" anim="Norm Red down" x="10" y="6"/>
+	<anim name="singUP" anim="Norm Red UP" y="36"/>
+</character>

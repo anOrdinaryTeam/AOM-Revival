@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="frostbite/mt_silver_red_dead" icon="Frostbite/red-dead" color="#FF3737" scale="0.6">
+	<anim name="idle" anim="DEAD RED IDLE"/>
+	<anim name="singUP" anim="DEAD RED up" x="-1" y="58"/>
+	<anim name="singLEFT" anim="DEAD RED left" x="179" y="3"/>
+	<anim name="singRIGHT" anim="DEAD RED right" x="-87" y="-1"/>
+	<anim name="singDOWN" anim="DEAD RED down" x="20" y="-8"/>
+</character>

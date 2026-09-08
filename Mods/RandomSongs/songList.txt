@@ -7,6 +7,7 @@ Defeat::https://gamebanana.com/mods/55652::https://gamejolt.com/games/vsimpostor
 Epiphany::https://gamebanana.com/mods/47364
 Your Demise::https://gamebanana.com/mods/47364
 Fatality::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
+Frostbite
 Megalo Strike Back::https://gamebanana.com/mods/55836
 Phantasm::https://gamebanana.com/mods/359046
 Prey::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code

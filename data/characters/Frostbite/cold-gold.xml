@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character y="100" sprite="frostbite/Cold_Gold" flipX="true" isPlayer="true" icon="frostbite/gold" color="#EAD8FF">
+	<anim name="idle" anim="GOLD IDLE"/>
+	<anim name="singUP" anim="GOLD UP POSE0" x="35" y="30"/>
+	<anim name="singRIGHT" anim="GOLD RIGHT POSE0" x="-10" y="-7"/>
+	<anim name="singLEFT" anim="GOLD LEFT POSE0" x="78" y="16"/>
+	<anim name="singDOWN" anim="GOLD DOWN POSE0" x="-70" y="-37"/>
+
+	<anim name="singUPmiss" anim="GOLD UP MISS" x="39" y="10"/>
+	<anim name="singDOWNmiss" anim="GOLD DOWN POSE MISS" x="-60" y="-65"/>
+	<anim name="singLEFTmiss" anim="GOLD LEFT POSE MISS" x="30" y="20"/>
+	<anim name="singRIGHTmiss" anim="GOLD RIGHT POSE MISS" x="-9" y="-15"/>
+</character>
