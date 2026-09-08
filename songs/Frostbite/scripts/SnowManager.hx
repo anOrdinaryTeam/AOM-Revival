@@ -43,7 +43,7 @@ public function addSnowAmount(amount:Int) {
         spr.antialiasing = Options.antialiasing;
         spr.scale.set(randomScale, randomScale);
         spr.updateHitbox();
-        spr.color = 0xEAEEFD;
+        spr.color = 0xE6EBFC;
         SnowLayer.add(spr);
 
         if (spr != null) {
