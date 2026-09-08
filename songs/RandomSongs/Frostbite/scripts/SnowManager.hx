@@ -1,5 +1,5 @@
 var SnowShader:FunkinShader;
-var SnowLayer:FlxTypedGroup<FlxSprite> = new FlxTypedGroup();
+var SnowLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 
 // Parameters for Low Setting
 var xOffset = {start: 1600, end: -200};
@@ -8,6 +8,7 @@ var yOffset = {start: -200, end: 900};
 var speedX = {min: 1.4, max: 4};
 var speedY = {min: 1.8, max: 3.7};
 
+var alpha = {min: 0.7, max: 1};
 var scale = {min: 0.8, max: 2};
 var ease:FlxEase = FlxEase.quadInOut;
 
@@ -38,12 +39,16 @@ public function addSnowAmount(amount:Int) {
         var randomSnow:Int = FlxG.random.int(1, 20);
         var randomScale:Float = FlxG.random.float(scale.min, scale.max);
         var randomStart:Float = FlxG.random.float(xOffset.end, xOffset.start);
+        var randomAlpha:Float = FlxG.random.float(alpha.min, alpha.max);
 
-        var spr:FlxSprite = new FlxSprite(randomStart, yOffset.start, FrostPath('SnowShit/$randomSnow'));
+        var spr:FunkinSprite = new FunkinSprite(randomStart, yOffset.start, FrostPath('snow_particles'));
+        spr.addAnim('snow', randomSnow, 0, false);
+        spr.playAnim('snow', true);
         spr.antialiasing = Options.antialiasing;
         spr.scale.set(randomScale, randomScale);
         spr.updateHitbox();
-        spr.color = 0xE6EBFC;
+        spr.color = 0xE6ECFD;
+        spr.alpha = randomAlpha;
         SnowLayer.add(spr);
 
         if (spr != null) {
