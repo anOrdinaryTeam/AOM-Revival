@@ -6,6 +6,8 @@ using StringTools;
 public var songName:String = PlayState.SONG.meta.displayName;
 public var songPath:String = PlayState.SONG.meta.name;
 
+trace(songName);
+
 public var curDiff:String = PlayState.difficulty;
 public var ratingPrefix:String = '';
 
