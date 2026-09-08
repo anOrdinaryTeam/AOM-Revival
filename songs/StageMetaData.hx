@@ -12,7 +12,7 @@ public var useStageData:Bool = true;
 
 function create() {
     fileExists = Assets.exists(Paths.json('stagesData/$stageName'));
-    metaSongExists = Assets.exists(Paths.getPath('songs/$songName/meta.json'));
+    metaSongExists = Assets.exists(Paths.getPath('songs/$songPath/meta.json'));
     scripts.call('preStageLoad');
 
     if (!useStageData)
@@ -97,7 +97,7 @@ function postCreate() if (CREATE_FILE_FEATURE) {
             var _file:String = JsonPrinter.print(content, null, '\t');
 
             CoolUtil.safeSaveFile(
-                '${Paths.getAssetsRoot()}/songs/$songName/meta.json',
+                '${Paths.getAssetsRoot()}/songs/$songPath/meta.json',
                 _file
             );
             trace('Created! [meta.json]');
