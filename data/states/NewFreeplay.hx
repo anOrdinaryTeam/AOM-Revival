@@ -36,7 +36,7 @@ function create() {
         add(grpPages);
 
     for (song in getModSongList(currentMod)) {
-        var Meta:Dynamic = Chart.loadChartMeta(song);
+        var Meta:Dynamic = Chart.loadChartMeta('$currentMod/$song');
 
         var displayName:String = Meta.displayName;
         var icon:String = Meta.icon;
@@ -186,7 +186,7 @@ public function enterSong() {
 
     if (LOAD_SONG) {
         trace('Selected Song: $songName - ${diff.toUpperCase()}');
-        PlayState.loadSong(songName, diff);
+        PlayState.loadSong('$currentMod/$songName', diff);
         FlxG.switchState(new PlayState());
     }
 }
