@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="frostbite/Dead Red" icon="Frostbite/red-dead" color="#FF3737" scale="0.6" y="-50">
+	<anim name="idle" anim="DEAD RED IDLE"/>
+	<anim name="singDOWN" anim="DEAD RED down" x="620"/>
+	<anim name="singRIGHT" anim="DEAD RED right"/>
+	<anim name="singLEFT" anim="DEAD RED left" x="620"/>
+	<anim name="singUP" anim="DEAD RED up"/>
+</character>

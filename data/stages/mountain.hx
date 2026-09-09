@@ -1,4 +1,5 @@
 defaultCamZoom = 0.8;
+introLength = 0;
 
 public var fog:FlxSprite;
 public var camOther:FlxCamera = new FlxCamera();
