@@ -86,5 +86,5 @@ function follow(offsets:Array<Float>) {
     camFollow.y += offsets[1];
 }
 
-function onPlayerHit(e)
-    e.showRating = false;
+// function onPlayerHit(e)
+//     e.showRating = false;

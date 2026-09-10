@@ -1,32 +1,21 @@
 var SnowShader:FunkinShader;
 var SnowLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
-
-// Parameters for Low Setting
-var xOffset = {start: 1600, end: -200};
-var yOffset = {start: -200, end: 900};
-
-var speedX = {min: 1.4, max: 4};
-var speedY = {min: 1.8, max: 3.7};
-
-var alpha = {min: 0.7, max: 1};
-var scale = {min: 0.8, max: 2};
-var ease:FlxEase = FlxEase.quadInOut;
-
-public var SnowMethod:Int = 0; // 0 = Low | 1 = High
+public var SnowMethod:Int = 1; // 0 = Low | 1 = High
 
 function create() {
     if (SnowMethod == 1 && Options.gameplayShaders) {
         SnowShader = FunkinShader.fromFile(Paths.fragShader('snowfall'));
+        SnowShader.intensity = 0.25;
         camOther.addShader(SnowShader);
     }
     else if (SnowMethod == 0) {
         SnowLayer.camera = camOther;
         add(SnowLayer);
-        addSnowAmount(75);
+        addSnowAmount(90);
     }
 }
 
-function update() {
+function update(dt:Float) {
     if (SnowMethod == 1 && SnowShader != null) {
         var time:Float = Conductor.songPosition / (Conductor.stepCrochet * 8);
         SnowShader.time = time;
@@ -36,27 +25,86 @@ function update() {
 public function addSnowAmount(amount:Int) {
     // Low
     if (SnowMethod == 0) for (i in 0...amount) {
-        var randomSnow:Int = FlxG.random.int(1, 20);
-        var randomScale:Float = FlxG.random.float(scale.min, scale.max);
-        var randomStart:Float = FlxG.random.float(xOffset.end, xOffset.start);
-        var randomAlpha:Float = FlxG.random.float(alpha.min, alpha.max);
-
-        var spr:FunkinSprite = new FunkinSprite(randomStart, yOffset.start, FrostPath('snow_particles'));
-        spr.addAnim('snow', randomSnow, 0, false);
-        spr.playAnim('snow', true);
-        spr.antialiasing = Options.antialiasing;
-        spr.scale.set(randomScale, randomScale);
-        spr.updateHitbox();
-        spr.color = 0xE6ECFD;
-        spr.alpha = randomAlpha;
+        var randomSnow:Int = FlxG.random.int(1, 10);
+        var spr:SnowFlake = new SnowFlake(randomSnow);
         SnowLayer.add(spr);
+    }
+}
 
-        if (spr != null) {
-            var randomSpeedX:Float = FlxG.random.float(speedX.min, speedX.max);
-            var randomSpeedY:Float = FlxG.random.float(speedY.min, speedY.max);
+public function setIntensity(intensity:Float) for (snow in SnowLayer)
+    snow.intensity = intensity;
 
-            FlxTween.tween(spr, {x: xOffset.end}, randomSpeedX, {ease: ease, type: 2});
-            FlxTween.tween(spr, {y: yOffset.end}, randomSpeedY, {ease: ease, type: 2});
-        }
+function stepHit() {
+    // if (curStep == 10)
+    //     setIntensity(0.7);
+    // else if (curStep == 50)
+    //     setIntensity(1.2);
+    // else if (curStep == 100)
+    //     setIntensity(4);
+}
+
+class SnowFlake extends FunkinSprite
+{
+    var speedX = {min: 1.4, max: 4};
+    var speedY = {min: 1.8, max: 3.7};
+
+    var amplitude = {min: 1, max: 15};
+    var frequency = {min: 0.01, max: 0.05};
+
+    var alphas = {min: 0.8, max: 1};
+    var scales = {min: 0.4, max: 1.8};
+
+    var xOffset = {start: 1600, end: -200};
+    var yOffset = {start: -200, end: 900};
+
+    var time:Float = 0;
+    public var intensity:Float = 1.4;
+
+    var currentSpeedX:Float = 0;
+    var currentSpeedY:Float = 0;
+    var currentAmplitude:Float = 0;
+    var currentFrequency:Float = 0;
+
+    public function new(Anim:Int) {
+        super(0, 0, FrostPath('snow2'));
+        this.addAnim('snow', Anim, 0, false);
+        this.playAnim('snow', true);
+        this.antialiasing = Options.antialiasing;
+        this.color = 0xE5ECFF;
+        this.restartSnow();
+    }
+
+    public function restartSnow():Void
+    {
+        var randomScale:Float = FlxG.random.float(scales.min, scales.max);
+        var randomStart:Float = FlxG.random.float(xOffset.end, xOffset.start);
+        var randomAlpha:Float = FlxG.random.float(alphas.min, alphas.max);
+        var randomSpeedX:Float = FlxG.random.float(speedX.min, speedX.max);
+        var randomSpeedY:Float = FlxG.random.float(speedY.min, speedY.max);
+        var randomAmplitude:Float = FlxG.random.float(amplitude.min, amplitude.max);
+        var randomFrequency:Float = FlxG.random.float(frequency.min, frequency.max);
+
+        this.setPosition(randomStart, yOffset.start);
+        this.scale.set(randomScale, randomScale);
+        this.updateHitbox();
+        this.alpha = randomAlpha;
+
+        this.currentSpeedX = randomSpeedX;
+        this.currentSpeedY = randomSpeedY;
+        this.currentAmplitude = randomAmplitude;
+        this.currentFrequency = randomFrequency;
+    }
+
+    override function update(elapsed:Float):Void
+    {
+        super.update(elapsed);
+
+        this.time += elapsed;
+        this.y += currentSpeedY * (0.5 + intensity);
+        this.x += (-currentSpeedX * intensity) + FlxMath.fastSin(time / currentFrequency) * (currentAmplitude * intensity) * elapsed;
+
+        if (this.y > yOffset.end)
+            this.restartSnow();
+
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://shadowengineteam.github.io/Funkin-Packer/
+-->
+<TextureAtlas imagePath="snow2.png" width="24" height="226" spritePadding="3" borderPadding="1">
+	<SubTexture name="10000" x="1" y="21" width="16" height="17" frameX="0" frameY="0" frameWidth="18" frameHeight="18"/>
+	<SubTexture name="20000" x="1" y="41" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17"/>
+	<SubTexture name="30000" x="1" y="104" width="22" height="18" frameX="0" frameY="0" frameWidth="22" frameHeight="18"/>
+	<SubTexture name="40000" x="1" y="1" width="15" height="17" rotated="true" frameX="0" frameY="0" frameWidth="17" frameHeight="15"/>
+	<SubTexture name="50000" x="1" y="125" width="16" height="25" rotated="true" frameX="0" frameY="0" frameWidth="25" frameHeight="16"/>
+	<SubTexture name="60000" x="1" y="153" width="20" height="20" frameX="0" frameY="0" frameWidth="20" frameHeight="20"/>
+	<SubTexture name="70000" x="1" y="202" width="22" height="23" frameX="0" frameY="0" frameWidth="22" frameHeight="23"/>
+	<SubTexture name="80000" x="1" y="176" width="21" height="23" frameX="0" frameY="0" frameWidth="21" frameHeight="23"/>
+	<SubTexture name="90000" x="1" y="82" width="19" height="19" frameX="0" frameY="0" frameWidth="19" frameHeight="19"/>
+	<SubTexture name="100000" x="1" y="61" width="18" height="18" frameX="0" frameY="0" frameWidth="18" frameHeight="18"/>
+</TextureAtlas>
