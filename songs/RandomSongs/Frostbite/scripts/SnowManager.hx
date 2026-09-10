@@ -1,6 +1,6 @@
 var SnowShader:FunkinShader;
 var SnowLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
-public var SnowMethod:Int = 1; // 0 = Low | 1 = High
+public var SnowMethod:Int = 0; // 0 = Low | 1 = High
 
 function create() {
     if (SnowMethod == 1 && Options.gameplayShaders) {
@@ -11,7 +11,6 @@ function create() {
     else if (SnowMethod == 0) {
         SnowLayer.camera = camOther;
         add(SnowLayer);
-        addSnowAmount(90);
     }
 }
 
@@ -22,17 +21,22 @@ function update(dt:Float) {
     }
 }
 
-public function addSnowAmount(amount:Int) {
+public function addSnowAmount(amount:Int, timestep:Float) {
     // Low
-    if (SnowMethod == 0) for (i in 0...amount) {
-        var randomSnow:Int = FlxG.random.int(1, 10);
-        var spr:SnowFlake = new SnowFlake(randomSnow);
-        SnowLayer.add(spr);
+    if (SnowMethod == 0) {
+        new FlxTimer().start((timestep * Conductor.stepCrochet) / 1000, () -> {
+            var randomSnow:Int = FlxG.random.int(1, 10);
+            var spr:SnowFlake = new SnowFlake(randomSnow);
+            SnowLayer.add(spr);
+        }, amount);
     }
 }
 
-public function setIntensity(intensity:Float) for (snow in SnowLayer)
+public function setIntensity(intensity:Float, time:Float) for (snow in SnowLayer) {
+    FlxTween.cancelTweensOf(snow);
+    FlxTween.tween(snow, {intensity: intensity}, (time * Conductor.stepCrochet) / 1000);
     snow.intensity = intensity;
+}
 
 function stepHit() {
     // if (curStep == 10)
@@ -70,7 +74,7 @@ class SnowFlake extends FunkinSprite
         this.addAnim('snow', Anim, 0, false);
         this.playAnim('snow', true);
         this.antialiasing = Options.antialiasing;
-        this.color = 0xE5ECFF;
+        this.color = 0xDBE2FA;
         this.restartSnow();
     }
 
