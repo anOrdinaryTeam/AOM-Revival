@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="frostbite/TYPHLOSION_MECHANIC" icon="frostbite/typlosion" x="100" y="300">
+	<anim name="idle" anim="TYPHLOSION MECHANIC" indices="0..14"/>
+	<anim name="fire" anim="TYPHLOSION MECHANIC" x="6" y="17" indices="15..29"/>
+</character>

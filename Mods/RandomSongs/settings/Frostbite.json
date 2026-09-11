@@ -1,0 +1,18 @@
+{
+    "settings": [
+        {
+            "text": "High Quality Snow",
+            "type": "Checkbox",
+            "id": "AOM_Frostbite_Snow",
+            "desc": "Unchecking will use instead a Recreation of the Snow fully made of Sprites\nChecking will use the Shader like the Mod"
+        },
+        {
+            "text": "Difficulty",
+            "type": "Array",
+            "id": "AOM_Frostbite_mechsDiff",
+            "desc": "Difficulty for the Mechanics\n(Like the Coldness and etc)",
+            "options": ["default", "fucked", "hell"],
+            "optionsDisplay": ["Default", "Fucked", "Hell"]
+        }
+    ]
+}

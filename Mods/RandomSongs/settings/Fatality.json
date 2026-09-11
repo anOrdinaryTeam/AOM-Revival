@@ -17,7 +17,6 @@
             "type": "Checkbox",
             "id": "AOM_Fatality_Limiter_PopUps",
             "desc": "Limit how much Windows popups shows at the screen\n(Limited to 4)"
-
         }
     ]
 }

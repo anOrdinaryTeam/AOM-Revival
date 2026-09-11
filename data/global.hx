@@ -108,6 +108,14 @@ public static function RefreshSaveDatas() {
             saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
         // [ END ]
 
+        // [ FROSTBITE ]
+        if (saveMap.get('Frostbite_SnowHQ') != FlxG.save.data.AOM_Frostbite_Snow)
+            saveMap.set('Frostbite_SnowHQ', FlxG.save.data.AOM_Frostbite_Snow);
+        
+        if (saveMap.get('Frostbite_MechsDiff') != FlxG.save.data.AOM_Frostbite_mechsDiff)
+    	    saveMap.set('Frostbite_MechsDiff', FlxG.save.data.AOM_Frostbite_mechsDiff);
+        // [ END ]
+
     // [ END ]
 
 
@@ -247,6 +255,14 @@ static function LoadSaveData() {
         
         FlxG.save.data.AOM_Corruptro_poisonShader ??= true;
     	saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
+        // [ END ]
+
+        // [ FROSTBITE ]
+        FlxG.save.data.AOM_Frostbite_Snow ??= true;
+        saveMap.set('Frostbite_SnowHQ', FlxG.save.data.AOM_Frostbite_Snow);
+        
+        FlxG.save.data.AOM_Frostbite_mechsDiff ??= 'normal';
+    	saveMap.set('Frostbite_MechsDiff', FlxG.save.data.AOM_Frostbite_mechsDiff);
         // [ END ]
 
     // [ END ]

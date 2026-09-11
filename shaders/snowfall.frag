@@ -3,7 +3,7 @@
 
 uniform float intensity = 0.0;
 uniform float time = 0.0;
-uniform int amount = 200;
+uniform int amount = 75;
 vec2 uv;
 
 float rnd(float x) {

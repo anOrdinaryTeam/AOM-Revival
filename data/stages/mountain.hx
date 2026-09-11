@@ -4,6 +4,9 @@ introLength = 0;
 public var fog:FlxSprite;
 public var camOther:FlxCamera = new FlxCamera();
 
+public var typhlosion:Character = new Character(0, 0, 'frostbite/typlosion');
+// public var freakachu:Character = new Character(0, 0, 'frostbite/freakachu');
+
 public function FrostPath(str:String)
     return getModImage('Frostbite/$str');
 
@@ -72,6 +75,10 @@ function postCreate() {
 		iconP2.x = center - iconOffset;
         iconP2.health = healthBarPercent / 100;
     }
+
+	typhlosion.setPosition(boyfriend.x, boyfriend.y);
+	// freakachu.setPosition(dad.x, dad.y);
+	add(typhlosion);
 }
 
 function postUpdate() if (!forceCamPos) switch(strumLines.members[1].characters[0].animation.curAnim.name) {
@@ -85,6 +92,3 @@ function follow(offsets:Array<Float>) {
     camFollow.x += offsets[0];
     camFollow.y += offsets[1];
 }
-
-// function onPlayerHit(e)
-//     e.showRating = false;

@@ -1,5 +1,6 @@
 import funkin.options.type.Checkbox;
 import funkin.options.type.NumOption;
+import funkin.options.type.ArrayOption;
 import AomText;
 
 var optionsY:Array<Dynamic> = [];
@@ -53,7 +54,26 @@ function create() {
         var Settings:Dynamic = CoolUtil.parseJson(Paths.file('Mods/$pathJson.json')).settings;
 
         for (i => values in Settings) {
-            var setting:Dynamic = createOption(values.text, values.type, values.desc ?? '', values.id, values.value_modifier ?? null);
+            var setting:Dynamic = null;
+            var typeOption:String = values.type;
+
+            var text:String = values.text;
+            var desc:String = values.desc ?? '';
+            var id:String = values.id;
+
+            switch(typeOption.toLowerCase()) {
+                case 'checkbox': setting = new Checkbox(text, desc, id, null, FlxG.save.data);
+                case 'array':
+                    var optionsArray:Array<String> = values.options;
+                    var optionsDisplay:Array<String> = values.optionsDisplay;
+                    setting = new ArrayOption(text, desc, optionsArray, optionsDisplay, id, null, FlxG.save.data);
+                case 'number':
+                    var minVal:Float = values.value_modifier[0];
+                    var maxVal:Float = values.value_modifier[1];
+                    var stepVal:Float = values.value_modifier[2];
+
+                    setting = new NumOption(text, desc, minVal, maxVal, stepVal, id, null, FlxG.save.data);
+            }
             setting.x += 50;
             setting.y = 0 + 150 * i;
             setting.ID = i;
@@ -65,7 +85,7 @@ function create() {
     }
     catch(e:Dynamic) {
         var file:String = modName != 'RandomSongs' ? modName : songName;
-        trace('Failed to load settings file - [$file.json]');
+        trace('Failed to load settings "$file.json" - Error: ${e.toString()}');
         close();
         return;
     }
@@ -125,19 +145,3 @@ function scrolls(i:Int = 0, s:Bool = false) {
 
 function updateItemsPos(object:Dynamic, center:Float)
     object.y = CoolUtil.fpsLerp(object.y, center - (object.height * curOption) + 270, 0.25);
-
-function createOption(text:String, type:String, desc:String, id:Dynamic, ?values:Array<Dynamic>):Dynamic
-{
-    var Option:Dynamic = null;
-    switch(type.toLowerCase()) {
-        case 'checkbox': Option = new Checkbox(text, desc, id, null, FlxG.save.data);
-        case 'number':
-            var minVal:Float = values[0];
-            var maxVal:Float = values[1];
-            var stepVal:Float = values[2];
-
-            Option = new NumOption(text, desc, minVal, maxVal, stepVal, id, null, FlxG.save.data);
-    }
-
-    return Option;
-}
