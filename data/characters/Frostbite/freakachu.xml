@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="frostbite/Freakachu Pain Split" icon="Frostbite/freakachu" applyStageMatrix="true" scale="1.25" x="-150" y="330">
+	<anim name="idle" anim="Freakachu IDLE"/>
+	<anim name="pain" anim="Freakachu PAIN SPLIT" x="-5" y="24"/>
+</character>

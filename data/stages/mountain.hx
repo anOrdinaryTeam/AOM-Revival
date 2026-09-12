@@ -2,15 +2,18 @@ defaultCamZoom = 0.8;
 introLength = 0;
 
 public var fog:FlxSprite;
+public var fogIntro:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFFF0E9FB);
 public var camOther:FlxCamera = new FlxCamera();
 
-public var typhlosion:Character = new Character(0, 0, 'frostbite/typlosion');
-// public var freakachu:Character = new Character(0, 0, 'frostbite/freakachu');
+public var typhlosion:Character = new Character(0, 0, 'Frostbite/typlosion');
+public var freakachu:Character = new Character(0, 0, 'Frostbite/freakachu');
 
 public function FrostPath(str:String)
     return getModImage('Frostbite/$str');
 
 function create() {
+	precacheCharacter(0, 'Frostbite/red-dead');
+
     camMoveAmt = 10;
     camOther.bgColor = 0;
     FlxG.cameras.add(camOther, false);
@@ -47,11 +50,16 @@ function create() {
 
     fog = new FlxSprite().loadGraphic(FrostPath('fog'));	
 	fog.antialiasing = Options.antialiasing;
-	fog.scrollFactor.set(0.0, 0.0);
+	fog.scrollFactor.set();
     fog.camera = camOther;
 	fog.screenCenter();
 	fog.alpha = 0.25;
 	add(fog);
+
+	fogIntro.scrollFactor.set();
+	fogIntro.camera = camOther;
+	fogIntro.screenCenter();
+	// add(fogIntro);
 }
 
 function postCreate() {
@@ -63,6 +71,7 @@ function postCreate() {
         cpu.members[i].x = playerPos[i];
     }
 
+	camHUD.alpha = 0;
     healthBar.flipX = true;
     updateIconPositions = () -> {
         var iconOffset:Int = 26;
@@ -77,8 +86,11 @@ function postCreate() {
     }
 
 	typhlosion.setPosition(boyfriend.x, boyfriend.y);
-	// freakachu.setPosition(dad.x, dad.y);
 	add(typhlosion);
+
+	freakachu.setPosition(dad.x, dad.y);
+	freakachu.alpha = 0.001;
+	add(freakachu);
 }
 
 function postUpdate() if (!forceCamPos) switch(strumLines.members[1].characters[0].animation.curAnim.name) {
@@ -92,3 +104,6 @@ function follow(offsets:Array<Float>) {
     camFollow.x += offsets[0];
     camFollow.y += offsets[1];
 }
+
+function onPlayerHit(e)
+	e.healthGain = 0.04;

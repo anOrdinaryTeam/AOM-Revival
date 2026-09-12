@@ -5,8 +5,11 @@ var bar:FlxBar;
 var typhState:FunkinSprite;
 var theromometer:FunkinSprite;
 
-var coldness:Float = 0.0;
 public var coldnessRate:Float = 0.0;
+public var coldnessZoom:Bool = true;
+
+var goldCamPos:FlxPoint;
+var coldness:Float = 0.0;
 var coldnessMult:Float = 1;
 var coldnessDisplay:Float = 0.0;
 var typhlosionUses:Int = 10;
@@ -15,6 +18,7 @@ function postCreate() {
     bar = new FlxBar(1161 + 36 - 1134, 172 + 60, FlxBarFillDirection.BOTTOM_TO_TOP, 16, 325, null, null, 0, 1);
 	bar.createFilledBar(0xFF133551, 0xFFAAD6FF);
 	bar.camera = camHUD;
+    bar.unbounded = true;
 	add(bar);
 
     typhState = new FunkinSprite(1164 - 1134, 550, FrostPath('UI/TyphlosionVit'));
@@ -41,6 +45,8 @@ function postCreate() {
         case 'fucked': 8;
         case 'hell': 6;
     }
+
+    goldCamPos = FlxPoint.get(playerCam.x, playerCam.y);
 }
 
 function update(dt:Float) {
@@ -67,6 +73,20 @@ function update(dt:Float) {
 
     if (typhlosionUses >= 1 && FlxG.keys.justPressed.SPACE)
         warm();
+}
+
+var multX:Int = 200;
+var multY:Int = 100;
+
+// bullshit i know
+function postUpdate() if (coldnessZoom) {
+    defaultCamZoom = 0.8 + (coldnessDisplay * 0.15);
+
+    playerCam.x = goldCamPos.x - (coldnessDisplay * multX);
+    playerCam.y = goldCamPos.y + (coldnessDisplay * multY);
+
+    opponentCam.x = goldCamPos.x - (coldnessDisplay * multX);
+    opponentCam.y = goldCamPos.y + (coldnessDisplay * multY);
 }
 
 function beatHit() if (coldness < 1.0)

@@ -83,7 +83,7 @@ class SnowFlake extends FunkinSprite
         this.restartSnow();
     }
 
-    public function restartSnow():Void
+    function restartSnow():Void
     {
         var randomScale:Float = FlxG.random.float(scales.min, scales.max);
         var randomStart:Float = FlxG.random.float(xOffset.end, xOffset.start);
