@@ -78,7 +78,7 @@ function create() {
 var MODCHART:Bool = true;
 
 function postCreate() {
-    importScript('songs/Silly Billy/healthbar');
+    importScript('songs/$currentMod/Silly Billy/healthbar');
     
     if (MODCHART) {
         var modManager:Manager = new Manager();
