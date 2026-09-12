@@ -59,7 +59,7 @@ function create() {
 	fogIntro.scrollFactor.set();
 	fogIntro.camera = camOther;
 	fogIntro.screenCenter();
-	// add(fogIntro);
+	add(fogIntro);
 }
 
 function postCreate() {
