@@ -1,4 +1,5 @@
 var SnowShader:FunkinShader;
+var snowAmountShader = {amount: 0};
 var SnowLayer:FlxTypedGroup<FunkinSprite> = new FlxTypedGroup();
 public var SnowMethod:Int = getSaveData('Frostbite_SnowHQ') ? 1 : 0; // 0 = Low | 1 = High
 
@@ -18,7 +19,12 @@ function update(dt:Float) {
     if (SnowMethod == 1 && SnowShader != null) {
         var time:Float = Conductor.songPosition / (Conductor.stepCrochet * 8);
         SnowShader.time = time;
+        SnowShader.amount = Std.int(snowAmountShader.amount);
     }
+    else if (SnowMethod == 0 && SnowLayer != null) SnowLayer.forEachAlive(snow -> {
+        var time:Float = Conductor.songPosition / (Conductor.stepCrochet * 8);
+        snow.time = time;
+    });
 }
 
 public function addSnowAmount(amount:Int, timestep:Float) {
@@ -34,7 +40,7 @@ public function addSnowAmount(amount:Int, timestep:Float) {
     }
     else if (SnowMethod == 1 && SnowShader != null) {
         // High
-        FlxTween.tween(SnowShader, {amount: amount}, realTime);
+        FlxTween.tween(snowAmountShader, {amount: amount}, realTime);
     }
 }
 
@@ -67,7 +73,7 @@ class SnowFlake extends FunkinSprite
     var yOffset = {start: -200, end: 900};
 
     public var intensity:Float = 1.0;
-    var time:Float = 0;
+    public var time:Float = 0;
 
     var currentSpeedX:Float = 0;
     var currentSpeedY:Float = 0;
@@ -108,12 +114,10 @@ class SnowFlake extends FunkinSprite
     {
         super.update(elapsed);
 
-        this.time += elapsed;
         this.y += currentSpeedY * (1.5 + intensity);
         this.x += (-currentSpeedX * (0.5 + intensity)) + FlxMath.fastSin(time / currentFrequency) * (currentAmplitude * intensity) * elapsed;
 
         if (this.y >= yOffset.end)
             this.restartSnow();
-
     }
 }

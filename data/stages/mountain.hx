@@ -107,3 +107,5 @@ function follow(offsets:Array<Float>) {
 
 function onPlayerHit(e)
 	e.healthGain = 0.04;
+function onDadHit(e) if (e.character.curCharacter == boyfriend.curCharacter && player.cpu)
+	e.healthGain = 0.04;
