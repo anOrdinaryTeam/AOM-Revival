@@ -1,12 +1,7 @@
 {
-	"opponentModeAllowed": false,
 	"icon": "frostbite/red",
-	"difficulties": [
-		"hard",
-		"test"
-	],
+	"difficulties": ["hard"],
 	"color": "#9271FD",
-	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "Frostbite",
 	"beatsPerMeasure": 4,
