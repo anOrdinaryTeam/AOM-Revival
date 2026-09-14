@@ -25,6 +25,7 @@ function stepHit(e) switch(e) {
             defaultCamZoom = 0.8;
             forceCamPos = false;
             coldnessZoom = true;
+            disableMechs = false;
 
             changeCharacter(0, 'Frostbite/red-dead');
             freakachu?.alpha = 1;
@@ -32,6 +33,7 @@ function stepHit(e) switch(e) {
 
         coldnessZoom = false;
         forceCamPos = true;
+        disableMechs = true;
         TweenZoom(1.15, 0.6);
         camFollow.setPosition(650, 570);
 
