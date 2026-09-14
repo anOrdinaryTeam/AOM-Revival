@@ -12,7 +12,7 @@ var curChance:Float = defPainSplitChance;
 var curCooldown:Float = defPainSplitCooldown;
 var biteAmt:Float = getSaveData('Frostbite_MechsDiff') == 'fucked' ? 0.75 : 0.5;
 
-function beatHit() if (freakachu != null && freakachu.alpha == 1) {
+function beatHit() if (!disableMechs && (freakachu != null && freakachu.alpha == 1)) {
     curChance += 0.1;
 	curCooldown -= 1;
 

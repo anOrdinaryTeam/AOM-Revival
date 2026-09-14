@@ -7,6 +7,7 @@ public var camOther:FlxCamera = new FlxCamera();
 
 public var typhlosion:Character = new Character(0, 0, 'Frostbite/typlosion');
 public var freakachu:Character = new Character(0, 0, 'Frostbite/freakachu');
+public var disableMechs:Bool = false;
 
 public function FrostPath(str:String)
     return getModImage('Frostbite/$str');

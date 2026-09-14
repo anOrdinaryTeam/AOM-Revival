@@ -44,11 +44,15 @@ function stepHit(e) switch(e) {
     case 697: setIntensity(SnowMethod == 0 ? 4.5 : 0.45, 1);
     case 704: FlxTween.tween(camHUD, {alpha: 1}, 1 * (Conductor.stepCrochet / 1000));
     case 1374: setIntensity(0, 1);
+    case 1375:
+        disableMechs = true;
+        FlxTween.tween(fogIntro, {alpha: 1}, 5, {ease: FlxEase.quadIn});
+        FlxTween.tween(camHUD, {alpha: 0}, 3 * (Conductor.stepCrochet / 1000));
 }
 
 function create() {
-    // translateStep(91826.0869565218);
-    translateStepList([6260.86956521739, 8347.82608695652, 57260.8695652174, 58434.7826086956, 64695.652173913, 66782.6086956521, 73956.5217391304, 75130.4347826087, 107347.826086957, 108521.739130435, 140739.130434783, 141913.043478261]);
+    translateStep(179478.260869565);
+    // translateStepList([6260.86956521739, 8347.82608695652, 57260.8695652174, 58434.7826086956, 64695.652173913, 66782.6086956521, 73956.5217391304, 75130.4347826087, 107347.826086957, 108521.739130435, 140739.130434783, 141913.043478261]);
 }
 
 function TweenZoom(amt:Float, time:Float) {
@@ -61,11 +65,11 @@ function translateStep(time:Float) {
     trace(step);
 }
 
-function translateStepList(list:Array<Int>) {
-    var fullList:Array<Int> = [];
-    for (time in list) {
-        var step:Int = Std.int(Conductor.getTimeInSteps(time));
-        fullList.push(step);
-    }
-    trace(fullList);
-}
+// function translateStepList(list:Array<Int>) {
+//     var fullList:Array<Int> = [];
+//     for (time in list) {
+//         var step:Int = Std.int(Conductor.getTimeInSteps(time));
+//         fullList.push(step);
+//     }
+//     trace(fullList);
+// }

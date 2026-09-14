@@ -49,7 +49,7 @@ function postCreate() {
     goldCamPos = FlxPoint.get(playerCam.x, playerCam.y);
 }
 
-function update(dt:Float) {
+function update(dt:Float) if (!disableMechs) {
     if (coldness < 0.0)
         coldness = 0.0;
 
@@ -79,7 +79,7 @@ var multX:Int = 200;
 var multY:Int = 100;
 
 // bullshit i know
-function postUpdate() if (coldnessZoom) {
+function postUpdate() if (!disableMechs && coldnessZoom) {
     defaultCamZoom = 0.8 + (coldnessDisplay * 0.15);
 
     playerCam.x = goldCamPos.x - (coldnessDisplay * multX);
@@ -89,7 +89,7 @@ function postUpdate() if (coldnessZoom) {
     opponentCam.y = goldCamPos.y + (coldnessDisplay * multY);
 }
 
-function beatHit() if (coldness < 1.0)
+function beatHit() if (!disableMechs && coldness < 1.0)
     coldness += coldnessRate * coldnessMult;
 
 function warm() {
