@@ -21,14 +21,14 @@ function postCreate() {
     bar.unbounded = true;
 	add(bar);
 
-    typhState = new FunkinSprite(1164 - 1134, 550, FrostPath('UI/TyphlosionVit'));
+    typhState = new FunkinSprite(1164 - 1134, downscroll ? 550 : 162, FrostPath('UI/TyphlosionVit'));
     for (i in 1...6) typhState.addAnim('stage$i', 'Typh$i', 24, true);
     typhState.playAnim('stage1');
 	typhState.antialiasing = Options.antialiasing;
 	typhState.camera = camHUD;
 	add(typhState);
 
-	theromometer = new FunkinSprite(1161 - 1134, 172, FrostPath('UI/Thermometer'));
+	theromometer = new FunkinSprite(1161 - 1134, downscroll ? 172 : 220, FrostPath('UI/Thermometer'));
     for (i in 1...4) theromometer.addAnim('stage$i', 'Therm$i', 24, true);
     theromometer.playAnim('stage1');
 	theromometer.antialiasing = Options.antialiasing;
