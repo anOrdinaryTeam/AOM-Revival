@@ -47,7 +47,6 @@ public function addSnowAmount(amount:Int, timestep:Float) {
 
 public function setIntensity(_intensity:Float, time:Float) {
     var realTime:Float = (time * Conductor.stepCrochet) / 1000;
-    trace('Changing Intensity to: $_intensity in time: $realTime');
 
     if (SnowMethod == 0 && SnowLayer != null) for (snow in SnowLayer) {
         FlxTween.cancelTweensOf(snow);
