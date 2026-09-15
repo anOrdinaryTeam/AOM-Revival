@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="zombie_alfrente.png">
+<SubTexture name="zombie0000" x="0" y="0" width="2438" height="1035" frameX="0" frameY="-1" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0001" x="2438" y="0" width="2438" height="1020" frameX="0" frameY="-15" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0002" x="2438" y="2065" width="2438" height="993" frameX="0" frameY="-39" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0003" x="0" y="3064" width="2438" height="986" frameX="0" frameY="-46" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0004" x="0" y="3064" width="2438" height="986" frameX="0" frameY="-46" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0005" x="0" y="2065" width="2438" height="999" frameX="0" frameY="-34" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0006" x="2438" y="1020" width="2438" height="1011" frameX="0" frameY="-23" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0007" x="2438" y="0" width="2438" height="1020" frameX="0" frameY="-23" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0008" x="0" y="1035" width="2438" height="1030" frameX="0" frameY="-6" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0009" x="0" y="0" width="2438" height="1035" frameX="0" frameY="0" frameWidth="2442" frameHeight="1041" />
+<SubTexture name="zombie0010" x="0" y="0" width="2438" height="1035" frameX="0" frameY="0" frameWidth="2442" frameHeight="1041" />
+</TextureAtlas>

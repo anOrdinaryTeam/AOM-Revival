@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="190" y="-50" sprite="FNM/Jebus/angry" scale="0.95" icon="FNM/jebus" color="#981010" camx="-50" camy="170">
+	<anim name="idle" anim="idle  angry"/>
+	<anim name="singDOWN" anim="down angry" x="92" y="-185"/>
+	<anim name="singRIGHT" anim="right angry" x="269" y="155"/>
+	<anim name="singLEFT" anim="left angry" x="-14" y="-117"/>
+	<anim name="singUP" anim="up angry" x="309" y="290"/>
+	<anim name="singUP-shoot" anim="up pistola" x="283" y="196"/>
+	<anim name="singDOWN-shoot" anim="down pistola" x="96" y="-226"/>
+	<anim name="singLEFT-shoot" anim="left pistola" x="-10" y="-147"/>
+	<anim name="singRIGHT-shoot" anim="right pistola" x="285" y="138"/>
+</character>

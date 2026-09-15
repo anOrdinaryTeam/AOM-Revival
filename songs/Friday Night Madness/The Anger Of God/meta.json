@@ -1,0 +1,16 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "FNM/jebus",
+	"difficulties": [
+		"hank",
+		"hard",
+		"pico"
+	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "The Anger Of God",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 180
+}

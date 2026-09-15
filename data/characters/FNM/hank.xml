@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="FNM/hank" y="160" scale="1.1" flipX="true" camx="-170" camy="70" isPlayer="true" icon="FNM/hank" color="#201E2F" holdTime="6.1">
+	<anim name="idle" anim="New_Hank_idle instance" loop="true"/>
+	<anim name="singLEFT" anim="New_Hank_left instance" x="143.64" y="2.73" indices="0..8"/>
+	<anim name="singLEFTmiss" anim="New_Hank_lefterror instance" x="143" y="2"/>
+	<anim name="singDOWN" anim="New_Hank_Down instance" x="192.73" y="-109.09" indices="0..8"/>
+	<anim name="singDOWNmiss" anim="New_Hank_Downerror instance" x="193" y="-110"/>
+	<anim name="singUP" anim="New_Hank_Up instance" x="-53.64" y="59.09" indices="0..8"/>
+	<anim name="singUPmiss" anim="New_Hank_Uperror instance" x="-55" y="59"/>
+	<anim name="singRIGHT" anim="New_Hank_right instance" x="-94.55" y="27.27" indices="0..8"/>
+	<anim name="singRIGHTmiss" anim="New_Hank_righterror instance" x="-95" y="26"/>
+</character>

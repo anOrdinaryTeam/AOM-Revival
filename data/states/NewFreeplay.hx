@@ -1,9 +1,10 @@
 import ModPage;
 import funkin.backend.chart.Chart;
 import funkin.savedata.FunkinSave;
-importScript('data/scripts/PreSongLoader');
+importScript('data/scripts/onSongLoader');
 
 public var LOAD_SONG:Bool = true;
+public var SONG_VARIANT:String = '';
 
 var songsList:Array<SongData> = [];
 var grpSongs:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
@@ -22,7 +23,8 @@ function create() {
     CoolUtil.playMenuSong();
     changeToDefaultRPC('In The Freeplay - [$currentMod]');
 
-    var bg:FlxSprite = new FlxSprite().loadGraphic(getModPath('menuBG'));
+    var bgAsset:String = !Assets.exists(getModPath('menuBG')) ? Paths.image('menus/menuBG') : getModPath('menuDesat');
+    var bg:FlxSprite = new FlxSprite().loadGraphic(bgAsset);
     bg.setGraphicSize(FlxG.width, FlxG.height);
     bg.updateHitbox();
     bg.screenCenter();
@@ -186,7 +188,10 @@ public function enterSong() {
 
     if (LOAD_SONG) {
         trace('Selected Song: $songName - ${diff.toUpperCase()}');
-        PlayState.loadSong('$currentMod/$songName', diff);
+
+        PlayState.loadSong('$currentMod/$songName', diff, SONG_VARIANT);
+        stateScripts.call('postEnterSong', [songName]);
+
         FlxG.switchState(new PlayState());
     }
 }

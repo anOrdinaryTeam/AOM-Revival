@@ -5,7 +5,7 @@ var preloaded:Bool = false;
 var bgLoading:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, FlxColor.BLACK);
 var loadingText:FlxText = new FlxText(0, 0, 0, 'Loading Videos..', 50);
 
-function preEnterSong(song) switch(song) {
+function preEnterSong(song:String) switch(song) {
     case 'Fatality':
     	#if !ARKOSE_PORT
         var determineScale:Float = switch(Capabilities.screenResolutionY) {
@@ -51,6 +51,11 @@ function preEnterSong(song) switch(song) {
             video.bitmap.onPlaying.add(allowSongLoading);
         }
 }
+
+// function postEnterSong(song:String) switch(song) {
+//     case '1Corekiller' | 'The Anger Of God':
+
+// }
 
 function allowSongLoading() {
     trace('Preloaded. Moving to Song');

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="FNM/Jebus/normal" scale="0.71" color="#981010">
+	<anim name="idle" anim="idle"/>
+	<anim name="singDOWN" anim="down" x="-29" y="-25"/>
+	<anim name="singRIGHT" anim="right" x="-55" y="83"/>
+	<anim name="singLEFT" anim="left" x="92" y="60"/>
+	<anim name="singUP" anim="up" x="-70" y="134"/>
+</character>
