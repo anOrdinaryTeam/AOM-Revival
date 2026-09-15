@@ -40,21 +40,22 @@ public function addSnowAmount(amount:Int, timestep:Float) {
     }
     else if (SnowMethod == 1 && SnowShader != null) {
         // High
+        FlxTween.cancelTweensOf(snowAmountShader);
         FlxTween.tween(snowAmountShader, {amount: amount}, realTime);
     }
 }
 
-public function setIntensity(intensity:Float, time:Float) {
+public function setIntensity(_intensity:Float, time:Float) {
     var realTime:Float = (time * Conductor.stepCrochet) / 1000;
-    trace('Changing Intensity to: $intensity in time: $realTime');
+    trace('Changing Intensity to: $_intensity in time: $realTime');
 
     if (SnowMethod == 0 && SnowLayer != null) for (snow in SnowLayer) {
         FlxTween.cancelTweensOf(snow);
-        FlxTween.tween(snow, {intensity: intensity}, realTime);
-    }
+        FlxTween.tween(snow, {intensity: _intensity}, realTime);
+    };
     else if (SnowMethod == 1 && SnowShader != null) {
         FlxTween.cancelTweensOf(SnowShader);
-        FlxTween.tween(SnowShader, {intensity: intensity}, realTime);
+        FlxTween.tween(SnowShader, {intensity: _intensity}, realTime);
     }
 }
 
@@ -66,8 +67,8 @@ class SnowFlake extends FunkinSprite
     var amplitude = {min: 1, max: 15};
     var frequency = {min: 0.01, max: 0.05};
 
-    var alphas = {min: 0.8, max: 1};
-    var scales = {min: 0.6, max: 2.5};
+    var alphas = {min: 0.75, max: 1};
+    var scales = {min: 0.65, max: 2.45};
 
     var xOffset = {start: 1600, end: -200};
     var yOffset = {start: -200, end: 900};
@@ -86,10 +87,10 @@ class SnowFlake extends FunkinSprite
         this.playAnim('snow', true);
         this.antialiasing = Options.antialiasing;
         this.color = 0xDBE2FA;
-        this.restartSnow();
+        this.setupSnow();
     }
 
-    function restartSnow():Void
+    function setupSnow():Void
     {
         var randomScale:Float = FlxG.random.float(scales.min, scales.max);
         var randomStart:Float = FlxG.random.float(xOffset.end, xOffset.start);
@@ -118,6 +119,6 @@ class SnowFlake extends FunkinSprite
         this.x += (-currentSpeedX * (0.5 + intensity)) + FlxMath.fastSin(time / currentFrequency) * (currentAmplitude * intensity) * elapsed;
 
         if (this.y >= yOffset.end)
-            this.restartSnow();
+            this.setupSnow();
     }
 }

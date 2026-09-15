@@ -8,7 +8,7 @@ function stepHit(e) switch(e) {
 
     case 1:
         addSnowAmount(SnowMethod == 0 ? 100 : 75, 0.125);
-        setIntensity(SnowMethod == 0 ? 1 : 0.25, 0.125);
+        setIntensity(SnowMethod == 0 ? 0.6 : 0.25, 0.125);
     case 8: FlxTween.tween(fogIntro, {alpha: 0}, 5, {ease: FlxEase.quadIn});
     case 35: typhlosion?.playAnim('fire', true);
     case 61: coldnessRate = 0.01;
