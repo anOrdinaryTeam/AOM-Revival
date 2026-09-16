@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<character x="100" y="300" sprite="pico" flipX="true" camy="200" icon="pico" color="#B7D855" applyStageMatrix="true">
+	<spritesheet>characters/FNM/PicoDodgingNew</spritesheet>
+
+	<anim name="idle" anim="Pico Idle Dance" isAnimate="false"/>
+	<anim name="singLEFT" anim="Pico Note Right0" x="56" y="1" isAnimate="false"/>
+	<anim name="singDOWN" anim="Pico Down Note0" x="193" y="-82" isAnimate="false"/>
+	<anim name="singUP" anim="pico Up note0" x="-31" y="30" isAnimate="false"/>
+	<anim name="singRIGHT" anim="Pico NOTE LEFT0" x="-83" y="-11" isAnimate="false"/>
+	<anim name="singLEFTmiss" anim="Pico Note Right Miss" x="57" y="47" isAnimate="false"/>
+	<anim name="singDOWNmiss" anim="Pico Down Note MISS" x="193" y="-40" isAnimate="false"/>
+	<anim name="singUPmiss" anim="pico Up note miss" x="-19" y="67" isAnimate="false"/>
+	<anim name="singRIGHTmiss" anim="Pico NOTE LEFT miss" x="-77" y="25" isAnimate="false"/>
+	<anim name="dodge" anim="PicoDodging" x="-200" y="0" indices="0..2,0..2"/>
+</character>

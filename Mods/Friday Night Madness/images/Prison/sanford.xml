@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sanford.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sanford0000" x="0" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0001" x="0" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0002" x="121" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0003" x="121" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0004" x="242" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0005" x="242" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0006" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0007" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0008" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0009" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0010" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0011" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0012" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0013" x="363" y="0" width="121" height="207"/>
+	<SubTexture name="sanford0014" x="363" y="0" width="121" height="207"/>
+</TextureAtlas>

@@ -108,7 +108,6 @@ function create() {
     stageParts.push(floor);
 
     zombieBack = new FunkinSprite(530, 340, getModImage('Nevada/zombiedance'));
-    zombieBack.antialiasing = Options.antialiasing;
     zombieBack.scale.set(1.5, 1.5);
     zombieBack.updateHitbox();
     zombieBack.addAnim('idle', 'dance instance', 24, true);
@@ -116,6 +115,15 @@ function create() {
     zombieBack.alpha = songName == '1Corekiller' ? 1 : 0.001;
     if (songName == '1Corekiller') zombieBack.playAnim('idle');
     addBg(zombieBack);
+
+    var frontZoms:FunkinSprite = new FunkinSprite(450, 1080, getModImage('Nevada/zombie_alfrente'));
+    frontZoms.antialiasing = Options.antialiasing;
+    frontZoms.addAnim('idle', 'zombie', 24, true);
+    frontZoms.scrollFactor.set(1.2, 1.2);
+    frontZoms.scale.set(0.8, 0.8);
+    frontZoms.updateHitbox();
+    frontZoms.playAnim('idle');
+    add(frontZoms);
 }
 
 function postCreate() {

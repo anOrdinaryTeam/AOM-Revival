@@ -23,7 +23,7 @@ function create() {
     CoolUtil.playMenuSong();
     changeToDefaultRPC('In The Freeplay - [$currentMod]');
 
-    var bgAsset:String = !Assets.exists(getModPath('menuBG')) ? Paths.image('menus/menuBG') : getModPath('menuDesat');
+    var bgAsset:String = !Assets.exists(getModPath('menuBG')) ? Paths.image('menus/menuDesat') : getModPath('menuBG');
     var bg:FlxSprite = new FlxSprite().loadGraphic(bgAsset);
     bg.setGraphicSize(FlxG.width, FlxG.height);
     bg.updateHitbox();

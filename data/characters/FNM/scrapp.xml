@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="FNM/Scarface" icon="FNM/scrap" color="#927fbe" camy="200" holdTime="6.1">
+	<anim name="idle" anim="Scarface_idle" loop="true"/>
+	<anim name="singLEFT" anim="Scarface_Left" x="280" y="-180" loop="true"/>
+	<anim name="singLEFT-alt" anim="Scarface_Left" x="280" y="-180" loop="true"/>
+	<anim name="singDOWN" anim="Scarface_Down" x="190" y="-520" loop="true"/>
+	<anim name="singDOWN-alt" anim="Scarface_Down" x="190" y="-520" loop="true"/>
+	<anim name="singUP" anim="Scarface_Up" x="-145" y="-15" loop="true"/>
+	<anim name="singUP-alt" anim="Scarface_Up" x="-145" y="-15" loop="true"/>
+	<anim name="singRIGHT" anim="Scarface_Right" loop="true"/>
+	<anim name="singRIGHT-alt" anim="Scarface_Right" loop="true"/>
+</character>
