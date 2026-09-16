@@ -33,6 +33,9 @@ var chromatic:String = "
 
 // Only for be usable in The Anger Of God
 public var stageParts:Array<FlxSprite> = [];
+public var punchZom:FunkinSprite;
+public var zombieBack:FunkinSprite;
+
 defaultCamZoom = 0.8;
 
 // Obj's
@@ -103,11 +106,36 @@ function create() {
     floor.updateHitbox();
     addBg(floor);
     stageParts.push(floor);
+
+    zombieBack = new FunkinSprite(530, 340, getModImage('Nevada/zombiedance'));
+    zombieBack.antialiasing = Options.antialiasing;
+    zombieBack.scale.set(1.5, 1.5);
+    zombieBack.updateHitbox();
+    zombieBack.addAnim('idle', 'dance instance', 24, true);
+    zombieBack.addAnim('show', 'hizombie instance', 24, true);
+    zombieBack.alpha = songName == '1Corekiller' ? 1 : 0.001;
+    if (songName == '1Corekiller') zombieBack.playAnim('idle');
+    addBg(zombieBack);
 }
 
 function postCreate() {
     if (boyfriend.curCharacter == 'bf' || boyfriend.curCharacter == 'pico')
-        boyfriend.cameraOffset.x -= 200;
+        boyfriend.cameraOffset.x -= 100;
+    if (boyfriend.curCharacter == 'bf')
+        boyfriend.cameraOffset.y -= 40;
+
+    if (songName == 'The Anger Of God') {
+        var punchCam:FlxCamera = new FlxCamera();
+        punchCam.bgColor = 0;
+        FlxG.cameras.add(punchCam, false);
+
+        punchZom = new FunkinSprite(250, 0, getModImage('punch'));
+        punchZom.antialiasing = Options.antialiasing;
+        punchZom.addAnim('idle', 'zombie', 60, false);
+        punchZom.alpha = 0.0001;
+        punchZom.camera = punchCam;
+        add(punchZom);
+    }
 
     if (songName != '1Corekiller') return;
 
@@ -127,7 +155,7 @@ function postCreate() {
 }
 
 function onDadHit(e) {
-    if (e.character.curCharacter == 'FNM/jebus') return;
+    if (e.character.curCharacter == 'FNM/jebus' || e.character.curCharacter == boyfriend.curCharacter) return;
     camGame.shake(0.01, 0.15);
     doTrailTween(jebusTrail, jebusTweenTrail, jebusTimerTrail);
 }

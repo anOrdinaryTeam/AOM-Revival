@@ -6,10 +6,17 @@ function create() {
     add(redSplash);
 }
 
-function DontRepeatCode(dir:Int) {
+function DontRepeatCode(dir:Int, isMiss:Bool) {
     var jebusTrail:Character = strumLines.members[0].characters[1];
     jebusTrail.playSingAnim(dir, '-shoot');
     dad.playSingAnim(dir, '-shoot');
+
+    if (!isMiss) {
+        var playerTrail:Character = strumLines.members[1].characters[1];
+        playerTrail.playAnim('dodge', true);
+        boyfriend.playAnim('dodge', true);
+    }
+
     camGame.shake(0.01, 0.2);
 }
 
@@ -20,16 +27,15 @@ function onNoteCreation(e) {
 
 function onPlayerHit(e) {
     if (e.noteType != 'FNM/Bullet Note') return;
-    DontRepeatCode();
     e.animCancelled = true;
-    boyfriend.playAnim('dodge', true);
+    DontRepeatCode(e.direction, false);
 }
 
 function onPlayerMiss(e) {
     if (e.noteType != 'FNM/Bullet Note') return;
-    DontRepeatCode();
-    e.animCancelled = true;
+    DontRepeatCode(e.direction, true);
     e.healthGain -= 0.2;
+    e.animCancelled = true;
     boyfriend.playAnim('hit', true);
 
     redSplash.alpha = 0.2;

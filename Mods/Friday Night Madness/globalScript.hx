@@ -1,5 +1,5 @@
 function postCreate() {
-    loadHud("KadeEngine", 'nose');
+    loadHud("KadeEngine", '1.3');
     doIconBop = false;
 
     var newBar:FlxSprite = new FlxSprite(healthBarBG.x, healthBarBG.y, getModImage('newBarBGw'));

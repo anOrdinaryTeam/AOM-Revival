@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="FNM/gf-fall" icon="gf" color="#a5004d" x="-405" y="-3575" holdTime="6.1" scale="0.97">
+	<anim name="fall" anim="Culo simulator"/>
+</character>
