@@ -1,6 +1,3 @@
-var Distort:FunkinShader;
-var distortIntensity:Float;
-
 defaultCamZoom = 0.78;
 
 function preStageLoad()
@@ -20,22 +17,6 @@ function create() {
     bg.scale.set(1.2, 1.5);
     bg.updateHitbox();
     addBg(bg);
-}
-
-function postCreate() {
-    if (Options.gameplayShaders) {
-        Distort = FunkinShader.fromFile(Paths.fragShader('Distort'));
-        Distort.negativity = 0.0;
-        boyfriend.shader = Distort;
-    }
-}
-
-function stepHit() {
-    distortIntensity = FlxG.random.float(5, 6);
-}
-
-function update() {
-    Distort.binaryIntensity = distortIntensity;
 }
 
 function onDadHit(e) {

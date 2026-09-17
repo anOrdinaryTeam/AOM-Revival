@@ -3,6 +3,7 @@
 
 uniform float binaryIntensity = 1000.0;
 uniform float negativity;
+uniform bool active = false;
 
 void main(){
     vec2 uv = openfl_TextureCoordv.xy;
@@ -28,6 +29,7 @@ void main(){
     float ry = (py - qy) * lum + uv.y;
 
     vec4 color = flixel_texture2D(bitmap, vec2(rx, ry));
+    vec4 normal = flixel_texture2D(bitmap, openfl_TextureCoordv);
 
-    gl_FragColor = mix(color, vec4(1.0 - color.r, 1.0 - color.g, 1.0 - color.b, color.a) * color.a, negativity);
+    gl_FragColor = active ? mix(color, vec4(1.0 - color.r, 1.0 - color.g, 1.0 - color.b, color.a) * color.a, negativity) : normal;
 }
