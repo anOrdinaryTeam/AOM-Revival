@@ -9,3 +9,5 @@ function postCreate() {
     insert(members.indexOf(healthBar) + 1, newBar);
     healthBarBG.visible = false;
 }
+
+public function shakeSprite() {}
