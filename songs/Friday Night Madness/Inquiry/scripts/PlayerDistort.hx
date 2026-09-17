@@ -4,13 +4,13 @@ var distortIntensity:Float;
 function postCreate() if (Options.gameplayShaders) {
     Distort = FunkinShader.fromFile(Paths.fragShader('Distort'));
     Distort.negativity = 0.0;
-    Distort.active = false;
+    Distort._active = false;
     boyfriend.shader = Distort;
 }
 
 function beatHit() if (Distort != null && curBeat % 4 == 0) {
-    Distort.active = FlxG.random.bool(20);
-    trace(Distort.active);
+    Distort._active = FlxG.random.bool(20);
+    trace(Distort._active);
 }
 
 function stepHit() if (Distort != null)
