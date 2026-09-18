@@ -1,7 +1,7 @@
 {
 	"song": {
-		"player1": "hank",
-		"player2": "scrapp",
+		"player1": "FNM/hank",
+		"player2": "FNM/scrapp",
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -5893,13 +5893,13 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf-glitched",
+		"gfVersion": "empty",
 		"events": [],
 		"player3": null,
-		"song": "Inquiry Hank",
+		"song": "Inquiry",
 		"validScore": true,
 		"needsVoices": true,
-		"stage": "prison",
+		"stage": "FNM/prison",
 		"speed": 3.2,
 		"bpm": 160,
 		"gameOverSound": "dedexplosion",

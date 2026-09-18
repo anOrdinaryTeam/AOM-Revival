@@ -58,6 +58,9 @@ function create() {
 }
 
 function postCreate() {
+    if (boyfriend.curCharacter == 'pico')
+        boyfriend.cameraOffset.x -= 155;
+
     blackGame = new FlxSprite(bg.x, bg.y).makeSolid(bg.width, bg.height, FlxColor.BLACK);
     blackGame.scrollFactor.set();
     blackGame.alpha = 0.001;

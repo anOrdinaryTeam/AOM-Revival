@@ -127,7 +127,7 @@ function create() {
 }
 
 function postCreate() {
-    if (boyfriend.curCharacter == 'bf' || boyfriend.curCharacter == 'pico')
+    if (boyfriend.curCharacter == 'bf' || boyfriend.curCharacter.contains('pico'))
         boyfriend.cameraOffset.x -= 100;
     if (boyfriend.curCharacter == 'bf')
         boyfriend.cameraOffset.y -= 40;
