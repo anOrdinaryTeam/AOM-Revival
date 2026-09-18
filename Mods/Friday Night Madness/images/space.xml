@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="space.png">
+<SubTexture name="space0000" x="0" y="0" width="817" height="435" frameX="0" frameY="0" frameWidth="817" frameHeight="436" />
+<SubTexture name="space0001" x="817" y="0" width="817" height="390" frameX="0" frameY="-46" frameWidth="817" frameHeight="436" />
+<SubTexture name="space0002" x="770" y="435" width="769" height="277" frameX="-33" frameY="-148" frameWidth="817" frameHeight="436" />
+<SubTexture name="space0003" x="0" y="435" width="770" height="278" frameX="-31" frameY="-158" frameWidth="817" frameHeight="436" />
+</TextureAtlas>
