@@ -1,3 +1,5 @@
+using StringTools;
+
 var shader:FunkinShader;
 var iTime:Float = 0;
 var chromatic:String = "
