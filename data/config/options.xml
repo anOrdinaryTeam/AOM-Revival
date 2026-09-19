@@ -3,8 +3,9 @@
 	<checkbox id="AOM_flashingLights" name="Flashing Lights" desc="self explanatory"/>
 	<checkbox id="AOM_disableSplashs" name="Disable Note Splash" desc="self explanatory"/>
 	<checkbox id="AOM_cpuStrumsGlow" name="Disable CPU Strum Glow" desc="just like old times"/>
+	<checkbox id="AOM_skipWarning" name="Disable Warning Screen" desc="xd"/>
 
-	<menu name="Mods/Songs Config">
+	<!-- <menu name="Mods/Songs Config">
 		<menu name="Bob">
 			<checkbox id="AOM_happyBob" name="Happy Bob" desc="funny check (for Hell song)" />
 		</menu>
@@ -24,7 +25,7 @@
 			<number id="AOM_Corruptro_levelBG" name="BG Level" min="0" max="2" change="1"/>
 			<checkbox id="AOM_Corruptro_poisonShader" name="Poison Notes Shader"/>
 		</menu>
-	</menu>
+	</menu> -->
 
 	<menu name="HUD Configuration" desc="duh">
 		<checkbox id="AOM_engineHUD" name="Use Huds from Mods" desc="This allows you to use the Huds from the respective Engine of the Mod"/>

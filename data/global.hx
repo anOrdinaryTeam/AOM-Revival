@@ -197,6 +197,8 @@ static function LoadSaveData() {
 
     // FlxG.save.data.AOM_customHUD ??= 'none';
     // saveMap.set('customHud', FlxG.save.data.AOM_customHUD);
+
+    FlxG.save.data.AOM_skipWarning ??= false;
     // [ END ]
 
     // [ NOTE SKIN SYSTEM ]

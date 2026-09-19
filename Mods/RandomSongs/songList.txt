@@ -1,13 +1,14 @@
 Accelerant::https://gamebanana.com/mods/286594
 Brotherly Rivalry::https://gamebanana.com/mods/416734
 Candy::https://gamebanana.com/mods/410094
+Crucify::https://gamebanana.com/mods/310465::https://gamejolt.com/games/fridaynightfever/645717
 Corruptro::https://gamebanana.com/mods/317366::https://gamejolt.com/games/VsRetroSpecter/646208
 Countdown::https://gamebanana.com/mods/418826
 Defeat::https://gamebanana.com/mods/55652::https://gamejolt.com/games/vsimpostor/643430
 Epiphany::https://gamebanana.com/mods/47364
 Your Demise::https://gamebanana.com/mods/47364
 Fatality::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
-Frostbite
+Frostbite::https://gamebanana.com/mods/332345
 Megalo Strike Back::https://gamebanana.com/mods/55836
 Phantasm::https://gamebanana.com/mods/359046
 Prey::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
