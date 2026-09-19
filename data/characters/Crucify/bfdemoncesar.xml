@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Crucify/demonCesar" flipX="true" isPlayer="true" icon="Crucify/cesar" color="#E351C6">
+	<anim name="idle" anim="BF idle dance"/>
+	<anim name="singUP" anim="BF NOTE UP0" x="-30" y="13"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT0" x="20" y="-3"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-47" y="-8"/>
+	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-15" y="-84"/>
+	<anim name="BF NOTE UP MISS" anim="BF NOTE UP MISS" x="-32" y="5"/>
+	<anim name="BF NOTE DOWN MISS" anim="BF NOTE DOWN MISS" x="-19" y="-80"/>
+	<anim name="BF NOTE LEFT MISS" anim="BF NOTE LEFT MISS" x="18" y="-2"/>
+	<anim name="BF NOTE RIGHT MISS" anim="BF NOTE RIGHT MISS" x="-50" y="-15"/>
+</character>

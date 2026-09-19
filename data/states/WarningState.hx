@@ -6,7 +6,6 @@ import funkin.backend.MusicBeatState;
 var commit:String = GitCommitMacro.commitHash;
 
 function postCreate() {
-    if (FlxG.save.data.AOM_skipWarning) FlxG.switchState(new ModState('NewMenu'));
     FlxG.camera.flash(0xFF000000, .3);
 
     disclaimer.text = '*anOrdinaryModpack* is a recompilation of the Golden Era of \n#Friday Night\' Funkin.#\n\nFor the mod to work properly, use the latest Nightly Build version of CodenameEngine.\n\nPlease report any bug in the GitHub/Gamebanana page.\n\n_Press ENTER to continue._';
@@ -40,6 +39,9 @@ function postCreate() {
         IMSOFUKINGANGRY.alpha = .5;
         add(IMSOFUKINGANGRY);
     }
+
+    if (FlxG.save.data.AOM_skipWarning)
+        new FlxTimer().start(0.01, () -> FlxG.switchState(new ModState('NewMenu')));
 }
 
 function update() {

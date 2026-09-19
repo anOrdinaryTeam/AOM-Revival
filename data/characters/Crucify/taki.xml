@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Crucify/taki_assets" color="#D3426E">
+	<anim name="idle" anim="takiidle" loop="true"/>
+	<anim name="singLEFT" anim="takileft" x="36" y="-14"/>
+	<anim name="singRIGHT" anim="takiright" x="-11" y="-6"/>
+	<anim name="singDOWN" anim="takidown" y="-162"/>
+	<anim name="singUP" anim="takiup" x="-5" y="5"/>
+</character>
