@@ -33,6 +33,10 @@ function new() {
 public static function loadModFolders():Array<String>
 {
     var folders:Array<String> = Paths.getFolderDirectories('Mods/');
+    if (folders.contains('RandomSongs')) {
+        folders.remove('RandomSongs');
+        folders.insert(0, 'RandomSongs');
+    }
     return folders;
 }
 
