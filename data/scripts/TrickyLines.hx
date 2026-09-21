@@ -38,17 +38,18 @@ function postCreate() {
     tstatic.animation.add('static', [0, 1, 2], 24, true);
     tstatic.animation.play('static');
     tstatic.alpha = curStage == 'auditorHell' ? 0.1 : 0;
-    if (curSong == 'hellclown' || curSong == 'expurgation') {
+
+    if (songName == 'hellclown' || songName == 'EXPURGATIO') {
         tstatic.x += 600;
         tstatic.y += 300;
     }
-    else if (curSong == 'accelerant')
+    else if (songName == 'Accelerant')
         tstatic.x += 600;
 
     add(tstatic);
     curID = dad.curCharacter == 'exTricky' ? 1 : 0;
 
-    if (curSong == 'accelerant')
+    if (songName == 'Accelerant')
         spawnOnDad = spawnOnMiss = false;
 }
 
