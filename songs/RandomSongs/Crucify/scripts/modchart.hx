@@ -95,7 +95,7 @@ function setBothY(value:Float, i:Int) {
     setPlayerY(value, i);
 }
 
-function stepRange(from:Int, to:Int) return curStep >= from && curStep < to;
+public function stepRange(from:Int, to:Int) return curStep >= from && curStep < to;
 function sin(val:Float) return FlxMath.fastSin(val);
 function cos(val:Float) return FlxMath.fastCos(val);
 
