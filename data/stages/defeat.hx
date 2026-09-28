@@ -20,7 +20,7 @@ function postHudLoad() {
     hudItems.members[0].visible = false;
 }
 
-function onCountdown(_) if (_.swagCounter == 1) {
+function onCountdown(_) if (_.swagCounter == 1 && !Options.centeredFields) {
     for (strum in player)
         FlxTween.tween(strum, {x: strum.x - 275, angle: -360}, 0.6, {ease: FlxEase.sineInOut});
     for (strum in cpu)
