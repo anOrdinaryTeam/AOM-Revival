@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Control/SPEED_FULL_ASS_SETS" icon="bonic" color="#3700FF" holdTime="6.1">
+	<anim name="stare" anim="stareidle" x="-35" y="-4"/>
+	<anim name="turn" anim="Turn" x="940" y="3"/>
+	<anim name="idle" anim="SPEED_IDLE" loop="true"/>
+	<anim name="singLEFT" anim="SPEED_LEFT" x="272"/>
+	<anim name="singRIGHT" anim="SPEED_RIGHT" x="-10" y="-43"/>
+	<anim name="singUP" anim="SPEED_UP" x="-46" y="140"/>
+	<anim name="singDOWN" anim="SPEED_DOWN" x="230" y="-145"/>
+</character>
