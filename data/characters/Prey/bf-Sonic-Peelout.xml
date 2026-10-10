@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character icon="sonic" camx="330" scale="6" camy="500" color="#6C6CD8" flipX="true" holdTime="6.1" antialiasing="false" sprite="rs/peelout_sonic_sheet" isPlayer="true">
+<character icon="sonic" camx="330" scale="6" camy="500" color="#6C6CD8" flipX="true" holdTime="6.1" antialiasing="false" sprite="prey/peelout_sonic_sheet" isPlayer="true">
 	<anim x="-40" y="-73.3333333333333" anim="sonic sing down" name="singDOWN"/>
 	<anim x="-40" y="-73.3333333333333" anim="sonic sing up" name="singUP"/>
 	<anim x="-40" y="-73.3333333333333" anim="sonic sing right" name="singRIGHT"/>

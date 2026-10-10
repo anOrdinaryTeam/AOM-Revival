@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="rs/bfPixelangry" icon="bf-pixel" color="#7BD6F6" gameOverChar="bf-pixel-dead" antialiasing="false" scale="6" holdTime="4" isPlayer="true" flipX="true">
+<character sprite="monikaAssets/bfPixelangry" icon="bf-pixel" color="#7BD6F6" gameOverChar="bf-pixel-dead" antialiasing="false" scale="6" holdTime="4" isPlayer="true" flipX="true">
     <anim name="idle" anim="BF IDLE" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="BF LEFT NOTE" x="-1" y="0" fps="24" loop="false"/>
 	<anim name="singDOWN" anim="BF DOWN NOTE" x="0" y="0" fps="24" loop="false"/>

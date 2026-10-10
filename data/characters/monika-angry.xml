@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="rs/Monika_Finale" scale="6.3" antialiasing="false" color="#C9CEFF" holdTime="6.1">
+<character sprite="monikaAssets/Monika_Finale" scale="6.3" antialiasing="false" color="#C9CEFF" holdTime="6.1">
 	<anim name="idle" anim="MONIKA IDLE"/>
 	<anim name="singLEFT" anim="MONIKA LEFT NOTE"/>
 	<anim name="singDOWN" anim="MONIKA DOWN NOTE"/>

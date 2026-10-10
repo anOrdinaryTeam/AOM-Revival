@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="rs/big_monikia_base" color="#8CD465">
+<character sprite="monikaAssets/big_monikia_base" color="#8CD465">
 	<anim name="idle" anim="Big Monika Idle"/>
 	<anim name="singDOWN" anim="Big Monika Down" x="1" y="-49"/>
 	<anim name="singRIGHT" anim="Big Monika Right" y="-1"/>

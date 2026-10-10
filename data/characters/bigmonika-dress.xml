@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="rs/Doki_BigMonikaDress_Assets" icon="bigmonika" color="#8CD465" x="325">
+<character sprite="monikaAssets/Doki_BigMonikaDress_Assets" icon="bigmonika" color="#8CD465" x="325">
 	<anim name="idle" anim="Big Monika Idle" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singUP" anim="Big Monika Sing Up" x="156.11" y="12.22" fps="24" loop="false"/>
 	<anim name="singRIGHT" anim="Big Monika Sing Right" x="-24.44" y="1.11" fps="24" loop="false"/>
