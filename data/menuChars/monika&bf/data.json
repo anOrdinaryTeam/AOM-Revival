@@ -1,0 +1,13 @@
+{
+    "list": [
+        {
+            "char": "monika-angry",
+            "position": [750, 350]
+        },
+        {
+            "char": "bf-pixelangry",
+            "position": [1100, 500],
+            "flipped": false
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="monikaAssets/monikaAtlas">
+	<anim name="idle" anim="Big Monika Idle"/>
+	<anim name="singDOWN" anim="Big Monika Sing Down"/>
+	<anim name="singRIGHT" anim="Big Monika Sing Right"/>
+	<anim name="singLEFT" anim="Big Monika Sing Left"/>
+	<anim name="singUP" anim="Big Monika Sing Up"/>
+</character>

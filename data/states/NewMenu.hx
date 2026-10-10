@@ -3,24 +3,23 @@ import funkin.editors.EditorPicker;
 import flixel.addons.display.FlxBackdrop;
 import flixel.effects.FlxFlicker;
 import funkin.editors.ui.UIState;
-import funkin.backend.system.macros.GitCommitMacro;
-import funkin.backend.system.Flags;
+import flixel.group.FlxTypedSpriteContainer;
 
 final pixelate:Bool = Options.antialiasing;
 final getOptions:Dynamic = CoolUtil.parseJson(Paths.json('config/menuItems'));
 
+public var bg:FlxBackdrop;
 var enterText:Alphabet;
 var menuItemsGroup:FlxTypedGroup<Alphabet> = new FlxTypedGroup();
 var bgFlasher:FlxSprite = new FlxSprite().makeSolid(FlxG.width, FlxG.height, -1);
-var logo:FlxSprite;
+public var logo:FlxSprite;
 
 public var input:Bool = true;
 public var danceOnBeat:Bool = true;
-public var charactersMenu:FlxTypedGroup<Character> = new FlxTypedGroup();
+public var charactersMenu:FlxTypedSpriteContainer<Character> = new FlxTypedSpriteContainer();
 
 // TESTING
-var charMenu:String = '';
-
+var charMenu:String = 'cyclops';
 static var startmenu:Bool = false;
 
 function create() {
@@ -30,16 +29,23 @@ function create() {
     CoolUtil.playMenuSong();
     changeToDefaultRPC('In The Main Menu');
 
-    final bg:FlxBackdrop = new FlxBackdrop(getImage('Menu/${FlxG.random.int(0, 4)}'), FlxAxes.XY, -1);
+    bg = new FlxBackdrop(getImage('Menu/${FlxG.random.int(0, 4)}'), FlxAxes.XY, -1);
     bg.antialiasing = pixelate;
     bg.velocity.set(40, 40);
     add(bg);
 
-    final bgItems:FlxSprite = new FlxSprite().loadGraphic(getImage('Menu/ui'));
+    var bgItems:FlxSprite = new FlxSprite().loadGraphic(getImage('Menu/ui'));
     bgItems.antialiasing = true;
     bgItems.alpha = .001;
     bgItems.scale.x += 0.3;
     bgItems.updateHitbox();
+
+    logo = new FlxSprite(305, 100).loadGraphic(getImage('Menu/logo'));
+    logo.antialiasing = pixelate;
+    logo.scale.set(0.95, 0.95);
+    logo.updateHitbox();
+
+    loadCharacterMenu();
     add(bgItems);
 
     add(menuItemsGroup);
@@ -59,20 +65,13 @@ function create() {
         text.x = (!startmenu ? XY[0] - 800 : XY[0]);
     }
 
-    loadCharacterMenu();
-
-    logo = new FlxSprite(305, 100).loadGraphic(getImage('Menu/logo'));
-    logo.antialiasing = pixelate;
-    logo.scale.set(0.95, 0.95);
-    logo.updateHitbox();
     add(logo);
 
     logo.x = (!startmenu ? 305 : 20);
     logo.y = (!startmenu ? 100 : 20);
 
     if (!startmenu) {
-        for (i in charactersMenu)
-            i.x += 800;
+        charactersMenu.x += 800;
 
         enterText = new Alphabet(0, 550, 'Press ENTER to continue', 'bold');
         enterText.antialiasing = Options.antialiasing;
@@ -91,13 +90,15 @@ function loadCharacterMenu() {
         for (Json in DataJson.list) {
             var name:String = Json.char ?? 'bf';
             var pos:Array<Float> = Json.position.copy();
-            var scale:Float = Json.scale ?? 1;
-            var flip:Bool = Json.flipped ?? false;
+            var scale:Float = Json.scale ?? null;
+            var flip:Bool = Json.flipped ?? null;
 
             var char:Character = new Character(pos[0], pos[1], name);
-            char.flipX = flip;
-            char.scale.set(scale, scale);
-            char.updateHitbox();
+            if (flip != null) char.flipX = flip;
+            if (scale != null) {
+                char.scale.set(scale, scale);
+                char.updateHitbox();
+            }
 			// ENABLE THIS AFTER FIXING MENU CHAR POSSES
             //char.extraOffset.set(-char.offset.x, -char.offset.y);
             //char.dance();
@@ -169,9 +170,8 @@ function update(dt:Float) {
 function beatHit() {
     logo.scale.set(0.98, 0.98);
 
-    if (danceOnBeat)
-        for (char in charactersMenu)
-            char.dance();
+    if (danceOnBeat) for (char in charactersMenu)
+        char.dance();
 }
 
 function moveMainMenu() {
@@ -182,9 +182,7 @@ function moveMainMenu() {
     FlxG.sound.play(Paths.sound('menu/confirm'));
 
     FlxTween.tween(logo, {x: 20, y: 20}, 2.5, {startDelay: 1, ease: FlxEase.expoOut});
-
-    for (i in charactersMenu)
-        FlxTween.tween(i, {x: i.x - 800}, 1.5, {startDelay: 1.5, ease: FlxEase.elasticInOut});
+    FlxTween.tween(charactersMenu, {x: charactersMenu.x - 800}, 1.5, {startDelay: 1.5, ease: FlxEase.elasticInOut});
 
     menuItemsGroup.forEach(function(spr) {
         var delay:Float = 0.1 * spr.ID;

@@ -2,9 +2,7 @@
     "list": [
         {
             "char": "menuChars/abo",
-            "position": [700, 100],
-            "scale": 1,
-            "flipped": false
+            "position": [700, 100]
         }
     ]
 }
