@@ -1,15 +1,14 @@
 <!DOCTYPE codename-engine-character>
-<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
-<character sprite="Heathers/heathers assets" icon="face" color="#a1a1a1" holdTime="6.1">
-	<anim name="idle" anim="heatherc idle"/>
-	<anim name="singLEFT" anim="heatherc left" x="70" y="-17"/>
-	<anim name="singDOWN" anim="heatherc down" x="-80" y="-90"/>
-	<anim name="singUP" anim="heatherc up" x="0" y="31"/>
-	<anim name="singRIGHT" anim="heatherc right" x="-89" y="18"/>
-	<anim name="intro" anim="heatherc intro" x="219" y="38"/>
-	<anim name="idle-alt" anim="heatherc alt idle"/>
-	<anim name="singLEFT-alt" anim="heatherc alt left" x="47" y="0"/>
-	<anim name="singDOWN-alt" anim="heatherc alt down" x="-3" y="-9"/>
-	<anim name="singUP-alt" anim="heatherc alt up" x="13" y="20"/>
-	<anim name="singRIGHT-alt" anim="heatherc alt right" x="-40" y="2"/>
+<character sprite="heathers/heathersAtlas" x="50" y="-10" color="#000000" holdTime="6.1" applyStageMatrix="true">
+	<anim name="idle" anim="characters/heatherc/heatherc idle"/>
+	<anim name="singDOWN" anim="characters/heatherc/heatherc down" x="-1"/>
+	<anim name="singRIGHT" anim="characters/heatherc/heatherc right" x="62" y="-21"/>
+	<anim name="singLEFT" anim="characters/heatherc/heatherc left" x="-4"/>
+	<anim name="singUP" anim="characters/heatherc/heatherc up" x="7" y="-6"/>
+	<anim name="intro" anim="characters/heatherc/heatherc intro"/>
+	<anim name="idle-alt" anim="characters/heatherc/heatherc alt idle"/>
+	<anim name="singLEFT-alt" anim="characters/heatherc/heatherc alt left"/>
+	<anim name="singDOWN-alt" anim="characters/heatherc/heatherc alt down" y="1"/>
+	<anim name="singUP-alt" anim="characters/heatherc/heatherc alt up"/>
+	<anim name="singRIGHT-alt" anim="characters/heatherc/heatherc alt right"/>
 </character>

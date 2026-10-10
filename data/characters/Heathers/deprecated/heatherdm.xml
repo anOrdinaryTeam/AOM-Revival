@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="heathers/heatherdAtlas" icon="Heathers/heatherd" color="#A1A1A1" holdTime="6.1" applyStageMatrix="true">
+	<anim name="walk" anim="characters/heatherd/heather d walk" x="5" y="-3" loop="true"/>
+	<anim name="danceLeft" anim="characters/heatherd/heather d" indices="0..7"/>
+	<anim name="danceRight" anim="characters/heatherd/heather d" indices="8..15"/>
+	<anim name="singLEFT" anim="characters/heatherd/heather d left"/>
+	<anim name="singDOWN" anim="characters/heatherd/heather d down"/>
+	<anim name="singUP" anim="characters/heatherd/heather d up"/>
+	<anim name="singRIGHT" anim="characters/heatherd/heather d right" x="-3" y="-5"/>
+</character>

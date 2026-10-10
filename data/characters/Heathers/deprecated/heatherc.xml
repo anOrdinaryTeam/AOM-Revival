@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-character>
+<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->
+<character sprite="Heathers/heathers assets" icon="face" color="#a1a1a1" holdTime="6.1">
+	<anim name="idle" anim="heatherc idle"/>
+	<anim name="singLEFT" anim="heatherc left" x="70" y="-17"/>
+	<anim name="singDOWN" anim="heatherc down" x="-80" y="-90"/>
+	<anim name="singUP" anim="heatherc up" x="0" y="31"/>
+	<anim name="singRIGHT" anim="heatherc right" x="-89" y="18"/>
+	<anim name="intro" anim="heatherc intro" x="219" y="38"/>
+	<anim name="idle-alt" anim="heatherc alt idle"/>
+	<anim name="singLEFT-alt" anim="heatherc alt left" x="47" y="0"/>
+	<anim name="singDOWN-alt" anim="heatherc alt down" x="-3" y="-9"/>
+	<anim name="singUP-alt" anim="heatherc alt up" x="13" y="20"/>
+	<anim name="singRIGHT-alt" anim="heatherc alt right" x="-40" y="2"/>
+</character>

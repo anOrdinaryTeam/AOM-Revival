@@ -21,8 +21,6 @@ function create() {
 
     bg = new FlxSprite(-589, -170, sprite('BG'));
     bg.antialiasing = Options.antialiasing;
-    bg.shader = new CustomShader('colorSwap');
-    bg.shader.uHsv = [40, 0, 0];
     addSprite(bg);
 
     reflec = new FlxSprite(-239,662-43, sprite('reflection'));
