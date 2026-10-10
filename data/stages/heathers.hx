@@ -63,9 +63,6 @@ function postCreate() {
     for (bye in [scoreTxt, missesTxt, accuracyTxt, healthBar, healthBarBG, iconP1, iconP2])
         bye.visible = false;
 
-    for (bye in cpuStrums)
-        bye.visible = false;
-
     offY = player.members[0].y;
     player.forEachAlive(strum -> {
         FlxTween.tween(strum, {y: offY - (d * c)}, 0.01);

@@ -1,4 +1,14 @@
 {
+	"opponentModeAllowed": false,
 	"icon": "heathers",
+	"difficulties": [
+		"hard"
+	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Candy",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
 	"bpm": 158
 }
