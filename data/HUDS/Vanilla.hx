@@ -2,6 +2,7 @@ import AomText;
 public var score:FlxBitmapText;
 
 function onHudLoad(hud) if (hud == 'Vanilla') {
+    updateRatingStuff = null;
     for (i in cpuStrums) i.x -= 45;
     for (i in playerStrums) i.x -= 45;
 

@@ -90,6 +90,7 @@ function onHudLoad(hud, ver) if (hud == 'KadeEngine') {
     if (getSaveData('Kade_HitMS'))
         pharaotisMsTiming();
 
+    updateRatingStuff = null;
     scripts.call('postHudLoad');
 }
 

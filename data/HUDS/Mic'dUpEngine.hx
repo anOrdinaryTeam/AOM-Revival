@@ -26,6 +26,8 @@ function onHudLoad(hud) if (hud == "Mic'dUpEngine") {
         txt.scrollFactor.set();
         hudItems.add(txt);
     }
+
+    updateRatingStuff = null;
 }
 
 function update(_) {

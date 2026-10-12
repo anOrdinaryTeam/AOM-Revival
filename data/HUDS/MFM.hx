@@ -33,6 +33,8 @@ function onHudLoad(hud) if (hud == 'MFM') {
             case 4: score.x = accWb.x + 20;
         }
     }
+
+    updateRatingStuff = null;
 }
 
 function onRatingUpdate(_) {

@@ -40,6 +40,19 @@ function onHudLoad(hud) if (hud == 'ForeverEngine') {
     for (i in playerStrums) i.alpha = getSaveData('Forever_Opacity');
     for (i in player.notes) i.alpha = getSaveData('Forever_Opacity');
 
+    for (icon in iconArray) {
+        icon.bump = () -> {
+            icon.setGraphicSize(Std.int(icons.width + 45));
+	        icon.updateHitbox();
+        };
+
+        icon.updateBump = () -> {
+            icon.setGraphicSize(Std.int(FlxMath.lerp(150, icon.width, .5)));
+            icon.updateHitbox();
+        }
+    }
+
+    updateRatingStuff = null;
     scripts.call('postHudLoad');
 }
 

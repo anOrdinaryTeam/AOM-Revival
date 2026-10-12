@@ -78,6 +78,7 @@ function onHudLoad(hud) if (hud == 'PsychEngine') {
     }
 
     // lengthSong = FlxStringUtil.formatTime(inst.length / 1000, false);
+    updateRatingStuff = null;
     scripts.call('postHudLoad', [hud]);
 }
 

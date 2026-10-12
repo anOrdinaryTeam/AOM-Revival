@@ -200,6 +200,7 @@ function create() {
     add(foreground);
 
     sanford.alpha = deimos.alpha = 0.001;
+    camGame.followLerp = 0.025;
 }
 
 function postCreate() {
