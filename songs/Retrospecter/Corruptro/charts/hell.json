@@ -1,8 +1,8 @@
 {
 	"song": {
-		"player1": "Corruptro/bf-corrupt",
+		"player1": "Retrospecter/bf-corrupt",
 		"gfVersion": "empty",
-		"player2": "Corruptro/corruptro",
+		"player2": "Retrospecter/corruptro",
 		"notes": [
 			{
 				"lengthInSteps": 16,
@@ -25195,7 +25195,7 @@
 		"instVol": 1,
 		"song": "Corruptro",
 		"vocalVol": 1,
-		"stage": "wrath",
+		"stage": "Retrospecter/wrath",
 		"needsVoices": true,
 		"validScore": true,
 		"speed": 3,

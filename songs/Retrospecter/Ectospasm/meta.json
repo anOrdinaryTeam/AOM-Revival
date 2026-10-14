@@ -1,0 +1,14 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "Retrospecter/zerktro",
+	"difficulties": [
+		"hell"
+	],
+	"color": "#9271FD",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "Ectospasm",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 212
+}

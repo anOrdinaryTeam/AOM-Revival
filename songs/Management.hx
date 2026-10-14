@@ -21,7 +21,7 @@ public function getModImage(str:String) {
 }
 
 public function addSprite(spr:Dynamic) if (spr != null)
-    insert(members.indexOf(gf), spr);
+    insert(members.indexOf(gf ?? dad), spr);
 
 public function loadHud(hud:String, ?ver:String = 'IS NULL PENDEJO') {
     if (!getSaveData('allowCustomHud'))

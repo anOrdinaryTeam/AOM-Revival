@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "Corruptro/bf-corrupt",
+		"player1": "Retrospecter/bf-corrupt",
 		"notes": [
 			{
 				"sectionNotes": [
@@ -14072,12 +14072,12 @@
 				"mustHitSection": true
 			}
 		],
-		"player2": "Corruptro/corruptro",
+		"player2": "Retrospecter/corruptro",
 		"initialSpeed": 1.215,
 		"validScore": true,
 		"speed": 2.4,
 		"gfVersion": "empty",
-		"stage": "wrath",
+		"stage": "Retrospecter/wrath",
 		"needsVoices": true,
 		"bpm": 151
 	}

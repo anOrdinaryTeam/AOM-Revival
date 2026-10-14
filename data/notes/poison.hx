@@ -4,7 +4,7 @@ import flixel.text.FlxTextBorderStyle;
 
 var spr:String = downscroll ? '_down' : '_up';
 var poisonStacks:Int = 0;
-var healthDrainPoison:Float = 0.037500000000000006;
+public var healthDrainPoison:Float = 0.037500000000000006;
 var hud:Map<String, Dynamic> = [];
 
 function postCreate() {
@@ -13,17 +13,18 @@ function postCreate() {
     healthBarBG.visible = false;
 
     var Y:Float = downscroll ? -50 : -15;
+    var str:String = isCorruptro ? 'Corrupt' : 'Green';
     var newBar:FlxBar = new FlxBar(healthBarBG.x, healthBarBG.y + Y, FlxBarFillDirection.RIGHT_TO_LEFT, Std.int(healthBarBG.width), Std.int(healthBarBG.height), this, 'health', 0, 2);
     newBar.scrollFactor.set();
     newBar.antialiasing = Options.antialiasing;
-    newBar.createImageEmptyBar(modPath('HealthBar_Placeholder_Red'), FlxColor.WHITE);
-    newBar.createImageFilledBar(modPath('HealthBar_Placeholder_Corrupt'), FlxColor.WHITE);
+    newBar.createImageBar(getModImage('Hud/Red'), getModImage('Hud/$str'), -1, -1);
     newBar.numDivisions = 10000;
     newBar.camera = camHUD;
     newBar.alpha = opacity;
     insert(members.indexOf(healthBar), newBar);
 
-    var bgAcid:FlxSprite = new FlxSprite(iconP1.x + 100, iconP1.y - 10, modPath('Health_Splat_Corrupt'));
+    var str:String = isCorruptro ? 'Splat_Corrupt' : 'Splat';
+    var bgAcid:FlxSprite = new FlxSprite(iconP1.x + 100, iconP1.y - 10, getModImage('Hud/$str'));
     bgAcid.scale.set(0.2, 0.2);
     bgAcid.updateHitbox();
     bgAcid.antialiasing = Options.antialiasing;
@@ -43,8 +44,8 @@ function postCreate() {
 }
 
 function update(_) {
-    hud["bg"].x = iconP1.x + 100;
-    hud["text"].x = hud["bg"].x + 45;
+    hud["bg"]?.x = iconP1.x + 100;
+    hud["text"]?.x = hud["bg"]?.x + 45;
 
     if (health > 0.01) {
         if (healthDrainPoison * poisonStacks * _ > health) 
@@ -59,7 +60,7 @@ function onNoteCreation(_) if (_.noteType == 'poison') {
     _.note.forceIsOnScreen = true;
     _.note.earlyPressWindow = 0.1;
 	_.note.latePressWindow = 0.2;
-	if (getSaveData('Corruptro_poisonShader')) setColorSwapShader(_.note, 180, 0, 0);
+	if (getSaveData('Corruptro_poisonShader') && songName == 'Corruptro') setColorSwapShader(_.note, 180, 0, 0);
     if (_.strumLineID <= 0) _.note.wasGoodHit = true;
 }
 
@@ -70,7 +71,7 @@ function onPostNoteCreation(_) if (_.noteType == 'poison')
 function onPlayerHit(_) if (_.noteType == 'poison') {
     _.animCancelled = true;
     poisonStacks++;
-    hud["text"].text = Std.string(poisonStacks);
+    hud["text"]?.text = Std.string(poisonStacks);
     playModSound('acid');
 }
 

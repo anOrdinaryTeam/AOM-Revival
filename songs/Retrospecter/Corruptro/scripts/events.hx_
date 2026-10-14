@@ -1,0 +1,74 @@
+function onSongStart() FlxTween.tween(stageSprites["black"], {alpha: 0.4}, 13);
+
+function stepHit() {
+    if (curStep == 144) {
+        FlxTween.cancelTweensOf(stageSprites["black"]);
+        stageSprites["black"].alpha = 0;
+        camGame.flash(0xFFFFFFFF, 0.5);
+    }
+    
+    if (!secondCorruptRoar && curStep >= 1824) {
+        secondCorruptRoar = !secondCorruptRoar;
+        moveCrystals = !moveCrystals;
+        camGame.flash(0xFFFFFFFF, 0.5);
+    }
+
+    if (curStep == 864)
+        defaultCamZoom += 0.2;
+    if (curStep == 912)
+        FlxG.camera.zoom = defaultCamZoom = defaultZoom;
+}
+
+function beatHit() {
+    if (curBeat >= 616 && curBeat <= 808) {
+        camHUD.zoom += 0.04;
+        FlxG.camera.zoom += 0.03;
+    }
+
+    if (!stageTransformed && curBeat >= 228) {
+        stageTransformed = !stageTransformed;
+        isCrackVisible = !isCrackVisible;
+
+        camGame.flash(0xFFFFFFFF, 0.5);
+
+        if (stageSprites.exists('flames')) {
+            stageSprites["flames"].alpha = 1;
+            stageSprites["flames"].y -= 1000;
+        }
+
+        if (backgroundLevel > 1) {
+        if (stageSprites.exists('crack')) {
+            stageSprites["crack"].active = true;
+            stageSprites["crack"].playAnim('appear');
+        }
+        
+        if (stageSprites.exists('vortex'))
+            stageSprites["vortex"].alpha = 1;
+
+        for (i in 0...8 - 1) if (crystalsMap.exists('crystal$i')) {
+            crystalsMap['crystal$i'].alpha = 1;
+            crystalsMap['crystal$i'].y -= 1500;
+        }
+    }
+    }
+    if (curBeat > 808)
+        canBop = false;
+
+    if (getSaveData('FlashingLights')) if (backgroundLevel > 0)
+        if (curStep >= 145 && curBeat <= 808 && curStep % 8 == 0) {
+            rockColor = !rockColor;
+            var color:String = rockColor ? 'cyan' : 'green';
+
+            if (stageSprites.exists('ground')) stageSprites["ground"].playAnim(color);
+
+            if (stageSprites.exists('rockFront_0') && stageSprites.exists('rockFront_1')) {
+                stageSprites["rockFront_0"].playAnim(color);
+                stageSprites["rockFront_1"].playAnim(color);
+            }
+
+            if (stageSprites.exists('gems1') && stageSprites.exists('gems2')) {
+                stageSprites["gems1"].playAnim(color);
+                stageSprites["gems2"].playAnim(color);
+            }
+        }
+}
