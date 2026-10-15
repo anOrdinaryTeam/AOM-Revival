@@ -1,0 +1,29 @@
+{
+    "settings": [
+        {
+            "text": "BG Level",
+            "type": "Number",
+            "id": "AOM_Retro_levelBG",
+            "value_modifier": [0, 2, 1],
+            "desc": "Changing this Value will change how much Sprites will load to the Stage\n(Lower = +FPS - Higher = -FPS)"
+        },
+        {
+            "text": "Poison Notes Tint",
+            "type": "Checkbox",
+            "id": "AOM_Retro_poisonShader",
+            "desc": "(Corruptro only)\nApply tints to Poison Note"
+        },
+        {
+            "text": "Motion",
+            "type": "Checkbox",
+            "id": "AOM_Retro_motion",
+            "desc": "Disables objects with Motion/Movement"
+        },
+        {
+            "text": "Optimize",
+            "type": "Checkbox",
+            "id": "AOM_Retro_optimize",
+            "desc": "Kade Engine option type shi\n(Skips stage loading)"
+        }
+    ]
+}

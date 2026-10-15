@@ -108,6 +108,9 @@ function postCreate() if (CREATE_FILE_FEATURE) {
 }
 
 public function setCamPos(?x:Float, ?y:Float) {
+    x ??= null;
+    y ??= null;
+
     forceCamPos = !forceCamPos;
     if (x != null && y != null) camFollow.setPosition(x, y);
 }
@@ -117,7 +120,6 @@ function onCameraMove(_) {
         var newPoint:FlxPoint = curCameraTarget == 0 ? opponentCam : playerCam;
         _.position.set(newPoint.x, newPoint.y);
     }
-    else if (forceCamPos && !_.cancelled) {
+    else if (forceCamPos && !_.cancelled)
         _.position.set(camFollow.x, camFollow.y);
-    }
 }

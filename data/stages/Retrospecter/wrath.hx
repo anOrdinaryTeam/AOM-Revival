@@ -40,7 +40,7 @@ public function setColorSwapShader(spr:FlxSprite, hue:Float = 0, sat:Float = 0, 
 
 // Floats/Ints
 public var HIDDEN:Float = 0.0000000001;
-public var backgroundLevel:Int = 3;
+public var backgroundLevel:Int = getSaveData('Retro_levelBG');
 
 // Booleans
 public var isCorruptro:Bool = PlayState.SONG.meta.displayName == 'Corruptro';
@@ -48,9 +48,9 @@ public var isSpectral:Bool = PlayState.SONG.meta.displayName == 'Spectral';
 public var isEctospasm:Bool = PlayState.SONG.meta.displayName == 'Ectospasm';
 public var isSpectspasm:Bool = (isSpectral || isEctospasm) || isCorruptro;
 
-var optimize:Bool = false;
-var motion:Bool = true;
-public var flashingLights:Bool = true;
+public var flashingLights:Bool = getSaveData('FlashingLights');
+var optimize:Bool = getSaveData('Retro_optimize');
+var motion:Bool = getSaveData('Retro_motion');
 
 var runesCanGlow:Bool = false;
 var isCrackVisible:Bool = !isCorruptro;
@@ -84,9 +84,12 @@ var crystalFloatData:Array<Dynamic> = [
 
 defaultCamZoom = 0.525;
 
-function create() 
+function create()
 {
-    if (backgroundLevel > 0) {
+    if (PlayState.SONG.meta.displayName == 'Satisfracture')
+        defaultCamZoom += 0.215;
+
+    if (!optimize && backgroundLevel > 0) {
         var wrathXAdjust:Float = 0;
         var wrathYAdjust:Float = -128;
 
@@ -490,5 +493,5 @@ function beatHit(beat) if (canBop && beat % 2 == 0) {
     }
 }
 
-function onDadHit()
-    camGame.shake(0.007, 0.05);
+function onDadHit() if (isSpectral || isEctospasm || isCorruptro)
+    camGame.shake(0.006, 0.05);

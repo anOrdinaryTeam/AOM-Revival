@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character y="10" sprite="Retrospecter/WrathRetroSpecter" icon="Retrospecter/retro" color="#17D8E4">
+	<anim name="singLEFT" anim="Retro LEFT" x="26" y="-23" loop="true"/>
+	<anim name="singDOWN" anim="Retro DOWN" x="16" y="-48" loop="true"/>
+	<anim name="singUP" anim="Retro UP" x="21" y="-35" loop="true"/>
+	<anim name="singRIGHT" anim="Retro RIGHT" x="22" y="-32" loop="true"/>
+	<anim name="idle" anim="Retro IDLE"/>
+</character>

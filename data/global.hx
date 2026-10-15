@@ -104,12 +104,18 @@ public static function RefreshSaveDatas() {
             saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_PopUps);
         // [ END ]
         
-        // [ CORRUPTRO ]
-        if (saveMap.get('Corruptro_levelBG') != FlxG.save.data.AOM_Corruptro_levelBG)
-            saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
+        // [ Retrospecter ]
+        if (saveMap.get('Retro_levelBG') != FlxG.save.data.AOM_Retro_levelBG)
+            saveMap.set('Retro_levelBG', FlxG.save.data.AOM_Retro_levelBG);
 
-        if (saveMap.get('Corruptro_poisonShader') != FlxG.save.data.AOM_Corruptro_poisonShader)
-            saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
+        if (saveMap.get('Retro_poisonShader') != FlxG.save.data.AOM_Retro_poisonShader)
+            saveMap.set('Retro_poisonShader', FlxG.save.data.AOM_Retro_poisonShader);
+
+        if (saveMap.get('Retro_optimize') != FlxG.save.data.AOM_Retro_optimize)
+    	    saveMap.set('Retro_optimize', FlxG.save.data.AOM_Retro_optimize);
+
+        if (saveMap.get('Retro_motion') != FlxG.save.data.AOM_Retro_motion)
+    	    saveMap.set('Retro_motion', FlxG.save.data.AOM_Retro_motion);
         // [ END ]
 
         // [ FROSTBITE ]
@@ -255,12 +261,18 @@ static function LoadSaveData() {
         saveMap.set('Fatality_PopUpsLimiter', FlxG.save.data.AOM_Fatality_Limiter_PopUps);
         // [ END ]
         
-        // [ CORRUPTRO ]
-        FlxG.save.data.AOM_Corruptro_levelBG ??= 2;
-        saveMap.set('Corruptro_levelBG', FlxG.save.data.AOM_Corruptro_levelBG);
+        // [ Retrospecter ]
+        FlxG.save.data.AOM_Retro_levelBG ??= 2;
+        saveMap.set('Retro_levelBG', FlxG.save.data.AOM_Retro_levelBG);
         
-        FlxG.save.data.AOM_Corruptro_poisonShader ??= true;
-    	saveMap.set('Corruptro_poisonShader', FlxG.save.data.AOM_Corruptro_poisonShader);
+        FlxG.save.data.AOM_Retro_poisonShader ??= true;
+    	saveMap.set('Retro_poisonShader', FlxG.save.data.AOM_Retro_poisonShader);
+
+        FlxG.save.data.AOM_Retro_optimize ??= false;
+    	saveMap.set('Retro_optimize', FlxG.save.data.AOM_Retro_optimize);
+
+        FlxG.save.data.AOM_Retro_motion ??= true;
+    	saveMap.set('Retro_motion', FlxG.save.data.AOM_Retro_motion);
         // [ END ]
 
         // [ FROSTBITE ]

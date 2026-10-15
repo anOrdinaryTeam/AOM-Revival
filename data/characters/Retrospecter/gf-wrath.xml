@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="Retrospecter/Goth_GF" icon="gf" color="#a5004d" y="50">
+	<anim name="hairLeft" anim="GF Dancing Beat Hair blowing CAR" indices="30,0..14"/>
+	<anim name="hairRight" anim="GF Dancing Beat Hair blowing CAR" indices="15..29"/>
+	<anim name="sad" anim="gf sad" indices="0..12"/>
+	<anim name="danceLeft" anim="GF Dancing Beat" indices="30,0..14"/>
+	<anim name="danceRight" anim="GF Dancing Beat" indices="15..29"/>
+</character>

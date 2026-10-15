@@ -60,7 +60,7 @@ function onNoteCreation(_) if (_.noteType == 'poison') {
     _.note.forceIsOnScreen = true;
     _.note.earlyPressWindow = 0.1;
 	_.note.latePressWindow = 0.2;
-	if (getSaveData('Corruptro_poisonShader') && songName == 'Corruptro') setColorSwapShader(_.note, 180, 0, 0);
+	if (getSaveData('Retro_poisonShader') && songName == 'Corruptro') setColorSwapShader(_.note, 180, 0, 0);
     if (_.strumLineID <= 0) _.note.wasGoodHit = true;
 }
 

@@ -80,14 +80,14 @@ function update() {
         didRoarShake = true;
     }
 
-    if (curBeat >= 216 && curBeat < 228) {
-        //target
-    }
+    if (curBeat >= 216 && curBeat < 228)
+        setCamPos((opponentCam.x - 400), (opponentCam.y + 40));
 }
 
 function postUpdate() if (!didRoarOut && curBeat >= 228) {
     defaultCamZoom -= .2;
     FlxG.camera.zoom = defaultCamZoom;
+    forceCamPos = false;
     didRoarOut = true;
 }
 
@@ -102,6 +102,11 @@ function beatHit(beat) {
     if (beat >= 616 && beat <= 808) {
         camGame.zoom += 0.03;
         camHUD.zoom += 0.03;
+    }
+
+    if (!stoppedBopping && curBeat >= 808) {
+        camZooming = false;
+        stoppedBopping = true;
     }
 }
 
