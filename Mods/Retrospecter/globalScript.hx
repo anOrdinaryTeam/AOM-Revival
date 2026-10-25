@@ -1,6 +1,7 @@
 // For Modcharts
 public var defaultNotePos:Array<Float> = [];
 public var defaultNotePosDad:Array<Float> = [];
+public var camHudAngle:Float = 0;
 
 function onNoteCreation(e) {
     e.note.strumRelativePos = false;
@@ -10,6 +11,14 @@ function onNoteCreation(e) {
 function postCreate() for (i in 0...4) {
     defaultNotePos[i] = [player.members[i].x, player.members[i].y];
     defaultNotePosDad[i] = [cpu.members[i].x, cpu.members[i].y];
+}
+
+function update(elapsed:Float)
+{
+    var currentBeat = (Conductor.songPosition / 1000) * (Conductor.bpm / 60);
+    camHUD.angle = camHudAngle;
+
+    scripts.callOne('onUpdateModchart', currentBeat);
 }
 
 public function setActorX(val:Float, i:Int)

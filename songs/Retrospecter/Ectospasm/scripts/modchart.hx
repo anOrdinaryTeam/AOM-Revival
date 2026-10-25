@@ -7,10 +7,8 @@ var swaynote3:Bool = false;
 var swaynote4:Bool = false;
 var camHudAngle:Float = 0;
 
-function update(dt)
+function onUpdateModchart(currentBeat)
 {
-    var currentBeat = (Conductor.songPosition / 1000) * (Conductor.bpm / 60);
-
     if (sway)
         camHudAngle = 5 * Math.sin(currentBeat / 2);
 
@@ -28,8 +26,6 @@ function update(dt)
 
     if (swaynote4) for (i in 0...4)
         setActorY(32 * Math.cos((currentBeat + i * 5) * Math.PI), i);
-
-    camHUD.angle = camHudAngle;
 }
 
 function stepHit(step)
