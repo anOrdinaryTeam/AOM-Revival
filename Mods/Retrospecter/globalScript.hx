@@ -21,6 +21,7 @@ function update(elapsed:Float)
     scripts.callOne('onUpdateModchart', currentBeat);
 }
 
+// For Both Strums
 public function setActorX(val:Float, i:Int)
 {
     cpu.members[i].x = defaultNotePosDad[i][0] + val;
@@ -52,3 +53,19 @@ public function tweenAngle(id:Int, time:Float)
     FlxTween.cancelTweensOf(cpuStrum);
     FlxTween.tween(cpuStrum, {angle: toAngle}, time);
 }
+
+// For a Single Strum
+
+// Player
+public function setPlayerX(val:Float, i:Int)
+    player.members[i].x = defaultNotePos[i][0] + val;
+
+public function setPlayerY(val:Float, i:Int)
+    player.members[i].y = defaultNotePos[i][1] + val;
+
+// Opponent
+public function setCpuX(val:Float, i:Int)
+    cpu.members[i].x = defaultNotePosDad[i][0] + val;
+
+public function setCpuY(val:Float, i:Int)
+    cpu.members[i].y = defaultNotePosDad[i][1] + val;
