@@ -1,6 +1,3 @@
-var defaultNotePos:Array<Float> = [];
-var defaultNotePosDad:Array<Float> = [];
-
 // modifiers
 var sway:Bool = false;
 var swayfast:Bool = false;
@@ -9,16 +6,6 @@ var swaynote2:Bool = false;
 var swaynote3:Bool = false;
 var swaynote4:Bool = false;
 var camHudAngle:Float = 0;
-
-function postCreate() for (i in 0...4) {
-    defaultNotePos[i] = [player.members[i].x, player.members[i].y];
-    defaultNotePosDad[i] = [cpu.members[i].x, cpu.members[i].y];
-}
-
-function onNoteCreation(e) {
-    e.note.strumRelativePos = false;
-    e.note.noteAngle = 0.001;
-}
 
 function update(dt)
 {
@@ -47,8 +34,11 @@ function update(dt)
 
 function stepHit(step)
 {
-    if ((step >= 900 && step < 1020) || (step >= 1670 && step < 1680) || (step >= 1956 && step < 2192) || (step >= 2550))
-        for (i in 0...4) setActorX(0, i);
+    // Positionation post angle-tween
+    if ((step >= 900 && step < 1020) || (step >= 1670 && step < 1680) || (step >= 1956 && step < 2192) || (step >= 2550)) for (i in 0...4) {
+        setAngle(0, i);
+        setActorX(0, i);
+    }
 
     // Camera Angle
     if (!(swayfast || sway) && ((step >= 256 && step < 512) || (step >= 1952 && step < 2208)))
@@ -85,17 +75,10 @@ function stepHit(step)
 		swaynote4 = true;
 	else if (swaynote4 && (step >= 2544))
 		swaynote4 = false;
-}
 
-// backend
-function setActorX(val:Float, i:Int)
-{
-    cpu.members[i].x = defaultNotePosDad[i][0] + val;
-    player.members[i].x = defaultNotePos[i][0] + val;
-}
-
-function setActorY(val:Float, i:Int)
-{
-    cpu.members[i].y = defaultNotePosDad[i][1] + val;
-    player.members[i].y = defaultNotePos[i][1] + val;
+    // Tween Angles
+    if ((step == 896) || (step == 1664) || (step == 1952) || (step == 2544)) for (i in 0...4) {
+        setActorY(0, i);
+        tweenAngle(i, 0.2);
+    }
 }
