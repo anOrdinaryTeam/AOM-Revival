@@ -130,7 +130,7 @@ function update(dt:Float) {
     if (FlxG.sound.music.volume < 0.8)
 		FlxG.sound.music.volume += 0.5 * dt;
 
-    if (!startmenu && FlxG.keys.justPressed.ENTER && !FlxG.keys.justPressed.ESCAPE)
+    if (!startmenu && controls.ACCEPT && !controls.BACK)
         moveMainMenu();
 
     if (input) {

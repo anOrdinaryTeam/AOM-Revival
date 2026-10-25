@@ -107,11 +107,13 @@ function onPlayerHit(_) {
 
 function onRatingUpdate(_) {
     var str = 'Score: $songScore | $missesType: $misses | Accuracy: ${CoolUtil.quantize(accuracy * 100, 100)}%';
+    var score:AomText = hudItems.members[0];
+
     if (getSaveData('Kade_Ratings'))
         str += ' | ${getRankLetter(CoolUtil.quantize(accuracy * 100, 100), _.rating.rating)}';
 
-    hudItems.members[0]?.text = str;
-    hudItems.members[0]?.screenCenter(FlxAxes.X);
+    score?.text = str;
+    score?.screenCenter(FlxAxes.X);
 }
 
 function getRankLetter(acc:Float, cneRating:String) {

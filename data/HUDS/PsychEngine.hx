@@ -151,8 +151,8 @@ function onRatingUpdate(_) {
     var score:AomText = hudItems.members[0];
     var str:String = 'Score: $songScore | Misses: $misses | Rating: $ratingName (${CoolUtil.quantize(accuracy * 100, 100)}%) - $ratingFC';
 
-    score.text = str;
-    score.screenCenter(FlxAxes.X);
+    score?.text = str;
+    score?.screenCenter(FlxAxes.X);
 }
 
 function update(_) {
