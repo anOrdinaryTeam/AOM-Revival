@@ -4,48 +4,44 @@ var noteOpacity:Float = 0.5;
 var spectreHit:Bool = false;
 var enemySpectreHit:Bool = false;
 
-function update(_) {
-    var elapsed:Float = _;
-    
-    player.notes.forEach(function(note) {
-        if (note.noteType == 'spectre')
-            return;
+var elapsed:Float = 0;
+function postCreate() player.onNoteUpdate.add(SpectreAlpha);
+function update(_:Float) elapsed = _;
 
-        if (!spectreHit)
-            if (noteFadeTime * elapsed > noteOpacity) noteOpacity = 0;
-            else noteOpacity -= noteFadeTime * elapsed;
+function SpectreAlpha(event:NoteUpdateEvent) {
+    var note:Note = event.note;
+
+    if (note.noteType == 'spectre')
+        return;
+
+    if (!spectreHit)
+        if (noteFadeTime * elapsed > noteOpacity) noteOpacity = 0;
+        else noteOpacity -= noteFadeTime * elapsed;
+    else
+        if (noteOpacity > 1) {
+            noteOpacity = 1;
+            spectreHit = false;
+        }
         else
-            if (noteOpacity > 1) {
-                noteOpacity = 1;
-                spectreHit = false;
-            }
-            else
-                noteOpacity += elapsed;
-    
-        var boundNoteOpacity = Math.max(0, Math.min(1, noteOpacity));
-        note.alpha = boundNoteOpacity;
-    });
-}
+            noteOpacity += elapsed;
+
+    var boundNoteOpacity:Float = Math.max(0, Math.min(1, noteOpacity));
+    note.alpha = boundNoteOpacity;
+}    
 
 function onNoteCreation(_) if (_.noteType == 'spectre') {
-    _.note.alpha = 1;
     _.noteSprite = 'modNotes/Corruptro/$spr';
-    _.note.forceIsOnScreen = true;
-    // _.note.earlyPressWindow = 0.5;
-	// _.note.latePressWindow = 0.5;
-    // if (_.strumLineID <= 0) _.note.wasGoodHit = true;
+    _.note.alpha = 1;
 }
 
 function onPostNoteCreation(_) if (_.noteType == 'spectre')
-	if (downscroll) _.note.frameOffset.y += 40;
-    else _.note.frameOffset.y -= 20;
+    _.note.frameOffset.y += downscroll ? 40 : -20;
 
 function onPlayerHit(_) if (_.noteType == 'spectre') {
     _.animCancelled = true;
     _.showSplash = false;
-    playModSound('SpectreArrow');
     spectreHit = true;
-    if (_.strumLineID == 0) FlxTween.tween(_.note, {alpha: 1}, 0.5);
+    playModSound('SpectreArrow');
     showSpectreEffect(_.direction, !_.player);
 }
 
@@ -69,9 +65,9 @@ function showSpectreEffect(id:Int, isOpp:Bool) {
 
 class SpectreHitEffect extends FunkinSprite
 {
+    private var sc:Float = 0.7;
     private var _reOffX:Float = -71.5;
     private var _reOffY:Float = PlayState.downscroll ? -50 : -64;
-    private var sc:Float = 0.7;
 
     public function new(strumID:Int, isOpp:Bool)
     {
