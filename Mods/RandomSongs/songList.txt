@@ -12,7 +12,6 @@ Frostbite::https://gamebanana.com/mods/332345
 Megalo Strike Back::https://gamebanana.com/mods/55836
 Phantasm::https://gamebanana.com/mods/359046
 Prey::https://gamebanana.com/mods/387978::https://github.com/duckiewhy/exe-2.5-code
-Silly Billy::https://gamebanana.com/mods/395039
 Sink::https://gamebanana.com/mods/368430
 Su Vecindad::https://gamebanana.com/mods/422004
 Pokemon Master::https://gamebanana.com/mods/343113
