@@ -5,7 +5,6 @@ var swaynote:Bool = false;
 var swaynote2:Bool = false;
 var swaynote3:Bool = false;
 var swaynote4:Bool = false;
-var camHudAngle:Float = 0;
 
 function onUpdateModchart(currentBeat)
 {
